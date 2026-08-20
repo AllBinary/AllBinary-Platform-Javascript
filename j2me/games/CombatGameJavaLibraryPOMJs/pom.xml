@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.allbinary</groupId>
+  <artifactId>CombatGameJavaLibraryPOMJs</artifactId>
+  <packaging>pom</packaging>
+  <!-- AllBinary Platform Version Start -->
+  <version>1.0.0-SNAPSHOT</version>
+  <!-- AllBinary Platform Version End -->
+
+  <name>CombatGameJavaLibraryPOMJs</name>
+  <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+
+        <!--
+
+        -->
+
+        <module>../../games/TickableJavaLibraryJsM</module>
+
+        <module>../../games/CommonHeadsUpDisplayLibraryJsM</module>
+
+        <module>../../../physics/MovementJavaLibraryJsM</module>
+        <!--        -->
+        <module>../../games/PartsJavaLibraryJsM</module>
+        <module>../../games/PickupGameJavaLibraryJsM</module>
+
+        <module>../../../allbinary_src/licensing/HardCodedLicenseInitInfoJavaLibraryJsM</module>
+        <module>../../../allbinary_src/licensing/FileLicenseInitInfoJavaLibraryJsM</module>
+        <module>../../../allbinary_src/licensing/ClientInfoLicensingJavaLibraryJsM</module>
+
+        <module>../../games/licensing/PartnerJ2MEJavaLibraryJsM</module>
+        <module>../../games/licensing/PartnerHTMLJavaLibraryJsM</module>
+        <module>../../games/licensing/PartnerAndroidJavaLibraryJsM</module>
+        <module>../../games/licensing/NoGameLicensingJavaLibraryJsM</module>
+        <module>../../games/licensing/GameLicensingOnlyDemoJavaLibraryJsM</module>
+        <module>../../games/licensing/GameLicensingOnlyNormalJavaLibraryJsM</module>
+        <module>../../games/licensing/GameLicensingBaseJavaLibraryJsM</module>
+
+        <!--
+        <module>../../games/GameScoresBaseLibraryJsM</module>
+        <module>../../games/GameScoresBaseHTMLLibraryJsM</module>
+        <module>../../games/GameScoresBaseJ2MELibraryJsM</module>
+        -->
+        <module>../../games/GameScoresLocalJavaLibraryJsM</module>
+        <module>../../games/GameScoresRemoteAndLocalJavaLibraryJsM</module>
+
+        <module>../../../store/ThirdPartyStoreJavaLibraryJsM</module>
+        <module>../../../store/NoThirdPartyStoreJavaLibraryJsM</module>
+
+        <module>../../media/graphics/layer/CollisionLayerJavaLibraryJsM</module>
+        <module>../../games/CollisionLibraryJsM</module>
+
+        <module>../../games/multiplayer/AllBinaryGameClientBaseNullJavaLibraryJsM</module>
+
+        <module>../../games/PickupLayerJavaLibraryJsM</module>
+
+        <module>../../games/DamageGameJavaLibraryJsM</module>
+        <module>../../games/DropJavaLibraryJsM</module>
+        <module>../../games/WeaponLayerJavaLibraryJsM</module>
+
+        <module>../../games/CombatGameJavaLibraryJsM</module>
+
+        <module>../../games/CommonHeadsUpDisplayCombatGameLibraryJsM</module>
+        <module>../../games/LifeOrDeathDataJavaLibraryJsM</module>
+
+        <module>../../games/BasicWeaponPartsJavaLibraryJsM</module>
+        <module>../../games/weapon/WeaponPropertiesJavaLibraryJsM</module>
+
+        <module>../../games/weapon/WeaponMineJavaLibraryJsM</module>
+
+        <!--
+        <module>../../media/graphics/effects/fireworks/FireworksJavaLibraryJsM</module>
+        -->
+
+        <module>../../media/graphics/geography/map/TerrainEventJavaLibraryJsM</module>
+
+<!--
+        <module>../../media/graphics/geography/map/BasicPlatformGeographicMapJavaLibraryJsM</module>
+        -->
+
+        <!--
+        <module>../../media/graphics/geography/map/RaceTrackJsP</module>
+        -->
+
+        <!--
+        XmlRpcJavaLibrary
+        RemoteXmlRpcJavaLibrary
+
+        Since POMs are built before the other libs is it best to handle this differently
+        ../../
+        <module>../../../../work/j2me/games/strategy/rts/RTSGameJavaLibraryJsP</module>
+        -->
+
+        <module>../../media/graphics/OtherGraphicsMediaLibraryJsP</module>
+
+        <module>../../input/NoTouchButtonResourceAnimationJavaLibraryJsM</module>
+        <module>../../input/TouchButtonResourceAnimationJavaLibraryJsM</module>
+        <module>../../input/TouchButtonResourceOpenGLESAnimationJavaLibraryJsM</module>
+
+        <module>../../input/TrackingEventJavaLibraryJsM</module>
+        <module>../../../game/behavior/BehaviorLibraryJsP</module>
+
+        <module>../../media/sound/OtherSoundMediaLibraryJsP</module>
+
+        <module>../../../allbinary_src/licensing/ApplicationConfigurationJavaLibraryJsM</module>
+        <module>../../input/AllBinaryMagneticFieldSensorJavaLibraryJsM</module>
+        <module>../../android/VirtualKeyboardJavaLibraryJsM</module>
+
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+

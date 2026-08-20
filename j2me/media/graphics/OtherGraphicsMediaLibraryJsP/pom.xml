@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary</groupId>
+    <artifactId>OtherGraphicsMediaLibraryPJs</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>OtherGraphicsMediaLibraryPJs</name>
+    <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+
+
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+
+        <!--
+        -->
+        <module>../../graphics/animation/vector/VectorAnimationBaseJavaLibraryJsM</module>
+
+        <module>../../graphics/animation/vector/VectorAnimationJ2MEJavaLibraryJsM</module>
+        <module>../../graphics/animation/vector/VectorAnimationJavaLibraryJsM</module>
+
+        <module>../../graphics/VectorJavaLibraryJsM</module>
+
+        <module>../../graphics/BoundsJavaLibraryJsM</module>
+
+        <module>../../../../graphics/opengl/OpenGLESNullImageJavaLibraryJsM</module>
+        <module>../../../../graphics/opengl/OpenGLESNullImageJ2MEJavaLibraryJsM</module>
+
+        <module>../../graphics/animation/image/AllBinaryImageAnimationJavaLibraryJsM</module>
+        <module>../../graphics/animation/sprite/AllBinarySpriteAnimationJavaLibraryJsM</module>
+
+        <!--
+        ../../
+        <module>../../../../../work/j2me/media/graphics/animation/sprite/AllBinaryQuarterSpriteAnimationJavaLibraryJsM</module>
+        -->
+        <!--
+        ../../
+        <module>../../../../../work/j2me/media/graphics/animation/sprite/AllBinaryQuarterSpriteAnimation2JavaLibraryJsM</module>
+        -->
+
+        <module>../../graphics/animation/image/ImageJ2MEJavaLibraryJsM</module>
+        <!--
+        <module>../../graphics/animation/image/ImageHTMLJavaLibraryJsM</module>
+        -->
+        <module>../../graphics/animation/image/ImageJ2SEJavaLibraryJsM</module>
+        <!--
+        <module>../../graphics/animation/image/ImageAndroidJavaLibraryJsM</module>
+        -->
+        <!--
+        <module>../../graphics/animation/image/ImageSwtJ2SEJavaLibraryJsM</module>
+        -->
+        
+        <!--
+        ../../
+        <module>../../../../../work/j2me/media/graphics/layer/AllBinaryTiledLayerJavaLibraryJsM</module>
+        <module>../../graphics/layer/AllBinaryTiledLayerJavaLibraryJsM</module>
+        -->
+
+        <!-- Not used in Platform Libraries -->
+        <module>../../graphics/GraphicsBasicImageJavaLibraryJsM</module>
+        <!--
+        -->
+        <module>../../graphics/animation/image/AllBinaryImageAnimationRotationJavaLibraryJsM</module>
+
+    </modules>
+
+</project>
+
