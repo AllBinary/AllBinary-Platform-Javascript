@@ -1,0 +1,23 @@
+/*
+        *
+        *  AllBinary Open License Version 1
+        *  Copyright (c) 2011 AllBinary
+        *
+        *  By agreeing to this license you and any business entity you represent are
+        *  legally bound to the AllBinary Open License Version 1 legal agreement.
+        *
+        *  You may obtain the AllBinary Open License Version 1 legal agreement from
+        *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+        *
+        *  Created By: Travis Berthelot
+*/
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { WeaponLayer } from './WeaponLayer.js';
+import { CollidableDamageWeaponBehavior } from './CollidableDamageWeaponBehavior.js';
+export class DamageWeaponLayer extends WeaponLayer {
+    constructor(name, remoteInfo, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition, username, actorSessionId, id, multiPlayerType) {
+        super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition);
+        //For kotlin this is before the body of the constructor.
+        this.setCollidableInferface(new CollidableDamageWeaponBehavior(true));
+    }
+}

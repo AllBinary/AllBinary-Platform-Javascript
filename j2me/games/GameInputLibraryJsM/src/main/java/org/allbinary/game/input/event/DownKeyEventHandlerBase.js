@@ -1,0 +1,138 @@
+/*
+        *
+        *  AllBinary Open License Version 1
+        *  Copyright (c) 2011 AllBinary
+        *
+        *  By agreeing to this license you and any business entity you represent are
+        *  legally bound to the AllBinary Open License Version 1 legal agreement.
+        *
+        *  You may obtain the AllBinary Open License Version 1 legal agreement from
+        *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+        *
+        *  Created By: Travis Berthelot
+*/
+import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
+import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
+import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+export class DownKeyEventHandlerBase extends BasicEventHandler {
+    constructor() {
+        super();
+        this.list = new BasicArrayListD();
+    }
+    addListener(playerGameInput) {
+        if (!this.list.contains(playerGameInput)) {
+            this.list.add(playerGameInput);
+        }
+    }
+    removeAllListeners() {
+        this.list.clear();
+        super.removeAllListeners();
+    }
+    removeListenerSingleThreaded(eventListenerInterface) {
+        this.list.remove(eventListenerInterface);
+        super.removeListenerSingleThreaded(eventListenerInterface);
+    }
+    //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
+    removeListener(eventListenerInterface) {
+        this.list.remove(eventListenerInterface);
+        super.removeListener(eventListenerInterface);
+    }
+    //@Throws(Exception.constructor)
+    fireEventI(eventObject) {
+        for (var index = this.list.size(); --index >= 0;) {
+            try {
+                var playerGameInput = this.list.objectArray[index];
+                ;
+                playerGameInput.onDownKey(eventObject);
+                //: 
+            }
+            catch (e) {
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            }
+        }
+        var index = 0;
+        ;
+        var eventListenerInterface;
+        ;
+        while (index < this.eventListenerInterfaceList.size()) {
+            try {
+                eventListenerInterface = this.eventListenerInterfaceList.get(index);
+                this.processI(eventObject, eventListenerInterface);
+                //: 
+            }
+            catch (e) {
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            }
+            index++;
+        }
+    }
+    //@Throws(Exception.constructor)
+    fireEventForGameKeyEvent(eventObject) {
+        var size = this.list.size();
+        ;
+        for (var index = size; --index >= 0;) {
+            try {
+                var playerGameInput = this.list.objectArray[index];
+                ;
+                playerGameInput.onDownKeyEvent(eventObject);
+                //: 
+            }
+            catch (e) {
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            }
+        }
+        var index = 0;
+        ;
+        var eventListenerInterface;
+        ;
+        while (index < this.eventListenerInterfaceList.size()) {
+            try {
+                eventListenerInterface = this.eventListenerInterfaceList.get(index);
+                this.processEvent(eventObject, eventListenerInterface);
+                //: 
+            }
+            catch (e) {
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            }
+            index++;
+        }
+    }
+    //@Throws(Exception.constructor)
+    processI(eventObject, eventListenerInterface) {
+        var downKeyEventListenerInterface = eventListenerInterface;
+        ;
+        downKeyEventListenerInterface.onDownKey(eventObject);
+    }
+    //@Throws(Exception.constructor)
+    processEvent(eventObject, eventListenerInterface) {
+        var downKeyEventListenerInterface = eventListenerInterface;
+        ;
+        downKeyEventListenerInterface.onDownKeyEvent(eventObject);
+    }
+    toString() {
+        var stringBuffer = new StringMaker();
+        ;
+        stringBuffer.append(super.toString());
+        stringBuffer.append(DownKeyEventHandlerBase.TOTAL_LISTENERS);
+        stringBuffer.appendint(this.list.size());
+        var eventListenerInterface;
+        ;
+        for (var index = 0; index < this.list.size(); index++) {
+            try {
+                eventListenerInterface = this.list.get(index);
+                stringBuffer.append(DownKeyEventHandlerBase.LISTENER_LABEL);
+                stringBuffer.append(eventListenerInterface.toString());
+                //: 
+            }
+            catch (e) {
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+            }
+        }
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return stringBuffer.toString();
+        ;
+    }
+}
+DownKeyEventHandlerBase.TOTAL_LISTENERS = " Total PlayerGameInput Listeners: ";
+DownKeyEventHandlerBase.LISTENER_LABEL = " PlayerGameInput Listener: ";

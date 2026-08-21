@@ -1,0 +1,85 @@
+/*
+        *
+        *  AllBinary Open License Version 1
+        *  Copyright (c) 2011 AllBinary
+        *
+        *  By agreeing to this license you and any business entity you represent are
+        *  legally bound to the AllBinary Open License Version 1 legal agreement.
+        *
+        *  You may obtain the AllBinary Open License Version 1 legal agreement from
+        *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+        *
+        *  Created By: Travis Berthelot
+*/
+import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+import { OpenGLFeatureFactory } from '../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
+import { OpenGLUtil } from '../../../../org/allbinary/graphics/opengles/OpenGLUtil.js';
+import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
+import { AllBinaryJ2SEImageRotationAnimation } from './AllBinaryJ2SEImageRotationAnimation.js';
+import { AllBinaryAdjustedJ2SEImageRotationAnimation } from './AllBinaryAdjustedJ2SEImageRotationAnimation.js';
+export class AllBinaryJ2SEImageRotationAnimationFactory extends BaseImageAnimationFactory {
+    //@Throws(Exception.constructor)
+    static createDXY(image, width, height, dx, dy, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation) {
+        var imageRotationAnimationFactory = new AllBinaryJ2SEImageRotationAnimationFactory(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation);
+        ;
+        imageRotationAnimationFactory.animationFactoryInitializationVisitor.dx = dx;
+        imageRotationAnimationFactory.animationFactoryInitializationVisitor.dy = dy;
+        imageRotationAnimationFactory.animationFactoryInitializationVisitor.originalDx = dx;
+        imageRotationAnimationFactory.animationFactoryInitializationVisitor.originalDy = dy;
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return imageRotationAnimationFactory;
+    }
+    constructor(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation) {
+        super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory);
+        //For kotlin this is before the body of the constructor.
+        this.angleIncrementP = angleIncrement;
+        this.resizeCanvasForRotation = resizeCanvasForRotation;
+    }
+    //@Throws(Exception.constructor)
+    getCanvasImage() {
+        var features = Features.getInstance();
+        ;
+        if (this.resizeCanvasForRotation && !features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL)) {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return ImageCopyUtil.getInstance().createImageScale(this.getImage(), 1.44, false);
+            ;
+        }
+        else {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return this.getImage();
+            ;
+        }
+    }
+    //@Throws(Exception.constructor)
+    getInstance(instanceId) {
+        var imageCopyUtil = ImageCopyUtil.getInstance();
+        ;
+        var canvasImage = this.getCanvasImage();
+        ;
+        var scaledImage = this.animationFactoryImageScaleUtil.createImage(canvasImage, this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        ;
+        var openGLUtil = OpenGLUtil.getInstance();
+        ;
+        scaledImage = openGLUtil.addImage(scaledImage);
+        var copyOfScaledImage = imageCopyUtil.createImageForRotation(scaledImage);
+        ;
+        if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
+            this.animationFactoryImageScaleUtil.processAdjust(this);
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return new AllBinaryAdjustedJ2SEImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.angleIncrementP), AngleFactory.getInstance().TOTAL_ANGLE, this.animationFactoryInitializationVisitor.dx, this.animationFactoryInitializationVisitor.dy, this.animationBehaviorFactory.getOrCreateInstance());
+        }
+        else {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return new AllBinaryJ2SEImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.angleIncrementP), AngleFactory.getInstance().TOTAL_ANGLE, this.animationBehaviorFactory.getOrCreateInstance());
+        }
+    }
+    getAngleIncrement() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return this.angleIncrementP;
+    }
+}

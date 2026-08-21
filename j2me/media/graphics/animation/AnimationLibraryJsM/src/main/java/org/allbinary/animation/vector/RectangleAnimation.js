@@ -1,0 +1,35 @@
+/*
+        *
+        *  AllBinary Open License Version 1
+        *  Copyright (c) 2011 AllBinary
+        *
+        *  By agreeing to this license you and any business entity you represent are
+        *  legally bound to the AllBinary Open License Version 1 legal agreement.
+        *
+        *  You may obtain the AllBinary Open License Version 1 legal agreement from
+        *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+        *
+        *  Created By: Travis Berthelot
+*/
+import { Animation } from '../../../../org/allbinary/animation/Animation.js';
+//Current folder imports from return types, extended types, and scope (deduplicated)
+export class RectangleAnimation extends Animation {
+    constructor(width, height, basicColor) {
+        super();
+        this.width = width;
+        this.height = height;
+        this.setBasicColorP(basicColor);
+    }
+    nextFrame() {
+    }
+    paintXY(graphics, x, y) {
+        this.basicSetColorUtil.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor());
+        graphics.drawRect(x, y, this.width, this.height);
+    }
+    setWidth(width) {
+        this.width = width;
+    }
+    setHeight(height) {
+        this.height = height;
+    }
+}

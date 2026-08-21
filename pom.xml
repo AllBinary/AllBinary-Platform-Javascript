@@ -30,9 +30,9 @@
 
     <modules>
 
-        <module>../working_thirdpartyts/embedded/j2me/microemulator/2_0_4/microemu-cldcJs</module>
-        <module>../working_thirdpartyts/embedded/j2me/microemulator/2_0_4/microemu-midpJs</module>
-        <module>../working_thirdpartyts/embedded/j2me/microemulator/2_0_4/microemu-extensions/microemu-jsr-135Js</module>
+        <module>../working_thirdpartyjs/embedded/j2me/microemulator/2_0_4/microemu-cldcJs</module>
+        <module>../working_thirdpartyjs/embedded/j2me/microemulator/2_0_4/microemu-midpJs</module>
+        <module>../working_thirdpartyjs/embedded/j2me/microemulator/2_0_4/microemu-extensions/microemu-jsr-135Js</module>
 
         <!--
         -->

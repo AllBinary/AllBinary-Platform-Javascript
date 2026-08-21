@@ -43,6 +43,7 @@ export class CommonSeps extends Object {
         this.QUOTE = "\"";
         this.QUOTE_END = "\",";
         this.COMMENT = "//";
+        this.INDENT = "    ";
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -1,0 +1,100 @@
+/*
+        *
+        *  AllBinary Open License Version 1
+        *  Copyright (c) 2011 AllBinary
+        *
+        *  By agreeing to this license you and any business entity you represent are
+        *  legally bound to the AllBinary Open License Version 1 legal agreement.
+        *
+        *  You may obtain the AllBinary Open License Version 1 legal agreement from
+        *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+        *
+        *  Created By: Travis Berthelot
+*/
+/* Generated Code Do Not Modify */
+import { Object } from '../../../../java/lang/Object.js';
+import { Exception } from '../../../../java/lang/Exception.js';
+import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
+import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
+import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { ImageCreationUtil } from './ImageCreationUtil.js';
+export class ImageCopyUtil extends Object {
+    static getInstance() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return ImageCopyUtil.instance;
+    }
+    constructor() {
+        super();
+        this.logUtil = LogUtil.getInstance();
+        this.commonStrings = CommonStrings.getInstance();
+        this.imageCreationUtil = ImageCreationUtil.getInstance();
+        this.anchor = Anchor.TOP_LEFT;
+        this.gameFeatureFactory = GameFeatureFactory.getInstance();
+        this.features = Features.getInstance();
+        this.NO_COPY = "J2ME does not need to copy images after initial loading";
+    }
+    //@Throws(Exception.constructor)
+    createImageForRotation(originalImage) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return this.createImage(originalImage);
+        ;
+    }
+    //@Throws(Exception.constructor)
+    createImage(originalImage) {
+        if (!this.features.isFeature(this.gameFeatureFactory.POST_IMAGE_LOADING_MODIFICATION)) {
+            this.logUtil.put(this.NO_COPY, this, this.commonStrings.CONSTRUCTOR, new Exception());
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return originalImage;
+        }
+        var image = this.imageCreationUtil.createImageWH(originalImage.getWidth(), originalImage.getHeight());
+        ;
+        if (image.isMutable()) {
+            image.getGraphics().drawImage(originalImage, 0, 0, this.anchor);
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return image;
+        }
+        else {
+            throw new Exception("Not Mutable");
+        }
+    }
+    //@Throws(Exception.constructor)
+    createImageScale(originalImage, canvasScale, resize) {
+        if (!this.features.isFeature(this.gameFeatureFactory.POST_IMAGE_LOADING_MODIFICATION)) {
+            this.logUtil.put(this.NO_COPY, this, this.commonStrings.CONSTRUCTOR, new Exception());
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return originalImage;
+        }
+        var newWidth = Math.round((originalImage.getWidth() * canvasScale));
+        ;
+        var newHeight = Math.round((originalImage.getHeight() * canvasScale));
+        ;
+        if (resize) {
+            if (newWidth < newHeight) {
+                newWidth = newHeight;
+            }
+            if (newHeight < newWidth) {
+                newHeight = newWidth;
+            }
+        }
+        var image = this.imageCreationUtil.createImageWH(newWidth, newHeight);
+        ;
+        if (image.isMutable()) {
+            var halfWidthDelta = (newWidth - originalImage.getWidth()) / 2;
+            ;
+            var halfHeightDelta = (newHeight - originalImage.getHeight()) / 2;
+            ;
+            var graphics = image.getGraphics();
+            ;
+            graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, this.anchor);
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return image;
+        }
+        else {
+            throw new Exception("Not Mutable");
+        }
+    }
+}
+ImageCopyUtil.instance = new ImageCopyUtil();
