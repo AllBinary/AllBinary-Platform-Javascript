@@ -1,4 +1,4 @@
-                             AllBinary Platform TypeScript
+                             AllBinary Platform JavaScript
 
 What is it?
 
@@ -15,7 +15,7 @@ Please see the LICENSE file in the root of the repository.  This is the
 same license as the main AllBinary Platform repo: 
 https://github.com/AllBinary/AllBinary-Platform
 
-Where is the code that is used to generate the TypeScript code?
+Where is the code that is used to generate the JavaScript code?
 
 https://github.com/AllBinary/AllBinary-Platform
 
