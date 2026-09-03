@@ -11,13 +11,20 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 import { NullGameCanvas } from '../../../../../../org/allbinary/game/displayable/canvas/NullGameCanvas.js';
+//not GWT import const NullGameCanvas = globalThis.org.allbinary.game.displayable.canvas.NullGameCanvas;
 import { AllBinaryLayer } from '../../../../../../org/allbinary/layer/AllBinaryLayer.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyedEventHandler } from './DestroyedEventHandler.js';
+//not GWT import const DestroyedEventHandler = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEventHandler;
 export class DestroyedEvent extends AllBinaryEventObject {
     constructor(combatGameCanvas) {
         super(DestroyedEventHandler.getInstance());

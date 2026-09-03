@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+//not GWT import const InputMappingEvent = globalThis.org.allbinary.game.input.mapping.event.InputMappingEvent;
 export class NullInputMappingEventListener extends Object {
     //@Throws(Exception.constructor)
     onInputMappingEvent(inputMappingEvent) {

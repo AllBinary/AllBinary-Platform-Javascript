@@ -1,4 +1,5 @@
 /* Generated Code Do Not Modify */
+//not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
 //Interfaces do not have static fields for typescript so create a class with the static fields
 export class GL11ExtI {
 }

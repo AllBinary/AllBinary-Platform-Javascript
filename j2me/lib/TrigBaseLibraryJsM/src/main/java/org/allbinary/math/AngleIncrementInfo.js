@@ -13,11 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { SmallIntegerSingletonFactory } from '../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { AngleFactory } from './AngleFactory.js';
-import { FrameUtil } from './FrameUtil.js';
+//not plain js import { AngleFactory } from './AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not plain js import { FrameUtil } from './FrameUtil.js';
+const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
 export class AngleIncrementInfo extends Object {
     constructor(angleIncrement) {
         super();

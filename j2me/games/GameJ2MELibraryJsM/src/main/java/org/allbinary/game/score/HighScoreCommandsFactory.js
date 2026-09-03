@@ -11,9 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoreCommandsBaseFactory } from './HighScoreCommandsBaseFactory.js';
+//not GWT import const HighScoreCommandsBaseFactory = globalThis.org.allbinary.game.score.HighScoreCommandsBaseFactory;
 import { HighScoreCommands } from './HighScoreCommands.js';
+//not GWT import const HighScoreCommands = globalThis.org.allbinary.game.score.HighScoreCommands;
 export class HighScoreCommandsFactory extends HighScoreCommandsBaseFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

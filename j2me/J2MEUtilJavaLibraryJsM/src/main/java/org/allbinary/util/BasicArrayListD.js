@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { BasicArrayListS } from './BasicArrayListS.js';
+//not plain js import { BasicArrayListS } from './BasicArrayListS.js';
+const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 export class BasicArrayListD extends BasicArrayListS {
     constructor() {
         super(7);

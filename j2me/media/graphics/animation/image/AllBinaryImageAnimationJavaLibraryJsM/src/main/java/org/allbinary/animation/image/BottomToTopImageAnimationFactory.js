@@ -11,10 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
+//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
+//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { BottomToTopImageAnimation } from './BottomToTopImageAnimation.js';
+//not GWT import const BottomToTopImageAnimation = globalThis.org.allbinary.animation.image.BottomToTopImageAnimation;
 export class BottomToTopImageAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), image.getWidth(), image.getHeight(), 0, 0, animationBehaviorFactory);

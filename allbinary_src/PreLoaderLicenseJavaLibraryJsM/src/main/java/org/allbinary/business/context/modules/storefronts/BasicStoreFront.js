@@ -13,12 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+//not GWT import const HashMap = globalThis.java.util.HashMap;
 import { StoreFrontData } from '../../../../../../org/allbinary/business/context/modules/storefront/StoreFrontData.js';
+//not GWT import const StoreFrontData = globalThis.org.allbinary.business.context.modules.storefront.StoreFrontData;
 import { EntryData } from '../../../../../../org/allbinary/business/entry/EntryData.js';
+//not GWT import const EntryData = globalThis.org.allbinary.business.entry.EntryData;
 import { UserData } from '../../../../../../org/allbinary/business/user/UserData.js';
+//not GWT import const UserData = globalThis.org.allbinary.business.user.UserData;
 import { Tokenizer } from '../../../../../../org/allbinary/logic/string/tokens/Tokenizer.js';
-import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const Tokenizer = globalThis.org.allbinary.logic.string.tokens.Tokenizer;
+//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const BasicStoreFrontInterface = globalThis.org.allbinary.business.context.modules.storefronts.BasicStoreFrontInterface;
 export class BasicStoreFront extends Object {
     constructor() {
         super();

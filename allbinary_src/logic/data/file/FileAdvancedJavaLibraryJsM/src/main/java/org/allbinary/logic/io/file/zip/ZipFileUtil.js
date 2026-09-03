@@ -14,17 +14,32 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { ZipEntry } from '../../../../../../java/util/zip/ZipEntry.js';
+//not GWT import const ZipEntry = globalThis.java.util.zip.ZipEntry;
 import { ZipInputStream } from '../../../../../../java/util/zip/ZipInputStream.js';
+//not GWT import const ZipInputStream = globalThis.java.util.zip.ZipInputStream;
 import { ZipOutputStream } from '../../../../../../java/util/zip/ZipOutputStream.js';
-import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const ZipOutputStream = globalThis.java.util.zip.ZipOutputStream;
+//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not GWT import const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
 import { AbFileInputStream } from '../../../../../../org/allbinary/logic/io/AbFileInputStream.js';
+//not GWT import const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
 import { AbFileOutputStream } from '../../../../../../org/allbinary/logic/io/AbFileOutputStream.js';
+//not GWT import const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
 import { DataOutputStreamFactory } from '../../../../../../org/allbinary/logic/io/DataOutputStreamFactory.js';
+//not GWT import const DataOutputStreamFactory = globalThis.org.allbinary.logic.io.DataOutputStreamFactory;
 import { StreamUtil } from '../../../../../../org/allbinary/logic/io/StreamUtil.js';
+//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
 import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { FileUtil } from '../../../../../../org/allbinary/logic/io/file/FileUtil.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const FileUtil = globalThis.org.allbinary.logic.io.file.FileUtil;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ZipFileUtil extends Object {
     constructor() {

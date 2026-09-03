@@ -11,9 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-import { TextField } from '../../../../javax/microedition/lcdui/TextField.js';
+//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not plain js import { TextField } from '../../../../javax/microedition/lcdui/TextField.js';
+const TextField = globalThis.javax.microedition.lcdui.TextField;
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
+//not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SaveGameForm extends CommandForm {
     //@Throws(Exception.constructor)

@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerGameInput } from './PlayerGameInput.js';
+//not GWT import const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
 export class NoPlayerGameInput extends PlayerGameInput {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

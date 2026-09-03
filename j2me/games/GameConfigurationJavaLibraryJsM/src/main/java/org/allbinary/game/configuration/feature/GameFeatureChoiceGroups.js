@@ -13,7 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Hashtable } from '../../../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameFeatureChoiceGroups extends Object {
     static getExclusiveInstance() {
@@ -26,7 +30,7 @@ export class GameFeatureChoiceGroups extends Object {
     }
     constructor() {
         super();
-        this.hashtable = new Hashtable();
+        this.hashtable = StdUtil.getInstance().createHashtable();
     }
     get() {
         //if statement needs to be on the same line and ternary does not work the same way.

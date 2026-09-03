@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LoadTextures extends Object {
     //@Throws(Exception.constructor)

@@ -13,11 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const AudioInputStream = globalThis.javax.sound.sampled.AudioInputStream;
 import { BooleanControl } from '../../../../javax/sound/sampled/BooleanControl.js';
+//not GWT import const Type = globalThis.javax.sound.sampled.Control.Type;
 import { Info } from '../../../../javax/sound/sampled/Line/Info.js';
+//not GWT import const LineUnavailableException = globalThis.javax.sound.sampled.LineUnavailableException;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullJ2SEControl } from './NullJ2SEControl.js';
+//not GWT import const NullJ2SEControl = globalThis.org.allbinary.media.audio.NullJ2SEControl;
 import { NullAudioFormat } from './NullAudioFormat.js';
+//not GWT import const NullAudioFormat = globalThis.org.allbinary.media.audio.NullAudioFormat;
 export class NullClip extends Object {
     //@Throws(LineUnavailableException.constructor)
     open(format, data, offset, bufferSize) {

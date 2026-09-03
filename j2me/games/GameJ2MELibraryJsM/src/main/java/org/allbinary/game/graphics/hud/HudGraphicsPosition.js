@@ -13,7 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not plain js import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HudGraphicsPosition extends Object {
     constructor(point, anchor) {

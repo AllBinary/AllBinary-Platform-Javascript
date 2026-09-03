@@ -1,7 +1,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { GameAdState } from '../../../../org/allbinary/game/GameAdState.js';
+//not GWT import const GameAdStateFactoryInterface = globalThis.org.allbinary.business.advertisement.GameAdStateFactoryInterface;
 import { AppNameLicensingAdConfiguration } from './AppNameLicensingAdConfiguration.js';
+//not GWT import const GameAdStateBase = globalThis.org.allbinary.business.advertisement.GameAdStateBase;
 export class GameAdStateFactory extends Object {
     constructor() {
         super(...arguments);

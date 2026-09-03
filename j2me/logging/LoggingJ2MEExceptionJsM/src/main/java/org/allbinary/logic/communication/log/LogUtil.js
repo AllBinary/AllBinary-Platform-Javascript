@@ -13,10 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { LogFormatUtil } from './LogFormatUtil.js';
-import { LogFactory } from './LogFactory.js';
+//not plain js import { LogFormatUtil } from './LogFormatUtil.js';
+const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
+//not plain js import { LogFactory } from './LogFactory.js';
+const LogFactory = globalThis.org.allbinary.logic.communication.log.LogFactory;
+//not plain js import { Log } from './Log.js';
+const Log = globalThis.org.allbinary.logic.communication.log.Log;
 //ActualPlatform
 /*actual*/ export class LogUtil extends Object {
     /*actual*/ static getInstance() {

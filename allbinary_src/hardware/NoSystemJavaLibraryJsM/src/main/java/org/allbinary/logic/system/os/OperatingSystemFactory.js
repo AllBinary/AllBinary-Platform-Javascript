@@ -13,11 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoOperatingSystem } from './NoOperatingSystem.js';
+//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
 export class OperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

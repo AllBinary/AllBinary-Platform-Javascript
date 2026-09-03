@@ -12,20 +12,32 @@
         *  Created By: Travis Berthelot
 */
 import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
+//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { NullCommandListener } from '../../../../../javax/microedition/lcdui/NullCommandListener.js';
+//not GWT import const NullCommandListener = globalThis.javax.microedition.lcdui.NullCommandListener;
 import { BasicBuildGameInitializerFactory } from '../../../../../org/allbinary/game/init/BasicBuildGameInitializerFactory.js';
+//not GWT import const BasicBuildGameInitializerFactory = globalThis.org.allbinary.game.init.BasicBuildGameInitializerFactory;
 import { AllBinaryGameLayerManager } from '../../../../../org/allbinary/game/layer/AllBinaryGameLayerManager.js';
+//not GWT import const AllBinaryGameLayerManager = globalThis.org.allbinary.game.layer.AllBinaryGameLayerManager;
 import { NoHighScoresFactory } from '../../../../../org/allbinary/game/score/NoHighScoresFactory.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const NoHighScoresFactory = globalThis.org.allbinary.game.score.NoHighScoresFactory;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryGameCanvas } from './AllBinaryGameCanvas.js';
+//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class NullGameCanvas extends AllBinaryGameCanvas {
     static createNull() {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return new NullGameCanvas(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER);
+            return new NullGameCanvas(AllBinaryGameLayerManager.getNullInstance());
             //: 
         }
         catch (e) {

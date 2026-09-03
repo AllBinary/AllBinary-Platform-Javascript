@@ -12,11 +12,17 @@
         *  Created By: Travis Berthelot
 */
 import { AnalogLocationInputProcessor } from '../../../org/allbinary/android/input/motion/AnalogLocationInputProcessor.js';
+//not GWT import const GameKeyEventSourceInterface = globalThis.org.allbinary.game.input.GameKeyEventSourceInterface;
 import { GameKeyFactory } from '../../../org/allbinary/game/input/GameKeyFactory.js';
+//not GWT import const AnalogLocationInput = globalThis.org.allbinary.game.input.analog.AnalogLocationInput;
 import { GameKeyEvent } from '../../../org/allbinary/game/input/event/GameKeyEvent.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
 import { GameKeyEventFactory } from '../../../org/allbinary/game/input/event/GameKeyEventFactory.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DirectionalAnalogLocationInputProcessor extends AnalogLocationInputProcessor {
     constructor(inputProcessorArray) {

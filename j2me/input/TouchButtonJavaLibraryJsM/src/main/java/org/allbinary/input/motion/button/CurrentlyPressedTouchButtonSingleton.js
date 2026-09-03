@@ -13,7 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const TouchButtonInput = globalThis.org.allbinary.input.motion.button.TouchButtonInput;
 export class CurrentlyPressedTouchButtonSingleton extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

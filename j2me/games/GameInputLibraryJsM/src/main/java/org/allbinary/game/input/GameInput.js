@@ -13,10 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { InputFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/InputFeatureFactory.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameInput extends Object {
     constructor(gameKeyEventList, removalGameKeyEventList) {

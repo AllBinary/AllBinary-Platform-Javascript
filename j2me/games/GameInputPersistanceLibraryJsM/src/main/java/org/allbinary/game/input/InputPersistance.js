@@ -12,25 +12,51 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../java/lang/Integer.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
+//not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
 import { ByteArrayOutputStream } from '../../../../java/io/ByteArrayOutputStream.js';
+//not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
 import { DataInputStream } from '../../../../java/io/DataInputStream.js';
+//not GWT import const DataInputStream = globalThis.java.io.DataInputStream;
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
-import { Hashtable } from '../../../../java/util/Hashtable.js';
-import { RecordStore } from '../../../../javax/microedition/rms/RecordStore.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { RecordEnumeration } from '../../../../javax/microedition/rms/RecordEnumeration.js';
+const RecordEnumeration = globalThis.javax.microedition.rms.RecordEnumeration;
+//not plain js import { RecordStore } from '../../../../javax/microedition/rms/RecordStore.js';
+const RecordStore = globalThis.javax.microedition.rms.RecordStore;
 import { TsUtil } from '../../../../org/allbinary/TsUtil.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
 import { BasicPersitance } from '../../../../org/allbinary/game/configuration/persistance/BasicPersitance.js';
+//not GWT import const BasicPersitance = globalThis.org.allbinary.game.configuration.persistance.BasicPersitance;
 import { NullRecordComparator } from '../../../../org/allbinary/game/configuration/persistance/NullRecordComparator.js';
+//not GWT import const NullRecordComparator = globalThis.org.allbinary.game.configuration.persistance.NullRecordComparator;
 import { NullRecordFilter } from '../../../../org/allbinary/game/configuration/persistance/NullRecordFilter.js';
+//not GWT import const NullRecordFilter = globalThis.org.allbinary.game.configuration.persistance.NullRecordFilter;
 import { NullRecordStore } from '../../../../org/allbinary/game/configuration/persistance/NullRecordStore.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
-import { HashtableUtil } from '../../../../org/allbinary/util/HashtableUtil.js';
+//not GWT import const NullRecordStore = globalThis.org.allbinary.game.configuration.persistance.NullRecordStore;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { HashtableUtil } from '../../../../org/allbinary/util/HashtableUtil.js';
+const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
 import { GameKeyMappingFactory } from './GameKeyMappingFactory.js';
+//not GWT import const GameKeyMappingFactory = globalThis.org.allbinary.game.input.GameKeyMappingFactory;
 import { InputFactory } from './InputFactory.js';
+//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
 //GameInputPersistanceLibrary
 export class InputPersistance extends BasicPersitance {
     constructor(name) {
@@ -65,6 +91,8 @@ export class InputPersistance extends BasicPersitance {
             ;
             var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
             ;
+            var stdUtil = StdUtil.getInstance();
+            ;
             var recordAsBytes;
             ;
             var byteArrayInputStream;
@@ -81,7 +109,7 @@ export class InputPersistance extends BasicPersitance {
                     null) {
                     byteArrayInputStream = new ByteArrayInputStream(recordAsBytes);
                     inputStream = new DataInputStream(byteArrayInputStream);
-                    hashtable = new Hashtable();
+                    hashtable = stdUtil.createHashtable();
                     var value = 0;
                     ;
                     while (inputStream.available() > 0) {

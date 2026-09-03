@@ -14,16 +14,27 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Integer } from '../../../java/lang/Integer.js';
-import { Hashtable } from '../../../java/util/Hashtable.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+import { StdUtil } from '../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameTypeFactory } from './GameTypeFactory.js';
+//not GWT import const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
 import { GameMode } from './GameMode.js';
+//not GWT import const GameMode = globalThis.org.allbinary.game.GameMode;
 import { PlayerTypesFactory } from './PlayerTypesFactory.js';
+//not GWT import const PlayerTypesFactory = globalThis.org.allbinary.game.PlayerTypesFactory;
 import { GameInfoData } from './GameInfoData.js';
+//not GWT import const PlayerType = globalThis.org.allbinary.game.PlayerType;
 export class GameInfo extends Object {
     constructor(gameType, gameMode, playerType, highestLevel, currentLevel) {
         super();
@@ -88,7 +99,7 @@ export class GameInfo extends Object {
         }
     }
     toHashtable() {
-        var hashtable = new Hashtable();
+        var hashtable = StdUtil.getInstance().createHashtable();
         ;
         hashtable.put(this.gameInfoData.GAME_TYPE, this.getGameType().toString());
         hashtable.put(this.gameInfoData.GAME_MODE, this.gameMode.toString());

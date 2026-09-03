@@ -14,8 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { System } from '../../../../../java/lang/System.js';
+//not GWT import const IOException = globalThis.java.io.IOException;
 import { URL } from '../../../../../java/net/URL.js';
+//not GWT import const JarEntry = globalThis.java.util.jar.JarEntry;
 import { JarInputStream } from '../../../../../java/util/jar/JarInputStream.js';
+//not GWT import const JarInputStream = globalThis.java.util.jar.JarInputStream;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class JarUtil extends Object {
     //@Throws(Exception.constructor)

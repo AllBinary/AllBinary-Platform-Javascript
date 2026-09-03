@@ -11,22 +11,45 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
+//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
+//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
 import { GameCommandsFactory } from '../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
+//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
 import { GameCommandCanvas } from '../../../../../org/allbinary/game/displayable/canvas/GameCommandCanvas.js';
+//not GWT import const ColorFillBasePaintable = globalThis.org.allbinary.game.paint.ColorFillBasePaintable;
 import { ColorFillPaintableFactory } from '../../../../../org/allbinary/game/paint/ColorFillPaintableFactory.js';
+//not GWT import const ColorFillPaintableFactory = globalThis.org.allbinary.game.paint.ColorFillPaintableFactory;
 import { HighScoreCommandsFactory } from '../../../../../org/allbinary/game/score/HighScoreCommandsFactory.js';
+//not GWT import const HighScoresFactoryInterface = globalThis.org.allbinary.game.score.HighScoresFactoryInterface;
 import { HighScoresHelperBase } from '../../../../../org/allbinary/game/score/HighScoresHelperBase.js';
+//not GWT import const HighScoresResultsListener = globalThis.org.allbinary.game.score.HighScoresResultsListener;
 import { NoHighScoresFactory } from '../../../../../org/allbinary/game/score/NoHighScoresFactory.js';
+//not GWT import const NoHighScoresFactory = globalThis.org.allbinary.game.score.NoHighScoresFactory;
 import { NullHighScoresSingletonFactory } from '../../../../../org/allbinary/game/score/NullHighScoresSingletonFactory.js';
+//not GWT import const NullHighScoresSingletonFactory = globalThis.org.allbinary.game.score.NullHighScoresSingletonFactory;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
+//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 import { SimpleTextPaintable } from '../../../../../org/allbinary/graphics/paint/SimpleTextPaintable.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { ARunnable } from '../../../../../org/allbinary/thread/ARunnable.js';
+//not GWT import const SimpleTextPaintable = globalThis.org.allbinary.graphics.paint.SimpleTextPaintable;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { ARunnable } from '../../../../../org/allbinary/thread/ARunnable.js';
+const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 import { SecondaryThreadPool } from '../../../../../org/allbinary/thread/SecondaryThreadPool.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HighScoresCanvas extends GameCommandCanvas {
     constructor(commandListener, allBinaryGameLayerManager, gameInfo, paintable, highScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface) {

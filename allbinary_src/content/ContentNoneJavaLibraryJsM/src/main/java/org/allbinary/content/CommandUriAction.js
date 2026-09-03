@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { Command } from '../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CommandUriAction extends Object {
     constructor() {

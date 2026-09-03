@@ -13,8 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not GWT import const InputMappingEventListenerInterface = globalThis.org.allbinary.game.input.mapping.event.InputMappingEventListenerInterface;
+//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
+//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MotionInputMappingEventListener extends Object {
     onEvent(eventObject) {

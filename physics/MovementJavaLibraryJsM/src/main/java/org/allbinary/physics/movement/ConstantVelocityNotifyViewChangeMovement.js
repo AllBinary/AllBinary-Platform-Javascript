@@ -11,12 +11,18 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinaryGameLayer = globalThis.org.allbinary.game.layer.AllBinaryGameLayer;
 import { BasicVelocityProperties } from '../../../../org/allbinary/game/physics/velocity/BasicVelocityProperties.js';
-import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 import { AxisMathVectorUtil } from '../../../../org/allbinary/logic/math/vector/AxisMathVectorUtil.js';
-import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AxisMathVectorUtil = globalThis.org.allbinary.logic.math.vector.AxisMathVectorUtil;
+//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Movement } from './Movement.js';
+//not GWT import const Movement = globalThis.org.allbinary.physics.movement.Movement;
 export class ConstantVelocityNotifyViewChangeMovement extends Movement {
     constructor() {
         super();

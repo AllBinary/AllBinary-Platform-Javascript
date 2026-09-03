@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const FileNotFoundException = globalThis.java.io.FileNotFoundException;
 import { FileOutputStream } from '../../../../java/io/FileOutputStream.js';
+//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbFileOutputStream extends FileOutputStream {
     //@Throws(FileNotFoundException.constructor)

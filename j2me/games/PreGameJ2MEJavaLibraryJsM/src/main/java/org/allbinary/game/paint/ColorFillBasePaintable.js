@@ -11,8 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const ColorCompositeInterface = globalThis.org.allbinary.graphics.color.ColorCompositeInterface;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ColorFillBasePaintable extends Paintable {
     constructor(basicColor) {

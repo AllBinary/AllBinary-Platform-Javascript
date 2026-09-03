@@ -12,14 +12,25 @@
         *  Created By: Travis Berthelot
 */
 import { Thread } from '../../../../java/lang/Thread.js';
-import { ARunnable } from '../../../../org/allbinary/thread/ARunnable.js';
+//not plain js import { ARunnable } from '../../../../org/allbinary/thread/ARunnable.js';
+const ARunnable = globalThis.org.allbinary.thread.ARunnable;
+//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import { OpenGLFeatureFactory } from '../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { NullRunnable } from '../../../../org/allbinary/thread/NullRunnable.js';
+const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RepaintBehavior } from './RepaintBehavior.js';
+//not GWT import const RepaintBehavior = globalThis.org.allbinary.game.displayable.RepaintBehavior;
 export class AlwaysRepaintBehavior extends RepaintBehavior {
     constructor() {
         super(...arguments);

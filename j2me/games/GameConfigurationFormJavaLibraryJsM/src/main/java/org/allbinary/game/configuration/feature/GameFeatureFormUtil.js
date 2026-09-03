@@ -13,17 +13,32 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
+//not plain js import { Item } from '../../../../../javax/microedition/lcdui/Item.js';
+const Item = globalThis.javax.microedition.lcdui.Item;
 import { NullImage } from '../../../../../javax/microedition/lcdui/NullImage.js';
+//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
 import { GameConfigurationGauge } from '../../../../../org/allbinary/game/configuration/GameConfigurationGauge.js';
+//not GWT import const GameConfigurationGauge = globalThis.org.allbinary.game.configuration.GameConfigurationGauge;
 import { GameConfigurationUtil } from '../../../../../org/allbinary/game/configuration/GameConfigurationUtil.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
-import { HashtableUtil } from '../../../../../org/allbinary/util/HashtableUtil.js';
+//not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { HashtableUtil } from '../../../../../org/allbinary/util/HashtableUtil.js';
+const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Features } from './Features.js';
+//not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
 import { GameFeatureUtil } from './GameFeatureUtil.js';
+//not GWT import const GameFeatureUtil = globalThis.org.allbinary.game.configuration.feature.GameFeatureUtil;
 export class GameFeatureFormUtil extends Object {
     constructor() {
         super(...arguments);

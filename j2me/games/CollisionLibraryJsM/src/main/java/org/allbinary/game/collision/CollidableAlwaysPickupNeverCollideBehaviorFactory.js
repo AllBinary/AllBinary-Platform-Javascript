@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableBaseBehaviorFactory } from './CollidableBaseBehaviorFactory.js';
+//not GWT import const CollidableBaseBehaviorFactory = globalThis.org.allbinary.game.collision.CollidableBaseBehaviorFactory;
 import { CollidableAlwaysPickupNeverCollideBehavior } from './CollidableAlwaysPickupNeverCollideBehavior.js';
+//not GWT import const CollidableBaseBehavior = globalThis.org.allbinary.game.collision.CollidableBaseBehavior;
 export class CollidableAlwaysPickupNeverCollideBehaviorFactory extends CollidableBaseBehaviorFactory {
     constructor() {
         super(...arguments);

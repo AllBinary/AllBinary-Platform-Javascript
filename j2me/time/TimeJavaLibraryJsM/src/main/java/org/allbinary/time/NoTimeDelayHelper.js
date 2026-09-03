@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TimeDelayHelper } from './TimeDelayHelper.js';
+//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
 export class NoTimeDelayHelper extends TimeDelayHelper {
     constructor() {
         super(0);

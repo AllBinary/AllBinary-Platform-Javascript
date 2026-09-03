@@ -14,8 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Integer } from '../../../../java/lang/Integer.js';
-import { Hashtable } from '../../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from './BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 export class BasicColorCacheFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -23,7 +26,7 @@ export class BasicColorCacheFactory extends Object {
     }
     constructor() {
         super();
-        this.hashtable = new Hashtable();
+        this.hashtable = StdUtil.getInstance().createHashtable();
     }
     add(basicDefaultColor) {
         this.hashtable.put(new Integer(basicDefaultColor.intValue()), basicDefaultColor);

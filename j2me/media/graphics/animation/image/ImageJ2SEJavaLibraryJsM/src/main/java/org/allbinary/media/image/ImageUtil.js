@@ -13,14 +13,26 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const GraphicsDevice = globalThis.java.awt.GraphicsDevice;
 import { GraphicsEnvironment } from '../../../../java/awt/GraphicsEnvironment.js';
+//not GWT import const GraphicsEnvironment = globalThis.java.awt.GraphicsEnvironment;
 import { Transparency } from '../../../../java/awt/Transparency.js';
+//not GWT import const Transparency = globalThis.java.awt.Transparency;
 import { AffineTransform } from '../../../../java/awt/geom/AffineTransform.js';
+//not GWT import const AffineTransform = globalThis.java.awt.geom.AffineTransform;
 import { BufferedImage } from '../../../../java/awt/image/BufferedImage.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const BufferedImage = globalThis.java.awt.image.BufferedImage;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const J2SEMutableImage = globalThis.org.microemu.device.j2se.J2SEMutableImage;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageUtil extends Object {
     static getInstance() {

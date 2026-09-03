@@ -11,19 +11,32 @@
         *
         *  Created By: Travis Berthelot
 */
-import { ARunnable } from '../../../../org/allbinary/thread/ARunnable.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { ARunnable } from '../../../../org/allbinary/thread/ARunnable.js';
+const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 import { BasicHighScoresGameInfoFactory } from '../../../../org/allbinary/game/BasicHighScoresGameInfoFactory.js';
+//not GWT import const GameType = globalThis.org.allbinary.game.GameType;
 import { GameTypeFactory } from '../../../../org/allbinary/game/GameTypeFactory.js';
+//not GWT import const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
 import { RemoteHighScores } from '../../../../org/allbinary/game/score/remote/RemoteHighScores.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const RemoteHighScores = globalThis.org.allbinary.game.score.remote.RemoteHighScores;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { BooleanFactory } from '../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import { SecondaryThreadPool } from '../../../../org/allbinary/thread/SecondaryThreadPool.js';
+//not GWT import const SecondaryThreadPool = globalThis.org.allbinary.thread.SecondaryThreadPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresBase } from './HighScoresBase.js';
+//not GWT import const HighScoresResultsListener = globalThis.org.allbinary.game.score.HighScoresResultsListener;
 import { RecordStoreHighScores } from './RecordStoreHighScores.js';
+//not GWT import const RecordStoreHighScores = globalThis.org.allbinary.game.score.RecordStoreHighScores;
 import { ScoreComparator } from './ScoreComparator.js';
+//not GWT import const ScoreComparator = globalThis.org.allbinary.game.score.ScoreComparator;
 import { LastFetchHighScoresFactory } from './LastFetchHighScoresFactory.js';
+//not GWT import const LastFetchHighScoresFactory = globalThis.org.allbinary.game.score.LastFetchHighScoresFactory;
 import { HighScoresHelper2 } from './HighScoresHelper2.js';
+//not GWT import const HighScoresHelperBaseInterface = globalThis.org.allbinary.game.score.HighScoresHelperBaseInterface;
 export class BasicHighScoresFactory extends HighScoresBase {
     static loaded(index2) {
         if (index2 >= 0) {

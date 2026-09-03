@@ -11,17 +11,34 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Anchor } from '../../../../../org/allbinary/graphics/Anchor.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { BasicColorSetUtil } from '../../../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
+//not GWT import const BasicColorSetUtil = globalThis.org.allbinary.graphics.color.BasicColorSetUtil;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import { FontDebugFactory } from '../../../../../org/allbinary/graphics/font/FontDebugFactory.js';
+//not GWT import const FontDebugFactory = globalThis.org.allbinary.graphics.font.FontDebugFactory;
 import { MyFontProcessor } from '../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
+//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
 import { UpdateMyFontProcessor } from '../../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
+//not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
 import { InitUpdatePaintable } from '../../../../../org/allbinary/graphics/paint/InitUpdatePaintable.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const InitUpdatePaintable = globalThis.org.allbinary.graphics.paint.InitUpdatePaintable;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class StartIntermissionPaintable extends InitUpdatePaintable {
     constructor(gameCanvas, stringArray, basicColor, font) {
         super();

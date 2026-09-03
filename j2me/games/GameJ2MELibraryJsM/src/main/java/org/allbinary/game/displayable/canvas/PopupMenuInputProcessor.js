@@ -11,13 +11,32 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { GameInputStrings } from '../../../../../org/allbinary/game/input/GameInputStrings.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
+//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 import { TouchMotionGestureFactory } from '../../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
-import { RectangleCollisionUtil } from '../../../../../org/allbinary/math/RectangleCollisionUtil.js';
+//not GWT import const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
+//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { RectangleCollisionUtil } from '../../../../../org/allbinary/math/RectangleCollisionUtil.js';
+const RectangleCollisionUtil = globalThis.org.allbinary.math.RectangleCollisionUtil;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
+//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
+//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class PopupMenuInputProcessor extends BasicMenuInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCanvas, rectangle) {
         super(gameKeyEventList, playerInputId, gameCanvas);

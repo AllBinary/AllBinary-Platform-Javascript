@@ -14,13 +14,22 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Thread } from '../../../../java/lang/Thread.js';
+//not GWT import const GameInitializedEvent = globalThis.org.allbinary.game.configuration.event.GameInitializedEvent;
 import { GameInitializedEventHandler } from '../../../../org/allbinary/game/configuration/event/GameInitializedEventHandler.js';
+//not GWT import const GameInitializedListenerInterface = globalThis.org.allbinary.game.configuration.event.GameInitializedListenerInterface;
 import { FeatureResourceInitializationUtil } from '../../../../org/allbinary/game/resource/FeatureResourceInitializationUtil.js';
+//not GWT import const FeatureResourceInitializationUtil = globalThis.org.allbinary.game.resource.FeatureResourceInitializationUtil;
 import { SWTJOGLProcessor } from '../../../../org/allbinary/graphics/threed/SWTJOGLProcessor.js';
-import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const SWTJOGLProcessor = globalThis.org.allbinary.graphics.threed.SWTJOGLProcessor;
+//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventStrings.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DefaultGameInitializationListener extends Object {
     constructor() {

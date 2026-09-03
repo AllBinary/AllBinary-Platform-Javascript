@@ -13,8 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
+//not GWT import const Set = globalThis.java.util.Set;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//ArkTs does not have this.  So this is for the ArkTs build.
+//J2SEForJ2ME
 export class J2SEUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

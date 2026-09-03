@@ -1,19 +1,36 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const Context = globalThis.android.content.Context;
 import { Intent } from '../../../../../android/content/Intent.js';
+//not GWT import const Intent = globalThis.android.content.Intent;
 import { AndroidServicesUtil } from '../../../../../org/allbinary/android/AndroidServicesUtil.js';
-import { ResourceUtil } from '../../../../../org/allbinary/data/resource/ResourceUtil.js';
-import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const AndroidServicesUtil = globalThis.org.allbinary.android.AndroidServicesUtil;
+//not plain js import { ResourceUtil } from '../../../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
+//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { NoSound } from '../../../../../org/allbinary/media/audio/NoSound.js';
-import { CommonStateStrings } from '../../../../../org/allbinary/string/CommonStateStrings.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not plain js import { CommonStateStrings } from '../../../../../org/allbinary/string/CommonStateStrings.js';
+const CommonStateStrings = globalThis.org.allbinary.string.CommonStateStrings;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
 import { GameTickTimeDelayHelperFactory } from '../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
+//not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
-import { BasicArrayListUtil } from '../../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListUtil } from '../../../../../org/allbinary/util/BasicArrayListUtil.js';
+const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MusicStrings } from './MusicStrings.js';
+//not GWT import const MusicStrings = globalThis.org.allbinary.media.audio.music.MusicStrings;
 export class MusicManager extends Object {
     static pause(activity, musicServiceClass) {
         var commonStateStrings = CommonStateStrings.getInstance();

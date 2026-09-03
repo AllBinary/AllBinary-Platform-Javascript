@@ -13,9 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 import { AllBinaryEventCircularPool } from '../../../../org/allbinary/logic/util/event/AllBinaryEventCircularPool.js';
+//not GWT import const AllBinaryEventCircularPool = globalThis.org.allbinary.logic.util.event.AllBinaryEventCircularPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEventFactory } from './TrackingEventFactory.js';
+//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
 export class TrackingEventCircularStaticPool extends Object {
     constructor() {
         super(...arguments);

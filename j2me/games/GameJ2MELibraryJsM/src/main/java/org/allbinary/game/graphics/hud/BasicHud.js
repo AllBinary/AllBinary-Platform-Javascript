@@ -13,23 +13,47 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
+//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
 import { Anchor } from '../../../../../org/allbinary/graphics/Anchor.js';
-import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const Anchor = globalThis.org.allbinary.graphics.Anchor;
+//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not plain js import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { BasicColorSetUtil } from '../../../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
+//not GWT import const BasicColorSetUtil = globalThis.org.allbinary.graphics.color.BasicColorSetUtil;
 import { CanvasStrings } from '../../../../../org/allbinary/graphics/displayable/CanvasStrings.js';
+//not GWT import const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
+//not GWT import const DisplayChangeEvent = globalThis.org.allbinary.graphics.displayable.event.DisplayChangeEvent;
 import { MyFontProcessor } from '../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
+//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
 import { UpdateMyFontProcessor } from '../../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
+//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HudGraphicsPosition } from './HudGraphicsPosition.js';
+//not GWT import const HudGraphicsPosition = globalThis.org.allbinary.game.graphics.hud.HudGraphicsPosition;
 import { BasicHudFactory } from './BasicHudFactory.js';
+//not GWT import const BasicHudFactory = globalThis.org.allbinary.game.graphics.hud.BasicHudFactory;
 export class BasicHud extends Object {
     constructor(location, direction, bufferZone, basicColor) {
         super();
@@ -222,7 +246,7 @@ export class BasicHud extends Object {
         ;
         graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition.getAnchor());
     }
-    paint(graphics, string) {
+    paintString(graphics, string) {
         this.myFontProcessor.process(graphics);
         this.basicSetColorUtil.setBasicColorP(graphics, this.getBasicColorP());
         var y = this.getY() + this.offsetY;

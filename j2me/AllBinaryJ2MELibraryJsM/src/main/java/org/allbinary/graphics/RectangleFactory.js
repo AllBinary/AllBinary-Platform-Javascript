@@ -15,7 +15,9 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Rectangle } from './Rectangle.js';
-import { PointFactory } from './PointFactory.js';
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not plain js import { PointFactory } from './PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 export class RectangleFactory extends Object {
 }
 RectangleFactory.SINGLETON = new Rectangle(PointFactory.getInstance().ZERO_ZERO, 0, 0);

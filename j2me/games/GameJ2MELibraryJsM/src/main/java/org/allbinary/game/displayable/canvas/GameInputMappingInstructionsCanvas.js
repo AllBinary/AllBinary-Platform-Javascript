@@ -11,13 +11,26 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
+//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const ColorFillBasePaintable = globalThis.org.allbinary.game.paint.ColorFillBasePaintable;
 import { ColorFillPaintableFactory } from '../../../../../org/allbinary/game/paint/ColorFillPaintableFactory.js';
+//not GWT import const ColorFillPaintableFactory = globalThis.org.allbinary.game.paint.ColorFillPaintableFactory;
 import { Anchor } from '../../../../../org/allbinary/graphics/Anchor.js';
+//not GWT import const Anchor = globalThis.org.allbinary.graphics.Anchor;
 import { DrawStringUtil } from '../../../../../org/allbinary/graphics/draw/DrawStringUtil.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const DrawStringUtil = globalThis.org.allbinary.graphics.draw.DrawStringUtil;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameCommandCanvas } from './GameCommandCanvas.js';
+//not GWT import const GameCommandCanvas = globalThis.org.allbinary.game.displayable.canvas.GameCommandCanvas;
 export class GameInputMappingInstructionsCanvas extends GameCommandCanvas {
     constructor(commandListener, allBinaryGameLayerManager) {
         super(commandListener, GameInputMappingInstructionsCanvas.NAME, allBinaryGameLayerManager.getBackgroundBasicColor(), allBinaryGameLayerManager.getForegroundBasicColor());

@@ -11,10 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
-import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not plain js import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RelativeLayerRelationship } from './RelativeLayerRelationship.js';
+//not GWT import const RelativeLayerRelationship = globalThis.org.allbinary.layer.relationship.RelativeLayerRelationship;
 export class MiddleRelativeLayerRelationship extends RelativeLayerRelationship {
     constructor(layer) {
         super(layer, PointFactory.getInstance().createXY(layer.getHalfWidth(), layer.getHalfHeight()), BasicArrayListUtil.getInstance().getImmutableInstance());

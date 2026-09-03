@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { NullRunnable } from '../../../../org/allbinary/thread/NullRunnable.js';
+//not GWT import const Display = globalThis.org.eclipse.swt.widgets.Display;
+//not plain js import { NullRunnable } from '../../../../org/allbinary/thread/NullRunnable.js';
+const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SWTProcessor extends Object {
     constructor() {

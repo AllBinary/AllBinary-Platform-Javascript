@@ -13,8 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const HardwareComponentInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface;
 import { NoHardwareComponent } from '../../../../../org/allbinary/logic/system/hardware/components/interfaces/NoHardwareComponent.js';
+//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
 export class NoHardware extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -35,7 +38,7 @@ export class NoHardware extends Object {
     }
     difference(hardwareInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance().NULL_TABLE;
+        return StdUtil.getInstance().NULL_TABLE;
     }
 }
 NoHardware.instance = new NoHardware();

@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { PlayerI } from '../../../../javax/microedition/media/Player.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { Player, PlayerI } from '../../../../javax/microedition/media/Player.js';
+const Player = globalThis.javax.microedition.media.Player;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PlayerStateUtil extends Object {
     constructor() {

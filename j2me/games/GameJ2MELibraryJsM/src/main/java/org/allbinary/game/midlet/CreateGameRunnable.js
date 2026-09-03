@@ -13,13 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
+//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import { MyCommandsFactory } from '../../../../org/allbinary/graphics/displayable/command/MyCommandsFactory.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const MyCommandsFactory = globalThis.org.allbinary.graphics.displayable.command.MyCommandsFactory;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const DemoGameMidlet = globalThis.org.allbinary.game.midlet.DemoGameMidlet;
 import { DemoGameMidletEvent } from './DemoGameMidletEvent.js';
+//not GWT import const DemoGameMidletEvent = globalThis.org.allbinary.game.midlet.DemoGameMidletEvent;
 import { DemoGameMidletStateFactory } from './DemoGameMidletStateFactory.js';
+//not GWT import const DemoGameMidletStateFactory = globalThis.org.allbinary.game.midlet.DemoGameMidletStateFactory;
 import { DemoGameMidletEventHandler } from './DemoGameMidletEventHandler.js';
+//not GWT import const DemoGameMidletEventHandler = globalThis.org.allbinary.game.midlet.DemoGameMidletEventHandler;
 export class CreateGameRunnable extends Object {
     constructor(demoGameMidlet, hashtable) {
         super();

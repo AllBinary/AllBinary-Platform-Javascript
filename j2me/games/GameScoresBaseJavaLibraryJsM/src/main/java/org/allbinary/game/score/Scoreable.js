@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not GWT import const ScoreableInterface = globalThis.org.allbinary.game.score.ScoreableInterface;
 export class Scoreable extends Object {
     constructor(points) {
         super();

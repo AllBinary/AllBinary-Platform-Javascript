@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DisplayInfoSingleton } from './DisplayInfoSingleton.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 export class GameTickDisplayInfoSingleton extends Object {
     constructor() {
         super(...arguments);

@@ -13,7 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { MathUtil } from '../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } from '../../../org/allbinary/logic/math/MathUtil.js';
+const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DistanceUtil extends Object {
     constructor() {

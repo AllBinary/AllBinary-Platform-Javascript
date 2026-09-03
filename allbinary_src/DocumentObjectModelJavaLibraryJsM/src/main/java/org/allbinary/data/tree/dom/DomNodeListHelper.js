@@ -13,12 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Vector } from '../../../../../java/util/Vector.js';
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomNodeHelper } from './DomNodeHelper.js';
+//not GWT import const DomNodeHelper = globalThis.org.allbinary.data.tree.dom.DomNodeHelper;
 export class DomNodeListHelper extends Object {
     static getVector(nodeList) {
-        var vector = new Vector();
+        var vector = new BasicArrayListD();
         ;
         var size = nodeList.getLength();
         ;

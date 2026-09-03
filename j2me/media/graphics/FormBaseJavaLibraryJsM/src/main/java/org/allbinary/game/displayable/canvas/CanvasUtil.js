@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
-import { CommonPhoneStrings } from '../../../../../org/allbinary/string/CommonPhoneStrings.js';
+//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not plain js import { CommonPhoneStrings } from '../../../../../org/allbinary/string/CommonPhoneStrings.js';
+const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CanvasUtil extends Object {
     static getKeyName(key) {

@@ -11,9 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const CompleteMotionGestureInputEventListenerInterface = globalThis.org.allbinary.game.input.CompleteMotionGestureInputEventListenerInterface;
 import { NoCompleteMotionGestureInputEventListener } from '../../../../org/allbinary/game/input/motion/action/NoCompleteMotionGestureInputEventListener.js';
+//not GWT import const NoCompleteMotionGestureInputEventListener = globalThis.org.allbinary.game.input.motion.action.NoCompleteMotionGestureInputEventListener;
 import { AllBinarySensor } from '../../../../org/allbinary/input/AllBinarySensor.js';
+//not GWT import const Orientation = globalThis.org.allbinary.logic.math.Orientation;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AllBinaryOrientationSensor extends AllBinarySensor {
     setListener(completeMotionGestureInputEventListenerInterface) {

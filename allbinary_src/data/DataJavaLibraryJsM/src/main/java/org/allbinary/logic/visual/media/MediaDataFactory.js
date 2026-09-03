@@ -15,6 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MediaData } from './MediaData.js';
+//not GWT import const MediaData = globalThis.org.allbinary.logic.visual.media.MediaData;
 export class MediaDataFactory extends Object {
     constructor() {
         super(...arguments);

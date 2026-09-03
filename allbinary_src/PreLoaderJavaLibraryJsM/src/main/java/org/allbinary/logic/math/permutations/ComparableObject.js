@@ -14,6 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
+//not GWT import const Comparable = globalThis.org.allbinary.logic.math.permutations.Comparable;
 export class ComparableObject extends Object {
     compareTo(anyType = {}) {
         if (TsUtil.getInstance().hashCode(this) < TsUtil.getInstance().hashCode(anyType)) {

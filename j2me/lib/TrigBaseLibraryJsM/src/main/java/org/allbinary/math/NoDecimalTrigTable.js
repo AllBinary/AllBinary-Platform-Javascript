@@ -15,14 +15,25 @@
 import { Object } from '../../../java/lang/Object.js';
 import { Exception } from '../../../java/lang/Exception.js';
 import { Integer } from '../../../java/lang/Integer.js';
-import { PreLogUtil } from '../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { MathUtil } from '../../../org/allbinary/logic/math/MathUtil.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { PreLogUtil } from '../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { MathUtil } from '../../../org/allbinary/logic/math/MathUtil.js';
+const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { AngleFactory } from './AngleFactory.js';
-import { PositionStrings } from './PositionStrings.js';
+//not plain js import { AngleFactory } from './AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not plain js import { PositionStrings } from './PositionStrings.js';
+const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
+//not plain js import { Angle } from './Angle.js';
+const Angle = globalThis.org.allbinary.math.Angle;
 export class NoDecimalTrigTable extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,13 +11,25 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../../java/lang/Exception.js';
-import { Vector } from '../../../../../java/util/Vector.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { XmlRpcAbeClient } from '../../../../../org/allbinary/logic/communication/xmlrpc/XmlRpcAbeClient.js';
-import { ExceptionUtil } from '../../../../../org/allbinary/logic/java/exception/ExceptionUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const XmlRpcAbeClient = globalThis.org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient;
+//not plain js import { ExceptionUtil } from '../../../../../org/allbinary/logic/java/exception/ExceptionUtil.js';
+const ExceptionUtil = globalThis.org.allbinary.logic.java.exception.ExceptionUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import { XmlRpcClient } from '../../../../../org/apache/xmlrpc/XmlRpcClient.js';
+//not GWT import const XmlRpcException = globalThis.org.apache.xmlrpc.XmlRpcException;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class XmlRpcRemoteHighScoresClient extends XmlRpcAbeClient {
     constructor(clientInfo, page, remoteMethod) {
@@ -30,7 +42,7 @@ export class XmlRpcRemoteHighScoresClient extends XmlRpcAbeClient {
     //@Throws(Exception.constructor)
     get(anyType = {}, cryptInterface) {
         try {
-            var param = new Vector();
+            var param = new BasicArrayListD();
             ;
             var serverUrl = getClientInfo().getLicenseServer(this.getServer());
             ;
@@ -51,7 +63,7 @@ export class XmlRpcRemoteHighScoresClient extends XmlRpcAbeClient {
             var hashtable = anyType;
             ;
             this.logUtil.putF(CLIENT_INFO + hashtable.toString(), this, this.commonStrings.GET);
-            param.addElement(hashtable);
+            param.add(hashtable);
             var result = xmlRpcClient.execute(this.getRemoteMethod(), param, cryptInterface);
             ;
             this.logUtil.putF(RESULT + result.toString(), this, this.commonStrings.GET);

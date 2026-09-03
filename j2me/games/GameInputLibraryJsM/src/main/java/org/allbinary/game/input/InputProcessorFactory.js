@@ -15,6 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputProcessor } from './InputProcessor.js';
+//not GWT import const InputProcessor = globalThis.org.allbinary.game.input.InputProcessor;
 export class InputProcessorFactory extends Object {
     constructor() {
         super(...arguments);

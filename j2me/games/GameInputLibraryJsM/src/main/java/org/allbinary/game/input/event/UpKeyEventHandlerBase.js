@@ -11,10 +11,19 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
+//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const BasicEventHandler = globalThis.org.allbinary.logic.util.event.handler.BasicEventHandler;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const UpKeyEventListenerInterface = globalThis.org.allbinary.game.input.event.UpKeyEventListenerInterface;
 export class UpKeyEventHandlerBase extends BasicEventHandler {
     constructor() {
         super();
@@ -39,7 +48,7 @@ export class UpKeyEventHandlerBase extends BasicEventHandler {
         super.removeListener(eventListenerInterface);
     }
     //@Throws(Exception.constructor)
-    fireEvent(eventObject) {
+    fireEventForInteger(eventObject) {
         for (var index = this.list.size(); --index >= 0;) {
             try {
                 var playerGameInput = this.list.objectArray[index];
@@ -58,7 +67,7 @@ export class UpKeyEventHandlerBase extends BasicEventHandler {
         while (index < this.eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = this.eventListenerInterfaceList.get(index);
-                this.process(eventObject, eventListenerInterface);
+                this.processForInteger(eventObject, eventListenerInterface);
                 //: 
             }
             catch (e) {
@@ -68,7 +77,7 @@ export class UpKeyEventHandlerBase extends BasicEventHandler {
         }
     }
     //@Throws(Exception.constructor)
-    process(eventObject, eventListenerInterface) {
+    processForInteger(eventObject, eventListenerInterface) {
         var upKeyEventListenerInterface = eventListenerInterface;
         ;
         upKeyEventListenerInterface.onUpKeyEvent(eventObject);

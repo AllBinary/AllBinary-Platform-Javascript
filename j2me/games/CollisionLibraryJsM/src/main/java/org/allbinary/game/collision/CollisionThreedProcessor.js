@@ -1,6 +1,8 @@
 /* Generated Code Do Not Modify */
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollisionProcessor } from './CollisionProcessor.js';
+//not GWT import const CollisionProcessor = globalThis.org.allbinary.game.collision.CollisionProcessor;
 export class CollisionThreedProcessor extends CollisionProcessor {
     isCollision(myLayer, myLayer2) {
         if (myLayer2.getXP() >= myLayer.getX2() || myLayer2.getYP() >= myLayer.getY2() || myLayer2.getX2() <= myLayer.getXP() || myLayer2.getY2() <= myLayer.getYP() || myLayer2.getZP() < myLayer.getZ2() || myLayer2.getZ2() > myLayer.getZP()) {

@@ -11,7 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Gauge } from '../../../../javax/microedition/lcdui/Gauge.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Gauge } from '../../../../javax/microedition/lcdui/Gauge.js';
+const Gauge = globalThis.javax.microedition.lcdui.Gauge;
+//not GWT import const GameConfiguration = globalThis.org.allbinary.game.configuration.GameConfiguration;
 export class GameConfigurationGauge extends Gauge {
     constructor(gameConfiguration) {
         super(gameConfiguration.getName(), gameConfiguration.isModifiable().valueOf(), gameConfiguration.getMaxValue().intValue() - gameConfiguration.getMinValue().intValue(), gameConfiguration.getValue().intValue() - gameConfiguration.getMinValue().intValue());

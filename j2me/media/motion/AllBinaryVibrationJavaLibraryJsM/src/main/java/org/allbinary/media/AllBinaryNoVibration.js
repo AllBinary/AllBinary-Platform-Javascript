@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryVibrationME } from './AllBinaryVibrationME.js';
+//not GWT import const AllBinaryVibrationME = globalThis.org.allbinary.media.AllBinaryVibrationME;
 export class AllBinaryNoVibration extends AllBinaryVibrationME {
     vibrate(duration, type, volume) {
     }

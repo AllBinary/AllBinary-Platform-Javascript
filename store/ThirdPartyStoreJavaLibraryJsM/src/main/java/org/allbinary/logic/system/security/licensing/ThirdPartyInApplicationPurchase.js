@@ -13,7 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const LockableFeature = globalThis.org.allbinary.logic.system.security.licensing.LockableFeature;
 export class ThirdPartyInApplicationPurchase extends Object {
     isPurchased(lockableFeature) {
         //if statement needs to be on the same line and ternary does not work the same way.

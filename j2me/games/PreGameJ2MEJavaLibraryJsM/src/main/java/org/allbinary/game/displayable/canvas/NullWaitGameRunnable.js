@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameRunnable } from './GameRunnable.js';
+//not GWT import const GameRunnable = globalThis.org.allbinary.game.displayable.canvas.GameRunnable;
 export class NullWaitGameRunnable extends GameRunnable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

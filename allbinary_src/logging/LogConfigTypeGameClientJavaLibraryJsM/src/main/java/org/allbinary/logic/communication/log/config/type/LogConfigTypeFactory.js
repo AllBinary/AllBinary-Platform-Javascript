@@ -15,7 +15,9 @@
 import { Object } from '../../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigType } from './LogConfigType.js';
+//not GWT import const LogConfigType = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigType;
 import { LogConfigTypes } from './LogConfigTypes.js';
+//not GWT import const LogConfigTypes = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypes;
 export class LogConfigTypeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

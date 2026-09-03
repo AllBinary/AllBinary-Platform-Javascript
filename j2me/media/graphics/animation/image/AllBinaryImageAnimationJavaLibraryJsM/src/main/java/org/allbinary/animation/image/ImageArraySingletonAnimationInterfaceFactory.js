@@ -11,10 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { AnimationBehavior } from '../../../../org/allbinary/animation/AnimationBehavior.js';
+//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { SingletonAnimationInterfaceFactory } from '../../../../org/allbinary/animation/SingletonAnimationInterfaceFactory.js';
+//not GWT import const IndexedAnimationToImageArrayUtil = globalThis.org.allbinary.image.IndexedAnimationToImageArrayUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayAnimation } from './ImageArrayAnimation.js';
+//not GWT import const ImageArrayAnimation = globalThis.org.allbinary.animation.image.ImageArrayAnimation;
 export class ImageArraySingletonAnimationInterfaceFactory extends SingletonAnimationInterfaceFactory {
     constructor(imageArray) {
         super(new ImageArrayAnimation(imageArray, AnimationBehavior.getInstance()));

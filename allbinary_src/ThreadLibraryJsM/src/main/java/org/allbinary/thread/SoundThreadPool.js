@@ -15,6 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThreadPool } from './ThreadPool.js';
+//not GWT import const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
 export class SoundThreadPool extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

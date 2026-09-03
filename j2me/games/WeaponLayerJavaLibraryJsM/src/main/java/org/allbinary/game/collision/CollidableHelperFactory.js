@@ -14,11 +14,16 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
+//not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SourceCollisionHelper } from './SourceCollisionHelper.js';
+//not GWT import const SourceCollisionHelper = globalThis.org.allbinary.game.collision.SourceCollisionHelper;
 import { CollisionHelper } from './CollisionHelper.js';
+//not GWT import const CollisionHelper = globalThis.org.allbinary.game.collision.CollisionHelper;
 export class CollidableHelperFactory extends Object {
     static getInstance() {
         if (Features.getInstance().isFeature(GameFeatureFactory.getInstance().COLLISIONS_WITH_SOURCE)) {

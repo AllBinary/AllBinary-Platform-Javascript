@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const LayerManager = globalThis.org.allbinary.layer.LayerManager;
 export class LayerManagerLoggingBase extends Object {
     //@Throws(Exception.constructor)
     append(layerInterface) {

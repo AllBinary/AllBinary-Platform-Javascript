@@ -11,13 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { Sprite } from '../../../../../javax/microedition/lcdui/game/Sprite.js';
+const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
+//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
 import { BaseImageAnimationFactory } from '../../../../../org/allbinary/animation/image/BaseImageAnimationFactory.js';
+//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { BasicColorUtil } from '../../../../../org/allbinary/graphics/color/BasicColorUtil.js';
+//not GWT import const BasicColorUtil = globalThis.org.allbinary.graphics.color.BasicColorUtil;
 import { AnimationFactorySpriteScaleUtil } from '../../../../../org/allbinary/image/sprite/AnimationFactorySpriteScaleUtil.js';
-import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not GWT import const AnimationFactorySpriteScaleUtil = globalThis.org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil;
+//not plain js import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
+//not GWT import const SpriteIndexedAnimation = globalThis.org.allbinary.animation.image.sprite.SpriteIndexedAnimation;
 import { AdjustedSpriteIndexedAnimation } from './AdjustedSpriteIndexedAnimation.js';
+//not GWT import const AdjustedSpriteIndexedAnimation = globalThis.org.allbinary.animation.image.sprite.AdjustedSpriteIndexedAnimation;
 export class OneRowSpriteIndexedAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createFactoryDX(image, dx, animationBehaviorFactory) {

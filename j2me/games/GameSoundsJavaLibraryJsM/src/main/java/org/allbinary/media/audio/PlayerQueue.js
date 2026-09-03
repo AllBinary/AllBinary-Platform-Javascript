@@ -13,12 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
 import { NoSound } from './NoSound.js';
+//not GWT import const NoSound = globalThis.org.allbinary.media.audio.NoSound;
 export class PlayerQueue extends Object {
     constructor(max) {
         super();

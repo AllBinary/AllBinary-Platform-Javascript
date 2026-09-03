@@ -1,18 +1,38 @@
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
+//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontProcessor.js';
+//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+import { NullPaintable } from '../../../../org/allbinary/graphics/paint/NullPaintable.js';
+//not GWT import const NullPaintable = globalThis.org.allbinary.graphics.paint.NullPaintable;
+import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
+//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollSelectionForm } from './ScrollSelectionForm.js';
+//not GWT import const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
+//not GWT import const FormType = globalThis.org.allbinary.graphics.form.FormType;
 import { ItemIndexPaintable } from './ItemIndexPaintable.js';
+//not GWT import const ItemIndexPaintable = globalThis.org.allbinary.graphics.form.ItemIndexPaintable;
 import { FormTypeFactory } from './FormTypeFactory.js';
+//not GWT import const FormTypeFactory = globalThis.org.allbinary.graphics.form.FormTypeFactory;
 //import { MultipleScrollSelectionFormVerticalPaintable } from './MultipleScrollSelectionFormVerticalPaintable.js';
+//not GWT import const MultipleScrollSelectionFormVerticalPaintable = globalThis.org.allbinary.graphics.form.MultipleScrollSelectionFormVerticalPaintable;
 //import { MultipleScrollSelectionFormHorizontalPaintable } from './MultipleScrollSelectionFormHorizontalPaintable.js';
+//not GWT import const MultipleScrollSelectionFormHorizontalPaintable = globalThis.org.allbinary.graphics.form.MultipleScrollSelectionFormHorizontalPaintable;
 export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     //@Throws(Exception.constructor)
     static createForm(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor) {
@@ -50,12 +70,29 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
                 ;
             }
         };
+        this.rectPaintable = NullPaintable.getInstance();
         this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = ItemIndexPaintable.getInstance();
         this.backgroundColor = BasicColorFactory.getInstance().TRANSPARENT_GREY.intValue();
         this.myFontProcessor = new UpdateMyFontProcessor(this);
         this.logged = false;
         this.fontHeight = 0;
         //For kotlin this is before the body of the constructor.
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
+        }
+        else {
+            //inner=true member= isStatic=
+            class MPaintable extends Paintable {
+                paint(graphics) {
+                    MultipleScrollSelectionHorizontalForm.prototype.fillRect(graphics);
+                }
+            }
+            //Otherwise - statement - EmptyStmt
+            this.rectPaintable = new MPaintable();
+        }
+    }
+    fillRect(graphics) {
+        graphics.setColor(this.backgroundColor);
+        graphics.fillRect(this.x, this.y, this.rectangle.getWidth(), this.rectangle.getHeight());
     }
     //@Throws(Exception.constructor)
     init(rectangle, formType) {
@@ -112,12 +149,7 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
             ;
             var dy = this.y;
             ;
-            if (J2MEUtil.isJ2ME()) {
-            }
-            else {
-                graphics.setColor(this.backgroundColor);
-                graphics.fillRect(this.x, this.y, this.rectangle.getWidth(), this.rectangle.getHeight());
-            }
+            this.rectPaintable.paint(graphics);
             graphics.drawString(this.getTitle(), this.x, this.y - this.fontHeight, 0);
             var item;
             ;

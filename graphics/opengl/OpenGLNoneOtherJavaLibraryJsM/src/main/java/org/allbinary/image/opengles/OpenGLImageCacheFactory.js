@@ -13,8 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { ImageCache } from '../../../../org/allbinary/image/ImageCache.js';
+//not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+//OpenGLNoneOtherJavaLibrary
 export class OpenGLImageCacheFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

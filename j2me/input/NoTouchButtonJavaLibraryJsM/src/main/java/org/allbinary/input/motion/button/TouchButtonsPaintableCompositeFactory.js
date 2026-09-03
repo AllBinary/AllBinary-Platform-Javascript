@@ -13,7 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { ProcessPaintable } from '../../../../../org/allbinary/graphics/paint/ProcessPaintable.js';
+//not GWT import const ProcessPaintable = globalThis.org.allbinary.graphics.paint.ProcessPaintable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TouchButtonsPaintableCompositeFactory extends Object {
     static getInstance(inputMappingInterface, basicColor) {

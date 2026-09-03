@@ -11,8 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { PlayerGameInput } from '../../../../org/allbinary/game/input/PlayerGameInput.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const HighScoresCanvas = globalThis.org.allbinary.game.score.displayable.HighScoresCanvas;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HighScoresCanvasInputProcessor extends PlayerGameInput {
     constructor(highScoresCanvas) {

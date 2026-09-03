@@ -11,10 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../../java/lang/Exception.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseBasicArrayListCache } from './BaseBasicArrayListCache.js';
+//not GWT import const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
 export class IndexedBasicArrayListCache extends BaseBasicArrayListCache {
     //@Throws(Exception.constructor)
     static createCache(size) {

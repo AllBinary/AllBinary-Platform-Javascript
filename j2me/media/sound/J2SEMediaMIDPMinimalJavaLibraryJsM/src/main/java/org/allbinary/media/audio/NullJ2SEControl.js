@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Control } from '../../../../javax/sound/sampled/Control.js';
+//not GWT import const Type = globalThis.org.allbinary.media.audio.Type;
 export class NullJ2SEControl extends Control {
     constructor(type) {
         super(type);

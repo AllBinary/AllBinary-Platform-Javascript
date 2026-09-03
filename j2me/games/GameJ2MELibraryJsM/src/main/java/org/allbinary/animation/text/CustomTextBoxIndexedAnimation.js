@@ -11,10 +11,20 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { AnimationBehavior } from '../../../../org/allbinary/animation/AnimationBehavior.js';
+//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 import { IndexedAnimation } from '../../../../org/allbinary/animation/IndexedAnimation.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const CustomTextBox = globalThis.org.allbinary.graphics.form.item.CustomTextBox;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const TextInterface = globalThis.org.allbinary.animation.text.TextInterface;
 import { TextChangeListener } from './TextChangeListener.js';
+//not GWT import const TextChangeListener = globalThis.org.allbinary.animation.text.TextChangeListener;
 export class CustomTextBoxIndexedAnimation extends IndexedAnimation {
     constructor(customTextBox) {
         super(AnimationBehavior.getInstance());

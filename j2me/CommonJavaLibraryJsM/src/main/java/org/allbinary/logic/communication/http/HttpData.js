@@ -13,7 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HttpData extends Object {
     static getInstance() {

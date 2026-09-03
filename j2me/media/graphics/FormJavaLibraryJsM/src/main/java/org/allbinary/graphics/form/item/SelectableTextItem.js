@@ -11,8 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABTextItem } from './ABTextItem.js';
+//not GWT import const ABStringComponent = globalThis.org.allbinary.graphics.form.item.ABStringComponent;
 export class SelectableTextItem extends ABTextItem {
     constructor(label, layout, altText, backgroundBasicColor, foregroundBasicColor) {
         super(label, layout, altText, backgroundBasicColor, foregroundBasicColor);

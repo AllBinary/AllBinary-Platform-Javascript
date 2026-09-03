@@ -14,14 +14,23 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { BufferedWriter } from '../../../../java/io/BufferedWriter.js';
+//not GWT import const BufferedWriter = globalThis.java.io.BufferedWriter;
 import { FileWriter } from '../../../../java/io/FileWriter.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const FileWriter = globalThis.java.io.FileWriter;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
-import { AbPathData } from '../../../../org/allbinary/logic/io/path/AbPathData.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
+//not plain js import { AbPathData } from '../../../../org/allbinary/logic/io/path/AbPathData.js';
+const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BufferedWriterUtil extends Object {
     constructor() {
@@ -29,7 +38,7 @@ export class BufferedWriterUtil extends Object {
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.commonLabels = CommonLabels.getInstance();
-        this.REMOVING_OLD = "Remove old for overwritting: ";
+        this.REMOVING_OLD = "Remove old for overwriting: ";
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

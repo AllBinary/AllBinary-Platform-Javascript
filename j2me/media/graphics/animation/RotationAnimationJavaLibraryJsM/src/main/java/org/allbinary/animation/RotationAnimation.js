@@ -11,11 +11,23 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 import { DirectionUtil } from '../../../org/allbinary/direction/DirectionUtil.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { FrameUtil } from '../../../org/allbinary/math/FrameUtil.js';
+//not GWT import const DirectionUtil = globalThis.org.allbinary.direction.DirectionUtil;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { Angle } from '../../../org/allbinary/math/Angle.js';
+const Angle = globalThis.org.allbinary.math.Angle;
+//not plain js import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
+const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+//not plain js import { FrameUtil } from '../../../org/allbinary/math/FrameUtil.js';
+const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
+//not plain js import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IndexedAnimation } from './IndexedAnimation.js';
+//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 export class RotationAnimation extends IndexedAnimation {
     constructor(angleInfo, circularIndexUtil, animationBehavior) {
         super(animationBehavior);

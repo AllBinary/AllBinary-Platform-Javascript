@@ -14,8 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../../../java/lang/RuntimeException.js';
-import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const VideoInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.VideoInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class WindowsHardware extends Object {
     constructor() {
@@ -67,6 +71,6 @@ export class WindowsHardware extends Object {
     }
     difference(hardwareInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance().NULL_TABLE;
+        return StdUtil.getInstance().NULL_TABLE;
     }
 }

@@ -13,9 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Angle } from '../../../org/allbinary/math/Angle.js';
+const Angle = globalThis.org.allbinary.math.Angle;
+//not plain js import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DirectionFactory } from './DirectionFactory.js';
+//not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 export class DirectionUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

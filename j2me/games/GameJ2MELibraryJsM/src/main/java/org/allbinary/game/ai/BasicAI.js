@@ -11,15 +11,26 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { ArtificialIntelligence } from '../../../../org/allbinary/ai/ArtificialIntelligence.js';
+//not GWT import const ArtificialIntelligence = globalThis.org.allbinary.ai.ArtificialIntelligence;
 import { CanvasUtil } from '../../../../org/allbinary/game/displayable/canvas/CanvasUtil.js';
+//not GWT import const GameKeyEventSourceInterface = globalThis.org.allbinary.game.input.GameKeyEventSourceInterface;
 import { GameKeyEventFactory } from '../../../../org/allbinary/game/input/event/GameKeyEventFactory.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicAI extends ArtificialIntelligence {
     constructor(ownerLayerInterface, gameInput) {

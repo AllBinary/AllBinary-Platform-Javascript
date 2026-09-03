@@ -13,12 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
+//not GWT import const Provider = globalThis.java.security.Provider;
 import { Security } from '../../../../../../../java/security/Security.js';
+//not GWT import const KeySpec = globalThis.java.security.spec.KeySpec;
 import { Cipher } from '../../../../../../../javax/crypto/Cipher.js';
+//not GWT import const SecretKey = globalThis.javax.crypto.SecretKey;
 import { SecretKeyFactory } from '../../../../../../../javax/crypto/SecretKeyFactory.js';
-import { PreLogUtil } from '../../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const CryptInterface = globalThis.org.allbinary.init.crypt.jcehelper.CryptInterface;
+//not plain js import { PreLogUtil } from '../../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const SunJCE = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.SunJCE;
 import { KeySpecFactory } from './KeySpecFactory.js';
+//not GWT import const KeySpecFactory = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.KeySpecFactory;
 export class AbBasicCrypt extends Object {
     constructor(algorithm, key) {
         super();

@@ -11,8 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const HealthBarAnimation = globalThis.org.allbinary.game.health.HealthBarAnimation;
 import { HealthBarTwodAnimation } from '../../../../org/allbinary/game/health/HealthBarTwodAnimation.js';
+//not GWT import const HealthListenerInterface = globalThis.org.allbinary.game.health.HealthListenerInterface;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
+//not GWT import const Life = globalThis.org.allbinary.game.life.Life;
 export class HealthIncludingLifeBar extends Paintable {
     constructor(layerInterface, life, healthInterface, animationInterface, direction) {
         super();

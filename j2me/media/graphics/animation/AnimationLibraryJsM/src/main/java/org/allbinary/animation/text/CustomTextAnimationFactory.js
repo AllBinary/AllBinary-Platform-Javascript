@@ -13,13 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { ScaleProperties } from '../../../../org/allbinary/media/ScaleProperties.js';
+//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomTextAnimation } from './CustomTextAnimation.js';
+//not GWT import const CustomTextAnimation = globalThis.org.allbinary.animation.text.CustomTextAnimation;
 import { AdjustCustomTextAnimation } from './AdjustCustomTextAnimation.js';
+//not GWT import const AdjustCustomTextAnimation = globalThis.org.allbinary.animation.text.AdjustCustomTextAnimation;
 export class CustomTextAnimationFactory extends Object {
     static createDXY(text, fontSize, dx, dy, animationBehaviorFactory) {
         var customTextAnimationFactory = new CustomTextAnimationFactory(text, fontSize, animationBehaviorFactory);

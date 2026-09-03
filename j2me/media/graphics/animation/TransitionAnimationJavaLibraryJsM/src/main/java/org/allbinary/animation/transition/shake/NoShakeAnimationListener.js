@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShakeAnimationListener } from './ShakeAnimationListener.js';
+//not GWT import const ShakeAnimationListener = globalThis.org.allbinary.animation.transition.shake.ShakeAnimationListener;
 export class NoShakeAnimationListener extends ShakeAnimationListener {
 }
 NoShakeAnimationListener.NO_SHAKE_ANIMATION_LISTENER = new NoShakeAnimationListener();

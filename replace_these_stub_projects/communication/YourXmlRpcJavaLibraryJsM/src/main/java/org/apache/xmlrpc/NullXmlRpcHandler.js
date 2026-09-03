@@ -13,7 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not GWT import const XmlRpcHandler = globalThis.org.apache.xmlrpc.XmlRpcHandler;
 export class NullXmlRpcHandler extends Object {
     //@Throws(Exception.constructor)
     execute(method, params) {

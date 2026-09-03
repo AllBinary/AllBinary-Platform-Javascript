@@ -13,7 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { FilePathData } from '../../../../../org/allbinary/logic/io/file/FilePathData.js';
+const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbPathData extends Object {
     static getInstance() {

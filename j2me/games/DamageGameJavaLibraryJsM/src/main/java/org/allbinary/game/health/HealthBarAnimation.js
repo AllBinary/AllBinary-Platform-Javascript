@@ -11,10 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { Animation } from '../../../../org/allbinary/animation/Animation.js';
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { BasicHudFactory } from '../../../../org/allbinary/game/graphics/hud/BasicHudFactory.js';
+//not GWT import const BasicHudFactory = globalThis.org.allbinary.game.graphics.hud.BasicHudFactory;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HealthBarAnimation extends Animation {
     constructor(layerInterface, location) {

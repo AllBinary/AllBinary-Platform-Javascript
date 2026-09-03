@@ -13,13 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const BaseResourceAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
 import { Features } from '../../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { MainFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
+//not GWT import const LayerPlacementInterfaceBasicArrayListFactoryInterface = globalThis.org.allbinary.game.layer.LayerPlacementInterfaceBasicArrayListFactoryInterface;
 import { ResourceLoadingLevelFactory } from '../../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
-import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
+//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const OnDemandResourcesFactory = globalThis.org.allbinary.game.layer.resources.OnDemandResourcesFactory;
 import { OnDemandResources } from './OnDemandResources.js';
+//not GWT import const OnDemandResources = globalThis.org.allbinary.game.layer.resources.OnDemandResources;
 export class OnDemandLoader extends Object {
     constructor(onDemandResourcesFactory, gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory, resourceAnimationInterfaceFactoryInterfaceFactory) {
         super();

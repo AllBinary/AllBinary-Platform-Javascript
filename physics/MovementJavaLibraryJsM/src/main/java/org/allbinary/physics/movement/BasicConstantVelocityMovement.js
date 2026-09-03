@@ -11,11 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 import { AxisMathVectorUtil } from '../../../../org/allbinary/logic/math/vector/AxisMathVectorUtil.js';
-import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AxisMathVectorUtil = globalThis.org.allbinary.logic.math.vector.AxisMathVectorUtil;
+//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Movement } from './Movement.js';
+//not GWT import const Movement = globalThis.org.allbinary.physics.movement.Movement;
 export class BasicConstantVelocityMovement extends Movement {
     constructor(basicDecimal, velocityProperties) {
         super();

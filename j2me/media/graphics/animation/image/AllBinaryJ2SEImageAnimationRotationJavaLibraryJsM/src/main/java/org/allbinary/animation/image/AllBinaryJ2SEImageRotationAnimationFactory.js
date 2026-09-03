@@ -11,17 +11,30 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { OpenGLFeatureFactory } from '../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
+//not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import { OpenGLUtil } from '../../../../org/allbinary/graphics/opengles/OpenGLUtil.js';
-import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
-import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
-import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
-import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
+//not GWT import const OpenGLUtil = globalThis.org.allbinary.graphics.opengles.OpenGLUtil;
+//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
+//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+//not plain js import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
+const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
+//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { AllBinaryJ2SEImageRotationAnimation } from './AllBinaryJ2SEImageRotationAnimation.js';
+//not GWT import const AllBinaryJ2SEImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryJ2SEImageRotationAnimation;
 import { AllBinaryAdjustedJ2SEImageRotationAnimation } from './AllBinaryAdjustedJ2SEImageRotationAnimation.js';
+//not GWT import const AllBinaryAdjustedJ2SEImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryAdjustedJ2SEImageRotationAnimation;
 export class AllBinaryJ2SEImageRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createDXY(image, width, height, dx, dy, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation) {

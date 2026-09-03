@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const AnalogLocationInputProcessor = globalThis.org.allbinary.android.input.motion.AnalogLocationInputProcessor;
 export class AnalogControllerVisitor extends Object {
     process(allbinaryLayerManager, analogLocationInputProcessor) {
     }

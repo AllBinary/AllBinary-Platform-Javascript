@@ -14,15 +14,27 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { PATH_GLOBALS } from '../../../../org/allbinary/globals/PATH_GLOBALS.js';
+//not GWT import const PATH_GLOBALS = globalThis.org.allbinary.globals.PATH_GLOBALS;
 import { URLGLOBALS } from '../../../../org/allbinary/globals/URLGLOBALS.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbIOSystem } from '../../../../org/allbinary/logic/io/AbIOSystem.js';
+//not GWT import const AbIOSystem = globalThis.org.allbinary.logic.io.AbIOSystem;
 import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { FileUtil } from '../../../../org/allbinary/logic/io/file/FileUtil.js';
+//not GWT import const FileUtil = globalThis.org.allbinary.logic.io.file.FileUtil;
 import { Directory } from '../../../../org/allbinary/logic/io/file/directory/Directory.js';
+//not GWT import const Directory = globalThis.org.allbinary.logic.io.file.directory.Directory;
 import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InitializeCloud extends Object {
     constructor() {

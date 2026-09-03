@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 export class BasicColorUtil extends Object {
     constructor() {
         super(...arguments);

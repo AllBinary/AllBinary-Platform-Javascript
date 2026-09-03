@@ -14,6 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
 import { RuntimeException } from '../../java/lang/RuntimeException.js';
+//not plain js import { Canvas } from '../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PostGameCommandFactory extends Object {
     static getInstance() {

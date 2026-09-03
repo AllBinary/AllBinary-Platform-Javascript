@@ -11,14 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const ClientInformationFactory = globalThis.org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 import { PrimaryThreadPool } from '../../../../org/allbinary/thread/PrimaryThreadPool.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+import { NullGameCanvasRunnable } from '../../../../org/allbinary/game/displayable/canvas/NullGameCanvasRunnable.js';
+//not GWT import const NullGameCanvasRunnable = globalThis.org.allbinary.game.displayable.canvas.NullGameCanvasRunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameMidlet } from './GameMidlet.js';
+//not GWT import const GameMidlet = globalThis.org.allbinary.game.midlet.GameMidlet;
 import { DemoRunnable } from './DemoRunnable.js';
+//not GWT import const DemoRunnable = globalThis.org.allbinary.game.midlet.DemoRunnable;
 import { CreateGameRunnable } from './CreateGameRunnable.js';
+//not GWT import const CreateGameRunnable = globalThis.org.allbinary.game.midlet.CreateGameRunnable;
 export class DemoGameMidlet extends GameMidlet {
     constructor(clientInformationFactory) {
         super(clientInformationFactory);
@@ -45,7 +55,9 @@ export class DemoGameMidlet extends GameMidlet {
     }
     //@Throws(Exception.constructor)
     createDemoGameCanvasRunnableInterface() {
-        throw new Exception(this.commonStrings.NOT_IMPLEMENTED);
+        this.logUtil.putF(this.commonStrings.NOT_IMPLEMENTED, this, this.commonStrings.CREATE);
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE;
     }
     //@Throws(Exception.constructor)
     createGameCanvasRunnable(allBinaryGameLayerManager) {
@@ -81,7 +93,7 @@ export class DemoGameMidlet extends GameMidlet {
         progressCanvas.start();
         var hashtable = this.getStartStateHashtable();
         ;
-        this.setStartStateHashtable(NullUtil.getInstance().NULL_TABLE);
+        this.setStartStateHashtable(StdUtil.getInstance().NULL_TABLE);
         PrimaryThreadPool.getInstance().runTask(new CreateGameRunnable(this, hashtable));
         this.logUtil.putF(this.commonStrings.END, this, CREATE_GAME);
     }

@@ -11,10 +11,18 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const ABTextFieldItem = globalThis.org.allbinary.graphics.form.item.ABTextFieldItem;
 import { ValidatorBase } from '../../../../../../org/allbinary/logic/control/validate/ValidatorBase.js';
+//not GWT import const ValidatorBase = globalThis.org.allbinary.logic.control.validate.ValidatorBase;
 import { BooleanFactory } from '../../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TextFieldItemValidator extends ValidatorBase {
     constructor(textFieldItem, min, max, allowOnEmpty) {

@@ -14,6 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Color } from '../../../../java/awt/Color.js';
+//not GWT import const Color = globalThis.java.awt.Color;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageJ2SEUtil extends Object {
     constructor() {

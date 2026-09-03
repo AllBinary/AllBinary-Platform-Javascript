@@ -11,16 +11,29 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { NullAnimationFactory } from '../../../../../org/allbinary/animation/NullAnimationFactory.js';
+//not GWT import const CollidableBaseBehavior = globalThis.org.allbinary.game.collision.CollidableBaseBehavior;
 import { DestroyedLayerProcessor } from '../../../../../org/allbinary/game/combat/destroy/DestroyedLayerProcessor.js';
+//not GWT import const DestroyedLayerProcessor = globalThis.org.allbinary.game.combat.destroy.DestroyedLayerProcessor;
 import { WeaponProperties } from '../../../../../org/allbinary/game/combat/weapon/WeaponProperties.js';
+//not GWT import const WeaponProperties = globalThis.org.allbinary.game.combat.weapon.WeaponProperties;
 import { GameConfigurationUtil } from '../../../../../org/allbinary/game/configuration/GameConfigurationUtil.js';
+//not GWT import const GameConfigurationUtil = globalThis.org.allbinary.game.configuration.GameConfigurationUtil;
 import { BasicGroupFactory } from '../../../../../org/allbinary/game/identification/BasicGroupFactory.js';
+//not GWT import const BasicGroupFactory = globalThis.org.allbinary.game.identification.BasicGroupFactory;
 import { MultiPlayerGameLayer } from '../../../../../org/allbinary/game/multiplayer/layer/MultiPlayerGameLayer.js';
+//not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
 import { NoScoreable } from '../../../../../org/allbinary/game/score/NoScoreable.js';
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableWeaponBehavior } from './CollidableWeaponBehavior.js';
+//not GWT import const CollidableWeaponBehavior = globalThis.org.allbinary.game.layer.weapon.CollidableWeaponBehavior;
 export class WeaponLayer extends MultiPlayerGameLayer {
     static getStaticType() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -35,7 +48,7 @@ export class WeaponLayer extends MultiPlayerGameLayer {
         this.destroyed = true;
         this.scoreableInterface = NoScoreable.getInstance();
         this.weaponProperties = WeaponProperties.NULL_WEAPON_PROPERTIES;
-        this.collidableWeaponBehavior = CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR;
+        this.collidableWeaponBehavior = CollidableWeaponBehavior.getNullInstance();
         //For kotlin this is before the body of the constructor.
         this.initAnimationInterface = animationInterface;
         this.setAnimationInterface(animationInterface);

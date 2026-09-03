@@ -13,9 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEvent } from './TrackingEvent.js';
+//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
 import { TrackingEventHandler } from './TrackingEventHandler.js';
+//not GWT import const TrackingEventHandler = globalThis.org.allbinary.game.tracking.TrackingEventHandler;
 export class TrackingEventFactory extends Object {
     constructor() {
         super();

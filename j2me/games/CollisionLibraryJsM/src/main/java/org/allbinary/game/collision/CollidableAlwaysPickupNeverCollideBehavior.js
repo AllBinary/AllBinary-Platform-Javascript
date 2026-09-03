@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableNeverCollideBehavior } from './CollidableNeverCollideBehavior.js';
+//not GWT import const CollidableNeverCollideBehavior = globalThis.org.allbinary.game.collision.CollidableNeverCollideBehavior;
 import { CollisionTypeFactory } from './CollisionTypeFactory.js';
+//not GWT import const CollisionType = globalThis.org.allbinary.game.collision.CollisionType;
 export class CollidableAlwaysPickupNeverCollideBehavior extends CollidableNeverCollideBehavior {
     constructor() {
         super(true);

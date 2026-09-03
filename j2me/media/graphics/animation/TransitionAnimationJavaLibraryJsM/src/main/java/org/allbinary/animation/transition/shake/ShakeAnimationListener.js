@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const ShakeEvent = globalThis.org.allbinary.animation.transition.shake.ShakeEvent;
 export class ShakeAnimationListener extends Object {
     onSmallShakeEvent() {
     }

@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const Display = globalThis.org.eclipse.swt.widgets.Display;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SWTProcessor } from './SWTProcessor.js';
+//not GWT import const SWTProcessor = globalThis.org.allbinary.emulator.swt.SWTProcessor;
 export class SWTRunnableProcessor extends SWTProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

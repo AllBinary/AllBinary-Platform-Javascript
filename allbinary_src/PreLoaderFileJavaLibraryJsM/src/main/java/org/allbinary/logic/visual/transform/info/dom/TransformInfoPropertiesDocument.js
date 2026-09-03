@@ -13,15 +13,30 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-import { HashMap } from '../../../../../../../java/util/HashMap.js';
+//not GWT import const HashMap = globalThis.java.util.HashMap;
+//not plain js import { BasicArrayList } from '../../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { DomSearchHelper } from '../../../../../../../org/allbinary/data/tree/dom/DomSearchHelper.js';
+//not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
 import { DomDocumentFileHelper } from '../../../../../../../org/allbinary/data/tree/dom/document/DomDocumentFileHelper.js';
-import { LogUtil } from '../../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const DomDocumentFileHelper = globalThis.org.allbinary.data.tree.dom.document.DomDocumentFileHelper;
+import { StdUtil } from '../../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFile } from '../../../../../../../org/allbinary/logic/io/file/AbFile.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { TransformInfoData } from '../../../../../../../org/allbinary/logic/visual/transform/info/TransformInfoData.js';
+//not GWT import const TransformInfoProperties = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoProperties;
 import { TransformInfoPropertiesFactory } from '../../../../../../../org/allbinary/logic/visual/transform/info/TransformInfoPropertiesFactory.js';
+//not GWT import const TransformInfoPropertiesFactory = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoPropertiesFactory;
 import { TransformInfosData } from '../../../../../../../org/allbinary/logic/visual/transform/info/TransformInfosData.js';
-import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const TransformInfosData = globalThis.org.allbinary.logic.visual.transform.info.TransformInfosData;
+//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TransformInfoPropertiesDocument extends Object {
     constructor(filePath) {
@@ -33,7 +48,7 @@ export class TransformInfoPropertiesDocument extends Object {
     }
     toTransformInfoPropertiesHashMap() {
         try {
-            var transformInfoPropertiesHashMap = new HashMap();
+            var transformInfoPropertiesHashMap = StdUtil.getInstance().createHashMap();
             ;
             var transformInfosNode = this.document.getElementsByTagName(TransformInfosData.getInstance().NAME).item(0);
             ;
@@ -42,9 +57,9 @@ export class TransformInfoPropertiesDocument extends Object {
             var transformInfoNodeVector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance().NAME, transformInfosChildNodeList);
             ;
             if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEW)) {
-                this.logUtil.putF("Size: " + transformInfoNodeVector.length, this, "toTransformInfoPropertiesHashMap()");
+                this.logUtil.putF("Size: " + transformInfoNodeVector.size(), this, "toTransformInfoPropertiesHashMap()");
             }
-            var size = transformInfoNodeVector.length;
+            var size = transformInfoNodeVector.size();
             ;
             var node;
             ;

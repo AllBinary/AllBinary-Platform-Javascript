@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 export class CustomItemUtil extends Object {
     constructor() {
         super(...arguments);

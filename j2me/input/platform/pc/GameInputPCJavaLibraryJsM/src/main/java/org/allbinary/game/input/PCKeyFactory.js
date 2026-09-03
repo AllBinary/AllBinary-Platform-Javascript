@@ -14,11 +14,16 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { KeyEvent } from '../../../../java/awt/event/KeyEvent.js';
-import { PositionStrings } from '../../../../org/allbinary/math/PositionStrings.js';
-import { CommonPhoneStrings } from '../../../../org/allbinary/string/CommonPhoneStrings.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const KeyEvent = globalThis.java.awt.event.KeyEvent;
+//not plain js import { PositionStrings } from '../../../../org/allbinary/math/PositionStrings.js';
+const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
+//not plain js import { CommonPhoneStrings } from '../../../../org/allbinary/string/CommonPhoneStrings.js';
+const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCGameKey } from './PCGameKey.js';
+//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
 export class PCKeyFactory extends Object {
     constructor() {
         super(...arguments);

@@ -15,18 +15,32 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
 import { System } from '../../../../java/lang/System.js';
-import { MediaException } from '../../../../javax/microedition/media/MediaException.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not plain js import { MediaException } from '../../../../javax/microedition/media/MediaException.js';
+const MediaException = globalThis.javax.microedition.media.MediaException;
+//not plain js import { Player, PlayerI } from '../../../../javax/microedition/media/Player.js';
+const Player = globalThis.javax.microedition.media.Player;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
+//not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
 import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Sounds } from './Sounds.js';
+//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
 import { AndroidMediaPlayerWrapper } from './AndroidMediaPlayerWrapper.js';
+//not GWT import const PlayerComposite = globalThis.org.allbinary.media.audio.PlayerComposite;
 import { MediaPlayerUtil } from './MediaPlayerUtil.js';
+//not GWT import const MediaPlayerUtil = globalThis.org.allbinary.media.audio.MediaPlayerUtil;
 import { NoPlayer } from './NoPlayer.js';
+//not GWT import const NoPlayer = globalThis.org.allbinary.media.audio.NoPlayer;
 //AndroidMediaMIDPLibrary
 export class AllBinaryMediaManager extends Object {
     static isMuted() {

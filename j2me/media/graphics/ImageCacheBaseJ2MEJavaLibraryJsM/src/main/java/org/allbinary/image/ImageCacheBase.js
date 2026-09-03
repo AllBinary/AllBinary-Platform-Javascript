@@ -14,21 +14,34 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-import { Hashtable } from '../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { Image } from '../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../javax/microedition/lcdui/NullImage.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
-import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+import { StdUtil } from '../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageFactory } from './ImageFactory.js';
+//not GWT import const ImageFactory = globalThis.org.allbinary.image.ImageFactory;
 export class ImageCacheBase extends Object {
     constructor() {
         super();
         this.logUtil = LogUtil.getInstance();
         this.imageFactory = ImageFactory.getInstance();
-        this.hashtable = new Hashtable();
+        this.hashtable = StdUtil.getInstance().createHashtable();
         this.SIZE = 128;
         this.widths = new Array(this.SIZE);
         this.heights = new Array(this.SIZE);

@@ -3,15 +3,24 @@ import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
 import { System } from '../../../../../java/lang/System.js';
 import { Thread } from '../../../../../java/lang/Thread.js';
 import { Service } from '../../../../../android/app/Service.js';
+//not GWT import const Intent = globalThis.android.content.Intent;
 import { MediaPlayer } from '../../../../../android/media/MediaPlayer.js';
+//not GWT import const IBinder = globalThis.android.os.IBinder;
 import { NullAndroidCanvas } from '../../../../../org/allbinary/android/NullAndroidCanvas.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
-import { CommonStateStrings } from '../../../../../org/allbinary/string/CommonStateStrings.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { ARunnable } from '../../../../../org/allbinary/thread/ARunnable.js';
+//not GWT import const NullAndroidCanvas = globalThis.org.allbinary.android.NullAndroidCanvas;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonStateStrings } from '../../../../../org/allbinary/string/CommonStateStrings.js';
+const CommonStateStrings = globalThis.org.allbinary.string.CommonStateStrings;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { ARunnable } from '../../../../../org/allbinary/thread/ARunnable.js';
+const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MusicStrings } from './MusicStrings.js';
+//not GWT import const MusicStrings = globalThis.org.allbinary.media.audio.music.MusicStrings;
 export class BaseMusicService extends Service {
     constructor() {
         super(...arguments);

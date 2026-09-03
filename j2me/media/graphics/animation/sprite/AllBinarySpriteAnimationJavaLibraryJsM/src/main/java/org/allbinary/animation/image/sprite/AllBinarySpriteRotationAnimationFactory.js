@@ -11,14 +11,26 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { Sprite } from '../../../../../javax/microedition/lcdui/game/Sprite.js';
+const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { AnimationBehaviorFactory } from '../../../../../org/allbinary/animation/AnimationBehaviorFactory.js';
+//not GWT import const ProceduralAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface;
 import { BaseImageAnimationFactory } from '../../../../../org/allbinary/animation/image/BaseImageAnimationFactory.js';
+//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { AnimationFactorySpriteScaleUtil } from '../../../../../org/allbinary/image/sprite/AnimationFactorySpriteScaleUtil.js';
-import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
-import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not GWT import const AnimationFactorySpriteScaleUtil = globalThis.org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil;
+//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not plain js import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinarySpriteRotationAnimation } from './AllBinarySpriteRotationAnimation.js';
+//not GWT import const AllBinarySpriteRotationAnimation = globalThis.org.allbinary.animation.image.sprite.AllBinarySpriteRotationAnimation;
 import { AllBinaryAdjustedSpriteRotationAnimation } from './AllBinaryAdjustedSpriteRotationAnimation.js';
+//not GWT import const AllBinaryAdjustedSpriteRotationAnimation = globalThis.org.allbinary.animation.image.sprite.AllBinaryAdjustedSpriteRotationAnimation;
 export class AllBinarySpriteRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createWHDY(image, dx, dy, animationBehaviorFactory) {

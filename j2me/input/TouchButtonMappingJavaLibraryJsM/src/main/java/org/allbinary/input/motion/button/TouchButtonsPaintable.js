@@ -11,10 +11,19 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorSetUtil } from '../../../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
+//not GWT import const BasicColorSetUtil = globalThis.org.allbinary.graphics.color.BasicColorSetUtil;
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
+//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonFactory } from './TouchButtonFactory.js';
+//not GWT import const TouchButton = globalThis.org.allbinary.input.motion.button.TouchButton;
 export class TouchButtonsPaintable extends Paintable {
     constructor(basicColor) {
         super();

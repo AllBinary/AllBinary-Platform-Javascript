@@ -13,9 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameType } from './GameType.js';
+//not GWT import const GameType = globalThis.org.allbinary.game.GameType;
 export class GameTypeFactory extends Object {
     constructor() {
         super(...arguments);

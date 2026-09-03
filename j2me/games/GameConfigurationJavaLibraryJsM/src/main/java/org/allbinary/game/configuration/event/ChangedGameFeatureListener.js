@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseChangedGameFeatureListener } from './BaseChangedGameFeatureListener.js';
+//not GWT import const BaseChangedGameFeatureListener = globalThis.org.allbinary.game.configuration.event.BaseChangedGameFeatureListener;
 export class ChangedGameFeatureListener extends BaseChangedGameFeatureListener {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

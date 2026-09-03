@@ -13,14 +13,23 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { Item } from '../../../../javax/microedition/lcdui/Item.js';
+const Item = globalThis.javax.microedition.lcdui.Item;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfigurationSingleton } from './GameConfigurationSingleton.js';
+//not GWT import const GameOptionsForm = globalThis.org.allbinary.game.configuration.GameOptionsForm;
 import { GameConfigurationGauge } from './GameConfigurationGauge.js';
+//not GWT import const GameConfigurationGauge = globalThis.org.allbinary.game.configuration.GameConfigurationGauge;
 import { GameConfigurationCentral } from './GameConfigurationCentral.js';
+//not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
 export class GameConfigurationUtil extends Object {
     constructor() {
         super(...arguments);

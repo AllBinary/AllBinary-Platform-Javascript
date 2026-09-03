@@ -11,22 +11,46 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
 import { GameCommandsFactory } from '../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
+//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
 import { Features } from '../../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { InputFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/InputFeatureFactory.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
 import { GameKeyEventFactory } from '../../../../../org/allbinary/game/input/event/GameKeyEventFactory.js';
+//not GWT import const GameKeyEventFactory = globalThis.org.allbinary.game.input.event.GameKeyEventFactory;
 import { SWTUtil } from '../../../../../org/allbinary/game/layer/SWTUtil.js';
+//not GWT import const SWTUtil = globalThis.org.allbinary.game.layer.SWTUtil;
+//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
 import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
+//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 import { TouchMotionGestureFactory } from '../../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { PrimaryPlayerQueueFactory } from '../../../../../org/allbinary/media/audio/PrimaryPlayerQueueFactory.js';
+//not GWT import const PrimaryPlayerQueueFactory = globalThis.org.allbinary.media.audio.PrimaryPlayerQueueFactory;
 import { SelectSound } from '../../../../../org/allbinary/media/audio/SelectSound.js';
+//not GWT import const SelectSound = globalThis.org.allbinary.media.audio.SelectSound;
 import { PrimaryThreadPool } from '../../../../../org/allbinary/thread/PrimaryThreadPool.js';
+//not GWT import const PrimaryThreadPool = globalThis.org.allbinary.thread.PrimaryThreadPool;
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
+//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
+//not GWT import const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
 import { CommandRunnable } from './CommandRunnable.js';
+//not GWT import const CommandRunnable = globalThis.org.allbinary.game.displayable.canvas.CommandRunnable;
 //In general allow scrolling of the menu and selection the center item
 export class CommandFormInputProcessor extends BasicMenuInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCanvas, form) {

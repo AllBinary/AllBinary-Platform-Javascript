@@ -14,9 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { InputFactory } from '../../../../../org/allbinary/game/input/InputFactory.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionGestureInput } from './MotionGestureInput.js';
+//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 export class TrackballMotionGestureFactory extends Object {
     static getInstance() {
         if (TrackballMotionGestureFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

@@ -13,7 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class IntArrayUtil extends Object {
     static toString(array) {

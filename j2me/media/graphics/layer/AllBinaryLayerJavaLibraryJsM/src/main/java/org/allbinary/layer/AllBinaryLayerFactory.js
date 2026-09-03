@@ -13,9 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { ViewPosition } from '../../../org/allbinary/view/ViewPosition.js';
+//not GWT import const AllBinaryLayerFactoryInterface = globalThis.org.allbinary.layer.AllBinaryLayerFactoryInterface;
 import { AllBinaryLayer } from './AllBinaryLayer.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 export class AllBinaryLayerFactory extends Object {
     constructor(rectangle) {
         super();

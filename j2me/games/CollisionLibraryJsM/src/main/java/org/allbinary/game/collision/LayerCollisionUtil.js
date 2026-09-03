@@ -14,10 +14,15 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
+//not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
 import { OpenGLFeatureUtil } from '../../../../org/allbinary/graphics/opengles/OpenGLFeatureUtil.js';
+//not GWT import const CollisionProcessor = globalThis.org.allbinary.game.collision.CollisionProcessor;
 import { Collision2DProcessor } from './Collision2DProcessor.js';
+//not GWT import const Collision2DProcessor = globalThis.org.allbinary.game.collision.Collision2DProcessor;
 import { CollisionThreedProcessor } from './CollisionThreedProcessor.js';
+//not GWT import const CollisionThreedProcessor = globalThis.org.allbinary.game.collision.CollisionThreedProcessor;
 export class LayerCollisionUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

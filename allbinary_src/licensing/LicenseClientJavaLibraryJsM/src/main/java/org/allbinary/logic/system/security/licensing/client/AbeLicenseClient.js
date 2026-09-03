@@ -13,12 +13,21 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
+//not GWT import const LicenseInitInfo = globalThis.org.allbinary.business.init.LicenseInitInfo;
 import { LicenseInitInfoUtil } from '../../../../../../../org/allbinary/business/init/LicenseInitInfoUtil.js';
-import { LogUtil } from '../../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const LicenseInitInfoUtil = globalThis.org.allbinary.business.init.LicenseInitInfoUtil;
+//not plain js import { LogUtil } from '../../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not GWT import const XmlRpcAbeClient = globalThis.org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient;
 import { StringValidationUtil } from '../../../../../../../org/allbinary/logic/string/StringValidationUtil.js';
-import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const AbeLicenseInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeLicenseInterface;
+//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { XmlRpcAbeLicenseRetrievalClient } from './XmlRpcAbeLicenseRetrievalClient.js';
+//not GWT import const XmlRpcAbeLicenseRetrievalClient = globalThis.org.allbinary.logic.system.security.licensing.client.XmlRpcAbeLicenseRetrievalClient;
 export class AbeLicenseClient extends Object {
     constructor() {
         super();

@@ -13,8 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from './BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 export class SmallBasicColorCacheFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

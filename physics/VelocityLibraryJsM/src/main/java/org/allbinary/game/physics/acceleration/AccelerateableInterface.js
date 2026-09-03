@@ -11,4 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 export {};

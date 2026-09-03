@@ -13,7 +13,9 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
+//not GWT import const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
 import { LockablePaintable } from './LockablePaintable.js';
+//not GWT import const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
 export class LockableFormPaintableFactory extends ItemPaintableFactory {
     constructor(lockedIndex) {
         super();

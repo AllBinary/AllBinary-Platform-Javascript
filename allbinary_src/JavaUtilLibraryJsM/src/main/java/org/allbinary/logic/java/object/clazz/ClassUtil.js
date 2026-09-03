@@ -14,9 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { ConstructorUtil } from '../../../../../../org/allbinary/logic/java/anyType/ConstructorUtil.js';
+//not GWT import const ConstructorUtil = globalThis.org.allbinary.logic.java.anyType.ConstructorUtil;
 import { InterfaceUtil } from '../../../../../../org/allbinary/logic/java/anyType/InterfaceUtil.js';
+//not GWT import const InterfaceUtil = globalThis.org.allbinary.logic.java.anyType.InterfaceUtil;
 import { MethodUtil } from '../../../../../../org/allbinary/logic/java/anyType/MethodUtil.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const MethodUtil = globalThis.org.allbinary.logic.java.anyType.MethodUtil;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ClassUtil extends Object {
     static viewAll(anyType = {}, lineBreak) {

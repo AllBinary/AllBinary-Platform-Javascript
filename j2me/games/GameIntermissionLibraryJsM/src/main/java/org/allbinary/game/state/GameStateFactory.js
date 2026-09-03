@@ -13,9 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameState } from './GameState.js';
+//not GWT import const GameState = globalThis.org.allbinary.game.state.GameState;
 export class GameStateFactory extends Object {
     static getInstance() {
         if (GameStateFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

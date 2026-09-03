@@ -14,12 +14,20 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const BufferedImage = globalThis.java.awt.image.BufferedImage;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const Anchor = globalThis.org.allbinary.graphics.Anchor;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { J2SEImmutableImage } from '../../../../org/microemu/device/j2se/J2SEImmutableImage.js';
+//not GWT import const J2SEImmutableImage = globalThis.org.microemu.device.j2se.J2SEImmutableImage;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageUtil } from './ImageUtil.js';
-import { ImageCreationUtil } from './ImageCreationUtil.js';
+//not GWT import const ImageUtil = globalThis.org.allbinary.media.image.ImageUtil;
+//not plain js import { ImageCreationUtil } from './ImageCreationUtil.js';
+const ImageCreationUtil = globalThis.org.allbinary.media.image.ImageCreationUtil;
 export class ImageCopyUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

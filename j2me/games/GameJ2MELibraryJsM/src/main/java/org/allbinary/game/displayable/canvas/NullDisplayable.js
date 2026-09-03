@@ -1,6 +1,11 @@
 /* Generated Code Do Not Modify */
-import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BaseGameStatistics = globalThis.org.allbinary.canvas.BaseGameStatistics;
 import { GameStatisticsFactory } from '../../../../../org/allbinary/canvas/GameStatisticsFactory.js';
+//not GWT import const GameStatisticsFactory = globalThis.org.allbinary.canvas.GameStatisticsFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NullDisplayable extends Canvas {
     static getInstance() {

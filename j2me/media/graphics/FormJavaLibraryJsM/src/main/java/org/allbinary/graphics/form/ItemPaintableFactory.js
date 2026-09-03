@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ItemPaintable } from './ItemPaintable.js';
+//not GWT import const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
 export class ItemPaintableFactory extends ItemPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

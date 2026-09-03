@@ -11,16 +11,30 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { GameKeyEvent } from '../../../../org/allbinary/game/input/event/GameKeyEvent.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
 import { AllBinaryGameLayer } from '../../../../org/allbinary/game/layer/AllBinaryGameLayer.js';
+//not GWT import const AllBinaryGameLayer = globalThis.org.allbinary.game.layer.AllBinaryGameLayer;
 import { RectangleFactory } from '../../../../org/allbinary/graphics/RectangleFactory.js';
+//not GWT import const RectangleFactory = globalThis.org.allbinary.graphics.RectangleFactory;
 import { NullPaintable } from '../../../../org/allbinary/graphics/paint/NullPaintable.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { ViewPosition } from '../../../../org/allbinary/view/ViewPosition.js';
+//not GWT import const GameInputInterface = globalThis.org.allbinary.game.input.GameInputInterface;
 import { InputFactory } from './InputFactory.js';
+//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
 import { GameInputProcessor } from './GameInputProcessor.js';
+//not GWT import const GameInputProcessor = globalThis.org.allbinary.game.input.GameInputProcessor;
 import { GameInputProcessorUtil } from './GameInputProcessorUtil.js';
+//not GWT import const TestInputInterface = globalThis.org.allbinary.game.input.TestInputInterface;
 export class TestingInputSingleton extends AllBinaryGameLayer {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -13,8 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const PlayerGameInputCompositeInterface = globalThis.org.allbinary.game.input.PlayerGameInputCompositeInterface;
 import { NoPlayerGameInput } from './NoPlayerGameInput.js';
+//not GWT import const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
 export class NullPlayerGameInputComposite extends Object {
     getName() {
         //if statement needs to be on the same line and ternary does not work the same way.

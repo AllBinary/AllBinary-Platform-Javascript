@@ -14,18 +14,34 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { GamePersistanceStrings } from '../../../../../org/allbinary/game/configuration/persistance/GamePersistanceStrings.js';
+//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
 import { InputPersistance } from '../../../../../org/allbinary/game/input/InputPersistance.js';
+//not GWT import const InputPersistance = globalThis.org.allbinary.game.input.InputPersistance;
 import { InputMappingEvent } from '../../../../../org/allbinary/game/input/mapping/event/InputMappingEvent.js';
+//not GWT import const InputMappingEventListenerInterface = globalThis.org.allbinary.game.input.mapping.event.InputMappingEventListenerInterface;
 import { NullInputMappingEventListener } from '../../../../../org/allbinary/game/input/mapping/event/NullInputMappingEventListener.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { EnumerationUtil } from '../../../../../org/allbinary/util/EnumerationUtil.js';
+//not GWT import const NullInputMappingEventListener = globalThis.org.allbinary.game.input.mapping.event.NullInputMappingEventListener;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { EnumerationUtil } from '../../../../../org/allbinary/util/EnumerationUtil.js';
+const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputToGameKeyMapping } from './InputToGameKeyMapping.js';
+//not GWT import const InputToGameKeyMapping = globalThis.org.allbinary.game.input.mapping.InputToGameKeyMapping;
 //GameInputNoPersistanceLibrary
 export class PersistentInputMapping extends Object {
     static getNullInstance() {

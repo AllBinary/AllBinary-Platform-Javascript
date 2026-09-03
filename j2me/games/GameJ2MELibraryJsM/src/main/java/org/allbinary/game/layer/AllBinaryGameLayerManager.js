@@ -11,14 +11,32 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { GameInfo } from '../../../../org/allbinary/game/GameInfo.js';
+//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
 import { NullPlayerGameInputComposite } from '../../../../org/allbinary/game/input/NullPlayerGameInputComposite.js';
+//not GWT import const PlayerGameInputCompositeInterface = globalThis.org.allbinary.game.input.PlayerGameInputCompositeInterface;
 import { ItemColorFactory } from '../../../../org/allbinary/graphics/ItemColorFactory.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { AllBinaryLayerManager } from '../../../../org/allbinary/layer/AllBinaryLayerManager.js';
-import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AllBinaryGameLayerManager extends AllBinaryLayerManager {
+    static getNullInstance() {
+        if (AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER == NullUtil.getInstance().NULL_OBJECT) {
+            AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER = new AllBinaryGameLayerManager(BasicColorFactory.getInstance().BLACK, BasicColorFactory.getInstance().WHITE, GameInfo.NONE);
+        }
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER;
+    }
     constructor(backgroundBasicColor, foregroundBasicColor, gameInfo) {
         super();
         this.playerGameInputCompositeInterface = NullPlayerGameInputComposite.NULL_PLAYER_GAME_INPUT_COMPOSITE;
@@ -77,5 +95,5 @@ export class AllBinaryGameLayerManager extends AllBinaryLayerManager {
         return this.playerGameInputCompositeInterface;
     }
 }
-AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER = new AllBinaryGameLayerManager(BasicColorFactory.getInstance().BLACK, BasicColorFactory.getInstance().WHITE, GameInfo.NONE);
+AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER = NullUtil.getInstance().NULL_OBJECT;
 AllBinaryGameLayerManager.ID = SmallIntegerSingletonFactory.getInstance().getAt(22);

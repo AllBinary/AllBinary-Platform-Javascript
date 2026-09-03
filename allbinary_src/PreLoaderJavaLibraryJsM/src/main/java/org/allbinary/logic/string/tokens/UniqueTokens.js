@@ -15,18 +15,31 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { HashSet } from '../../../../../java/util/HashSet.js';
-import { Vector } from '../../../../../java/util/Vector.js';
-import { AbPathData } from '../../../../../org/allbinary/logic/io/path/AbPathData.js';
+//not GWT import const HashSet = globalThis.java.util.HashSet;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { AbPathData } from '../../../../../org/allbinary/logic/io/path/AbPathData.js';
+const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 import { Replace } from '../../../../../org/allbinary/logic/string/regex/replace/Replace.js';
-import { CommonPhoneStrings } from '../../../../../org/allbinary/string/CommonPhoneStrings.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const Replace = globalThis.org.allbinary.logic.string.regex.replace.Replace;
+//not plain js import { CommonPhoneStrings } from '../../../../../org/allbinary/string/CommonPhoneStrings.js';
+const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Tokenizer } from './Tokenizer.js';
+//not GWT import const Tokenizer = globalThis.org.allbinary.logic.string.tokens.Tokenizer;
 export class UniqueTokens extends Object {
     constructor() {
         super();
-        this.specialCharacters = new Vector();
+        this.specialCharacters = new BasicArrayListD();
         this.specialCharacters.add("!");
         this.specialCharacters.add("@");
         this.specialCharacters.add(CommonPhoneStrings.getInstance().POUND);
@@ -61,8 +74,8 @@ export class UniqueTokens extends Object {
             ;
             var commonSeps = CommonSeps.getInstance();
             ;
-            while (index < stringVector.length) {
-                var keywords = stringVector.elementAt(index);
+            while (index < stringVector.size()) {
+                var keywords = stringVector.get(index);
                 ;
                 var tokenizer = new Tokenizer(commonSeps.COMMA);
                 ;
@@ -112,8 +125,8 @@ export class UniqueTokens extends Object {
         }
     }
     isSpecialCharacter(subCleaningString) {
-        for (var index = 0; index < this.specialCharacters.length; index++) {
-            if (subCleaningString.compareTo(this.specialCharacters.elementAt(index)) == 0)
+        for (var index = 0; index < this.specialCharacters.size(); index++) {
+            if (subCleaningString.compareTo(this.specialCharacters.get(index)) == 0)
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
         }

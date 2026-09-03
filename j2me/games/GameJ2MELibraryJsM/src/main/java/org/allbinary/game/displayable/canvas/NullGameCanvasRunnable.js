@@ -13,9 +13,21 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { Item } from '../../../../../javax/microedition/lcdui/Item.js';
+const Item = globalThis.javax.microedition.lcdui.Item;
+//not GWT import const GameState = globalThis.org.allbinary.game.state.GameState;
 import { GameStateFactory } from '../../../../../org/allbinary/game/state/GameStateFactory.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const GameStateFactory = globalThis.org.allbinary.game.state.GameStateFactory;
+import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const GameCanvasRunnableInterface = globalThis.org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface;
 export class NullGameCanvasRunnable extends Object {
     constructor() {
         super(...arguments);
@@ -56,12 +68,12 @@ export class NullGameCanvasRunnable extends Object {
     //@Throws(Exception.constructor)
     getCurrentStateHashtable() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance().NULL_TABLE;
+        return StdUtil.getInstance().NULL_TABLE;
     }
     //@Throws(Exception.constructor)
     getLoadStateHashtable() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance().NULL_TABLE;
+        return StdUtil.getInstance().NULL_TABLE;
     }
     //@Throws(Exception.constructor)
     setLoadStateHashtable(hashtable) {

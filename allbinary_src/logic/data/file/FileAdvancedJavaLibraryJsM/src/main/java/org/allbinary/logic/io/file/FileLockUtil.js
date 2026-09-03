@@ -13,10 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Vector } from '../../../../../java/util/Vector.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const FileLock = globalThis.java.nio.channels.FileLock;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFileOutputStream } from '../../../../../org/allbinary/logic/io/AbFileOutputStream.js';
+//not GWT import const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 export class FileLockUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -28,9 +36,9 @@ export class FileLockUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getAll(vector, isReturnOnFailure) {
-        var fileLockVector = new Vector();
+        var fileLockVector = new BasicArrayListD();
         ;
-        var size = vector.length;
+        var size = vector.size();
         ;
         for (var index = 0; index < size; index++) {
             var file = vector.get(index);
@@ -43,12 +51,12 @@ export class FileLockUtil extends Object {
                 fileLockVector.add(fileLock);
             }
             else if (isReturnOnFailure) {
-                this.logUtil.putF("Total Locks Obtained: " + fileLockVector.length, this, "getAll");
+                this.logUtil.putF("Total Locks Obtained: " + fileLockVector.size(), this, "getAll");
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileLockVector;
             }
         }
-        this.logUtil.putF("Total Locks Obtained: " + fileLockVector.length, this, "getAll");
+        this.logUtil.putF("Total Locks Obtained: " + fileLockVector.size(), this, "getAll");
         //if statement needs to be on the same line and ternary does not work the same way.
         return fileLockVector;
     }
@@ -62,9 +70,9 @@ export class FileLockUtil extends Object {
     getAllOrNone(vector) {
         var fileLockVector = this.getAll(vector, true);
         ;
-        if (vector.length != fileLockVector.length) {
+        if (vector.size() != fileLockVector.size()) {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return new Vector();
+            return new BasicArrayListD();
         }
         else {
             //if statement needs to be on the same line and ternary does not work the same way.

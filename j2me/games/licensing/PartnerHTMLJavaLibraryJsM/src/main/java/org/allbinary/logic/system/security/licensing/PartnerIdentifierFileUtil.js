@@ -13,10 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-import { ResourceUtil } from '../../../../../../org/allbinary/data/resource/ResourceUtil.js';
-import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { ResourceUtil } from '../../../../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
+//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PartnerIdentifierFileUtil extends Object {
     constructor() {

@@ -11,10 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+/* Generated Code Do Not Modify */
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicTerrainInfo } from './BasicTerrainInfo.js';
+//not GWT import const BasicTerrainInfo = globalThis.org.allbinary.game.terrain.BasicTerrainInfo;
 export class TerrainEvent extends AllBinaryEventObject {
     constructor(basicTerrainInfo = {}) {
         super(basicTerrainInfo);

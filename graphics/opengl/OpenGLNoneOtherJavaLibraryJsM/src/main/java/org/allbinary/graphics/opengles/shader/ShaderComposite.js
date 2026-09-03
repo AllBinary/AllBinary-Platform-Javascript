@@ -13,9 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
 import { NullOpenGLProcessorFactory } from '../../../../../org/allbinary/graphics/opengles/NullOpenGLProcessorFactory.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const OpenGLProcessor = globalThis.org.allbinary.graphics.opengles.OpenGLProcessor;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const ModelViewProjection = globalThis.org.allbinary.graphics.opengles.shader.ModelViewProjection;
 import { NullOpenGLTextureProcessor } from './NullOpenGLTextureProcessor.js';
+//not GWT import const OpenGLObject3dProcessor = globalThis.org.allbinary.graphics.opengles.shader.OpenGLObject3dProcessor;
 export class ShaderComposite extends Object {
     constructor(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor) {
         super();

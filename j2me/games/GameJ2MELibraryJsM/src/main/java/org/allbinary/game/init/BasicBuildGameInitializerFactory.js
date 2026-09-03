@@ -13,7 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const GameInitializationInterfaceFactoryInterface = globalThis.org.allbinary.game.init.GameInitializationInterfaceFactoryInterface;
 import { BaseGameInitialization } from './BaseGameInitialization.js';
+//not GWT import const GameInitializationInterface = globalThis.org.allbinary.game.init.GameInitializationInterface;
 export class BasicBuildGameInitializerFactory extends Object {
     getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

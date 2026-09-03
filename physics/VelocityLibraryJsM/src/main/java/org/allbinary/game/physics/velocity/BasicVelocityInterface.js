@@ -11,4 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
+//not plain js import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+//not plain js import { Angle } from '../../../../../org/allbinary/math/Angle.js';
+const Angle = globalThis.org.allbinary.math.Angle;
 export {};

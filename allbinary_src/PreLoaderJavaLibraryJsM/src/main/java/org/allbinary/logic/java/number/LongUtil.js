@@ -13,10 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonPhoneStrings } from '../../../../../org/allbinary/string/CommonPhoneStrings.js';
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonPhoneStrings } from '../../../../../org/allbinary/string/CommonPhoneStrings.js';
+const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LongData } from './LongData.js';
+//not GWT import const LongData = globalThis.org.allbinary.logic.java.number.LongData;
 export class LongUtil extends Object {
     static fillIn(end) {
         var frameStringBuffer = new StringMaker();

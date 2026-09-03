@@ -14,8 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { AboutPaintable } from '../../../../../org/allbinary/game/paint/AboutPaintable.js';
+//not GWT import const AboutPaintable = globalThis.org.allbinary.game.paint.AboutPaintable;
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AboutPaintableFactory extends Object {
     static getInstance() {

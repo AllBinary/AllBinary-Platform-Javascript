@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { ColorChangeEventHandler } from '../../../../org/allbinary/graphics/color/ColorChangeEventHandler.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGameDemoPaintable } from './BasicGameDemoPaintable.js';
+//not GWT import const MainGameDemoStatePaintable = globalThis.org.allbinary.game.paint.MainGameDemoStatePaintable;
 export class GameScrollMenuPaintable extends BasicGameDemoPaintable {
     constructor(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface, basicColor) {
         super(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface);
@@ -35,11 +38,13 @@ export class GameScrollMenuPaintable extends BasicGameDemoPaintable {
         ;
         mainGameDemoStatePaintable.getOwnershipPaintableInterface().setBasicColorP(basicColor);
         scrollSelectionForm.setButtonBasicColor(basicColor);
+        var item;
+        ;
+        var stringComponent;
+        ;
         for (var index = scrollSelectionForm.size() - 1; index >= 0; index--) {
-            var item = scrollSelectionForm.get(index);
-            ;
-            var stringComponent = item.getLabelStringComponent();
-            ;
+            item = scrollSelectionForm.get(index);
+            stringComponent = item.getLabelStringComponent();
             if (stringComponent !=
                 null) {
                 stringComponent.setForegroundBasicColor(basicColor);

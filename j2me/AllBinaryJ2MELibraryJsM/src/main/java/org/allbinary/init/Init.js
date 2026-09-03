@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const InitInterface = globalThis.org.allbinary.init.InitInterface;
 export class Init extends Object {
     constructor() {
         super(...arguments);

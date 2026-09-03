@@ -11,21 +11,38 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { CollidableNeverCollideBehaviorFactory } from '../../../../../org/allbinary/game/collision/CollidableNeverCollideBehaviorFactory.js';
+//not GWT import const DestroyedEvent = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEvent;
 import { BasicGroupFactory } from '../../../../../org/allbinary/game/identification/BasicGroupFactory.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
 import { AllBinaryGameLayerManager } from '../../../../../org/allbinary/game/layer/AllBinaryGameLayerManager.js';
+//not GWT import const AllBinaryGameLayerManager = globalThis.org.allbinary.game.layer.AllBinaryGameLayerManager;
 import { CollidableCompositeLayer } from '../../../../../org/allbinary/game/layer/CollidableCompositeLayer.js';
+//not GWT import const PickedUpLayerInterfaceFactoryInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface;
 import { PickupBehavior } from '../../../../../org/allbinary/game/layer/pickup/PickupBehavior.js';
+//not GWT import const PartInterface = globalThis.org?.allbinary?.game?.part?.PartInterface;
 import { PartInterfaceUtil } from '../../../../../org/allbinary/game/part/PartInterfaceUtil.js';
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { RectangleFactory } from '../../../../../org/allbinary/graphics/RectangleFactory.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
-import { PositionStrings } from '../../../../../org/allbinary/math/PositionStrings.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { PositionStrings } from '../../../../../org/allbinary/math/PositionStrings.js';
+const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 import { ViewPositionBase } from '../../../../../org/allbinary/view/ViewPositionBase.js';
+//not GWT import const SpecialGameInputInterface = globalThis.org.allbinary.game.layer.special.SpecialGameInputInterface;
 export class CollidableDestroyableDamageableLayer extends CollidableCompositeLayer {
     static getNullInstance() {
         if (CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER == NullUtil.getInstance().NULL_OBJECT) {
@@ -41,7 +58,7 @@ export class CollidableDestroyableDamageableLayer extends CollidableCompositeLay
         this.initY = 0;
         this.initZ = 0;
         this.partInterfaceArrayP = PartInterfaceUtil.getZeroArray();
-        this.allBinaryGameLayerManagerP = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER;
+        this.allBinaryGameLayerManagerP = AllBinaryGameLayerManager.getNullInstance();
         this.isDraggable = false;
         this.isDragged = false;
         this.isDropped = false;
@@ -49,7 +66,7 @@ export class CollidableDestroyableDamageableLayer extends CollidableCompositeLay
         this.initWidth = layerInfo.getWidth();
         this.initHeight = layerInfo.getHeight();
         this.groupInterface = groupInterface;
-        this.pickupBehavior = PickupBehavior.NULL_PICKUP_BEHAVIOR;
+        this.pickupBehavior = PickupBehavior.getNullInstance();
     }
     //@Throws(Exception.constructor)
     initPosition() {

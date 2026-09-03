@@ -13,12 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { CharacterSet } from '../../../../../org/allbinary/logic/java/character/CharacterSet.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const CharacterSet = globalThis.org.allbinary.logic.java.character.CharacterSet;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../../org/allbinary/logic/string/StringValidationUtil.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
-import { SystemProperties } from './SystemProperties.js';
+//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const OperatingSystemInterface = globalThis.org.allbinary.logic.system.os.OperatingSystemInterface;
+//not plain js import { SystemProperties } from './SystemProperties.js';
+const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
 export class GenericOperatingSystem extends Object {
     constructor() {
         super();

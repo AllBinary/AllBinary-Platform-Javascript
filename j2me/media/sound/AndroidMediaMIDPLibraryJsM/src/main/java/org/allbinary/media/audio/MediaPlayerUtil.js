@@ -14,7 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Thread } from '../../../../java/lang/Thread.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const MediaPlayer = globalThis.android.media.MediaPlayer;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MediaPlayerUtil extends Object {
     constructor() {

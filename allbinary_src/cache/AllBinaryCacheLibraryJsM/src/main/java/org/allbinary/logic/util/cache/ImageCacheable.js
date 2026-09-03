@@ -13,7 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageCacheable extends Object {
     constructor(name, anyType = {}) {

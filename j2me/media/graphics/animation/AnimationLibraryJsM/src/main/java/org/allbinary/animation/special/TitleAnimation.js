@@ -12,13 +12,22 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../java/lang/Integer.js';
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { IndexedAnimationBehavior } from '../../../../org/allbinary/animation/IndexedAnimationBehavior.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialAnimation } from './SpecialAnimation.js';
+//not GWT import const SpecialAnimation = globalThis.org.allbinary.animation.special.SpecialAnimation;
 export class TitleAnimation extends SpecialAnimation {
     static createAnimation(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width) {
         //if statement needs to be on the same line and ternary does not work the same way.

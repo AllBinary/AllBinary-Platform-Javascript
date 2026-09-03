@@ -14,25 +14,37 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Class } from '../../../../java/lang/Class.js';
-import { HashMap } from '../../../../java/util/HashMap.js';
+//not GWT import const Set = globalThis.java.util.Set;
 import { HistoryDbInitInfo } from '../../../../org/allbinary/business/init/db/HistoryDbInitInfo.js';
+//not GWT import const HistoryDbInitInfo = globalThis.org.allbinary.business.init.db.HistoryDbInitInfo;
 import { InventoryDbInitInfo } from '../../../../org/allbinary/business/init/db/InventoryDbInitInfo.js';
+//not GWT import const InventoryDbInitInfo = globalThis.org.allbinary.business.init.db.InventoryDbInitInfo;
 import { LogDbInitInfo } from '../../../../org/allbinary/business/init/db/LogDbInitInfo.js';
+//not GWT import const LogDbInitInfo = globalThis.org.allbinary.business.init.db.LogDbInitInfo;
 import { StaticPagesDbInitInfo } from '../../../../org/allbinary/business/init/db/StaticPagesDbInitInfo.js';
+//not GWT import const StaticPagesDbInitInfo = globalThis.org.allbinary.business.init.db.StaticPagesDbInitInfo;
 import { UserDbInitInfo } from '../../../../org/allbinary/business/init/db/UserDbInitInfo.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const UserDbInitInfo = globalThis.org.allbinary.business.init.db.UserDbInitInfo;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { StringValidationUtil } from '../../../../org/allbinary/logic/string/StringValidationUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitializerData } from './InitializerData.js';
+//not GWT import const InitializerData = globalThis.org.allbinary.business.installer.InitializerData;
 export class Initializer extends Object {
     constructor(map) {
         super();
         this.logUtil = LogUtil.getInstance();
         var stringBuffer = new StringMaker();
         ;
-        var hashMap = new HashMap();
+        var hashMap = StdUtil.getInstance().createHashMap();
         ;
         var keys = map.keySet();
         ;

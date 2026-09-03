@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OnDemandResources } from './OnDemandResources.js';
+//not GWT import const OnDemandResources = globalThis.org.allbinary.game.layer.resources.OnDemandResources;
 export class OnDemandResourcesFactory extends Object {
     size() {
         //if statement needs to be on the same line and ternary does not work the same way.

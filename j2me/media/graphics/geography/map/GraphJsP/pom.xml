@@ -56,7 +56,7 @@
         <module>../../PathFindingNodeCostPerformantJavaLibraryJsM</module><!--
         <module>../../../../../../../work/j2me/media/graphics/geography/PathFindingNodeCostComplexJavaLibraryJsM</module>-->
         
-        <module>../../../../../../physics/FrictionJavaLibraryJsM</module>
+<!--        <module>../../../../../../physics/FrictionJavaLibraryJsM</module>-->
 <!--    
         <module>../StaticPathFindingRaceTrackJavaLibraryJsM</module>
         <module>../DynamicPathFindingRaceTrackJavaLibraryJsM</module>

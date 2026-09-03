@@ -13,11 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { Node } from '../../../../../org/w3c/dom/Node.js';
+//not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomSearchHelper } from './DomSearchHelper.js';
+//not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
 export class DomNodeHelper extends Object {
     static getFirstChildElement(parentNode) {
         var node = parentNode.getFirstChild();

@@ -13,10 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-import { PreLogUtil } from '../../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { PreLogUtil } from '../../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigType } from './LogConfigType.js';
+//not GWT import const LogConfigType = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigType;
 export class LogConfigTypeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

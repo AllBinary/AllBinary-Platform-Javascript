@@ -14,9 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { System } from '../../../../../java/lang/System.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const Method = globalThis.java.lang.reflect.Method;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NativeLibraryClassLoader } from './NativeLibraryClassLoader.js';
+//not GWT import const NativeLibraryClassLoader = globalThis.org.allbinary.logic.system.loader.NativeLibraryClassLoader;
 export class NativeLibraryHelperWrapper extends Object {
     constructor(libraryName) {
         super();

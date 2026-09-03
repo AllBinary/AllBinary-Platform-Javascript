@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IntPermutationVisitor } from './IntPermutationVisitor.js';
+//not GWT import const IntPermutationVisitor = globalThis.org.allbinary.logic.math.permutations.IntPermutationVisitor;
 export class OrderedIntArrayPermutationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

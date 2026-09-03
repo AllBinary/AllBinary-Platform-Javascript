@@ -11,10 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { BaseCircularPool } from '../../../org/allbinary/logic/util/cache/BaseCircularPool.js';
-import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+//not GWT import const BaseCircularPool = globalThis.org.allbinary.logic.util.cache.BaseCircularPool;
+//not plain js import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomGPoint } from './CustomGPoint.js';
+//not GWT import const CustomGPoint = globalThis.org.allbinary.graphics.CustomGPoint;
 export class GPointCircularPool extends BaseCircularPool {
     constructor(size) {
         super();

@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { PlatformImage } from './PlatformImage.js';
+//not plain js import { PlatformImage } from './PlatformImage.js';
+const PlatformImage = globalThis.javax.microedition.lcdui.PlatformImage;
 //PlatformNullImageJavaLibrary
 export class PostLoadPlatformImage extends PlatformImage {
     static getInstance() {

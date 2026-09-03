@@ -14,16 +14,28 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Thread } from '../../../java/lang/Thread.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { J2MEUtil } from '../../../org/allbinary/J2MEUtil.js';
+//not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
 import { AllBinaryGameCanvas } from '../../../org/allbinary/game/displayable/canvas/AllBinaryGameCanvas.js';
+//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 import { DemoCanvas } from '../../../org/allbinary/game/displayable/canvas/DemoCanvas.js';
+//not GWT import const GameCanvasRunnableInterface = globalThis.org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface;
 import { RunnableCanvasSingleThreadStartRunnable } from '../../../org/allbinary/game/displayable/canvas/RunnableCanvasSingleThreadStartRunnable.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { PreLogUtil } from '../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const RunnableCanvasSingleThreadStartRunnable = globalThis.org.allbinary.game.displayable.canvas.RunnableCanvasSingleThreadStartRunnable;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { PreLogUtil } from '../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const ABRunnable = globalThis.org.allbinary.thread.ABRunnable;
 import { PrimaryThreadPool } from './PrimaryThreadPool.js';
+//not GWT import const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
 export class ThreadFactoryUtil extends Object {
     constructor() {
         super(...arguments);

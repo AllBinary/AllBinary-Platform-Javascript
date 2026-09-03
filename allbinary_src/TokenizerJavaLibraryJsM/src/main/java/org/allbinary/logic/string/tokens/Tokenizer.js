@@ -14,10 +14,17 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-import { Hashtable } from '../../../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Tokenizer extends Object {
     constructor(sep) {
@@ -82,7 +89,7 @@ export class Tokenizer extends Object {
         return tokenVector;
     }
     getTokens(stringVector) {
-        var tokenHashtable = new Hashtable();
+        var tokenHashtable = StdUtil.getInstance().createHashtable();
         ;
         var string = StringUtil.getInstance().EMPTY_STRING;
         ;

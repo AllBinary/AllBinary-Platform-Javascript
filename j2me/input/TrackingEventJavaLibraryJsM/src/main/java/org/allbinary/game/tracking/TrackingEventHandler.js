@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
+//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
 export class TrackingEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

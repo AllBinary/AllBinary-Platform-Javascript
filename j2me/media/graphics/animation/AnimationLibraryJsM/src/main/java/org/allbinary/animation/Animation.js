@@ -13,8 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
+//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { BasicColorSetUtil } from '../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
+//not GWT import const AnimationInterface = globalThis.org.allbinary.animation.AnimationInterface;
 export class Animation extends Object {
     constructor() {
         super();

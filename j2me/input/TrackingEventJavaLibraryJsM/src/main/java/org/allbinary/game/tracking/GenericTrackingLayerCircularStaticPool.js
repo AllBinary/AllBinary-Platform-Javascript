@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { AllBinaryLayerCircularPool } from '../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
+//not GWT import const AllBinaryLayerCircularPool = globalThis.org.allbinary.layer.AllBinaryLayerCircularPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GenericTrackingLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     static getInstance() {

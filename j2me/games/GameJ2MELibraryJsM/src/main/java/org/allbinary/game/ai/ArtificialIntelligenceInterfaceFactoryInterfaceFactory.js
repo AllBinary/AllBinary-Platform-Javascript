@@ -13,10 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
-import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not plain js import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicAI } from './BasicAI.js';
+//not GWT import const ArtificialIntelligenceInterfaceFactoryInterface = globalThis.org.allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterface;
 export class ArtificialIntelligenceInterfaceFactoryInterfaceFactory extends Object {
     constructor() {
         super(...arguments);

@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { DataInputStream } from '../../../../java/io/DataInputStream.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbDataInputStream extends DataInputStream {
     constructor(out) {

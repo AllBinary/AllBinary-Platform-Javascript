@@ -13,8 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Hashtable } from '../../../../java/util/Hashtable.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { TextField } from '../../../../javax/microedition/lcdui/TextField.js';
+const TextField = globalThis.javax.microedition.lcdui.TextField;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameConfigurationTextInput extends Object {
     static update(textField) {
@@ -51,6 +56,6 @@ export class GameConfigurationTextInput extends Object {
         return this.label;
     }
 }
-GameConfigurationTextInput.hashtable = new Hashtable();
+GameConfigurationTextInput.hashtable = StdUtil.getInstance().createHashtable();
 GameConfigurationTextInput.SIMULATOR_IP = new GameConfigurationTextInput("IP: ", "192.168.1.3");
 GameConfigurationTextInput.SIMULATOR_PORT = new GameConfigurationTextInput("Port: ", "8010");

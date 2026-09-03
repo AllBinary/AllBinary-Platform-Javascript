@@ -11,8 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { BooleanFactory } from '../../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
+//not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
 import { Visitor } from '../../../../../../org/allbinary/logic/util/visitor/Visitor.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TextItemVisitor extends Visitor {
     constructor() {

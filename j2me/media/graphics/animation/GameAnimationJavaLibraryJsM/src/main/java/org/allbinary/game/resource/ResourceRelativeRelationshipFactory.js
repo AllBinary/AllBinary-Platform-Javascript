@@ -13,14 +13,21 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Hashtable } from '../../../../java/util/Hashtable.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
-import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not plain js import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
+//not GWT import const ResourceRelativeRelationshipFactoryInterface = globalThis.org.allbinary.game.resource.ResourceRelativeRelationshipFactoryInterface;
 export class ResourceRelativeRelationshipFactory extends Object {
     constructor() {
         super(...arguments);
         this.basicArrayListUtil = BasicArrayListUtil.getInstance();
-        this.hashtable = new Hashtable();
+        this.hashtable = StdUtil.getInstance().createHashtable();
         this.initialized = false;
     }
     //@Throws(Exception.constructor)

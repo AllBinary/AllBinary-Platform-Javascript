@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const Document = globalThis.org.w3c.dom.Document;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InitInfoDocument extends Object {
     constructor() {

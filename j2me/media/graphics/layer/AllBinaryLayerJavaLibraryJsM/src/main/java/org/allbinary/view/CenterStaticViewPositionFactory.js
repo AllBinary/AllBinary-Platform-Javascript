@@ -13,9 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { DisplayInfoSingleton } from '../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { StaticViewPosition } from './StaticViewPosition.js';
+//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 export class CenterStaticViewPositionFactory extends Object {
     constructor() {
         super();

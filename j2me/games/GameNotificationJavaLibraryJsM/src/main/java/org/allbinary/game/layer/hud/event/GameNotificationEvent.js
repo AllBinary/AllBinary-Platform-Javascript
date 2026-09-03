@@ -11,9 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameNotificationEvent extends AllBinaryEventObject {
     constructor(anyType = {}, string, seconds, basicColor, permanent) {

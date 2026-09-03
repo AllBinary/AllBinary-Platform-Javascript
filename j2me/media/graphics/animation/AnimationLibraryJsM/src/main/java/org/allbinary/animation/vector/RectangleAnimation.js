@@ -11,7 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Animation } from '../../../../org/allbinary/animation/Animation.js';
+//not GWT import const ColorCompositeInterface = globalThis.org.allbinary.graphics.color.ColorCompositeInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RectangleAnimation extends Animation {
     constructor(width, height, basicColor) {

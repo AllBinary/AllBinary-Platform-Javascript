@@ -11,6 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { ClassLoader } from '../../../../../java/lang/ClassLoader.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NativeLibraryClassLoader extends ClassLoader {

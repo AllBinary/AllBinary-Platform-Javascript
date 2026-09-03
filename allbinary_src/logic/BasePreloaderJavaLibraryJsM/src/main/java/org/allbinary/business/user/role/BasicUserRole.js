@@ -14,7 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-import { Vector } from '../../../../../java/util/Vector.js';
+//not GWT import const Serializable = globalThis.java.io.Serializable;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicUserRole extends Object {
     //@Throws(Exception.constructor)
@@ -22,7 +26,7 @@ export class BasicUserRole extends Object {
     static getRole(role) {
         var roleVector = BasicUserRole.getAll();
         ;
-        var size = roleVector.length;
+        var size = roleVector.size();
         ;
         for (var index = 0; index < size; index++) {
             var userRole = roleVector.get(index);
@@ -81,4 +85,4 @@ export class BasicUserRole extends Object {
         ;
     }
 }
-BasicUserRole.roleVector = new Vector();
+BasicUserRole.roleVector = new BasicArrayListD();

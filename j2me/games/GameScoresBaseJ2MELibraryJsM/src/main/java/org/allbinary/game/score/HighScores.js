@@ -13,10 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const HighScore = globalThis.org.allbinary.game.score.HighScore;
 export class HighScores extends Object {
     constructor(name, heading, columnTwoHeading) {
         super();

@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
+//not GWT import const CryptInterface = globalThis.org.allbinary.init.crypt.jcehelper.CryptInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NoCrypt extends Object {
     encrypt(array) {

@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const IntermissionEnableListenerInterface = globalThis.org.allbinary.game.IntermissionEnableListenerInterface;
 export class NullIntermissionEnableListener extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

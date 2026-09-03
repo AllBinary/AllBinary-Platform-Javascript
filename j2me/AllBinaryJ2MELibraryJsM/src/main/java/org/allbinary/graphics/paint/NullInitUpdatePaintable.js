@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitUpdatePaintable } from './InitUpdatePaintable.js';
+//not GWT import const InitUpdatePaintable = globalThis.org.allbinary.graphics.paint.InitUpdatePaintable;
 export class NullInitUpdatePaintable extends InitUpdatePaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -14,14 +14,23 @@
 import { ClassLoader } from '../../../../../java/lang/ClassLoader.js';
 import { ClassNotFoundException } from '../../../../../java/lang/ClassNotFoundException.js';
 import { FileInputStream } from '../../../../../java/io/FileInputStream.js';
-import { HashMap } from '../../../../../java/util/HashMap.js';
-import { LogBuffer } from '../../../../../org/allbinary/logic/communication/log/LogBuffer.js';
-import { LogFactory } from '../../../../../org/allbinary/logic/communication/log/LogFactory.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const Map = globalThis.java.util.Map;
+import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogBuffer } from '../../../../../org/allbinary/logic/communication/log/LogBuffer.js';
+const LogBuffer = globalThis.org.allbinary.logic.communication.log.LogBuffer;
+//not plain js import { LogFactory } from '../../../../../org/allbinary/logic/communication/log/LogFactory.js';
+const LogFactory = globalThis.org.allbinary.logic.communication.log.LogFactory;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
-import { AbPathData } from '../../../../../org/allbinary/logic/io/path/AbPathData.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not plain js import { AbPathData } from '../../../../../org/allbinary/logic/io/path/AbPathData.js';
+const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AbCryptUtil } from '../../../../../org/allbinary/logic/system/security/AbCryptUtil.js';
+//not GWT import const NoClassDefFoundError = globalThis.org.allbinary.logic.system.loader.NoClassDefFoundError;
 export class AbeClassLoader extends ClassLoader {
     constructor(parent, key) {
         super(parent);
@@ -262,4 +271,4 @@ export class AbeClassLoader extends ClassLoader {
         }
     }
 }
-AbeClassLoader.classes = new HashMap();
+AbeClassLoader.classes = StdUtil.getInstance().createHashMap();

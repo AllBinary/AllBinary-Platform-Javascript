@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
 export class GameKeyEventUtil extends Object {
     static getKey(anyType = {}) {
         var gameKeyEvent = anyType;

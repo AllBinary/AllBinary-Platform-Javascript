@@ -12,8 +12,11 @@
         *  Created By: Travis Berthelot
 */
 import { CollidableHelperFactory } from '../../../../../org/allbinary/game/collision/CollidableHelperFactory.js';
+//not GWT import const CollisionType = globalThis.org.allbinary.game.collision.CollisionType;
 import { CollisionTypeFactory } from '../../../../../org/allbinary/game/collision/CollisionTypeFactory.js';
+//not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
 import { CollidableDestroyableDamageableBehavior } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableBehavior.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CollidableDamageWeaponBehavior extends CollidableDestroyableDamageableBehavior {
     constructor(collidable) {

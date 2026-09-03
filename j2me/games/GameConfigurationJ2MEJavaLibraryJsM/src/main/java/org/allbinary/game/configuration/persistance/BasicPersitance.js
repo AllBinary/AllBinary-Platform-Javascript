@@ -13,16 +13,30 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { RecordStore } from '../../../../../javax/microedition/rms/RecordStore.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { RecordStore } from '../../../../../javax/microedition/rms/RecordStore.js';
+const RecordStore = globalThis.javax.microedition.rms.RecordStore;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import { PlatformRecordIdUtil } from '../../../../../org/allbinary/persistance/PlatformRecordIdUtil.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const PlatformRecordIdUtil = globalThis.org.allbinary.persistance.PlatformRecordIdUtil;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PersistanceStrings } from './PersistanceStrings.js';
+//not GWT import const PersistanceStrings = globalThis.org.allbinary.game.configuration.persistance.PersistanceStrings;
 import { NullRecordStore } from './NullRecordStore.js';
+//not GWT import const NullRecordStore = globalThis.org.allbinary.game.configuration.persistance.NullRecordStore;
 export class BasicPersitance extends Object {
     constructor(recordId) {
         super();

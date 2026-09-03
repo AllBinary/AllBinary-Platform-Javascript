@@ -11,4 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Angle } from '../../../org/allbinary/math/Angle.js';
+const Angle = globalThis.org.allbinary.math.Angle;
 export {};

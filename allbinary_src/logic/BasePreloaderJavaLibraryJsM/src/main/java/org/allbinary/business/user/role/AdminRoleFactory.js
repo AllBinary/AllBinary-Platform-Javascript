@@ -13,9 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Vector } from '../../../../../java/util/Vector.js';
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicUserRoleFactory } from './BasicUserRoleFactory.js';
+//not GWT import const BasicUserRoleFactory = globalThis.org.allbinary.business.user.role.BasicUserRoleFactory;
 export class AdminRoleFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -23,17 +27,17 @@ export class AdminRoleFactory extends Object {
     }
     constructor() {
         super();
-        this.adminRoles = new Vector();
-        this.storeAdminRoles = new Vector();
-        this.storeManagementRoles = new Vector();
-        this.productManagementRoles = new Vector();
-        this.reviewManagementRoles = new Vector();
-        this.customerManagementRoles = new Vector();
-        this.workflowManagementRoles = new Vector();
-        this.orderManagementRoles = new Vector();
-        this.adjusterManagementRoles = new Vector();
-        this.shippingManagementRoles = new Vector();
-        this.webManagementRoles = new Vector();
+        this.adminRoles = new BasicArrayListD();
+        this.storeAdminRoles = new BasicArrayListD();
+        this.storeManagementRoles = new BasicArrayListD();
+        this.productManagementRoles = new BasicArrayListD();
+        this.reviewManagementRoles = new BasicArrayListD();
+        this.customerManagementRoles = new BasicArrayListD();
+        this.workflowManagementRoles = new BasicArrayListD();
+        this.orderManagementRoles = new BasicArrayListD();
+        this.adjusterManagementRoles = new BasicArrayListD();
+        this.shippingManagementRoles = new BasicArrayListD();
+        this.webManagementRoles = new BasicArrayListD();
         var basicUserRoleFactory = BasicUserRoleFactory.getInstance();
         ;
         this.adminRoles.add(basicUserRoleFactory.ADMINISTRATOR);

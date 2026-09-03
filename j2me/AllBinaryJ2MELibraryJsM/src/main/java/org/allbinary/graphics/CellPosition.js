@@ -11,9 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { V } from '../../../org/allbinary/graph/V.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const V = globalThis.org.allbinary.graph.V;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CellPosition extends V {
     static toStringCellPosition(basicGeographicMapCellPosition) {

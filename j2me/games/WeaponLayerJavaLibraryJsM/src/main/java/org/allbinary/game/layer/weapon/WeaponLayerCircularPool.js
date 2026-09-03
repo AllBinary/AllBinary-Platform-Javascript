@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 import { AllBinaryLayerCircularPool } from '../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
+//not GWT import const WeaponLayer = globalThis.org.allbinary.game.layer.weapon.WeaponLayer;
 export class WeaponLayerCircularPool extends AllBinaryLayerCircularPool {
     constructor() {
         super();

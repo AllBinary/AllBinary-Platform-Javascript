@@ -12,11 +12,16 @@
         *  Created By: Travis Berthelot
 */
 import { AndroidInfoFactory } from '../../../../../../org/allbinary/android/AndroidInfoFactory.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const AndroidInfoFactory = globalThis.org.allbinary.android.AndroidInfoFactory;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { GenericOperatingSystem } from '../../../../../../org/allbinary/logic/system/os/GenericOperatingSystem.js';
-import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
+//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidSystemProperties } from './AndroidSystemProperties.js';
+//not GWT import const AndroidSystemProperties = globalThis.org.allbinary.logic.system.os.android.AndroidSystemProperties;
 export class AndroidOS extends GenericOperatingSystem {
     constructor() {
         super();

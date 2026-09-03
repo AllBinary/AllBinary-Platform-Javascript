@@ -14,12 +14,18 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { InputToGameKeyMapping } from '../../../../org/allbinary/game/input/mapping/InputToGameKeyMapping.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const InputToGameKeyMapping = globalThis.org.allbinary.game.input.mapping.InputToGameKeyMapping;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCKeyFactory } from './PCKeyFactory.js';
+//not GWT import const PCKeyFactory = globalThis.org.allbinary.game.input.PCKeyFactory;
 import { GameKeyFactory } from './GameKeyFactory.js';
+//not GWT import const GameKeyFactory = globalThis.org.allbinary.game.input.GameKeyFactory;
 export class PlatformFormInputMappingFactory extends Object {
     constructor() {
         super(...arguments);

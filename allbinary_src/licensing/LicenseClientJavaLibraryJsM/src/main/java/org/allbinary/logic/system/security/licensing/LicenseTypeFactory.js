@@ -13,9 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LicenseType } from './LicenseType.js';
+//not GWT import const LicenseType = globalThis.org.allbinary.logic.system.security.licensing.LicenseType;
 export class LicenseTypeFactory extends Object {
     constructor() {
         super(...arguments);

@@ -14,8 +14,13 @@
 /* Generated Code Do Not Modify */
 import hilog from '@ohos.hilog';
 import { Object } from '../../../../../java/lang/Object.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { LogFormatUtil } from '../../../../../org/allbinary/logic/communication/log/LogFormatUtil.js';
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogFormatUtil } from '../../../../../org/allbinary/logic/communication/log/LogFormatUtil.js';
+const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
+//Current folder imports from return types, extended types, and scope (deduplicated)
+//not plain js import { Log } from './Log.js';
+const Log = globalThis.org.allbinary.logic.communication.log.Log;
 //ActualPlatform
 /*actual*/ export class PreLogUtil extends Object {
     /*actual*/ static put(specialMessage, anyType = {}, functionName) {

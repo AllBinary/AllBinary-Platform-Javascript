@@ -14,20 +14,35 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-import { LogFactory } from '../../../../../org/allbinary/logic/communication/log/LogFactory.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { Log } from '../../../../../org/allbinary/logic/communication/log/Log.js';
+const Log = globalThis.org.allbinary.logic.communication.log.Log;
+//not plain js import { LogFactory } from '../../../../../org/allbinary/logic/communication/log/LogFactory.js';
+const LogFactory = globalThis.org.allbinary.logic.communication.log.LogFactory;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { LogConfigTypeFactory } from '../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
+//not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
 import { LogConfigTypes } from '../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypes.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const LogConfigTypes = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypes;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { LinuxOperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/linux/LinuxOperatingSystemFactory.js';
+//not GWT import const LinuxOperatingSystemFactory = globalThis.org.allbinary.logic.system.os.linux.LinuxOperatingSystemFactory;
 import { SolarisOperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/solaris/SolarisOperatingSystemFactory.js';
+//not GWT import const SolarisOperatingSystemFactory = globalThis.org.allbinary.logic.system.os.solaris.SolarisOperatingSystemFactory;
 import { WindowsOperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/windows/WindowsOperatingSystemFactory.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const WindowsOperatingSystemFactory = globalThis.org.allbinary.logic.system.os.windows.WindowsOperatingSystemFactory;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoOperatingSystem } from './NoOperatingSystem.js';
+//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
 import { OperatingSystems } from './OperatingSystems.js';
-import { SystemProperties } from './SystemProperties.js';
+//not GWT import const OperatingSystems = globalThis.org.allbinary.logic.system.os.OperatingSystems;
+//not plain js import { SystemProperties } from './SystemProperties.js';
+const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
 export class OperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

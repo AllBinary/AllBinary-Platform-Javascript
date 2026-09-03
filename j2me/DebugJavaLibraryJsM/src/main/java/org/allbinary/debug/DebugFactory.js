@@ -15,6 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoDebug } from './NoDebug.js';
+//not GWT import const DebugInterface = globalThis.org.allbinary.debug.DebugInterface;
 export class DebugFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

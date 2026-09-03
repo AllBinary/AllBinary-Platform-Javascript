@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonResource } from './TouchButtonResource.js';
+//not GWT import const TouchButtonResource = globalThis.org.allbinary.input.motion.button.TouchButtonResource;
 export class TouchButtonStartResource extends TouchButtonResource {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -12,28 +12,52 @@
         *  Created By: Travis Berthelot
 */
 import { Hashtable } from '../../../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 import { AnimationBehaviorFactory } from '../../../../../org/allbinary/animation/AnimationBehaviorFactory.js';
+//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
 import { NullAnimationFactory } from '../../../../../org/allbinary/animation/NullAnimationFactory.js';
+//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
 import { OneRowSpriteIndexedAnimationFactory } from '../../../../../org/allbinary/animation/image/sprite/OneRowSpriteIndexedAnimationFactory.js';
+//not GWT import const OneRowSpriteIndexedAnimationFactory = globalThis.org.allbinary.animation.image.sprite.OneRowSpriteIndexedAnimationFactory;
 import { BaseResourceAnimationInterfaceFactoryInterfaceFactory } from '../../../../../org/allbinary/animation/resource/BaseResourceAnimationInterfaceFactoryInterfaceFactory.js';
+//not GWT import const BaseResourceAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
 import { Features } from '../../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { ResourceLoadingLevelFactory } from '../../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
+//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import { ProgressCanvasFactory } from '../../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
+//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
+//not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
 import { ImageCacheFactory } from '../../../../../org/allbinary/image/ImageCacheFactory.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const ImageCacheFactory = globalThis.org.allbinary.image.ImageCacheFactory;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { OperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/OperatingSystemFactory.js';
-import { ImageCompleteUtil } from '../../../../../org/allbinary/media/image/ImageCompleteUtil.js';
+//not GWT import const OperatingSystemFactory = globalThis.org.allbinary.logic.system.os.OperatingSystemFactory;
+//not plain js import { ImageCompleteUtil } from '../../../../../org/allbinary/media/image/ImageCompleteUtil.js';
+const ImageCompleteUtil = globalThis.org.allbinary.media.image.ImageCompleteUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonBlankResource } from './TouchButtonBlankResource.js';
+//not GWT import const TouchButtonResource = globalThis.org.allbinary.input.motion.button.TouchButtonResource;
 import { TouchButtonGenericActionResource } from './TouchButtonGenericActionResource.js';
+//not GWT import const TouchButtonGenericActionResource = globalThis.org.allbinary.input.motion.button.TouchButtonGenericActionResource;
 import { TouchButtonStartResource } from './TouchButtonStartResource.js';
+//not GWT import const TouchButtonStartResource = globalThis.org.allbinary.input.motion.button.TouchButtonStartResource;
 import { TouchButtonUpResource } from './TouchButtonUpResource.js';
+//not GWT import const TouchButtonUpResource = globalThis.org.allbinary.input.motion.button.TouchButtonUpResource;
 import { TouchButtonDownResource } from './TouchButtonDownResource.js';
+//not GWT import const TouchButtonDownResource = globalThis.org.allbinary.input.motion.button.TouchButtonDownResource;
 import { TouchButtonTurnLeftResource } from './TouchButtonTurnLeftResource.js';
+//not GWT import const TouchButtonTurnLeftResource = globalThis.org.allbinary.input.motion.button.TouchButtonTurnLeftResource;
 import { TouchButtonTurnRightResource } from './TouchButtonTurnRightResource.js';
+//not GWT import const TouchButtonTurnRightResource = globalThis.org.allbinary.input.motion.button.TouchButtonTurnRightResource;
 import { TouchButtonStrafeLeftResource } from './TouchButtonStrafeLeftResource.js';
+//not GWT import const TouchButtonStrafeLeftResource = globalThis.org.allbinary.input.motion.button.TouchButtonStrafeLeftResource;
 import { TouchButtonStrafeRightResource } from './TouchButtonStrafeRightResource.js';
+//not GWT import const TouchButtonStrafeRightResource = globalThis.org.allbinary.input.motion.button.TouchButtonStrafeRightResource;
 export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extends BaseResourceAnimationInterfaceFactoryInterfaceFactory {
     static createFactory() {
         //if statement needs to be on the same line and ternary does not work the same way.

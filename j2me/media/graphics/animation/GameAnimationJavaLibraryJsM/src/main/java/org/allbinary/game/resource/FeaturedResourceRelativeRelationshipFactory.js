@@ -11,14 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
-import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 import { RelativeLayerRelationship } from '../../../../org/allbinary/layer/relationship/RelativeLayerRelationship.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
-import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not GWT import const RelativeLayerRelationship = globalThis.org.allbinary.layer.relationship.RelativeLayerRelationship;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not plain js import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { FeaturedResourceFactory } from './FeaturedResourceFactory.js';
+//not GWT import const ResourceRelativeRelationshipFactoryInterface = globalThis.org.allbinary.game.resource.ResourceRelativeRelationshipFactoryInterface;
 export class FeaturedResourceRelativeRelationshipFactory extends FeaturedResourceFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

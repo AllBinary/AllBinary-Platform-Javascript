@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class StringUtil extends Object {
     static getInstance() {
@@ -21,7 +22,7 @@ export class StringUtil extends Object {
     }
     constructor() {
         super();
-        this.INIT_STRING = "";
+        this.INIT_STRING = .toCharArray();
         this.NULL_STRING = "null";
         this.EMPTY_STRING = "";
         this.ONE_EMPTY_STRING_ARRAY = [

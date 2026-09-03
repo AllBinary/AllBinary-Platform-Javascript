@@ -13,17 +13,33 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not plain js import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
+//not plain js import { Item } from '../../../../../javax/microedition/lcdui/Item.js';
+const Item = globalThis.javax.microedition.lcdui.Item;
+//not plain js import { ItemStateListener } from '../../../../../javax/microedition/lcdui/ItemStateListener.js';
+const ItemStateListener = globalThis.javax.microedition.lcdui.ItemStateListener;
 import { GameConfigurationGauge } from '../../../../../org/allbinary/game/configuration/GameConfigurationGauge.js';
+//not GWT import const GameConfigurationGauge = globalThis.org.allbinary.game.configuration.GameConfigurationGauge;
 import { GameConfigurationUtil } from '../../../../../org/allbinary/game/configuration/GameConfigurationUtil.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const GameOptionsForm = globalThis.org.allbinary.game.configuration.GameOptionsForm;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameFeatureFactory } from './GameFeatureFactory.js';
+//not GWT import const GameFeature = globalThis.org.allbinary.game.configuration.feature.GameFeature;
 import { GameFeatureUtil } from './GameFeatureUtil.js';
+//not GWT import const GameFeatureUtil = globalThis.org.allbinary.game.configuration.feature.GameFeatureUtil;
 export class GameFeatureItemStateListener extends Object {
     static add(gameFeature) {
         if (!GameFeatureItemStateListener.toggleList.contains(gameFeature)) {

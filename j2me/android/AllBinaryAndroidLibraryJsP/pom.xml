@@ -45,7 +45,7 @@
         
         <!-- Several Move to PostPlatforms -->
         
-        <module>../../media/sound/MusicJ2MEJavaLibraryJsM</module>
+<!--        <module>../../media/sound/MusicJ2MEJavaLibraryJsM</module>-->
         <module>../../media/sound/NullMusicAndroidJavaLibraryJsM</module>
         <module>../../media/sound/MusicAndroidJavaLibraryJsM</module>
 

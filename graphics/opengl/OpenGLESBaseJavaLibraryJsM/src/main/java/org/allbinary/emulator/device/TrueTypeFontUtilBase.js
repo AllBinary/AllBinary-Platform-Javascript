@@ -13,9 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
 import { AvianUtil } from '../../../../org/allbinary/AvianUtil.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const AvianUtil = globalThis.org.allbinary.AvianUtil;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TrueTypeFontUtilBase extends Object {
     constructor(scale) {

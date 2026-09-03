@@ -14,7 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Integer } from '../../../../java/lang/Integer.js';
-import { CommonPhoneStrings } from '../../../../org/allbinary/string/CommonPhoneStrings.js';
+//not plain js import { CommonPhoneStrings } from '../../../../org/allbinary/string/CommonPhoneStrings.js';
+const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TableDataFactory extends Object {
     constructor() {

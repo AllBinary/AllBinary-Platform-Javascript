@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerManagerLoggingBase } from './LayerManagerLoggingBase.js';
+//not GWT import const LayerManagerLoggingBase = globalThis.org.allbinary.layer.LayerManagerLoggingBase;
 export class LayerManagerNoDebug extends LayerManagerLoggingBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

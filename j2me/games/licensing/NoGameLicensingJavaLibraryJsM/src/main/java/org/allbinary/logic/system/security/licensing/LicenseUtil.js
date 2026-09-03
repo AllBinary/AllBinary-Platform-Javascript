@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+//not plain js import { CommandListener } from '../../../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LicenseUtil extends Object {
     static getInstance() {

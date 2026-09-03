@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const RunnableInterface = globalThis.org.allbinary.thread.RunnableInterface;
 export class ABRunnable extends Object {
     constructor() {
         super(...arguments);

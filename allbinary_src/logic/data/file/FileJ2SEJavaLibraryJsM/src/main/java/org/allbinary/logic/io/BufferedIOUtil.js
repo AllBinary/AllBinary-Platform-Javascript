@@ -14,11 +14,17 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { BufferedReader } from '../../../../java/io/BufferedReader.js';
+//not GWT import const BufferedReader = globalThis.java.io.BufferedReader;
 import { BufferedWriter } from '../../../../java/io/BufferedWriter.js';
+//not GWT import const BufferedWriter = globalThis.java.io.BufferedWriter;
 import { FileReader } from '../../../../java/io/FileReader.js';
+//not GWT import const FileReader = globalThis.java.io.FileReader;
 import { FileWriter } from '../../../../java/io/FileWriter.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BufferedIOUtil extends Object {
     //@Throws(Exception.constructor)

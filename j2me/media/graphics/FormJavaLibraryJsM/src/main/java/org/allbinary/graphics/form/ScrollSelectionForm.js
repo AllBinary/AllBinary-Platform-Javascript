@@ -11,23 +11,45 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { GPoint } from '../../../../org/allbinary/graphics/GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { ABCustomItem } from '../../../../org/allbinary/graphics/form/item/ABCustomItem.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
-import { RectangleCollisionUtil } from '../../../../org/allbinary/math/RectangleCollisionUtil.js';
-import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { RectangleCollisionUtil } from '../../../../org/allbinary/math/RectangleCollisionUtil.js';
+const RectangleCollisionUtil = globalThis.org.allbinary.math.RectangleCollisionUtil;
+//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PaintableForm } from './PaintableForm.js';
+//not GWT import const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
+//not GWT import const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
 import { ItemIndexPaintable } from './ItemIndexPaintable.js';
+//not GWT import const ItemIndexPaintable = globalThis.org.allbinary.graphics.form.ItemIndexPaintable;
 import { ItemIndexDx } from './ItemIndexDx.js';
+//not GWT import const ItemPaintable = globalThis.org.allbinary.graphics.form.ItemPaintable;
 import { FormTypeFactory } from './FormTypeFactory.js';
+//not GWT import const FormType = globalThis.org.allbinary.graphics.form.FormType;
 export class ScrollSelectionForm extends PaintableForm {
     static createForm(title, items, formPaintableFactory, border, backgroundBasicColor, foregroundBasicColor) {
         try {
@@ -216,7 +238,8 @@ export class ScrollSelectionForm extends PaintableForm {
         }
         else {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return ABCustomItem.NULL_CUSTOM_ITEM;
+            return ABCustomItem.getNullInstance();
+            ;
         }
     }
     //@Throws(Exception.constructor)

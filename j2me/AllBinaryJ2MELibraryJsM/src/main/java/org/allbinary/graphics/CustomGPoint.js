@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { GPoint } from './GPoint.js';
+//not plain js import { GPoint } from './GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
 export class CustomGPoint extends GPoint {
     static getInstance(point) {
         //if statement needs to be on the same line and ternary does not work the same way.

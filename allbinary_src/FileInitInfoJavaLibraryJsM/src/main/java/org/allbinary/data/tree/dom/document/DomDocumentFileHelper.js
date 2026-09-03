@@ -13,14 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+//not GWT import const Transformer = globalThis.javax.xml.transform.Transformer;
 import { TransformerFactory } from '../../../../../../javax/xml/transform/TransformerFactory.js';
+//not GWT import const TransformerFactory = globalThis.javax.xml.transform.TransformerFactory;
 import { DOMSource } from '../../../../../../javax/xml/transform/dom/DOMSource.js';
+//not GWT import const DOMSource = globalThis.javax.xml.transform.dom.DOMSource;
 import { StreamResult } from '../../../../../../javax/xml/transform/stream/StreamResult.js';
+//not GWT import const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
 import { AbFileInputStream } from '../../../../../../org/allbinary/logic/io/AbFileInputStream.js';
+//not GWT import const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
 import { DataOutputStreamFactory } from '../../../../../../org/allbinary/logic/io/DataOutputStreamFactory.js';
+//not GWT import const DataOutputStreamFactory = globalThis.org.allbinary.logic.io.DataOutputStreamFactory;
 import { StreamUtil } from '../../../../../../org/allbinary/logic/io/StreamUtil.js';
+//not GWT import const Document = globalThis.org.w3c.dom.Document;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomDocumentHelper } from './DomDocumentHelper.js';
+//not GWT import const DomDocumentHelper = globalThis.org.allbinary.data.tree.dom.document.DomDocumentHelper;
 export class DomDocumentFileHelper extends Object {
     //@Throws(Exception.constructor)
     static createDocument(xmlFile) {

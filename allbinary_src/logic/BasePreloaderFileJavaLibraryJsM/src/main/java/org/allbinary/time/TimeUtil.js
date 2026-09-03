@@ -15,6 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 import { Integer } from '../../../java/lang/Integer.js';
 import { Calendar } from '../../../java/util/Calendar.js';
+//not GWT import const Calendar = globalThis.java.util.Calendar;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TimeUtil extends Object {
     static getInstance() {

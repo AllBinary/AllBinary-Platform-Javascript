@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABRunnable } from './ABRunnable.js';
+//not GWT import const ABRunnable = globalThis.org.allbinary.thread.ABRunnable;
 export class NullABRunnable extends ABRunnable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

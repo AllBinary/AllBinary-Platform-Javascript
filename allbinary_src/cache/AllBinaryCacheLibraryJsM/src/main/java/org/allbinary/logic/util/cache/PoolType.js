@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const CacheType = globalThis.org.allbinary.logic.util.cache.CacheType;
 export class PoolType extends Object {
     constructor(cacheType) {
         super();

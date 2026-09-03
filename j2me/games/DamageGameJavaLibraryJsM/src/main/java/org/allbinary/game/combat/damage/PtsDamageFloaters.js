@@ -11,15 +11,28 @@
         *
         *  Created By: Travis Berthelot
 */
-import { MyRandomFactory } from '../../../../../org/allbinary/game/rand/MyRandomFactory.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { MyRandomFactory } from '../../../../../org/allbinary/game/rand/MyRandomFactory.js';
+const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorArrayIndexer } from '../../../../../org/allbinary/graphics/color/BasicColorArrayIndexer.js';
+//not GWT import const BasicColorArrayIndexer = globalThis.org.allbinary.graphics.color.BasicColorArrayIndexer;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { BasicColorSetUtil } from '../../../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 import { CharArrayFactory } from '../../../../../org/allbinary/logic/java/character/CharArrayFactory.js';
-import { PrimitiveLongUtil } from '../../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
-import { CircularIndexUtil } from '../../../../../org/allbinary/util/CircularIndexUtil.js';
+//not GWT import const CharArrayFactory = globalThis.org.allbinary.logic.java.character.CharArrayFactory;
+//not plain js import { PrimitiveLongUtil } from '../../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
+const PrimitiveLongUtil = globalThis.org.allbinary.logic.math.PrimitiveLongUtil;
+//not plain js import { CircularIndexUtil } from '../../../../../org/allbinary/util/CircularIndexUtil.js';
+const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
+//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DamageFloaters } from './DamageFloaters.js';
+//not GWT import const DamageFloaters = globalThis.org.allbinary.game.combat.damage.DamageFloaters;
 export class PtsDamageFloaters extends DamageFloaters {
     constructor(layerInterface) {
         super();

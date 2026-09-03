@@ -15,6 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicColorUtil } from './BasicColorUtil.js';
+//not GWT import const BasicColorUtil = globalThis.org.allbinary.graphics.color.BasicColorUtil;
 export class BasicColorUtilFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

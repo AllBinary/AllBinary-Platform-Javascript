@@ -1,8 +1,16 @@
 /* Generated Code Do Not Modify */
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not plain js import { Font } from '../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
+//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const OpenGLSurfaceChangedInterface = globalThis.org.allbinary.image.opengles.OpenGLSurfaceChangedInterface;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const GraphicsInterface = globalThis.org.allbinary.device.GraphicsInterface;
 import { NullGL10 } from './NullGL10.js';
+//not GWT import const NullGL10 = globalThis.org.allbinary.device.NullGL10;
 export class OpenGLESGraphics extends Graphics {
     constructor() {
         super();

@@ -11,27 +11,48 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 import { IllegalArgumentException } from '../../../../java/lang/IllegalArgumentException.js';
 import { Math } from '../../../../java/lang/Math.js';
-import { ARunnable } from '../../../../org/allbinary/thread/ARunnable.js';
+//not plain js import { ARunnable } from '../../../../org/allbinary/thread/ARunnable.js';
+const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
-import { PlayerListener } from '../../../../javax/microedition/media/PlayerListener.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not plain js import { Control } from '../../../../javax/microedition/media/Control.js';
+const Control = globalThis.javax.microedition.media.Control;
+//not plain js import { MediaException } from '../../../../javax/microedition/media/MediaException.js';
+const MediaException = globalThis.javax.microedition.media.MediaException;
+//not plain js import { PlayerListener } from '../../../../javax/microedition/media/PlayerListener.js';
+const PlayerListener = globalThis.javax.microedition.media.PlayerListener;
 import { AudioInputStream } from '../../../../javax/sound/sampled/AudioInputStream.js';
+//not GWT import const AudioInputStream = globalThis.javax.sound.sampled.AudioInputStream;
 import { AudioSystem } from '../../../../javax/sound/sampled/AudioSystem.js';
+//not GWT import const Clip = globalThis.javax.sound.sampled.Clip;
 import { FloatControl } from '../../../../javax/sound/sampled/FloatControl.js';
+//not GWT import const FloatControl = globalThis.javax.sound.sampled.FloatControl;
 import { LineEvent } from '../../../../javax/sound/sampled/LineEvent.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const LineListener = globalThis.javax.sound.sampled.LineListener;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { MusicThreadPool } from '../../../../org/allbinary/thread/MusicThreadPool.js';
+//not GWT import const MusicThreadPool = globalThis.org.allbinary.thread.MusicThreadPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicPlayer } from './BasicPlayer.js';
+//not GWT import const BasicPlayer = globalThis.org.allbinary.media.audio.BasicPlayer;
 import { NullAudioFormat } from './NullAudioFormat.js';
+//not GWT import const NullAudioFormat = globalThis.org.allbinary.media.audio.NullAudioFormat;
 import { NullClip } from './NullClip.js';
+//not GWT import const NullClip = globalThis.org.allbinary.media.audio.NullClip;
 import { NullControl } from './NullControl.js';
+//not GWT import const NullControl = globalThis.org.allbinary.media.audio.NullControl;
 export class PCClipWavPlayer extends BasicPlayer {
     constructor(inputStream) {
         super();

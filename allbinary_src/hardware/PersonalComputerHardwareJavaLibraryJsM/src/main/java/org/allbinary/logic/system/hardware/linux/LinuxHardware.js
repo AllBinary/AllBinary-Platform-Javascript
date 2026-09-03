@@ -15,21 +15,41 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
 import { FileReader } from '../../../../../../java/io/FileReader.js';
+//not GWT import const FileReader = globalThis.java.io.FileReader;
 import { LineNumberReader } from '../../../../../../java/io/LineNumberReader.js';
-import { Vector } from '../../../../../../java/util/Vector.js';
-import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { LogConfigTypeFactory } from '../../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
+//not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
 import { LogConfigTypes } from '../../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypes.js';
+//not GWT import const LogConfigTypes = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypes;
 import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
-import { FilePathData } from '../../../../../../org/allbinary/logic/io/file/FilePathData.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not plain js import { FilePathData } from '../../../../../../org/allbinary/logic/io/file/FilePathData.js';
+const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
 import { SubDirectory } from '../../../../../../org/allbinary/logic/io/file/directory/SubDirectory.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const SubDirectory = globalThis.org.allbinary.logic.io.file.directory.SubDirectory;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const VideoInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.VideoInterface;
 import { Cpu } from '../../../../../../org/allbinary/logic/system/hardware/components/linux/Cpu.js';
-import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const Cpu = globalThis.org.allbinary.logic.system.hardware.components.linux.Cpu;
+//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCComponentFactory } from './PCComponentFactory.js';
+//not GWT import const PCComponentFactory = globalThis.org.allbinary.logic.system.hardware.linux.PCComponentFactory;
 export class LinuxHardware extends Object {
     constructor(path) {
         super();
@@ -46,7 +66,7 @@ export class LinuxHardware extends Object {
         this.NAME = "Linux Hardware Profile";
         this.MINHARDWARE = 5;
         this.init(PCIFILE);
-        if (this.componentInterfaceVector.length < this.MINHARDWARE) {
+        if (this.componentInterfaceVector.size() < this.MINHARDWARE) {
             throw new Exception("Not Enough Data For A Valid License On Linux");
         }
         var cpu = new Cpu();
@@ -78,18 +98,18 @@ export class LinuxHardware extends Object {
     //@Throws(Exception.constructor)
     init(lineNumberReader, filePath) {
         try {
-            this.componentInterfaceVector = new Vector();
-            this.videoInterfaceVector = new Vector();
-            this.hardDriveControllerInterfaceVector = new Vector();
-            this.cpuInterfaceVector = new Vector();
-            this.usbInterfaceVector = new Vector();
-            this.ethernetInterfaceVector = new Vector();
-            this.multimediaInterfaceVector = new Vector();
-            this.fireWireInterfaceVector = new Vector();
-            this.bridgeInterfaceVector = new Vector();
-            this.hardDriveInterfaceVector = new Vector();
-            this.macInterfaceVector = new Vector();
-            this.monitorInterfaceVector = new Vector();
+            this.componentInterfaceVector = new BasicArrayListD();
+            this.videoInterfaceVector = new BasicArrayListD();
+            this.hardDriveControllerInterfaceVector = new BasicArrayListD();
+            this.cpuInterfaceVector = new BasicArrayListD();
+            this.usbInterfaceVector = new BasicArrayListD();
+            this.ethernetInterfaceVector = new BasicArrayListD();
+            this.multimediaInterfaceVector = new BasicArrayListD();
+            this.fireWireInterfaceVector = new BasicArrayListD();
+            this.bridgeInterfaceVector = new BasicArrayListD();
+            this.hardDriveInterfaceVector = new BasicArrayListD();
+            this.macInterfaceVector = new BasicArrayListD();
+            this.monitorInterfaceVector = new BasicArrayListD();
             var pciFile = new FileReader(filePath);
             ;
             lineNumberReader = new LineNumberReader(pciFile);
@@ -127,7 +147,7 @@ export class LinuxHardware extends Object {
                     var componentData = new StringMaker();
                     ;
                     if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
-                        this.logUtil.putF("Found Hardware Device: " + this.componentInterfaceVector.length, this, this.commonStrings.CONSTRUCTOR);
+                        this.logUtil.putF("Found Hardware Device: " + this.componentInterfaceVector.size(), this, this.commonStrings.CONSTRUCTOR);
                     }
                     componentData.append(nextLine);
                     componentData.append(CommonSeps.getInstance().NEW_LINE);
@@ -221,7 +241,7 @@ export class LinuxHardware extends Object {
     toString() {
         var hardwareBuffer = new StringMaker();
         ;
-        var size = this.componentInterfaceVector.length;
+        var size = this.componentInterfaceVector.size();
         ;
         for (var index = 0; index < size; index++) {
             var componentInterface = this.componentInterfaceVector.get(index);
@@ -242,7 +262,7 @@ export class LinuxHardware extends Object {
     }
     difference(hardwareInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance().NULL_TABLE;
+        return StdUtil.getInstance().NULL_TABLE;
     }
     isNextHardware(nextLine) {
         if (nextLine !=

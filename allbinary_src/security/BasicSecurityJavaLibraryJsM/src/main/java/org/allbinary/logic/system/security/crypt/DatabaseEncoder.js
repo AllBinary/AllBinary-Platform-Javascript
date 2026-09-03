@@ -13,14 +13,24 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
-import { PreLogUtil } from '../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { PreLogUtil } from '../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { Tokenizer } from '../../../../../../org/allbinary/logic/string/tokens/Tokenizer.js';
-import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const Tokenizer = globalThis.org.allbinary.logic.string.tokens.Tokenizer;
+//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DatabaseEncoder extends Object {
     static encode(value) {

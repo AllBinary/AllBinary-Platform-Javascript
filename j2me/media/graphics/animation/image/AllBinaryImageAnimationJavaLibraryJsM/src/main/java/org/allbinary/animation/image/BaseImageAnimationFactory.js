@@ -13,14 +13,28 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const AnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.AnimationInterfaceFactoryInterface;
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
+//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
 import { AnimationFactoryImageScaleUtil } from '../../../../org/allbinary/image/AnimationFactoryImageScaleUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const AnimationFactoryImageScaleUtil = globalThis.org.allbinary.image.AnimationFactoryImageScaleUtil;
+//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { ScaleProperties } from '../../../../org/allbinary/media/ScaleProperties.js';
-import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
+//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnimationFactoryInitializationVisitor } from './AnimationFactoryInitializationVisitor.js';
+//not GWT import const AnimationFactoryInitializationVisitor = globalThis.org.allbinary.animation.image.AnimationFactoryInitializationVisitor;
 export class BaseImageAnimationFactory extends Object {
     //@Throws(Exception.constructor)
     static createFactoryBase(image, sequenceArray, width, height, animationBehaviorFactory) {

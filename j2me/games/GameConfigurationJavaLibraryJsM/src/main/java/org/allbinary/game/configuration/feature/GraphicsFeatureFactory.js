@@ -13,9 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GraphicsFeature } from './GraphicsFeature.js';
+//not GWT import const GraphicsFeature = globalThis.org.allbinary.game.configuration.feature.GraphicsFeature;
 export class GraphicsFeatureFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -30,8 +34,8 @@ export class GraphicsFeatureFactory extends Object {
         this.IMAGE_TO_ARRAY_GRAPHICS = new GraphicsFeature("Image To Array Graphics");
         this.SPRITE_QUARTER_ROTATION_GRAPHICS = new GraphicsFeature("Sprite Quarter Rotation Graphics");
         this.SPRITE_FULL_GRAPHICS = new GraphicsFeature("Sprite Full Rotation Graphics");
-        this.VECTOR_GRAPHICS = new GraphicsFeature("Vector Graphics");
-        this.VECTOR_TO_IMAGE_GRAPHICS = new GraphicsFeature("Vector To Image Graphics");
+        this.VECTOR_GRAPHICS = new GraphicsFeature("BasicArrayList Graphics");
+        this.VECTOR_TO_IMAGE_GRAPHICS = new GraphicsFeature("BasicArrayList To Image Graphics");
     }
 }
 GraphicsFeatureFactory.instance = new GraphicsFeatureFactory();

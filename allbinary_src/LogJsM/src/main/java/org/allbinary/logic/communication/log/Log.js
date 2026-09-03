@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { LogFormatUtil } from '../../../../../org/allbinary/logic/communication/log/LogFormatUtil.js';
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { LogFormatUtil } from '../../../../../org/allbinary/logic/communication/log/LogFormatUtil.js';
+const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Log extends Object {
     constructor(specialMessage, anyType = {}, functionName, exception = {}) {

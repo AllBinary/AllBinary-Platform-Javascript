@@ -13,6 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const AllBinaryGameLayer = globalThis.org.allbinary.game.layer.AllBinaryGameLayer;
+//not plain js import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+//not GWT import const MovementInterface = globalThis.org.allbinary.physics.movement.MovementInterface;
 export class Movement extends Object {
     constructor() {
         super();

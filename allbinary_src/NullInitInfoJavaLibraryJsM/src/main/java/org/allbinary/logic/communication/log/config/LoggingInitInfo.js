@@ -14,7 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const LogConfig = globalThis.org.allbinary.logic.communication.log.config.LogConfig;
 export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

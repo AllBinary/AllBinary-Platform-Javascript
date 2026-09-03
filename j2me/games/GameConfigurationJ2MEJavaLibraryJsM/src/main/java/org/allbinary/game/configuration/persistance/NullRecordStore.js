@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-import { RecordStore } from '../../../../../javax/microedition/rms/RecordStore.js';
+/* Generated Code Do Not Modify */
+//not plain js import { RecordStore } from '../../../../../javax/microedition/rms/RecordStore.js';
+const RecordStore = globalThis.javax.microedition.rms.RecordStore;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NullRecordStore extends RecordStore {
 }

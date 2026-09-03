@@ -1,6 +1,10 @@
 /* Generated Code Do Not Modify */
+//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IndexedAnimation } from './IndexedAnimation.js';
+//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 export class FillAnimation extends IndexedAnimation {
     constructor(pixelBuffer, width, height, animationBehavior) {
         super(animationBehavior);

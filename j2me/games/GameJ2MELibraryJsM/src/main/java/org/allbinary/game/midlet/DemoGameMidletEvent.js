@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const DemoGameMidletState = globalThis.org.allbinary.game.midlet.DemoGameMidletState;
 export class DemoGameMidletEvent extends AllBinaryEventObject {
     constructor(anyType = {}, demoGameMidletState) {
         super(anyType);

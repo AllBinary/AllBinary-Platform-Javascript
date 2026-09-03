@@ -15,6 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AppUrlGlobals } from './AppUrlGlobals.js';
+//not GWT import const UrlGlobalsInterface = globalThis.org.allbinary.globals.UrlGlobalsInterface;
 export class URLGLOBALS extends Object {
     static init(urlGlobalsInterface) {
         URLGLOBALS.urlGlobalsInterface = urlGlobalsInterface;

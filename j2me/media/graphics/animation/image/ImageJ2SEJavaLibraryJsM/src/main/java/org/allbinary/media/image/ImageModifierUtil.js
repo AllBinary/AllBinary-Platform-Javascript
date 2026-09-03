@@ -13,12 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const WritableRaster = globalThis.java.awt.image.WritableRaster;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageUtil } from './ImageUtil.js';
-import { ImageCreationUtil } from './ImageCreationUtil.js';
+//not GWT import const ImageUtil = globalThis.org.allbinary.media.image.ImageUtil;
+//not plain js import { ImageCreationUtil } from './ImageCreationUtil.js';
+const ImageCreationUtil = globalThis.org.allbinary.media.image.ImageCreationUtil;
 export class ImageModifierUtil extends Object {
     constructor() {
         super(...arguments);

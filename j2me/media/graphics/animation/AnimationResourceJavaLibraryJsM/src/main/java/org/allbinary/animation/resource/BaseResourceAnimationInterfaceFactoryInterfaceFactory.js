@@ -14,13 +14,22 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const BasicAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.BasicAnimationInterfaceFactoryInterface;
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
+//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
 import { ResourceLoadingLevelFactory } from '../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { RectangleFactory } from '../../../../org/allbinary/graphics/RectangleFactory.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const FeatureResourceAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.resource.FeatureResourceAnimationInterfaceFactoryInterface;
 export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Object {
     constructor(name, hashtable, rectangleHashtable, rectangleArrayHashtable) {
         super();

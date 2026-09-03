@@ -1,19 +1,33 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Exception } from '../../../java/lang/Exception.js';
+//not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
 import { Features } from '../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { MainFeatureFactory } from '../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
-import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const MainFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MainFeatureFactory;
+//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbDataInputStream } from '../../../org/allbinary/logic/io/AbDataInputStream.js';
+//not GWT import const AbDataInputStream = globalThis.org.allbinary.logic.io.AbDataInputStream;
 import { AbDataOutputStream } from '../../../org/allbinary/logic/io/AbDataOutputStream.js';
+//not GWT import const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
 import { FileStreamFactory } from '../../../org/allbinary/logic/io/FileStreamFactory.js';
+//not GWT import const FileStreamFactory = globalThis.org.allbinary.logic.io.FileStreamFactory;
 import { NullCloseable } from '../../../org/allbinary/logic/io/NullCloseable.js';
+//not GWT import const NullCloseable = globalThis.org.allbinary.logic.io.NullCloseable;
 import { StreamUtil } from '../../../org/allbinary/logic/io/StreamUtil.js';
+//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
 import { FileFactory } from '../../../org/allbinary/logic/io/file/FileFactory.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const FileFactory = globalThis.org.allbinary.logic.io.file.FileFactory;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ApplicationConfiguration extends Object {
     static getInstance() {

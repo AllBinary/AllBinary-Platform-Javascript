@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-import { ForcedLogUtil } from '../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+/* Generated Code Do Not Modify */
+//not plain js import { ForcedLogUtil } from '../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { BasicArrayListS } from './BasicArrayListS.js';
+//not plain js import { BasicArrayListS } from './BasicArrayListS.js';
+const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 export class ImmutableBasicArrayList extends BasicArrayListS {
     constructor(name, size) {
         super(size);

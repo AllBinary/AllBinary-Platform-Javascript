@@ -15,6 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialGameInput } from './SpecialGameInput.js';
+//not GWT import const SpecialGameInput = globalThis.org.allbinary.game.layer.special.SpecialGameInput;
 export class SpecialGameInputFactory extends Object {
 }
 SpecialGameInputFactory.NO_SPECIAL_GAME_INPUT = new SpecialGameInput();

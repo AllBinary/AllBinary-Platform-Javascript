@@ -11,14 +11,26 @@
         *
         *  Created By: Travis Berthelot
 */
-import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const GameKeyEventListenerInterface = globalThis.org.allbinary.game.input.event.GameKeyEventListenerInterface;
+//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventStrings.js';
-import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
+//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInput } from './GameInput.js';
+//not GWT import const GameInput = globalThis.org.allbinary.game.input.GameInput;
 import { GameInputStrings } from './GameInputStrings.js';
+//not GWT import const GameInputStrings = globalThis.org.allbinary.game.input.GameInputStrings;
 export class PlayerGameInput extends GameInput {
     constructor(gameKeyEventList, removalGameKeyEventList, playerInputId) {
         super(gameKeyEventList, removalGameKeyEventList);

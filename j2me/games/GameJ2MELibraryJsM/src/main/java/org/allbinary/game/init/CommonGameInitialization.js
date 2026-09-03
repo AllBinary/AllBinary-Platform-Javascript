@@ -11,15 +11,30 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not GWT import const ResourceInitialization = globalThis.org.allbinary.game.resource.ResourceInitialization;
 import { ResourceLoadingLevelFactory } from '../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
-import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const ResourceLoadingLevelFactory = globalThis.org.allbinary.game.resource.ResourceLoadingLevelFactory;
+//not plain js import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
-import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseGameInitialization } from './BaseGameInitialization.js';
+//not GWT import const BaseGameInitialization = globalThis.org.allbinary.game.init.BaseGameInitialization;
 export class CommonGameInitialization extends BaseGameInitialization {
     constructor(resourceInitializationArray, portion) {
         super(resourceInitializationArray, portion);

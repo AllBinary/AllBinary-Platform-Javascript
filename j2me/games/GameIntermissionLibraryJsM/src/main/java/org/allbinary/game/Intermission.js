@@ -13,8 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js';
+//not GWT import const IntermissionInterface = globalThis.org.allbinary.game.IntermissionInterface;
 import { NullIntermissionEnableListener } from './NullIntermissionEnableListener.js';
+//not GWT import const IntermissionEnableListenerInterface = globalThis.org.allbinary.game.IntermissionEnableListenerInterface;
 export class Intermission extends Object {
     constructor() {
         super();

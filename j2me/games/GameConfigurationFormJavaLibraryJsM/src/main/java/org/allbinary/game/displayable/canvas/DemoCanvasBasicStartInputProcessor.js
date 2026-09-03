@@ -12,12 +12,20 @@
         *  Created By: Travis Berthelot
 */
 import { NullCanvas } from '../../../../../javax/microedition/lcdui/NullCanvas.js';
+//not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
 import { GameCommandsFactory } from '../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
+//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
 import { GameInputStrings } from '../../../../../org/allbinary/game/input/GameInputStrings.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
+//not GWT import const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
 export class DemoCanvasBasicStartInputProcessor extends BasicMenuInputProcessor {
     constructor(gameKeyEventList, gameCanvas) {
         super(gameKeyEventList, -1, gameCanvas);

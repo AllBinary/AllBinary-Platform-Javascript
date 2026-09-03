@@ -14,18 +14,36 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Class } from '../../../../java/lang/Class.js';
+//not GWT import const Connection = globalThis.java.sql.Connection;
 import { DriverManager } from '../../../../java/sql/DriverManager.js';
-import { HashMap } from '../../../../java/util/HashMap.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not GWT import const Set = globalThis.java.util.Set;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const DbConnectionInfo = globalThis.org.allbinary.business.init.db.DbConnectionInfo;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { LogConfigTypeFactory } from '../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
+//not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
 import { LogConfigTypes } from '../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypes.js';
+//not GWT import const LogConfigTypes = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypes;
 import { SqlStrings } from '../../../../org/allbinary/logic/communication/sql/SqlStrings.js';
+//not GWT import const SqlStrings = globalThis.org.allbinary.logic.communication.sql.SqlStrings;
 import { SqlTypeStrings } from '../../../../org/allbinary/logic/communication/sql/SqlTypeStrings.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const SqlTypeStrings = globalThis.org.allbinary.logic.communication.sql.SqlTypeStrings;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../org/allbinary/logic/string/StringValidationUtil.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InitSql extends Object {
     constructor(databaseConnectionInfoInterface) {
@@ -34,6 +52,7 @@ export class InitSql extends Object {
         this.commonSeps = CommonSeps.getInstance();
         this.sqlTypeStrings = SqlTypeStrings.getInstance();
         this.sqlStrings = SqlStrings.getInstance();
+        this.stdUtil = StdUtil.getInstance();
         this.INSERT = "insert";
         this.UPDATE = "update";
         this.useridAndPassword = false;
@@ -130,7 +149,7 @@ export class InitSql extends Object {
             var resultSetMetaData = rset.getMetaData();
             ;
             while (rset.next()) {
-                result = new HashMap();
+                result = stdUtil.createHashMap();
                 var columnCount = resultSetMetaData.getColumnCount();
                 ;
                 for (var index = 1; index <= columnCount; index++) {
@@ -219,7 +238,7 @@ export class InitSql extends Object {
         stringBuffer.append(this.tableName);
         stringBuffer.append(this.sqlStrings.VALUES);
         try {
-            var size = values.length;
+            var size = values.size();
             ;
             for (var i = 0; i < size - 1; i++) {
                 var value = this.getValue(values.get(i));
@@ -227,7 +246,7 @@ export class InitSql extends Object {
                 stringBuffer.append(value);
                 stringBuffer.append(this.sqlStrings.SINGLE_QUOTE_COMMA_SEP);
             }
-            var value = this.getValue(values.lastElement());
+            var value = this.getValue(values.get(values.size() - 1));
             ;
             stringBuffer.append(value);
             stringBuffer.append(this.INSERT_END);

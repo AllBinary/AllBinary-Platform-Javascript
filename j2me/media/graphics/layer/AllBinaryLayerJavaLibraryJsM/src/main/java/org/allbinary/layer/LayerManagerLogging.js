@@ -13,12 +13,18 @@
 */
 import { Integer } from '../../../java/lang/Integer.js';
 import { TsUtil } from '../../../org/allbinary/TsUtil.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerManagerLoggingBase } from './LayerManagerLoggingBase.js';
+//not GWT import const LayerManager = globalThis.org.allbinary.layer.LayerManager;
 export class LayerManagerLogging extends LayerManagerLoggingBase {
     constructor() {
         super(...arguments);

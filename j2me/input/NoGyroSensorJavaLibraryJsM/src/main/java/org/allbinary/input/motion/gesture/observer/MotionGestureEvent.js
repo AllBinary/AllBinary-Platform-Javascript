@@ -11,13 +11,25 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PointFactory } from '../../../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { GPoint } from '../../../../../../org/allbinary/graphics/GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not plain js import { PointFactory } from '../../../../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 import { TouchMotionGestureFactory } from '../../../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
+//not GWT import const TouchMotionGestureFactory = globalThis.org.allbinary.input.motion.gesture.TouchMotionGestureFactory;
 import { TsUtil } from '../../../../../../org/allbinary/TsUtil.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
-import { CommonLabels } from '../../../../../../org/allbinary/string/CommonLabels.js';
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not plain js import { CommonLabels } from '../../../../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MotionGestureEvent extends AllBinaryEventObject {
     constructor(source = {}, id, motionGesture) {

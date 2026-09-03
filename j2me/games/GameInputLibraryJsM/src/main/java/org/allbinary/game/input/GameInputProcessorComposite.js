@@ -11,10 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerGameInput } from './PlayerGameInput.js';
+//not GWT import const GameInputProcessorInterface = globalThis.org.allbinary.game.input.GameInputProcessorInterface;
 export class GameInputProcessorComposite extends PlayerGameInput {
     constructor(name, gameInputProcessorInterface) {
         super(new BasicArrayListD(), new BasicArrayListD(), -1);

@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not GWT import const VisitorInterface = globalThis.org.allbinary.logic.util.visitor.VisitorInterface;
 export class Visitor extends Object {
     constructor() {
         super(...arguments);

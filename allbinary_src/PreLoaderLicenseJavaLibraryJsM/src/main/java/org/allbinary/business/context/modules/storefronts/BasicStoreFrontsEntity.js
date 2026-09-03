@@ -11,14 +11,22 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../../../java/lang/Exception.js';
-import { HashMap } from '../../../../../../java/util/HashMap.js';
+//not GWT import const HashMap = globalThis.java.util.HashMap;
 import { StoreFrontData } from '../../../../../../org/allbinary/business/context/modules/storefront/StoreFrontData.js';
+//not GWT import const StoreFrontData = globalThis.org.allbinary.business.context.modules.storefront.StoreFrontData;
 import { InitSql } from '../../../../../../org/allbinary/business/init/InitSql.js';
+//not GWT import const InitSql = globalThis.org.allbinary.business.init.InitSql;
 import { UserDbInitInfo } from '../../../../../../org/allbinary/business/init/db/UserDbInitInfo.js';
-import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const UserDbInitInfo = globalThis.org.allbinary.business.init.db.UserDbInitInfo;
+import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicStoreFront } from './BasicStoreFront.js';
+//not GWT import const BasicStoreFrontInterface = globalThis.org.allbinary.business.context.modules.storefronts.BasicStoreFrontInterface;
 export class BasicStoreFrontsEntity extends InitSql {
     constructor() {
         super(new UserDbInitInfo());
@@ -29,7 +37,7 @@ export class BasicStoreFrontsEntity extends InitSql {
     }
     //@Throws(Exception.constructor)
     getStoreFrontInterface(name) {
-        var keysAndValues = new HashMap();
+        var keysAndValues = StdUtil.getInstance().createHashMap();
         ;
         keysAndValues.put(StoreFrontData.getInstance().NAME, name);
         var storeHashMap = super.getRow(keysAndValues);

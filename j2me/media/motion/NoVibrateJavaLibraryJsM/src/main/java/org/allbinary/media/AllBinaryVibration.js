@@ -11,10 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { GameConfigurationCentral } from '../../../org/allbinary/game/configuration/GameConfigurationCentral.js';
+//not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryVibrationME } from './AllBinaryVibrationME.js';
+//not GWT import const AllBinaryVibrationME = globalThis.org.allbinary.media.AllBinaryVibrationME;
 import { AllBinaryNoVibration } from './AllBinaryNoVibration.js';
+//not GWT import const AllBinaryNoVibration = globalThis.org.allbinary.media.AllBinaryNoVibration;
 export class AllBinaryVibration extends AllBinaryVibrationME {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

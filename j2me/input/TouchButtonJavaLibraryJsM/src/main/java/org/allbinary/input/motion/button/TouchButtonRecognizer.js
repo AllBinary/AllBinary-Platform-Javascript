@@ -14,17 +14,33 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { DownGameKeyEventHandler } from '../../../../../org/allbinary/game/input/event/DownGameKeyEventHandler.js';
+//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
 import { UpGameKeyEventHandler } from '../../../../../org/allbinary/game/input/event/UpGameKeyEventHandler.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { RectangleCollisionUtil } from '../../../../../org/allbinary/math/RectangleCollisionUtil.js';
+//not GWT import const UpGameKeyEventHandler = globalThis.org.allbinary.game.input.event.UpGameKeyEventHandler;
+//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { RectangleCollisionUtil } from '../../../../../org/allbinary/math/RectangleCollisionUtil.js';
+const RectangleCollisionUtil = globalThis.org.allbinary.math.RectangleCollisionUtil;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
+//not GWT import const TouchButtonInput = globalThis.org.allbinary.input.motion.button.TouchButtonInput;
 import { CurrentlyPressedTouchButtonSingleton } from './CurrentlyPressedTouchButtonSingleton.js';
+//not GWT import const CurrentlyPressedTouchButtonSingleton = globalThis.org.allbinary.input.motion.button.CurrentlyPressedTouchButtonSingleton;
 //import { ReleaseHelper } from './ReleaseHelper.js';
+//not GWT import const ReleaseHelper = globalThis.org.allbinary.input.motion.button.ReleaseHelper;
 import { CancelTouchButtonInputFactory } from './CancelTouchButtonInputFactory.js';
+//not GWT import const CancelTouchButtonInputFactory = globalThis.org.allbinary.input.motion.button.CancelTouchButtonInputFactory;
 import { TouchScreenFactory } from './TouchScreenFactory.js';
+//not GWT import const TouchScreenFactory = globalThis.org.allbinary.input.motion.button.TouchScreenFactory;
 //import { MultitouchReleaseHelper } from './MultitouchReleaseHelper.js';
+//not GWT import const MultitouchReleaseHelper = globalThis.org.allbinary.input.motion.button.MultitouchReleaseHelper;
 import { TouchButtonFactory } from './TouchButtonFactory.js';
+//not GWT import const TouchButton = globalThis.org.allbinary.input.motion.button.TouchButton;
 export class TouchButtonRecognizer extends Object {
     constructor() {
         super();

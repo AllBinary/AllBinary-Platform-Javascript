@@ -13,9 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not GWT import const GameState = globalThis.org.allbinary.game.state.GameState;
+//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventStrings.js';
+//not GWT import const AdConfiguration = globalThis.org.allbinary.business.advertisement.AdConfiguration;
 import { Advertisements } from './Advertisements.js';
+//not GWT import const Advertisements = globalThis.org.allbinary.business.advertisement.Advertisements;
 export class GameAdStateBase extends Object {
     constructor(adConfiguration) {
         super();

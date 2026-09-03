@@ -15,11 +15,18 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { LogFormatUtil } from './LogFormatUtil.js';
+//not plain js import { LogFormatUtil } from './LogFormatUtil.js';
+const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
+//not plain js import { Log } from './Log.js';
+const Log = globalThis.org.allbinary.logic.communication.log.Log;
 //ActualPlatform
 /*actual*/ export class LogUtil extends Object {
     /*actual*/ static getInstance() {

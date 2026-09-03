@@ -16,11 +16,21 @@ import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { HashMap } from '../../../../../java/util/HashMap.js';
+//not GWT import const Set = globalThis.java.util.Set;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { ClassUtil } from '../../../../../org/allbinary/logic/java/anyType/clazz/ClassUtil.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const ClassUtil = globalThis.org.allbinary.logic.java.anyType.clazz.ClassUtil;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const Node = globalThis.org.w3c.dom.Node;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomData } from './DomData.js';
+//not GWT import const DomData = globalThis.org.allbinary.data.tree.dom.DomData;
 export class ModDomHelper extends Object {
     //@Throws(Exception.constructor)
     static createTextNode(document, name, text) {
@@ -126,7 +136,7 @@ export class ModDomHelper extends Object {
         ;
         var node = document.createElement(rootNodeName);
         ;
-        var size = valueVector.length;
+        var size = valueVector.size();
         ;
         for (var i = 0; i < size; i++) {
             var value = stringUtil.getNonNull(valueVector.get(i));
@@ -142,7 +152,7 @@ export class ModDomHelper extends Object {
         ;
         var node = document.createElement(rootNodeName);
         ;
-        var size = valueVector.length;
+        var size = valueVector.size();
         ;
         for (var index = 0; index < size; index++) {
             var value = stringUtil.getNonNull(valueVector.get(index));

@@ -13,8 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import { AbeLicenseInterfaceFactory } from '../../../../../org/allbinary/logic/system/security/licensing/AbeLicenseInterfaceFactory.js';
+//not GWT import const LicensingException = globalThis.org.allbinary.logic.system.security.licensing.LicensingException;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbKeys extends Object {
     static getInstance() {

@@ -11,9 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UrlGlobalsInterface } from './UrlGlobalsInterface.js';
+//not GWT import const UrlGlobalsInterface = globalThis.org.allbinary.globals.UrlGlobalsInterface;
 //implements
 export class AppUrlGlobals extends UrlGlobalsInterface {
     constructor() {

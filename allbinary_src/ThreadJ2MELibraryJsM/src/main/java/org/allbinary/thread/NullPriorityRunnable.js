@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const PriorityRunnable = globalThis.org.allbinary.thread.PriorityRunnable;
 export class NullPriorityRunnable extends Object {
     getPriority() {
         //if statement needs to be on the same line and ternary does not work the same way.

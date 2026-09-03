@@ -12,9 +12,13 @@
         *  Created By: Travis Berthelot
 */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const ComponentName = globalThis.android.content.ComponentName;
 import { Context } from '../../../android/content/Context.js';
-import { ResourceUtil } from '../../../org/allbinary/data/resource/ResourceUtil.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const Context = globalThis.android.content.Context;
+//not plain js import { ResourceUtil } from '../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AndroidServicesUtil extends Object {
     constructor() {

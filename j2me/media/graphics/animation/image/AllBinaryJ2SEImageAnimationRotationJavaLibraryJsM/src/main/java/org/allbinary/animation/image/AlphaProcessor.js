@@ -11,8 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
+const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ModifierBaseProcessor } from './ModifierBaseProcessor.js';
+//not GWT import const ModifierBaseProcessor = globalThis.org.allbinary.animation.image.ModifierBaseProcessor;
 export class AlphaProcessor extends ModifierBaseProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

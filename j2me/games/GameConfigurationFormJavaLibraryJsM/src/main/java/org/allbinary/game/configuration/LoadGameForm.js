@@ -12,16 +12,32 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../java/lang/Integer.js';
-import { ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
-import { ChoiceGroup } from '../../../../javax/microedition/lcdui/ChoiceGroup.js';
-import { Item } from '../../../../javax/microedition/lcdui/Item.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Choice, ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
+const Choice = globalThis.javax.microedition.lcdui.Choice;
+//not plain js import { ChoiceGroup } from '../../../../javax/microedition/lcdui/ChoiceGroup.js';
+const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
+//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not plain js import { Item } from '../../../../javax/microedition/lcdui/Item.js';
+const Item = globalThis.javax.microedition.lcdui.Item;
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
-import { StringItem } from '../../../../javax/microedition/lcdui/StringItem.js';
+//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not plain js import { StringItem } from '../../../../javax/microedition/lcdui/StringItem.js';
+const StringItem = globalThis.javax.microedition.lcdui.StringItem;
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
+//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
 import { GamePersistanceSingleton } from '../../../../org/allbinary/game/configuration/persistance/GamePersistanceSingleton.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LoadGameForm extends CommandForm {
     constructor(commandListener, title, backgrounBasicColor, foregroundBasicColor) {

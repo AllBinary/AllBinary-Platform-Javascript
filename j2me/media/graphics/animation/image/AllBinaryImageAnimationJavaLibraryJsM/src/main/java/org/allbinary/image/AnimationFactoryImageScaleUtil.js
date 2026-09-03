@@ -13,7 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { ImageJ2MEScaleUtil } from '../../../org/allbinary/media/image/ImageJ2MEScaleUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Image } from '../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
+//not plain js import { ImageJ2MEScaleUtil } from '../../../org/allbinary/media/image/ImageJ2MEScaleUtil.js';
+const ImageJ2MEScaleUtil = globalThis.org.allbinary.media.image.ImageJ2MEScaleUtil;
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AnimationFactoryImageScaleUtil extends Object {
     constructor() {

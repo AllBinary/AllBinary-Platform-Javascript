@@ -11,14 +11,26 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
+//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
 import { RectangleAdjustedAnimation } from '../../../../org/allbinary/animation/vector/RectangleAdjustedAnimation.js';
+//not GWT import const RectangleAdjustedAnimation = globalThis.org.allbinary.animation.vector.RectangleAdjustedAnimation;
 import { RectangleFilledAdjustedAnimation } from '../../../../org/allbinary/animation/vector/RectangleFilledAdjustedAnimation.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollCurrentSelectionForm } from './ScrollCurrentSelectionForm.js';
+//not GWT import const ScrollCurrentSelectionForm = globalThis.org.allbinary.graphics.form.ScrollCurrentSelectionForm;
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
+//not GWT import const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
 export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
     constructor(title, items, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, ItemPaintableFactory.getInstance(), border, -3, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor);
@@ -66,14 +78,14 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
         ;
         var rectHeight = height + this.border - adjustedBorder;
         ;
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
             this.selectedAnimationArray[index] = new RectangleAdjustedAnimation(rectWidth, rectHeight, offset, offset, selectedButtonColor);
         }
         else {
             this.selectedAnimationArray[index] = new RectangleFilledAdjustedAnimation(rectWidth, rectHeight, offset, offset, selectedButtonColor);
         }
         adjustedBorder = 4;
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
             this.unSelectedAnimationArray[index] = new RectangleAdjustedAnimation(rectWidth, rectHeight, offset, offset, buttonColor);
         }
         else {
@@ -105,7 +117,7 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
         ;
         var rectHeight = height + this.border - adjustedBorder;
         ;
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
             var rectangleAdjustedAnimation = this.selectedAnimationArray[index];
             ;
             rectangleAdjustedAnimation.setWidth(rectWidth);
@@ -124,7 +136,7 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
             rectangleAdjustedAnimation.setBasicColorP(selectedButtonColor);
         }
         adjustedBorder = 4;
-        if (J2MEUtil.isJ2ME()) {
+        if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
             var rectangleAdjustedAnimation = this.unSelectedAnimationArray[index];
             ;
             rectangleAdjustedAnimation.setWidth(rectWidth);

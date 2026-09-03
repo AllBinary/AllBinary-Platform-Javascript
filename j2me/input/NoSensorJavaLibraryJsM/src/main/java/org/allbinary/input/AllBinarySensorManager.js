@@ -14,11 +14,19 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { AccelerometerSensorFactory } from '../../../org/allbinary/input/accelerometer/AccelerometerSensorFactory.js';
+//not GWT import const AccelerometerSensorFactory = globalThis.org.allbinary.input.accelerometer.AccelerometerSensorFactory;
 import { GyroSensorFactory } from '../../../org/allbinary/input/gyro/GyroSensorFactory.js';
-import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const GyroSensorFactory = globalThis.org.allbinary.input.gyro.GyroSensorFactory;
+//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AllBinarySensorManager extends Object {
     static getInstance() {

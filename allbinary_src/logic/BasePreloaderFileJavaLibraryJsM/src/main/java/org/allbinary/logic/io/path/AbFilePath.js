@@ -11,11 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbPath } from './AbPath.js';
-import { AbPathData } from './AbPathData.js';
+//not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
+//not plain js import { AbPathData } from './AbPathData.js';
+const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 import { PathUtil } from './PathUtil.js';
+//not GWT import const PathUtil = globalThis.org.allbinary.logic.io.path.PathUtil;
 export class AbFilePath extends AbPath {
     constructor(aPath) {
         super(StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING);

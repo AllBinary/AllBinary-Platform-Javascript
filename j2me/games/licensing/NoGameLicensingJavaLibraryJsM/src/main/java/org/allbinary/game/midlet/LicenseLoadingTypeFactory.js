@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LicenseLoadingType } from './LicenseLoadingType.js';
+//not GWT import const LicenseLoadingType = globalThis.org.allbinary.game.midlet.LicenseLoadingType;
 export class LicenseLoadingTypeFactory extends Object {
     constructor() {
         super(...arguments);

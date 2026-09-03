@@ -13,9 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const AbeLicenseInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeLicenseInterface;
 import { LicenseTypeFactory } from './LicenseTypeFactory.js';
+//not GWT import const LicenseType = globalThis.org.allbinary.logic.system.security.licensing.LicenseType;
 export class AbeNoLicense extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -14,6 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { AbeFactory } from '../../../../../org/allbinary/logic/system/loader/AbeFactory.js';
+//not GWT import const DatabaseConnectionInfoInterface = globalThis.org.allbinary.business.init.db.DatabaseConnectionInfoInterface;
 export class InitDbHelperFactory extends Object {
     //@Throws(LicensingException.constructor)
     static getInstance(abeClientInformation, databaseConnectionInfoInterface) {

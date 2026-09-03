@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { Angle } from './Angle.js';
+//not plain js import { Angle } from './Angle.js';
+const Angle = globalThis.org.allbinary.math.Angle;
 export class NamedAngle extends Angle {
     constructor(angle, name) {
         super(angle);

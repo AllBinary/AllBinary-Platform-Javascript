@@ -13,7 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const BasicAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.BasicAnimationInterfaceFactoryInterface;
 import { NullAnimationFactory } from './NullAnimationFactory.js';
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 export class BaseAnimationInterfaceFactoryInterfaceComposite extends Object {
     constructor(basicAnimationInterfaceFactoryInterfaceArray) {
         super();

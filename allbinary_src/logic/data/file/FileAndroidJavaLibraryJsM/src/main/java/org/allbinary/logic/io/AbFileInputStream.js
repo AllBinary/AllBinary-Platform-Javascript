@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const IOException = globalThis.java.io.IOException;
 import { InputStream } from '../../../../java/io/InputStream.js';
+//not GWT import const FileChannel = globalThis.java.nio.channels.FileChannel;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbFileInputStream extends InputStream {
     constructor(fileInputStream) {

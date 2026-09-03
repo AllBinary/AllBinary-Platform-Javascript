@@ -11,9 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinaryGameLayer = globalThis.org.allbinary.game.layer.AllBinaryGameLayer;
 import { VelocityProperties } from '../../../../org/allbinary/game/physics/velocity/VelocityProperties.js';
+//not GWT import const VelocityProperties = globalThis.org.allbinary.game.physics.velocity.VelocityProperties;
+//not plain js import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicConstantVelocityMovement } from './BasicConstantVelocityMovement.js';
+//not GWT import const BasicConstantVelocityMovement = globalThis.org.allbinary.physics.movement.BasicConstantVelocityMovement;
 export class XYOscillateVelocityMovement extends BasicConstantVelocityMovement {
     constructor(speedBasicDecimal, oscillateMin, oscillateMax) {
         super(speedBasicDecimal, new VelocityProperties(Math.round(speedBasicDecimal.getUnscaled()), Math.round(speedBasicDecimal.getUnscaled())));

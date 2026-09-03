@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinarySensorListener = globalThis.org.allbinary.input.AllBinarySensorListener;
 import { Orientation } from '../../../../../org/allbinary/logic/math/Orientation.js';
+//not GWT import const Orientation = globalThis.org.allbinary.logic.math.Orientation;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryMagneticFieldSensor } from './AllBinaryMagneticFieldSensor.js';
+//not GWT import const AllBinaryMagneticFieldSensor = globalThis.org.allbinary.input.magnetic.field.AllBinaryMagneticFieldSensor;
 export class NoMagneticFieldSensor extends AllBinaryMagneticFieldSensor {
     //@Throws(Exception.constructor)
     getOrientation() {

@@ -13,16 +13,30 @@
 */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
+//not GWT import const Closeable = globalThis.java.io.Closeable;
 import { FileReader } from '../../../../../../java/io/FileReader.js';
+//not GWT import const FileReader = globalThis.java.io.FileReader;
 import { LineNumberReader } from '../../../../../../java/io/LineNumberReader.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { NullCloseable } from '../../../../../../org/allbinary/logic/io/NullCloseable.js';
-import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const NullCloseable = globalThis.org.allbinary.logic.io.NullCloseable;
+import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
 import { UnknownHardware } from '../../../../../../org/allbinary/logic/system/hardware/components/android/UnknownHardware.js';
-import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const HardwareComponentInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface;
+//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AndroidHardware extends Object {
     constructor() {
@@ -102,6 +116,6 @@ export class AndroidHardware extends Object {
     }
     difference(hardwareInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance().NULL_TABLE;
+        return StdUtil.getInstance().NULL_TABLE;
     }
 }

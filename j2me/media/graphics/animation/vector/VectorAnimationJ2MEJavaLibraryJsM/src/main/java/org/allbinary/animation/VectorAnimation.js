@@ -11,12 +11,22 @@
         *
         *  Created By: Travis Berthelot
 */
-import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
-import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
+//not plain js import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IndexedAnimation } from './IndexedAnimation.js';
+//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 export class VectorAnimation extends IndexedAnimation {
     static createVectorAnimation(currentPoints2, basicColor, animationBehavior) {
         var currentPoints = Array.from({ length: 1 }, () => Array.from({ length: currentPoints2.length }, () => new Array(0).fill(2)));

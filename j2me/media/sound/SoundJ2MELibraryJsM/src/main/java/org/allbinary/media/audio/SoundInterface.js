@@ -11,4 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Player, PlayerI } from '../../../../javax/microedition/media/Player.js';
+const Player = globalThis.javax.microedition.media.Player;
 export {};

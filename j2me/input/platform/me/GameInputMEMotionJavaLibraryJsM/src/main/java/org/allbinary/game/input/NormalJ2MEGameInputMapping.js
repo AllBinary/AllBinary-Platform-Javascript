@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const InputToGameKeyMapping = globalThis.org.allbinary.game.input.mapping.InputToGameKeyMapping;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { J2MEGameInputMapping } from './J2MEGameInputMapping.js';
+//not GWT import const J2MEGameInputMapping = globalThis.org.allbinary.game.input.J2MEGameInputMapping;
 import { NormalJ2MEDefaultGameInputMapping } from './NormalJ2MEDefaultGameInputMapping.js';
+//not GWT import const NormalJ2MEDefaultGameInputMapping = globalThis.org.allbinary.game.input.NormalJ2MEDefaultGameInputMapping;
 export class NormalJ2MEGameInputMapping extends J2MEGameInputMapping {
     getDefault() {
         //if statement needs to be on the same line and ternary does not work the same way.

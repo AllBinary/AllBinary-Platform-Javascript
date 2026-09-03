@@ -14,15 +14,27 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStream.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
 import { OutputStream } from '../../../../../java/io/OutputStream.js';
+//not GWT import const OutputStream = globalThis.java.io.OutputStream;
 import { Reader } from '../../../../../java/io/Reader.js';
+//not GWT import const Reader = globalThis.java.io.Reader;
 import { Writer } from '../../../../../java/io/Writer.js';
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const CharBuffer = globalThis.java.nio.CharBuffer;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SimpleFileUtil extends Object {
     constructor() {

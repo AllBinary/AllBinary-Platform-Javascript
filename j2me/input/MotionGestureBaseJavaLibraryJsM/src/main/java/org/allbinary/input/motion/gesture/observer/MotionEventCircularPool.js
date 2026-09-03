@@ -14,10 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { InputFactory } from '../../../../../../org/allbinary/game/input/InputFactory.js';
+//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 import { TouchMotionGestureFactory } from '../../../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
+//not GWT import const TouchMotionGestureFactory = globalThis.org.allbinary.input.motion.gesture.TouchMotionGestureFactory;
 import { AllBinaryEventCircularPool } from '../../../../../../org/allbinary/logic/util/event/AllBinaryEventCircularPool.js';
+//not GWT import const AllBinaryEventCircularPool = globalThis.org.allbinary.logic.util.event.AllBinaryEventCircularPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionEventFactory } from './MotionEventFactory.js';
+//not GWT import const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
 export class MotionEventCircularPool extends Object {
     static createPool(id) {
         //if statement needs to be on the same line and ternary does not work the same way.

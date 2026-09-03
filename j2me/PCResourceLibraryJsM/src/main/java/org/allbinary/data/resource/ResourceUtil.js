@@ -15,12 +15,19 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
+//not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
 import { ByteArrayOutputStream } from '../../../../java/io/ByteArrayOutputStream.js';
+//not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
 import { FileInputStream } from '../../../../java/io/FileInputStream.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { StreamUtil } from '../../../../org/allbinary/logic/io/StreamUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //J2SE - PC
 export class ResourceUtil extends Object {

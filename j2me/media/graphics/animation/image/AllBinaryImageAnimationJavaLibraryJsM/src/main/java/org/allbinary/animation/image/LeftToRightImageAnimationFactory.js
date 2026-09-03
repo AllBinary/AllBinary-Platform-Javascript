@@ -11,10 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
+//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { LeftToRightImageAnimation } from './LeftToRightImageAnimation.js';
+//not GWT import const LeftToRightImageAnimation = globalThis.org.allbinary.animation.image.LeftToRightImageAnimation;
 import { AdjustedLeftToRightImageAnimation } from './AdjustedLeftToRightImageAnimation.js';
+//not GWT import const AdjustedLeftToRightImageAnimation = globalThis.org.allbinary.animation.image.AdjustedLeftToRightImageAnimation;
 export class LeftToRightImageAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, sequenceArray, dx, dy, animationBehaviorFactory) {
         super(image, sequenceArray, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory);

@@ -13,7 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { ResourceUtil } from '../../../../org/allbinary/data/resource/ResourceUtil.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not plain js import { ResourceUtil } from '../../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PlatformAssetManager extends Object {
     static getInstance() {

@@ -11,9 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { AllBinaryEventObject } from '../../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameKeyEvent extends AllBinaryEventObject {
     static createEvent(anyType = {}, sourceId, key) {

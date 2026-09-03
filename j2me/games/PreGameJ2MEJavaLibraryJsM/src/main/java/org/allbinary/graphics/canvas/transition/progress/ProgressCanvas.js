@@ -11,25 +11,50 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { CommandListener } from '../../../../../../javax/microedition/lcdui/CommandListener.js';
+const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not plain js import { Font } from '../../../../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
+//not plain js import { Graphics } from '../../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { NullCanvas } from '../../../../../../javax/microedition/lcdui/NullCanvas.js';
+//not GWT import const NullCanvas = globalThis.javax.microedition.lcdui.NullCanvas;
 import { NullCommandListener } from '../../../../../../javax/microedition/lcdui/NullCommandListener.js';
+//not GWT import const NullCommandListener = globalThis.javax.microedition.lcdui.NullCommandListener;
 import { Processor } from '../../../../../../org/allbinary/canvas/Processor.js';
+//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
 import { RunnableCanvas } from '../../../../../../org/allbinary/canvas/RunnableCanvas.js';
+//not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
 import { GameCommandsFactory } from '../../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { CanvasStrings } from '../../../../../../org/allbinary/graphics/displayable/CanvasStrings.js';
+//not GWT import const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
 import { MyFontProcessor } from '../../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
+//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
 import { UpdateMyFontProcessor } from '../../../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
+//not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
 import { ABCustomGaugeItem } from '../../../../../../org/allbinary/graphics/form/item/ABCustomGaugeItem.js';
+//not GWT import const ABCustomGaugeItem = globalThis.org.allbinary.graphics.form.item.ABCustomGaugeItem;
 import { NullPaintable } from '../../../../../../org/allbinary/graphics/paint/NullPaintable.js';
+//not GWT import const NullPaintable = globalThis.org.allbinary.graphics.paint.NullPaintable;
 import { Paintable } from '../../../../../../org/allbinary/graphics/paint/Paintable.js';
-import { PreLogUtil } from '../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not plain js import { PreLogUtil } from '../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AllBinaryMidlet } from '../../../../../../org/allbinary/midlet/AllBinaryMidlet.js';
+//not GWT import const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
 import { PathFindingThreadPool } from '../../../../../../org/allbinary/thread/PathFindingThreadPool.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import { ProgressPaintable } from './ProgressPaintable.js';
+//not GWT import const ProgressPaintable = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressPaintable;
 export class ProgressCanvas extends RunnableCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, false);
@@ -49,7 +74,7 @@ export class ProgressCanvas extends RunnableCanvas {
         this.TEXT = this.commonStrings.LOADING;
         this.updateMyFontProcessor = new UpdateMyFontProcessor(this);
         this.myFontProcessor = this.updateMyFontProcessor;
-        this.allbinaryMidlet = AllBinaryMidlet.NULL_ALLBINARY_MIDLET;
+        this.allbinaryMidlet = AllBinaryMidlet.getNullInstance();
         this.value = 0.0;
         this.text = this.TEXT;
         this.background = true;

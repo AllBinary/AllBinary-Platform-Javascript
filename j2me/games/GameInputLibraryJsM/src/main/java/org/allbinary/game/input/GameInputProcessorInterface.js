@@ -11,4 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export {};

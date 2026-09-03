@@ -11,13 +11,21 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleWeaponProperties } from './SimpleWeaponProperties.js';
+//not GWT import const SimpleWeaponProperties = globalThis.org.allbinary.game.combat.weapon.SimpleWeaponProperties;
 export class WeaponProperties extends SimpleWeaponProperties {
     constructor(reloadTime, targetingTime, speed, damage, dissipation) {
         super();

@@ -15,7 +15,9 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKeyFactory } from './GameKeyFactory.js';
+//not GWT import const GameKey = globalThis.org.allbinary.game.input.GameKey;
 import { InputFactory } from './InputFactory.js';
+//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
 export class J2MEKeyFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -13,8 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CircularIndexUtil extends Object {
     static createInstance(max) {

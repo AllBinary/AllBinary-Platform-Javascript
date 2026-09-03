@@ -11,11 +11,18 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
+//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
+//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { RightToLeftImageAnimation } from './RightToLeftImageAnimation.js';
+//not GWT import const RightToLeftImageAnimation = globalThis.org.allbinary.animation.image.RightToLeftImageAnimation;
 import { AdjustedRightToLeftImageAnimation } from './AdjustedRightToLeftImageAnimation.js';
+//not GWT import const AdjustedRightToLeftImageAnimation = globalThis.org.allbinary.animation.image.AdjustedRightToLeftImageAnimation;
 export class RightToLeftImageAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, dx, dy, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory);

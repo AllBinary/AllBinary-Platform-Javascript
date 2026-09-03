@@ -43,7 +43,7 @@
         <!--        <module>../../media/graphics/ImageCacheOpenGLESJavaLibraryJsM</module>-->
         <module>../../media/graphics/LazyGameResourceNoneJavaLibraryJsM</module>
 
-        <module>../../../graphics/opengl/OpenGLNoneJavaLibraryJsM</module>
+<!--        <module>../../../graphics/opengl/OpenGLNoneJavaLibraryJsM</module>-->
 
         <!--
                 <module>../../../graphics/opengl/OpenGLESJavaLibraryJsM</module>

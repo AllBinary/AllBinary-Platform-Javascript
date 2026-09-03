@@ -15,6 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerQueue } from './PlayerQueue.js';
+//not GWT import const PlayerQueue = globalThis.org.allbinary.media.audio.PlayerQueue;
 export class SecondaryPlayerQueueFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,13 +11,21 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { WeaponProperties } from '../../../../../org/allbinary/game/combat/weapon/WeaponProperties.js';
+//not GWT import const WeaponLayerCircularPool = globalThis.org.allbinary.game.layer.weapon.WeaponLayerCircularPool;
 import { NoScoreable } from '../../../../../org/allbinary/game/score/NoScoreable.js';
+//not GWT import const ScoreableInterface = globalThis.org.allbinary.game.score.ScoreableInterface;
 import { RelativeRelationship } from '../../../../../org/allbinary/graphics/RelativeRelationship.js';
+//not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
-import { NoDecimalTrigTable } from '../../../../../org/allbinary/math/NoDecimalTrigTable.js';
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { NoDecimalTrigTable } from '../../../../../org/allbinary/math/NoDecimalTrigTable.js';
+const NoDecimalTrigTable = globalThis.org.allbinary.math.NoDecimalTrigTable;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicWeaponPart } from './BasicWeaponPart.js';
+//not GWT import const BasicWeaponPart = globalThis.org.allbinary.game.part.weapon.BasicWeaponPart;
 export class StraightMultiProjectileWeaponPart extends BasicWeaponPart {
     static createStraightMultiProjectileWeaponPart(animationInterface, weaponLayerCircularStaticPool) {
         //if statement needs to be on the same line and ternary does not work the same way.

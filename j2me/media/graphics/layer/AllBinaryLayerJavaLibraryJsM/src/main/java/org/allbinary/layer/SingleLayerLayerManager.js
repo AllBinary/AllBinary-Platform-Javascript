@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerManager } from './LayerManager.js';
+//not GWT import const LayerManager = globalThis.org.allbinary.layer.LayerManager;
 import { LayerManagerNoDebug } from './LayerManagerNoDebug.js';
+//not GWT import const LayerManagerNoDebug = globalThis.org.allbinary.layer.LayerManagerNoDebug;
 export class SingleLayerLayerManager extends LayerManager {
     constructor() {
         super(LayerManagerNoDebug.getInstance());

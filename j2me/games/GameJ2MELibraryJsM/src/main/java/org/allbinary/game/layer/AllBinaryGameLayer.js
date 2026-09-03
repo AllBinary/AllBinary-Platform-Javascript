@@ -11,19 +11,39 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
+//not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { BasicColorSetUtil } from '../../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
+//not GWT import const BasicColorSetUtil = globalThis.org.allbinary.graphics.color.BasicColorSetUtil;
 import { NullPaintable } from '../../../../org/allbinary/graphics/paint/NullPaintable.js';
+//not GWT import const NullPaintable = globalThis.org.allbinary.graphics.paint.NullPaintable;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
+//not GWT import const OpenGLSurfaceChangedInterface = globalThis.org.allbinary.image.opengles.OpenGLSurfaceChangedInterface;
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
-import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventStrings.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SWTUtil } from './SWTUtil.js';
+//not GWT import const SWTUtil = globalThis.org.allbinary.game.layer.SWTUtil;
 import { GameLayerUtil } from './GameLayerUtil.js';
+//not GWT import const GameLayerUtil = globalThis.org.allbinary.game.layer.GameLayerUtil;
 export class AllBinaryGameLayer extends AllBinaryLayer {
     ;
     constructor(name, layerInfo, viewPosition) {

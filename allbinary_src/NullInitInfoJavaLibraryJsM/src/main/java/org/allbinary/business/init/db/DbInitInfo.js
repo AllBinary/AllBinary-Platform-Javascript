@@ -11,9 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DbConnectionInfo } from './DbConnectionInfo.js';
+//not GWT import const DbConnectionInfo = globalThis.org.allbinary.business.init.db.DbConnectionInfo;
 //import org.allbinary.logic.communication.log.config.type.LogConfigTypes;
 export class DbInitInfo extends DbConnectionInfo {
     constructor(initFileName, read) {

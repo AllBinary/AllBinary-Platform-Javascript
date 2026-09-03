@@ -13,8 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { BasicArrayListD } from './BasicArrayListD.js';
+//not plain js import { BasicArrayListD } from './BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not plain js import { BasicArrayList } from './BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //ArkTs does not have this.  So this is for the ArkTs build.
 export class EnumerationUtil extends Object {
     static getInstance() {

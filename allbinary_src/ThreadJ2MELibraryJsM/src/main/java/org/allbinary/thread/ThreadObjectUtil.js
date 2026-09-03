@@ -2,8 +2,10 @@
 import { Object } from '../../../java/lang/Object.js';
 import { Thread } from '../../../java/lang/Thread.js';
 import { TsUtil } from '../../../org/allbinary/TsUtil.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPriorityRunnable } from './NullPriorityRunnable.js';
+//not GWT import const PriorityRunnable = globalThis.org.allbinary.thread.PriorityRunnable;
 export class ThreadObjectUtil extends Object {
     constructor() {
         super(...arguments);

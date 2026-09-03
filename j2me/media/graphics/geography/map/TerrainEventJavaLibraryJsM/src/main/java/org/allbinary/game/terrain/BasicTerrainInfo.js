@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { Angle } from '../../../../org/allbinary/math/Angle.js';
+const Angle = globalThis.org.allbinary.math.Angle;
+//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicTerrainInfo extends Object {
     constructor(angle) {

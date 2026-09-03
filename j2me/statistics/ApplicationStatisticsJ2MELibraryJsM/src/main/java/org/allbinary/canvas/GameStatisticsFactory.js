@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+/* Generated Code Do Not Modify */
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseGameStatistics } from './BaseGameStatistics.js';
+//not GWT import const BaseGameStatistics = globalThis.org.allbinary.canvas.BaseGameStatistics;
 //ActualPlatform
 /*actual*/ export class GameStatisticsFactory extends BaseGameStatistics {
     constructor() {

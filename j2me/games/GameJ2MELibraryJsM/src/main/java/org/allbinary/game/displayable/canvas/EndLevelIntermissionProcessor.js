@@ -12,6 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
+//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class EndLevelIntermissionProcessor extends Processor {
     constructor(gameCanvas) {
         super();

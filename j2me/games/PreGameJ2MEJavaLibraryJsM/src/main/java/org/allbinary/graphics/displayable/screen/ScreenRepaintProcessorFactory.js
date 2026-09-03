@@ -13,10 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not plain js import { Displayable } from '../../../../../javax/microedition/lcdui/Displayable.js';
+const Displayable = globalThis.javax.microedition.lcdui.Displayable;
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
+//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
 import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
+//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScreenRepaintProcessor } from './ScreenRepaintProcessor.js';
+//not GWT import const ScreenRepaintProcessor = globalThis.org.allbinary.graphics.displayable.screen.ScreenRepaintProcessor;
 export class ScreenRepaintProcessorFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

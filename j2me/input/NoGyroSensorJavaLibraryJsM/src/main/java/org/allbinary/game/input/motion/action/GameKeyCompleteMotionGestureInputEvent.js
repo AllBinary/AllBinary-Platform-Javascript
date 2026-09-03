@@ -11,9 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { CompleteMotionGestureInputEvent } from '../../../../../../org/allbinary/game/input/CompleteMotionGestureInputEvent.js';
+//not GWT import const CompleteMotionGestureInputEvent = globalThis.org.allbinary.game.input.CompleteMotionGestureInputEvent;
 import { GameKey } from '../../../../../../org/allbinary/game/input/GameKey.js';
+//not GWT import const GameKeyEventSourceInterface = globalThis.org.allbinary.game.input.GameKeyEventSourceInterface;
 import { GameKeyEvent } from '../../../../../../org/allbinary/game/input/event/GameKeyEvent.js';
+//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameKeyCompleteMotionGestureInputEvent extends CompleteMotionGestureInputEvent {
     constructor(name, motionGestureInput, inputToGameKeyMapping) {

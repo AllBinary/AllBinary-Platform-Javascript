@@ -14,9 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommonButtons } from './CommonButtons.js';
+//not GWT import const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
 export class TouchButtonLocationHelper extends Object {
     constructor() {
         super();

@@ -15,10 +15,15 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Long } from '../../../../java/lang/Long.js';
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
+//not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
 import { DataInputStream } from '../../../../java/io/DataInputStream.js';
-import { RecordComparatorI } from '../../../../javax/microedition/rms/RecordComparator.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const IOException = globalThis.java.io.IOException;
+//not plain js import { RecordComparator, RecordComparatorI } from '../../../../javax/microedition/rms/RecordComparator.js';
+const RecordComparator = globalThis.javax.microedition.rms.RecordComparator;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScoreComparator extends Object {
     constructor(isHighestBest) {

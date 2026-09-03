@@ -11,8 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitUpdatePaintable } from './InitUpdatePaintable.js';
+//not GWT import const InitUpdatePaintable = globalThis.org.allbinary.graphics.paint.InitUpdatePaintable;
 export class AnimationCompositePaintable extends InitUpdatePaintable {
     constructor(animationInterface) {
         super();

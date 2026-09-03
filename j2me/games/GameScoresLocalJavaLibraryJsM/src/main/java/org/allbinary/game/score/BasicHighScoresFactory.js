@@ -1,10 +1,17 @@
 /* Generated Code Do Not Modify */
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresBase } from './HighScoresBase.js';
+//not GWT import const HighScoresResultsListener = globalThis.org.allbinary.game.score.HighScoresResultsListener;
 import { RecordStoreHighScores } from './RecordStoreHighScores.js';
+//not GWT import const RecordStoreHighScores = globalThis.org.allbinary.game.score.RecordStoreHighScores;
 import { ScoreComparator } from './ScoreComparator.js';
+//not GWT import const ScoreComparator = globalThis.org.allbinary.game.score.ScoreComparator;
 import { HighScoresHelper2 } from './HighScoresHelper2.js';
+//not GWT import const HighScoresHelperBaseInterface = globalThis.org.allbinary.game.score.HighScoresHelperBaseInterface;
 export class BasicHighScoresFactory extends HighScoresBase {
     static loaded(index2) {
         if (index2 >= 0) {

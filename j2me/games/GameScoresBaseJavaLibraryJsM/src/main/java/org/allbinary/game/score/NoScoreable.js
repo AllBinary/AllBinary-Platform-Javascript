@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Scoreable } from './Scoreable.js';
+//not GWT import const Scoreable = globalThis.org.allbinary.game.score.Scoreable;
 export class NoScoreable extends Scoreable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

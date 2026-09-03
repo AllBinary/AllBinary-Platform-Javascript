@@ -11,11 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { CollidableHelperFactory } from '../../../../../org/allbinary/game/collision/CollidableHelperFactory.js';
+//not GWT import const CollisionType = globalThis.org.allbinary.game.collision.CollisionType;
 import { CollisionTypeFactory } from '../../../../../org/allbinary/game/collision/CollisionTypeFactory.js';
+//not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
 import { CollidableDestroyableDamageableBehavior } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableBehavior.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CollidableWeaponBehavior extends CollidableDestroyableDamageableBehavior {
+    static getNullInstance() {
+        if (CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR == NullUtil.getInstance().NULL_OBJECT) {
+            CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR = new CollidableWeaponBehavior(false);
+        }
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR;
+    }
     constructor(collidable) {
         super(collidable);
         this.collided = false;
@@ -79,4 +92,4 @@ export class CollidableWeaponBehavior extends CollidableDestroyableDamageableBeh
         this.collided = collided;
     }
 }
-CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR = new CollidableWeaponBehavior(false);
+CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR = NullUtil.getInstance().NULL_OBJECT;

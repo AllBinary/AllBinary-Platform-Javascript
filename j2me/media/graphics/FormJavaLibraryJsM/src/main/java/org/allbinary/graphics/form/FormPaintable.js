@@ -11,7 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
+//not GWT import const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
 export class FormPaintable extends Paintable {
     constructor(form) {
         super();

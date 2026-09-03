@@ -14,7 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { DamageableBaseBehavior } from '../../../../org/allbinary/game/combat/damage/DamageableBaseBehavior.js';
+//not GWT import const DamageableBaseBehavior = globalThis.org.allbinary.game.combat.damage.DamageableBaseBehavior;
 import { DestroyableBaseBehavior } from '../../../../org/allbinary/game/combat/destroy/DestroyableBaseBehavior.js';
+//not GWT import const DestroyableBaseBehavior = globalThis.org.allbinary.game.combat.destroy.DestroyableBaseBehavior;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CombatBaseBehavior extends Object {
     constructor(damageableBaseBehavior, destroyableBaseBehavior) {

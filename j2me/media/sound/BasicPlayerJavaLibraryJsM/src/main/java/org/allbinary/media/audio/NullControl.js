@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not plain js import { Control } from '../../../../javax/microedition/media/Control.js';
+const Control = globalThis.javax.microedition.media.Control;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NullControl extends Object {
 }

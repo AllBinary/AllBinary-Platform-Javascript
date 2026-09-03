@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderInitializer } from './ShaderInitializer.js';
+//not GWT import const ShaderInitializer = globalThis.org.allbinary.graphics.opengles.shader.ShaderInitializer;
 export class SimpleShaderInitializer extends ShaderInitializer {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

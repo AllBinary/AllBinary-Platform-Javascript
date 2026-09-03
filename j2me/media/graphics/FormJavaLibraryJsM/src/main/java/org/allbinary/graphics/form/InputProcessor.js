@@ -12,6 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { Processor } from '../../../../org/allbinary/canvas/Processor.js';
+//not GWT import const PlayerGameInputCompositeInterface = globalThis.org.allbinary.game.input.PlayerGameInputCompositeInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InputProcessor extends Processor {
     constructor(playerGameInputCompositeInterface) {

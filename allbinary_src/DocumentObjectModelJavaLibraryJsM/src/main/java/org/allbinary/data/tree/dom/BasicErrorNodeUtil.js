@@ -15,8 +15,10 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { ErrorData } from '../../../../../org/allbinary/business/error/ErrorData.js';
+//not GWT import const Node = globalThis.org.w3c.dom.Node;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ModDomHelper } from './ModDomHelper.js';
+//not GWT import const ModDomHelper = globalThis.org.allbinary.data.tree.dom.ModDomHelper;
 export class BasicErrorNodeUtil extends Object {
     //@Throws(Exception.constructor)
     static get(document, errorText) {

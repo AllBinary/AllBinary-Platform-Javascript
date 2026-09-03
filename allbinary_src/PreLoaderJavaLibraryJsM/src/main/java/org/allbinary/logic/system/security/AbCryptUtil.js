@@ -14,9 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStream.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
+//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
 import { AbCrypt } from '../../../../../org/allbinary/logic/system/security/crypt/jcehelper/AbCrypt.js';
+//not GWT import const AbCrypt = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.AbCrypt;
 import { KeySpecFactory } from '../../../../../org/allbinary/logic/system/security/crypt/jcehelper/KeySpecFactory.js';
+//not GWT import const KeySpecFactory = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.KeySpecFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbCryptUtil extends Object {
     static getInstance() {

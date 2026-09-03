@@ -13,9 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../../../org/allbinary/graphics/Rectangle.js';
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class FormUtil extends Object {
     static getInstance() {

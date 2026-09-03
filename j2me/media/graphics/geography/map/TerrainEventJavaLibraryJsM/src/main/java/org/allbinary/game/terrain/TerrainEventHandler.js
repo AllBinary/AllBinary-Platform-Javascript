@@ -11,14 +11,21 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Hashtable } from '../../../../java/util/Hashtable.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventStrings.js';
+//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const BasicEventHandler = globalThis.org.allbinary.logic.util.event.handler.BasicEventHandler;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const TerrainEventListenerInterface = globalThis.org.allbinary.game.terrain.TerrainEventListenerInterface;
 export class TerrainEventHandler extends BasicEventHandler {
     static init() {
-        TerrainEventHandler.hashtable = new Hashtable();
+        TerrainEventHandler.hashtable = StdUtil.getInstance().createHashtable();
     }
     static getInstance(anyType = {}) {
         var eventHandlerCanBeNull = TerrainEventHandler.hashtable.get(anyType);
@@ -70,4 +77,4 @@ export class TerrainEventHandler extends BasicEventHandler {
         terrainEventListenerInterface.onTerrainEvent(eventObject);
     }
 }
-TerrainEventHandler.hashtable = NullUtil.getInstance().NULL_TABLE;
+TerrainEventHandler.hashtable = StdUtil.getInstance().NULL_TABLE;

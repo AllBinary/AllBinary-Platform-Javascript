@@ -14,11 +14,20 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
-import { Vector } from '../../../../../../java/util/Vector.js';
-import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
 import { ComponentFactory } from '../../../../../../org/allbinary/logic/system/hardware/components/ComponentFactory.js';
-import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const VideoInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.VideoInterface;
+//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class WindowsHardware extends Object {
     constructor() {
@@ -27,19 +36,19 @@ export class WindowsHardware extends Object {
         this.MINHARDWARE = 0;
         this.componentFactory = ComponentFactory.getInstance();
         try {
-            this.componentInterfaceVector = new Vector();
-            this.videoInterfaceVector = new Vector();
-            this.hardDriveControllerInterfaceVector = new Vector();
-            this.cpuInterfaceVector = new Vector();
-            this.usbInterfaceVector = new Vector();
-            this.ethernetInterfaceVector = new Vector();
-            this.multimediaInterfaceVector = new Vector();
-            this.fireWireInterfaceVector = new Vector();
-            this.bridgeInterfaceVector = new Vector();
-            this.hardDriveInterfaceVector = new Vector();
-            this.macInterfaceVector = new Vector();
-            this.monitorInterfaceVector = new Vector();
-            if (this.componentInterfaceVector.length < this.MINHARDWARE)
+            this.componentInterfaceVector = new BasicArrayListD();
+            this.videoInterfaceVector = new BasicArrayListD();
+            this.hardDriveControllerInterfaceVector = new BasicArrayListD();
+            this.cpuInterfaceVector = new BasicArrayListD();
+            this.usbInterfaceVector = new BasicArrayListD();
+            this.ethernetInterfaceVector = new BasicArrayListD();
+            this.multimediaInterfaceVector = new BasicArrayListD();
+            this.fireWireInterfaceVector = new BasicArrayListD();
+            this.bridgeInterfaceVector = new BasicArrayListD();
+            this.hardDriveInterfaceVector = new BasicArrayListD();
+            this.macInterfaceVector = new BasicArrayListD();
+            this.monitorInterfaceVector = new BasicArrayListD();
+            if (this.componentInterfaceVector.size() < this.MINHARDWARE)
                 throw new Exception("Not Enough Data For A Valid License On Windows");
             //: 
         }
@@ -137,7 +146,7 @@ export class WindowsHardware extends Object {
     toString() {
         var hardwareBuffer = new StringMaker();
         ;
-        var size = this.componentInterfaceVector.length;
+        var size = this.componentInterfaceVector.size();
         ;
         for (var index = 0; index < size; index++) {
             var componentInterface = this.componentInterfaceVector.get(index);
@@ -155,6 +164,6 @@ export class WindowsHardware extends Object {
     }
     difference(hardwareInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullUtil.getInstance().NULL_TABLE;
+        return StdUtil.getInstance().NULL_TABLE;
     }
 }

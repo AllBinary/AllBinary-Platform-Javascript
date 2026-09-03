@@ -11,10 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresBase } from './HighScoresBase.js';
+//not GWT import const HighScoresResultsListener = globalThis.org.allbinary.game.score.HighScoresResultsListener;
 import { HighScoresHelperBase } from './HighScoresHelperBase.js';
+//not GWT import const HighScoresHelperBaseInterface = globalThis.org.allbinary.game.score.HighScoresHelperBaseInterface;
 export class NoHighScoresFactory extends HighScoresBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

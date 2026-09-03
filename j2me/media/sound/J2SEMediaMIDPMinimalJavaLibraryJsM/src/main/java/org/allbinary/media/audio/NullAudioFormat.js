@@ -14,6 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { AudioFormat } from '../../../../javax/sound/sampled/AudioFormat.js';
+//not GWT import const AudioFormat = globalThis.javax.sound.sampled.AudioFormat;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NullAudioFormat extends Object {
 }

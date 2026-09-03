@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const ScalableListener = globalThis.org.allbinary.graphics.displayable.ScalableListener;
 export class BaseScalable extends Object {
     getRatio(ratio) {
         //if statement needs to be on the same line and ternary does not work the same way.

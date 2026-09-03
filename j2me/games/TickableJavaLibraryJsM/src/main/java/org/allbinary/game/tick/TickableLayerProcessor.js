@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 import { LayerProcessor } from '../../../../org/allbinary/layer/LayerProcessor.js';
+//not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TickableLayerManager } from './TickableLayerManager.js';
+//not GWT import const TickableInterface = globalThis.org.allbinary.game.tick.TickableInterface;
 export class TickableLayerProcessor extends LayerProcessor {
     constructor() {
         super(new TickableLayerManager());

@@ -14,13 +14,20 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { TsUtil } from '../../../../../../org/allbinary/TsUtil.js';
-import { PreLogUtil } from '../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not plain js import { PreLogUtil } from '../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AbCrypt } from '../../../../../../org/allbinary/logic/system/security/crypt/jcehelper/AbCrypt.js';
+//not GWT import const AbCrypt = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.AbCrypt;
 import { KeySpecFactory } from '../../../../../../org/allbinary/logic/system/security/crypt/jcehelper/KeySpecFactory.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const KeySpecFactory = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.KeySpecFactory;
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DatabaseEncoder } from './DatabaseEncoder.js';
+//not GWT import const DatabaseEncoder = globalThis.org.allbinary.logic.system.security.crypt.DatabaseEncoder;
 export class WeakCrypt extends Object {
     constructor(key) {
         super();

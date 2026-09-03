@@ -11,8 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { Sprite } from '../../../../../javax/microedition/lcdui/game/Sprite.js';
+const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
+//not GWT import const BasicColorUtil = globalThis.org.allbinary.graphics.color.BasicColorUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
+//not GWT import const SpriteIndexedAnimation = globalThis.org.allbinary.animation.image.sprite.SpriteIndexedAnimation;
 export class AdjustedSpriteIndexedAnimation extends SpriteIndexedAnimation {
     constructor(sprite, image, basicColorArray, dx, dy, animationBehavior) {
         super(sprite, image, basicColorArray, animationBehavior);

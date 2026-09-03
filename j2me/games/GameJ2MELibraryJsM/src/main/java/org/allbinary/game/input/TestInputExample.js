@@ -13,6 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const TestInputInterface = globalThis.org.allbinary.game.input.TestInputInterface;
 export class TestInputExample extends Object {
     constructor() {
         super(...arguments);

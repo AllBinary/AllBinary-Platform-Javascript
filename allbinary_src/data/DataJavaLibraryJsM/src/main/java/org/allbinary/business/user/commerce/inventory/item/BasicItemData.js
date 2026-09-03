@@ -15,33 +15,41 @@
 import { Object } from '../../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicItemData extends Object {
+    constructor() {
+        super(...arguments);
+        this.ITEM = "BASICITEM";
+        this.TOTAL = "BASICITEM_TOTAL";
+        this.ID = "BASICITEM_ID";
+        this.NUMBER = "BASICITEM_NUMBER";
+        this.INBASKETS = "BASICITEM_IN_BASKETS";
+        this.WEIGHT = "BASICITEM_WEIGHT";
+        this.NEWORUSED = "BASICITEM_NEW_OR_USED";
+        this.SUMMARY = "BASICITEM_SUMMARY";
+        this.DISTRIBUTOR = "BASICITEM_DISTRIBUTOR";
+        this.IDUSEDBYDISTRIBUTOR = "BASICITEM_IDUSEDBYDISTRIBUTOR";
+        this.PRODUCEDBY = "BASICITEM_PRODUCEDBY";
+        this.PRODUCTIONDATE = "BASICITEM_PRODUCTIONDATE";
+        this.STARTPRODUCTIONDATE = "BASICITEM_STARTPRODUCTIONDATE";
+        this.DESCRIPTION = "BASICITEM_DESCRIPTION";
+        this.KEYWORDS = "BASICITEM_KEYWORDS";
+        this.CATEGORY = "BASICITEM_CATEGORY";
+        this.TYPE = "BASICITEM_TYPE";
+        this.IMAGE = "BASICITEM_IMG";
+        this.SMALLIMAGE = "BASICITEM_SMALL_IMG";
+        this.MEDIUMIMAGE = "BASICITEM_MEDIUM_IMG";
+        this.LARGEIMAGE = "BASICITEM_LARGE_IMG";
+        this.PRICE = "BASICITEM_PRICE";
+        this.COMMENT = "BASICITEM_COMMENT";
+        this.CUSTOMS = "BASICITEM_CUSTOMS";
+        this.DOWNLOADS = "BASICITEM_DOWNLOADS";
+        this.GROUPS = "BASICITEM_GROUPS";
+        this.OPTIONS = "BASICITEM_OPTIONS";
+        this.PERMISSIONS = "BASICITEM_PERMISSIONS";
+        this.SPECIALS = "BASICITEM_SPECIALS";
+    }
+    static getInstance() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return instance;
+    }
 }
-BasicItemData.ITEM = "BASICITEM";
-BasicItemData.TOTAL = "BASICITEM_TOTAL";
-BasicItemData.ID = "BASICITEM_ID";
-BasicItemData.NUMBER = "BASICITEM_NUMBER";
-BasicItemData.INBASKETS = "BASICITEM_IN_BASKETS";
-BasicItemData.WEIGHT = "BASICITEM_WEIGHT";
-BasicItemData.NEWORUSED = "BASICITEM_NEW_OR_USED";
-BasicItemData.SUMMARY = "BASICITEM_SUMMARY";
-BasicItemData.DISTRIBUTOR = "BASICITEM_DISTRIBUTOR";
-BasicItemData.IDUSEDBYDISTRIBUTOR = "BASICITEM_IDUSEDBYDISTRIBUTOR";
-BasicItemData.PRODUCEDBY = "BASICITEM_PRODUCEDBY";
-BasicItemData.PRODUCTIONDATE = "BASICITEM_PRODUCTIONDATE";
-BasicItemData.STARTPRODUCTIONDATE = "BASICITEM_STARTPRODUCTIONDATE";
-BasicItemData.DESCRIPTION = "BASICITEM_DESCRIPTION";
-BasicItemData.KEYWORDS = "BASICITEM_KEYWORDS";
-BasicItemData.CATEGORY = "BASICITEM_CATEGORY";
-BasicItemData.TYPE = "BASICITEM_TYPE";
-BasicItemData.IMAGE = "BASICITEM_IMG";
-BasicItemData.SMALLIMAGE = "BASICITEM_SMALL_IMG";
-BasicItemData.MEDIUMIMAGE = "BASICITEM_MEDIUM_IMG";
-BasicItemData.LARGEIMAGE = "BASICITEM_LARGE_IMG";
-BasicItemData.PRICE = "BASICITEM_PRICE";
-BasicItemData.COMMENT = "BASICITEM_COMMENT";
-BasicItemData.CUSTOMS = "BASICITEM_CUSTOMS";
-BasicItemData.DOWNLOADS = "BASICITEM_DOWNLOADS";
-BasicItemData.GROUPS = "BASICITEM_GROUPS";
-BasicItemData.OPTIONS = "BASICITEM_OPTIONS";
-BasicItemData.PERMISSIONS = "BASICITEM_PERMISSIONS";
-BasicItemData.SPECIALS = "BASICITEM_SPECIALS";
+BasicItemData.instance = new BasicItemData();

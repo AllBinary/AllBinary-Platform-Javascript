@@ -11,13 +11,22 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
-import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
-import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
+//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
+//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
+//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
+//not GWT import const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
 import { AdjustedImageBaseRotationAnimation } from './AdjustedImageBaseRotationAnimation.js';
+//not GWT import const AdjustedImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.AdjustedImageBaseRotationAnimation;
 export class ImageRotationAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, width, height, dx, dy, angleIncrement, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory);

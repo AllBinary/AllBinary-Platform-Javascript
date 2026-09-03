@@ -15,6 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInfo } from './GameInfo.js';
+//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
 export class GameInfoCopyFactory extends Object {
     static getInstanceMaxLevel(gameInfo, maxLevel) {
         //if statement needs to be on the same line and ternary does not work the same way.

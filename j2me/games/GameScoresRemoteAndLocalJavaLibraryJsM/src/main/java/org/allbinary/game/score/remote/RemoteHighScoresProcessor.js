@@ -13,17 +13,30 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
 import { GameInfoData } from '../../../../../org/allbinary/game/GameInfoData.js';
+//not GWT import const GameInfoData = globalThis.org.allbinary.game.GameInfoData;
 import { GameConfigurationCentral } from '../../../../../org/allbinary/game/configuration/GameConfigurationCentral.js';
+//not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { XmlRpcAbeClient } from '../../../../../org/allbinary/logic/communication/xmlrpc/XmlRpcAbeClient.js';
+//not GWT import const XmlRpcAbeClient = globalThis.org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient;
 import { BooleanFactory } from '../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
+//not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
 import { NoCrypt } from '../../../../../org/allbinary/logic/system/security/crypt/jcehelper/NoCrypt.js';
-import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
-import { HashtableUtil } from '../../../../../org/allbinary/util/HashtableUtil.js';
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { HashtableUtil } from '../../../../../org/allbinary/util/HashtableUtil.js';
+const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
+//not GWT import const RemoteHighScoresProcessorInterface = globalThis.org.allbinary.game.score.remote.RemoteHighScoresProcessorInterface;
 import { RemoteHighScoresData } from './RemoteHighScoresData.js';
+//not GWT import const RemoteHighScoresData = globalThis.org.allbinary.game.score.remote.RemoteHighScoresData;
 import { XmlRpcRemoteHighScoresClient } from './XmlRpcRemoteHighScoresClient.js';
+//not GWT import const RemoteHighScores = globalThis.org.allbinary.game.score.remote.RemoteHighScores;
 export class RemoteHighScoresProcessor extends Object {
     constructor() {
         super();

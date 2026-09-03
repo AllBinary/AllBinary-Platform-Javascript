@@ -13,13 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+//not GWT import const IOException = globalThis.java.io.IOException;
 import { Calendar } from '../../../../../../java/util/Calendar.js';
-import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const Calendar = globalThis.java.util.Calendar;
+//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbeLicenseClient } from '../../../../../../org/allbinary/logic/system/security/licensing/client/AbeLicenseClient.js';
-import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const AbeLicenseClient = globalThis.org.allbinary.logic.system.security.licensing.client.AbeLicenseClient;
+//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import { AbeNoLicense } from './AbeNoLicense.js';
+//not GWT import const AbeNoLicense = globalThis.org.allbinary.logic.system.security.licensing.AbeNoLicense;
 import { AbeClientInformationData } from './AbeClientInformationData.js';
+//not GWT import const AbeClientInformationData = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationData;
 import { LicensingException } from './LicensingException.js';
+//not GWT import const LicensingException = globalThis.org.allbinary.logic.system.security.licensing.LicensingException;
 export class AbeLicenseInterfaceFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

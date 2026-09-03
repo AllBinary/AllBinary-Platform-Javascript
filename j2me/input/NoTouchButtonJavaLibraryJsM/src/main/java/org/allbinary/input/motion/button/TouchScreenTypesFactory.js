@@ -15,6 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchScreenType } from './TouchScreenType.js';
+//not GWT import const TouchScreenType = globalThis.org.allbinary.input.motion.button.TouchScreenType;
 export class TouchScreenTypesFactory extends Object {
     constructor() {
         super(...arguments);

@@ -13,7 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
+//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TouchButtonsPaintableFactory extends Object {
     static getInstance(basicColor) {

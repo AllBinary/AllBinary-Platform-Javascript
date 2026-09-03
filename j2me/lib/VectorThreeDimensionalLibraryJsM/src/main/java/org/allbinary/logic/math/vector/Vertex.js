@@ -13,10 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { PositionStrings } from '../../../../../org/allbinary/math/PositionStrings.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { PositionStrings } from '../../../../../org/allbinary/math/PositionStrings.js';
+const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Vertex extends Object {
     constructor() {

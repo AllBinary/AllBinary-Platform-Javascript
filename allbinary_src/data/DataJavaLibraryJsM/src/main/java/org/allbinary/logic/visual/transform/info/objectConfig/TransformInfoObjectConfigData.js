@@ -14,6 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { CommonDataFileStrings } from '../../../../../../../org/allbinary/logic/io/file/CommonDataFileStrings.js';
+//not GWT import const CommonDataFileStrings = globalThis.org.allbinary.logic.io.file.CommonDataFileStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TransformInfoObjectConfigData extends Object {
     static getInstance() {

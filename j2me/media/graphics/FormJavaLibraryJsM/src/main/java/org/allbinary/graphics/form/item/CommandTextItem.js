@@ -11,8 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABTextItem } from './ABTextItem.js';
+//not GWT import const ABTextItem = globalThis.org.allbinary.graphics.form.item.ABTextItem;
 export class CommandTextItem extends ABTextItem {
     constructor(command, layout, altText, backgroundBasicColor, foregroundBasicColor) {
         super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor);

@@ -14,12 +14,21 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { EntryData } from '../../../../../../org/allbinary/business/entry/EntryData.js';
+//not GWT import const EntryData = globalThis.org.allbinary.business.entry.EntryData;
 import { DomNodeHelper } from '../../../../../../org/allbinary/data/tree/dom/DomNodeHelper.js';
+//not GWT import const DomNodeHelper = globalThis.org.allbinary.data.tree.dom.DomNodeHelper;
 import { DomSearchHelper } from '../../../../../../org/allbinary/data/tree/dom/DomSearchHelper.js';
+//not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
 import { BooleanUtil } from '../../../../../../org/allbinary/logic/java/bool/BooleanUtil.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const BooleanUtil = globalThis.org.allbinary.logic.java.bool.BooleanUtil;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const Node = globalThis.org.w3c.dom.Node;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigData } from './LogConfigData.js';
+//not GWT import const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
 export class LogConfig extends Object {
     constructor(aName, aDescription, aPath, aFileName) {
         super();

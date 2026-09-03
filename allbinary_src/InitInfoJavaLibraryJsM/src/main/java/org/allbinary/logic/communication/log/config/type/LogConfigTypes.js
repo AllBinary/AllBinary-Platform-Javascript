@@ -15,14 +15,25 @@
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../../java/lang/Exception.js';
 import { DomNodeHelper } from '../../../../../../../org/allbinary/data/tree/dom/DomNodeHelper.js';
+//not GWT import const DomNodeHelper = globalThis.org.allbinary.data.tree.dom.DomNodeHelper;
 import { DomSearchHelper } from '../../../../../../../org/allbinary/data/tree/dom/DomSearchHelper.js';
-import { PreLogUtil } from '../../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
+//not plain js import { PreLogUtil } from '../../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { LoggingInitInfo } from '../../../../../../../org/allbinary/logic/communication/log/config/LoggingInitInfo.js';
-import { BasicArrayListD } from '../../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const LoggingInitInfo = globalThis.org.allbinary.logic.communication.log.config.LoggingInitInfo;
+//not plain js import { BasicArrayList } from '../../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const Node = globalThis.org.w3c.dom.Node;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigTypeFactory } from './LogConfigTypeFactory.js';
+//not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
 import { LogConfigTypeData } from './LogConfigTypeData.js';
+//not GWT import const LogConfigTypeData = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeData;
 import { LogConfigType } from './LogConfigType.js';
+//not GWT import const LogConfigType = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigType;
 export class LogConfigTypes extends Object {
     static init() {
         LogConfigTypes.init();

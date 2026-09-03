@@ -13,12 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { Hashtable } from '../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+import { StdUtil } from '../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class KeyValueFactory extends Object {
     constructor() {
         super(...arguments);
-        this.MAP = new Hashtable();
+        this.MAP = StdUtil.getInstance().createHashtable();
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

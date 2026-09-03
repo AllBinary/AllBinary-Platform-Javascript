@@ -11,8 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
-import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+/* Generated Code Do Not Modify */
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
 export class BasicArrayListCacheable extends BasicArrayListD {
     getKey() {
         //if statement needs to be on the same line and ternary does not work the same way.

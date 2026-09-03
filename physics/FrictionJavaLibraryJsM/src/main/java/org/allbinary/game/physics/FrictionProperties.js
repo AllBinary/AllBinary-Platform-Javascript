@@ -14,7 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { FrictionData } from '../../../../org/allbinary/game/physics/friction/FrictionData.js';
+//not GWT import const FrictionData = globalThis.org.allbinary.game.physics.friction.FrictionData;
 import { DragVelocityBehavior } from '../../../../org/allbinary/game/physics/velocity/DragVelocityBehavior.js';
+//not GWT import const VelocityProperties = globalThis.org.allbinary.game.physics.velocity.VelocityProperties;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class FrictionProperties extends Object {
     constructor() {

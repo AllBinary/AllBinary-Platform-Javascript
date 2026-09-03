@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GenericOperatingSystem } from './GenericOperatingSystem.js';
+//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
 export class NoOperatingSystem extends GenericOperatingSystem {
     constructor() {
         super();

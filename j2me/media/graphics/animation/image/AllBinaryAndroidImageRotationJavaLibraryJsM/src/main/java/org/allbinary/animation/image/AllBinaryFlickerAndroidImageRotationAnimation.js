@@ -1,0 +1,94 @@
+/*
+        *
+        *  AllBinary Open License Version 1
+        *  Copyright (c) 2011 AllBinary
+        *
+        *  By agreeing to this license you and any business entity you represent are
+        *  legally bound to the AllBinary Open License Version 1 legal agreement.
+        *
+        *  You may obtain the AllBinary Open License Version 1 legal agreement from
+        *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+        *
+        *  Created By: Travis Berthelot
+*/
+import { Matrix } from '../../../../android/graphics/Matrix.js';
+//not GWT import const Matrix = globalThis.android.graphics.Matrix;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+import { AndroidImageUtil } from '../../../../org/allbinary/media/image/AndroidImageUtil.js';
+//not GWT import const AndroidImageUtil = globalThis.org.allbinary.media.image.AndroidImageUtil;
+//not plain js import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
+const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
+//not GWT import const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
+export class AllBinaryFlickerAndroidImageRotationAnimation extends ImageBaseRotationAnimation {
+    constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
+        super(image, angleInfo, totalAngle, animationBehavior);
+        this.imageModifierUtil = ImageModifierUtil.getInstanceOrCreate();
+        this.androidImageUtil = AndroidImageUtil.getInstance();
+        this.matrix = new Matrix();
+        //For kotlin this is before the body of the constructor.
+        this.originalImage = originalImage;
+        this.halfWidth = (image.getWidth() >> 1);
+        this.halfHeight = (image.getHeight() >> 1);
+        this.increment = (this.angleInfo.getAngleIncrementInfo().getAngleIncrement());
+    }
+    setBasicColorP(basicColor) {
+        var changed = false;
+        ;
+        if (this.getBasicColorP() ==
+            null
+            || this.getBasicColorP().intValue() != basicColor.intValue()) {
+            this.imageModifierUtil.setColor(this.originalImage, this.getImage(), 0, basicColor);
+            changed = true;
+        }
+        super.setBasicColorP(basicColor);
+        if (changed) {
+            this.matrix.setRotate(0.0, this.halfWidth, this.halfHeight);
+            this.updateImage();
+        }
+    }
+    changeBasicColor(basicColor) {
+        this.setBasicColorP(basicColor);
+    }
+    setAlpha(alpha) {
+        var changed = false;
+        ;
+        if (this.alphaP != alpha) {
+            changed = true;
+        }
+        super.setAlpha(alpha);
+        this.imageModifierUtil.setAlpha(this.originalImage, this.getImage(), 0, this.alphaP);
+        if (changed) {
+            this.matrix.setRotate(0.0, this.halfWidth, this.halfHeight);
+            this.updateImage();
+        }
+    }
+    nextRotation() {
+        super.nextRotation();
+        this.matrix.setRotate(this.increment, this.halfWidth, this.halfHeight);
+        this.updateImage();
+    }
+    previousRotation() {
+        super.previousRotation();
+        this.matrix.setRotate(-this.increment, this.halfWidth, this.halfHeight);
+        this.updateImage();
+    }
+    updateImage() {
+        this.androidImageUtil.rotate(this.getImage(), originalImage, matrix, imageModifierUtil.paint);
+    }
+    setFrame(index) {
+        var currentFrame = this.circularIndexUtil.getIndex();
+        ;
+        this.circularIndexUtil.setIndex(index);
+        var newFrame = this.circularIndexUtil.getIndex();
+        ;
+        this.angleInfo.adjustAngle(newFrame);
+        this.matrix.setRotate((newFrame - currentFrame) * this.increment, this.halfWidth, this.halfHeight);
+        this.updateImage();
+    }
+}

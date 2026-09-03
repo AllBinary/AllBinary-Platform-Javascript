@@ -11,9 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresHelperBase } from './HighScoresHelperBase.js';
+//not GWT import const HighScores = globalThis.org.allbinary.game.score.HighScores;
 export class HighScoresHelper extends HighScoresHelperBase {
     constructor() {
         super(...arguments);

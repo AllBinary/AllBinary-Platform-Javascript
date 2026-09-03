@@ -13,8 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
-import { Form } from '../../javax/microedition/lcdui/Form.js';
-import { NullUtil } from '../../org/allbinary/logic/NullUtil.js';
+//not plain js import { Displayable } from '../../javax/microedition/lcdui/Displayable.js';
+const Displayable = globalThis.javax.microedition.lcdui.Displayable;
+//not plain js import { Form } from '../../javax/microedition/lcdui/Form.js';
+const Form = globalThis.javax.microedition.lcdui.Form;
+//not plain js import { InvalidRecordIDException } from '../../javax/microedition/rms/InvalidRecordIDException.js';
+const InvalidRecordIDException = globalThis.javax.microedition.rms.InvalidRecordIDException;
+//not plain js import { RecordStore } from '../../javax/microedition/rms/RecordStore.js';
+const RecordStore = globalThis.javax.microedition.rms.RecordStore;
+//not plain js import { RecordStoreException } from '../../javax/microedition/rms/RecordStoreException.js';
+const RecordStoreException = globalThis.javax.microedition.rms.RecordStoreException;
+//not plain js import { RecordStoreNotOpenException } from '../../javax/microedition/rms/RecordStoreNotOpenException.js';
+const RecordStoreNotOpenException = globalThis.javax.microedition.rms.RecordStoreNotOpenException;
+//not plain js import { NullUtil } from '../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TsUtil extends Object {
     static getInstance() {
@@ -66,7 +78,7 @@ export class TsUtil extends Object {
         return anyType === object2;
         ;
     }
-    toNumber(value) {
+    toNumberFromChar(value) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return Math.round(value);
     }

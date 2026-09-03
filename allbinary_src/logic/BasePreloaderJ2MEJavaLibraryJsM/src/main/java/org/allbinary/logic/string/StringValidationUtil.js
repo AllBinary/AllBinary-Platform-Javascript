@@ -13,9 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { TsUtil } from '../../../../org/allbinary/TsUtil.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { StringUtil } from './StringUtil.js';
+//not plain js import { StringUtil } from './StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 export class StringValidationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

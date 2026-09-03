@@ -15,15 +15,23 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
-import { FilePathData } from '../../../../../org/allbinary/logic/io/file/FilePathData.js';
+//not plain js import { FilePathData } from '../../../../../org/allbinary/logic/io/file/FilePathData.js';
+const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
 import { FilePathUtil } from '../../../../../org/allbinary/logic/io/file/FilePathUtil.js';
-import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const FilePathUtil = globalThis.org.allbinary.logic.io.file.FilePathUtil;
+//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../../org/allbinary/logic/string/StringValidationUtil.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { AbPathData } from './AbPathData.js';
+//not plain js import { AbPathData } from './AbPathData.js';
+const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 import { PathUtil } from './PathUtil.js';
+//not GWT import const PathUtil = globalThis.org.allbinary.logic.io.path.PathUtil;
 export class AbPath extends Object {
     static createAbPath() {
         try {

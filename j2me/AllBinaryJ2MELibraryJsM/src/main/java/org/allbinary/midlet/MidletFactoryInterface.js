@@ -13,11 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { NullMIDlet } from '../../../javax/microedition/midlet/NullMIDlet.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { MIDlet } from '../../../javax/microedition/midlet/MIDlet.js';
+const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+import { AllBinaryMidlet } from './AllBinaryMidlet.js';
+//not GWT import const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
 export class MidletFactoryInterface extends Object {
     getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return NullMIDlet.NULL_MIDLET;
+        return AllBinaryMidlet.getNullInstance();
+        ;
     }
 }

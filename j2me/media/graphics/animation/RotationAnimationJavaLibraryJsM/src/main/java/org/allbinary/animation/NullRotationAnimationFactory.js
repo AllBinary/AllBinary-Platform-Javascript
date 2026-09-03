@@ -13,11 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
-import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
-import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not plain js import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
+const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
+//not plain js import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
+//not GWT import const RotationAnimation = globalThis.org.allbinary.animation.RotationAnimation;
 import { NullRotationAnimation } from './NullRotationAnimation.js';
+//not GWT import const NullRotationAnimation = globalThis.org.allbinary.animation.NullRotationAnimation;
 import { IndexedAnimationBehavior } from './IndexedAnimationBehavior.js';
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 export class NullRotationAnimationFactory extends Object {
     static getFactoryInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

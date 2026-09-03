@@ -11,11 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
-import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderUpdater } from './ShaderUpdater.js';
+//not GWT import const ShaderUpdater = globalThis.org.allbinary.graphics.opengles.shader.ShaderUpdater;
 export class CompositeShaderUpdater extends ShaderUpdater {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -12,10 +12,14 @@
         *  Created By: Travis Berthelot
 */
 import { Thread } from '../../../../java/lang/Thread.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { BooleanFactory } from '../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
+//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VirtualKeyboardEvent } from './VirtualKeyboardEvent.js';
+//not GWT import const VirtualKeyboardEventListenerInterface = globalThis.org.allbinary.input.event.VirtualKeyboardEventListenerInterface;
 export class VirtualKeyboardEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

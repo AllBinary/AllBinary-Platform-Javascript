@@ -13,8 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Hashtable } from '../../../../java/util/Hashtable.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const GameConfiguration = globalThis.org.allbinary.game.configuration.GameConfiguration;
 export class GameConfigurationSingleton extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -23,7 +29,7 @@ export class GameConfigurationSingleton extends Object {
     constructor() {
         super();
         this.list = new BasicArrayListD();
-        this.hashtable = new Hashtable();
+        this.hashtable = StdUtil.getInstance().createHashtable();
     }
     getInstanceByName(name) {
         //if statement needs to be on the same line and ternary does not work the same way.

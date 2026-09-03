@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CommonDataFileStrings extends Object {
     constructor() {
@@ -31,6 +32,10 @@ export class CommonDataFileStrings extends Object {
         this._TS = ".ts";
         this.JS = "js";
         this._JS = ".js";
+        this.CPP = "cpp";
+        this._CPP = ".cpp";
+        this.H = "h";
+        this._H = ".h";
         this.UNCRYPTED_EXTENSION = this.XML;
         this.ENCRYPTED_EXTENSION = "abd";
     }

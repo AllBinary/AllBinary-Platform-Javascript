@@ -13,14 +13,23 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { BasicGraphicsPipeline } from '../../../org/allbinary/graphics/pipeline/BasicGraphicsPipeline.js';
-import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListS } from '../../../org/allbinary/util/BasicArrayListS.js';
+//not GWT import const BasicGraphicsPipeline = globalThis.org.allbinary.graphics.pipeline.BasicGraphicsPipeline;
+//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListS } from '../../../org/allbinary/util/BasicArrayListS.js';
+const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimationUtil } from './VectorAnimationUtil.js';
+//not GWT import const VectorAnimationUtil = globalThis.org.allbinary.animation.VectorAnimationUtil;
 export class VectorMirrorGenerator extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

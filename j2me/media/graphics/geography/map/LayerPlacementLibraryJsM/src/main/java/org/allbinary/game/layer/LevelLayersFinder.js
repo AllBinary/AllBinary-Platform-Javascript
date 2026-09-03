@@ -13,10 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { Layer } from '../../../../org/allbinary/layer/Layer.js';
-import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
-import { EnumerationUtil } from '../../../../org/allbinary/util/EnumerationUtil.js';
+//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not plain js import { EnumerationUtil } from '../../../../org/allbinary/util/EnumerationUtil.js';
+const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LevelLayersFinder extends Object {
     constructor() {

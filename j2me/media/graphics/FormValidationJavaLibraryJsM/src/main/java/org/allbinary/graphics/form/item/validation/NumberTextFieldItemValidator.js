@@ -12,12 +12,23 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../../../java/lang/Integer.js';
-import { Vector } from '../../../../../../java/util/Vector.js';
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const ABTextFieldItem = globalThis.org.allbinary.graphics.form.item.ABTextFieldItem;
 import { ValidatorBase } from '../../../../../../org/allbinary/logic/control/validate/ValidatorBase.js';
+//not GWT import const ValidatorBase = globalThis.org.allbinary.logic.control.validate.ValidatorBase;
 import { BooleanFactory } from '../../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
+//not plain js import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NumberTextFieldItemValidator extends ValidatorBase {
     constructor(textFieldItem, maxChars, min, max) {
@@ -33,7 +44,7 @@ export class NumberTextFieldItemValidator extends ValidatorBase {
     }
     toNumberVector(value) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new Vector();
+        return new BasicArrayListD();
     }
     isValid() {
         var result = BooleanFactory.getInstance().TRUE;

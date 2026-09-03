@@ -11,8 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const Group = globalThis.org.allbinary.game.identification.Group;
 import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
+//not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
 import { MultiplayerBehavior } from './MultiplayerBehavior.js';
+//not GWT import const MultiplayerBehavior = globalThis.org.allbinary.game.multiplayer.layer.MultiplayerBehavior;
 export class MultiPlayerGameLayer extends CollidableDestroyableDamageableLayer {
     constructor(remoteInfo, groupInterface, name, layerInfo, viewPosition) {
         super(groupInterface, name, layerInfo, viewPosition);

@@ -14,7 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { Image } from './Image.js';
+//not plain js import { Image } from './Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 export class NullImage extends Object {
 }
 NullImage.NULL_IMAGE_ARRAY = [];

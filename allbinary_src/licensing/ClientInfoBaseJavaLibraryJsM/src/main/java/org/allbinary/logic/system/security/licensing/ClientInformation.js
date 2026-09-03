@@ -13,15 +13,29 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-import { Hashtable } from '../../../../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { TsUtil } from '../../../../../../org/allbinary/TsUtil.js';
-import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
 import { SystemHardwareFactory } from '../../../../../../org/allbinary/logic/system/hardware/SystemHardwareFactory.js';
+//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
 import { NoOperatingSystem } from '../../../../../../org/allbinary/logic/system/os/NoOperatingSystem.js';
-import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
-import { BasicArrayListUtil } from '../../../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not GWT import const NoOperatingSystem = globalThis.org.allbinary.logic.system.os.NoOperatingSystem;
+//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListUtil } from '../../../../../../org/allbinary/util/BasicArrayListUtil.js';
+const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import { AbeClientInformationData } from './AbeClientInformationData.js';
+//not GWT import const AbeClientInformationData = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationData;
 // This is the information sent to the license server
 export class ClientInformation extends Object {
     constructor(name, version, specialName, shortName) {
@@ -77,7 +91,7 @@ export class ClientInformation extends Object {
         ;
         var genericOperatingSystem = this.getOperatingSystemInterface();
         ;
-        var clientInfoHashtable = new Hashtable();
+        var clientInfoHashtable = StdUtil.getInstance().createHashtable();
         ;
         clientInfoHashtable.put(abeClientInformationData.NAME, this.name);
         clientInfoHashtable.put(abeClientInformationData.VERSION, this.version);

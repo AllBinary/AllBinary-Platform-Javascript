@@ -13,8 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeature } from './OpenGLFeature.js';
+//not GWT import const OpenGLFeature = globalThis.org.allbinary.graphics.opengles.OpenGLFeature;
 export class OpenGLFeatureFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

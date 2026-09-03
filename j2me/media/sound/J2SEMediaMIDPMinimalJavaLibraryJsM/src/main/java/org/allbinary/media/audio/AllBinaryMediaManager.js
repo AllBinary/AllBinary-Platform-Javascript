@@ -15,21 +15,38 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { System } from '../../../../java/lang/System.js';
 import { BufferedInputStream } from '../../../../java/io/BufferedInputStream.js';
+//not GWT import const BufferedInputStream = globalThis.java.io.BufferedInputStream;
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
-import { Manager } from '../../../../javax/microedition/media/Manager.js';
-import { MediaException } from '../../../../javax/microedition/media/MediaException.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not plain js import { Manager } from '../../../../javax/microedition/media/Manager.js';
+const Manager = globalThis.javax.microedition.media.Manager;
+//not plain js import { MediaException } from '../../../../javax/microedition/media/MediaException.js';
+const MediaException = globalThis.javax.microedition.media.MediaException;
+//not plain js import { Player, PlayerI } from '../../../../javax/microedition/media/Player.js';
+const Player = globalThis.javax.microedition.media.Player;
 import { AudioContentTypeDataFactory } from '../../../../org/allbinary/audio/AudioContentTypeDataFactory.js';
-import { ResourceUtil } from '../../../../org/allbinary/data/resource/ResourceUtil.js';
+//not GWT import const AudioContentTypeDataFactory = globalThis.org.allbinary.audio.AudioContentTypeDataFactory;
+//not plain js import { ResourceUtil } from '../../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
+//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
+//not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
 import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Sounds } from './Sounds.js';
+//not GWT import const SoundsFactoryInterface = globalThis.org.allbinary.media.audio.SoundsFactoryInterface;
 import { NoPlayer } from './NoPlayer.js';
+//not GWT import const NoPlayer = globalThis.org.allbinary.media.audio.NoPlayer;
 import { PCClipWavPlayer } from './PCClipWavPlayer.js';
+//not GWT import const PCClipWavPlayer = globalThis.org.allbinary.media.audio.PCClipWavPlayer;
 //J2SEMediaMIDPMinimalJavaLibrary
 export class AllBinaryMediaManager extends Object {
     static isMuted() {

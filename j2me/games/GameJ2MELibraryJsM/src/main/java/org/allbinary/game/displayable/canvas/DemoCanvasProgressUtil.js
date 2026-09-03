@@ -13,8 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import { ProgressCanvasFactory } from '../../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
+//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import { PaintableComposite } from '../../../../../org/allbinary/graphics/paint/PaintableComposite.js';
+//not GWT import const DemoCanvas = globalThis.org.allbinary.game.displayable.canvas.DemoCanvas;
 export class DemoCanvasProgressUtil extends Object {
     static showProgress(demoCanvas) {
         DemoCanvasProgressUtil.showProgressOptionallyInTheBackground(demoCanvas, false);

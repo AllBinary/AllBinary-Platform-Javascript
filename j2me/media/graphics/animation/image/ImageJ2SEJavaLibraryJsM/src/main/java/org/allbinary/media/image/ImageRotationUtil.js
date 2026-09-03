@@ -14,10 +14,17 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not GWT import const BufferedImage = globalThis.java.awt.image.BufferedImage;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not GWT import const J2SEMutableImage = globalThis.org.microemu.device.j2se.J2SEMutableImage;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageJ2SERotationUtil } from './ImageJ2SERotationUtil.js';
-import { ImageCreationUtil } from './ImageCreationUtil.js';
+//not GWT import const ImageJ2SERotationUtil = globalThis.org.allbinary.media.image.ImageJ2SERotationUtil;
+//not plain js import { ImageCreationUtil } from './ImageCreationUtil.js';
+const ImageCreationUtil = globalThis.org.allbinary.media.image.ImageCreationUtil;
 export class ImageRotationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

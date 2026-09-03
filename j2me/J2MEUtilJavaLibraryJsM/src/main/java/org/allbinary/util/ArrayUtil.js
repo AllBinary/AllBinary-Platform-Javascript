@@ -1,10 +1,16 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { System } from '../../../java/lang/System.js';
-import { MathUtil } from '../../../org/allbinary/logic/math/MathUtil.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { MathUtil } from '../../../org/allbinary/logic/math/MathUtil.js';
+const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ArrayUtil extends Object {
     constructor() {

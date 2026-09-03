@@ -13,7 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { PointFactory } from './PointFactory.js';
+//Current folder imports from return types, extended types, and scope (deduplicated)
+//not plain js import { GPoint } from './GPoint.js';
+const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not plain js import { PointFactory } from './PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 export class Line extends Object {
     constructor(p1, p2) {
         super();

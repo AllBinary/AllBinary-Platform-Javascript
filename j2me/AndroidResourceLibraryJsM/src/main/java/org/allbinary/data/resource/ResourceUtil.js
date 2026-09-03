@@ -13,17 +13,29 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Hashtable } from '../../../../java/util/Hashtable.js';
+//not GWT import const Resources = globalThis.android.content.res.Resources;
 import { DebugFactory } from '../../../../org/allbinary/debug/DebugFactory.js';
+//not GWT import const DebugFactory = globalThis.org.allbinary.debug.DebugFactory;
 import { NoDebug } from '../../../../org/allbinary/debug/NoDebug.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
-import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
-import { HashtableUtil } from '../../../../org/allbinary/util/HashtableUtil.js';
+//not GWT import const NoDebug = globalThis.org.allbinary.debug.NoDebug;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { HashtableUtil } from '../../../../org/allbinary/util/HashtableUtil.js';
+const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //Android
 export class ResourceUtil extends Object {
@@ -36,7 +48,7 @@ export class ResourceUtil extends Object {
         this.logUtil = LogUtil.getInstance();
         this.context = NullUtil.getInstance().NULL_OBJECT;
         this.resources = NullUtil.getInstance().NULL_OBJECT;
-        this.hashMap = new Hashtable();
+        this.hashMap = StdUtil.getInstance().createHashtable();
     }
     setLoadingPaths(path, ext) {
         this.logUtil.putF(CommonStrings.getInstance().NOT_IMPLEMENTED, this, "setLoadingPaths");

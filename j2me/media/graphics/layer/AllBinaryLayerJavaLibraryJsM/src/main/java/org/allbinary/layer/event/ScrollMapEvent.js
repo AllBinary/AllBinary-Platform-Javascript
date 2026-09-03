@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScrollMapEvent extends AllBinaryEventObject {
     constructor(anyType = {}) {

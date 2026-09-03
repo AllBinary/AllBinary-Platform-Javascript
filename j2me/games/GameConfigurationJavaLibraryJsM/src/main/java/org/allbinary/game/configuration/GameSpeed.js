@@ -15,6 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfigurationCentral } from './GameConfigurationCentral.js';
+//not GWT import const GameConfiguration = globalThis.org.allbinary.game.configuration.GameConfiguration;
 export class GameSpeed extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

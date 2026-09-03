@@ -14,6 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
+//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+const Font = globalThis.javax.microedition.lcdui.Font;
+//not plain js import { MIDlet } from '../../../../javax/microedition/midlet/MIDlet.js';
+const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
+//not GWT import const RatioProcessor = globalThis.org.allbinary.graphics.threed.RatioProcessor;
 //OpenGLNone
 export class SWTJOGLProcessor extends Object {
     static getInstance() {

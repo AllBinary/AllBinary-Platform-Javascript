@@ -12,9 +12,12 @@
         *  Created By: Travis Berthelot
 */
 import { Cipher } from '../../../../../../../javax/crypto/Cipher.js';
+//not GWT import const SecretKey = globalThis.javax.crypto.SecretKey;
 import { ByteUtil } from '../../../../../../../org/allbinary/logic/java/byteutil/ByteUtil.js';
+//not GWT import const ByteUtil = globalThis.org.allbinary.logic.java.byteutil.ByteUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseSecretComposite } from './BaseSecretComposite.js';
+//not GWT import const BaseSecretComposite = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.BaseSecretComposite;
 export class SecretComposite extends BaseSecretComposite {
     constructor(secretKey, cipher, key) {
         super();

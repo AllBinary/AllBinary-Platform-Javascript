@@ -13,9 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { ResourceUtil } from '../../../../../org/allbinary/data/resource/ResourceUtil.js';
+//not GWT import const Context = globalThis.android.content.Context;
+//not plain js import { ResourceUtil } from '../../../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFile } from './AbFile.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 export class FileFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

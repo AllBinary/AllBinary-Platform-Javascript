@@ -11,10 +11,19 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Sprite } from '../../../../javax/microedition/lcdui/game/Sprite.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { Sprite } from '../../../../javax/microedition/lcdui/game/Sprite.js';
+const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
+//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageSegmentAnimation } from './ImageSegmentAnimation.js';
+//not GWT import const ImageSegmentAnimation = globalThis.org.allbinary.animation.image.ImageSegmentAnimation;
 export class LeftToRightImageAnimation extends ImageSegmentAnimation {
     constructor(image, sequenceArray, animationBehavior) {
         super(image, sequenceArray, animationBehavior);

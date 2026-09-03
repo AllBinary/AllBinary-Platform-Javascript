@@ -11,11 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+/* Generated Code Do Not Modify */
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Input } from './Input.js';
+//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
 import { InputFactory } from './InputFactory.js';
+//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
 export class J2MEGameKey extends Input {
     static getString(keyCode) {
         var input = InputFactory.getInstance().getInstanceById(keyCode);

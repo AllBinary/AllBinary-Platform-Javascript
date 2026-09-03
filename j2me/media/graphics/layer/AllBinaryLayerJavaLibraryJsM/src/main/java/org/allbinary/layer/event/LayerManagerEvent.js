@@ -11,9 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const LayerManager = globalThis.org.allbinary.layer.LayerManager;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LayerManagerEvent extends AllBinaryEventObject {
     constructor(layerManager, crud) {

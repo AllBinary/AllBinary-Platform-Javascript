@@ -13,9 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScores } from './HighScores.js';
+//not GWT import const HighScores = globalThis.org.allbinary.game.score.HighScores;
 export class RemoteErrorHighScoresSingletonFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

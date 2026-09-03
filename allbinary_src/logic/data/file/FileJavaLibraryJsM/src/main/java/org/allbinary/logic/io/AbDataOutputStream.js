@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
+//not GWT import const OutputStream = globalThis.java.io.OutputStream;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbDataOutputStream extends DataOutputStream {
     constructor(out) {

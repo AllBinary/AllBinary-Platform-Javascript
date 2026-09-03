@@ -160,8 +160,6 @@
         <module>../../FullScreenJavaLibraryJsM</module>
         -->
 
-        <module>../../lib/Basic2DVectorLibraryJsM</module>
-
         <module>../../../physics/VelocityLibraryJsM</module>
 
         <module>../../games/weapon/SoundsBasicWeaponsJavaLibraryJsM</module>
@@ -182,7 +180,7 @@
 
         <module>../../../graphics/opengl/NoSWTJavaLibraryJsM</module>
         <module>../../../graphics/opengl/SWTWithoutJOGLJavaLibraryJsM</module>
-<!--        <module>../SWTJavaLibraryJsM</module>-->
+        <module>../SWTJavaLibraryJsM</module>
         <module>../GameJ2MELibraryJsM</module>
         
         <!--

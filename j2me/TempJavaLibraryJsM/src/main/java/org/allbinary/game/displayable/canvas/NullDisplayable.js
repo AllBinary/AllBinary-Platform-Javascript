@@ -1,5 +1,8 @@
 /* Generated Code Do Not Modify */
-import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //Temp should not be in any build
 export class NullDisplayable extends Canvas {

@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const DatabaseConnectionInfoInterface = globalThis.org.allbinary.business.init.db.DatabaseConnectionInfoInterface;
 import { InitDbHelperFactory } from '../../../../org/allbinary/business/init/db/InitDbHelperFactory.js';
+//not GWT import const LicensingException = globalThis.org.allbinary.logic.system.security.licensing.LicensingException;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitDb } from './InitDb.js';
+//not GWT import const InitDb = globalThis.org.allbinary.business.installer.InitDb;
 //Warning you must have sql root access
 export class DynamicInitDb extends InitDb {
     constructor(abeClientInformation) {

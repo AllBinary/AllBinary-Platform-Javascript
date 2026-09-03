@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompositeSound } from './CompositeSound.js';
+//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
 export class ErrorSound extends CompositeSound {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

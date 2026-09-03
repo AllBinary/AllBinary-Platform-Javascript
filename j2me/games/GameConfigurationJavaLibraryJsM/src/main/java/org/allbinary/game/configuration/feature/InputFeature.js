@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Feature } from './Feature.js';
+//not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
 export class InputFeature extends Feature {
     constructor(name) {
         super(name);

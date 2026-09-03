@@ -12,8 +12,10 @@
         *  Created By: Travis Berthelot
 */
 import { BasicArrayListResetablePool } from '../../../../org/allbinary/logic/util/cache/BasicArrayListResetablePool.js';
+//not GWT import const PoolInterface = globalThis.org.allbinary.logic.util.cache.PoolInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayRotationAnimationCacheableInterfaceFactory } from './ImageArrayRotationAnimationCacheableInterfaceFactory.js';
+//not GWT import const ImageArrayRotationAnimationCacheable = globalThis.org.allbinary.animation.image.ImageArrayRotationAnimationCacheable;
 export class ImageArrayRotationAnimationPool extends BasicArrayListResetablePool {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

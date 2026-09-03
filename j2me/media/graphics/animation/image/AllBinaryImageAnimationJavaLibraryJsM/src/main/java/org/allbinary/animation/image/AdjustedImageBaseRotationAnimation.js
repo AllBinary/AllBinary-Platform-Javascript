@@ -11,8 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
+//not GWT import const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
 export class AdjustedImageBaseRotationAnimation extends ImageBaseRotationAnimation {
     constructor(image, angleInfo, totalAngle, dx, dy, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);

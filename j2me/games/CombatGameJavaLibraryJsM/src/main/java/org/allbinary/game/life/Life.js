@@ -15,6 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
+//not GWT import const LifeInterface = globalThis.org.allbinary.game.life.LifeInterface;
 export class Life extends Object {
     static createLife() {
         try {

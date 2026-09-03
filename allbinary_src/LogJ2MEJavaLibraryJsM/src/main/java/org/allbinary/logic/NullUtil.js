@@ -14,7 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Hashtable } from '../../../java/util/Hashtable.js';
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { Vector } from '../../../java/util/Vector.js';
+//not GWT import const Vector = globalThis.java.util.Vector;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //ActualPlatform
 /*actual*/ export class NullUtil extends Object {

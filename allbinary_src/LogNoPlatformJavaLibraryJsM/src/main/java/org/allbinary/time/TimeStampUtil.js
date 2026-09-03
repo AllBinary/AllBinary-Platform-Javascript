@@ -13,7 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const Calendar = globalThis.java.util.Calendar;
 //import { Date } from '../../../java/util/Date.js';
+//not GWT import const Date = globalThis.java.util.Date;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //NoPlatform
 expect;

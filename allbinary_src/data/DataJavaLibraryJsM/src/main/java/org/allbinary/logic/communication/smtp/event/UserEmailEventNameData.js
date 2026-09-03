@@ -14,8 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
-import { HashMap } from '../../../../../../java/util/HashMap.js';
+//not GWT import const HashMap = globalThis.java.util.HashMap;
 import { OrderHistoryData } from '../../../../../../org/allbinary/business/user/commerce/inventory/order/OrderHistoryData.js';
+//not GWT import const OrderHistoryData = globalThis.org.allbinary.business.user.commerce.inventory.order.OrderHistoryData;
+import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
+//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class UserEmailEventNameData extends Object {
     //@Throws(Exception.constructor)
@@ -54,7 +57,7 @@ export class UserEmailEventNameData extends Object {
         return this.eventHandlerName;
     }
 }
-UserEmailEventNameData.userNameEvenNameHashMap = new HashMap();
+UserEmailEventNameData.userNameEvenNameHashMap = StdUtil.getInstance().createHashMap();
 UserEmailEventNameData.nextId = 0;
 UserEmailEventNameData.INSTALLER = new UserEmailEventNameData("Installer");
 UserEmailEventNameData.EXCEPTION = new UserEmailEventNameData("Exception");

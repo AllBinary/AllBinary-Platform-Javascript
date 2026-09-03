@@ -33,9 +33,9 @@
 
         <!--
         -->
-        <module>../../AllBinary-Platform-Integrationts</module>
+        <module>../../AllBinary-Platform-Integrationjs</module>
         
-        <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryJsM</module>
+<!--        <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryJsM</module>-->
         <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEPlatformJavaLibraryJsM</module>
         
 <!--        <module>../j2me/FullScreenJavaLibraryJsM</module>-->

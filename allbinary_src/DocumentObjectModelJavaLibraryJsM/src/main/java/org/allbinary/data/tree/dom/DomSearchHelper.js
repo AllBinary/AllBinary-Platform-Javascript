@@ -14,7 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-import { Vector } from '../../../../../java/util/Vector.js';
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DomSearchHelper extends Object {
     static getNodeNoThrow(nodeName, nodeList) {
@@ -66,7 +70,7 @@ export class DomSearchHelper extends Object {
         }
     }
     static getAllNodesNoThrow(nodeName, nodeList) {
-        var nodeVector = new Vector();
+        var nodeVector = new BasicArrayListD();
         ;
         var numberOfNodes = nodeList.getLength();
         ;

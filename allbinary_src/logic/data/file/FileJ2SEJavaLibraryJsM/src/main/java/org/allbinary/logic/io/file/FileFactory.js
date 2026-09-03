@@ -15,6 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFile } from './AbFile.js';
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 export class FileFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

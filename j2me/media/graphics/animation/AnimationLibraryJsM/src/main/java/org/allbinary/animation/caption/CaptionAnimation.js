@@ -11,7 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Animation } from '../../../../org/allbinary/animation/Animation.js';
+//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CaptionAnimation extends Animation {
     constructor(animationInterface, overlayAnimationInterface, captionDx, captionDy, dx, dy) {

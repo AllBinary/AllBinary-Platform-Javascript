@@ -14,23 +14,19 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+const Command = globalThis.javax.microedition.lcdui.Command;
+//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { HighScoreCommands } from './HighScoreCommands.js';
 export class HighScoreCommandsBaseFactory extends Object {
     constructor(HIGH_SCORE_COMMANDS) {
         super();
         this.logUtil = LogUtil.getInstance();
-        if (J2MEUtil.isJ2ME()) {
-            this.HIGH_SCORE_COMMANDS =
-                [
-                    HighScoreCommands.getInstance().PERSONAL
-                ];
-        }
-        else {
-            this.HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS;
-        }
+        this.HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS;
     }
     isHighScoreCommand(command) {
         for (var index = this.HIGH_SCORE_COMMANDS.length - 1; index >= 0; index--) {

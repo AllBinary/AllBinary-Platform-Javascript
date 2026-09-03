@@ -11,11 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../java/lang/Exception.js';
 import { InitInfo } from '../../../org/allbinary/business/init/InitInfo.js';
+//not GWT import const InitInfo = globalThis.org.allbinary.business.init.InitInfo;
 import { StringValidationUtil } from '../../../org/allbinary/logic/string/StringValidationUtil.js';
+//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UrlGlobalsInterface } from './UrlGlobalsInterface.js';
+//not GWT import const UrlGlobalsInterface = globalThis.org.allbinary.globals.UrlGlobalsInterface;
 export class WebAppUrlGlobals extends UrlGlobalsInterface {
     constructor() {
         super(...arguments);

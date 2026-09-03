@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not GWT import const TickableInterface = globalThis.org.allbinary.game.tick.TickableInterface;
 export class NullTickable extends Object {
     constructor() {
         super(...arguments);

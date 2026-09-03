@@ -15,6 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameTickTimeDelayHelper } from './GameTickTimeDelayHelper.js';
+//not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
 export class GameTickTimeDelayHelperFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

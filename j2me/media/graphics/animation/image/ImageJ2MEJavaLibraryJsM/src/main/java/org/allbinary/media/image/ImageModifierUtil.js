@@ -13,6 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageModifierUtil extends Object {
     static getInstanceOrCreate() {

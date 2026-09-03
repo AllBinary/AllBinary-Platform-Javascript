@@ -11,7 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 import { BasicLayerProcessor } from '../../../../../org/allbinary/layer/BasicLayerProcessor.js';
+//not GWT import const BasicLayerProcessor = globalThis.org.allbinary.layer.BasicLayerProcessor;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not GWT import const DropLayerInterface = globalThis.org.allbinary.game.layer.drop.DropLayerInterface;
 export class DropLayerProcessor extends BasicLayerProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

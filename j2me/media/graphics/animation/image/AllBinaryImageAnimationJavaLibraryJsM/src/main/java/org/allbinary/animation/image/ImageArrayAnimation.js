@@ -11,11 +11,22 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
+//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 import { IndexedAnimation } from '../../../../org/allbinary/animation/IndexedAnimation.js';
+//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
-import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
-import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+//not GWT import const Anchor = globalThis.org.allbinary.graphics.Anchor;
+//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
+//not plain js import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageArrayAnimation extends IndexedAnimation {
     constructor(imageArray, animationBehavior) {

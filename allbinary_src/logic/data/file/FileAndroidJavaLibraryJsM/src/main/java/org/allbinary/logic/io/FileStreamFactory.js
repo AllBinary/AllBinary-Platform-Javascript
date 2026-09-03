@@ -13,11 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { ResourceUtil } from '../../../../org/allbinary/data/resource/ResourceUtil.js';
-import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const Context = globalThis.android.content.Context;
+//not plain js import { ResourceUtil } from '../../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
+//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileInputStream } from './AbFileInputStream.js';
+//not GWT import const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
 import { AbFileOutputStream } from './AbFileOutputStream.js';
+//not GWT import const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
 export class FileStreamFactory extends Object {
     static getInstance() {
         if (FileStreamFactory.SINGLETON == NullUtil.getInstance().NULL_OBJECT) {

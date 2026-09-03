@@ -13,7 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageJ2MEScaleUtil extends Object {
     static getInstance() {

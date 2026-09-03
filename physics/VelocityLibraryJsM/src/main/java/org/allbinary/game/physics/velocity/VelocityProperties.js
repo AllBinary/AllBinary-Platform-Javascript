@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicVelocityProperties } from './BasicVelocityProperties.js';
+//not GWT import const VelocityInterface = globalThis.org.allbinary.game.physics.velocity.VelocityInterface;
 export class VelocityProperties extends BasicVelocityProperties {
     constructor(maxForwardVelocity, maxReverseVelocity) {
         super();

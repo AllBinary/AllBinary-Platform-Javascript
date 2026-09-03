@@ -13,9 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Vector } from '../../../../../java/util/Vector.js';
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicUserRoleFactory } from './BasicUserRoleFactory.js';
+//not GWT import const BasicUserRoleFactory = globalThis.org.allbinary.business.user.role.BasicUserRoleFactory;
 export class StoreRoleFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -23,9 +27,9 @@ export class StoreRoleFactory extends Object {
     }
     constructor() {
         super();
-        this.roles = new Vector();
-        this.subscriberRoles = new Vector();
-        this.wholesaleRoles = new Vector();
+        this.roles = new BasicArrayListD();
+        this.subscriberRoles = new BasicArrayListD();
+        this.wholesaleRoles = new BasicArrayListD();
         var basicUserRoleFactory = BasicUserRoleFactory.getInstance();
         ;
         this.roles.add(basicUserRoleFactory.CUSTOMER);

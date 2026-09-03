@@ -11,17 +11,32 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Exception } from '../../../java/lang/Exception.js';
+//not GWT import const FeatureResourceAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.resource.FeatureResourceAnimationInterfaceFactoryInterface;
 import { GameConfigurationCentral } from '../../../org/allbinary/game/configuration/GameConfigurationCentral.js';
+//not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
 import { FeaturedResourceFactory } from '../../../org/allbinary/game/resource/FeaturedResourceFactory.js';
-import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const FeaturedResourceFactory = globalThis.org.allbinary.game.resource.FeaturedResourceFactory;
+//not plain js import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../org/allbinary/graphics/Rectangle.js';
+//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { RectangleFactory } from '../../../org/allbinary/graphics/RectangleFactory.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
-import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+//not GWT import const RectangleFactory = globalThis.org.allbinary.graphics.RectangleFactory;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
+//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const BasicAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.BasicAnimationInterfaceFactoryInterface;
 import { NullAnimationFactory } from './NullAnimationFactory.js';
+//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
 export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedResourceFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

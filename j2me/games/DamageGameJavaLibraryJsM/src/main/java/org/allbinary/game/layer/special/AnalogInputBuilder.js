@@ -13,20 +13,34 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not GWT import const GameInputProcessor = globalThis.org.allbinary.game.input.GameInputProcessor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialUpGameInputProcessor } from './SpecialUpGameInputProcessor.js';
+//not GWT import const SpecialUpGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialUpGameInputProcessor;
 import { SpecialDownGameInputProcessor } from './SpecialDownGameInputProcessor.js';
+//not GWT import const SpecialDownGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialDownGameInputProcessor;
 import { SpecialRightGameInputProcessor } from './SpecialRightGameInputProcessor.js';
+//not GWT import const SpecialRightGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialRightGameInputProcessor;
 import { SpecialLeftGameInputProcessor } from './SpecialLeftGameInputProcessor.js';
+//not GWT import const SpecialLeftGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialLeftGameInputProcessor;
 import { Special1GameInputProcessor } from './Special1GameInputProcessor.js';
+//not GWT import const Special1GameInputProcessor = globalThis.org.allbinary.game.layer.special.Special1GameInputProcessor;
 import { Special3GameInputProcessor } from './Special3GameInputProcessor.js';
+//not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
 import { SpecialAnalogUpGameInputProcessor } from './SpecialAnalogUpGameInputProcessor.js';
+//not GWT import const SpecialAnalogUpGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialAnalogUpGameInputProcessor;
 import { SpecialAnalogDownGameInputProcessor } from './SpecialAnalogDownGameInputProcessor.js';
+//not GWT import const SpecialAnalogDownGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialAnalogDownGameInputProcessor;
 import { SpecialAnalogRightGameInputProcessor } from './SpecialAnalogRightGameInputProcessor.js';
+//not GWT import const SpecialAnalogRightGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialAnalogRightGameInputProcessor;
 import { SpecialAnalogLeftGameInputProcessor } from './SpecialAnalogLeftGameInputProcessor.js';
+//not GWT import const SpecialAnalogLeftGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialAnalogLeftGameInputProcessor;
 import { SpecialAnalogLeftTriggerGameInputProcessor } from './SpecialAnalogLeftTriggerGameInputProcessor.js';
+//not GWT import const SpecialAnalogLeftTriggerGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialAnalogLeftTriggerGameInputProcessor;
 import { SpecialAnalogRightTriggerGameInputProcessor } from './SpecialAnalogRightTriggerGameInputProcessor.js';
+//not GWT import const SpecialAnalogRightTriggerGameInputProcessor = globalThis.org.allbinary.game.layer.special.SpecialAnalogRightTriggerGameInputProcessor;
 export class AnalogInputBuilder extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

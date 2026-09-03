@@ -11,7 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
+//not GWT import const BasicEventHandler = globalThis.org.allbinary.logic.util.event.handler.BasicEventHandler;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ColorChangeEventHandler extends BasicEventHandler {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

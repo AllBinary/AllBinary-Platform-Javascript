@@ -11,11 +11,20 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const SpecialAnimationInterface = globalThis.org.allbinary.animation.special.SpecialAnimationInterface;
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import { GameTickTimeDelayHelperFactory } from '../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
+//not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
+//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayAnimation } from './ImageArrayAnimation.js';
+//not GWT import const ImageArrayAnimation = globalThis.org.allbinary.animation.image.ImageArrayAnimation;
 export class ImageArraySpecialAnimation extends ImageArrayAnimation {
     constructor(imageArray, animationBehavior) {
         super(imageArray, animationBehavior);

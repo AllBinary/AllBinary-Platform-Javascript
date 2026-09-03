@@ -13,11 +13,25 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { PlayerI } from '../../../../javax/microedition/media/Player.js';
-import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
-import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { Control } from '../../../../javax/microedition/media/Control.js';
+const Control = globalThis.javax.microedition.media.Control;
+//not plain js import { MediaException } from '../../../../javax/microedition/media/MediaException.js';
+const MediaException = globalThis.javax.microedition.media.MediaException;
+//not plain js import { Player, PlayerI } from '../../../../javax/microedition/media/Player.js';
+const Player = globalThis.javax.microedition.media.Player;
+//not plain js import { PlayerListener } from '../../../../javax/microedition/media/PlayerListener.js';
+const PlayerListener = globalThis.javax.microedition.media.PlayerListener;
+//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
+//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
+//not GWT import const Controllable2 = globalThis.org.allbinary.media.audio.Controllable2;
 import { NullControl } from './NullControl.js';
+//not GWT import const NullControl = globalThis.org.allbinary.media.audio.NullControl;
 //BasicPlayerJavaLibrary
 export class BasicPlayer extends Object {
     constructor() {

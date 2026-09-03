@@ -14,15 +14,26 @@
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
 import { System } from '../../../java/lang/System.js';
 import { Thread } from '../../../java/lang/Thread.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not plain js import { Image } from '../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../javax/microedition/lcdui/NullImage.js';
-import { ResourceUtil } from '../../../org/allbinary/data/resource/ResourceUtil.js';
+//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not plain js import { ResourceUtil } from '../../../org/allbinary/data/resource/ResourceUtil.js';
+const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 import { GDResources } from '../../../org/allbinary/game/gd/resource/GDResources.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
-import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const GDResources = globalThis.org.allbinary.game.gd.resource.GDResources;
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
+//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { Memory } from '../../../org/allbinary/system/Memory.js';
+//not GWT import const Memory = globalThis.org.allbinary.system.Memory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCacheBase } from './ImageCacheBase.js';
+//not GWT import const ImageCacheBase = globalThis.org.allbinary.image.ImageCacheBase;
 export class ImageCache extends ImageCacheBase {
     constructor() {
         super();

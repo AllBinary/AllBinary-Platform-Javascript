@@ -11,10 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThreadPool } from './ThreadPool.js';
+//not GWT import const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
 export class PrimaryThreadPool extends ThreadPool {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,11 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
-import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEventHandler } from './TrackingEventHandler.js';
+//not GWT import const TrackingEventHandler = globalThis.org.allbinary.game.tracking.TrackingEventHandler;
 export class TrackingEvent extends AllBinaryEventObject {
     constructor(allBinaryLayerInterface = {}) {
         super(allBinaryLayerInterface);

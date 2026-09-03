@@ -11,11 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
-import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScaleUtil.js';
-import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScaleUtil.js';
+const ImageScaleUtil = globalThis.org.allbinary.media.image.ImageScaleUtil;
+//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScaleBaseProcessor } from './ScaleBaseProcessor.js';
+//not GWT import const ScaleBaseProcessor = globalThis.org.allbinary.animation.image.ScaleBaseProcessor;
 export class ScaleProcessor extends ScaleBaseProcessor {
     constructor() {
         super(...arguments);

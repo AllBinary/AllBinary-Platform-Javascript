@@ -11,4 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export {};

@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
+//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageArrayRotationAnimationInfo extends Object {
     constructor(imageArray, angleIncrement, totalAngle, dx, dy) {

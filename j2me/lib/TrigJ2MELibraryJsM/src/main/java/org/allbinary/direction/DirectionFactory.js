@@ -13,11 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
-import { CommonPhoneStrings } from '../../../org/allbinary/string/CommonPhoneStrings.js';
-import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not plain js import { CommonPhoneStrings } from '../../../org/allbinary/string/CommonPhoneStrings.js';
+const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
+//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Direction } from './Direction.js';
+//not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 export class DirectionFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

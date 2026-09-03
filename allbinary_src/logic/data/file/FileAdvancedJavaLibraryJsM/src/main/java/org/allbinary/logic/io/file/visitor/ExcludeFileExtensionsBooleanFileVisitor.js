@@ -11,8 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BooleanFileVisitor } from './BooleanFileVisitor.js';
+//not GWT import const BooleanFileVisitor = globalThis.org.allbinary.logic.io.file.visitor.BooleanFileVisitor;
 export class ExcludeFileExtensionsBooleanFileVisitor extends BooleanFileVisitor {
     constructor(filterStringBasicArrayList) {
         super(filterStringBasicArrayList);

@@ -15,8 +15,15 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
 import { Integer } from '../../../../java/lang/Integer.js';
+//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+import { AndroidUtil } from '../../../../org/allbinary/AndroidUtil.js';
+//not GWT import const AndroidUtil = globalThis.org.allbinary.AndroidUtil;
 import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
-import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
+//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SmallIntegerSingletonFactory extends Object {
     static getInstance() {
@@ -24,13 +31,24 @@ export class SmallIntegerSingletonFactory extends Object {
         return SmallIntegerSingletonFactory.instance;
     }
     getMin() {
-        var minAllowed = (J2MEUtil.isJ2ME()
-            ?
-                0
-            :
-                23);
+        var minAllowed = this.getMinAllowed();
         ;
-        ;
+        if (this.MIN <= minAllowed) {
+            if (J2MEUtil.isJ2ME()) {
+            }
+            else if (AndroidUtil.isAndroid()) {
+                var logUtil = LogUtil.getInstance();
+                ;
+                logUtil.putF(new StringMaker().append("Android InputFactory was initialized before GameMidlet: ").appendint(this.MIN).toString(), this, "getMin");
+                this.initWithRange(0x291, 6);
+            }
+            else {
+                var logUtil = LogUtil.getInstance();
+                ;
+                logUtil.putF(new StringMaker().append("InputFactory was initialized before GameMidlet or KeyFactoryInitializer - Currently this is occurs on JS build by TouchMotionGestureFactory constructor: ").appendint(this.MIN).toString(), this, "getMin");
+                this.initWithRange(0x2D0, 6);
+            }
+        }
         if (this.MIN <= minAllowed) {
             var logUtil = LogUtil.getInstance();
             ;
@@ -38,6 +56,22 @@ export class SmallIntegerSingletonFactory extends Object {
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.MIN;
+    }
+    getMinAllowed() {
+        if (J2MEUtil.isJ2ME()) {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return 0;
+        }
+        else {
+            if (AndroidUtil.isAndroid()) {
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return 0x101;
+            }
+            else {
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return 23;
+            }
+        }
     }
     initWithRange(value, negativeValue) {
         for (var index = value - 1; index >= this.lastMin; index--) {

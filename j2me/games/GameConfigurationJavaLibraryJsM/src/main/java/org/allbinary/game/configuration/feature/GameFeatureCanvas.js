@@ -11,7 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameFeatureCanvas extends Canvas {
     constructor() {

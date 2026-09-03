@@ -11,8 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbeClientInformation } from './AbeClientInformation.js';
+//not GWT import const AbeClientInformation = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformation;
 export class StoreAppClientInformation extends AbeClientInformation {
     constructor(name, version, specialName, shortName, longArrayIdentifier) {
         super(name, version, specialName, shortName);

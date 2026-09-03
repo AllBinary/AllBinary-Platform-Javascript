@@ -14,8 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
-import { AngleFactory } from './AngleFactory.js';
-import { AngleIncrementInfo } from './AngleIncrementInfo.js';
+//not plain js import { AngleFactory } from './AngleFactory.js';
+const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not plain js import { AngleIncrementInfo } from './AngleIncrementInfo.js';
+const AngleIncrementInfo = globalThis.org.allbinary.math.AngleIncrementInfo;
 export class AngleIncrementInfoFactory extends Object {
     constructor() {
         super(...arguments);

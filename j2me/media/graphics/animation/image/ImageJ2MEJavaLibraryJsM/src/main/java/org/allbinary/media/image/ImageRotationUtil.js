@@ -13,7 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
+//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+const Image = globalThis.javax.microedition.lcdui.Image;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
+//not GWT import const Anchor = globalThis.org.allbinary.graphics.Anchor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageRotationUtil extends Object {
     static getInstance() {
