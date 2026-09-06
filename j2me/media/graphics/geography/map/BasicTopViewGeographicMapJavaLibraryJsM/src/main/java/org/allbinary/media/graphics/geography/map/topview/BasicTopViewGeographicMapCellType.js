@@ -13,20 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not plain js import { LogUtil } from '../../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not GWT import const GeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellType;
 import { GeographicMapCellTypeFactory } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellTypeFactory.js';
 //not GWT import const GeographicMapCellTypeFactory = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory;
 import { RaceTrackGeographicMapCellType } from '../../../../../../../org/allbinary/media/graphics/geography/map/racetrack/RaceTrackGeographicMapCellType.js';
 //not GWT import const RaceTrackGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType;
-//not plain js import { CommonSeps } from '../../../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { BasicArrayList } from '../../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListS } from '../../../../../../../org/allbinary/util/BasicArrayListS.js';
+//not plain js import { BasicArrayListS } 
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicTopViewGeographicMapCellType extends Object {

@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const PickedUpLayerInterfaceFactoryInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface;
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
@@ -23,7 +23,7 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-//not GWT import const CountedLayerInterfaceFactoryPart = globalThis.org.allbinary.game.part.CountedLayerInterfaceFactoryPart;
+//not GWT import - same folder const CountedLayerInterfaceFactoryPart = globalThis.org.allbinary.game.part.CountedLayerInterfaceFactoryPart;
 export class CountedLayersHudPaintable extends Object {
     constructor(partInterfaceArray, dropSize, startIndex, countedTotalStringColor, countedPartsBorder) {
         super();

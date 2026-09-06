@@ -16,14 +16,13 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Input = globalThis.org.allbinary.game.input.Input;
 import { InputFactory } from '../../../../../org/allbinary/game/input/InputFactory.js';
 //not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKeyEvent } from './GameKeyEvent.js';
-//not GWT import const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
+//not GWT import - same folder const GameKeyEvent = globalThis.org.allbinary.game.input.event.GameKeyEvent;
 export class GameKeyEventFactory extends Object {
     static getInstance() {
         if (GameKeyEventFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

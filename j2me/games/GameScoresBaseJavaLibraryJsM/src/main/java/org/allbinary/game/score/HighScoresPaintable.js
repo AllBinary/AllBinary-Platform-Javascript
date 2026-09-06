@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
@@ -28,12 +28,11 @@ import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/U
 //not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullHighScoresSingletonFactory } from './NullHighScoresSingletonFactory.js';
-//not GWT import const HighScore = globalThis.org.allbinary.game.score.HighScore;
+//not GWT import - same folder const HighScore = globalThis.org.allbinary.game.score.HighScore;
 export class HighScoresPaintable extends Paintable {
     constructor() {
         super();

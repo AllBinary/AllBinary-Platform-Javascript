@@ -18,17 +18,19 @@ import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas
 //not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import { MyCommandsFactory } from '../../../../org/allbinary/graphics/displayable/command/MyCommandsFactory.js';
 //not GWT import const MyCommandsFactory = globalThis.org.allbinary.graphics.displayable.command.MyCommandsFactory;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const DemoGameMidlet = globalThis.org.allbinary.game.midlet.DemoGameMidlet;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not GWT import - same folder const DemoGameMidlet = globalThis.org.allbinary.game.midlet.DemoGameMidlet;
 import { DemoGameMidletEvent } from './DemoGameMidletEvent.js';
-//not GWT import const DemoGameMidletEvent = globalThis.org.allbinary.game.midlet.DemoGameMidletEvent;
+//not GWT import - same folder const DemoGameMidletEvent = globalThis.org.allbinary.game.midlet.DemoGameMidletEvent;
 import { DemoGameMidletStateFactory } from './DemoGameMidletStateFactory.js';
-//not GWT import const DemoGameMidletStateFactory = globalThis.org.allbinary.game.midlet.DemoGameMidletStateFactory;
+//not GWT import - same folder const DemoGameMidletStateFactory = globalThis.org.allbinary.game.midlet.DemoGameMidletStateFactory;
 import { DemoGameMidletEventHandler } from './DemoGameMidletEventHandler.js';
-//not GWT import const DemoGameMidletEventHandler = globalThis.org.allbinary.game.midlet.DemoGameMidletEventHandler;
+//not GWT import - same folder const DemoGameMidletEventHandler = globalThis.org.allbinary.game.midlet.DemoGameMidletEventHandler;
 export class CreateGameRunnable extends Object {
     constructor(demoGameMidlet, hashtable) {
         super();

@@ -14,16 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullImage } from './NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
-//not plain js import { Image } from './Image.js';
+//not GWT import - same folder const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not plain js - same folder import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { Graphics } from './Graphics.js';
+//not plain js - same folder import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //PlatformNullImageJavaLibrary
 export class PlatformImage extends Object {

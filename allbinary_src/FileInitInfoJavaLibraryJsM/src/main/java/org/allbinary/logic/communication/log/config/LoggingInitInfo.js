@@ -28,18 +28,18 @@ import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js'
 //not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { AbPath } from '../../../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigsData } from './LogConfigsData.js';
-//not GWT import const LogConfigsData = globalThis.org.allbinary.logic.communication.log.config.LogConfigsData;
+//not GWT import - same folder const LogConfigsData = globalThis.org.allbinary.logic.communication.log.config.LogConfigsData;
 import { LogConfigData } from './LogConfigData.js';
-//not GWT import const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
+//not GWT import - same folder const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
 import { LogConfig } from './LogConfig.js';
-//not GWT import const LogConfig = globalThis.org.allbinary.logic.communication.log.config.LogConfig;
+//not GWT import - same folder const LogConfig = globalThis.org.allbinary.logic.communication.log.config.LogConfig;
 export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

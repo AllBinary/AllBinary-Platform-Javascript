@@ -18,7 +18,7 @@ import { GraphicsEnvironment } from '../../../java/awt/GraphicsEnvironment.js';
 //not GWT import const GraphicsEnvironment = globalThis.java.awt.GraphicsEnvironment;
 import { Toolkit } from '../../../java/awt/Toolkit.js';
 //not GWT import const Toolkit = globalThis.java.awt.Toolkit;
-//not plain js import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../org/allbinary/graphics/Rectangle.js';
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;

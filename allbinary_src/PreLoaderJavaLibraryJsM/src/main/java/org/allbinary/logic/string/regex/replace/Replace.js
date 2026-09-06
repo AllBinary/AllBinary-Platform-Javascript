@@ -20,13 +20,13 @@ import { AppUrlGlobals } from '../../../../../../org/allbinary/globals/AppUrlGlo
 //not GWT import const AppUrlGlobals = globalThis.org.allbinary.globals.AppUrlGlobals;
 import { URLGLOBALS } from '../../../../../../org/allbinary/globals/URLGLOBALS.js';
 //not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Replace extends Object {

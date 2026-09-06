@@ -23,11 +23,11 @@ import { PickedUpLayerTypeFactory } from '../../../../../../../org/allbinary/gam
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LifeLayerCircularStaticPool } from './LifeLayerCircularStaticPool.js';
-//not GWT import const LifeLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeLayerCircularStaticPool;
+//not GWT import - same folder const LifeLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeLayerCircularStaticPool;
 import { LifeLayerFactory } from './LifeLayerFactory.js';
-//not GWT import const LifeLayerFactory = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeLayerFactory;
+//not GWT import - same folder const LifeLayerFactory = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeLayerFactory;
 import { LifeResources } from './LifeResources.js';
-//not GWT import const LifeResources = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeResources;
+//not GWT import - same folder const LifeResources = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeResources;
 export class LifePickedUpLayerInterfaceFactory extends PickedUpLayerInterfaceFactory {
     //@Throws(Exception.constructor)
     static init() {

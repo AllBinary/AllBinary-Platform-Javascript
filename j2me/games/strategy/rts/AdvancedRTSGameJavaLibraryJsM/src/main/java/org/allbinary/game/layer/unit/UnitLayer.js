@@ -15,10 +15,9 @@
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { Math } from '../../../../../java/lang/Math.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
@@ -114,7 +113,7 @@ import { TrackingEventHandler } from '../../../../../org/allbinary/game/tracking
 //not GWT import const TrackingEventListenerInterface = globalThis.org.allbinary.game.tracking.TrackingEventListenerInterface;
 import { CellPositionFactory } from '../../../../../org/allbinary/graphics/CellPositionFactory.js';
 //not GWT import const CellPositionFactory = globalThis.org.allbinary.graphics.CellPositionFactory;
-//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
@@ -123,21 +122,21 @@ import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullP
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 import { Layer } from '../../../../../org/allbinary/layer/Layer.js';
 //not GWT import const LayerInterfaceFactoryInterface = globalThis.org.allbinary.layer.LayerInterfaceFactoryInterface;
-import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { BasicDecimal } 
 const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
-//not plain js import { AngleFactory } from '../../../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } from '../../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not plain js import { FrameUtil } from '../../../../../org/allbinary/math/FrameUtil.js';
+//not plain js import { FrameUtil } 
 const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
 import { LayerDistanceUtil } from '../../../../../org/allbinary/math/LayerDistanceUtil.js';
 //not GWT import const LayerDistanceUtil = globalThis.org.allbinary.math.LayerDistanceUtil;
-//not plain js import { NamedAngle } from '../../../../../org/allbinary/math/NamedAngle.js';
+//not plain js import { NamedAngle } 
 const NamedAngle = globalThis.org.allbinary.math.NamedAngle;
 import { AttackSound } from '../../../../../org/allbinary/media/audio/AttackSound.js';
 //not GWT import const AttackSound = globalThis.org.allbinary.media.audio.AttackSound;
@@ -147,20 +146,22 @@ import { SimpleGeographicMapCellPositionFactory } from '../../../../../org/allbi
 //not GWT import const SimpleGeographicMapCellPositionFactory = globalThis.org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory;
 import { DropCellPositionHistory } from '../../../../../org/allbinary/media/graphics/geography/map/drop/DropCellPositionHistory.js';
 //not GWT import const RaceTrackGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMap;
-//not plain js import { CommonPhoneStrings } from '../../../../../org/allbinary/string/CommonPhoneStrings.js';
+//not plain js import { CommonPhoneStrings } 
 const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { BasicArrayListS } from '../../../../../org/allbinary/util/BasicArrayListS.js';
+//not plain js import { BasicArrayListS } 
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableUnitBehavior } from './CollidableUnitBehavior.js';
-//not GWT import const CollidableUnitBehavior = globalThis.org.allbinary.game.layer.unit.CollidableUnitBehavior;
+//not GWT import - same folder const CollidableUnitBehavior = globalThis.org.allbinary.game.layer.unit.CollidableUnitBehavior;
 import { UnitWaypointBehavior2 } from './UnitWaypointBehavior2.js';
-//not GWT import const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
+//not GWT import - same folder const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
 export class UnitLayer extends AdvancedRTSGameLayer {
     static getStaticType() {
         //if statement needs to be on the same line and ternary does not work the same way.

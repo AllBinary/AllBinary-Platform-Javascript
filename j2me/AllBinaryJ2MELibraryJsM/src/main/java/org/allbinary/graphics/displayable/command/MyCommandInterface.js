@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
 export {};

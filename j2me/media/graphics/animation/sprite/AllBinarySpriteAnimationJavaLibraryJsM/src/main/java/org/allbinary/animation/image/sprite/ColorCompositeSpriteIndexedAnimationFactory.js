@@ -11,20 +11,20 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { Sprite } from '../../../../../javax/microedition/lcdui/game/Sprite.js';
+//not plain js import { Sprite } 
 const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
 //not GWT import const ProceduralAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface;
 import { BaseImageAnimationFactory } from '../../../../../org/allbinary/animation/image/BaseImageAnimationFactory.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { AnimationFactorySpriteScaleUtil } from '../../../../../org/allbinary/image/sprite/AnimationFactorySpriteScaleUtil.js';
 //not GWT import const AnimationFactorySpriteScaleUtil = globalThis.org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil;
-//not plain js import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
-//not GWT import const SpriteIndexedAnimation = globalThis.org.allbinary.animation.image.sprite.SpriteIndexedAnimation;
+//not GWT import - same folder const SpriteIndexedAnimation = globalThis.org.allbinary.animation.image.sprite.SpriteIndexedAnimation;
 export class ColorCompositeSpriteIndexedAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, basicColorArray, width, height, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory);

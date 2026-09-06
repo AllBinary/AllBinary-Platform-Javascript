@@ -18,7 +18,7 @@ import { AllBinaryEventCircularPool } from '../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventCircularPool = globalThis.org.allbinary.logic.util.event.AllBinaryEventCircularPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEventFactory } from './TrackingEventFactory.js';
-//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
+//not GWT import - same folder const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
 export class TrackingEventCircularStaticPool extends Object {
     constructor() {
         super(...arguments);

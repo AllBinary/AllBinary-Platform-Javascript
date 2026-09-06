@@ -22,9 +22,9 @@ import { TouchMotionGestureFactory } from '../../../../org/allbinary/input/motio
 //not GWT import const TouchMotionGestureFactory = globalThis.org.allbinary.input.motion.gesture.TouchMotionGestureFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCKeyFactory } from './PCKeyFactory.js';
-//not GWT import const PCKeyFactory = globalThis.org.allbinary.game.input.PCKeyFactory;
+//not GWT import - same folder const PCKeyFactory = globalThis.org.allbinary.game.input.PCKeyFactory;
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import const GameKeyFactory = globalThis.org.allbinary.game.input.GameKeyFactory;
+//not GWT import - same folder const GameKeyFactory = globalThis.org.allbinary.game.input.GameKeyFactory;
 export class MotionLaptopDefaultGameInputMapping extends PersistentInputMapping {
     constructor() {
         super(GamePersistanceStrings.getInstance().DEFAULT_INPUT_MAPPING_RECORD_ID);

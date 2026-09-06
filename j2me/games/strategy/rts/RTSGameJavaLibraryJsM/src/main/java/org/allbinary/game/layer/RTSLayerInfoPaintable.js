@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { InitUpdatePaintable } from '../../../../org/allbinary/graphics/paint/InitUpdatePaintable.js';
 //not GWT import const InitUpdatePaintable = globalThis.org.allbinary.graphics.paint.InitUpdatePaintable;
 import { NullInitUpdatePaintable } from '../../../../org/allbinary/graphics/paint/NullInitUpdatePaintable.js';
-//not GWT import const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
+//not GWT import - same folder const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
 export class RTSLayerInfoPaintable extends InitUpdatePaintable {
     constructor() {
         super();

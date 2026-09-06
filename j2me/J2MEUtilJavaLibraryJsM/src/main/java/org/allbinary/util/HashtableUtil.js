@@ -13,13 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not GWT import const Enumeration = globalThis.java.util.Enumeration;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { EnumerationUtil } from './EnumerationUtil.js';
+//not plain js - same folder import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
-//not plain js import { BasicArrayListS } from './BasicArrayListS.js';
+//not plain js - same folder import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js - same folder import { BasicArrayListS } 
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
-//not plain js import { BasicArrayList } from './BasicArrayList.js';
+//not plain js - same folder import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export class HashtableUtil extends Object {
     constructor() {
@@ -49,7 +51,7 @@ export class HashtableUtil extends Object {
         }
     }
     getKeysAsArray(hashtable) {
-        var objectArray = new Array(hashtable.length);
+        var objectArray = new Array(hashtable.size());
         ;
         var index = 0;
         ;
@@ -62,7 +64,7 @@ export class HashtableUtil extends Object {
         return objectArray;
     }
     getKeysAsList(hashtable) {
-        var list = new BasicArrayListS(hashtable.length);
+        var list = new BasicArrayListS(hashtable.size());
         ;
         var enumeration = hashtable.keys();
         ;

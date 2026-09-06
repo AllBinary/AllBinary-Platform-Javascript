@@ -17,23 +17,23 @@ import { Class } from '../../../../java/lang/Class.js';
 //not GWT import const DatabaseConnectionInfoInterface = globalThis.org.allbinary.business.init.db.DatabaseConnectionInfoInterface;
 import { DbConnectionInfo } from '../../../../org/allbinary/business/init/db/DbConnectionInfo.js';
 //not GWT import const DbConnectionInfo = globalThis.org.allbinary.business.init.db.DbConnectionInfo;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../org/allbinary/logic/string/StringValidationUtil.js';
 //not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DynamicInitDb } from './DynamicInitDb.js';
-//not GWT import const DynamicInitDb = globalThis.org.allbinary.business.installer.DynamicInitDb;
+//not GWT import - same folder const DynamicInitDb = globalThis.org.allbinary.business.installer.DynamicInitDb;
 import { InitializerData } from './InitializerData.js';
-//not GWT import const InitializerData = globalThis.org.allbinary.business.installer.InitializerData;
+//not GWT import - same folder const InitializerData = globalThis.org.allbinary.business.installer.InitializerData;
 export class InitializerDatabase extends Object {
     constructor(abeClientInformation, map) {
         super();

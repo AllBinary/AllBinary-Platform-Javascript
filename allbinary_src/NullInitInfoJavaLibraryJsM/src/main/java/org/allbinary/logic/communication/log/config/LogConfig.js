@@ -21,14 +21,14 @@ import { DomSearchHelper } from '../../../../../../org/allbinary/data/tree/dom/D
 //not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
 import { BooleanUtil } from '../../../../../../org/allbinary/logic/java/bool/BooleanUtil.js';
 //not GWT import const BooleanUtil = globalThis.org.allbinary.logic.java.bool.BooleanUtil;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const Node = globalThis.org.w3c.dom.Node;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigData } from './LogConfigData.js';
-//not GWT import const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
+//not GWT import - same folder const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
 export class LogConfig extends Object {
     constructor(aName, aDescription, aPath, aFileName) {
         super();

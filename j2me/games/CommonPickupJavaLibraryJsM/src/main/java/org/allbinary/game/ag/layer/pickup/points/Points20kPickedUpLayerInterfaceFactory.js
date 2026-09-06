@@ -25,11 +25,11 @@ import { PickedUpLayerTypeFactory } from '../../../../../../../org/allbinary/gam
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PointsLayerCircularStaticPool } from './PointsLayerCircularStaticPool.js';
-//not GWT import const PointsLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.pickup.points.PointsLayerCircularStaticPool;
+//not GWT import - same folder const PointsLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.pickup.points.PointsLayerCircularStaticPool;
 import { PointsLayerFactory } from './PointsLayerFactory.js';
-//not GWT import const PointsLayerFactory = globalThis.org.allbinary.game.ag.layer.pickup.points.PointsLayerFactory;
+//not GWT import - same folder const PointsLayerFactory = globalThis.org.allbinary.game.ag.layer.pickup.points.PointsLayerFactory;
 import { PointsResources } from './PointsResources.js';
-//not GWT import const PointsResources = globalThis.org.allbinary.game.ag.layer.pickup.points.PointsResources;
+//not GWT import - same folder const PointsResources = globalThis.org.allbinary.game.ag.layer.pickup.points.PointsResources;
 export class Points20kPickedUpLayerInterfaceFactory extends PickedUpLayerInterfaceFactory {
     //@Throws(Exception.constructor)
     static init() {

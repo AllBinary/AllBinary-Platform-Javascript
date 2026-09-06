@@ -3,9 +3,9 @@ import { Object } from '../../../java/lang/Object.js';
 //not GWT import const View = globalThis.android.view.View;
 import { Toast } from '../../../android/widget/Toast.js';
 //not GWT import const Toast = globalThis.android.widget.Toast;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ToastUtil extends Object {

@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { Input } from '../../../../../org/allbinary/game/input/Input.js';
 //not GWT import const Input = globalThis.org.allbinary.game.input.Input;
 import { InputFactory } from '../../../../../org/allbinary/game/input/InputFactory.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MotionGestureInput extends Input {
     constructor(id, name) {

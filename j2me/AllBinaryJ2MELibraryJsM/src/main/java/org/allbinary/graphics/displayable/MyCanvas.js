@@ -12,13 +12,13 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const Stack = globalThis.java.util.Stack;
-//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { NullCommandListener } from '../../../../javax/microedition/lcdui/NullCommandListener.js';
 //not GWT import const MyCommandInterface = globalThis.org.allbinary.graphics.displayable.command.MyCommandInterface;
@@ -26,22 +26,22 @@ import { MyCommandsFactory } from '../../../../org/allbinary/graphics/displayabl
 //not GWT import const MyCommandsFactory = globalThis.org.allbinary.graphics.displayable.command.MyCommandsFactory;
 import { TouchJ2ME } from '../../../../org/allbinary/input/TouchJ2ME.js';
 //not GWT import const TouchJ2ME = globalThis.org.allbinary.input.TouchJ2ME;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const DisplayableInterface = globalThis.org.allbinary.graphics.displayable.DisplayableInterface;
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not GWT import - same folder const DisplayableInterface = globalThis.org.allbinary.graphics.displayable.DisplayableInterface;
 import { CanvasStrings } from './CanvasStrings.js';
-//not GWT import const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
+//not GWT import - same folder const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
 import { DisplayInfoSingleton } from './DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import - same folder const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 export class MyCanvas extends Canvas {
     constructor(name, childNameList) {
         super();

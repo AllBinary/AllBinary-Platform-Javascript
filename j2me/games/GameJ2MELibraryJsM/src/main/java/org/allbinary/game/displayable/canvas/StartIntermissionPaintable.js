@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Anchor } from '../../../../../org/allbinary/graphics/Anchor.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
@@ -32,13 +32,13 @@ import { UpdateMyFontProcessor } from '../../../../../org/allbinary/graphics/fon
 //not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
 import { InitUpdatePaintable } from '../../../../../org/allbinary/graphics/paint/InitUpdatePaintable.js';
 //not GWT import const InitUpdatePaintable = globalThis.org.allbinary.graphics.paint.InitUpdatePaintable;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class StartIntermissionPaintable extends InitUpdatePaintable {
     constructor(gameCanvas, stringArray, basicColor, font) {
         super();

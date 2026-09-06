@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
+//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DamageFloaters extends Paintable {
     static getInstance() {

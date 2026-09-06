@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { GameFeatureChoiceGroups } from '../../../../org/allbinary/game/configuration/feature/GameFeatureChoiceGroups.js';
@@ -26,11 +26,10 @@ import { Init } from '../../../../org/allbinary/init/Init.js';
 //not GWT import const Init = globalThis.org.allbinary.init.Init;
 import { OrientationData } from '../../../../org/allbinary/input/gyro/OrientationData.js';
 //not GWT import const OrientationData = globalThis.org.allbinary.input.gyro.OrientationData;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InGameFeatures extends Init {
     init() {

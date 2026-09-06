@@ -19,7 +19,7 @@ import { InterfaceUtil } from '../../../../../../org/allbinary/logic/java/anyTyp
 //not GWT import const InterfaceUtil = globalThis.org.allbinary.logic.java.anyType.InterfaceUtil;
 import { MethodUtil } from '../../../../../../org/allbinary/logic/java/anyType/MethodUtil.js';
 //not GWT import const MethodUtil = globalThis.org.allbinary.logic.java.anyType.MethodUtil;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ClassUtil extends Object {

@@ -14,6 +14,6 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CenterStaticViewPositionFactory } from './CenterStaticViewPositionFactory.js';
-//not GWT import const CenterStaticViewPositionFactory = globalThis.org.allbinary.view.CenterStaticViewPositionFactory;
+//not GWT import - same folder const CenterStaticViewPositionFactory = globalThis.org.allbinary.view.CenterStaticViewPositionFactory;
 export class CenterViewPositionFactory extends CenterStaticViewPositionFactory {
 }

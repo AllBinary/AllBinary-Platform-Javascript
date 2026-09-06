@@ -13,15 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLImageFactory } from './OpenGLImageFactory.js';
-//not GWT import const OpenGLImageFactory = globalThis.org.allbinary.image.opengles.OpenGLImageFactory;
+//not GWT import - same folder const OpenGLImageFactory = globalThis.org.allbinary.image.opengles.OpenGLImageFactory;
 export class OpenGLImageSpecificFactory extends Object {
     constructor() {
         super(...arguments);

@@ -11,9 +11,8 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
-//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class GameProcessor extends Processor {
     constructor(gameCanvas) {
         super();

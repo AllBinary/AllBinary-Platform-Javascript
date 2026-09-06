@@ -11,25 +11,22 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { DisposalUtil } from '../../../../org/allbinary/DisposalUtil.js';
-const DisposalUtil = globalThis.org.allbinary.DisposalUtil;
+import { DisposalUtil } from '../../../../org/allbinary/DisposalUtil.js';
 //not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 import { RotationAnimation } from '../../../../org/allbinary/animation/RotationAnimation.js';
 //not GWT import const RotationAnimation = globalThis.org.allbinary.animation.RotationAnimation;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
 //not GWT import const Anchor = globalThis.org.allbinary.graphics.Anchor;
-//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not plain js import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageBaseRotationAnimation extends RotationAnimation {
     constructor(image, angleInfo, totalAngle, animationBehavior) {

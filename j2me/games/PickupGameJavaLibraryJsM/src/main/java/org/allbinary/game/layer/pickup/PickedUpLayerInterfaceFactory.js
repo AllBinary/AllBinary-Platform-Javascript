@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PickedUpLayerInterfaceFactoryBase } from './PickedUpLayerInterfaceFactoryBase.js';
-//not GWT import const IconLayer = globalThis.org.allbinary.game.layer.pickup.IconLayer;
+//not GWT import - same folder const IconLayer = globalThis.org.allbinary.game.layer.pickup.IconLayer;
 export class PickedUpLayerInterfaceFactory extends PickedUpLayerInterfaceFactoryBase {
     constructor(pickeUpLayerType, iconLayer, animationInterface) {
         super();

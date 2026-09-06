@@ -14,42 +14,40 @@
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { GPoint } from '../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { ABCustomItem } from '../../../../org/allbinary/graphics/form/item/ABCustomItem.js';
 //not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { RectangleCollisionUtil } from '../../../../org/allbinary/math/RectangleCollisionUtil.js';
+//not plain js import { RectangleCollisionUtil } 
 const RectangleCollisionUtil = globalThis.org.allbinary.math.RectangleCollisionUtil;
-//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PaintableForm } from './PaintableForm.js';
-//not GWT import const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
+//not GWT import - same folder const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
-//not GWT import const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
+//not GWT import - same folder const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
 import { ItemIndexPaintable } from './ItemIndexPaintable.js';
-//not GWT import const ItemIndexPaintable = globalThis.org.allbinary.graphics.form.ItemIndexPaintable;
+//not GWT import - same folder const ItemIndexPaintable = globalThis.org.allbinary.graphics.form.ItemIndexPaintable;
 import { ItemIndexDx } from './ItemIndexDx.js';
-//not GWT import const ItemPaintable = globalThis.org.allbinary.graphics.form.ItemPaintable;
+//not GWT import - same folder const ItemPaintable = globalThis.org.allbinary.graphics.form.ItemPaintable;
 import { FormTypeFactory } from './FormTypeFactory.js';
-//not GWT import const FormType = globalThis.org.allbinary.graphics.form.FormType;
+//not GWT import - same folder const FormType = globalThis.org.allbinary.graphics.form.FormType;
 export class ScrollSelectionForm extends PaintableForm {
     static createForm(title, items, formPaintableFactory, border, backgroundBasicColor, foregroundBasicColor) {
         try {

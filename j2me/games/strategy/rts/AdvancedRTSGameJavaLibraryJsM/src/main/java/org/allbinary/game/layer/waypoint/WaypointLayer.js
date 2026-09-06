@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const ProceduralAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface;
 import { Health } from '../../../../../org/allbinary/game/health/Health.js';
@@ -28,11 +28,11 @@ import { AttackSound } from '../../../../../org/allbinary/media/audio/AttackSoun
 //not GWT import const AttackSound = globalThis.org.allbinary.media.audio.AttackSound;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableWaypointBehavior } from './CollidableWaypointBehavior.js';
-//not GWT import const CollidableWaypointBehavior = globalThis.org.allbinary.game.layer.waypoint.CollidableWaypointBehavior;
+//not GWT import - same folder const CollidableWaypointBehavior = globalThis.org.allbinary.game.layer.waypoint.CollidableWaypointBehavior;
 import { Waypoint } from './Waypoint.js';
-//not GWT import const Waypoint = globalThis.org.allbinary.game.layer.waypoint.Waypoint;
+//not GWT import - same folder const Waypoint = globalThis.org.allbinary.game.layer.waypoint.Waypoint;
 import { WaypointCellPositionHistory } from './WaypointCellPositionHistory.js';
-//not GWT import const WaypointCellPositionHistory = globalThis.org.allbinary.game.layer.waypoint.WaypointCellPositionHistory;
+//not GWT import - same folder const WaypointCellPositionHistory = globalThis.org.allbinary.game.layer.waypoint.WaypointCellPositionHistory;
 export class WaypointLayer extends AdvancedRTSGameLayer {
     static getStaticType() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -16,11 +16,11 @@ import { GravityUtil } from '../../../../org/allbinary/game/physics/acceleration
 //not GWT import const GravityUtil = globalThis.org.allbinary.game.physics.acceleration.GravityUtil;
 import { VelocityProperties } from '../../../../org/allbinary/game/physics/velocity/VelocityProperties.js';
 //not GWT import const VelocityProperties = globalThis.org.allbinary.game.physics.velocity.VelocityProperties;
-//not plain js import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not plain js import { BasicDecimal } 
 const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicConstantVelocityMovement } from './BasicConstantVelocityMovement.js';
-//not GWT import const BasicConstantVelocityMovement = globalThis.org.allbinary.physics.movement.BasicConstantVelocityMovement;
+//not GWT import - same folder const BasicConstantVelocityMovement = globalThis.org.allbinary.physics.movement.BasicConstantVelocityMovement;
 export class SimpleGravityVelocityMovement extends BasicConstantVelocityMovement {
     constructor(speedBasicDecimal) {
         super(speedBasicDecimal, new VelocityProperties(Math.round(speedBasicDecimal.getUnscaled()), Math.round(speedBasicDecimal.getUnscaled())));

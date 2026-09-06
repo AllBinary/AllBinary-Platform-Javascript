@@ -13,15 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListUtil } from '../../../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import const PathFindingInfoInterface = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingInfoInterface;
+//not GWT import - same folder const PathFindingInfoInterface = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingInfoInterface;
 import { PathFindingNodeCostInfoFactoryBase } from './PathFindingNodeCostInfoFactoryBase.js';
-//not GWT import const PathFindingNodeCostInfoFactoryBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactoryBase;
+//not GWT import - same folder const PathFindingNodeCostInfoFactoryBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactoryBase;
 import { GeographicPathFinderBase } from './GeographicPathFinderBase.js';
-//not GWT import const PathFindingNode = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNode;
+//not GWT import - same folder const PathFindingNode = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNode;
 export class PathFindingInfo extends Object {
     constructor(pathFindingNodeCostInfoFactoryInterface, startPathFindingNodeList, endPathFindingNodeList) {
         super();

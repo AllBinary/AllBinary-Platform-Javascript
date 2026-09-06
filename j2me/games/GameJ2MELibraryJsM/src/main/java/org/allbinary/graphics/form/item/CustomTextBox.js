@@ -11,12 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
@@ -28,16 +27,15 @@ import { PlatformKeyFactory } from '../../../../../org/allbinary/game/input/Plat
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { TextItemVisitor } from '../../../../../org/allbinary/graphics/form/item/validation/TextItemVisitor.js';
 //not GWT import const TextItemVisitor = globalThis.org.allbinary.graphics.form.item.validation.TextItemVisitor;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABTextFieldItem } from './ABTextFieldItem.js';
-//not GWT import const ABTextFieldItem = globalThis.org.allbinary.graphics.form.item.ABTextFieldItem;
+//not GWT import - same folder const ABTextFieldItem = globalThis.org.allbinary.graphics.form.item.ABTextFieldItem;
 export class CustomTextBox extends GameCommandCanvas {
     constructor(cmdListener, label, text, maxSize, constraints, font, backgroundBasicColor, foregroundBasicColor) {
         super(cmdListener, label, backgroundBasicColor, foregroundBasicColor);

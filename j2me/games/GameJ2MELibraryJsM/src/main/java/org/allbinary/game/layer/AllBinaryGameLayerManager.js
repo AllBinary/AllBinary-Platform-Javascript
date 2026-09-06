@@ -11,7 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { GameInfo } from '../../../../org/allbinary/game/GameInfo.js';
 //not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
 import { NullPlayerGameInputComposite } from '../../../../org/allbinary/game/input/NullPlayerGameInputComposite.js';
@@ -22,11 +21,11 @@ import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/Basi
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { AllBinaryLayerManager } from '../../../../org/allbinary/layer/AllBinaryLayerManager.js';
 //not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AllBinaryGameLayerManager extends AllBinaryLayerManager {

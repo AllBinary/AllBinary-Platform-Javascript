@@ -28,7 +28,7 @@ import { StreamUtil } from '../../../../../../org/allbinary/logic/io/StreamUtil.
 //not GWT import const Document = globalThis.org.w3c.dom.Document;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomDocumentHelper } from './DomDocumentHelper.js';
-//not GWT import const DomDocumentHelper = globalThis.org.allbinary.data.tree.dom.document.DomDocumentHelper;
+//not GWT import - same folder const DomDocumentHelper = globalThis.org.allbinary.data.tree.dom.document.DomDocumentHelper;
 export class DomDocumentFileHelper extends Object {
     //@Throws(Exception.constructor)
     static createDocument(xmlFile) {

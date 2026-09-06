@@ -13,13 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { AbPathData } from '../../../../../org/allbinary/logic/io/path/AbPathData.js';
+//not plain js import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const DatabaseConnectionInfoInterface = globalThis.org.allbinary.business.init.db.DatabaseConnectionInfoInterface;
+//not GWT import - same folder const DatabaseConnectionInfoInterface = globalThis.org.allbinary.business.init.db.DatabaseConnectionInfoInterface;
 export class DbConnectionInfo extends Object {
     constructor() {
         super();

@@ -1,35 +1,35 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { PlayerListener } from '../../../../javax/microedition/media/PlayerListener.js';
+//not plain js import { PlayerListener } 
 const PlayerListener = globalThis.javax.microedition.media.PlayerListener;
 //not GWT import const MediaPlayer = globalThis.android.media.MediaPlayer;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidMediaPlayerWrapper } from './AndroidMediaPlayerWrapper.js';
-//not GWT import const OnCompletionListener = globalThis.org.allbinary.media.audio.OnCompletionListener;
+//not GWT import - same folder const OnCompletionListener = globalThis.org.allbinary.media.audio.OnCompletionListener;
 //import { MediaPlayerOnBufferingUpdateListener } from './MediaPlayerOnBufferingUpdateListener.js';
-//not GWT import const MediaPlayerOnBufferingUpdateListener = globalThis.org.allbinary.media.audio.MediaPlayerOnBufferingUpdateListener;
+//not GWT import - same folder const MediaPlayerOnBufferingUpdateListener = globalThis.org.allbinary.media.audio.MediaPlayerOnBufferingUpdateListener;
 //import { AndroidMediaPlayerOnBufferingUpdateListener } from './AndroidMediaPlayerOnBufferingUpdateListener.js';
-//not GWT import const AndroidMediaPlayerOnBufferingUpdateListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnBufferingUpdateListener;
+//not GWT import - same folder const AndroidMediaPlayerOnBufferingUpdateListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnBufferingUpdateListener;
 //import { MediaPlayerOnPreparedListener } from './MediaPlayerOnPreparedListener.js';
-//not GWT import const MediaPlayerOnPreparedListener = globalThis.org.allbinary.media.audio.MediaPlayerOnPreparedListener;
+//not GWT import - same folder const MediaPlayerOnPreparedListener = globalThis.org.allbinary.media.audio.MediaPlayerOnPreparedListener;
 //import { AndroidMediaPlayerOnPreparedListener } from './AndroidMediaPlayerOnPreparedListener.js';
-//not GWT import const AndroidMediaPlayerOnPreparedListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnPreparedListener;
+//not GWT import - same folder const AndroidMediaPlayerOnPreparedListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnPreparedListener;
 //import { MediaPlayerOnErrorListener } from './MediaPlayerOnErrorListener.js';
-//not GWT import const MediaPlayerOnErrorListener = globalThis.org.allbinary.media.audio.MediaPlayerOnErrorListener;
+//not GWT import - same folder const MediaPlayerOnErrorListener = globalThis.org.allbinary.media.audio.MediaPlayerOnErrorListener;
 //import { AndroidMediaPlayerOnErrorListener } from './AndroidMediaPlayerOnErrorListener.js';
-//not GWT import const AndroidMediaPlayerOnErrorListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnErrorListener;
+//not GWT import - same folder const AndroidMediaPlayerOnErrorListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnErrorListener;
 //import { MediaPlayerOnCompletionListener } from './MediaPlayerOnCompletionListener.js';
-//not GWT import const MediaPlayerOnCompletionListener = globalThis.org.allbinary.media.audio.MediaPlayerOnCompletionListener;
+//not GWT import - same folder const MediaPlayerOnCompletionListener = globalThis.org.allbinary.media.audio.MediaPlayerOnCompletionListener;
 //import { AndroidMediaPlayerOnCompletionListener } from './AndroidMediaPlayerOnCompletionListener.js';
-//not GWT import const AndroidMediaPlayerOnCompletionListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnCompletionListener;
+//not GWT import - same folder const AndroidMediaPlayerOnCompletionListener = globalThis.org.allbinary.media.audio.AndroidMediaPlayerOnCompletionListener;
 export class AndroidMediaPlayerWrapperListener extends Object {
     constructor(androidMediaPlayerWrapper) {
         super();

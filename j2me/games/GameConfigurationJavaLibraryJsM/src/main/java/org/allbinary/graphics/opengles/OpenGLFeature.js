@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { Feature } from '../../../../org/allbinary/game/configuration/feature/Feature.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLFeature extends Feature {
     constructor(name) {

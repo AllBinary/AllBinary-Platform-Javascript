@@ -13,20 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { AngleIncrementInfo } from './AngleIncrementInfo.js';
+//not plain js - same folder import { AngleIncrementInfo } 
 const AngleIncrementInfo = globalThis.org.allbinary.math.AngleIncrementInfo;
-//not plain js import { AngleIncrementInfoFactory } from './AngleIncrementInfoFactory.js';
+//not plain js - same folder import { AngleIncrementInfoFactory } 
 const AngleIncrementInfoFactory = globalThis.org.allbinary.math.AngleIncrementInfoFactory;
-//not plain js import { FrameUtil } from './FrameUtil.js';
+//not plain js - same folder import { FrameUtil } 
 const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
 export class AngleInfo extends Object {
     static getInstance(angleIncrement) {

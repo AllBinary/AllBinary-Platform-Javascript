@@ -20,7 +20,7 @@ import { AnimationFrameToImageUtil } from '../../../../org/allbinary/image/Anima
 //not GWT import const AnimationFrameToImageUtil = globalThis.org.allbinary.image.AnimationFrameToImageUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageAnimation } from './ImageAnimation.js';
-//not GWT import const ImageAnimation = globalThis.org.allbinary.animation.image.ImageAnimation;
+//not GWT import - same folder const ImageAnimation = globalThis.org.allbinary.animation.image.ImageAnimation;
 export class ImageAnimationSingletonInterfaceFactory extends SingletonAnimationInterfaceFactory {
     constructor(animationInterface, width, height) {
         super(new ImageAnimation(AnimationFrameToImageUtil.getInstance().getInstanceWH(width, height, animationInterface), AnimationBehavior.getInstance()));

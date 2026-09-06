@@ -11,11 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { GameAdStateBase } from '../../../org/allbinary/business/advertisement/GameAdStateBase.js';
 //not GWT import const VirtualKeyboardEvent = globalThis.org.allbinary.input.event.VirtualKeyboardEvent;
 import { VirtualKeyboardEventHandler } from '../../../org/allbinary/input/event/VirtualKeyboardEventHandler.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const VirtualKeyboardEventListenerInterface = globalThis.org.allbinary.input.event.VirtualKeyboardEventListenerInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameAdState extends GameAdStateBase {
     constructor(adConfiguration) {

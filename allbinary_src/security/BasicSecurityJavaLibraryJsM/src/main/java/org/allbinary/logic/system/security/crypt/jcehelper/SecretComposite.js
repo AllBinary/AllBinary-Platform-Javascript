@@ -17,7 +17,7 @@ import { ByteUtil } from '../../../../../../../org/allbinary/logic/java/byteutil
 //not GWT import const ByteUtil = globalThis.org.allbinary.logic.java.byteutil.ByteUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseSecretComposite } from './BaseSecretComposite.js';
-//not GWT import const BaseSecretComposite = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.BaseSecretComposite;
+//not GWT import - same folder const BaseSecretComposite = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.BaseSecretComposite;
 export class SecretComposite extends BaseSecretComposite {
     constructor(secretKey, cipher, key) {
         super();

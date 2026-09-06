@@ -11,8 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { ExplosionBasicSound } from '../../../../../org/allbinary/ag/weapon/media/audio/ExplosionBasicSound.js';
 //not GWT import const ExplosionBasicSound = globalThis.org.allbinary.ag.weapon.media.audio.ExplosionBasicSound;
@@ -40,11 +39,11 @@ import { TileLayerPositionIntoViewPosition } from '../../../../../org/allbinary/
 //not GWT import const TileLayerPositionIntoViewPosition = globalThis.org.allbinary.game.view.TileLayerPositionIntoViewPosition;
 import { RectangleFactory } from '../../../../../org/allbinary/graphics/RectangleFactory.js';
 //not GWT import const RectangleFactory = globalThis.org.allbinary.graphics.RectangleFactory;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 import { DirectionFactory } from '../../../../../org/allbinary/direction/DirectionFactory.js';
@@ -65,15 +64,17 @@ import { DropCellPositionHistory } from '../../../../../org/allbinary/media/grap
 //not GWT import const DropCellPositionHistory = globalThis.org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory;
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
-//not plain js import { BasicArrayListS } from '../../../../../org/allbinary/util/BasicArrayListS.js';
+//not plain js import { BasicArrayListS } 
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 import { RemoteInfo } from '../../../../../org/allbinary/game/multiplayer/layer/RemoteInfo.js';
 //not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimulatedBuildingPropertiesFactory } from './SimulatedBuildingPropertiesFactory.js';
-//not GWT import const BuildingPropertiesFactory = globalThis.org.allbinary.game.layer.building.BuildingPropertiesFactory;
+//not GWT import - same folder const BuildingPropertiesFactory = globalThis.org.allbinary.game.layer.building.BuildingPropertiesFactory;
 import { BuildingInfoHudPaintable } from './BuildingInfoHudPaintable.js';
-//not GWT import const BuildingInfoHudPaintable = globalThis.org.allbinary.game.layer.building.BuildingInfoHudPaintable;
+//not GWT import - same folder const BuildingInfoHudPaintable = globalThis.org.allbinary.game.layer.building.BuildingInfoHudPaintable;
 export class BuildingLayer extends AdvancedRTSGameLayer {
     //@Throws(Exception.constructor)
     static createSimulated() {

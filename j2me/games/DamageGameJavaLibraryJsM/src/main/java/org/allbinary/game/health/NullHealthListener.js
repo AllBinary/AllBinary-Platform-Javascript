@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const HealthListenerInterface = globalThis.org.allbinary.game.health.HealthListenerInterface;
+//not GWT import - same folder const HealthListenerInterface = globalThis.org.allbinary.game.health.HealthListenerInterface;
 export class NullHealthListener extends Object {
     onHealthChange() {
     }

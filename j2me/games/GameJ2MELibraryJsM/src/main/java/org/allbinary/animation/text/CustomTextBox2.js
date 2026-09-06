@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { CustomTextBox } from '../../../../org/allbinary/graphics/form/item/CustomTextBox.js';

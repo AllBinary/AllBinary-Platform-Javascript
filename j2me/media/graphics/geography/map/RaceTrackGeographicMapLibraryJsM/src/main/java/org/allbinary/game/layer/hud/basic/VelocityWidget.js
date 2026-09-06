@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } from '../../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { OpenGLFeatureUtil } from '../../../../../../org/allbinary/graphics/opengles/OpenGLFeatureUtil.js';
 //not GWT import const OpenGLFeatureUtil = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureUtil;
@@ -21,11 +21,11 @@ import { BasicHud } from '../../../../../../org/allbinary/game/graphics/hud/Basi
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { MyFontProcessor } from '../../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const MyFontProcessor = globalThis.org.allbinary.graphics.font.MyFontProcessor;
-//not plain js import { MathUtil } from '../../../../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not plain js import { PrimitiveLongSingleton } from '../../../../../../org/allbinary/logic/math/PrimitiveLongSingleton.js';
+//not plain js import { PrimitiveLongSingleton } 
 const PrimitiveLongSingleton = globalThis.org.allbinary.logic.math.PrimitiveLongSingleton;
-//not plain js import { PrimitiveLongUtil } from '../../../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
+//not plain js import { PrimitiveLongUtil } 
 const PrimitiveLongUtil = globalThis.org.allbinary.logic.math.PrimitiveLongUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class VelocityWidget extends BasicHud {

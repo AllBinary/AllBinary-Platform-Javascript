@@ -13,7 +13,7 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbstractArrayListPool } from './AbstractArrayListPool.js';
-//not GWT import const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
+//not GWT import - same folder const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
 export class BasicArrayListResetablePool extends AbstractArrayListPool {
     constructor(cacheableInterfaceFactoryInterface) {
         super(cacheableInterfaceFactoryInterface);

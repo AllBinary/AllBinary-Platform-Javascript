@@ -18,17 +18,17 @@ import { BasicHudFactory } from '../../../../../../../org/allbinary/game/graphic
 //not GWT import const BasicHudFactory = globalThis.org.allbinary.game.graphics.hud.BasicHudFactory;
 import { BasicColorFactory } from '../../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
-//not plain js import { NullUtil } from '../../../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringUtil } from '../../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NumberStringHud } from './NumberStringHud.js';
-//not GWT import const NumberStringHud = globalThis.org.allbinary.game.ag.layer.hud.basic.NumberStringHud;
+//not GWT import - same folder const NumberStringHud = globalThis.org.allbinary.game.ag.layer.hud.basic.NumberStringHud;
 export class NumberStringHudFactory extends Object {
     constructor() {
         super(...arguments);

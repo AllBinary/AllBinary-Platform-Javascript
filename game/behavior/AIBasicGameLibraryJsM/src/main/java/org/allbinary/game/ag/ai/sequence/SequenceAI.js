@@ -15,9 +15,9 @@ import { ArtificialIntelligence } from '../../../../../../org/allbinary/ai/Artif
 //not GWT import const ArtificialIntelligenceTransitionInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceTransitionInterface;
 import { ArrayAI } from '../../../../../../org/allbinary/game/ag/ai/ArrayAI.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SequenceAI extends ArrayAI {

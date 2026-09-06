@@ -13,17 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 //not GWT import const MyCanvas = globalThis.org.allbinary.graphics.displayable.MyCanvas;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const CommandFormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.CommandFormInputProcessor;
+//not GWT import - same folder const CommandFormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.CommandFormInputProcessor;
 export class CommandRunnable extends Object {
     constructor(commandFormInputProcessor, command) {
         super();

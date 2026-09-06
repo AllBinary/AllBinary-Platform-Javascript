@@ -12,15 +12,15 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Input } from './Input.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
 import { InputFactory } from './InputFactory.js';
-//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
+//not GWT import - same folder const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
 export class J2MEGameKey extends Input {
     static getString(keyCode) {
         var input = InputFactory.getInstance().getInstanceById(keyCode);

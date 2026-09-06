@@ -13,13 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { J2MEGameKey } from './J2MEGameKey.js';
-//not GWT import const J2MEGameKey = globalThis.org.allbinary.game.input.J2MEGameKey;
+//not GWT import - same folder const J2MEGameKey = globalThis.org.allbinary.game.input.J2MEGameKey;
 import { J2MEKeyFactory } from './J2MEKeyFactory.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
 export class PlatformKeyFactory extends Object {
     static getInstance() {
         if (PlatformKeyFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

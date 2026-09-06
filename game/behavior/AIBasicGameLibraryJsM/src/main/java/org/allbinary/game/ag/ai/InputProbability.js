@@ -13,12 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InputProbability extends Object {
     constructor(likelyhoodIntegerArray, repeatLikelyhoodIntegerArray, max, timeDelayHelper) {

@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { NullCanvas } from '../../../../../javax/microedition/lcdui/NullCanvas.js';
 //not GWT import const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
-//not plain js import { BasicArrayListUtil } from '../../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
-//not GWT import const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
+//not GWT import - same folder const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
 export class NoMenuInputProcessor extends BasicMenuInputProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

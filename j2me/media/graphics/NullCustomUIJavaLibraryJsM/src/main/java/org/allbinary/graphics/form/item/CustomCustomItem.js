@@ -1,12 +1,12 @@
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
 import { UpdateMyFontProcessor } from '../../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
 //not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABCustomItem } from './ABCustomItem.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import - same folder const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 export class CustomCustomItem extends ABCustomItem {
     constructor(label, backgroundBasicColor, foregroundBasicColor) {
         super(label, backgroundBasicColor, foregroundBasicColor);

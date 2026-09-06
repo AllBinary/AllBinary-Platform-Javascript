@@ -17,9 +17,9 @@ import { BaseGameInputMotionEventProcessor } from '../../../../../../org/allbina
 //not GWT import const BaseGameInputMotionEventProcessor = globalThis.org.allbinary.android.input.motion.BaseGameInputMotionEventProcessor;
 import { AllMotionRecognizer } from '../../../../../../org/allbinary/input/motion/AllMotionRecognizer.js';
 //not GWT import const MotionRecognizer = globalThis.org.allbinary.input.motion.MotionRecognizer;
-//not plain js import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameInputMotionEventProcessorAPI1 extends BaseGameInputMotionEventProcessor {

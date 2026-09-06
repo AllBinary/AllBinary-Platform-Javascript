@@ -14,10 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Integer } from '../../../../java/lang/Integer.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ResourceLoadingLevel } from './ResourceLoadingLevel.js';
-//not GWT import const ResourceLoadingLevel = globalThis.org.allbinary.game.resource.ResourceLoadingLevel;
+//not GWT import - same folder const ResourceLoadingLevel = globalThis.org.allbinary.game.resource.ResourceLoadingLevel;
 export class ResourceLoadingLevelFactory extends Object {
     constructor() {
         super(...arguments);

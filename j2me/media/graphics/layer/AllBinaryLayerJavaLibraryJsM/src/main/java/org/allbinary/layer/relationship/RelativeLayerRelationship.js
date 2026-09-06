@@ -11,16 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { GPoint } from '../../../../org/allbinary/graphics/GPoint.js';
+/* Generated Code Do Not Modify */
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 import { RelativeRelationship } from '../../../../org/allbinary/graphics/RelativeRelationship.js';
 //not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RelativeLayerRelationship extends RelativeRelationship {
     constructor(layer, point, typesAllowedList) {

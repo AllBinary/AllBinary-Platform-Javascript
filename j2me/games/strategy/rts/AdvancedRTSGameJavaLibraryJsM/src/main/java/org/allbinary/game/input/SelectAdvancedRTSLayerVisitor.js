@@ -20,12 +20,12 @@ import { CollidableDestroyableDamageableLayer } from '../../../../org/allbinary/
 //not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
 import { UnitLayer } from '../../../../org/allbinary/game/layer/unit/UnitLayer.js';
 //not GWT import const UnitLayer = globalThis.org.allbinary.game.layer.unit.UnitLayer;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { Visitor } from '../../../../org/allbinary/logic/util/visitor/Visitor.js';
-//not GWT import const SelectedRTSLayersPlayerGameInput = globalThis.org.allbinary.game.input.SelectedRTSLayersPlayerGameInput;
+//not GWT import - same folder const SelectedRTSLayersPlayerGameInput = globalThis.org.allbinary.game.input.SelectedRTSLayersPlayerGameInput;
 export class SelectAdvancedRTSLayerVisitor extends Visitor {
     constructor(selectedRTSLayersPlayerGameInput) {
         super();

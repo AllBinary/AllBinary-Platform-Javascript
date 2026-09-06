@@ -13,18 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { DebugFactory } from '../../../../org/allbinary/debug/DebugFactory.js';
 //not GWT import const DebugFactory = globalThis.org.allbinary.debug.DebugFactory;
 import { NoDebug } from '../../../../org/allbinary/debug/NoDebug.js';
 //not GWT import const NoDebug = globalThis.org.allbinary.debug.NoDebug;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LicenseInitInfo extends Object {
     constructor() {

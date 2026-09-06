@@ -12,14 +12,14 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //not GWT import const PlatformTextureBaseFactory = globalThis.org.allbinary.platform.opengles.PlatformTextureBaseFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLImageFactory } from './OpenGLImageFactory.js';
-//not GWT import const OpenGLImageFactory = globalThis.org.allbinary.image.opengles.OpenGLImageFactory;
+//not GWT import - same folder const OpenGLImageFactory = globalThis.org.allbinary.image.opengles.OpenGLImageFactory;
 import { OpenGLESGL11ExtImage } from './OpenGLESGL11ExtImage.js';
-//not GWT import const OpenGLESGL11ExtImage = globalThis.org.allbinary.image.opengles.OpenGLESGL11ExtImage;
+//not GWT import - same folder const OpenGLESGL11ExtImage = globalThis.org.allbinary.image.opengles.OpenGLESGL11ExtImage;
 export class OpenGLESGL11ExtImageFactory extends OpenGLImageFactory {
     getInstance(image, bitmapFactory, textureFactory) {
         //if statement needs to be on the same line and ternary does not work the same way.

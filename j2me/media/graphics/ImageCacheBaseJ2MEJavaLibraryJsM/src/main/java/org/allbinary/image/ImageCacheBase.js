@@ -14,28 +14,30 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Image } from '../../../javax/microedition/lcdui/Image.js';
+//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
-import { StdUtil } from '../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageFactory } from './ImageFactory.js';
-//not GWT import const ImageFactory = globalThis.org.allbinary.image.ImageFactory;
+//not GWT import - same folder const ImageFactory = globalThis.org.allbinary.image.ImageFactory;
 export class ImageCacheBase extends Object {
     constructor() {
         super();

@@ -22,13 +22,13 @@ import { RightTrackballInputToGameKeyEventAction } from '../../../../../org/allb
 //not GWT import const RightTrackballInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.trackball.action.RightTrackballInputToGameKeyEventAction;
 import { UpTrackballInputToGameKeyEventAction } from '../../../../../org/allbinary/input/motion/trackball/action/UpTrackballInputToGameKeyEventAction.js';
 //not GWT import const UpTrackballInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.trackball.action.UpTrackballInputToGameKeyEventAction;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionEventProcessor } from './MotionEventProcessor.js';
-//not GWT import const MotionEventProcessor = globalThis.org.allbinary.android.input.motion.MotionEventProcessor;
+//not GWT import - same folder const MotionEventProcessor = globalThis.org.allbinary.android.input.motion.MotionEventProcessor;
 export class TrackballGameInputMotionEventProcessor extends MotionEventProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -13,10 +13,6 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
-const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
-const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { EntryData } from '../../../../../../org/allbinary/business/entry/EntryData.js';
 //not GWT import const EntryData = globalThis.org.allbinary.business.entry.EntryData;
 import { DomNodeHelper } from '../../../../../../org/allbinary/data/tree/dom/DomNodeHelper.js';
@@ -41,16 +37,16 @@ import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js'
 //not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { BooleanUtil } from '../../../../../../org/allbinary/logic/java/bool/BooleanUtil.js';
 //not GWT import const BooleanUtil = globalThis.org.allbinary.logic.java.bool.BooleanUtil;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigData } from './LogConfigData.js';
-//not GWT import const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
+//not GWT import - same folder const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
 export class LogConfig extends Object {
     constructor(aName, aDescription, aPath, aFileName) {
         super();

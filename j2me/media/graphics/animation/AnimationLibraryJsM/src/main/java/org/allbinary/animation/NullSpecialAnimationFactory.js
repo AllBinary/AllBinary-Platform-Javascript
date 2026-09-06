@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { SpecialAnimation } from '../../../org/allbinary/animation/special/SpecialAnimation.js';
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import - same folder const Animation = globalThis.org.allbinary.animation.Animation;
 export class NullSpecialAnimationFactory extends Object {
     static getFactoryInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

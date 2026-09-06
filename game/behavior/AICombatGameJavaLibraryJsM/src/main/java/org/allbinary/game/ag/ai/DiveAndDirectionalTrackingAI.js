@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 //not GWT import const ArtificialIntelligenceInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceInterface;
 import { Direction } from '../../../../../org/allbinary/direction/Direction.js';
@@ -26,13 +26,13 @@ import { TrackingEventHandler } from '../../../../../org/allbinary/game/tracking
 //not GWT import const TrackingEventListenerInterface = globalThis.org.allbinary.game.tracking.TrackingEventListenerInterface;
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { MathUtil } from '../../../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
@@ -41,9 +41,9 @@ import { GameTickTimeDelayHelperFactory } from '../../../../../org/allbinary/tim
 //not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DiveAndDirectionalTrackingAI extends BasicAI {

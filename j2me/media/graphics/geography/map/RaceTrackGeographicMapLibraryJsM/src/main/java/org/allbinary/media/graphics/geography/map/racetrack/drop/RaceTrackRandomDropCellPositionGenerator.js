@@ -16,14 +16,14 @@ import { DropLayerFactory } from '../../../../../../../../org/allbinary/game/lay
 //not GWT import const DropLayerFactory = globalThis.org.allbinary.game.layer.drop.DropLayerFactory;
 import { PickupLayerCircularStaticPool } from '../../../../../../../../org/allbinary/game/layer/pickup/PickupLayerCircularStaticPool.js';
 //not GWT import const RaceTrackPickupLayer = globalThis.org.allbinary.game.layer.pickup.RaceTrackPickupLayer;
-//not plain js import { MyRandomFactory } from '../../../../../../../../org/allbinary/game/rand/MyRandomFactory.js';
+//not plain js import { MyRandomFactory } 
 const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
-//not plain js import { GPoint } from '../../../../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackDropCellPositionGenerator } from './RaceTrackDropCellPositionGenerator.js';
-//not GWT import const RaceTrackDropCellPositionGenerator = globalThis.org.allbinary.media.graphics.geography.map.racetrack.drop.RaceTrackDropCellPositionGenerator;
+//not GWT import - same folder const RaceTrackDropCellPositionGenerator = globalThis.org.allbinary.media.graphics.geography.map.racetrack.drop.RaceTrackDropCellPositionGenerator;
 export class RaceTrackRandomDropCellPositionGenerator extends RaceTrackDropCellPositionGenerator {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

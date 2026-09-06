@@ -13,16 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ClientInformation } from './ClientInformation.js';
-//not GWT import const ClientInformation = globalThis.org.allbinary.logic.system.security.licensing.ClientInformation;
+//not GWT import - same folder const ClientInformation = globalThis.org.allbinary.logic.system.security.licensing.ClientInformation;
 export class ClientInformationFactory extends Object {
     getInstance() {
         var logUtil = LogUtil.getInstance();

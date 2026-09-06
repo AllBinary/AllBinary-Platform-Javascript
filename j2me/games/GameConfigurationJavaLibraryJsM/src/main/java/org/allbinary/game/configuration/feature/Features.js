@@ -13,41 +13,40 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { GameFeatureEvent } from '../../../../../org/allbinary/game/configuration/event/GameFeatureEvent.js';
 //not GWT import const GameFeatureEvent = globalThis.org.allbinary.game.configuration.event.GameFeatureEvent;
 import { GameFeatureEventHandler } from '../../../../../org/allbinary/game/configuration/event/GameFeatureEventHandler.js';
 //not GWT import const GameFeatureEventHandler = globalThis.org.allbinary.game.configuration.event.GameFeatureEventHandler;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
 import { OperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/OperatingSystemFactory.js';
 //not GWT import const OperatingSystemFactory = globalThis.org.allbinary.logic.system.os.OperatingSystemFactory;
-//not plain js import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
+//not GWT import - same folder const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
 import { GameFeatureFactory } from './GameFeatureFactory.js';
-//not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
+//not GWT import - same folder const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
 import { InputFeatureFactory } from './InputFeatureFactory.js';
-//not GWT import const InputFeatureFactory = globalThis.org.allbinary.game.configuration.feature.InputFeatureFactory;
+//not GWT import - same folder const InputFeatureFactory = globalThis.org.allbinary.game.configuration.feature.InputFeatureFactory;
 import { SensorFeatureFactory } from './SensorFeatureFactory.js';
-//not GWT import const SensorFeatureFactory = globalThis.org.allbinary.game.configuration.feature.SensorFeatureFactory;
+//not GWT import - same folder const SensorFeatureFactory = globalThis.org.allbinary.game.configuration.feature.SensorFeatureFactory;
 import { TouchFeatureFactory } from './TouchFeatureFactory.js';
-//not GWT import const TouchFeatureFactory = globalThis.org.allbinary.game.configuration.feature.TouchFeatureFactory;
+//not GWT import - same folder const TouchFeatureFactory = globalThis.org.allbinary.game.configuration.feature.TouchFeatureFactory;
 import { MainFeatureFactory } from './MainFeatureFactory.js';
-//not GWT import const MainFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MainFeatureFactory;
+//not GWT import - same folder const MainFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MainFeatureFactory;
 export class Features extends Object {
     static getInstance() {
         if (Features.SINGLETON == NullUtil.getInstance().NULL_OBJECT) {

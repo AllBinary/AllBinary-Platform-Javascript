@@ -15,11 +15,11 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { InputFactory } from '../../../../../org/allbinary/game/input/InputFactory.js';
 //not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import const TouchButtonInput = globalThis.org.allbinary.input.motion.button.TouchButtonInput;
+//not GWT import - same folder const TouchButtonInput = globalThis.org.allbinary.input.motion.button.TouchButtonInput;
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
-//not GWT import const BasicTouchInputFactory = globalThis.org.allbinary.input.motion.button.BasicTouchInputFactory;
+//not GWT import - same folder const BasicTouchInputFactory = globalThis.org.allbinary.input.motion.button.BasicTouchInputFactory;
 export class CancelTouchButtonInputFactory extends Object {
     static getInstance() {
         if (CancelTouchButtonInputFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

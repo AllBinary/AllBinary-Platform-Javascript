@@ -18,15 +18,15 @@ import { PlatformInputMappingFactory } from '../../../../../org/allbinary/game/i
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HelpPaintable } from './HelpPaintable.js';
-//not GWT import const HelpPaintable = globalThis.org.allbinary.game.paint.help.HelpPaintable;
+//not GWT import - same folder const HelpPaintable = globalThis.org.allbinary.game.paint.help.HelpPaintable;
 export class BasicInputMappingHelpPaintable extends HelpPaintable {
     constructor(gameInputMappingArray, basicColor) {
         super("Help Screen", BasicColorFactory.getInstance().BLACK, basicColor);

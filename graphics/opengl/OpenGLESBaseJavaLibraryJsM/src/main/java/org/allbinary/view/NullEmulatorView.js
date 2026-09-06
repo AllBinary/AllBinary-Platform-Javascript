@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Displayable } from '../../../javax/microedition/lcdui/Displayable.js';
+//not plain js import { Displayable } 
 const Displayable = globalThis.javax.microedition.lcdui.Displayable;
-//not plain js import { MIDlet } from '../../../javax/microedition/midlet/MIDlet.js';
+//not plain js import { MIDlet } 
 const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
-//not GWT import const EmulatorViewInterface = globalThis.org.allbinary.view.EmulatorViewInterface;
+//not GWT import - same folder const EmulatorViewInterface = globalThis.org.allbinary.view.EmulatorViewInterface;
 export class NullEmulatorView extends Object {
     setMidlet(midlet) {
     }

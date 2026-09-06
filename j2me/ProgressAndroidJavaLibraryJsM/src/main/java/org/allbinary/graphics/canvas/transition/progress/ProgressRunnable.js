@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const SimpleProgressActivityInterface = globalThis.org.allbinary.android.activity.SimpleProgressActivityInterface;
-//not plain js import { ARunnable } from '../../../../../../org/allbinary/thread/ARunnable.js';
+//not plain js import { ARunnable } 
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
-//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
+//not GWT import - same folder const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 export class ProgressRunnable extends ARunnable {
     constructor(midletActivity, progressCanvas) {
         super();

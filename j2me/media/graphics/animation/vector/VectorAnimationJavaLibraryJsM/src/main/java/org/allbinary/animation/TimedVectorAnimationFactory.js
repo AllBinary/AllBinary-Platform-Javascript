@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const VectorAnimationFactoryInterface = globalThis.org.allbinary.animation.VectorAnimationFactoryInterface;
+//not GWT import - same folder const VectorAnimationFactoryInterface = globalThis.org.allbinary.animation.VectorAnimationFactoryInterface;
 import { TimedVectorAnimation } from './TimedVectorAnimation.js';
-//not GWT import const TimedVectorAnimation = globalThis.org.allbinary.animation.TimedVectorAnimation;
+//not GWT import - same folder const TimedVectorAnimation = globalThis.org.allbinary.animation.TimedVectorAnimation;
 import { AnimationBehavior } from './AnimationBehavior.js';
-//not GWT import const VectorAnimation = globalThis.org.allbinary.animation.VectorAnimation;
+//not GWT import - same folder const VectorAnimation = globalThis.org.allbinary.animation.VectorAnimation;
 export class TimedVectorAnimationFactory extends Object {
     getInstance(points, basicColor) {
         //if statement needs to be on the same line and ternary does not work the same way.

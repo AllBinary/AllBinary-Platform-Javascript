@@ -14,9 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LurchRotationAI } from './LurchRotationAI.js';
-//not GWT import const LurchRotationAI = globalThis.org.allbinary.game.ag.ai.LurchRotationAI;
+//not GWT import - same folder const LurchRotationAI = globalThis.org.allbinary.game.ag.ai.LurchRotationAI;
 export class LurchRotationAIFactory extends Object {
     getInstance(hashtable, ownerLayerInterface, gameInput) {
         //if statement needs to be on the same line and ternary does not work the same way.

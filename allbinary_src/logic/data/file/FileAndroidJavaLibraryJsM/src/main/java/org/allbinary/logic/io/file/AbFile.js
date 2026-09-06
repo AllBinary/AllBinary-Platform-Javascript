@@ -19,9 +19,9 @@ import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
 import { AbPath } from '../../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const AbFileInterface = globalThis.org.allbinary.logic.io.file.AbFileInterface;
+//not GWT import - same folder const AbFileInterface = globalThis.org.allbinary.logic.io.file.AbFileInterface;
 export class AbFile extends Object {
     //@Throws(Exception.constructor)
     static createAbFileWithChild(file, childPathName) {

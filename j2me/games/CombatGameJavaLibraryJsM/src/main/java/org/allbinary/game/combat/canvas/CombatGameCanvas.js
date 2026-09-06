@@ -11,8 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 import { DestroyedLayerProcessor } from '../../../../../org/allbinary/game/combat/destroy/DestroyedLayerProcessor.js';
 //not GWT import const DestroyedLayerProcessor = globalThis.org.allbinary.game.combat.destroy.DestroyedLayerProcessor;
@@ -31,7 +30,7 @@ import { DropLayerProcessor } from '../../../../../org/allbinary/game/layer/drop
 import { GroupLayerManagerListener } from '../../../../../org/allbinary/game/layer/identification/GroupLayerManagerListener.js';
 //not GWT import const HighScoresFactoryInterface = globalThis.org.allbinary.game.score.HighScoresFactoryInterface;
 import { ProgressCanvasFactory } from '../../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CombatGameCanvas extends AllBinaryGameCanvas {
     constructor(cmdListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered) {

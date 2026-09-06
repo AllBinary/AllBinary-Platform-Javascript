@@ -11,36 +11,35 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
-//not plain js import { DisposalUtil } from '../../../../org/allbinary/DisposalUtil.js';
-const DisposalUtil = globalThis.org.allbinary.DisposalUtil;
+import { DisposalUtil } from '../../../../org/allbinary/DisposalUtil.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not plain js import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
-const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
-//not plain js import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
-const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
-//not plain js import { ImageRotationUtil } from '../../../../org/allbinary/media/image/ImageRotationUtil.js';
-const ImageRotationUtil = globalThis.org.allbinary.media.image.ImageRotationUtil;
+import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
+//not GWT import const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
+import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
+//not GWT import const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
+import { ImageRotationUtil } from '../../../../org/allbinary/media/image/ImageRotationUtil.js';
+//not GWT import const ImageRotationUtil = globalThis.org.allbinary.media.image.ImageRotationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
+//not GWT import - same folder const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
 import { ModifierBaseProcessor } from './ModifierBaseProcessor.js';
-//not GWT import const ModifierBaseProcessor = globalThis.org.allbinary.animation.image.ModifierBaseProcessor;
+//not GWT import - same folder const ModifierBaseProcessor = globalThis.org.allbinary.animation.image.ModifierBaseProcessor;
 import { ScaleProcessor } from './ScaleProcessor.js';
-//not GWT import const ScaleBaseProcessor = globalThis.org.allbinary.animation.image.ScaleBaseProcessor;
+//not GWT import - same folder const ScaleBaseProcessor = globalThis.org.allbinary.animation.image.ScaleBaseProcessor;
 import { SetColorProcessor } from './SetColorProcessor.js';
-//not GWT import const SetColorProcessor = globalThis.org.allbinary.animation.image.SetColorProcessor;
+//not GWT import - same folder const SetColorProcessor = globalThis.org.allbinary.animation.image.SetColorProcessor;
 import { ChangeColorProcessor } from './ChangeColorProcessor.js';
-//not GWT import const ChangeColorProcessor = globalThis.org.allbinary.animation.image.ChangeColorProcessor;
+//not GWT import - same folder const ChangeColorProcessor = globalThis.org.allbinary.animation.image.ChangeColorProcessor;
 import { AlphaProcessor } from './AlphaProcessor.js';
-//not GWT import const AlphaProcessor = globalThis.org.allbinary.animation.image.AlphaProcessor;
+//not GWT import - same folder const AlphaProcessor = globalThis.org.allbinary.animation.image.AlphaProcessor;
 export class AllBinaryJ2SEImageRotationAnimation extends ImageBaseRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);

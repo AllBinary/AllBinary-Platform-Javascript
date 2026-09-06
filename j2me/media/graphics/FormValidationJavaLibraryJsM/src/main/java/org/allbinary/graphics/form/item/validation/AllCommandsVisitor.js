@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { BooleanFactory } from '../../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
 import { Visitor } from '../../../../../../org/allbinary/logic/util/visitor/Visitor.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AllCommandsVisitor extends Visitor {
     constructor() {

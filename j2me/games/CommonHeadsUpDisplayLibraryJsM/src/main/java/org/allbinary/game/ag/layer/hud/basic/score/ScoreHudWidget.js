@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } from '../../../../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { NumberStringHud } from '../../../../../../../../org/allbinary/game/ag/layer/hud/basic/NumberStringHud.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;

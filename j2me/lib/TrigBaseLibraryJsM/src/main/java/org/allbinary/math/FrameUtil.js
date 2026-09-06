@@ -13,9 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { AngleFactory } from './AngleFactory.js';
+//not plain js - same folder import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
 export class FrameUtil extends Object {
     static getInstance() {

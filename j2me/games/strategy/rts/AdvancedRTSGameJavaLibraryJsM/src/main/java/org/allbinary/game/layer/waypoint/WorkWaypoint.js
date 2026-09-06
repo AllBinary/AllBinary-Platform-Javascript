@@ -14,13 +14,13 @@
 //not GWT import const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
 import { WorkSound } from '../../../../../org/allbinary/media/audio/WorkSound.js';
 //not GWT import const WorkSound = globalThis.org.allbinary.media.audio.WorkSound;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Waypoint } from './Waypoint.js';
-//not GWT import const WaypointInfoHudPaintable = globalThis.org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable;
+//not GWT import - same folder const WaypointInfoHudPaintable = globalThis.org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable;
 export class WorkWaypoint extends Waypoint {
     constructor(ownerLayer) {
         super(ownerLayer, WorkSound.getInstance());

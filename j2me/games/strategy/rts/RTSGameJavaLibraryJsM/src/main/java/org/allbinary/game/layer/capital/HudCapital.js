@@ -14,7 +14,7 @@
 //not GWT import const NumberStringHud = globalThis.org.allbinary.game.ag.layer.hud.basic.NumberStringHud;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Capital } from './Capital.js';
-//not GWT import const Capital = globalThis.org.allbinary.game.layer.capital.Capital;
+//not GWT import - same folder const Capital = globalThis.org.allbinary.game.layer.capital.Capital;
 export class HudCapital extends Capital {
     constructor(moneyGraphic) {
         super();

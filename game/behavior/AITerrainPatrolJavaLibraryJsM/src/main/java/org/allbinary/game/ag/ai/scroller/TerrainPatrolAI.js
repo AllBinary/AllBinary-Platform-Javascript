@@ -11,7 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
-import { PacePatrolAI } from '../../../../../../org/allbinary/game/ag/ai/scroller/PacePatrolAI.js';
 //not GWT import const GameInput = globalThis.org.allbinary.game.input.GameInput;
 import { BasicTerrainInfo } from '../../../../../../org/allbinary/game/terrain/BasicTerrainInfo.js';
 //not GWT import const TerrainEvent = globalThis.org.allbinary.game.terrain.TerrainEvent;
@@ -21,13 +20,17 @@ import { TerrainEventHandler } from '../../../../../../org/allbinary/game/terrai
 //not GWT import const TerrainEventHandler = globalThis.org.allbinary.game.terrain.TerrainEventHandler;
 import { TerrainEventListener } from '../../../../../../org/allbinary/game/terrain/TerrainEventListener.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { Angle } from '../../../../../../org/allbinary/math/Angle.js';
+//not plain js import { Angle } 
 const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { AngleFactory } from '../../../../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+import { PacePatrolAI } from './PacePatrolAI.js';
+//not GWT import - same folder const PacePatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.PacePatrolAI;
 export class TerrainPatrolAI extends PacePatrolAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(hashtable, ownerLayerInterface, gameInput);

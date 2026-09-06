@@ -24,26 +24,26 @@ import { MultipassWaypointPathRunnable } from '../../../../../org/allbinary/game
 //not GWT import const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
 import { WaypointPathRunnable } from '../../../../../org/allbinary/game/layer/WaypointPathRunnable.js';
 //not GWT import const WaypointPathRunnable = globalThis.org.allbinary.game.layer.WaypointPathRunnable;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const WaypointPathRunnableBase = globalThis.org.allbinary.game.layer.WaypointPathRunnableBase;
 import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
 //not GWT import const WaypointBase = globalThis.org.allbinary.game.layer.waypoint.WaypointBase;
 import { TrackingEventHandler } from '../../../../../org/allbinary/game/tracking/TrackingEventHandler.js';
 //not GWT import const TrackingEventHandler = globalThis.org.allbinary.game.tracking.TrackingEventHandler;
-//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 import { BooleanFactory } from '../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
@@ -57,11 +57,11 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UnitWaypointBehavior } from './UnitWaypointBehavior.js';
-//not GWT import const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
+//not GWT import - same folder const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
 import { UnitWaypointStrings } from './UnitWaypointStrings.js';
-//not GWT import const UnitLayer = globalThis.org.allbinary.game.layer.unit.UnitLayer;
+//not GWT import - same folder const UnitLayer = globalThis.org.allbinary.game.layer.unit.UnitLayer;
 //import { BuildingSteeringVisitor } from './BuildingSteeringVisitor.js';
-//not GWT import const BuildingSteeringVisitor = globalThis.org.allbinary.game.layer.unit.BuildingSteeringVisitor;
+//not GWT import - same folder const BuildingSteeringVisitor = globalThis.org.allbinary.game.layer.unit.BuildingSteeringVisitor;
 export class UnitWaypointBehavior2 extends UnitWaypointBehavior {
     constructor(ownerAdvancedRTSGameLayer, fakeWaypoint) {
         super(ownerAdvancedRTSGameLayer, fakeWaypoint);

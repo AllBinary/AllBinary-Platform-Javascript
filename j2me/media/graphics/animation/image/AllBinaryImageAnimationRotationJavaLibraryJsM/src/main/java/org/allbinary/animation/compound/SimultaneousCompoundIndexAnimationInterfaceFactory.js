@@ -14,12 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
-//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimultaneousCompoundIndexAnimation } from './SimultaneousCompoundIndexAnimation.js';
-//not GWT import const SimultaneousCompoundIndexAnimation = globalThis.org.allbinary.animation.compound.SimultaneousCompoundIndexAnimation;
+//not GWT import - same folder const SimultaneousCompoundIndexAnimation = globalThis.org.allbinary.animation.compound.SimultaneousCompoundIndexAnimation;
 export class SimultaneousCompoundIndexAnimationInterfaceFactory extends Object {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {
         super();

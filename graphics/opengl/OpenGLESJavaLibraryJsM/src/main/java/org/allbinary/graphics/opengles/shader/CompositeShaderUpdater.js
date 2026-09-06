@@ -12,18 +12,17 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderUpdater } from './ShaderUpdater.js';
-//not GWT import const ShaderUpdater = globalThis.org.allbinary.graphics.opengles.shader.ShaderUpdater;
+//not GWT import - same folder const ShaderUpdater = globalThis.org.allbinary.graphics.opengles.shader.ShaderUpdater;
 import { ShaderStrings } from './ShaderStrings.js';
-//not GWT import const ShaderStrings = globalThis.org.allbinary.graphics.opengles.shader.ShaderStrings;
+//not GWT import - same folder const ShaderStrings = globalThis.org.allbinary.graphics.opengles.shader.ShaderStrings;
 export class CompositeShaderUpdater extends ShaderUpdater {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

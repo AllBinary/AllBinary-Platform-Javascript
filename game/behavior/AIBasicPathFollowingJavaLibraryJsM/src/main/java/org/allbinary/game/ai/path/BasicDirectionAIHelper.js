@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Math } from '../../../../../java/lang/Math.js';
-//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 //not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 import { DirectionFactory } from '../../../../../org/allbinary/direction/DirectionFactory.js';
 //not GWT import const DirectionFactory = globalThis.org.allbinary.direction.DirectionFactory;
-//not plain js import { AngleIncrementInfo } from '../../../../../org/allbinary/math/AngleIncrementInfo.js';
+//not plain js import { AngleIncrementInfo } 
 const AngleIncrementInfo = globalThis.org.allbinary.math.AngleIncrementInfo;
-//not plain js import { AngleInfo } from '../../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicDirectionAIHelper extends Object {

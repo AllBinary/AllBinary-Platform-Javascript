@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
@@ -28,7 +28,7 @@ import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/U
 //not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //AndroidToJ2ME

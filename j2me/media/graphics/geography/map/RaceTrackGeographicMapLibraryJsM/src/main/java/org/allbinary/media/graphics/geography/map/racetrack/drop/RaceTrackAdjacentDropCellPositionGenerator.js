@@ -11,12 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { GroupCommonFactory } from '../../../../../../../../org/allbinary/game/identification/GroupCommonFactory.js';
 //not GWT import const GroupCommonFactory = globalThis.org.allbinary.game.identification.GroupCommonFactory;
-//not plain js import { BasicArrayList } from '../../../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 import { DirectionFactory } from '../../../../../../../../org/allbinary/direction/DirectionFactory.js';
@@ -27,10 +26,11 @@ import { AllBinaryGameLayerManager } from '../../../../../../../../org/allbinary
 //not GWT import const AllBinaryGameLayerManager = globalThis.org.allbinary.game.layer.AllBinaryGameLayerManager;
 import { LayerCoveringCellPositionsUtil } from '../../../../../../../../org/allbinary/game/layer/geographic/map/LayerCoveringCellPositionsUtil.js';
 //not GWT import const LayerCoveringCellPositionsUtil = globalThis.org.allbinary.game.layer.geographic.map.LayerCoveringCellPositionsUtil;
-//not plain js import { GPoint } from '../../../../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-import { StdUtil } from '../../../../../../../../org/allbinary/logic/StdUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not GWT import const GeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellType;
 import { GeographicMapDirectionUtil } from '../../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapDirectionUtil.js';
 //not GWT import const GeographicMapDirectionUtil = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapDirectionUtil;
@@ -38,11 +38,13 @@ import { SimpleGeographicMapCellPositionFactory } from '../../../../../../../../
 //not GWT import const DropCellPositionGeneratorInterface = globalThis.org.allbinary.media.graphics.geography.map.drop.DropCellPositionGeneratorInterface;
 import { DropCellPositionHistory } from '../../../../../../../../org/allbinary/media/graphics/geography/map/drop/DropCellPositionHistory.js';
 //not GWT import const RaceTrackGeographicMapCellTypeFactory = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellTypeFactory;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackDropCellPositionGenerator } from './RaceTrackDropCellPositionGenerator.js';
-//not GWT import const RaceTrackDropCellPositionGenerator = globalThis.org.allbinary.media.graphics.geography.map.racetrack.drop.RaceTrackDropCellPositionGenerator;
+//not GWT import - same folder const RaceTrackDropCellPositionGenerator = globalThis.org.allbinary.media.graphics.geography.map.racetrack.drop.RaceTrackDropCellPositionGenerator;
 import { RaceTrackAdjacentDropLayerFactory } from './RaceTrackAdjacentDropLayerFactory.js';
-//not GWT import const RaceTrackAdjacentDropLayerFactory = globalThis.org.allbinary.media.graphics.geography.map.racetrack.drop.RaceTrackAdjacentDropLayerFactory;
+//not GWT import - same folder const RaceTrackAdjacentDropLayerFactory = globalThis.org.allbinary.media.graphics.geography.map.racetrack.drop.RaceTrackAdjacentDropLayerFactory;
 export class RaceTrackAdjacentDropCellPositionGenerator extends RaceTrackDropCellPositionGenerator {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

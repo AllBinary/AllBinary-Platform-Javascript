@@ -12,24 +12,25 @@
         *  Created By: Travis Berthelot
 */
 import { Thread } from '../../../java/lang/Thread.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { CommandListener } from '../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 import { NullWaitGameRunnable } from '../../../org/allbinary/game/displayable/canvas/NullWaitGameRunnable.js';
 //not GWT import const NullWaitGameRunnable = globalThis.org.allbinary.game.displayable.canvas.NullWaitGameRunnable;
 import { MyCanvas } from '../../../org/allbinary/graphics/displayable/MyCanvas.js';
 //not GWT import const MyCanvas = globalThis.org.allbinary.graphics.displayable.MyCanvas;
-//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { ABSystemWrapper } 
+const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-import { StdUtil } from '../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { NullThread } from '../../../org/allbinary/thread/NullThread.js';
 //not GWT import const RunnableInterface = globalThis.org.allbinary.thread.RunnableInterface;
@@ -37,19 +38,19 @@ import { ThreadObjectUtil } from '../../../org/allbinary/thread/ThreadObjectUtil
 //not GWT import const ThreadObjectUtil = globalThis.org.allbinary.thread.ThreadObjectUtil;
 import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
-//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Processor } from './Processor.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import - same folder const Processor = globalThis.org.allbinary.canvas.Processor;
 import { RunnableCanvasRefreshHelper } from './RunnableCanvasRefreshHelper.js';
-//not GWT import const RunnableCanvasRefreshHelper = globalThis.org.allbinary.canvas.RunnableCanvasRefreshHelper;
+//not GWT import - same folder const RunnableCanvasRefreshHelper = globalThis.org.allbinary.canvas.RunnableCanvasRefreshHelper;
 export class RunnableCanvas extends MyCanvas {
     constructor(commandListener, childNameList, hasParam) {
         super(CommonStrings.getInstance().UNKNOWN, childNameList);
         this.nullUtil = NullUtil.getInstance();
         this.stdUtil = StdUtil.getInstance();
+        this.systemWrapper = ABSystemWrapper.getInstance();
         this.thread = NullThread.NULL_THREAD;
         this.currentThread = NullThread.NULL_THREAD;
         this.running = false;
@@ -199,12 +200,14 @@ export class RunnableCanvas extends MyCanvas {
             ;
             if (this.isRunning() && !this.isSingleThread()) {
                 stringMaker.delete(0, stringMaker.length());
-                this.logUtil.putF(stringMaker.append(this.START_PAUSE).appendlong(Date.now()).append(this.PAUSE_SLEEP).appendlong(this.pauseWait).toString(), this, this.PROCESS_LOOP_SLEEP);
+                var currentTimeMillis = this.systemWrapper.currentTimeMillis();
+                ;
+                this.logUtil.putF(stringMaker.append(this.START_PAUSE).appendlong(currentTimeMillis).append(this.PAUSE_SLEEP).appendlong(this.pauseWait).toString(), this, this.PROCESS_LOOP_SLEEP);
                 while (this.isPaused() && this.isRunning() && !this.isSingleThread()) {
                     this.processSleep();
                     if (!this.isPausable()) {
                         stringMaker.delete(0, stringMaker.length());
-                        this.logUtil.putF(stringMaker.append(this.END_PAUSE).appendlong(Date.now()).toString(), this, this.PROCESS_LOOP_SLEEP);
+                        this.logUtil.putF(stringMaker.append(this.END_PAUSE).appendlong(currentTimeMillis).toString(), this, this.PROCESS_LOOP_SLEEP);
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return;
                     }

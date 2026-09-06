@@ -14,9 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Thread } from '../../../../../java/lang/Thread.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameRunnable extends Object {
     constructor() {

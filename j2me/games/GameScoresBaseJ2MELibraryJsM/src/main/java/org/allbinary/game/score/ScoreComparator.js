@@ -18,11 +18,11 @@ import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.j
 //not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
 import { DataInputStream } from '../../../../java/io/DataInputStream.js';
 //not GWT import const IOException = globalThis.java.io.IOException;
-//not plain js import { RecordComparator, RecordComparatorI } from '../../../../javax/microedition/rms/RecordComparator.js';
+//not plain js import { RecordComparator } 
 const RecordComparator = globalThis.javax.microedition.rms.RecordComparator;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScoreComparator extends Object {

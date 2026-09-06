@@ -14,22 +14,21 @@
 //not GWT import const LicenseInitInfo = globalThis.org.allbinary.business.init.LicenseInitInfo;
 import { LicenseInitInfoUtil } from '../../../../../../org/allbinary/business/init/LicenseInitInfoUtil.js';
 //not GWT import const LicenseInitInfoUtil = globalThis.org.allbinary.business.init.LicenseInitInfoUtil;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PreLogUtil } from '../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { StringValidationUtil } from '../../../../../../org/allbinary/logic/string/StringValidationUtil.js';
 //not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
 import { OperatingSystemFactory } from '../../../../../../org/allbinary/logic/system/os/OperatingSystemFactory.js';
 //not GWT import const OperatingSystemFactory = globalThis.org.allbinary.logic.system.os.OperatingSystemFactory;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ClientInformation } from './ClientInformation.js';
-//not GWT import const ClientInformation = globalThis.org.allbinary.logic.system.security.licensing.ClientInformation;
+//not GWT import - same folder const ClientInformation = globalThis.org.allbinary.logic.system.security.licensing.ClientInformation;
 // This is the information sent to the license server
 export class AbeClientInformation extends ClientInformation {
     constructor(name, version, specialName, shortName) {
@@ -61,7 +60,7 @@ export class AbeClientInformation extends ClientInformation {
             ;
             var commonStrings = CommonStrings.getInstance();
             ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
         }
     }
 }

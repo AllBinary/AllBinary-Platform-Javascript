@@ -15,9 +15,9 @@ import { Object } from '../../../java/lang/Object.js';
 //not GWT import const ComponentName = globalThis.android.content.ComponentName;
 import { Context } from '../../../android/content/Context.js';
 //not GWT import const Context = globalThis.android.content.Context;
-//not plain js import { ResourceUtil } from '../../../org/allbinary/data/resource/ResourceUtil.js';
+//not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AndroidServicesUtil extends Object {

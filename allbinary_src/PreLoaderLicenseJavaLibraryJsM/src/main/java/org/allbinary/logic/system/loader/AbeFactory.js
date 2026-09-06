@@ -14,21 +14,21 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Constructor = globalThis.java.lang.reflect.Constructor;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { ConstructorUtil } from '../../../../../org/allbinary/logic/java/anyType/ConstructorUtil.js';
 //not GWT import const ConstructorUtil = globalThis.org.allbinary.logic.java.anyType.ConstructorUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { AbKeys } from '../../../../../org/allbinary/logic/system/security/AbKeys.js';
 //not GWT import const LicensingException = globalThis.org.allbinary.logic.system.security.licensing.LicensingException;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WebappClassLoaderInfo } from './WebappClassLoaderInfo.js';
-//not GWT import const WebappClassLoaderInfo = globalThis.org.allbinary.logic.system.loader.WebappClassLoaderInfo;
+//not GWT import - same folder const WebappClassLoaderInfo = globalThis.org.allbinary.logic.system.loader.WebappClassLoaderInfo;
 import { AbeClassLoader } from './AbeClassLoader.js';
-//not GWT import const AbeClassLoader = globalThis.org.allbinary.logic.system.loader.AbeClassLoader;
+//not GWT import - same folder const AbeClassLoader = globalThis.org.allbinary.logic.system.loader.AbeClassLoader;
 export class AbeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

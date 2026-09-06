@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } from '../../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { BasicAI } from '../../../../../../org/allbinary/game/ai/BasicAI.js';
 //not GWT import const GameInput = globalThis.org.allbinary.game.input.GameInput;

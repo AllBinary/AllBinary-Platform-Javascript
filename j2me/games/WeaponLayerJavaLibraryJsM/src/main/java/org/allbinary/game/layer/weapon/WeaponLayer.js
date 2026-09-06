@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { NullAnimationFactory } from '../../../../../org/allbinary/animation/NullAnimationFactory.js';
@@ -30,10 +30,10 @@ import { MultiPlayerGameLayer } from '../../../../../org/allbinary/game/multipla
 import { NoScoreable } from '../../../../../org/allbinary/game/score/NoScoreable.js';
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableWeaponBehavior } from './CollidableWeaponBehavior.js';
-//not GWT import const CollidableWeaponBehavior = globalThis.org.allbinary.game.layer.weapon.CollidableWeaponBehavior;
+//not GWT import - same folder const CollidableWeaponBehavior = globalThis.org.allbinary.game.layer.weapon.CollidableWeaponBehavior;
 export class WeaponLayer extends MultiPlayerGameLayer {
     static getStaticType() {
         //if statement needs to be on the same line and ternary does not work the same way.

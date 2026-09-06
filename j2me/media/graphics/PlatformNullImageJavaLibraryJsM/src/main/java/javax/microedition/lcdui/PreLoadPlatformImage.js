@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { PlatformImage } from './PlatformImage.js';
+//not plain js - same folder import { PlatformImage } 
 const PlatformImage = globalThis.javax.microedition.lcdui.PlatformImage;
 //PlatformNullImageJavaLibrary
 export class PreLoadPlatformImage extends PlatformImage {

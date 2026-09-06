@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { BasicHud } from '../../../../../../org/allbinary/game/graphics/hud/BasicHud.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;

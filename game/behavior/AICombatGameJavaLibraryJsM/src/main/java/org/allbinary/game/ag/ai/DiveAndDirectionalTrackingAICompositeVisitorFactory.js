@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Visitor } from '../../../../../org/allbinary/logic/util/visitor/Visitor.js';
-//not GWT import const DiveAndDirectionalTrackingAI = globalThis.org.allbinary.game.ag.ai.DiveAndDirectionalTrackingAI;
+//not GWT import - same folder const DiveAndDirectionalTrackingAI = globalThis.org.allbinary.game.ag.ai.DiveAndDirectionalTrackingAI;
 export class DiveAndDirectionalTrackingAICompositeVisitorFactory extends Object {
     getInstance(diveBombAI) {
         //if statement needs to be on the same line and ternary does not work the same way.

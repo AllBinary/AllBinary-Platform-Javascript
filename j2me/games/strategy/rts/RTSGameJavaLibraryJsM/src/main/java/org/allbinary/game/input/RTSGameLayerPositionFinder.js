@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
 import { DropCellPositionHistory } from '../../../../org/allbinary/media/graphics/geography/map/drop/DropCellPositionHistory.js';
-//not GWT import const LayerPositionFinderInterface = globalThis.org.allbinary.game.input.LayerPositionFinderInterface;
+//not GWT import - same folder const LayerPositionFinderInterface = globalThis.org.allbinary.game.input.LayerPositionFinderInterface;
 export class RTSGameLayerPositionFinder extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

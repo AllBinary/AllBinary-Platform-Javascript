@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../org/allbinary/animation/FeaturedAnimationInterfaceFactoryInterfaceFactory.js';
@@ -22,7 +22,7 @@ import { LockedUtil } from '../../../../org/allbinary/logic/system/security/lice
 //not GWT import const LockedUtil = globalThis.org.allbinary.logic.system.security.licensing.LockedUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ItemPaintable } from './ItemPaintable.js';
-//not GWT import const ItemPaintable = globalThis.org.allbinary.graphics.form.ItemPaintable;
+//not GWT import - same folder const ItemPaintable = globalThis.org.allbinary.graphics.form.ItemPaintable;
 export class LockablePaintable extends ItemPaintable {
     constructor(lockedIndex) {
         super();

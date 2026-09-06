@@ -13,15 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCGameKey } from './PCGameKey.js';
-//not GWT import const PCGameKey = globalThis.org.allbinary.game.input.PCGameKey;
+//not GWT import - same folder const PCGameKey = globalThis.org.allbinary.game.input.PCGameKey;
 import { PCKeyFactory } from './PCKeyFactory.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
 export class PlatformKeyFactory extends Object {
     static getInstance() {
         if (PlatformKeyFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

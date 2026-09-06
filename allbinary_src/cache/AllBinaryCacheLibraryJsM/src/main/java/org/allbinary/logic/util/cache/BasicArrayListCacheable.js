@@ -12,11 +12,11 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
+//not GWT import - same folder const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
 export class BasicArrayListCacheable extends BasicArrayListD {
     getKey() {
         //if statement needs to be on the same line and ternary does not work the same way.

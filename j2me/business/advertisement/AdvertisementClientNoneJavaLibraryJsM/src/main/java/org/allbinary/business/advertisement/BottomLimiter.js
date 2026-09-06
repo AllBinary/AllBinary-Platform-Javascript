@@ -18,7 +18,7 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 //not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameAdStateFactory } from './GameAdStateFactory.js';
-//not GWT import const GameAdStateFactory = globalThis.org.allbinary.business.advertisement.GameAdStateFactory;
+//not GWT import - same folder const GameAdStateFactory = globalThis.org.allbinary.business.advertisement.GameAdStateFactory;
 export class BottomLimiter extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

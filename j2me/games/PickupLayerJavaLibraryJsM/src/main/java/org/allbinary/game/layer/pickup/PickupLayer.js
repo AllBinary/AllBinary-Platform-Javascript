@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { NullAnimationFactory } from '../../../../../org/allbinary/animation/NullAnimationFactory.js';
@@ -24,9 +24,9 @@ import { DestroyedLayerProcessor } from '../../../../../org/allbinary/game/comba
 import { BasicGroupFactory } from '../../../../../org/allbinary/game/identification/BasicGroupFactory.js';
 //not GWT import const BasicGroupFactory = globalThis.org.allbinary.game.identification.BasicGroupFactory;
 import { MultiPlayerGameLayer } from '../../../../../org/allbinary/game/multiplayer/layer/MultiPlayerGameLayer.js';
-//not GWT import const PickupableInterface = globalThis.org.allbinary.game.layer.pickup.PickupableInterface;
+//not GWT import - same folder const PickupableInterface = globalThis.org.allbinary.game.layer.pickup.PickupableInterface;
 import { CountedPickedUpLayerInterfaceFactory } from './CountedPickedUpLayerInterfaceFactory.js';
-//not GWT import const PickedUpLayerInterfaceFactoryInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface;
+//not GWT import - same folder const PickedUpLayerInterfaceFactoryInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface;
 export class PickupLayer extends MultiPlayerGameLayer {
     constructor(name, remoteInfo, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition) {
         super(remoteInfo, BasicGroupFactory.getInstance().NONE_ARRAY, name, rectangle, viewPosition);

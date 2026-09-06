@@ -14,10 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
@@ -28,11 +27,13 @@ import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontP
 //not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { PrimitiveLongUtil } from '../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
+//not plain js import { PrimitiveLongUtil } 
 const PrimitiveLongUtil = globalThis.org.allbinary.logic.math.PrimitiveLongUtil;
-//not GWT import const PartInterface = globalThis.org.allbinary.game.part.PartInterface;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not GWT import - same folder const PartInterface = globalThis.org.allbinary.game.part.PartInterface;
 export class CountedLayerInterfaceFactoryPart extends Object {
     constructor(total, countedPickedUpLayerInterfaceFactory) {
         super();

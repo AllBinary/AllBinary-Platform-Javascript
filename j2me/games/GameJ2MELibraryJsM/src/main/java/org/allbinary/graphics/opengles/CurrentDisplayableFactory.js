@@ -13,8 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Displayable } from '../../../../javax/microedition/lcdui/Displayable.js';
+//not plain js import { Displayable } 
 const Displayable = globalThis.javax.microedition.lcdui.Displayable;
 import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
@@ -42,26 +41,25 @@ import { CanvasStrings } from '../../../../org/allbinary/graphics/displayable/Ca
 //not GWT import const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
 import { MyCanvas } from '../../../../org/allbinary/graphics/displayable/MyCanvas.js';
 //not GWT import const MyCanvas = globalThis.org.allbinary.graphics.displayable.MyCanvas;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { NullRunnable } from '../../../../org/allbinary/thread/NullRunnable.js';
+//not plain js import { NullRunnable } 
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+//not GWT import - same folder const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 export class CurrentDisplayableFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

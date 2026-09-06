@@ -16,19 +16,22 @@ import { Exception } from '../../../../java/lang/Exception.js';
 //not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
 //not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not GWT import const ClientInformationFactory = globalThis.org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 import { PrimaryThreadPool } from '../../../../org/allbinary/thread/PrimaryThreadPool.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const PrimaryThreadPool = globalThis.org.allbinary.thread.PrimaryThreadPool;
 import { NullGameCanvasRunnable } from '../../../../org/allbinary/game/displayable/canvas/NullGameCanvasRunnable.js';
 //not GWT import const NullGameCanvasRunnable = globalThis.org.allbinary.game.displayable.canvas.NullGameCanvasRunnable;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameMidlet } from './GameMidlet.js';
-//not GWT import const GameMidlet = globalThis.org.allbinary.game.midlet.GameMidlet;
+//not GWT import - same folder const GameMidlet = globalThis.org.allbinary.game.midlet.GameMidlet;
 import { DemoRunnable } from './DemoRunnable.js';
-//not GWT import const DemoRunnable = globalThis.org.allbinary.game.midlet.DemoRunnable;
+//not GWT import - same folder const DemoRunnable = globalThis.org.allbinary.game.midlet.DemoRunnable;
 import { CreateGameRunnable } from './CreateGameRunnable.js';
-//not GWT import const CreateGameRunnable = globalThis.org.allbinary.game.midlet.CreateGameRunnable;
+//not GWT import - same folder const CreateGameRunnable = globalThis.org.allbinary.game.midlet.CreateGameRunnable;
 export class DemoGameMidlet extends GameMidlet {
     constructor(clientInformationFactory) {
         super(clientInformationFactory);
@@ -40,7 +43,7 @@ export class DemoGameMidlet extends GameMidlet {
         ;
         if (hashtable !=
             null
-            && hashtable.length > 0) {
+            && hashtable.size() > 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
         }

@@ -11,7 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
 import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../../../../org/allbinary/animation/FeaturedAnimationInterfaceFactoryInterfaceFactory.js';
 //not GWT import const FeaturedAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
 import { WeaponProperties } from '../../../../../../../org/allbinary/game/combat/weapon/WeaponProperties.js';
@@ -22,13 +21,15 @@ import { IconLayerFactory } from '../../../../../../../org/allbinary/game/layer/
 //not GWT import const PickedUpLayerInterfaceFactoryInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface;
 import { PickedUpLayerTypeFactory } from '../../../../../../../org/allbinary/game/layer/pickup/PickedUpLayerTypeFactory.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MineLayerCircularStaticPool } from './MineLayerCircularStaticPool.js';
-//not GWT import const MineLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineLayerCircularStaticPool;
+//not GWT import - same folder const MineLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineLayerCircularStaticPool;
 import { MineWeaponResources } from './MineWeaponResources.js';
-//not GWT import const MineWeaponResources = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineWeaponResources;
+//not GWT import - same folder const MineWeaponResources = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineWeaponResources;
 export class MineCountedPickedUpLayerInterfaceFactory extends CountedPickedUpLayerInterfaceFactory {
     //@Throws(Exception.constructor)
     static init() {

@@ -11,10 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { AndroidUtil } from '../../../../../org/allbinary/AndroidUtil.js';
 //not GWT import const AndroidUtil = globalThis.org.allbinary.AndroidUtil;
@@ -28,7 +27,7 @@ import { Features } from '../../../../../org/allbinary/game/configuration/featur
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { SWTUtil } from '../../../../../org/allbinary/game/layer/SWTUtil.js';
 //not GWT import const SWTUtil = globalThis.org.allbinary.game.layer.SWTUtil;
-//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
@@ -48,7 +47,7 @@ import { OpenGLFeatureUtil } from '../../../../../org/allbinary/graphics/opengle
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 import { SWTJOGLProcessor } from '../../../../../org/allbinary/graphics/threed/SWTJOGLProcessor.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const SWTJOGLProcessor = globalThis.org.allbinary.graphics.threed.SWTJOGLProcessor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicPopupMenuPaintable extends Paintable {
     constructor(rectangle, backgroundBasicColor, foregroundBasicColor) {

@@ -13,11 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not GWT import const HardwareComponentInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface;
 import { NoHardwareComponent } from '../../../../../org/allbinary/logic/system/hardware/components/interfaces/NoHardwareComponent.js';
-//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
+//not GWT import const NoHardwareComponent = globalThis.org.allbinary.logic.system.hardware.components.interfaces.NoHardwareComponent;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not GWT import - same folder const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
 export class NoHardware extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PickedUpLayerType } from './PickedUpLayerType.js';
-//not GWT import const PickedUpLayerType = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerType;
+//not GWT import - same folder const PickedUpLayerType = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerType;
 export class PickedUpLayerTypeFactory extends Object {
     constructor() {
         super(...arguments);

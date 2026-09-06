@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
@@ -19,16 +19,15 @@ import { GameFeatureImageCacheFactory } from '../../../../org/allbinary/image/Ga
 //not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
 import { ScreenRelationalUtil } from '../../../../org/allbinary/graphics/displayable/ScreenRelationalUtil.js';
 //not GWT import const ScreenRelationalUtil = globalThis.org.allbinary.graphics.displayable.ScreenRelationalUtil;
-//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
-//not plain js import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScaleUtil.js';
-const ImageScaleUtil = globalThis.org.allbinary.media.image.ImageScaleUtil;
+import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScaleUtil.js';
 //not GWT import const AndroidImageInterface = globalThis.org.microemu.android.device.AndroidImageInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
+//not GWT import - same folder const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { ImageAnimation } from './ImageAnimation.js';
-//not GWT import const ImageAnimation = globalThis.org.allbinary.animation.image.ImageAnimation;
+//not GWT import - same folder const ImageAnimation = globalThis.org.allbinary.animation.image.ImageAnimation;
 export class AllBinaryScreenRelationalImageAnimationInterfaceFactory extends BaseImageAnimationFactory {
     constructor(image, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), 0, 0, 0, 0, animationBehaviorFactory);

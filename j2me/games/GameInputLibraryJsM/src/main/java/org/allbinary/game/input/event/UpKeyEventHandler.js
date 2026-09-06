@@ -16,7 +16,7 @@ import { LocalPlayerInputIdFactory } from '../../../../../org/allbinary/game/inp
 //not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UpKeyEventHandlerBase } from './UpKeyEventHandlerBase.js';
-//not GWT import const UpKeyEventHandlerBase = globalThis.org.allbinary.game.input.event.UpKeyEventHandlerBase;
+//not GWT import - same folder const UpKeyEventHandlerBase = globalThis.org.allbinary.game.input.event.UpKeyEventHandlerBase;
 export class UpKeyEventHandler extends UpKeyEventHandlerBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

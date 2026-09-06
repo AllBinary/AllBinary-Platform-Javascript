@@ -17,11 +17,11 @@ import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
 //not GWT import const DataOutputStream = globalThis.java.io.DataOutputStream;
 import { FileOutputStream } from '../../../../java/io/FileOutputStream.js';
 //not GWT import const FileOutputStream = globalThis.java.io.FileOutputStream;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFileSystem } from '../../../../org/allbinary/logic/io/file/AbFileSystem.js';
 //not GWT import const AbFileSystem = globalThis.org.allbinary.logic.io.file.AbFileSystem;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SmallDelete extends Object {

@@ -14,10 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Thread } from '../../../java/lang/Thread.js';
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { NullRunnable } from './NullRunnable.js';
+//not plain js - same folder import { NullRunnable } 
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 export class NullThread extends Object {
 }

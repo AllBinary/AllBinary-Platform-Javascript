@@ -16,7 +16,7 @@ import { LayerProcessor } from '../../../org/allbinary/layer/LayerProcessor.js';
 //not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OptimizedArtificialIntelligenceLayerManager } from './OptimizedArtificialIntelligenceLayerManager.js';
-//not GWT import const OptimizedArtificialIntelligenceLayerManager = globalThis.org.allbinary.ai.OptimizedArtificialIntelligenceLayerManager;
+//not GWT import - same folder const OptimizedArtificialIntelligenceLayerManager = globalThis.org.allbinary.ai.OptimizedArtificialIntelligenceLayerManager;
 export class OptimizedArtificialIntelligenceLayerProcessorForCollidableLayer extends LayerProcessor {
     constructor() {
         super(new OptimizedArtificialIntelligenceLayerManager());

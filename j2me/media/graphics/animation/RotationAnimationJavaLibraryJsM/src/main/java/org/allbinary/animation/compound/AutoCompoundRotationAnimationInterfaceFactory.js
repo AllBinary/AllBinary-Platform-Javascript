@@ -14,9 +14,9 @@
 //not GWT import const RotationAnimation = globalThis.org.allbinary.animation.RotationAnimation;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompoundAnimationInterfaceFactory } from './CompoundAnimationInterfaceFactory.js';
-//not GWT import const CompoundAnimationInterfaceFactory = globalThis.org.allbinary.animation.compound.CompoundAnimationInterfaceFactory;
+//not GWT import - same folder const CompoundAnimationInterfaceFactory = globalThis.org.allbinary.animation.compound.CompoundAnimationInterfaceFactory;
 import { AutoCompoundRotationAnimation } from './AutoCompoundRotationAnimation.js';
-//not GWT import const AutoCompoundRotationAnimation = globalThis.org.allbinary.animation.compound.AutoCompoundRotationAnimation;
+//not GWT import - same folder const AutoCompoundRotationAnimation = globalThis.org.allbinary.animation.compound.AutoCompoundRotationAnimation;
 export class AutoCompoundRotationAnimationInterfaceFactory extends CompoundAnimationInterfaceFactory {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {
         super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory);

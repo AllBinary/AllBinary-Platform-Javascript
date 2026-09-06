@@ -14,7 +14,7 @@
 //not GWT import const ABTextFieldItem = globalThis.org.allbinary.graphics.form.item.ABTextFieldItem;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TextFieldItemValidator } from './TextFieldItemValidator.js';
-//not GWT import const TextFieldItemValidator = globalThis.org.allbinary.graphics.form.item.validation.TextFieldItemValidator;
+//not GWT import - same folder const TextFieldItemValidator = globalThis.org.allbinary.graphics.form.item.validation.TextFieldItemValidator;
 export class PasswordValidator extends TextFieldItemValidator {
     constructor(textFieldItem, min, max, allowOnEmpty) {
         super(textFieldItem, min, max, allowOnEmpty);

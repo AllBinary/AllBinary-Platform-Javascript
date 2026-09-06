@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { RTSGameStrings } from '../../../../org/allbinary/game/layer/RTSGameStrings.js';
 //not GWT import const Capital = globalThis.org.allbinary.game.layer.capital.Capital;
@@ -19,13 +19,13 @@ import { DowngradeSound } from '../../../../org/allbinary/media/audio/DowngradeS
 //not GWT import const DowngradeSound = globalThis.org.allbinary.media.audio.DowngradeSound;
 import { UpgradeSound } from '../../../../org/allbinary/media/audio/UpgradeSound.js';
 //not GWT import const UpgradeSound = globalThis.org.allbinary.media.audio.UpgradeSound;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { BasicArrayListUtil } from '../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { BooleanFactory } from '../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
@@ -45,21 +45,21 @@ import { CollidableDestroyableDamageableLayer } from '../../../../org/allbinary/
 //not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import { ErrorSound } from '../../../../org/allbinary/media/audio/ErrorSound.js';
 //not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerGameInput } from './PlayerGameInput.js';
-//not GWT import const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
+//not GWT import - same folder const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
 import { InputFactory } from './InputFactory.js';
-//not GWT import const RTSPlayerGameInput = globalThis.org.allbinary.game.input.RTSPlayerGameInput;
+//not GWT import - same folder const RTSPlayerGameInput = globalThis.org.allbinary.game.input.RTSPlayerGameInput;
 import { SelectedRTSLayersPlayerUpgradeGameInputProcessor } from './SelectedRTSLayersPlayerUpgradeGameInputProcessor.js';
-//not GWT import const SelectedRTSLayersPlayerUpgradeGameInputProcessor = globalThis.org.allbinary.game.input.SelectedRTSLayersPlayerUpgradeGameInputProcessor;
+//not GWT import - same folder const SelectedRTSLayersPlayerUpgradeGameInputProcessor = globalThis.org.allbinary.game.input.SelectedRTSLayersPlayerUpgradeGameInputProcessor;
 import { SelectedRTSLayersPlayerDowngradeGameInputProcessor } from './SelectedRTSLayersPlayerDowngradeGameInputProcessor.js';
-//not GWT import const SelectedRTSLayersPlayerDowngradeGameInputProcessor = globalThis.org.allbinary.game.input.SelectedRTSLayersPlayerDowngradeGameInputProcessor;
+//not GWT import - same folder const SelectedRTSLayersPlayerDowngradeGameInputProcessor = globalThis.org.allbinary.game.input.SelectedRTSLayersPlayerDowngradeGameInputProcessor;
 import { GameInputProcessorUtil } from './GameInputProcessorUtil.js';
-//not GWT import const GameInputProcessorUtil = globalThis.org.allbinary.game.input.GameInputProcessorUtil;
+//not GWT import - same folder const GameInputProcessorUtil = globalThis.org.allbinary.game.input.GameInputProcessorUtil;
 export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
     constructor(towerInfoPaintable, rtsPlayerLayerInterface, list, playerInputId, selectRTSLayerVisitorFactoryInterface) {
         super(list, new BasicArrayListD(), playerInputId);

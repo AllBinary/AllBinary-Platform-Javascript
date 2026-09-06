@@ -19,9 +19,9 @@ import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStr
 //not GWT import const InputStream = globalThis.java.io.InputStream;
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const CryptInterface = globalThis.org.allbinary.init.crypt.jcehelper.CryptInterface;
+//not GWT import - same folder const CryptInterface = globalThis.org.allbinary.init.crypt.jcehelper.CryptInterface;
 export class BasicCryptUtil extends Object {
     constructor() {
         super(...arguments);

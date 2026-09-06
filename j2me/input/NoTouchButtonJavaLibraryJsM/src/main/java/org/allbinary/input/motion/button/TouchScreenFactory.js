@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchScreenTypesFactory } from './TouchScreenTypesFactory.js';
-//not GWT import const TouchScreenType = globalThis.org.allbinary.input.motion.button.TouchScreenType;
+//not GWT import - same folder const TouchScreenType = globalThis.org.allbinary.input.motion.button.TouchScreenType;
 export class TouchScreenFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -15,7 +15,7 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const Canvas = globalThis.android.graphics.Canvas;
 import { Color } from '../../../../android/graphics/Color.js';
 //not GWT import const Paint = globalThis.android.graphics.Paint;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //not GWT import const AndroidImageInterface = globalThis.org.microemu.android.device.AndroidImageInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)

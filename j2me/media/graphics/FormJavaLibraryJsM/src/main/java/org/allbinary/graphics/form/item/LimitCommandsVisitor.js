@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
 import { GameCommandsFactory } from '../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
 //not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;

@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const MyCanvas = globalThis.org.allbinary.graphics.displayable.MyCanvas;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Processor } from './Processor.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import - same folder const Processor = globalThis.org.allbinary.canvas.Processor;
 export class RunnableCanvasRefreshHelper extends Processor {
     constructor(runnableCanvas) {
         super();

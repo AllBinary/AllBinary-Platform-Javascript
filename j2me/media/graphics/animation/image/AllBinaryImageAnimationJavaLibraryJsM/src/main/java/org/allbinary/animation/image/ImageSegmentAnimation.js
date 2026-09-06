@@ -11,18 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
-//not plain js import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageAnimation } from './ImageAnimation.js';
-//not GWT import const ImageAnimation = globalThis.org.allbinary.animation.image.ImageAnimation;
+//not GWT import - same folder const ImageAnimation = globalThis.org.allbinary.animation.image.ImageAnimation;
 export class ImageSegmentAnimation extends ImageAnimation {
     constructor(image, sequenceArray, animationBehavior) {
         super(image, animationBehavior);

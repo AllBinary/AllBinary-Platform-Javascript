@@ -10,7 +10,7 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 //not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleWeaponLayer } from './SimpleWeaponLayer.js';
-//not GWT import const SimpleWeaponLayer = globalThis.org.allbinary.game.layer.weapon.SimpleWeaponLayer;
+//not GWT import - same folder const SimpleWeaponLayer = globalThis.org.allbinary.game.layer.weapon.SimpleWeaponLayer;
 export class TempExplosionWeaponLayer extends SimpleWeaponLayer {
     constructor(name, movement, animationInterface, rectangle, viewPosition, timeDelay) {
         super(name, RemoteInfo.REMOTE_INFO, -1, movement, animationInterface, SimpleWeaponLayer.createDestroyed(), rectangle, viewPosition);

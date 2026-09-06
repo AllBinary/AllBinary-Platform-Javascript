@@ -12,13 +12,12 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
-const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
+//not GWT import const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AlphaBaseProcessor } from './AlphaBaseProcessor.js';
-//not GWT import const AlphaBaseProcessor = globalThis.org.allbinary.animation.image.AlphaBaseProcessor;
+//not GWT import - same folder const AlphaBaseProcessor = globalThis.org.allbinary.animation.image.AlphaBaseProcessor;
 export class AlphaProcessor extends AlphaBaseProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

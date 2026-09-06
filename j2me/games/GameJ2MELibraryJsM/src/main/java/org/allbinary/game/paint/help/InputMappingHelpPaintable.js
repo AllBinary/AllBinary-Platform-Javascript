@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const GameKey = globalThis.org.allbinary.game.input.GameKey;
 import { GameKeyFactory } from '../../../../../org/allbinary/game/input/GameKeyFactory.js';
@@ -23,28 +23,27 @@ import { PlatformInputMappingFactory } from '../../../../../org/allbinary/game/i
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HelpPaintable } from './HelpPaintable.js';
-//not GWT import const HelpPaintable = globalThis.org.allbinary.game.paint.help.HelpPaintable;
+//not GWT import - same folder const HelpPaintable = globalThis.org.allbinary.game.paint.help.HelpPaintable;
 //import { UpdateMyFontProperties } from './UpdateMyFontProperties.js';
-//not GWT import const UpdateMyFontProperties = globalThis.org.allbinary.game.paint.help.UpdateMyFontProperties;
+//not GWT import - same folder const UpdateMyFontProperties = globalThis.org.allbinary.game.paint.help.UpdateMyFontProperties;
 export class InputMappingHelpPaintable extends HelpPaintable {
     constructor(gameInputMappingArray, backgroundBasicColor, basicColor) {
         super("Input Mapping", backgroundBasicColor, basicColor);

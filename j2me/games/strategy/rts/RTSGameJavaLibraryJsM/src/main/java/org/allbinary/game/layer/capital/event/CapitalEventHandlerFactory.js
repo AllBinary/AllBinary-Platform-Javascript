@@ -16,7 +16,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const Group = globalThis.org.allbinary.game.identification.Group;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CapitalEventHandler } from './CapitalEventHandler.js';
-//not GWT import const CapitalEventHandler = globalThis.org.allbinary.game.layer.capital.event.CapitalEventHandler;
+//not GWT import - same folder const CapitalEventHandler = globalThis.org.allbinary.game.layer.capital.event.CapitalEventHandler;
 export class CapitalEventHandlerFactory extends Object {
     static init() {
         capitalEventHandlerArray = new Array(10);

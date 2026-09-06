@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const GameMidlet = globalThis.org.allbinary.game.midlet.GameMidlet;
+//not GWT import - same folder const GameMidlet = globalThis.org.allbinary.game.midlet.GameMidlet;
 export class DemoSetup extends Object {
     init(gameMidlet) {
     }

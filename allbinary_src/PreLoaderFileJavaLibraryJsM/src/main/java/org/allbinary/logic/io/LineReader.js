@@ -15,15 +15,15 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
 //not GWT import const DataInputStream = globalThis.java.io.DataInputStream;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileInputStream } from './AbFileInputStream.js';
-//not GWT import const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
+//not GWT import - same folder const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
 export class LineReader extends Object {
     constructor(fileName) {
         super();

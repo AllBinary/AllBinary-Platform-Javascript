@@ -19,7 +19,7 @@ import { PorterDuff } from '../../../../android/graphics/PorterDuff.js';
 //not GWT import const PorterDuff = globalThis.android.graphics.PorterDuff;
 import { PorterDuffColorFilter } from '../../../../android/graphics/PorterDuffColorFilter.js';
 //not GWT import const PorterDuffColorFilter = globalThis.android.graphics.PorterDuffColorFilter;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)

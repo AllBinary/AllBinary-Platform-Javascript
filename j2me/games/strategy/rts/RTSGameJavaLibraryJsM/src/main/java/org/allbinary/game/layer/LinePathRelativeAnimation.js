@@ -12,14 +12,14 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { GPoint } from '../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LinePathAnimation } from './LinePathAnimation.js';
-//not GWT import const LinePathAnimation = globalThis.org.allbinary.game.layer.LinePathAnimation;
+//not GWT import - same folder const LinePathAnimation = globalThis.org.allbinary.game.layer.LinePathAnimation;
 export class LinePathRelativeAnimation extends LinePathAnimation {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

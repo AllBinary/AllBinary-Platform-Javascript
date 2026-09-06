@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { LogConfigTypeFactory } from '../../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
 //not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
@@ -24,13 +24,13 @@ import { NoOperatingSystem } from '../../../../../../org/allbinary/logic/system/
 //not GWT import const NoOperatingSystem = globalThis.org.allbinary.logic.system.os.NoOperatingSystem;
 import { OperatingSystems } from '../../../../../../org/allbinary/logic/system/os/OperatingSystems.js';
 //not GWT import const OperatingSystems = globalThis.org.allbinary.logic.system.os.OperatingSystems;
-//not plain js import { SystemProperties } from '../../../../../../org/allbinary/logic/system/os/SystemProperties.js';
+//not plain js import { SystemProperties } 
 const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LinuxOS } from './LinuxOS.js';
-//not GWT import const LinuxOS = globalThis.org.allbinary.logic.system.os.linux.LinuxOS;
+//not GWT import - same folder const LinuxOS = globalThis.org.allbinary.logic.system.os.linux.LinuxOS;
 export class LinuxOperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

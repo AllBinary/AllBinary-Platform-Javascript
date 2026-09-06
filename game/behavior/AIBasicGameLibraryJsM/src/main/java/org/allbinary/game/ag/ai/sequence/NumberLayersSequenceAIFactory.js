@@ -16,7 +16,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NumberLayersSequenceAI } from './NumberLayersSequenceAI.js';
-//not GWT import const NumberLayersSequenceAI = globalThis.org.allbinary.game.ag.ai.sequence.NumberLayersSequenceAI;
+//not GWT import - same folder const NumberLayersSequenceAI = globalThis.org.allbinary.game.ag.ai.sequence.NumberLayersSequenceAI;
 export class NumberLayersSequenceAIFactory extends Object {
     getInstance(numberOfEnemiesLeft, artificialIntelligenceInterface, ownerLayerInterface, gameInput) {
         //if statement needs to be on the same line and ternary does not work the same way.

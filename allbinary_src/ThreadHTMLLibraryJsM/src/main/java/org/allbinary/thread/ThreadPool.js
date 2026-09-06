@@ -13,23 +13,21 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { NullRunnable } from './NullRunnable.js';
+//not plain js - same folder import { NullRunnable } 
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 import { ThreadPoolStrings } from './ThreadPoolStrings.js';
-//not GWT import const ThreadPoolStrings = globalThis.org.allbinary.thread.ThreadPoolStrings;
+//not GWT import - same folder const ThreadPoolStrings = globalThis.org.allbinary.thread.ThreadPoolStrings;
 import { ThreadObjectUtil } from './ThreadObjectUtil.js';
-//not GWT import const PriorityRunnable = globalThis.org.allbinary.thread.PriorityRunnable;
+//not GWT import - same folder const PriorityRunnable = globalThis.org.allbinary.thread.PriorityRunnable;
 export class ThreadPool extends Object {
     constructor(poolName, numThreads, priority) {
         super();

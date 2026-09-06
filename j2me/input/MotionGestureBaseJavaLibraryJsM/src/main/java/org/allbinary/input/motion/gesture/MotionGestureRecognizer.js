@@ -14,12 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Math } from '../../../../../java/lang/Math.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 import { Line } from '../../../../../org/allbinary/graphics/Line.js';
 //not GWT import const Line = globalThis.org.allbinary.graphics.Line;
-//not plain js import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 //not GWT import const MotionGestureConfiguration = globalThis.org.allbinary.input.motion.gesture.configuration.MotionGestureConfiguration;
 import { MotionGestureConfigurationFactory } from '../../../../../org/allbinary/input/motion/gesture/configuration/MotionGestureConfigurationFactory.js';
@@ -32,17 +31,17 @@ import { MovedMotionGesturesHandler } from '../../../../../org/allbinary/input/m
 //not GWT import const MovedMotionGesturesHandler = globalThis.org.allbinary.input.motion.gesture.observer.MovedMotionGesturesHandler;
 import { ScrolledMotionGesturesHandler } from '../../../../../org/allbinary/input/motion/gesture/observer/ScrolledMotionGesturesHandler.js';
 //not GWT import const ScrolledMotionGesturesHandler = globalThis.org.allbinary.input.motion.gesture.observer.ScrolledMotionGesturesHandler;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { J2SEMath } from '../../../../../org/allbinary/logic/math/J2SEMath.js';
 //not GWT import const J2SEMath = globalThis.org.allbinary.logic.math.J2SEMath;
 import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
 //not GWT import const BasicEventHandler = globalThis.org.allbinary.logic.util.event.handler.BasicEventHandler;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchMotionGestureFactory } from './TouchMotionGestureFactory.js';
-//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
+//not GWT import - same folder const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 export class MotionGestureRecognizer extends Object {
     constructor(id) {
         super();

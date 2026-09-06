@@ -13,18 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { PlayN } from '../../../../../playn/core/PlayN.js';
+//not plain js import { PlayN } 
 const PlayN = globalThis.playn.core.PlayN;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { LogFormatUtil } from './LogFormatUtil.js';
+//not plain js - same folder import { LogFormatUtil } 
 const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
 //ActualPlatform
 /*actual*/ export class PreLogUtil extends Object {

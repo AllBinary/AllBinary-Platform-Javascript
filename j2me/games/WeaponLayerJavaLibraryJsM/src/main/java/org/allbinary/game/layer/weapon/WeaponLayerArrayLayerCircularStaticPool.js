@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { CircularIndexUtil } from '../../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import const WeaponLayer = globalThis.org.allbinary.game.layer.weapon.WeaponLayer;
+//not GWT import - same folder const WeaponLayer = globalThis.org.allbinary.game.layer.weapon.WeaponLayer;
 export class WeaponLayerArrayLayerCircularStaticPool extends Object {
     constructor() {
         super(...arguments);

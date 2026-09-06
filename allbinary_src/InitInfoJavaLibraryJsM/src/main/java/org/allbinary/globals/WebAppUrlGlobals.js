@@ -19,7 +19,7 @@ import { StringValidationUtil } from '../../../org/allbinary/logic/string/String
 //not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UrlGlobalsInterface } from './UrlGlobalsInterface.js';
-//not GWT import const UrlGlobalsInterface = globalThis.org.allbinary.globals.UrlGlobalsInterface;
+//not GWT import - same folder const UrlGlobalsInterface = globalThis.org.allbinary.globals.UrlGlobalsInterface;
 export class WebAppUrlGlobals extends UrlGlobalsInterface {
     constructor() {
         super(...arguments);

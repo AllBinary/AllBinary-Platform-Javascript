@@ -16,11 +16,11 @@ import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventSt
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
 //not GWT import const BasicEventHandler = globalThis.org.allbinary.logic.util.event.handler.BasicEventHandler;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const LayerManagerEventListenerInterface = globalThis.org.allbinary.layer.event.LayerManagerEventListenerInterface;
+//not GWT import - same folder const LayerManagerEventListenerInterface = globalThis.org.allbinary.layer.event.LayerManagerEventListenerInterface;
 export class LayerManagerEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -18,25 +18,25 @@ import { GameConfigurationCentral } from '../../../org/allbinary/game/configurat
 //not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
 import { FeaturedResourceFactory } from '../../../org/allbinary/game/resource/FeaturedResourceFactory.js';
 //not GWT import const FeaturedResourceFactory = globalThis.org.allbinary.game.resource.FeaturedResourceFactory;
-//not plain js import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../org/allbinary/graphics/Rectangle.js';
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { RectangleFactory } from '../../../org/allbinary/graphics/RectangleFactory.js';
 //not GWT import const RectangleFactory = globalThis.org.allbinary.graphics.RectangleFactory;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const BasicAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.BasicAnimationInterfaceFactoryInterface;
+//not GWT import - same folder const BasicAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.BasicAnimationInterfaceFactoryInterface;
 import { NullAnimationFactory } from './NullAnimationFactory.js';
-//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
+//not GWT import - same folder const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
 export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedResourceFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

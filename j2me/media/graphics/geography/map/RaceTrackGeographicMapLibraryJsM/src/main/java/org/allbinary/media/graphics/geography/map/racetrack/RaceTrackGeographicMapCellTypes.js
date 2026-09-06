@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackGeographicMapCellType } from './RaceTrackGeographicMapCellType.js';
-//not GWT import const RaceTrackGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType;
+//not GWT import - same folder const RaceTrackGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType;
 export class RaceTrackGeographicMapCellTypes extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,7 +11,4 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const NamedInterface = globalThis.org.allbinary.layer.NamedInterface;
-//not plain js import { PositionInterface } from './PositionInterface.js';
-const PositionInterface = globalThis.org.allbinary.layer.PositionInterface;
 export {};

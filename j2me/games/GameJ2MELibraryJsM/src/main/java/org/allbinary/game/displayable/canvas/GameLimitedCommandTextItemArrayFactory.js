@@ -13,11 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { CommandTextItemArrayFactory } from '../../../../../org/allbinary/graphics/form/item/CommandTextItemArrayFactory.js';
 //not GWT import const CommandTextItemArrayFactory = globalThis.org.allbinary.graphics.form.item.CommandTextItemArrayFactory;
 import { LimitCommandsVisitor } from '../../../../../org/allbinary/graphics/form/item/LimitCommandsVisitor.js';
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
+//not GWT import const LimitCommandsVisitor = globalThis.org.allbinary.graphics.form.item.LimitCommandsVisitor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameLimitedCommandTextItemArrayFactory extends Object {
     constructor() {

@@ -6,9 +6,9 @@ import { Features } from '../../../org/allbinary/game/configuration/feature/Feat
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { MainFeatureFactory } from '../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
 //not GWT import const MainFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MainFeatureFactory;
-//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbDataInputStream } from '../../../org/allbinary/logic/io/AbDataInputStream.js';
 //not GWT import const AbDataInputStream = globalThis.org.allbinary.logic.io.AbDataInputStream;
@@ -22,11 +22,11 @@ import { StreamUtil } from '../../../org/allbinary/logic/io/StreamUtil.js';
 //not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
 import { FileFactory } from '../../../org/allbinary/logic/io/file/FileFactory.js';
 //not GWT import const FileFactory = globalThis.org.allbinary.logic.io.file.FileFactory;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ApplicationConfiguration extends Object {

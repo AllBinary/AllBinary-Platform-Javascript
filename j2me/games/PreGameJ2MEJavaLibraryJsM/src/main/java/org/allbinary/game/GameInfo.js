@@ -14,27 +14,27 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Integer } from '../../../java/lang/Integer.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
-import { StdUtil } from '../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameTypeFactory } from './GameTypeFactory.js';
-//not GWT import const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
+//not GWT import - same folder const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
 import { GameMode } from './GameMode.js';
-//not GWT import const GameMode = globalThis.org.allbinary.game.GameMode;
+//not GWT import - same folder const GameMode = globalThis.org.allbinary.game.GameMode;
 import { PlayerTypesFactory } from './PlayerTypesFactory.js';
-//not GWT import const PlayerTypesFactory = globalThis.org.allbinary.game.PlayerTypesFactory;
+//not GWT import - same folder const PlayerTypesFactory = globalThis.org.allbinary.game.PlayerTypesFactory;
 import { GameInfoData } from './GameInfoData.js';
-//not GWT import const PlayerType = globalThis.org.allbinary.game.PlayerType;
+//not GWT import - same folder const PlayerType = globalThis.org.allbinary.game.PlayerType;
 export class GameInfo extends Object {
     constructor(gameType, gameMode, playerType, highestLevel, currentLevel) {
         super();

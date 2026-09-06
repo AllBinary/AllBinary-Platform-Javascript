@@ -1,5 +1,5 @@
 /* Generated Code Do Not Modify */
-//not GWT import const FloatBuffer = globalThis.javax.microedition.khronos.opengles.FloatBuffer;
+//not GWT import - same folder const FloatBuffer = globalThis.javax.microedition.khronos.opengles.FloatBuffer;
 //Interfaces do not have static fields for typescript so create a class with the static fields
 export class GL10I {
 }

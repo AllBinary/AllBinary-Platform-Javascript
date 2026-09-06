@@ -18,11 +18,11 @@ import { Context } from '../../../../../android/content/Context.js';
 //not GWT import const View = globalThis.android.view.View;
 import { InputMethodManager } from '../../../../../android/view/inputmethod/InputMethodManager.js';
 //not GWT import const ViewCompositeInterface = globalThis.org.allbinary.android.activity.ViewCompositeInterface;
-//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ShowVirtualKeyboardRunnable extends Object {

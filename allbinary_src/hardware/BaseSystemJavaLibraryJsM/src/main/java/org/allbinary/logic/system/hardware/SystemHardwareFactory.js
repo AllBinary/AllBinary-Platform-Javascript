@@ -13,20 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoHardware } from './NoHardware.js';
-//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
+//not GWT import - same folder const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
 import { HardwareFactory } from './HardwareFactory.js';
-//not GWT import const HardwareFactory = globalThis.org.allbinary.logic.system.hardware.HardwareFactory;
+//not GWT import - same folder const HardwareFactory = globalThis.org.allbinary.logic.system.hardware.HardwareFactory;
 export class SystemHardwareFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

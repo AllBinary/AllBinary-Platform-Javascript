@@ -13,7 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const Stack = globalThis.java.util.Stack;
+//not plain js import { ABHashMap } 
+const ABHashMap = globalThis.org.allbinary.util.ABHashMap;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { ABStack } 
+const ABStack = globalThis.org.allbinary.util.ABStack;
+//not plain js import { ABVector } 
+const ABVector = globalThis.org.allbinary.util.ABVector;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //NoPlatform
 expect;

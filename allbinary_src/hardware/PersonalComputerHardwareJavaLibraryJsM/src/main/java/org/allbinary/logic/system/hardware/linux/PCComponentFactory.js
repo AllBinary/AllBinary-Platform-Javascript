@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { LogConfigTypeFactory } from '../../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
 //not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
@@ -37,7 +37,7 @@ import { Usb } from '../../../../../../org/allbinary/logic/system/hardware/compo
 //not GWT import const Usb = globalThis.org.allbinary.logic.system.hardware.components.linux.Usb;
 import { Video } from '../../../../../../org/allbinary/logic/system/hardware/components/linux/Video.js';
 //not GWT import const Video = globalThis.org.allbinary.logic.system.hardware.components.linux.Video;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PCComponentFactory extends Object {

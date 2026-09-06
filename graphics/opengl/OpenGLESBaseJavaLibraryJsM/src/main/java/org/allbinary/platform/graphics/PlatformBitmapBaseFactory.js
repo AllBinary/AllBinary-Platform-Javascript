@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlatformBitmapBase } from './PlatformBitmapBase.js';
-//not GWT import const PlatformBitmapBase = globalThis.org.allbinary.platform.graphics.PlatformBitmapBase;
+//not GWT import - same folder const PlatformBitmapBase = globalThis.org.allbinary.platform.graphics.PlatformBitmapBase;
 export class PlatformBitmapBaseFactory extends Object {
     createBitmap(image) {
         //if statement needs to be on the same line and ternary does not work the same way.

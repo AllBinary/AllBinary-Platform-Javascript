@@ -12,25 +12,23 @@
         *  Created By: Travis Berthelot
 */
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { Sprite } from '../../../../../javax/microedition/lcdui/game/Sprite.js';
+//not plain js import { Sprite } 
 const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
 //not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 import { IndexedAnimation } from '../../../../../org/allbinary/animation/IndexedAnimation.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const ColorCompositeInterface = globalThis.org.allbinary.graphics.color.ColorCompositeInterface;
-//not plain js import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SpriteIndexedAnimation extends IndexedAnimation {
     constructor(sprite, image, basicColorArray, animationBehavior) {

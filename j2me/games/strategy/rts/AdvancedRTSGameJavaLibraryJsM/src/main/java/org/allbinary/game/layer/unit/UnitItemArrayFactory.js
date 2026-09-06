@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { ImageItem } from '../../../../../javax/microedition/lcdui/ImageItem.js';
+//not plain js import { ImageItem } 
 const ImageItem = globalThis.javax.microedition.lcdui.ImageItem;
 import { RTSGameStrings } from '../../../../../org/allbinary/game/layer/RTSGameStrings.js';
 //not GWT import const RTSGameStrings = globalThis.org.allbinary.game.layer.RTSGameStrings;
@@ -25,7 +25,7 @@ import { RTSLayerTextAnimation } from '../../../../../org/allbinary/game/layer/i
 //not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 import { GameFeatureImageCacheFactory } from '../../../../../org/allbinary/image/GameFeatureImageCacheFactory.js';
 //not GWT import const GameFeatureImageCacheFactory = globalThis.org.allbinary.image.GameFeatureImageCacheFactory;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';

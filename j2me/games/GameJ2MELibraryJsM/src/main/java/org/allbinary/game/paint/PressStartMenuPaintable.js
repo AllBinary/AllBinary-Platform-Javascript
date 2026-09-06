@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { AppletUtil } from '../../../../org/allbinary/AppletUtil.js';
 //not GWT import const AppletUtil = globalThis.org.allbinary.AppletUtil;
@@ -30,7 +30,7 @@ import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 import { TouchScreenFactory } from '../../../../org/allbinary/input/motion/button/TouchScreenFactory.js';
 //not GWT import const TouchScreenFactory = globalThis.org.allbinary.input.motion.button.TouchScreenFactory;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;

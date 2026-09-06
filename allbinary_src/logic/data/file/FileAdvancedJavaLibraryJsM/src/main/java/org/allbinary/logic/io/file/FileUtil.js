@@ -17,9 +17,9 @@ import { Exception } from '../../../../../java/lang/Exception.js';
 //not GWT import const OutputStream = globalThis.java.io.OutputStream;
 import { URLGLOBALS } from '../../../../../org/allbinary/globals/URLGLOBALS.js';
 //not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { LogConfigTypeFactory } from '../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
 //not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
@@ -41,27 +41,27 @@ import { Directory } from '../../../../../org/allbinary/logic/io/file/directory/
 //not GWT import const Directory = globalThis.org.allbinary.logic.io.file.directory.Directory;
 import { AbPath } from '../../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
-//not plain js import { AbPathData } from '../../../../../org/allbinary/logic/io/path/AbPathData.js';
+//not plain js import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFile } from './AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
-//not plain js import { FilePathData } from './FilePathData.js';
+//not GWT import - same folder const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not plain js - same folder import { FilePathData } 
 const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
 import { FileWrapperUtil } from './FileWrapperUtil.js';
-//not GWT import const FileWrapperUtil = globalThis.org.allbinary.logic.io.file.FileWrapperUtil;
+//not GWT import - same folder const FileWrapperUtil = globalThis.org.allbinary.logic.io.file.FileWrapperUtil;
 import { FileUtil2 } from './FileUtil2.js';
-//not GWT import const FileUtil2 = globalThis.org.allbinary.logic.io.file.FileUtil2;
+//not GWT import - same folder const FileUtil2 = globalThis.org.allbinary.logic.io.file.FileUtil2;
 //data/init/views/TestStore/template/type/genericTemplateObjectConfig.xml
 export class FileUtil extends Object {
     static getInstance() {

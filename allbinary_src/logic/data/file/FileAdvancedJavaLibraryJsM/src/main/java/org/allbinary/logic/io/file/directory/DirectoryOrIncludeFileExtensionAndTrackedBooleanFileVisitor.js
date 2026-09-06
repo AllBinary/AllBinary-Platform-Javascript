@@ -20,15 +20,15 @@ import { CommonDataFileStrings } from '../../../../../../org/allbinary/logic/io/
 //not GWT import const CommonDataFileStrings = globalThis.org.allbinary.logic.io.file.CommonDataFileStrings;
 import { IncludeFileExtensionsBooleanFileVisitor } from '../../../../../../org/allbinary/logic/io/file/visitor/IncludeFileExtensionsBooleanFileVisitor.js';
 //not GWT import const IncludeFileExtensionsBooleanFileVisitor = globalThis.org.allbinary.logic.io.file.visitor.IncludeFileExtensionsBooleanFileVisitor;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackedStrings } from './TrackedStrings.js';
-//not GWT import const TrackedStrings = globalThis.org.allbinary.logic.io.file.directory.TrackedStrings;
+//not GWT import - same folder const TrackedStrings = globalThis.org.allbinary.logic.io.file.directory.TrackedStrings;
 import { ProcessBuilder } from './ProcessBuilder.js';
-//not GWT import const Process = globalThis.org.allbinary.logic.io.file.directory.Process;
+//not GWT import - same folder const Process = globalThis.org.allbinary.logic.io.file.directory.Process;
 export class DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor extends IncludeFileExtensionsBooleanFileVisitor {
     static main(args) {
         var commonFileStrings = CommonDataFileStrings.getInstance();

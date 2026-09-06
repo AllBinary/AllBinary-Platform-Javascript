@@ -12,29 +12,29 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const HashMap = globalThis.java.util.HashMap;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { UserDbInitInfo } from '../../../../org/allbinary/business/init/db/UserDbInitInfo.js';
 //not GWT import const UserDbInitInfo = globalThis.org.allbinary.business.init.db.UserDbInitInfo;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { LogConfigTypeFactory } from '../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
 //not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
 import { LogConfigTypes } from '../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypes.js';
 //not GWT import const LogConfigTypes = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypes;
-//not plain js import { AbPathData } from '../../../../org/allbinary/logic/io/path/AbPathData.js';
+//not plain js import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitSql } from './InitSql.js';
-//not GWT import const InitSql = globalThis.org.allbinary.business.init.InitSql;
+//not GWT import - same folder const InitSql = globalThis.org.allbinary.business.init.InitSql;
 import { InitInfo } from './InitInfo.js';
-//not GWT import const InitInfo = globalThis.org.allbinary.business.init.InitInfo;
+//not GWT import - same folder const InitInfo = globalThis.org.allbinary.business.init.InitInfo;
 export class InitInfoEntity extends InitSql {
     constructor() {
         super(new UserDbInitInfo());

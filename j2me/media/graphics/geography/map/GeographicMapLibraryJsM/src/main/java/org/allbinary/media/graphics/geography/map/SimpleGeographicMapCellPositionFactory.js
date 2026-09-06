@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const GeographicMapCellPositionFactoryInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPositionFactoryInterface;
+//not GWT import - same folder const GeographicMapCellPositionFactoryInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPositionFactoryInterface;
 import { GeographicMapCellPosition } from './GeographicMapCellPosition.js';
-//not GWT import const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
+//not GWT import - same folder const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
 export class SimpleGeographicMapCellPositionFactory extends Object {
     getInstance(geographicMapInterface, i_column, i_row, columns, rows, width, height) {
         //if statement needs to be on the same line and ternary does not work the same way.

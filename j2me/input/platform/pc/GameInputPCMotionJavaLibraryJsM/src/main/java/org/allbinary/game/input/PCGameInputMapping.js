@@ -23,7 +23,7 @@ import { TrackballMotionGestureFactory } from '../../../../org/allbinary/input/m
 //not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCKeyFactory } from './PCKeyFactory.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
 export class PCGameInputMapping extends PersistentInputMapping {
     constructor() {
         super(GamePersistanceStrings.getInstance().SAVED_INPUT_CONFIGURATION_RECORD_ID);

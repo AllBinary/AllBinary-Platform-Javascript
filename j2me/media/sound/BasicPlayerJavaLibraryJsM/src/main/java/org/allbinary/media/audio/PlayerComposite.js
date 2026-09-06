@@ -14,23 +14,24 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not plain js import { Control } from '../../../../javax/microedition/media/Control.js';
+//not plain js import { Control } 
 const Control = globalThis.javax.microedition.media.Control;
-//not plain js import { Controllable } from '../../../../javax/microedition/media/Controllable.js';
+//not plain js import { Controllable } 
 const Controllable = globalThis.javax.microedition.media.Controllable;
-//not plain js import { Player, PlayerI } from '../../../../javax/microedition/media/Player.js';
+//not plain js import { Player } 
 const Player = globalThis.javax.microedition.media.Player;
-//not plain js import { PlayerListener } from '../../../../javax/microedition/media/PlayerListener.js';
+const PlayerI = globalThis.javax.microedition.media.Player;
+//not plain js import { PlayerListener } 
 const PlayerListener = globalThis.javax.microedition.media.PlayerListener;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
 import { GameTickTimeDelayHelperFactory } from '../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
 //not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const Controllable2 = globalThis.org.allbinary.media.audio.Controllable2;
+//not GWT import - same folder const Controllable2 = globalThis.org.allbinary.media.audio.Controllable2;
 //BasicPlayer
 export class PlayerComposite extends Object {
     constructor(player, repeatTime) {

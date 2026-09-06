@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { BaseCircularPool } from '../../../org/allbinary/logic/util/cache/BaseCircularPool.js';
 //not GWT import const BaseCircularPool = globalThis.org.allbinary.logic.util.cache.BaseCircularPool;
-//not plain js import { CircularIndexUtil } from '../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomGPoint } from './CustomGPoint.js';
-//not GWT import const CustomGPoint = globalThis.org.allbinary.graphics.CustomGPoint;
+//not GWT import - same folder const CustomGPoint = globalThis.org.allbinary.graphics.CustomGPoint;
 export class GPointCircularPool extends BaseCircularPool {
     constructor(size) {
         super();

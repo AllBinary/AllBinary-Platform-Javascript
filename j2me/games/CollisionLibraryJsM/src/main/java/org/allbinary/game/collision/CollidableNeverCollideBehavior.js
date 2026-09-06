@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableBaseBehavior } from './CollidableBaseBehavior.js';
-//not GWT import const CollidableInterfaceCompositeInterface = globalThis.org.allbinary.game.collision.CollidableInterfaceCompositeInterface;
+//not GWT import - same folder const CollidableInterfaceCompositeInterface = globalThis.org.allbinary.game.collision.CollidableInterfaceCompositeInterface;
 export class CollidableNeverCollideBehavior extends CollidableBaseBehavior {
     constructor(isCollidable) {
         super(isCollidable);

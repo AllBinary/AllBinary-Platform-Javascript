@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 //not GWT import const AnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.AnimationInterfaceFactoryInterface;
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
@@ -56,29 +56,29 @@ import { TileLayerPositionIntoViewPosition } from '../../../../org/allbinary/gam
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { RectangleFactory } from '../../../../org/allbinary/graphics/RectangleFactory.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not plain js import { FrameUtil } from '../../../../org/allbinary/math/FrameUtil.js';
+//not plain js import { FrameUtil } 
 const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
 //not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
 import { GeographicMapDirectionUtil } from '../../../../org/allbinary/media/graphics/geography/map/GeographicMapDirectionUtil.js';
 //not GWT import const GeographicMapDirectionUtil = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapDirectionUtil;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSLayer } from './RTSLayer.js';
-//not GWT import const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
+//not GWT import - same folder const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
 import { NullPathFindingLayer } from './NullPathFindingLayer.js';
-//not GWT import const NullPathFindingLayer = globalThis.org.allbinary.game.layer.NullPathFindingLayer;
+//not GWT import - same folder const NullPathFindingLayer = globalThis.org.allbinary.game.layer.NullPathFindingLayer;
 import { AdvancedRTSProperties } from './AdvancedRTSProperties.js';
-//not GWT import const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
+//not GWT import - same folder const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
 import { WaypointBehaviorBase } from './WaypointBehaviorBase.js';
-//not GWT import const RTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.RTSPlayerLayerInterface;
+//not GWT import - same folder const RTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.RTSPlayerLayerInterface;
 import { RTSLayerUtil } from './RTSLayerUtil.js';
-//not GWT import const RTSLayerUtil = globalThis.org.allbinary.game.layer.RTSLayerUtil;
+//not GWT import - same folder const RTSLayerUtil = globalThis.org.allbinary.game.layer.RTSLayerUtil;
 export class AdvancedRTSGameLayer extends RTSLayer {
     //@Throws(Exception.constructor)
     static createSimulated() {

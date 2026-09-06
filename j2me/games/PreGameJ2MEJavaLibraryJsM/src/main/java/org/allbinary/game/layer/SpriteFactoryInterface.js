@@ -12,8 +12,8 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { Sprite } from '../../../../javax/microedition/lcdui/game/Sprite.js';
+//not plain js import { Sprite } 
 const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
 export {};

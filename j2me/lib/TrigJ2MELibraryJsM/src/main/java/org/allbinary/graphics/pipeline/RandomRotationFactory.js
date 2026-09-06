@@ -13,15 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { MyRandomFactory } from '../../../../org/allbinary/game/rand/MyRandomFactory.js';
+//not plain js import { MyRandomFactory } 
 const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
-//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGraphicsPipeline } from './BasicGraphicsPipeline.js';
-//not GWT import const BasicGraphicsPipeline = globalThis.org.allbinary.graphics.pipeline.BasicGraphicsPipeline;
+//not GWT import - same folder const BasicGraphicsPipeline = globalThis.org.allbinary.graphics.pipeline.BasicGraphicsPipeline;
 export class RandomRotationFactory extends Object {
     constructor() {
         super(...arguments);

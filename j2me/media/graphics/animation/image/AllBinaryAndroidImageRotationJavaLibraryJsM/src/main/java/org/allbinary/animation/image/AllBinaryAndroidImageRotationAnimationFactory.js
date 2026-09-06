@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
 import { GameConfigurationCentral } from '../../../../org/allbinary/game/configuration/GameConfigurationCentral.js';
@@ -20,21 +20,21 @@ import { Features } from '../../../../org/allbinary/game/configuration/feature/F
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { OpenGLFeatureFactory } from '../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
 //not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
-//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
-//not plain js import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
-const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
-//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
+//not GWT import const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
+//not GWT import - same folder const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { AllBinaryFlickerAndroidImageRotationAnimation } from './AllBinaryFlickerAndroidImageRotationAnimation.js';
-//not GWT import const AllBinaryFlickerAndroidImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryFlickerAndroidImageRotationAnimation;
+//not GWT import - same folder const AllBinaryFlickerAndroidImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryFlickerAndroidImageRotationAnimation;
 import { AllBinaryAdjustedAndroidImageRotationAnimation } from './AllBinaryAdjustedAndroidImageRotationAnimation.js';
-//not GWT import const AllBinaryAdjustedAndroidImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryAdjustedAndroidImageRotationAnimation;
+//not GWT import - same folder const AllBinaryAdjustedAndroidImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryAdjustedAndroidImageRotationAnimation;
 export class AllBinaryAndroidImageRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createFactory(image, width, height, animationBehaviorFactory) {

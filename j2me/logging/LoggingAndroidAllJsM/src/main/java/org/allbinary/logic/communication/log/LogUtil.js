@@ -15,18 +15,18 @@
 import hilog from '@ohos.hilog';
 import { Object } from '../../../../../java/lang/Object.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { LogFormatUtil } from './LogFormatUtil.js';
+//not plain js - same folder import { LogFormatUtil } 
 const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
-//not plain js import { Log } from './Log.js';
+//not plain js - same folder import { Log } 
 const Log = globalThis.org.allbinary.logic.communication.log.Log;
 //ActualPlatform
 /*actual*/ export class LogUtil extends Object {

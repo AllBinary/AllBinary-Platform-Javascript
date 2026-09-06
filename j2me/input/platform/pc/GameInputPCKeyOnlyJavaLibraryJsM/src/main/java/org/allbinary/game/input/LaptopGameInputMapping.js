@@ -14,9 +14,9 @@
 //not GWT import const InputToGameKeyMapping = globalThis.org.allbinary.game.input.mapping.InputToGameKeyMapping;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCGameInputMapping } from './PCGameInputMapping.js';
-//not GWT import const PCGameInputMapping = globalThis.org.allbinary.game.input.PCGameInputMapping;
+//not GWT import - same folder const PCGameInputMapping = globalThis.org.allbinary.game.input.PCGameInputMapping;
 import { LaptopDefaultGameInputMapping } from './LaptopDefaultGameInputMapping.js';
-//not GWT import const LaptopDefaultGameInputMapping = globalThis.org.allbinary.game.input.LaptopDefaultGameInputMapping;
+//not GWT import - same folder const LaptopDefaultGameInputMapping = globalThis.org.allbinary.game.input.LaptopDefaultGameInputMapping;
 export class LaptopGameInputMapping extends PCGameInputMapping {
     getDefault() {
         //if statement needs to be on the same line and ternary does not work the same way.

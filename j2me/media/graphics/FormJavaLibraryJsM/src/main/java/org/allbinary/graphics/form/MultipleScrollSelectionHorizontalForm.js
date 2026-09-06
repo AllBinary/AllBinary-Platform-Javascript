@@ -1,8 +1,8 @@
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
@@ -16,23 +16,23 @@ import { NullPaintable } from '../../../../org/allbinary/graphics/paint/NullPain
 //not GWT import const NullPaintable = globalThis.org.allbinary.graphics.paint.NullPaintable;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollSelectionForm } from './ScrollSelectionForm.js';
-//not GWT import const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
+//not GWT import - same folder const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
-//not GWT import const FormType = globalThis.org.allbinary.graphics.form.FormType;
+//not GWT import - same folder const FormType = globalThis.org.allbinary.graphics.form.FormType;
 import { ItemIndexPaintable } from './ItemIndexPaintable.js';
-//not GWT import const ItemIndexPaintable = globalThis.org.allbinary.graphics.form.ItemIndexPaintable;
+//not GWT import - same folder const ItemIndexPaintable = globalThis.org.allbinary.graphics.form.ItemIndexPaintable;
 import { FormTypeFactory } from './FormTypeFactory.js';
-//not GWT import const FormTypeFactory = globalThis.org.allbinary.graphics.form.FormTypeFactory;
+//not GWT import - same folder const FormTypeFactory = globalThis.org.allbinary.graphics.form.FormTypeFactory;
 //import { MultipleScrollSelectionFormVerticalPaintable } from './MultipleScrollSelectionFormVerticalPaintable.js';
-//not GWT import const MultipleScrollSelectionFormVerticalPaintable = globalThis.org.allbinary.graphics.form.MultipleScrollSelectionFormVerticalPaintable;
+//not GWT import - same folder const MultipleScrollSelectionFormVerticalPaintable = globalThis.org.allbinary.graphics.form.MultipleScrollSelectionFormVerticalPaintable;
 //import { MultipleScrollSelectionFormHorizontalPaintable } from './MultipleScrollSelectionFormHorizontalPaintable.js';
-//not GWT import const MultipleScrollSelectionFormHorizontalPaintable = globalThis.org.allbinary.graphics.form.MultipleScrollSelectionFormHorizontalPaintable;
+//not GWT import - same folder const MultipleScrollSelectionFormHorizontalPaintable = globalThis.org.allbinary.graphics.form.MultipleScrollSelectionFormHorizontalPaintable;
 export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     //@Throws(Exception.constructor)
     static createForm(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor) {

@@ -17,15 +17,15 @@ import { Thread } from '../../../../../java/lang/Thread.js';
 //not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
 import { InitEmulatorFactory } from '../../../../../org/allbinary/emulator/InitEmulatorFactory.js';
 //not GWT import const InitEmulatorFactory = globalThis.org.allbinary.emulator.InitEmulatorFactory;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RendererStrings } from './RendererStrings.js';
-//not GWT import const RendererStrings = globalThis.org.allbinary.graphics.opengles.renderer.RendererStrings;
+//not GWT import - same folder const RendererStrings = globalThis.org.allbinary.graphics.opengles.renderer.RendererStrings;
 export class EmulatorCustomRenderer extends Object {
     constructor() {
         super(...arguments);

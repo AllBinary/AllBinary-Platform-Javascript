@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { ARunnable } from './ARunnable.js';
+//not plain js - same folder import { ARunnable } 
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 export class NullRunnable extends ARunnable {
     static getInstance() {

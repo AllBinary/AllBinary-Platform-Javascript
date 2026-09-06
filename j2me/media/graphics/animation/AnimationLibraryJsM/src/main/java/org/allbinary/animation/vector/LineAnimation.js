@@ -12,13 +12,11 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Animation } from '../../../../org/allbinary/animation/Animation.js';
-//not GWT import const ColorCompositeInterface = globalThis.org.allbinary.graphics.color.ColorCompositeInterface;
-//not plain js import { PositionInterface } from '../../../../org/allbinary/layer/PositionInterface.js';
-const PositionInterface = globalThis.org.allbinary.layer.PositionInterface;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not GWT import const PositionInterface = globalThis.org.allbinary.layer.PositionInterface;
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LineAnimation extends Animation {

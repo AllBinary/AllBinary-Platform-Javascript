@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { BasicArrayList } from '../../../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not GWT import const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePathFinderGraphVisitor } from './BasePathFinderGraphVisitor.js';
-//not GWT import const BasePathFinderGraphVisitor = globalThis.org.allbinary.game.media.graphics.geography.map.racetrack.BasePathFinderGraphVisitor;
+//not GWT import - same folder const BasePathFinderGraphVisitor = globalThis.org.allbinary.game.media.graphics.geography.map.racetrack.BasePathFinderGraphVisitor;
 //1.4.2
 export class PathFinderGraphHackVisitor extends BasePathFinderGraphVisitor {
     constructor(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight) {

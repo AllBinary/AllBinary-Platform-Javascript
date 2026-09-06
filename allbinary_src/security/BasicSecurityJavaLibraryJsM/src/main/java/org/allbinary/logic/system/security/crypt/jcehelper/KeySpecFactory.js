@@ -21,9 +21,9 @@ import { DESedeKeySpec } from '../../../../../../../javax/crypto/spec/DESedeKeyS
 //not GWT import const DESedeKeySpec = globalThis.javax.crypto.spec.DESedeKeySpec;
 import { TsUtil } from '../../../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
-//not plain js import { PreLogUtil } from '../../../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class KeySpecFactory extends Object {

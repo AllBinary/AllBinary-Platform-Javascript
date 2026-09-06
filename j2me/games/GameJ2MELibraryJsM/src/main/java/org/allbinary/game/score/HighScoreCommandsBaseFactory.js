@@ -14,13 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
 //not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HighScoreCommandsBaseFactory extends Object {
     constructor(HIGH_SCORE_COMMANDS) {

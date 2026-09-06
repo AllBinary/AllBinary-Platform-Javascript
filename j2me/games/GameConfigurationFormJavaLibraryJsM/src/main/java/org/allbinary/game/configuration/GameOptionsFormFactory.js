@@ -13,18 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
 //not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameOptionsForm } from './GameOptionsForm.js';
-//not GWT import const GameOptionsForm = globalThis.org.allbinary.game.configuration.GameOptionsForm;
+//not GWT import - same folder const GameOptionsForm = globalThis.org.allbinary.game.configuration.GameOptionsForm;
 export class GameOptionsFormFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

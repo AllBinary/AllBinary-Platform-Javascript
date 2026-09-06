@@ -11,10 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import const InitUpdatePaintableInterface = globalThis.org.allbinary.graphics.paint.InitUpdatePaintableInterface;
+//not GWT import - same folder const InitUpdatePaintableInterface = globalThis.org.allbinary.graphics.paint.InitUpdatePaintableInterface;
 export class InitUpdatePaintable extends Paintable {
     constructor() {
         super();

@@ -13,13 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryMediaManager } from './AllBinaryMediaManager.js';
-//not GWT import const SoundsFactoryInterface = globalThis.org.allbinary.media.audio.SoundsFactoryInterface;
+//not GWT import - same folder const SoundsFactoryInterface = globalThis.org.allbinary.media.audio.SoundsFactoryInterface;
 export class AllBinaryMediaManagerShutdown extends Object {
     //@Throws(Exception.constructor)
     static shutdown(soundsFactoryInterface) {

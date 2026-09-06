@@ -26,29 +26,29 @@ import { OpenGLESGL11VBOImageFactory } from '../../../../org/allbinary/image/ope
 //not GWT import const OpenGLESGL11VBOImageFactory = globalThis.org.allbinary.image.opengles.OpenGLESGL11VBOImageFactory;
 import { OpenGLImageSpecificFactory } from '../../../../org/allbinary/image/opengles/OpenGLImageSpecificFactory.js';
 //not GWT import const OpenGLImageSpecificFactory = globalThis.org.allbinary.image.opengles.OpenGLImageSpecificFactory;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { Tokenizer } from '../../../../org/allbinary/logic/string/tokens/Tokenizer.js';
 //not GWT import const Tokenizer = globalThis.org.allbinary.logic.string.tokens.Tokenizer;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import const OpenGLFeature = globalThis.org.allbinary.graphics.opengles.OpenGLFeature;
+//not GWT import - same folder const OpenGLFeature = globalThis.org.allbinary.graphics.opengles.OpenGLFeature;
 export class OpenGLCapabilities extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -17,7 +17,7 @@ import { AboutPaintable } from '../../../../../org/allbinary/game/paint/AboutPai
 //not GWT import const AboutPaintable = globalThis.org.allbinary.game.paint.AboutPaintable;
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AboutPaintableFactory extends Object {

@@ -17,14 +17,14 @@ import { Class } from '../../../../java/lang/Class.js';
 //not GWT import const Connection = globalThis.java.sql.Connection;
 import { DriverManager } from '../../../../java/sql/DriverManager.js';
 //not GWT import const Set = globalThis.java.util.Set;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const DbConnectionInfo = globalThis.org.allbinary.business.init.db.DbConnectionInfo;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { LogConfigTypeFactory } from '../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
 //not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
@@ -34,15 +34,15 @@ import { SqlStrings } from '../../../../org/allbinary/logic/communication/sql/Sq
 //not GWT import const SqlStrings = globalThis.org.allbinary.logic.communication.sql.SqlStrings;
 import { SqlTypeStrings } from '../../../../org/allbinary/logic/communication/sql/SqlTypeStrings.js';
 //not GWT import const SqlTypeStrings = globalThis.org.allbinary.logic.communication.sql.SqlTypeStrings;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../org/allbinary/logic/string/StringValidationUtil.js';
 //not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InitSql extends Object {

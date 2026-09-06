@@ -20,7 +20,7 @@ import { FloatBuffer } from '../../../../java/nio/FloatBuffer.js';
 //not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
 import { GL10 } from '../../../../javax/microedition/khronos/opengles/GL10.js';
 //not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { OpenGLLogUtil } from '../../../../org/allbinary/graphics/opengles/OpenGLLogUtil.js';
 //not GWT import const OpenGLLogUtil = globalThis.org.allbinary.graphics.opengles.OpenGLLogUtil;
@@ -29,7 +29,7 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 import { GLUtil } from '../../../../org/allbinary/opengles/GLUtil.js';
 //not GWT import const PlatformTextureBaseFactory = globalThis.org.allbinary.platform.opengles.PlatformTextureBaseFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { OpenGLESImage } from './OpenGLESImage.js';
+//not plain js - same folder import { OpenGLESImage } 
 const OpenGLESImage = globalThis.org.allbinary.image.opengles.OpenGLESImage;
 //This is not actually VBO impl
 export class OpenGLESGL11VBOImage extends OpenGLESImage {

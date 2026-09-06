@@ -15,7 +15,7 @@
 import { IndexedAnimation } from '../../../../org/allbinary/animation/IndexedAnimation.js';
 //not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { IndexedAnimationBehavior } from '../../../../org/allbinary/animation/IndexedAnimationBehavior.js';
-//not GWT import const SpecialAnimationInterface = globalThis.org.allbinary.animation.special.SpecialAnimationInterface;
+//not GWT import - same folder const SpecialAnimationInterface = globalThis.org.allbinary.animation.special.SpecialAnimationInterface;
 export class SpecialAnimation extends IndexedAnimation {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

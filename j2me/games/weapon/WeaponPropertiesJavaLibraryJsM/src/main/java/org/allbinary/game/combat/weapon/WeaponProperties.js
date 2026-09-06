@@ -11,21 +11,20 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+/* Generated Code Do Not Modify */
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not plain js import { BasicDecimal } 
 const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleWeaponProperties } from './SimpleWeaponProperties.js';
-//not GWT import const SimpleWeaponProperties = globalThis.org.allbinary.game.combat.weapon.SimpleWeaponProperties;
+//not GWT import - same folder const SimpleWeaponProperties = globalThis.org.allbinary.game.combat.weapon.SimpleWeaponProperties;
 export class WeaponProperties extends SimpleWeaponProperties {
     constructor(reloadTime, targetingTime, speed, damage, dissipation) {
         super();

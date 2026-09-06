@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { AllBinaryLayer } from '../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ViewPositionBase } from './ViewPositionBase.js';
-//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
+//not GWT import - same folder const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 export class ViewPosition extends ViewPositionBase {
     static getInstanceD() {
         //if statement needs to be on the same line and ternary does not work the same way.

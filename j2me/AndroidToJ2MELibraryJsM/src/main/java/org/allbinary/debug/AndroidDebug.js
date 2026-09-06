@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 import { Long } from '../../../java/lang/Long.js';
 import { Debug } from '../../../android/os/Debug.js';
-//not GWT import const DebugInterface = globalThis.org.allbinary.debug.DebugInterface;
+//not GWT import - same folder const DebugInterface = globalThis.org.allbinary.debug.DebugInterface;
 export class AndroidDebug extends Object {
     constructor() {
         super(...arguments);

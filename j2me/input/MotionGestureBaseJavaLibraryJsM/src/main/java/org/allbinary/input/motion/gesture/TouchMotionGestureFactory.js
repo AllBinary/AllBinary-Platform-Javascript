@@ -13,15 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { InputFactory } from '../../../../../org/allbinary/game/input/InputFactory.js';
 //not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionGestureInput } from './MotionGestureInput.js';
-//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
+//not GWT import - same folder const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 export class TouchMotionGestureFactory extends Object {
     static getInstance() {
         if (TouchMotionGestureFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

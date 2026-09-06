@@ -13,10 +13,10 @@
 */
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { ColorChangeEventHandler } from '../../../../org/allbinary/graphics/color/ColorChangeEventHandler.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGameDemoPaintable } from './BasicGameDemoPaintable.js';
-//not GWT import const MainGameDemoStatePaintable = globalThis.org.allbinary.game.paint.MainGameDemoStatePaintable;
+//not GWT import - same folder const MainGameDemoStatePaintable = globalThis.org.allbinary.game.paint.MainGameDemoStatePaintable;
 export class GameScrollMenuPaintable extends BasicGameDemoPaintable {
     constructor(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface, basicColor) {
         super(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface);

@@ -16,19 +16,19 @@ import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { AndroidOperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/android/AndroidOperatingSystemFactory.js';
 //not GWT import const AndroidOperatingSystemFactory = globalThis.org.allbinary.logic.system.os.android.AndroidOperatingSystemFactory;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoOperatingSystem } from './NoOperatingSystem.js';
-//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
-//not plain js import { SystemProperties } from './SystemProperties.js';
+//not GWT import - same folder const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
+//not plain js - same folder import { SystemProperties } 
 const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
 import { OperatingSystems } from './OperatingSystems.js';
-//not GWT import const OperatingSystems = globalThis.org.allbinary.logic.system.os.OperatingSystems;
+//not GWT import - same folder const OperatingSystems = globalThis.org.allbinary.logic.system.os.OperatingSystems;
 export class OperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -12,17 +12,17 @@
         *  Created By: Travis Berthelot
 */
 import { Thread } from '../../../java/lang/Thread.js';
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThreadObjectUtil } from './ThreadObjectUtil.js';
-//not GWT import const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
+//not GWT import - same folder const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
 export class PooledThread extends Thread {
     constructor(threadPool) {
         super(threadPool.createName());

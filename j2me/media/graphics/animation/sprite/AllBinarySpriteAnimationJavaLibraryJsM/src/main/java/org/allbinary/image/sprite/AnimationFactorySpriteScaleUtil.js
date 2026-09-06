@@ -13,29 +13,29 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { Sprite } from '../../../../javax/microedition/lcdui/game/Sprite.js';
+//not plain js import { Sprite } 
 const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
-//not plain js import { SpriteFactory } from '../../../../org/allbinary/game/layer/SpriteFactory.js';
-const SpriteFactory = globalThis.org.allbinary.game.layer.SpriteFactory;
+import { SpriteFactory } from '../../../../org/allbinary/game/layer/SpriteFactory.js';
+//not GWT import const SpriteFactory = globalThis.org.allbinary.game.layer.SpriteFactory;
 import { OpenGLUtil } from '../../../../org/allbinary/graphics/opengles/OpenGLUtil.js';
 //not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
 import { ImageCacheFactory } from '../../../../org/allbinary/image/ImageCacheFactory.js';
 //not GWT import const ImageCacheFactory = globalThis.org.allbinary.image.ImageCacheFactory;
-//not plain js import { OpenGLESImageExclusionUtil } from '../../../../org/allbinary/image/opengles/OpenGLESImageExclusionUtil.js';
+//not plain js import { OpenGLESImageExclusionUtil } 
 const OpenGLESImageExclusionUtil = globalThis.org.allbinary.image.opengles.OpenGLESImageExclusionUtil;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { J2SEMath } from '../../../../org/allbinary/logic/math/J2SEMath.js';
 //not GWT import const J2SEMath = globalThis.org.allbinary.logic.math.J2SEMath;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScaleUtil.js';
-const ImageScaleUtil = globalThis.org.allbinary.media.image.ImageScaleUtil;
-//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScaleUtil.js';
+//not GWT import const ImageScaleUtil = globalThis.org.allbinary.media.image.ImageScaleUtil;
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AnimationFactorySpriteScaleUtil extends Object {

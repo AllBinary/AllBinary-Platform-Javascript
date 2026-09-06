@@ -21,9 +21,9 @@ import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.j
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SourceCollisionHelper } from './SourceCollisionHelper.js';
-//not GWT import const SourceCollisionHelper = globalThis.org.allbinary.game.collision.SourceCollisionHelper;
+//not GWT import - same folder const SourceCollisionHelper = globalThis.org.allbinary.game.collision.SourceCollisionHelper;
 import { CollisionHelper } from './CollisionHelper.js';
-//not GWT import const CollisionHelper = globalThis.org.allbinary.game.collision.CollisionHelper;
+//not GWT import - same folder const CollisionHelper = globalThis.org.allbinary.game.collision.CollisionHelper;
 export class CollidableHelperFactory extends Object {
     static getInstance() {
         if (Features.getInstance().isFeature(GameFeatureFactory.getInstance().COLLISIONS_WITH_SOURCE)) {

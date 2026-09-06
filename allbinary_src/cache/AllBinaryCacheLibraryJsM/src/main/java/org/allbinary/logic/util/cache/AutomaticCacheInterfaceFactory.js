@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import const CachePolicy = globalThis.org.allbinary.logic.util.cache.CachePolicy;
+//not GWT import - same folder const CachePolicy = globalThis.org.allbinary.logic.util.cache.CachePolicy;
 export class AutomaticCacheInterfaceFactory extends Object {
     //@Throws(Exception.constructor)
     static getInstance(cacheableInterfaceFactoryInterface, cacheType, cachePolicy) {

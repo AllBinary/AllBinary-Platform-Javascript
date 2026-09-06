@@ -16,7 +16,7 @@ import { AnalogLocationInputFactory } from '../../../../../org/allbinary/game/in
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnalogControllerVisitor } from './AnalogControllerVisitor.js';
-//not GWT import const AnalogLocationInputProcessor = globalThis.org.allbinary.android.input.motion.AnalogLocationInputProcessor;
+//not GWT import - same folder const AnalogLocationInputProcessor = globalThis.org.allbinary.android.input.motion.AnalogLocationInputProcessor;
 export class SingleAnalogControllerVisitor extends AnalogControllerVisitor {
     constructor(playerInputId) {
         super();

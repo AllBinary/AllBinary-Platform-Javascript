@@ -17,9 +17,9 @@ import { CellPositionFactory } from '../../../../../../../org/allbinary/graphics
 //not GWT import const GeographicMapCellPositionTracking = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPositionTracking;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapCellPositionEvent } from './GeographicMapCellPositionEvent.js';
-//not GWT import const GeographicMapCellPositionEvent = globalThis.org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEvent;
+//not GWT import - same folder const GeographicMapCellPositionEvent = globalThis.org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEvent;
 import { GeographicMapCellPositionEventHandler } from './GeographicMapCellPositionEventHandler.js';
-//not GWT import const GeographicMapCellPositionEventHandler = globalThis.org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventHandler;
+//not GWT import - same folder const GeographicMapCellPositionEventHandler = globalThis.org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventHandler;
 export class GeographicMapCellPositionEventUtil extends Object {
     constructor(anyType = {}) {
         super();

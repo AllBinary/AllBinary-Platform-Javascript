@@ -22,7 +22,7 @@ import { PathFindingInfo } from '../../../../../../../../org/allbinary/media/gra
 //not GWT import const PathFindingInfo = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo;
 import { PathFindingNodeCostInfoFactory } from '../../../../../../../../org/allbinary/media/graphics/geography/pathfinding/PathFindingNodeCostInfoFactory.js';
 //not GWT import const PathFindingNodeCostInfoFactory = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactory;
-//not plain js import { BasicArrayListS } from '../../../../../../../../org/allbinary/util/BasicArrayListS.js';
+//not plain js import { BasicArrayListS } 
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //1.4.2

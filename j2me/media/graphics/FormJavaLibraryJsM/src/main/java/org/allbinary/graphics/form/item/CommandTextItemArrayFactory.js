@@ -13,34 +13,37 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
-//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { ImageItem } from '../../../../../javax/microedition/lcdui/ImageItem.js';
+//not plain js import { ImageItem } 
 const ImageItem = globalThis.javax.microedition.lcdui.ImageItem;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
 //not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import { ScreenInfo } from '../../../../../org/allbinary/graphics/form/ScreenInfo.js';
 //not GWT import const ScreenInfo = globalThis.org.allbinary.graphics.form.ScreenInfo;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { VectorUtil } 
+const VectorUtil = globalThis.org.allbinary.logic.VectorUtil;
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommandTextItem } from './CommandTextItem.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import - same folder const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 export class CommandTextItemArrayFactory extends Object {
     constructor(visitorInterface) {
         super();
         this.list = new BasicArrayListD();
         this.visitorInterface = visitorInterface;
     }
-    getInstance(vector, backgroundBasicColor, foregroundBasicColor) {
-        var size = vector.length;
+    getInstance(vector = {}, backgroundBasicColor, foregroundBasicColor) {
+        var vectorUtil = VectorUtil.getInstance();
+        ;
+        var size = vectorUtil.getSize(vector);
         ;
         this.list.clear();
         var textItem;
@@ -57,7 +60,7 @@ export class CommandTextItemArrayFactory extends Object {
         var command;
         ;
         for (var index = 0; index < size; index++) {
-            command = vector.elementAt(index);
+            command = vectorUtil.elementAt(vector, index);
             if (command.getPriority() < priorityLimit) {
                 var aBoolean = this.visitorInterface.visit(command);
                 ;

@@ -11,27 +11,27 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { CellPositionFactory } from '../../../../../org/allbinary/graphics/CellPositionFactory.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonLocationHelper } from './TouchButtonLocationHelper.js';
-//not GWT import const TouchButtonLocationHelper = globalThis.org.allbinary.input.motion.button.TouchButtonLocationHelper;
+//not GWT import - same folder const TouchButtonLocationHelper = globalThis.org.allbinary.input.motion.button.TouchButtonLocationHelper;
 import { CommonButtons } from './CommonButtons.js';
-//not GWT import const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
+//not GWT import - same folder const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
 import { TouchButton } from './TouchButton.js';
-//not GWT import const TouchButton = globalThis.org.allbinary.input.motion.button.TouchButton;
+//not GWT import - same folder const TouchButton = globalThis.org.allbinary.input.motion.button.TouchButton;
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
-//not GWT import const BasicTouchInputFactory = globalThis.org.allbinary.input.motion.button.BasicTouchInputFactory;
+//not GWT import - same folder const BasicTouchInputFactory = globalThis.org.allbinary.input.motion.button.BasicTouchInputFactory;
 import { TouchButtonBlankResource } from './TouchButtonBlankResource.js';
-//not GWT import const TouchButtonBlankResource = globalThis.org.allbinary.input.motion.button.TouchButtonBlankResource;
+//not GWT import - same folder const TouchButtonBlankResource = globalThis.org.allbinary.input.motion.button.TouchButtonBlankResource;
 export class TouchButtonsMappingPaintable extends Paintable {
     constructor(basicColor) {
         super();

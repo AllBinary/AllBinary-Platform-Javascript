@@ -1,25 +1,26 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { System } from '../../../java/lang/System.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { SynchObject } from '../../../org/allbinary/thread/SynchObject.js';
 //not GWT import const SynchObject = globalThis.org.allbinary.thread.SynchObject;
-//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
+//not plain js import { ABSystemWrapper } 
+const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
+//not GWT import - same folder const Layer = globalThis.org.allbinary.layer.Layer;
 export class LayerManager extends Object {
     constructor(layerManagerLogging) {
         super();
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
+        this.systemWrapper = ABSystemWrapper.getInstance();
         this.list = new BasicArrayListD();
         this.anyType = new SynchObject();
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
@@ -102,8 +103,8 @@ export class LayerManager extends Object {
         //mutex.withLock
         this.list.clear();
         this.layerManagerLogging.clear();
-        System.gc();
-        System.gc();
+        this.systemWrapper.gc();
+        this.systemWrapper.gc();
     }
     paint(g, x, y) {
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

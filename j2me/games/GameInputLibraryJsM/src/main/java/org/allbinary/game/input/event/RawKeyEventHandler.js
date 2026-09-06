@@ -13,19 +13,19 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const RawKeyEventListener = globalThis.org.allbinary.game.input.event.RawKeyEventListener;
+//not GWT import - same folder const RawKeyEventListener = globalThis.org.allbinary.game.input.event.RawKeyEventListener;
 export class RawKeyEventHandler extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

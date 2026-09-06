@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
 import { Thread } from '../../../../java/lang/Thread.js';
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointPathRunnableBase } from './WaypointPathRunnableBase.js';
-//not GWT import const WaypointBehaviorBase = globalThis.org.allbinary.game.layer.WaypointBehaviorBase;
+//not GWT import - same folder const WaypointBehaviorBase = globalThis.org.allbinary.game.layer.WaypointBehaviorBase;
 export class WaypointPathRunnable extends WaypointPathRunnableBase {
     constructor() {
         super();

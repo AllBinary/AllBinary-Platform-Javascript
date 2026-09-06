@@ -15,9 +15,9 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { AnalogLocationInputFactory } from '../../../../org/allbinary/game/input/analog/AnalogLocationInputFactory.js';
 //not GWT import const AnalogLocationInputFactory = globalThis.org.allbinary.game.input.analog.AnalogLocationInputFactory;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LocalPlayerInputIdFactory extends Object {

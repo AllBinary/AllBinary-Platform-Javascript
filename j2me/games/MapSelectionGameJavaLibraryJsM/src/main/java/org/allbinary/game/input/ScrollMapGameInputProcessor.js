@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInputProcessor } from './GameInputProcessor.js';
-//not GWT import const ScrollMapPlayerGameInput = globalThis.org.allbinary.game.input.ScrollMapPlayerGameInput;
+//not GWT import - same folder const ScrollMapPlayerGameInput = globalThis.org.allbinary.game.input.ScrollMapPlayerGameInput;
 export class ScrollMapGameInputProcessor extends GameInputProcessor {
     constructor(scrollMapPlayerGameInput) {
         super();

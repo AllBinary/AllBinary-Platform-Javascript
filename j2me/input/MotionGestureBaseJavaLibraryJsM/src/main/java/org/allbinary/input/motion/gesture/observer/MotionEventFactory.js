@@ -20,7 +20,7 @@ import { TouchMotionGestureFactory } from '../../../../../../org/allbinary/input
 //not GWT import const AllBinaryEventObjectFactoryInterface = globalThis.org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionGestureEvent } from './MotionGestureEvent.js';
-//not GWT import const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
+//not GWT import - same folder const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
 export class MotionEventFactory extends Object {
     constructor(source = {}, id) {
         super();

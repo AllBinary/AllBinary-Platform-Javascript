@@ -11,31 +11,31 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-import { Stack } from '../../../../../java/util/Stack.js';
-//not GWT import const Stack = globalThis.java.util.Stack;
-//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Form } from '../../../../../javax/microedition/lcdui/Form.js';
+//not plain js import { Form } 
 const Form = globalThis.javax.microedition.lcdui.Form;
 import { NullCommandListener } from '../../../../../javax/microedition/lcdui/NullCommandListener.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const MyCommandInterface = globalThis.org.allbinary.graphics.displayable.command.MyCommandInterface;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { ABStack } 
+const ABStack = globalThis.org.allbinary.util.ABStack;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScreenRepaintProcessorFactory } from './ScreenRepaintProcessorFactory.js';
-//not GWT import const ScreenRepaintProcessorFactory = globalThis.org.allbinary.graphics.displayable.screen.ScreenRepaintProcessorFactory;
+//not GWT import - same folder const ScreenRepaintProcessorFactory = globalThis.org.allbinary.graphics.displayable.screen.ScreenRepaintProcessorFactory;
 export class CommandForm extends Form {
     static getNullCommandForm() {
         if (CommandForm.NULL_COMMAND_FORM == NullUtil.getInstance().NULL_OBJECT) {
@@ -50,7 +50,7 @@ export class CommandForm extends Form {
         this.commonStrings = CommonStrings.getInstance();
         this.repaintProcessor = ScreenRepaintProcessorFactory.getInstance().create(this);
         //For kotlin this is before the body of the constructor.
-        this.commandStack = new Stack();
+        this.commandStack = StdUtil.getInstance().createStack();
         try {
             this.repaintProcessor.process();
             //: 
@@ -80,7 +80,7 @@ export class CommandForm extends Form {
         super.addCommand(command);
     }
     removeAllCommands() {
-        var size = this.commandStack.length;
+        var size = this.commandStack.size();
         ;
         for (var index = 0; index < size; index++) {
             super.removeCommand(this.commandStack.pop());

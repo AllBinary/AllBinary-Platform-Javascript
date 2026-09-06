@@ -17,13 +17,13 @@ import { Features } from '../../../../org/allbinary/game/configuration/feature/F
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { GameFeatureChoiceGroups } from '../../../../org/allbinary/game/configuration/feature/GameFeatureChoiceGroups.js';
 //not GWT import const GameFeatureChoiceGroups = globalThis.org.allbinary.game.configuration.feature.GameFeatureChoiceGroups;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+//not GWT import - same folder const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 export class OpenGLOptions extends Object {
     init() {
         var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();

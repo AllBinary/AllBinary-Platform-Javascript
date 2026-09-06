@@ -14,24 +14,22 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonPhoneStrings } from '../../../org/allbinary/string/CommonPhoneStrings.js';
+//not plain js import { CommonPhoneStrings } 
 const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { Angle } from './Angle.js';
+//not plain js - same folder import { Angle } 
 const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { NamedAngle } from './NamedAngle.js';
+//not plain js - same folder import { NamedAngle } 
 const NamedAngle = globalThis.org.allbinary.math.NamedAngle;
-//not plain js import { FrameUtil } from './FrameUtil.js';
+//not plain js - same folder import { FrameUtil } 
 const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
 export class AngleFactory extends Object {
     static getInstance() {

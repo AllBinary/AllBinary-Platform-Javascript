@@ -13,10 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import - same folder const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 export class BasicColorArrayIndexer extends Object {
     constructor(basicColorArray) {
         super();

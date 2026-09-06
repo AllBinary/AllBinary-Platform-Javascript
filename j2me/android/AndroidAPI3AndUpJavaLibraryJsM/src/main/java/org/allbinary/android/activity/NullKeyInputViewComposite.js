@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import const KeyInputViewCompositeInterface = globalThis.org.allbinary.android.activity.KeyInputViewCompositeInterface;
+//not GWT import - same folder const KeyInputViewCompositeInterface = globalThis.org.allbinary.android.activity.KeyInputViewCompositeInterface;
 export class NullKeyInputViewComposite extends Object {
     setKeyInputView(keyInputView) {
     }

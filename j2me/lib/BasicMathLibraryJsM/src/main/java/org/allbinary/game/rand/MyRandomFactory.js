@@ -16,14 +16,13 @@ import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 import { Integer } from '../../../../java/lang/Integer.js';
 import { Random } from '../../../../java/util/Random.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { MathUtil } from '../../../../org/allbinary/logic/math/MathUtil.js';
+//not GWT import const Random = globalThis.java.util.Random;
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //Do not use in client code for money related things.
 export class MyRandomFactory extends Object {

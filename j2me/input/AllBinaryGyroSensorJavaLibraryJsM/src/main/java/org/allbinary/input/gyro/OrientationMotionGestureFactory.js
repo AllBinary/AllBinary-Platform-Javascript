@@ -17,7 +17,7 @@ import { InputFactory } from '../../../../org/allbinary/game/input/InputFactory.
 //not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
 import { MotionGestureInput } from '../../../../org/allbinary/input/motion/gesture/MotionGestureInput.js';
 //not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OrientationMotionGestureFactory extends Object {

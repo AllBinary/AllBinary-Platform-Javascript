@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 //not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
-//not plain js import { ChoiceGroupImageFactory } from '../../../javax/microedition/lcdui/ChoiceGroupImageFactory.js';
-const ChoiceGroupImageFactory = globalThis.javax.microedition.lcdui.ChoiceGroupImageFactory;
-//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+import { ChoiceGroupImageFactory } from '../../../javax/microedition/lcdui/ChoiceGroupImageFactory.js';
+//not GWT import const ChoiceGroupImageFactory = globalThis.javax.microedition.lcdui.ChoiceGroupImageFactory;
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } from '../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { OpenGLFeatureFactory } from '../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
 //not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
@@ -26,7 +26,7 @@ import { Features } from '../../../org/allbinary/game/configuration/feature/Feat
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PreResourceImageUtil } from './PreResourceImageUtil.js';
-//not GWT import const PreResourceImageUtil = globalThis.org.allbinary.image.PreResourceImageUtil;
+//not GWT import - same folder const PreResourceImageUtil = globalThis.org.allbinary.image.PreResourceImageUtil;
 export class ChoiceGroupImageUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,16 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Canvas } from '../../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 //not GWT import const GameInput = globalThis.org.allbinary.game.input.GameInput;
-//not plain js import { MyRandomFactory } from '../../../../../../org/allbinary/game/rand/MyRandomFactory.js';
+//not plain js import { MyRandomFactory } 
 const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePatrolAI } from './BasePatrolAI.js';
-//not GWT import const BasePatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.BasePatrolAI;
+//not GWT import - same folder const BasePatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.BasePatrolAI;
 export class RandomPatrolAI extends BasePatrolAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(hashtable, ownerLayerInterface, gameInput);

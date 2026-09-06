@@ -18,9 +18,9 @@ import { OperatingSystemFactory } from '../../../../org/allbinary/logic/system/o
 //not GWT import const OperatingSystemFactory = globalThis.org.allbinary.logic.system.os.OperatingSystemFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ColorFillPaintable } from './ColorFillPaintable.js';
-//not GWT import const ColorFillPaintable = globalThis.org.allbinary.game.paint.ColorFillPaintable;
+//not GWT import - same folder const ColorFillPaintable = globalThis.org.allbinary.game.paint.ColorFillPaintable;
 import { OverScanColorFillPaintable } from './OverScanColorFillPaintable.js';
-//not GWT import const ColorFillBasePaintable = globalThis.org.allbinary.game.paint.ColorFillBasePaintable;
+//not GWT import - same folder const ColorFillBasePaintable = globalThis.org.allbinary.game.paint.ColorFillBasePaintable;
 export class ColorFillPaintableFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -19,7 +19,7 @@ import { AndroidUtil } from '../../../../../org/allbinary/AndroidUtil.js';
 //not GWT import const AndroidUtil = globalThis.org.allbinary.AndroidUtil;
 import { GraphicsFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/GraphicsFeatureFactory.js';
 //not GWT import const GraphicsFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class UnitGameResources extends BasicGameResources {

@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { Log } from './Log.js';
+//not plain js - same folder import { Log } 
 const Log = globalThis.org.allbinary.logic.communication.log.Log;
 export class LogFactory extends Object {
     /*actual*/ static getInstance(specialMessage, anyType = {}, functionName, exception = {}) {

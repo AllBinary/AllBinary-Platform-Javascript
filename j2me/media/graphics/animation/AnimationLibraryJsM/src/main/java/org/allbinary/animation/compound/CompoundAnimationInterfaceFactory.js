@@ -16,9 +16,9 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const AnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.AnimationInterfaceFactoryInterface;
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
 //not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
-//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CompoundAnimationInterfaceFactory extends Object {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {

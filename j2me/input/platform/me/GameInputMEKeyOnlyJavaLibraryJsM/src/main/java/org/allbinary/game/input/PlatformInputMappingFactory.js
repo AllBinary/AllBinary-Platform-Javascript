@@ -15,13 +15,13 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { PersistentInputMapping } from '../../../../org/allbinary/game/input/mapping/PersistentInputMapping.js';
 //not GWT import const PersistentInputMapping = globalThis.org.allbinary.game.input.mapping.PersistentInputMapping;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NormalJ2MEGameInputMapping } from './NormalJ2MEGameInputMapping.js';
-//not GWT import const NormalJ2MEGameInputMapping = globalThis.org.allbinary.game.input.NormalJ2MEGameInputMapping;
+//not GWT import - same folder const NormalJ2MEGameInputMapping = globalThis.org.allbinary.game.input.NormalJ2MEGameInputMapping;
 export class PlatformInputMappingFactory extends Object {
     constructor() {
         super(...arguments);

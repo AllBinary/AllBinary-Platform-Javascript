@@ -17,12 +17,12 @@ import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../.
 import { NullIndexedAnimationFactory } from '../../../../../org/allbinary/animation/NullIndexedAnimationFactory.js';
 //not GWT import const NullIndexedAnimationFactory = globalThis.org.allbinary.animation.NullIndexedAnimationFactory;
 import { ExplosionResources } from '../../../../../org/allbinary/game/combat/damage/ExplosionResources.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WeaponLayer } from './WeaponLayer.js';
-//not GWT import const WeaponLayer = globalThis.org.allbinary.game.layer.weapon.WeaponLayer;
+//not GWT import - same folder const WeaponLayer = globalThis.org.allbinary.game.layer.weapon.WeaponLayer;
 import { CollidableWeaponBehavior } from './CollidableWeaponBehavior.js';
-//not GWT import const CollidableWeaponBehavior = globalThis.org.allbinary.game.layer.weapon.CollidableWeaponBehavior;
+//not GWT import - same folder const CollidableWeaponBehavior = globalThis.org.allbinary.game.layer.weapon.CollidableWeaponBehavior;
 export class SimpleWeaponLayer extends WeaponLayer {
     //@Throws(Exception.constructor)
     static createDestroyed() {

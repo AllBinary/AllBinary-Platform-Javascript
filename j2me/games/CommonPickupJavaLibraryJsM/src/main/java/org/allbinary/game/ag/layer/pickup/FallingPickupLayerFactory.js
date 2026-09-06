@@ -17,7 +17,7 @@ import { RemoteInfo } from '../../../../../../org/allbinary/game/multiplayer/lay
 //not GWT import const AllBinaryLayerFactoryInterface = globalThis.org.allbinary.layer.AllBinaryLayerFactoryInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { FallingPickupLayer } from './FallingPickupLayer.js';
-//not GWT import const FallingPickupLayer = globalThis.org.allbinary.game.ag.layer.pickup.FallingPickupLayer;
+//not GWT import - same folder const FallingPickupLayer = globalThis.org.allbinary.game.ag.layer.pickup.FallingPickupLayer;
 export class FallingPickupLayerFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance() {

@@ -22,13 +22,13 @@ import { UserData } from '../../../../../../org/allbinary/business/user/UserData
 //not GWT import const UserData = globalThis.org.allbinary.business.user.UserData;
 import { Tokenizer } from '../../../../../../org/allbinary/logic/string/tokens/Tokenizer.js';
 //not GWT import const Tokenizer = globalThis.org.allbinary.logic.string.tokens.Tokenizer;
-//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const BasicStoreFrontInterface = globalThis.org.allbinary.business.context.modules.storefronts.BasicStoreFrontInterface;
+//not GWT import - same folder const BasicStoreFrontInterface = globalThis.org.allbinary.business.context.modules.storefronts.BasicStoreFrontInterface;
 export class BasicStoreFront extends Object {
     constructor() {
         super();

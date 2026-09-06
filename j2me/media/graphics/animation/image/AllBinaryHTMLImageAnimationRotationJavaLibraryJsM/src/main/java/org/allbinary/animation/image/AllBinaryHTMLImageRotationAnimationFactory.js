@@ -11,24 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
-//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
-//not plain js import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
-const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
-//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
+//not GWT import const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
+//not GWT import - same folder const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
 import { AllBinaryHTMLImageRotationAnimation } from './AllBinaryHTMLImageRotationAnimation.js';
-//not GWT import const AllBinaryHTMLImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryHTMLImageRotationAnimation;
+//not GWT import - same folder const AllBinaryHTMLImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryHTMLImageRotationAnimation;
 import { AllBinaryAdjustedHTMLImageRotationAnimation } from './AllBinaryAdjustedHTMLImageRotationAnimation.js';
-//not GWT import const AllBinaryAdjustedHTMLImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryAdjustedHTMLImageRotationAnimation;
+//not GWT import - same folder const AllBinaryAdjustedHTMLImageRotationAnimation = globalThis.org.allbinary.animation.image.AllBinaryAdjustedHTMLImageRotationAnimation;
 export class AllBinaryHTMLImageRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createFactoryADXY(image, width, height, dx, dy, angleIncrement, animationBehaviorFactory) {

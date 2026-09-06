@@ -11,23 +11,23 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { TsUtil } from '../../../org/allbinary/TsUtil.js';
 //not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
 import { Globals } from '../../../org/allbinary/globals/Globals.js';
 //not GWT import const Globals = globalThis.org.allbinary.globals.Globals;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const ClientInformationFactory = globalThis.org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 import { PrimaryThreadPool } from '../../../org/allbinary/thread/PrimaryThreadPool.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryMidlet } from './AllBinaryMidlet.js';
-//not GWT import const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
+//not GWT import - same folder const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
 import { MidletExitProcessorFactory } from './MidletExitProcessorFactory.js';
-//not GWT import const MidletExitProcessorFactory = globalThis.org.allbinary.midlet.MidletExitProcessorFactory;
+//not GWT import - same folder const MidletExitProcessorFactory = globalThis.org.allbinary.midlet.MidletExitProcessorFactory;
 import { ExitRunnable } from './ExitRunnable.js';
-//not GWT import const ExitRunnable = globalThis.org.allbinary.midlet.ExitRunnable;
+//not GWT import - same folder const ExitRunnable = globalThis.org.allbinary.midlet.ExitRunnable;
+//AndroidToJ2ME
 export class ProgressMidlet extends AllBinaryMidlet {
     constructor(clientInformationFactory) {
         super();

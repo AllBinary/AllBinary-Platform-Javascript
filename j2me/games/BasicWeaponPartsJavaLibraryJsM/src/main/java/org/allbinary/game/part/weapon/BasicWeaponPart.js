@@ -14,8 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
 import { NullAnimationFactory } from '../../../../../org/allbinary/animation/NullAnimationFactory.js';
@@ -28,9 +27,9 @@ import { RelativeRelationship } from '../../../../../org/allbinary/graphics/Rela
 //not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const SalvoInterface = globalThis.org.allbinary.game.part.weapon.SalvoInterface;
+//not GWT import - same folder const SalvoInterface = globalThis.org.allbinary.game.part.weapon.SalvoInterface;
 export class BasicWeaponPart extends Object {
     static createBasicWeaponPart(animationInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.

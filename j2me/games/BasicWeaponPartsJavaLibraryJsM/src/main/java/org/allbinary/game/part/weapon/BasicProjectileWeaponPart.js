@@ -22,7 +22,7 @@ import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLaye
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicWeaponPart } from './BasicWeaponPart.js';
-//not GWT import const BasicWeaponPart = globalThis.org.allbinary.game.part.weapon.BasicWeaponPart;
+//not GWT import - same folder const BasicWeaponPart = globalThis.org.allbinary.game.part.weapon.BasicWeaponPart;
 export class BasicProjectileWeaponPart extends BasicWeaponPart {
     static createBasicProjectileWeaponPart(animationInterface, weaponLayerCircularStaticPool) {
         //if statement needs to be on the same line and ternary does not work the same way.

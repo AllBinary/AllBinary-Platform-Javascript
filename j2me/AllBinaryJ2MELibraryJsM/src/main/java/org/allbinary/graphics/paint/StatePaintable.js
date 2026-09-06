@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const StateControlledInterface = globalThis.org.allbinary.graphics.displayable.StateControlledInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not GWT import - same folder const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 export class StatePaintable extends Paintable {
     constructor() {
         super();

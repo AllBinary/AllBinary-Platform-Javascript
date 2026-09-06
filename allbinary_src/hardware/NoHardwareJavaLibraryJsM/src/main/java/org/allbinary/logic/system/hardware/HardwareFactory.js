@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const OperatingSystemInterface = globalThis.org.allbinary.logic.system.os.OperatingSystemInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoHardware } from './NoHardware.js';
-//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
+//not GWT import - same folder const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
 export class HardwareFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

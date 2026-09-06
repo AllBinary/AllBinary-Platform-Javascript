@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Animation } from '../../../../org/allbinary/animation/Animation.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const ColorCompositeInterface = globalThis.org.allbinary.graphics.color.ColorCompositeInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RectangleFilledAnimation extends Animation {
     constructor(width, height, basicColor) {

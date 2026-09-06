@@ -18,16 +18,16 @@ import { VirtualKeyboard } from '../../../../../org/allbinary/android/input/Virt
 //not GWT import const VirtualKeyboardEvent = globalThis.org.allbinary.input.event.VirtualKeyboardEvent;
 import { VirtualKeyboardEventHandler } from '../../../../../org/allbinary/input/event/VirtualKeyboardEventHandler.js';
 //not GWT import const VirtualKeyboardEventListenerInterface = globalThis.org.allbinary.input.event.VirtualKeyboardEventListenerInterface;
-//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShowVirtualKeyboardRunnable } from './ShowVirtualKeyboardRunnable.js';
-//not GWT import const ShowVirtualKeyboardRunnable = globalThis.org.allbinary.android.input.api3.ShowVirtualKeyboardRunnable;
+//not GWT import - same folder const ShowVirtualKeyboardRunnable = globalThis.org.allbinary.android.input.api3.ShowVirtualKeyboardRunnable;
 import { HideVirtualKeyboardRunnable } from './HideVirtualKeyboardRunnable.js';
-//not GWT import const HideVirtualKeyboardRunnable = globalThis.org.allbinary.android.input.api3.HideVirtualKeyboardRunnable;
+//not GWT import - same folder const HideVirtualKeyboardRunnable = globalThis.org.allbinary.android.input.api3.HideVirtualKeyboardRunnable;
 export class VirtualKeyboardAPI3 extends VirtualKeyboard {
     constructor(activity) {
         super();

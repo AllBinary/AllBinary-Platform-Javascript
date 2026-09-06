@@ -13,9 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { GPoint } from './GPoint.js';
+//not plain js - same folder import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 export class PointFactory extends Object {
     static getInstance() {

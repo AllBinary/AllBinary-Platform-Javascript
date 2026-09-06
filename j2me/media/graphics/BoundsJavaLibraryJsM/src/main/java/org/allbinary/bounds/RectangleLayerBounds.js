@@ -14,7 +14,7 @@
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerBounds } from './LayerBounds.js';
-//not GWT import const BoundsVisitorInterface = globalThis.org.allbinary.bounds.BoundsVisitorInterface;
+//not GWT import - same folder const BoundsVisitorInterface = globalThis.org.allbinary.bounds.BoundsVisitorInterface;
 export class RectangleLayerBounds extends LayerBounds {
     constructor(rectangle) {
         super(rectangle);

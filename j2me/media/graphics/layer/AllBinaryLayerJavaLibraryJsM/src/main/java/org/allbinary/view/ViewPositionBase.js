@@ -11,10 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { GPoint } from '../../../org/allbinary/graphics/GPoint.js';
+/* Generated Code Do Not Modify */
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ViewPositionBase extends GPoint {
     constructor(x, y, z) {

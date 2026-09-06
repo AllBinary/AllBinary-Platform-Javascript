@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { CollidableDestroyableDamageableLayer } from '../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
 //not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
@@ -28,11 +28,11 @@ import { CommonButtons } from '../../../../org/allbinary/input/motion/button/Com
 //not GWT import const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SelectionHudPaintable } from './SelectionHudPaintable.js';
-//not GWT import const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
+//not GWT import - same folder const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
 import { RTSLayerCompositePaintable } from './RTSLayerCompositePaintable.js';
-//not GWT import const RTSLayerCompositePaintable = globalThis.org.allbinary.game.layer.RTSLayerCompositePaintable;
+//not GWT import - same folder const RTSLayerCompositePaintable = globalThis.org.allbinary.game.layer.RTSLayerCompositePaintable;
 import { UpgradableWideRTSLayerPaintable } from './UpgradableWideRTSLayerPaintable.js';
-//not GWT import const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
+//not GWT import - same folder const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
 export class UpgradableRTSLayerHudPaintable extends SelectionHudPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

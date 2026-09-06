@@ -11,13 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { ABRunnable } from '../../../../../org/allbinary/thread/ABRunnable.js';
-//not GWT import const DemoCanvas = globalThis.org.allbinary.game.displayable.canvas.DemoCanvas;
+//not GWT import - same folder const DemoCanvas = globalThis.org.allbinary.game.displayable.canvas.DemoCanvas;
 export class DemoGameStartupRunnable extends ABRunnable {
     constructor(demoCanvas) {
         super();

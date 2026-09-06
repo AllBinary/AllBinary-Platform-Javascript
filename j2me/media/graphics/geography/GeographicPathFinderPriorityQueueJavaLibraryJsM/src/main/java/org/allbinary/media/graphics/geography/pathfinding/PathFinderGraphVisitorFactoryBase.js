@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../../../java/lang/RuntimeException.js';
-//not GWT import const PathFinderGraphVisitorBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFinderGraphVisitorBase;
+//not GWT import - same folder const PathFinderGraphVisitorBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFinderGraphVisitorBase;
 export class PathFinderGraphVisitorFactoryBase extends Object {
     getInstance(geographicMapInterface) {
         throw new RuntimeException();

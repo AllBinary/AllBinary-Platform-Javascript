@@ -11,20 +11,22 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not GWT import const Enumeration = globalThis.java.util.Enumeration;
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { GeographicMapCellType } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellType.js';
 //not GWT import const GeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellType;
 import { GeographicMapCellTypeFactory } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellTypeFactory.js';
 //not GWT import const GeographicMapCellTypeFactory = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory;
-//not plain js import { BasicArrayList } from '../../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { EnumerationUtil } from '../../../../../../../org/allbinary/util/EnumerationUtil.js';
+//not plain js import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicPlatormGeographicMapCellType } from './BasicPlatormGeographicMapCellType.js';
-//not GWT import const BasicPlatormGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.platform.BasicPlatormGeographicMapCellType;
+//not GWT import - same folder const BasicPlatormGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.platform.BasicPlatormGeographicMapCellType;
 export class BasicPlatormGeographicMapCellTypeFactory extends GeographicMapCellTypeFactory {
     constructor(tileTypeToTileIdsMap, maxTileId) {
         super();

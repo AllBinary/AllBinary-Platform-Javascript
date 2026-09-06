@@ -16,7 +16,7 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const ViewPositionFactoryInterface = globalThis.org.allbinary.view.ViewPositionFactoryInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { StaticTileLayerIntoPositionViewPosition } from './StaticTileLayerIntoPositionViewPosition.js';
-//not GWT import const StaticTileLayerIntoPositionViewPosition = globalThis.org.allbinary.game.view.StaticTileLayerIntoPositionViewPosition;
+//not GWT import - same folder const StaticTileLayerIntoPositionViewPosition = globalThis.org.allbinary.game.view.StaticTileLayerIntoPositionViewPosition;
 export class StaticTileLayerViewPositionFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance() {

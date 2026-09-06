@@ -15,21 +15,23 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NumberInSameGroupSequence } from './NumberInSameGroupSequence.js';
-//not GWT import const NumberInSameGroupSequence = globalThis.org.allbinary.game.ag.ai.NumberInSameGroupSequence;
+//not GWT import - same folder const NumberInSameGroupSequence = globalThis.org.allbinary.game.ag.ai.NumberInSameGroupSequence;
 import { NumberOnOwnGroupSequenceAI } from './NumberOnOwnGroupSequenceAI.js';
-//not GWT import const NumberOnOwnGroupSequenceAI = globalThis.org.allbinary.game.ag.ai.NumberOnOwnGroupSequenceAI;
+//not GWT import - same folder const NumberOnOwnGroupSequenceAI = globalThis.org.allbinary.game.ag.ai.NumberOnOwnGroupSequenceAI;
 export class NumberOnOwnGroupSequenceAIFactory extends Object {
     constructor() {
         super(...arguments);

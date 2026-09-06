@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { RecordStore } from '../../../../../javax/microedition/rms/RecordStore.js';
+//not plain js import { RecordStore } 
 const RecordStore = globalThis.javax.microedition.rms.RecordStore;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NullRecordStore extends RecordStore {

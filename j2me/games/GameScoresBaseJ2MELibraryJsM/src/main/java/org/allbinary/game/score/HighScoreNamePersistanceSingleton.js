@@ -21,11 +21,11 @@ import { DataInputStream } from '../../../../java/io/DataInputStream.js';
 //not GWT import const DataInputStream = globalThis.java.io.DataInputStream;
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
 //not GWT import const DataOutputStream = globalThis.java.io.DataOutputStream;
-//not plain js import { RecordEnumeration } from '../../../../javax/microedition/rms/RecordEnumeration.js';
+//not plain js import { RecordEnumeration } 
 const RecordEnumeration = globalThis.javax.microedition.rms.RecordEnumeration;
-//not plain js import { RecordStore } from '../../../../javax/microedition/rms/RecordStore.js';
+//not plain js import { RecordStore } 
 const RecordStore = globalThis.javax.microedition.rms.RecordStore;
-//not plain js import { RecordStoreException } from '../../../../javax/microedition/rms/RecordStoreException.js';
+//not plain js import { RecordStoreException } 
 const RecordStoreException = globalThis.javax.microedition.rms.RecordStoreException;
 import { TsUtil } from '../../../../org/allbinary/TsUtil.js';
 //not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
@@ -35,26 +35,26 @@ import { NullRecordFilter } from '../../../../org/allbinary/game/configuration/p
 //not GWT import const NullRecordFilter = globalThis.org.allbinary.game.configuration.persistance.NullRecordFilter;
 import { NullRecordStore } from '../../../../org/allbinary/game/configuration/persistance/NullRecordStore.js';
 //not GWT import const NullRecordStore = globalThis.org.allbinary.game.configuration.persistance.NullRecordStore;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { ExceptionUtil } from '../../../../org/allbinary/logic/java/exception/ExceptionUtil.js';
+//not plain js import { ExceptionUtil } 
 const ExceptionUtil = globalThis.org.allbinary.logic.java.exception.ExceptionUtil;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import { PlatformRecordIdUtil } from '../../../../org/allbinary/persistance/PlatformRecordIdUtil.js';
 //not GWT import const PlatformRecordIdUtil = globalThis.org.allbinary.persistance.PlatformRecordIdUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HighScoreNamePersistanceSingleton extends Object {

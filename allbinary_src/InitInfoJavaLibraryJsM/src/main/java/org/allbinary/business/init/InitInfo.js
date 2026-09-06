@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const HashMap = globalThis.java.util.HashMap;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { LogConfigTypeFactory } from '../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
 //not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
@@ -26,11 +26,11 @@ import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
 import { BooleanUtil } from '../../../../org/allbinary/logic/java/bool/BooleanUtil.js';
 //not GWT import const BooleanUtil = globalThis.org.allbinary.logic.java.bool.BooleanUtil;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitInfoEntity } from './InitInfoEntity.js';
-//not GWT import const InitInfoEntity = globalThis.org.allbinary.business.init.InitInfoEntity;
+//not GWT import - same folder const InitInfoEntity = globalThis.org.allbinary.business.init.InitInfoEntity;
 export class InitInfo extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

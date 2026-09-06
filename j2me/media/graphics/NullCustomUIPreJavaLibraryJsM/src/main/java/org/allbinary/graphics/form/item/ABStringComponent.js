@@ -2,7 +2,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABStringComponent extends Object {
     getBackgroundBasicColor() {

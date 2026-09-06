@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 import { DirectionFactory } from '../../../../../org/allbinary/direction/DirectionFactory.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { AngleInfo } from '../../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
 import { GeographicMapDirectionUtil } from '../../../../../org/allbinary/media/graphics/geography/map/GeographicMapDirectionUtil.js';
@@ -27,7 +27,7 @@ import { GeographicMapCellPathHistoryInfo } from '../../../../../org/allbinary/m
 //not GWT import const GeographicMapCellPathHistoryInfo = globalThis.org.allbinary.media.graphics.geography.pathfinding.GeographicMapCellPathHistoryInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicDirectionAIHelper } from './BasicDirectionAIHelper.js';
-//not GWT import const BasicDirectionAIHelper = globalThis.org.allbinary.game.ai.path.BasicDirectionAIHelper;
+//not GWT import - same folder const BasicDirectionAIHelper = globalThis.org.allbinary.game.ai.path.BasicDirectionAIHelper;
 export class BasicAIProcessor extends Object {
     constructor(name, geographicMapCellHistory, geographicMapCellPathHistoryInfo, chosenPathList, angleInfo, seed) {
         super();

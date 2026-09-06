@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbeClientInformation } from './AbeClientInformation.js';
-//not GWT import const AbeClientInformation = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformation;
+//not GWT import - same folder const AbeClientInformation = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformation;
 export class TestClientInformation extends AbeClientInformation {
     constructor() {
         super("Test App Name", "0.0.1", "Test App Name 0.0.1", "TA");

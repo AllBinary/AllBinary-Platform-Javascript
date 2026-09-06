@@ -17,9 +17,9 @@ import { PersistentInputMapping } from '../../../../org/allbinary/game/input/map
 //not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { J2MEKeyFactory } from './J2MEKeyFactory.js';
-//not GWT import const J2MEKeyFactory = globalThis.org.allbinary.game.input.J2MEKeyFactory;
+//not GWT import - same folder const J2MEKeyFactory = globalThis.org.allbinary.game.input.J2MEKeyFactory;
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
 export class J2MEGameInputMapping extends PersistentInputMapping {
     constructor() {
         super(GamePersistanceStrings.getInstance().SAVED_INPUT_CONFIGURATION_RECORD_ID);

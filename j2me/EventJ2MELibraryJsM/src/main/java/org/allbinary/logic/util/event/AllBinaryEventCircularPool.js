@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { BaseCircularPool } from '../../../../../org/allbinary/logic/util/cache/BaseCircularPool.js';
 //not GWT import const BaseCircularPool = globalThis.org.allbinary.logic.util.cache.BaseCircularPool;
-//not plain js import { CircularIndexUtil } from '../../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import const AllBinaryEventObjectFactoryInterface = globalThis.org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface;
+//not GWT import - same folder const AllBinaryEventObjectFactoryInterface = globalThis.org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface;
 export class AllBinaryEventCircularPool extends BaseCircularPool {
     constructor(max) {
         super();

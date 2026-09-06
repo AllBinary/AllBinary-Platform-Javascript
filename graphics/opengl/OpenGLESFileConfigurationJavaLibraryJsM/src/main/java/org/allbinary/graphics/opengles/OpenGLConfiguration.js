@@ -27,15 +27,15 @@ import { StreamUtil } from '../../../../org/allbinary/logic/io/StreamUtil.js';
 //not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
 import { FileFactory } from '../../../../org/allbinary/logic/io/file/FileFactory.js';
 //not GWT import const FileFactory = globalThis.org.allbinary.logic.io.file.FileFactory;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { ChangedGameFeatureListener } from '../../../../org/allbinary/game/configuration/event/ChangedGameFeatureListener.js';
 //not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
@@ -43,13 +43,13 @@ import { Features } from '../../../../org/allbinary/game/configuration/feature/F
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { MainFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
 //not GWT import const MainFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MainFeatureFactory;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 import { NullCloseable } from '../../../../org/allbinary/logic/io/NullCloseable.js';
 //not GWT import const NullCloseable = globalThis.org.allbinary.logic.io.NullCloseable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import const OpenGLFeature = globalThis.org.allbinary.graphics.opengles.OpenGLFeature;
+//not GWT import - same folder const OpenGLFeature = globalThis.org.allbinary.graphics.opengles.OpenGLFeature;
 export class OpenGLConfiguration extends Object {
     static getInstance() {
         if (OpenGLConfiguration.instance == NullUtil.getInstance().NULL_OBJECT) {

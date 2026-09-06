@@ -20,13 +20,13 @@ import { ByteArrayOutputStream } from '../../../../java/io/ByteArrayOutputStream
 //not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
 import { FileInputStream } from '../../../../java/io/FileInputStream.js';
 //not GWT import const InputStream = globalThis.java.io.InputStream;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { StreamUtil } from '../../../../org/allbinary/logic/io/StreamUtil.js';
 //not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //J2SE - PC

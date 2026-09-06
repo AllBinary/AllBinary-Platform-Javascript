@@ -15,20 +15,20 @@ import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
 import { TsUtil } from '../../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
 import { NoOperatingSystem } from '../../../../../../org/allbinary/logic/system/os/NoOperatingSystem.js';
 //not GWT import const NoOperatingSystem = globalThis.org.allbinary.logic.system.os.NoOperatingSystem;
 import { OperatingSystems } from '../../../../../../org/allbinary/logic/system/os/OperatingSystems.js';
 //not GWT import const OperatingSystems = globalThis.org.allbinary.logic.system.os.OperatingSystems;
-//not plain js import { SystemProperties } from '../../../../../../org/allbinary/logic/system/os/SystemProperties.js';
+//not plain js import { SystemProperties } 
 const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidOS } from './AndroidOS.js';
-//not GWT import const AndroidOS = globalThis.org.allbinary.logic.system.os.android.AndroidOS;
+//not GWT import - same folder const AndroidOS = globalThis.org.allbinary.logic.system.os.android.AndroidOS;
 export class AndroidOperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

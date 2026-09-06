@@ -18,7 +18,7 @@ import { AllBinaryEventCircularPool } from '../../../../../../org/allbinary/logi
 //not GWT import const AllBinaryEventCircularPool = globalThis.org.allbinary.logic.util.event.AllBinaryEventCircularPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyEventFactory } from './DestroyEventFactory.js';
-//not GWT import const DestroyedEvent = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEvent;
+//not GWT import - same folder const DestroyedEvent = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEvent;
 export class DestroyEventCircularStaticPool extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -17,7 +17,7 @@ import { AllBinaryEventCircularPool } from '../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventCircularPool = globalThis.org.allbinary.logic.util.event.AllBinaryEventCircularPool;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TerrainEventFactory } from './TerrainEventFactory.js';
-//not GWT import const BasicTerrainInfo = globalThis.org.allbinary.game.terrain.BasicTerrainInfo;
+//not GWT import - same folder const BasicTerrainInfo = globalThis.org.allbinary.game.terrain.BasicTerrainInfo;
 export class TerrainEventCircularStaticPool extends Object {
     constructor() {
         super(...arguments);

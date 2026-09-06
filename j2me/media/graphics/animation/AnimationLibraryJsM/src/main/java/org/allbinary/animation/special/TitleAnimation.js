@@ -11,8 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Integer } from '../../../../java/lang/Integer.js';
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { IndexedAnimationBehavior } from '../../../../org/allbinary/animation/IndexedAnimationBehavior.js';
@@ -21,13 +22,15 @@ import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/Basi
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
 //not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { ABSystemWrapper } 
+const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialAnimation } from './SpecialAnimation.js';
-//not GWT import const SpecialAnimation = globalThis.org.allbinary.animation.special.SpecialAnimation;
+//not GWT import - same folder const SpecialAnimation = globalThis.org.allbinary.animation.special.SpecialAnimation;
 export class TitleAnimation extends SpecialAnimation {
     static createAnimation(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,13 +39,14 @@ export class TitleAnimation extends SpecialAnimation {
     constructor(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, animationBehavior) {
         super(animationBehavior);
         this.logUtil = LogUtil.getInstance();
+        this.systemWrapper = ABSystemWrapper.getInstance();
         this.deltaX = 0.0;
         this.deltaY = 0.0;
         this.deltaZ = 0.0;
         this.displayInfoSingleton = DisplayInfoSingleton.getInstance();
         this.CLEAR_COLOR = BasicColorFactory.getInstance().CLEAR_COLOR;
         //For kotlin this is before the body of the constructor.
-        this.lastFrameStartTime = Date.now();
+        this.lastFrameStartTime = this.systemWrapper.currentTimeMillis();
         this.animationInterfaceArray = animationInterfaceArray;
         this.sizeP = this.animationInterfaceArray.length;
         this.basicColorArray = basicColorArray;
@@ -53,7 +57,7 @@ export class TitleAnimation extends SpecialAnimation {
         this.reset();
     }
     nextFrame() {
-        var currentTime = Date.now();
+        var currentTime = this.systemWrapper.currentTimeMillis();
         ;
         var totalTimeElapsed = currentTime - this.lastFrameStartTime;
         ;

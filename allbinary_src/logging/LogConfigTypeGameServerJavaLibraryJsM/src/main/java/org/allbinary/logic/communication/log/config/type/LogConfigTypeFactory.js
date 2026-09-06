@@ -19,7 +19,7 @@ import { LogConfigTypeFactory } from '../../../../../../../org/allbinary/logic/c
 //not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigType } from './LogConfigType.js';
-//not GWT import const LogConfigType = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigType;
+//not GWT import - same folder const LogConfigType = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigType;
 export class LogConfigTypeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

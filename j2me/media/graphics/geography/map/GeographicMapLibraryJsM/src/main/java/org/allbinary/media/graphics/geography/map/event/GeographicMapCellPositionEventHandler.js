@@ -11,15 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { BasicArrayList } from '../../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 import { EventStrings } from '../../../../../../../org/allbinary/logic/util/event/EventStrings.js';
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 import { BasicEventHandler } from '../../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import const GeographicMapCellPositionEventListenerInterface = globalThis.org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventListenerInterface;
+//not GWT import - same folder const GeographicMapCellPositionEventListenerInterface = globalThis.org.allbinary.media.graphics.geography.map.event.GeographicMapCellPositionEventListenerInterface;
 export class GeographicMapCellPositionEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

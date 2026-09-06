@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const GeologicalGeographicMapCellPosition = globalThis.org.allbinary.game.layer.geological.resources.GeologicalGeographicMapCellPosition;
+//not GWT import - same folder const GeologicalGeographicMapCellPosition = globalThis.org.allbinary.game.layer.geological.resources.GeologicalGeographicMapCellPosition;
 export class GeologicalGeographicMapCellPositionFactoryInitVisitor extends Object {
     //@Throws(Exception.constructor)
     visit(tiledLayer, cellPosition) {

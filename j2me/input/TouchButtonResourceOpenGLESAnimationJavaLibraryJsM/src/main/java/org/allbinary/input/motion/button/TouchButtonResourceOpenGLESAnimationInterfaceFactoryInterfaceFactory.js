@@ -19,7 +19,7 @@ import { OpenGLImageCacheFactory } from '../../../../../org/allbinary/image/open
 //not GWT import const OpenGLImageCacheFactory = globalThis.org.allbinary.image.opengles.OpenGLImageCacheFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory } from './TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory.js';
-//not GWT import const TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.input.motion.button.TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory;
+//not GWT import - same folder const TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.input.motion.button.TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory;
 export class TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory extends TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory {
     constructor() {
         super("OpenGL TouchButton Animations");

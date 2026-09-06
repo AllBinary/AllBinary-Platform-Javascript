@@ -19,7 +19,7 @@ import { SimpleWeaponLayer } from '../../../../../../../org/allbinary/game/layer
 //not GWT import const SimpleWeaponLayer = globalThis.org.allbinary.game.layer.weapon.SimpleWeaponLayer;
 import { RemoteInfo } from '../../../../../../../org/allbinary/game/multiplayer/layer/RemoteInfo.js';
 //not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
-//not plain js import { PointFactory } from '../../../../../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../../../../../org/allbinary/graphics/Rectangle.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
@@ -31,7 +31,7 @@ import { ViewPositionEventHandler } from '../../../../../../../org/allbinary/vie
 //not GWT import const ViewPositionEventHandler = globalThis.org.allbinary.view.event.ViewPositionEventHandler;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MineWeaponResources } from './MineWeaponResources.js';
-//not GWT import const MineWeaponResources = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineWeaponResources;
+//not GWT import - same folder const MineWeaponResources = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineWeaponResources;
 export class MineLayer extends SimpleWeaponLayer {
     constructor(viewPosition) {
         super(MineLayer.NAME, RemoteInfo.REMOTE_INFO, -1, NoMovementFactory.getInstance().getMovmentInstance(), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().get(MineWeaponResources.getInstance().RESOURCE).getInstance(0), SimpleWeaponLayer.createDestroyed(), new Rectangle(PointFactory.getInstance().ZERO_ZERO, 10, 10), viewPosition);

@@ -11,9 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Hashtable } from '../../../../../java/util/Hashtable.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Image } from '../../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { AnimationBehaviorFactory } from '../../../../../org/allbinary/animation/AnimationBehaviorFactory.js';
 //not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
@@ -33,38 +31,40 @@ import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/open
 //not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
 import { ImageCacheFactory } from '../../../../../org/allbinary/image/ImageCacheFactory.js';
 //not GWT import const ImageCacheFactory = globalThis.org.allbinary.image.ImageCacheFactory;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { OperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/OperatingSystemFactory.js';
 //not GWT import const OperatingSystemFactory = globalThis.org.allbinary.logic.system.os.OperatingSystemFactory;
-//not plain js import { ImageCompleteUtil } from '../../../../../org/allbinary/media/image/ImageCompleteUtil.js';
-const ImageCompleteUtil = globalThis.org.allbinary.media.image.ImageCompleteUtil;
+import { ImageCompleteUtil } from '../../../../../org/allbinary/media/image/ImageCompleteUtil.js';
+//not GWT import const ImageCompleteUtil = globalThis.org.allbinary.media.image.ImageCompleteUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonBlankResource } from './TouchButtonBlankResource.js';
-//not GWT import const TouchButtonResource = globalThis.org.allbinary.input.motion.button.TouchButtonResource;
+//not GWT import - same folder const TouchButtonResource = globalThis.org.allbinary.input.motion.button.TouchButtonResource;
 import { TouchButtonGenericActionResource } from './TouchButtonGenericActionResource.js';
-//not GWT import const TouchButtonGenericActionResource = globalThis.org.allbinary.input.motion.button.TouchButtonGenericActionResource;
+//not GWT import - same folder const TouchButtonGenericActionResource = globalThis.org.allbinary.input.motion.button.TouchButtonGenericActionResource;
 import { TouchButtonStartResource } from './TouchButtonStartResource.js';
-//not GWT import const TouchButtonStartResource = globalThis.org.allbinary.input.motion.button.TouchButtonStartResource;
+//not GWT import - same folder const TouchButtonStartResource = globalThis.org.allbinary.input.motion.button.TouchButtonStartResource;
 import { TouchButtonUpResource } from './TouchButtonUpResource.js';
-//not GWT import const TouchButtonUpResource = globalThis.org.allbinary.input.motion.button.TouchButtonUpResource;
+//not GWT import - same folder const TouchButtonUpResource = globalThis.org.allbinary.input.motion.button.TouchButtonUpResource;
 import { TouchButtonDownResource } from './TouchButtonDownResource.js';
-//not GWT import const TouchButtonDownResource = globalThis.org.allbinary.input.motion.button.TouchButtonDownResource;
+//not GWT import - same folder const TouchButtonDownResource = globalThis.org.allbinary.input.motion.button.TouchButtonDownResource;
 import { TouchButtonTurnLeftResource } from './TouchButtonTurnLeftResource.js';
-//not GWT import const TouchButtonTurnLeftResource = globalThis.org.allbinary.input.motion.button.TouchButtonTurnLeftResource;
+//not GWT import - same folder const TouchButtonTurnLeftResource = globalThis.org.allbinary.input.motion.button.TouchButtonTurnLeftResource;
 import { TouchButtonTurnRightResource } from './TouchButtonTurnRightResource.js';
-//not GWT import const TouchButtonTurnRightResource = globalThis.org.allbinary.input.motion.button.TouchButtonTurnRightResource;
+//not GWT import - same folder const TouchButtonTurnRightResource = globalThis.org.allbinary.input.motion.button.TouchButtonTurnRightResource;
 import { TouchButtonStrafeLeftResource } from './TouchButtonStrafeLeftResource.js';
-//not GWT import const TouchButtonStrafeLeftResource = globalThis.org.allbinary.input.motion.button.TouchButtonStrafeLeftResource;
+//not GWT import - same folder const TouchButtonStrafeLeftResource = globalThis.org.allbinary.input.motion.button.TouchButtonStrafeLeftResource;
 import { TouchButtonStrafeRightResource } from './TouchButtonStrafeRightResource.js';
-//not GWT import const TouchButtonStrafeRightResource = globalThis.org.allbinary.input.motion.button.TouchButtonStrafeRightResource;
+//not GWT import - same folder const TouchButtonStrafeRightResource = globalThis.org.allbinary.input.motion.button.TouchButtonStrafeRightResource;
 export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extends BaseResourceAnimationInterfaceFactoryInterfaceFactory {
     static createFactory() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory("TouchButton Animations");
     }
     constructor(name) {
-        super(name, new Hashtable(), new Hashtable(), new Hashtable());
+        super(name, StdUtil.getInstance().createHashtable(), StdUtil.getInstance().createHashtable(), StdUtil.getInstance().createHashtable());
         //For kotlin this is before the body of the constructor.
     }
     //@Throws(Exception.constructor)

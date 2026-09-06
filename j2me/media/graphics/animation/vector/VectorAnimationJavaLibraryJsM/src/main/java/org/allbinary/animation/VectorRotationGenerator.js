@@ -13,28 +13,28 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { BasicGraphicsPipeline } from '../../../org/allbinary/graphics/pipeline/BasicGraphicsPipeline.js';
 //not GWT import const BasicGraphicsPipeline = globalThis.org.allbinary.graphics.pipeline.BasicGraphicsPipeline;
-//not plain js import { NullUtil } from '../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { Angle } from '../../../org/allbinary/math/Angle.js';
+//not plain js import { Angle } 
 const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListS } from '../../../org/allbinary/util/BasicArrayListS.js';
+//not plain js import { BasicArrayListS } 
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //not GWT import const VectorInfo = globalThis.org.allbinary.vector.VectorInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimationUtil } from './VectorAnimationUtil.js';
-//not GWT import const VectorAnimationUtil = globalThis.org.allbinary.animation.VectorAnimationUtil;
+//not GWT import - same folder const VectorAnimationUtil = globalThis.org.allbinary.animation.VectorAnimationUtil;
 export class VectorRotationGenerator extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

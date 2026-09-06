@@ -12,11 +12,11 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { AngleFactory } from '../../../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicWeaponPart } from './BasicWeaponPart.js';
-//not GWT import const BasicWeaponPart = globalThis.org.allbinary.game.part.weapon.BasicWeaponPart;
+//not GWT import - same folder const BasicWeaponPart = globalThis.org.allbinary.game.part.weapon.BasicWeaponPart;
 export class ArcedMultiBeamWeaponPart extends BasicWeaponPart {
     constructor(animationInterface, sourceLayerInterface, weaponLayerCircularStaticPool, total, weaponProperties, scoreableInterface, relativeRelationship) {
         super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship);

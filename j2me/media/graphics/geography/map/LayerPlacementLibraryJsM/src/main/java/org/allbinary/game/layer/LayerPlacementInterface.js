@@ -11,4 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 export {};

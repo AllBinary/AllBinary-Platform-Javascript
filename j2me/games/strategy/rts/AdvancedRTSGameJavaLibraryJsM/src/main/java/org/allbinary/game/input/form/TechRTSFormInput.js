@@ -17,7 +17,7 @@ import { TechEventHandler } from '../../../../../org/allbinary/game/rts/technolo
 //not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 import { BuildingSound } from '../../../../../org/allbinary/media/audio/BuildingSound.js';
 //not GWT import const BuildingSound = globalThis.org.allbinary.media.audio.BuildingSound;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { BooleanFactory } from '../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const AllBinaryGameLayerManager = globalThis.org.allbinary.game.layer.AllBinaryGameLayerManager;
@@ -29,15 +29,15 @@ import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/B
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 import { AllBinaryEventObject } from '../../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { ErrorSound } from '../../../../../org/allbinary/media/audio/ErrorSound.js';
 //not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
+//not GWT import - same folder const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
 export class TechRTSFormInput extends RTSFormInput {
     constructor(groupInterface) {
         super(groupInterface);

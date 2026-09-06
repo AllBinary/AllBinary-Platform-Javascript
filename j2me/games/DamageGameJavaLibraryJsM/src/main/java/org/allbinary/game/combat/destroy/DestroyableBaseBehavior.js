@@ -14,10 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const DestroyableInterface = globalThis.org.allbinary.game.combat.destroy.DestroyableInterface;
+//not GWT import - same folder const DestroyableInterface = globalThis.org.allbinary.game.combat.destroy.DestroyableInterface;
 export class DestroyableBaseBehavior extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

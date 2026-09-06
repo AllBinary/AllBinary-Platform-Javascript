@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicColorFactory } from './BasicColorFactory.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import - same folder const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 export class ColorTemperatureUtil extends Object {
     constructor() {
         super(...arguments);

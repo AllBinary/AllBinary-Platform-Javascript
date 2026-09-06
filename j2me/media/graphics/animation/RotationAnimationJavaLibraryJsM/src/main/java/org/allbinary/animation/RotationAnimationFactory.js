@@ -15,15 +15,15 @@
 import { Object } from '../../../java/lang/Object.js';
 import { GameConfigurationCentral } from '../../../org/allbinary/game/configuration/GameConfigurationCentral.js';
 //not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
-//not plain js import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not GWT import const ProceduralAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface;
+//not GWT import - same folder const ProceduralAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface;
 import { NullRotationAnimation } from './NullRotationAnimation.js';
-//not GWT import const NullRotationAnimation = globalThis.org.allbinary.animation.NullRotationAnimation;
+//not GWT import - same folder const NullRotationAnimation = globalThis.org.allbinary.animation.NullRotationAnimation;
 import { AnimationBehavior } from './AnimationBehavior.js';
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import - same folder const Animation = globalThis.org.allbinary.animation.Animation;
 export class RotationAnimationFactory extends Object {
     static createFactory() {
         var totalAngle = AngleFactory.getInstance().TOTAL_ANGLE;

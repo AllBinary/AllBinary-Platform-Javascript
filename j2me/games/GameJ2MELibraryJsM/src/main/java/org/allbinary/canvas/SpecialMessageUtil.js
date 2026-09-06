@@ -17,15 +17,15 @@ import { Features } from '../../../org/allbinary/game/configuration/feature/Feat
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { OpenGLFeatureFactory } from '../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
 //not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 import { Memory } from '../../../org/allbinary/system/Memory.js';
 //not GWT import const Memory = globalThis.org.allbinary.system.Memory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameStatisticsFactory } from './GameStatisticsFactory.js';
-//not GWT import const GameStatisticsFactory = globalThis.org.allbinary.canvas.GameStatisticsFactory;
+//not GWT import - same folder const GameStatisticsFactory = globalThis.org.allbinary.canvas.GameStatisticsFactory;
 export class SpecialMessageUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

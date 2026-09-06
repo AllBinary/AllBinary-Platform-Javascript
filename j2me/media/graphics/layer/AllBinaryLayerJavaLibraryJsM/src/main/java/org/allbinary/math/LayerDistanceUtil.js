@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { GPoint } from '../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { MathUtil } from '../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LayerDistanceUtil extends Object {

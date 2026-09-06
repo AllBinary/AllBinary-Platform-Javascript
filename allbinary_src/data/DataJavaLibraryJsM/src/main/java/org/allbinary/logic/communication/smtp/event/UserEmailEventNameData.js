@@ -17,8 +17,8 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 //not GWT import const HashMap = globalThis.java.util.HashMap;
 import { OrderHistoryData } from '../../../../../../org/allbinary/business/user/commerce/inventory/order/OrderHistoryData.js';
 //not GWT import const OrderHistoryData = globalThis.org.allbinary.business.user.commerce.inventory.order.OrderHistoryData;
-import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class UserEmailEventNameData extends Object {
     //@Throws(Exception.constructor)

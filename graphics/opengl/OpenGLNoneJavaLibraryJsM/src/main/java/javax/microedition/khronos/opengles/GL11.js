@@ -1,5 +1,5 @@
 /* Generated Code Do Not Modify */
-//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not GWT import - same folder const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
 //Interfaces do not have static fields for typescript so create a class with the static fields
 export class GL11I {
 }

@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 import { IndexedAnimation } from '../../../../org/allbinary/animation/IndexedAnimation.js';
 //not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
-//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SimultaneousCompoundIndexedAnimation extends IndexedAnimation {

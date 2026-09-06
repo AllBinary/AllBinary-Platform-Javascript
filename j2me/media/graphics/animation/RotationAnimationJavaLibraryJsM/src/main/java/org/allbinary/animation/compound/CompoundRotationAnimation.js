@@ -12,22 +12,22 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
 import { RotationAnimation } from '../../../../org/allbinary/animation/RotationAnimation.js';
 //not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
-//not plain js import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not plain js import { PrimitiveIntUtil } 
 const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
-//not plain js import { Angle } from '../../../../org/allbinary/math/Angle.js';
+//not plain js import { Angle } 
 const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+//not plain js import { AngleFactory } 
 const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not plain js import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import const CompoundAnimationInterface = globalThis.org.allbinary.animation.compound.CompoundAnimationInterface;
+//not GWT import - same folder const CompoundAnimationInterface = globalThis.org.allbinary.animation.compound.CompoundAnimationInterface;
 export class CompoundRotationAnimation extends RotationAnimation {
     constructor(animationInterfaceArray, animationBehavior) {
         super(AngleInfo.getInstance(AngleFactory.getInstance().QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior);

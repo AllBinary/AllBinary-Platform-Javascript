@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Method = globalThis.java.lang.reflect.Method;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ParamsUtil } from './ParamsUtil.js';
-//not GWT import const ParamsUtil = globalThis.org.allbinary.logic.java.anyType.ParamsUtil;
+//not GWT import - same folder const ParamsUtil = globalThis.org.allbinary.logic.java.anyType.ParamsUtil;
 export class MethodUtil extends Object {
     static viewAll(myClass, lineBreak) {
         var stringBuffer = new StringMaker();

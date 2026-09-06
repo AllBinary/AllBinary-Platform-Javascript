@@ -13,17 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { HashMap } from '../../../java/util/HashMap.js';
-//not GWT import const HashMap = globalThis.java.util.HashMap;
-import { Hashtable } from '../../../java/util/Hashtable.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-import { Stack } from '../../../java/util/Stack.js';
-//not GWT import const Stack = globalThis.java.util.Stack;
+//not plain js import { ABHashMap } 
+const ABHashMap = globalThis.org.allbinary.util.ABHashMap;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { ABStack } 
+const ABStack = globalThis.org.allbinary.util.ABStack;
+//not plain js import { ABVector } 
+const ABVector = globalThis.org.allbinary.util.ABVector;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //ActualPlatform
 /*actual*/ export class StdUtil extends Object {
     constructor() {
         super(...arguments);
+        /*actual*/ this.EMPTY_VECTOR = this.createVector();
         /*actual*/ this.NULL_TABLE = this.createHashtable();
         /*actual*/ this.NULL_MAP = this.createHashMap();
     }
@@ -33,15 +36,19 @@ import { Stack } from '../../../java/util/Stack.js';
     }
     createStack() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new Stack();
+        return new ABStack();
+    }
+    createVector() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return new ABVector();
     }
     createHashtable() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new Hashtable();
+        return new ABHashtable();
     }
     createHashMap() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new HashMap();
+        return new ABHashMap();
     }
 }
 StdUtil.instance = new StdUtil();

@@ -15,7 +15,7 @@
 import { Integer } from '../../../../../../java/lang/Integer.js';
 import { AndroidResources } from '../../../../../../org/allbinary/AndroidResources.js';
 //not GWT import const AndroidResources = globalThis.org.allbinary.AndroidResources;
-//not plain js import { ResourceUtil } from '../../../../../../org/allbinary/data/resource/ResourceUtil.js';
+//not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 import { Init } from '../../../../../../org/allbinary/init/Init.js';
 //not GWT import const Init = globalThis.org.allbinary.init.Init;

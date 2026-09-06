@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not GWT import const LayerInterface = globalThis.org.allbinary.layer.LayerInterface;
-//not plain js import { BasicDecimal } from '../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not plain js import { BasicDecimal } 
 const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 export {};

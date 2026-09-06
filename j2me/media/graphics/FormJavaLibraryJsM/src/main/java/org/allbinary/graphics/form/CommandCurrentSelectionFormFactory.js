@@ -19,9 +19,9 @@ import { TouchFeatureFactory } from '../../../../org/allbinary/game/configuratio
 //not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollSelectionFormNoneFactory } from './ScrollSelectionFormNoneFactory.js';
-//not GWT import const ScrollSelectionFormNoneFactory = globalThis.org.allbinary.graphics.form.ScrollSelectionFormNoneFactory;
+//not GWT import - same folder const ScrollSelectionFormNoneFactory = globalThis.org.allbinary.graphics.form.ScrollSelectionFormNoneFactory;
 import { CommandCurrentSelectionForm } from './CommandCurrentSelectionForm.js';
-//not GWT import const FormType = globalThis.org.allbinary.graphics.form.FormType;
+//not GWT import - same folder const FormType = globalThis.org.allbinary.graphics.form.FormType;
 export class CommandCurrentSelectionFormFactory extends Object {
     //@Throws(Exception.constructor)
     static getInstance(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {

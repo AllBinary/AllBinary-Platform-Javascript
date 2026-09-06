@@ -14,33 +14,35 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-import { System } from '../../../../java/lang/System.js';
 //not GWT import const InputStream = globalThis.java.io.InputStream;
-//not plain js import { MediaException } from '../../../../javax/microedition/media/MediaException.js';
+//not plain js import { MediaException } 
 const MediaException = globalThis.javax.microedition.media.MediaException;
-//not plain js import { Player, PlayerI } from '../../../../javax/microedition/media/Player.js';
+//not plain js import { Player } 
 const Player = globalThis.javax.microedition.media.Player;
+const PlayerI = globalThis.javax.microedition.media.Player;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
 //not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
 //not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
 import { ProgressCanvasFactory } from '../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
 //not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { ABSystemWrapper } 
+const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Sounds } from './Sounds.js';
-//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import - same folder const Sound = globalThis.org.allbinary.media.audio.Sound;
 import { AndroidMediaPlayerWrapper } from './AndroidMediaPlayerWrapper.js';
-//not GWT import const PlayerComposite = globalThis.org.allbinary.media.audio.PlayerComposite;
+//not GWT import - same folder const PlayerComposite = globalThis.org.allbinary.media.audio.PlayerComposite;
 import { MediaPlayerUtil } from './MediaPlayerUtil.js';
-//not GWT import const MediaPlayerUtil = globalThis.org.allbinary.media.audio.MediaPlayerUtil;
+//not GWT import - same folder const MediaPlayerUtil = globalThis.org.allbinary.media.audio.MediaPlayerUtil;
 import { NoPlayer } from './NoPlayer.js';
-//not GWT import const NoPlayer = globalThis.org.allbinary.media.audio.NoPlayer;
+//not GWT import - same folder const NoPlayer = globalThis.org.allbinary.media.audio.NoPlayer;
 //AndroidMediaMIDPLibrary
 export class AllBinaryMediaManager extends Object {
     static isMuted() {
@@ -62,7 +64,7 @@ export class AllBinaryMediaManager extends Object {
         logUtil.putF(commonString.START, AllBinaryMediaManager.THIS, commonString.INIT);
         AllBinaryMediaManager.shutdown(soundsFactoryInterface);
         ProgressCanvasFactory.getInstance().addNormalPortion(50, "Media Manager");
-        System.gc();
+        ABSystemWrapper.getInstance().gc();
         new Sounds(soundsFactoryInterface).init();
         logUtil.putF(commonString.END, AllBinaryMediaManager.THIS, commonString.INIT);
     }
@@ -101,7 +103,7 @@ export class AllBinaryMediaManager extends Object {
                 }
             }
             new Sounds(soundsFactoryInterface).closeAll();
-            System.gc();
+            ABSystemWrapper.getInstance().gc();
             soundsFactoryInterface.setInitialized(false);
             AllBinaryMediaManager.mostUsedTotal = 0;
         }

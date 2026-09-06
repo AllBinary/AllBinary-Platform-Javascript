@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
 //not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
@@ -21,9 +21,9 @@ import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileInputStream } from './AbFileInputStream.js';
-//not GWT import const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
+//not GWT import - same folder const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
 import { AbFileOutputStream } from './AbFileOutputStream.js';
-//not GWT import const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
+//not GWT import - same folder const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
 export class FileStreamFactory extends Object {
     static getInstance() {
         if (FileStreamFactory.SINGLETON == NullUtil.getInstance().NULL_OBJECT) {

@@ -17,7 +17,7 @@ import { URLGLOBALS } from '../../../../org/allbinary/globals/URLGLOBALS.js';
 //not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
 import { FileUploadData } from '../../../../org/allbinary/logic/communication/http/file/upload/FileUploadData.js';
 //not GWT import const FileUploadData = globalThis.org.allbinary.logic.communication.http.file.upload.FileUploadData;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbIOSystem } from '../../../../org/allbinary/logic/io/AbIOSystem.js';
 //not GWT import const AbIOSystem = globalThis.org.allbinary.logic.io.AbIOSystem;
@@ -27,11 +27,11 @@ import { Directory } from '../../../../org/allbinary/logic/io/file/directory/Dir
 //not GWT import const Directory = globalThis.org.allbinary.logic.io.file.directory.Directory;
 import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DeleteCloud extends Object {

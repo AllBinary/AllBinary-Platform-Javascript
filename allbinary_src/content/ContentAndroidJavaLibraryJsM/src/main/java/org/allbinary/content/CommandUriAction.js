@@ -13,21 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Command } from '../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
 import { Intent } from '../../../android/content/Intent.js';
 //not GWT import const Intent = globalThis.android.content.Intent;
 import { Uri } from '../../../android/net/Uri.js';
 //not GWT import const Uri = globalThis.android.net.Uri;
-//not plain js import { ResourceUtil } from '../../../org/allbinary/data/resource/ResourceUtil.js';
+//not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
-import { StdUtil } from '../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CommandUriAction extends Object {
     constructor() {

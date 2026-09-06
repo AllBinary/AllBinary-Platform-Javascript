@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderUpdater } from './ShaderUpdater.js';
-//not GWT import const ShaderOpenGLProcessor = globalThis.org.allbinary.graphics.opengles.shader.ShaderOpenGLProcessor;
+//not GWT import - same folder const ShaderOpenGLProcessor = globalThis.org.allbinary.graphics.opengles.shader.ShaderOpenGLProcessor;
 export class AppRendererShaderUpdaterFactory extends ShaderUpdater {
     constructor() {
         super(...arguments);

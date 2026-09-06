@@ -14,17 +14,17 @@
 import { Integer } from '../../../java/lang/Integer.js';
 import { TsUtil } from '../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerManagerLoggingBase } from './LayerManagerLoggingBase.js';
-//not GWT import const LayerManager = globalThis.org.allbinary.layer.LayerManager;
+//not GWT import - same folder const LayerManager = globalThis.org.allbinary.layer.LayerManager;
 export class LayerManagerLogging extends LayerManagerLoggingBase {
     constructor() {
         super(...arguments);

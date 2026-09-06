@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not plain js import { Image } from '../../../../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
-//not plain js import { NullUtil } from '../../../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RaceTrackData extends Object {

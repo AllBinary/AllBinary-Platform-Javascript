@@ -11,23 +11,23 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { BasicArrayListUtil } from '../../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonsListBuilder } from './TouchButtonsListBuilder.js';
-//not GWT import const TouchButtonsListBuilder = globalThis.org.allbinary.input.motion.button.TouchButtonsListBuilder;
+//not GWT import - same folder const TouchButtonsListBuilder = globalThis.org.allbinary.input.motion.button.TouchButtonsListBuilder;
 import { BasicTouchButtonsBuilder } from './BasicTouchButtonsBuilder.js';
-//not GWT import const BasicTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BasicTouchButtonsBuilder;
+//not GWT import - same folder const BasicTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BasicTouchButtonsBuilder;
 import { BuildingScrollTouchButtonsBuilder } from './BuildingScrollTouchButtonsBuilder.js';
-//not GWT import const BuildingScrollTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BuildingScrollTouchButtonsBuilder;
+//not GWT import - same folder const BuildingScrollTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BuildingScrollTouchButtonsBuilder;
 import { UpgradeDowngradeTouchButtonsBuilder } from './UpgradeDowngradeTouchButtonsBuilder.js';
-//not GWT import const UpgradeDowngradeTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.UpgradeDowngradeTouchButtonsBuilder;
+//not GWT import - same folder const UpgradeDowngradeTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.UpgradeDowngradeTouchButtonsBuilder;
 export class EndLevelTouchButtonsBuilder extends TouchButtonsListBuilder {
     constructor() {
         super(...arguments);

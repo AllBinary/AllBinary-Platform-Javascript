@@ -12,13 +12,13 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameRunnable } from './GameRunnable.js';
-//not GWT import const GameRunnable = globalThis.org.allbinary.game.displayable.canvas.GameRunnable;
+//not GWT import - same folder const GameRunnable = globalThis.org.allbinary.game.displayable.canvas.GameRunnable;
 export class RunnableCanvasSingleThreadStartRunnable extends GameRunnable {
     constructor(demoCanvas) {
         super();

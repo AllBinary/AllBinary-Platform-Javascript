@@ -13,7 +13,7 @@
 */
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 import { AllBinaryLayerCircularPool } from '../../../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
-//not GWT import const HealLayer = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayer;
+//not GWT import - same folder const HealLayer = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayer;
 export class HealLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     constructor(allbinaryLayerFactoryInterface, total) {
         super();

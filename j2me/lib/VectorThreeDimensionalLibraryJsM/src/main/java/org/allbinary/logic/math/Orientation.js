@@ -13,12 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { BasicDecimal } from './BasicDecimal.js';
+//not plain js - same folder import { BasicDecimal } 
 const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 export class Orientation extends Object {
     static getInstance(yaw, pitch, roll) {

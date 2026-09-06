@@ -3,13 +3,12 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const GameState = globalThis.org.allbinary.game.state.GameState;
 import { GameStateFactory } from '../../../../org/allbinary/game/state/GameStateFactory.js';
 //not GWT import const GameStateFactory = globalThis.org.allbinary.game.state.GameStateFactory;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameMidletStateFactory extends Object {
     static getInstance() {

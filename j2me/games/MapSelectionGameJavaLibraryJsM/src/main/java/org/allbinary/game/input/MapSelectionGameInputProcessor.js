@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { LockedFeatureNotificationUtil } from '../../../../org/allbinary/logic/system/security/licensing/LockedFeatureNotificationUtil.js';
 //not GWT import const LockedFeatureNotificationUtil = globalThis.org.allbinary.logic.system.security.licensing.LockedFeatureNotificationUtil;
@@ -25,9 +25,9 @@ import { GameKeyEventHandler } from '../../../../org/allbinary/game/input/event/
 //not GWT import const GameKeyEventHandler = globalThis.org.allbinary.game.input.event.GameKeyEventHandler;
 import { GameKeyEventUtil } from '../../../../org/allbinary/game/input/event/GameKeyEventUtil.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { SecondaryPlayerQueueFactory } from '../../../../org/allbinary/media/audio/SecondaryPlayerQueueFactory.js';
 //not GWT import const SecondaryPlayerQueueFactory = globalThis.org.allbinary.media.audio.SecondaryPlayerQueueFactory;
@@ -38,9 +38,9 @@ import { ABRunnable } from '../../../../org/allbinary/thread/ABRunnable.js';
 import { ThreadObjectUtil } from '../../../../org/allbinary/thread/ThreadObjectUtil.js';
 //not GWT import const ThreadObjectUtil = globalThis.org.allbinary.thread.ThreadObjectUtil;
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
+//not GWT import - same folder const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
 import { GameInputProcessorComposite } from './GameInputProcessorComposite.js';
-//not GWT import const GameInputProcessorComposite = globalThis.org.allbinary.game.input.GameInputProcessorComposite;
+//not GWT import - same folder const GameInputProcessorComposite = globalThis.org.allbinary.game.input.GameInputProcessorComposite;
 export class MapSelectionGameInputProcessor extends Processor {
     constructor(gameCanvas, raceTrackGeographicMapInterfaceFactoryInterface, mapSelectorPaintable, lockedIndex) {
         super();

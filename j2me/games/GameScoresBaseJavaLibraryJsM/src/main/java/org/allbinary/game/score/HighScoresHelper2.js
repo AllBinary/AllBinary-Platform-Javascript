@@ -12,13 +12,13 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { CircularIndexUtil } from '../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresHelperBase } from './HighScoresHelperBase.js';
-//not GWT import const HighScoresHelperBase = globalThis.org.allbinary.game.score.HighScoresHelperBase;
+//not GWT import - same folder const HighScoresHelperBase = globalThis.org.allbinary.game.score.HighScoresHelperBase;
 import { NullHighScoresSingletonFactory } from './NullHighScoresSingletonFactory.js';
-//not GWT import const HighScores = globalThis.org.allbinary.game.score.HighScores;
+//not GWT import - same folder const HighScores = globalThis.org.allbinary.game.score.HighScores;
 export class HighScoresHelper2 extends HighScoresHelperBase {
     constructor() {
         super(...arguments);

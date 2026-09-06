@@ -13,31 +13,32 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not GWT import const Enumeration = globalThis.java.util.Enumeration;
+//not plain js import { ChoiceGroup } 
 const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonLabels } from '../../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { EnumerationUtil } from '../../../../../org/allbinary/util/EnumerationUtil.js';
+//not plain js import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
-//not plain js import { HashtableUtil } from '../../../../../org/allbinary/util/HashtableUtil.js';
+//not plain js import { HashtableUtil } 
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Features } from './Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import - same folder const Features = globalThis.org.allbinary.game.configuration.feature.Features;
 import { Feature } from './Feature.js';
-//not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
+//not GWT import - same folder const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
 import { GameFeatureChoiceGroups } from './GameFeatureChoiceGroups.js';
-//not GWT import const GameFeatureChoiceGroups = globalThis.org.allbinary.game.configuration.feature.GameFeatureChoiceGroups;
+//not GWT import - same folder const GameFeatureChoiceGroups = globalThis.org.allbinary.game.configuration.feature.GameFeatureChoiceGroups;
 export class GameFeatureUtil extends Object {
     constructor() {
         super(...arguments);

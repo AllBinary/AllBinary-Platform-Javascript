@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../../../java/lang/RuntimeException.js';
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const MultipassState = globalThis.org.allbinary.media.graphics.geography.pathfinding.MultipassState;
+//not GWT import - same folder const MultipassState = globalThis.org.allbinary.media.graphics.geography.pathfinding.MultipassState;
 export class GeographicPathFinderBase extends Object {
     constructor() {
         super(...arguments);

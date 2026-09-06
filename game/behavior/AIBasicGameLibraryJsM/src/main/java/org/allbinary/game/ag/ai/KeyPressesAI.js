@@ -12,17 +12,19 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { HashtableUtil } from '../../../../../org/allbinary/util/HashtableUtil.js';
+//not plain js import { HashtableUtil } 
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
 //not GWT import const BasicAI = globalThis.org.allbinary.game.ai.BasicAI;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class KeyPressesAI extends BasicAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(ownerLayerInterface, gameInput);
         this.on = true;
         //For kotlin this is before the body of the constructor.
-        this.keys = new Array(hashtable.length);
+        this.keys = new Array(hashtable.size());
         var objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
         ;
         var size = objectArray.length;

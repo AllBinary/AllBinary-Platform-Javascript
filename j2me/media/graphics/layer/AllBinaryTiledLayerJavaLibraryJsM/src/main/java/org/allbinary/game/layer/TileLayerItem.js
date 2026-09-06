@@ -12,12 +12,12 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Screen } from '../../../../javax/microedition/lcdui/Screen.js';
+//not plain js import { Screen } 
 const Screen = globalThis.javax.microedition.lcdui.Screen;
 import { ABCustomItem } from '../../../../org/allbinary/graphics/form/item/ABCustomItem.js';
-//not GWT import const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
+//not GWT import - same folder const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
 export class TileLayerItem extends ABCustomItem {
     constructor(label, tiledLayer, layout, altText, backgroundBasicColor, foregroundBasicColor) {
         super(label, backgroundBasicColor, foregroundBasicColor);

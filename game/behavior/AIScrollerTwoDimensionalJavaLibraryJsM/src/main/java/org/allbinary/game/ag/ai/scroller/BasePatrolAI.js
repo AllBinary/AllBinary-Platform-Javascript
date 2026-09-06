@@ -11,15 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Canvas } from '../../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { BasicAI } from '../../../../../../org/allbinary/game/ai/BasicAI.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { MathUtil } from '../../../../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasePatrolAI extends BasicAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {

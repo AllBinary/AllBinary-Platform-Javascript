@@ -19,9 +19,9 @@ import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ComparableObject } from './ComparableObject.js';
-//not GWT import const ComparableObject = globalThis.org.allbinary.logic.math.permutations.ComparableObject;
+//not GWT import - same folder const ComparableObject = globalThis.org.allbinary.logic.math.permutations.ComparableObject;
 import { ObjectPermutationVisitor } from './ObjectPermutationVisitor.js';
-//not GWT import const ObjectPermutationVisitor = globalThis.org.allbinary.logic.math.permutations.ObjectPermutationVisitor;
+//not GWT import - same folder const ObjectPermutationVisitor = globalThis.org.allbinary.logic.math.permutations.ObjectPermutationVisitor;
 export class OrderedObjectArrayPermutationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

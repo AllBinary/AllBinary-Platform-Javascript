@@ -23,7 +23,7 @@ import { FileWriter } from '../../../../java/io/FileWriter.js';
 //not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
 //not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BufferedIOUtil extends Object {

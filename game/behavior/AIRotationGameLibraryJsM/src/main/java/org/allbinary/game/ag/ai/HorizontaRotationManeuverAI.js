@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../../java/lang/Integer.js';
-//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { ArtificialIntelligence } from '../../../../../org/allbinary/ai/ArtificialIntelligence.js';
 //not GWT import const RotationAnimationInterfaceCompositeInterface = globalThis.org.allbinary.animation.RotationAnimationInterfaceCompositeInterface;
@@ -20,9 +20,9 @@ import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
 //not GWT import const VelocityInterfaceCompositeInterface = globalThis.org.allbinary.game.physics.velocity.VelocityInterfaceCompositeInterface;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { AngleIncrementInfo } from '../../../../../org/allbinary/math/AngleIncrementInfo.js';
+//not plain js import { AngleIncrementInfo } 
 const AngleIncrementInfo = globalThis.org.allbinary.math.AngleIncrementInfo;
-//not plain js import { CircularIndexUtil } from '../../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HorizontaRotationManeuverAI extends BasicAI {

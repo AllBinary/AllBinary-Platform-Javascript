@@ -12,13 +12,13 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const AnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.AnimationInterfaceFactoryInterface;
-//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompoundAnimationInterfaceFactory } from './CompoundAnimationInterfaceFactory.js';
-//not GWT import const CompoundAnimationInterfaceFactory = globalThis.org.allbinary.animation.compound.CompoundAnimationInterfaceFactory;
+//not GWT import - same folder const CompoundAnimationInterfaceFactory = globalThis.org.allbinary.animation.compound.CompoundAnimationInterfaceFactory;
 import { SimultaneousCompoundIndexedAnimation } from './SimultaneousCompoundIndexedAnimation.js';
-//not GWT import const SimultaneousCompoundIndexedAnimation = globalThis.org.allbinary.animation.compound.SimultaneousCompoundIndexedAnimation;
+//not GWT import - same folder const SimultaneousCompoundIndexedAnimation = globalThis.org.allbinary.animation.compound.SimultaneousCompoundIndexedAnimation;
 export class SimultaneousCompoundIndexedAnimationInterfaceFactory extends CompoundAnimationInterfaceFactory {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {
         super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory);

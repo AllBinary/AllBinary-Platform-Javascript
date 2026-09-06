@@ -18,24 +18,24 @@ import { ProcessPaintable } from '../../../../../org/allbinary/graphics/paint/Pr
 //not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
 import { TouchMotionGestureFactory } from '../../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
 //not GWT import const TouchMotionGestureFactory = globalThis.org.allbinary.input.motion.gesture.TouchMotionGestureFactory;
-//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonsMappingPaintable } from './TouchButtonsMappingPaintable.js';
-//not GWT import const TouchButtonsMappingPaintable = globalThis.org.allbinary.input.motion.button.TouchButtonsMappingPaintable;
+//not GWT import - same folder const TouchButtonsMappingPaintable = globalThis.org.allbinary.input.motion.button.TouchButtonsMappingPaintable;
 export class TouchButtonsPaintableComposite extends ProcessPaintable {
     constructor(inputMappingInterface, basicColor) {
         super();

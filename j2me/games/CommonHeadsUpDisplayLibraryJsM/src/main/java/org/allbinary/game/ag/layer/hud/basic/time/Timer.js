@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../../java/lang/Object.js';
-//not plain js import { PrimitiveLongSingleton } from '../../../../../../../../org/allbinary/logic/math/PrimitiveLongSingleton.js';
+//not plain js import { PrimitiveLongSingleton } 
 const PrimitiveLongSingleton = globalThis.org.allbinary.logic.math.PrimitiveLongSingleton;
-//not plain js import { PrimitiveLongUtil } from '../../../../../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
+//not plain js import { PrimitiveLongUtil } 
 const PrimitiveLongUtil = globalThis.org.allbinary.logic.math.PrimitiveLongUtil;
 //not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
 import { GameTickTimeDelayHelperFactory } from '../../../../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';

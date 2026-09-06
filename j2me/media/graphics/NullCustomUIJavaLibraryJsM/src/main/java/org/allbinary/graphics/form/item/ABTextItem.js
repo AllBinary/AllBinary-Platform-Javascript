@@ -1,13 +1,12 @@
 /* Generated Code Do Not Modify */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomCustomItem } from './CustomCustomItem.js';
-//not GWT import const ABCustomItemInterface = globalThis.org.allbinary.graphics.form.item.ABCustomItemInterface;
+//not GWT import - same folder const ABCustomItemInterface = globalThis.org.allbinary.graphics.form.item.ABCustomItemInterface;
 import { ABStringComponent } from './ABStringComponent.js';
-//not GWT import const ABStringComponent = globalThis.org.allbinary.graphics.form.item.ABStringComponent;
+//not GWT import - same folder const ABStringComponent = globalThis.org.allbinary.graphics.form.item.ABStringComponent;
 export class ABTextItem extends CustomCustomItem {
     constructor(label, layout, altText, backgroundBasicColor, foregroundBasicColor) {
         super(label, backgroundBasicColor, foregroundBasicColor);

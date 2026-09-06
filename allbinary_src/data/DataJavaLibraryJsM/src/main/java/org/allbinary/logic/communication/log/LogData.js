@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { AbPathData } from '../../../../../org/allbinary/logic/io/path/AbPathData.js';
+//not plain js import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LogData extends Object {

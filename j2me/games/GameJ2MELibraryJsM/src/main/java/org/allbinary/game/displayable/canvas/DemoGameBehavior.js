@@ -13,17 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { GameTypeFactory } from '../../../../../org/allbinary/game/GameTypeFactory.js';
 //not GWT import const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
 //not GWT import const NullPaintable = globalThis.org.allbinary.graphics.paint.NullPaintable;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class DemoGameBehavior extends Object {
     constructor() {
         super(...arguments);

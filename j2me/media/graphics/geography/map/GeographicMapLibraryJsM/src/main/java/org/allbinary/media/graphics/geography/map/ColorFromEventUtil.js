@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
+//not GWT import - same folder const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
 export class ColorFromEventUtil extends Object {
     constructor() {
         super(...arguments);

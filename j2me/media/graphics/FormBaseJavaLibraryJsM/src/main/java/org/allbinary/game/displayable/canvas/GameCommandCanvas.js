@@ -12,16 +12,11 @@
         *  Created By: Travis Berthelot
 */
 import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
-const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
-const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { NullCommandListener } from '../../../../../javax/microedition/lcdui/NullCommandListener.js';
 //not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
@@ -47,7 +42,7 @@ import { GameKeyEventHandler } from '../../../../../org/allbinary/game/input/eve
 //not GWT import const GameKeyEventHandler = globalThis.org.allbinary.game.input.event.GameKeyEventHandler;
 import { UpGameKeyEventHandler } from '../../../../../org/allbinary/game/input/event/UpGameKeyEventHandler.js';
 //not GWT import const InputToGameKeyMapping = globalThis.org.allbinary.game.input.mapping.InputToGameKeyMapping;
-//not plain js import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../../../org/allbinary/graphics/Rectangle.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
@@ -83,24 +78,24 @@ import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullP
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 import { BasicMotionGesturesHandler } from '../../../../../org/allbinary/input/motion/gesture/observer/BasicMotionGesturesHandler.js';
 //not GWT import const BasicMotionGesturesHandler = globalThis.org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler;
-//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const MenuListener = globalThis.org.allbinary.game.displayable.canvas.MenuListener;
+//not GWT import - same folder const MenuListener = globalThis.org.allbinary.game.displayable.canvas.MenuListener;
 import { NoMenuInputProcessor } from './NoMenuInputProcessor.js';
-//not GWT import const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
+//not GWT import - same folder const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
 import { ImmediateCommandFormInputProcessor } from './ImmediateCommandFormInputProcessor.js';
-//not GWT import const ImmediateCommandFormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.ImmediateCommandFormInputProcessor;
+//not GWT import - same folder const ImmediateCommandFormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.ImmediateCommandFormInputProcessor;
 export class GameCommandCanvas extends MyCanvas {
     constructor(cmdListener, name, backgroundBasicColor, foregroundBasicColor) {
         super(name, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST);

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const VehicleFrictionProperties = globalThis.org.allbinary.game.layer.VehicleFrictionProperties;
+//not GWT import - same folder const VehicleFrictionProperties = globalThis.org.allbinary.game.layer.VehicleFrictionProperties;
 export class VehicleProperties extends Object {
     constructor(velocityProperties, vehicleFrictionProperties) {
         super();

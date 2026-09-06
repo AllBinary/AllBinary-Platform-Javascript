@@ -13,11 +13,11 @@
 */
 import { Integer } from '../../../java/lang/Integer.js';
 //not GWT import const View = globalThis.android.view.View;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidGameStatistics } from './AndroidGameStatistics.js';
-//not GWT import const AndroidGameStatistics = globalThis.org.allbinary.canvas.AndroidGameStatistics;
+//not GWT import - same folder const AndroidGameStatistics = globalThis.org.allbinary.canvas.AndroidGameStatistics;
 export class ProfilingRefreshHelper extends AndroidGameStatistics {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

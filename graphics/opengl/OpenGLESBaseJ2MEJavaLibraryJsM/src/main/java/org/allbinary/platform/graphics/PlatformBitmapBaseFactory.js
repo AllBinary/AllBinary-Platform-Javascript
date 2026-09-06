@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const PlatformBitmapBase = globalThis.org.allbinary.platform.graphics.PlatformBitmapBase;
+//not GWT import - same folder const PlatformBitmapBase = globalThis.org.allbinary.platform.graphics.PlatformBitmapBase;
 export class PlatformBitmapBaseFactory extends Object {
     createBitmap(image) {
         throw new RuntimeException();

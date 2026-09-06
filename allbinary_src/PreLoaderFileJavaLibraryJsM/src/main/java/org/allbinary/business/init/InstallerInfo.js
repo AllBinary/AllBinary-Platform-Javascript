@@ -17,7 +17,7 @@ import { PATH_GLOBALS } from '../../../../org/allbinary/globals/PATH_GLOBALS.js'
 //not GWT import const PATH_GLOBALS = globalThis.org.allbinary.globals.PATH_GLOBALS;
 import { URLGLOBALS } from '../../../../org/allbinary/globals/URLGLOBALS.js';
 //not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbDataInputStream } from '../../../../org/allbinary/logic/io/AbDataInputStream.js';
 //not GWT import const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
@@ -29,7 +29,7 @@ import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
 //not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { DatabaseEncoder } from '../../../../org/allbinary/logic/system/security/crypt/DatabaseEncoder.js';
 //not GWT import const DatabaseEncoder = globalThis.org.allbinary.logic.system.security.crypt.DatabaseEncoder;

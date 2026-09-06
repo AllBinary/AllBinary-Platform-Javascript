@@ -13,7 +13,7 @@
 */
 import { TextNotificationUtil } from '../../../../../../org/allbinary/game/input/TextNotificationUtil.js';
 //not GWT import const TextNotificationUtil = globalThis.org.allbinary.game.input.TextNotificationUtil;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { BooleanFactory } from '../../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
@@ -21,7 +21,7 @@ import { StringValidationUtil } from '../../../../../../org/allbinary/logic/stri
 //not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
 import { Visitor } from '../../../../../../org/allbinary/logic/util/visitor/Visitor.js';
 //not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TextItemNumberVisitor extends Visitor {

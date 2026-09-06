@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const Layer = globalThis.org.allbinary.layer.Layer;

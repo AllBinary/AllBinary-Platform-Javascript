@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not GWT import const AllBinaryEventObjectFactoryInterface = globalThis.org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TerrainEvent } from './TerrainEvent.js';
-//not GWT import const TerrainEvent = globalThis.org.allbinary.game.terrain.TerrainEvent;
+//not GWT import - same folder const TerrainEvent = globalThis.org.allbinary.game.terrain.TerrainEvent;
 export class TerrainEventFactory extends Object {
     constructor() {
         super();

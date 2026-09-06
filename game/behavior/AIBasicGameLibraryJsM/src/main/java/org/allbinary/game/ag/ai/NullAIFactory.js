@@ -14,9 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullAI } from './NullAI.js';
-//not GWT import const NullAI = globalThis.org.allbinary.game.ag.ai.NullAI;
+//not GWT import - same folder const NullAI = globalThis.org.allbinary.game.ag.ai.NullAI;
 export class NullAIFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

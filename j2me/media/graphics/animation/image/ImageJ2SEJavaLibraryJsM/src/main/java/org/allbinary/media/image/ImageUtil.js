@@ -22,15 +22,15 @@ import { AffineTransform } from '../../../../java/awt/geom/AffineTransform.js';
 //not GWT import const AffineTransform = globalThis.java.awt.geom.AffineTransform;
 import { BufferedImage } from '../../../../java/awt/image/BufferedImage.js';
 //not GWT import const BufferedImage = globalThis.java.awt.image.BufferedImage;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonLabels } from '../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const J2SEMutableImage = globalThis.org.microemu.device.j2se.J2SEMutableImage;
 //Current folder imports from return types, extended types, and scope (deduplicated)

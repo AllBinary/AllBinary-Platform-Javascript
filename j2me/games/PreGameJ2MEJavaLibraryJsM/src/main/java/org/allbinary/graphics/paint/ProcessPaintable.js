@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not GWT import - same folder const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 export class ProcessPaintable extends Paintable {
     process() {
     }

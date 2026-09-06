@@ -11,17 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } from '../../../../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { BasicHud } from '../../../../../../../../org/allbinary/game/graphics/hud/BasicHud.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { MyFontProcessor } from '../../../../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const MyFontProcessor = globalThis.org.allbinary.graphics.font.MyFontProcessor;
-//not plain js import { PrimitiveLongSingleton } from '../../../../../../../../org/allbinary/logic/math/PrimitiveLongSingleton.js';
+//not plain js import { PrimitiveLongSingleton } 
 const PrimitiveLongSingleton = globalThis.org.allbinary.logic.math.PrimitiveLongSingleton;
-//not GWT import const Timer = globalThis.org.allbinary.game.ag.layer.hud.basic.time.Timer;
+//not GWT import - same folder const Timer = globalThis.org.allbinary.game.ag.layer.hud.basic.time.Timer;
 export class TimeHudWidget extends BasicHud {
     //@Throws(Exception.constructor)
     static getInstance(location, direction, basicColor, timer) {

@@ -16,11 +16,11 @@ import { EventStrings } from '../../../../../../org/allbinary/logic/util/event/E
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
 //not GWT import const BasicEventHandler = globalThis.org.allbinary.logic.util.event.handler.BasicEventHandler;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const DestroyedEventListenerInterface = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEventListenerInterface;
+//not GWT import - same folder const DestroyedEventListenerInterface = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEventListenerInterface;
 export class DestroyedEventHandler extends BasicEventHandler {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getInstance() {

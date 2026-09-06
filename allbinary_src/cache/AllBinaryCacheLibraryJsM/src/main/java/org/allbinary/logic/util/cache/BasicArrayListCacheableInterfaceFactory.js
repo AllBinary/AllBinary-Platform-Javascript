@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const CacheableInterfaceFactoryInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterfaceFactoryInterface;
+//not GWT import - same folder const CacheableInterfaceFactoryInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterfaceFactoryInterface;
 import { BasicArrayListCacheable } from './BasicArrayListCacheable.js';
-//not GWT import const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
+//not GWT import - same folder const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
 export class BasicArrayListCacheableInterfaceFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(key = {}) {

@@ -16,19 +16,21 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const ArtificialIntelligenceInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceInterface;
 import { TopULayerBounds } from '../../../../../org/allbinary/bounds/TopULayerBounds.js';
 //not GWT import const VelocityInterfaceCompositeInterface = globalThis.org.allbinary.game.physics.velocity.VelocityInterfaceCompositeInterface;
-//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../../../org/allbinary/graphics/Rectangle.js';
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BoundBounceAI } from './BoundBounceAI.js';
-//not GWT import const BoundBounceAI = globalThis.org.allbinary.game.ag.ai.BoundBounceAI;
+//not GWT import - same folder const BoundBounceAI = globalThis.org.allbinary.game.ag.ai.BoundBounceAI;
 import { ReverseVelocityBoundsVisitor } from './ReverseVelocityBoundsVisitor.js';
-//not GWT import const ReverseVelocityBoundsVisitor = globalThis.org.allbinary.game.ag.ai.ReverseVelocityBoundsVisitor;
+//not GWT import - same folder const ReverseVelocityBoundsVisitor = globalThis.org.allbinary.game.ag.ai.ReverseVelocityBoundsVisitor;
 export class TopUBoundBounceAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

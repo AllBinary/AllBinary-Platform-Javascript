@@ -11,7 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
 //not GWT import const HighScoresHelperBase = globalThis.org.allbinary.game.score.HighScoresHelperBase;
 import { NullHighScoresSingletonFactory } from '../../../../../org/allbinary/game/score/NullHighScoresSingletonFactory.js';
@@ -19,7 +18,7 @@ import { NullHighScoresSingletonFactory } from '../../../../../org/allbinary/gam
 import { GameStateFactory } from '../../../../../org/allbinary/game/state/GameStateFactory.js';
 //not GWT import const GameStateFactory = globalThis.org.allbinary.game.state.GameStateFactory;
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class EndGameProcessor extends Processor {
     constructor(gameCanvas) {
         super();

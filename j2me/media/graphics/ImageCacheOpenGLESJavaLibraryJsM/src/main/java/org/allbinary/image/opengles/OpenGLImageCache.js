@@ -13,7 +13,7 @@
 */
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 //not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
@@ -21,9 +21,9 @@ import { NullGL10 } from '../../../../org/allbinary/device/NullGL10.js';
 //not GWT import const NullGL10 = globalThis.org.allbinary.device.NullGL10;
 import { AllBinaryRendererBase3 } from '../../../../org/allbinary/graphics/opengles/renderer/AllBinaryRendererBase3.js';
 //not GWT import const AllBinaryRendererBase3 = globalThis.org.allbinary.graphics.opengles.renderer.AllBinaryRendererBase3;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { ImageCache } from '../../../../org/allbinary/image/ImageCache.js';
 //not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
@@ -34,7 +34,7 @@ import { PreResourceImageUtil } from '../../../../org/allbinary/image/PreResourc
 import { SynchObject } from '../../../../org/allbinary/thread/SynchObject.js';
 //not GWT import const SynchObject = globalThis.org.allbinary.thread.SynchObject;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { OpenGLESImage } from './OpenGLESImage.js';
+//not plain js - same folder import { OpenGLESImage } 
 const OpenGLESImage = globalThis.org.allbinary.image.opengles.OpenGLESImage;
 //ImageCacheOpenGLESJavaLibrary
 export class OpenGLImageCache extends ImageCache {

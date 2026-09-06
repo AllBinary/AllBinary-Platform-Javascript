@@ -13,16 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { ByteArrayOutputStream } from '../../../../java/io/ByteArrayOutputStream.js';
 //not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
 //not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HighScore extends Object {
     constructor(id, name, gameInfo, score) {

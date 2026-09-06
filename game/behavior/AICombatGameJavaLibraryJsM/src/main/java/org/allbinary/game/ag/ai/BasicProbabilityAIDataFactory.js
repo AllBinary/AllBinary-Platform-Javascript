@@ -13,16 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import { NoTimeDelayHelper } from '../../../../../org/allbinary/time/NoTimeDelayHelper.js';
 //not GWT import const NoTimeDelayHelper = globalThis.org.allbinary.time.NoTimeDelayHelper;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputProbability } from './InputProbability.js';
-//not GWT import const InputProbability = globalThis.org.allbinary.game.ag.ai.InputProbability;
+//not GWT import - same folder const InputProbability = globalThis.org.allbinary.game.ag.ai.InputProbability;
 export class BasicProbabilityAIDataFactory extends Object {
     getInstance() {
         var likelyhoodIntegerArray = new Array(Canvas.KEY_NUM9 + 1).fill(null).map(() => new Array(2).fill(0));

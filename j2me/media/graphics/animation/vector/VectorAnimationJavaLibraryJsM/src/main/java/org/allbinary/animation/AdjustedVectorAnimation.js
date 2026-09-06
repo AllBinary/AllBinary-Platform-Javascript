@@ -12,12 +12,12 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimation } from './VectorAnimation.js';
-//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import - same folder const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 export class AdjustedVectorAnimation extends VectorAnimation {
     constructor(currentPoints, basicColor, dx, dy, animationBehavior) {
         super(currentPoints, basicColor, animationBehavior);

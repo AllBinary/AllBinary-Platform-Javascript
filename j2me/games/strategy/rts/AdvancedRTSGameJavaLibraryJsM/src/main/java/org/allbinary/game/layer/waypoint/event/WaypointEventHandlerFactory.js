@@ -16,7 +16,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const Group = globalThis.org.allbinary.game.identification.Group;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointEventHandler } from './WaypointEventHandler.js';
-//not GWT import const WaypointEventHandler = globalThis.org.allbinary.game.layer.waypoint.event.WaypointEventHandler;
+//not GWT import - same folder const WaypointEventHandler = globalThis.org.allbinary.game.layer.waypoint.event.WaypointEventHandler;
 export class WaypointEventHandlerFactory extends Object {
     static getInstance(groupInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -18,7 +18,7 @@ import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js'
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimation } from './VectorAnimation.js';
-//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import - same folder const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 export class TimedVectorAnimation extends VectorAnimation {
     constructor(currentPoints, basicColor, animationBehavior) {
         super(currentPoints, basicColor, animationBehavior);

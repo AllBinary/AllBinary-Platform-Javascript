@@ -13,17 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { GPoint } from '../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
-//not plain js import { Angle } from '../../../../org/allbinary/math/Angle.js';
+//not plain js import { Angle } 
 const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { NoDecimalTrigTable } from '../../../../org/allbinary/math/NoDecimalTrigTable.js';
+//not plain js import { NoDecimalTrigTable } 
 const NoDecimalTrigTable = globalThis.org.allbinary.math.NoDecimalTrigTable;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicGraphicsPipeline extends Object {

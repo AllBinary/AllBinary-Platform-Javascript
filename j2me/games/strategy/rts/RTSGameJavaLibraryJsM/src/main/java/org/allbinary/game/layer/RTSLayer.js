@@ -12,8 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
 import { MultiPlayerGameLayer } from '../../../../org/allbinary/game/multiplayer/layer/MultiPlayerGameLayer.js';
@@ -52,21 +51,23 @@ import { ViewPositionEventHandler } from '../../../../org/allbinary/view/event/V
 //not GWT import const ViewPositionEventHandler = globalThis.org.allbinary.view.event.ViewPositionEventHandler;
 import { RemoteInfo } from '../../../../org/allbinary/game/multiplayer/layer/RemoteInfo.js';
 //not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { LayerDistanceUtil } from '../../../../org/allbinary/math/LayerDistanceUtil.js';
 //not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
+//not GWT import - same folder const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
 import { RTSLayer2LogHelper } from './RTSLayer2LogHelper.js';
-//not GWT import const GeographicMapCellPositionAreaBase = globalThis.org.allbinary.game.layer.GeographicMapCellPositionAreaBase;
+//not GWT import - same folder const GeographicMapCellPositionAreaBase = globalThis.org.allbinary.game.layer.GeographicMapCellPositionAreaBase;
 import { GeographicMapCellPositionArea } from './GeographicMapCellPositionArea.js';
-//not GWT import const RTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.RTSPlayerLayerInterface;
+//not GWT import - same folder const RTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.RTSPlayerLayerInterface;
 import { RTSLayerUtil } from './RTSLayerUtil.js';
-//not GWT import const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
+//not GWT import - same folder const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
 export class RTSLayer extends MultiPlayerGameLayer {
     //@Throws(Exception.constructor)
     static createSimulatedInstance(remoteInfo) {

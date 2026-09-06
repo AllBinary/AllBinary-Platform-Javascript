@@ -13,13 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Group } from './Group.js';
-//not GWT import const Group = globalThis.org.allbinary.game.identification.Group;
+//not GWT import - same folder const Group = globalThis.org.allbinary.game.identification.Group;
 export class BasicGroupFactory extends Object {
     constructor() {
         super(...arguments);

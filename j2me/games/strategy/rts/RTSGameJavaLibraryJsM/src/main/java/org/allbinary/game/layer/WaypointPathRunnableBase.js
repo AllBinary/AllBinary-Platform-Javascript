@@ -19,7 +19,7 @@ import { LayerDistanceUtil } from '../../../../org/allbinary/math/LayerDistanceU
 //not GWT import const RunnableInterface = globalThis.org.allbinary.thread.RunnableInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPathFindingLayer } from './NullPathFindingLayer.js';
-//not GWT import const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
+//not GWT import - same folder const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
 export class WaypointPathRunnableBase extends Object {
     constructor() {
         super(...arguments);

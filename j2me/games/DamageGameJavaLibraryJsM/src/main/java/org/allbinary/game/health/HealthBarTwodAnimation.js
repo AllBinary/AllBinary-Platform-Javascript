@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HealthBarAnimation } from './HealthBarAnimation.js';
-//not GWT import const HealthBarAnimation = globalThis.org.allbinary.game.health.HealthBarAnimation;
+//not GWT import - same folder const HealthBarAnimation = globalThis.org.allbinary.game.health.HealthBarAnimation;
 export class HealthBarTwodAnimation extends HealthBarAnimation {
     constructor(layerInterface, location) {
         super(layerInterface, location);

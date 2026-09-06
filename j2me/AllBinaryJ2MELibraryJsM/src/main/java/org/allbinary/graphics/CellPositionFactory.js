@@ -13,15 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CellPosition } from './CellPosition.js';
-//not GWT import const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
+//not GWT import - same folder const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
 export class CellPositionFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

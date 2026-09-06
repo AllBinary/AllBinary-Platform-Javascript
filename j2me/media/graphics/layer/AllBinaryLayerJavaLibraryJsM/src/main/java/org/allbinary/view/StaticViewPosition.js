@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+/* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ViewPosition } from './ViewPosition.js';
-//not GWT import const ViewPosition = globalThis.org.allbinary.view.ViewPosition;
+//not GWT import - same folder const ViewPosition = globalThis.org.allbinary.view.ViewPosition;
 export class StaticViewPosition extends ViewPosition {
     constructor(x, y, z) {
         super(x, y, z);

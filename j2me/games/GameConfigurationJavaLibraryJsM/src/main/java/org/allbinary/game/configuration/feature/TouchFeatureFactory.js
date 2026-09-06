@@ -13,10 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchFeature } from './TouchFeature.js';
-//not GWT import const TouchFeature = globalThis.org.allbinary.game.configuration.feature.TouchFeature;
+//not GWT import - same folder const TouchFeature = globalThis.org.allbinary.game.configuration.feature.TouchFeature;
 export class TouchFeatureFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

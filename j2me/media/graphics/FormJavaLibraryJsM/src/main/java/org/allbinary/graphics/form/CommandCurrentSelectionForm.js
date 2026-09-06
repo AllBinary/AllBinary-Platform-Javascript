@@ -11,10 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
@@ -25,12 +24,12 @@ import { RectangleAdjustedAnimation } from '../../../../org/allbinary/animation/
 import { RectangleFilledAdjustedAnimation } from '../../../../org/allbinary/animation/vector/RectangleFilledAdjustedAnimation.js';
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollCurrentSelectionForm } from './ScrollCurrentSelectionForm.js';
-//not GWT import const ScrollCurrentSelectionForm = globalThis.org.allbinary.graphics.form.ScrollCurrentSelectionForm;
+//not GWT import - same folder const ScrollCurrentSelectionForm = globalThis.org.allbinary.graphics.form.ScrollCurrentSelectionForm;
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
-//not GWT import const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
+//not GWT import - same folder const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
 export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
     constructor(title, items, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, ItemPaintableFactory.getInstance(), border, -3, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor);

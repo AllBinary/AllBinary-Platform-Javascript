@@ -12,13 +12,13 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { BasicColorFactory } from '../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimation } from './VectorAnimation.js';
-//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import - same folder const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
 export class ColorLessVectorAnimation extends VectorAnimation {
     constructor(currentPoints, animationBehavior) {
         super(currentPoints, BasicColorFactory.getInstance().WHITE, animationBehavior);

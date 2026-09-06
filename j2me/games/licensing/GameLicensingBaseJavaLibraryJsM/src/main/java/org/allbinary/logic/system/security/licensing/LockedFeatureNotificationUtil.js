@@ -21,7 +21,7 @@ import { BasicColorFactory } from '../../../../../../org/allbinary/graphics/colo
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { BooleanFactory } from '../../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import { ErrorSound } from '../../../../../../org/allbinary/media/audio/ErrorSound.js';
 //not GWT import const ErrorSound = globalThis.org.allbinary.media.audio.ErrorSound;
@@ -29,7 +29,7 @@ import { PrimaryPlayerQueueFactory } from '../../../../../../org/allbinary/media
 //not GWT import const PrimaryPlayerQueueFactory = globalThis.org.allbinary.media.audio.PrimaryPlayerQueueFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LicenseStrings } from './LicenseStrings.js';
-//not GWT import const LicenseStrings = globalThis.org.allbinary.logic.system.security.licensing.LicenseStrings;
+//not GWT import - same folder const LicenseStrings = globalThis.org.allbinary.logic.system.security.licensing.LicenseStrings;
 export class LockedFeatureNotificationUtil extends Object {
     constructor() {
         super(...arguments);

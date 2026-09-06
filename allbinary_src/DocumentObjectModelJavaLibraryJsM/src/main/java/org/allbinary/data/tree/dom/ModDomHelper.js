@@ -17,20 +17,20 @@ import { Exception } from '../../../../../java/lang/Exception.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { HashMap } from '../../../../../java/util/HashMap.js';
 //not GWT import const Set = globalThis.java.util.Set;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { ClassUtil } from '../../../../../org/allbinary/logic/java/anyType/clazz/ClassUtil.js';
 //not GWT import const ClassUtil = globalThis.org.allbinary.logic.java.anyType.clazz.ClassUtil;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not GWT import const Node = globalThis.org.w3c.dom.Node;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomData } from './DomData.js';
-//not GWT import const DomData = globalThis.org.allbinary.data.tree.dom.DomData;
+//not GWT import - same folder const DomData = globalThis.org.allbinary.data.tree.dom.DomData;
 export class ModDomHelper extends Object {
     //@Throws(Exception.constructor)
     static createTextNode(document, name, text) {

@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { BasicGameResources } from '../../../../../../../org/allbinary/game/layer/resources/BasicGameResources.js';
 //not GWT import const BasicGameResources = globalThis.org.allbinary.game.layer.resources.BasicGameResources;
-//not plain js import { NullUtil } from '../../../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MineWeaponResources extends BasicGameResources {

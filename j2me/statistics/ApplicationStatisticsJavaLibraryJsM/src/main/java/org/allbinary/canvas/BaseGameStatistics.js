@@ -14,22 +14,21 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Integer } from '../../../java/lang/Integer.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { PrimitiveLongSingleton } from '../../../org/allbinary/logic/math/PrimitiveLongSingleton.js';
+//not plain js import { PrimitiveLongSingleton } 
 const PrimitiveLongSingleton = globalThis.org.allbinary.logic.math.PrimitiveLongSingleton;
-//not plain js import { ScaleFactorFactory } from '../../../org/allbinary/logic/math/ScaleFactorFactory.js';
+//not plain js import { ScaleFactorFactory } 
 const ScaleFactorFactory = globalThis.org.allbinary.logic.math.ScaleFactorFactory;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
 import { GameTickTimeDelayHelperFactory } from '../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
 //not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
 import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BaseGameStatistics extends Object {
     constructor() {

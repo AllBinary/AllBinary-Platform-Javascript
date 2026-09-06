@@ -19,9 +19,11 @@ import { BasicAI } from '../../../../../../org/allbinary/game/ai/BasicAI.js';
 //not GWT import const BasicAI = globalThis.org.allbinary.game.ai.BasicAI;
 import { InputProbability } from '../../../../../../org/allbinary/game/ag/ai/InputProbability.js';
 //not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicRandomAI } from './BasicRandomAI.js';
-//not GWT import const BasicRandomAI = globalThis.org.allbinary.game.ag.ai.tactical.BasicRandomAI;
+//not GWT import - same folder const BasicRandomAI = globalThis.org.allbinary.game.ag.ai.tactical.BasicRandomAI;
 export class BasicRandomAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

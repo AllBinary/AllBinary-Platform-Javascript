@@ -17,7 +17,7 @@ import { AnalogControllerConfigurationEvent } from '../../../../../org/allbinary
 //not GWT import const AnalogControllerConfigurationEvent = globalThis.org.allbinary.android.input.motion.event.AnalogControllerConfigurationEvent;
 import { AnalogControllerConfigurationEventHandler } from '../../../../../org/allbinary/android/input/motion/event/AnalogControllerConfigurationEventHandler.js';
 //not GWT import const AnalogControllerConfigurationEventHandler = globalThis.org.allbinary.android.input.motion.event.AnalogControllerConfigurationEventHandler;
-//not plain js import { ScaleFactorFactory } from '../../../../../org/allbinary/logic/math/ScaleFactorFactory.js';
+//not plain js import { ScaleFactorFactory } 
 const ScaleFactorFactory = globalThis.org.allbinary.logic.math.ScaleFactorFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AnalogControllerConfigurationFactory extends Object {

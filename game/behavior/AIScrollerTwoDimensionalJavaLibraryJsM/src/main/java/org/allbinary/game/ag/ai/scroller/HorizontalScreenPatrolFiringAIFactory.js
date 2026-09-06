@@ -14,9 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HorizontalScreenPatrolAI } from './HorizontalScreenPatrolAI.js';
-//not GWT import const HorizontalScreenPatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.HorizontalScreenPatrolAI;
+//not GWT import - same folder const HorizontalScreenPatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.HorizontalScreenPatrolAI;
 export class HorizontalScreenPatrolFiringAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

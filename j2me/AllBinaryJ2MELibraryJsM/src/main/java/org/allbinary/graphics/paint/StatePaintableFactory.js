@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { StatePaintable } from './StatePaintable.js';
-//not GWT import const StatePaintable = globalThis.org.allbinary.graphics.paint.StatePaintable;
+//not GWT import - same folder const StatePaintable = globalThis.org.allbinary.graphics.paint.StatePaintable;
 export class StatePaintableFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

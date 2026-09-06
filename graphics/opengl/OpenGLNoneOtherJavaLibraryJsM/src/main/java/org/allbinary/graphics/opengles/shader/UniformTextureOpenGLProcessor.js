@@ -14,7 +14,7 @@
 //not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLObject3dProcessor } from './OpenGLObject3dProcessor.js';
-//not GWT import const ShaderComposite = globalThis.org.allbinary.graphics.opengles.shader.ShaderComposite;
+//not GWT import - same folder const ShaderComposite = globalThis.org.allbinary.graphics.opengles.shader.ShaderComposite;
 export class UniformTextureOpenGLProcessor extends OpenGLObject3dProcessor {
     constructor(shaderComposite, handleIndex) {
         super();

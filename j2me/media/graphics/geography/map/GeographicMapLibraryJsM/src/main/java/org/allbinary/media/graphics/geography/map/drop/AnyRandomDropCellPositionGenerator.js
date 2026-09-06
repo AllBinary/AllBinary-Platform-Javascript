@@ -11,20 +11,20 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { BasicArrayList } from '../../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
-//not plain js import { MyRandomFactory } from '../../../../../../../org/allbinary/game/rand/MyRandomFactory.js';
+//not plain js import { MyRandomFactory } 
 const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { NullUtil } from '../../../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not GWT import const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseDropCellPositionGenerator } from './BaseDropCellPositionGenerator.js';
-//not GWT import const BaseDropCellPositionGenerator = globalThis.org.allbinary.media.graphics.geography.map.drop.BaseDropCellPositionGenerator;
+//not GWT import - same folder const BaseDropCellPositionGenerator = globalThis.org.allbinary.media.graphics.geography.map.drop.BaseDropCellPositionGenerator;
 export class AnyRandomDropCellPositionGenerator extends BaseDropCellPositionGenerator {
     constructor() {
         super(...arguments);

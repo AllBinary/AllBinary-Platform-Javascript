@@ -13,13 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { GameFeatureImageCacheFactory } from '../../../../org/allbinary/image/GameFeatureImageCacheFactory.js';
 //not GWT import const GameFeatureImageCacheFactory = globalThis.org.allbinary.image.GameFeatureImageCacheFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { ImageScaleUtil } from './ImageScaleUtil.js';
-const ImageScaleUtil = globalThis.org.allbinary.media.image.ImageScaleUtil;
+import { ImageScaleUtil } from './ImageScaleUtil.js';
+//not GWT import - same folder const ImageScaleUtil = globalThis.org.allbinary.media.image.ImageScaleUtil;
 export class ImageJ2MEScaleUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

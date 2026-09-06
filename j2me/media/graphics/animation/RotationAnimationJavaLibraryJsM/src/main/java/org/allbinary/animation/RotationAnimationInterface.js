@@ -12,6 +12,6 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const DirectionalInterface = globalThis.org.allbinary.direction.DirectionalInterface;
-//not plain js import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 export {};

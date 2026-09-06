@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { GameInputProcessor } from '../../../../../org/allbinary/game/input/GameInputProcessor.js';
-//not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
+//not GWT import - same folder const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
 export class SpecialGameInputProcessor extends GameInputProcessor {
     constructor(collidableDestroyableDamageableLayer) {
         super();

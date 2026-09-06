@@ -13,9 +13,9 @@
 //not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointLayer } from './WaypointLayer.js';
-//not GWT import const WaypointLayer = globalThis.org.allbinary.game.layer.waypoint.WaypointLayer;
+//not GWT import - same folder const WaypointLayer = globalThis.org.allbinary.game.layer.waypoint.WaypointLayer;
 import { WaypointInfoHudPaintableSingleton } from './WaypointInfoHudPaintableSingleton.js';
-//not GWT import const WaypointInfoHudPaintable = globalThis.org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable;
+//not GWT import - same folder const WaypointInfoHudPaintable = globalThis.org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable;
 export class VisualWaypointLayer extends WaypointLayer {
     constructor(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y) {
         super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y);

@@ -14,7 +14,7 @@
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollMapGameInputProcessor } from './ScrollMapGameInputProcessor.js';
-//not GWT import const ScrollMapPlayerGameInput = globalThis.org.allbinary.game.input.ScrollMapPlayerGameInput;
+//not GWT import - same folder const ScrollMapPlayerGameInput = globalThis.org.allbinary.game.input.ScrollMapPlayerGameInput;
 export class ScrollMapUpGameInputProcessor extends ScrollMapGameInputProcessor {
     constructor(scrollMapPlayerGameInput) {
         super(scrollMapPlayerGameInput);

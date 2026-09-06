@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { BasicHud } from '../../../../../../../../org/allbinary/game/graphics/hud/BasicHud.js';
 //not GWT import const BasicHud = globalThis.org.allbinary.game.graphics.hud.BasicHud;
@@ -19,14 +19,14 @@ import { BasicHudFactory } from '../../../../../../../../org/allbinary/game/grap
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorFactory } from '../../../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
-//not plain js import { ForcedLogUtil } from '../../../../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../../../../../../org/allbinary/logic/util/event/EventStrings.js';
 //not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameNotification } from './GameNotification.js';
-//not GWT import const GameNotification = globalThis.org.allbinary.game.ag.layer.hud.basic.notification.GameNotification;
+//not GWT import - same folder const GameNotification = globalThis.org.allbinary.game.ag.layer.hud.basic.notification.GameNotification;
 export class GameNotificationHud extends BasicHud {
     constructor(location, direction, bufferZone, basicColor) {
         super(location, direction, bufferZone, basicColor);

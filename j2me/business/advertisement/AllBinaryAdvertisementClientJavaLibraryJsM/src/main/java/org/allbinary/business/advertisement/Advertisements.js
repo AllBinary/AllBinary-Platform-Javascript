@@ -13,16 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { MyRandomFactory } from '../../../../org/allbinary/game/rand/MyRandomFactory.js';
+//not plain js import { MyRandomFactory } 
 const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
 import { LockedUtil } from '../../../../org/allbinary/logic/system/security/licensing/LockedUtil.js';
 //not GWT import const LockedUtil = globalThis.org.allbinary.logic.system.security.licensing.LockedUtil;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const AdvertisementProcessorInterface = globalThis.org.allbinary.business.advertisement.AdvertisementProcessorInterface;
+//not GWT import - same folder const AdvertisementProcessorInterface = globalThis.org.allbinary.business.advertisement.AdvertisementProcessorInterface;
 export class Advertisements extends Object {
     constructor() {
         super(...arguments);

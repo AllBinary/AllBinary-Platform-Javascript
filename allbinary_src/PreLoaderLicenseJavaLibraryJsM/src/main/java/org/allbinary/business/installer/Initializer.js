@@ -25,19 +25,19 @@ import { StaticPagesDbInitInfo } from '../../../../org/allbinary/business/init/d
 //not GWT import const StaticPagesDbInitInfo = globalThis.org.allbinary.business.init.db.StaticPagesDbInitInfo;
 import { UserDbInitInfo } from '../../../../org/allbinary/business/init/db/UserDbInitInfo.js';
 //not GWT import const UserDbInitInfo = globalThis.org.allbinary.business.init.db.UserDbInitInfo;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { StringValidationUtil } from '../../../../org/allbinary/logic/string/StringValidationUtil.js';
 //not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitializerData } from './InitializerData.js';
-//not GWT import const InitializerData = globalThis.org.allbinary.business.installer.InitializerData;
+//not GWT import - same folder const InitializerData = globalThis.org.allbinary.business.installer.InitializerData;
 export class Initializer extends Object {
     constructor(map) {
         super();

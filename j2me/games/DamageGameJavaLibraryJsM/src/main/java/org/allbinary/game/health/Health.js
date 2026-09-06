@@ -13,15 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const HealthInterface = globalThis.org.allbinary.game.health.HealthInterface;
+//not GWT import - same folder const HealthInterface = globalThis.org.allbinary.game.health.HealthInterface;
 import { NullHealthListener } from './NullHealthListener.js';
-//not GWT import const HealthListenerInterface = globalThis.org.allbinary.game.health.HealthListenerInterface;
+//not GWT import - same folder const HealthListenerInterface = globalThis.org.allbinary.game.health.HealthListenerInterface;
 export class Health extends Object {
     constructor(maxHealth) {
         super();

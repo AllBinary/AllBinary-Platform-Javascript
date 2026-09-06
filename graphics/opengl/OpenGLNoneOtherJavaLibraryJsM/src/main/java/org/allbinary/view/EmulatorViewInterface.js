@@ -1,6 +1,6 @@
 /* Generated Code Do Not Modify */
-//not plain js import { Displayable } from '../../../javax/microedition/lcdui/Displayable.js';
+//not plain js import { Displayable } 
 const Displayable = globalThis.javax.microedition.lcdui.Displayable;
-//not plain js import { MIDlet } from '../../../javax/microedition/midlet/MIDlet.js';
+//not plain js import { MIDlet } 
 const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
 export {};

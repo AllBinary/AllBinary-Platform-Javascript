@@ -12,7 +12,7 @@
 */
 //not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import const WaypointEventListenerInterface = globalThis.org.allbinary.game.layer.waypoint.event.WaypointEventListenerInterface;
+//not GWT import - same folder const WaypointEventListenerInterface = globalThis.org.allbinary.game.layer.waypoint.event.WaypointEventListenerInterface;
 export class WaypointEventHandler extends BasicEventHandler {
     constructor() {
         super();

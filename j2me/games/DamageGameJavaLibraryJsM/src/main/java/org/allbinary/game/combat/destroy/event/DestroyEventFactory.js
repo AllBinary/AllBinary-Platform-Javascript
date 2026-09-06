@@ -16,7 +16,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryEventObjectFactoryInterface = globalThis.org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyedEvent } from './DestroyedEvent.js';
-//not GWT import const DestroyedEvent = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEvent;
+//not GWT import - same folder const DestroyedEvent = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEvent;
 export class DestroyEventFactory extends Object {
     constructor(combatGameCanvas) {
         super();

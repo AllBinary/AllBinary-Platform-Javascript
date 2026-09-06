@@ -13,9 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { ScaleFactorFactory } from './ScaleFactorFactory.js';
+//not plain js - same folder import { ScaleFactorFactory } 
 const ScaleFactorFactory = globalThis.org.allbinary.logic.math.ScaleFactorFactory;
 export class BasicDecimal extends Object {
     static createBigDecimal(bigDecimal) {

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const LockableFeature = globalThis.org.allbinary.logic.system.security.licensing.LockableFeature;
+//not GWT import - same folder const LockableFeature = globalThis.org.allbinary.logic.system.security.licensing.LockableFeature;
 export class LockedUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

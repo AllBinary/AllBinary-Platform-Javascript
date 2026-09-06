@@ -13,18 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const Enumeration = globalThis.java.util.Enumeration;
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Displayable } from '../../../../javax/microedition/lcdui/Displayable.js';
+//not plain js import { Displayable } 
 const Displayable = globalThis.javax.microedition.lcdui.Displayable;
 import { NullCanvas } from '../../../../javax/microedition/lcdui/NullCanvas.js';
 //not GWT import const NullCanvas = globalThis.javax.microedition.lcdui.NullCanvas;
-//not plain js import { MIDletStateChangeException } from '../../../../javax/microedition/midlet/MIDletStateChangeException.js';
+//not plain js import { MIDletStateChangeException } 
 const MIDletStateChangeException = globalThis.javax.microedition.midlet.MIDletStateChangeException;
 import { J2MEUtil } from '../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
@@ -130,13 +130,13 @@ import { VirtualKeyboardEventHandler } from '../../../../org/allbinary/input/eve
 //not GWT import const VirtualKeyboardEventHandler = globalThis.org.allbinary.input.event.VirtualKeyboardEventHandler;
 import { BasicMotionGesturesHandler } from '../../../../org/allbinary/input/motion/gesture/observer/BasicMotionGesturesHandler.js';
 //not GWT import const BasicMotionGesturesHandler = globalThis.org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler;
-//not plain js import { ForcedLogUtil } from '../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { PreLogUtil } from '../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not GWT import const ClientInformationFactory = globalThis.org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 import { InApplicationPurchaseFactory } from '../../../../org/allbinary/logic/system/security/licensing/InApplicationPurchaseFactory.js';
@@ -159,22 +159,23 @@ import { ThreadUtil } from '../../../../org/allbinary/thread/ThreadUtil.js';
 //not GWT import const ThreadUtil = globalThis.org.allbinary.thread.ThreadUtil;
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { EnumerationUtil } from '../../../../org/allbinary/util/EnumerationUtil.js';
+//not plain js import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
-import { StdUtil } from '../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameMidletStateFactory } from './GameMidletStateFactory.js';
-//not GWT import const GameMidletStateFactory = globalThis.org.allbinary.game.midlet.GameMidletStateFactory;
+//not GWT import - same folder const GameMidletStateFactory = globalThis.org.allbinary.game.midlet.GameMidletStateFactory;
 import { GameMidletEventHandler } from './GameMidletEventHandler.js';
-//not GWT import const GameMidletEventHandler = globalThis.org.allbinary.game.midlet.GameMidletEventHandler;
+//not GWT import - same folder const GameMidletEventHandler = globalThis.org.allbinary.game.midlet.GameMidletEventHandler;
 import { DemoGameMidletEvent } from './DemoGameMidletEvent.js';
-//not GWT import const DemoGameMidletEvent = globalThis.org.allbinary.game.midlet.DemoGameMidletEvent;
+//not GWT import - same folder const DemoGameMidletEvent = globalThis.org.allbinary.game.midlet.DemoGameMidletEvent;
 import { DemoGameMidletStateFactory } from './DemoGameMidletStateFactory.js';
-//not GWT import const DemoGameMidletStateFactory = globalThis.org.allbinary.game.midlet.DemoGameMidletStateFactory;
+//not GWT import - same folder const DemoGameMidletStateFactory = globalThis.org.allbinary.game.midlet.DemoGameMidletStateFactory;
 export class GameMidlet extends ProgressMidlet {
     constructor(clientInformationFactory) {
         super(clientInformationFactory);

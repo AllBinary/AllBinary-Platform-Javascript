@@ -13,8 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../org/allbinary/animation/FeaturedAnimationInterfaceFactoryInterfaceFactory.js';
 //not GWT import const FeaturedAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
@@ -43,7 +42,7 @@ import { CompleteMotionGestureInputToGameMotionGestureInput } from '../../../../
 import { BasicTouchInputFactory } from '../../../../org/allbinary/input/motion/button/BasicTouchInputFactory.js';
 //not GWT import const BasicTouchInputFactory = globalThis.org.allbinary.input.motion.button.BasicTouchInputFactory;
 import { CancelTouchButtonInputFactory } from '../../../../org/allbinary/input/motion/button/CancelTouchButtonInputFactory.js';
-//not GWT import const GameInitializationInterface = globalThis.org.allbinary.game.init.GameInitializationInterface;
+//not GWT import - same folder const GameInitializationInterface = globalThis.org.allbinary.game.init.GameInitializationInterface;
 export class BaseGameInitialization extends Object {
     constructor(resourceInitializationArray, portion) {
         super();

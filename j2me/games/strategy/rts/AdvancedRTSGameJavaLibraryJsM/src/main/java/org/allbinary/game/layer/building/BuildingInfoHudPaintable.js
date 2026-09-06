@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { NumberStringHud } from '../../../../../org/allbinary/game/ag/layer/hud/basic/NumberStringHud.js';
 //not GWT import const NumberStringHud = globalThis.org.allbinary.game.ag.layer.hud.basic.NumberStringHud;
@@ -21,9 +21,9 @@ import { NumberStringHudFactory } from '../../../../../org/allbinary/game/ag/lay
 //not GWT import const NumberStringHudFactory = globalThis.org.allbinary.game.ag.layer.hud.basic.NumberStringHudFactory;
 import { SelectionHudPaintable } from '../../../../../org/allbinary/game/layer/SelectionHudPaintable.js';
 //not GWT import const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { BasicHudFactory } from '../../../../../org/allbinary/game/graphics/hud/BasicHudFactory.js';
 //not GWT import const BasicHudFactory = globalThis.org.allbinary.game.graphics.hud.BasicHudFactory;
@@ -31,9 +31,9 @@ import { NullPathFindingLayer } from '../../../../../org/allbinary/game/layer/Nu
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { MyFontProcessor } from '../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const MyFontProcessor = globalThis.org.allbinary.graphics.font.MyFontProcessor;
-//not plain js import { MathUtil } from '../../../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not GWT import const BuildingLayer = globalThis.org.allbinary.game.layer.building.BuildingLayer;
+//not GWT import - same folder const BuildingLayer = globalThis.org.allbinary.game.layer.building.BuildingLayer;
 export class BuildingInfoHudPaintable extends SelectionHudPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

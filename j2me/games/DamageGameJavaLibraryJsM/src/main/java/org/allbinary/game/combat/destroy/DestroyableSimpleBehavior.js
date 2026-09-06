@@ -14,9 +14,9 @@
 //not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyableBaseBehavior } from './DestroyableBaseBehavior.js';
-//not GWT import const DestroyableBaseBehavior = globalThis.org.allbinary.game.combat.destroy.DestroyableBaseBehavior;
+//not GWT import - same folder const DestroyableBaseBehavior = globalThis.org.allbinary.game.combat.destroy.DestroyableBaseBehavior;
 import { DestroyedLayerProcessor } from './DestroyedLayerProcessor.js';
-//not GWT import const DestroyedLayerProcessor = globalThis.org.allbinary.game.combat.destroy.DestroyedLayerProcessor;
+//not GWT import - same folder const DestroyedLayerProcessor = globalThis.org.allbinary.game.combat.destroy.DestroyedLayerProcessor;
 export class DestroyableSimpleBehavior extends DestroyableBaseBehavior {
     constructor(ownerLayer) {
         super();

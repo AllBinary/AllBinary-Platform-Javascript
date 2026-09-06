@@ -23,11 +23,11 @@ import { PickedUpLayerTypeFactory } from '../../../../../../../org/allbinary/gam
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HealLayerCircularStaticPool } from './HealLayerCircularStaticPool.js';
-//not GWT import const HealLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayerCircularStaticPool;
+//not GWT import - same folder const HealLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayerCircularStaticPool;
 import { HealLayerFactory } from './HealLayerFactory.js';
-//not GWT import const HealLayerFactory = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayerFactory;
+//not GWT import - same folder const HealLayerFactory = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayerFactory;
 import { HealthResources } from './HealthResources.js';
-//not GWT import const HealthResources = globalThis.org.allbinary.game.ag.layer.pickup.health.HealthResources;
+//not GWT import - same folder const HealthResources = globalThis.org.allbinary.game.ag.layer.pickup.health.HealthResources;
 export class HealPickedUpLayerInterfaceFactory extends PickedUpLayerInterfaceFactory {
     //@Throws(Exception.constructor)
     static init() {

@@ -18,7 +18,7 @@ import { ByteOrder } from '../../../../java/nio/ByteOrder.js';
 //not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
 import { GL10 } from '../../../../javax/microedition/khronos/opengles/GL10.js';
 //not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
 //not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
@@ -27,14 +27,10 @@ import { OpenGLLogUtil } from '../../../../org/allbinary/graphics/opengles/OpenG
 import { GLUtil } from '../../../../org/allbinary/opengles/GLUtil.js';
 //not GWT import const PlatformTextureBaseFactory = globalThis.org.allbinary.platform.opengles.PlatformTextureBaseFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { OpenGLESImage } from './OpenGLESImage.js';
+//not plain js - same folder import { OpenGLESImage } 
 const OpenGLESImage = globalThis.org.allbinary.image.opengles.OpenGLESImage;
-//not plain js import { OpenGLESImageDraw } from './OpenGLESImageDraw.js';
-const OpenGLESImageDraw = globalThis.org.allbinary.image.opengles.OpenGLESImageDraw;
-//not plain js import { OpenGLESImageProperties } from './OpenGLESImageProperties.js';
-const OpenGLESImageProperties = globalThis.org.allbinary.image.opengles.OpenGLESImageProperties;
-//not plain js import { OpenGLESImageProcessor } from './OpenGLESImageProcessor.js';
-const OpenGLESImageProcessor = globalThis.org.allbinary.image.opengles.OpenGLESImageProcessor;
+import { OpenGLESImageDraw } from './OpenGLESImageDraw.js';
+//not GWT import - same folder const OpenGLESImageProcessor = globalThis.org.allbinary.image.opengles.OpenGLESImageProcessor;
 export class OpenGLESGL10Image extends OpenGLESImage {
     constructor(image, bitmapFactory, textureFactory) {
         super(image, bitmapFactory, textureFactory);

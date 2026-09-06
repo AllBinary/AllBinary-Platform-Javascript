@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../../../java/lang/RuntimeException.js';
-//not GWT import const PathFindingNodeCostInfoFactoryBaseInterface = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactoryBaseInterface;
+//not GWT import - same folder const PathFindingNodeCostInfoFactoryBaseInterface = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactoryBaseInterface;
 export class PathFindingNodeCostInfoFactoryBase extends Object {
     //@Throws(Exception.constructor)
     create(geographicMapInterface, comingFromGeographicMapCellPosition, geographicMapCellPosition, costFromStart, costToEnd) {

@@ -21,7 +21,7 @@ import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/open
 //not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DemoGameBehavior } from './DemoGameBehavior.js';
-//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
 export class BaseGameBehavior extends DemoGameBehavior {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

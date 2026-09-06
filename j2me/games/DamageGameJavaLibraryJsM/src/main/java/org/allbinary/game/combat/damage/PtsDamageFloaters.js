@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { MyRandomFactory } from '../../../../../org/allbinary/game/rand/MyRandomFactory.js';
+//not plain js import { MyRandomFactory } 
 const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { BasicColorArrayIndexer } from '../../../../../org/allbinary/graphics/color/BasicColorArrayIndexer.js';
@@ -25,14 +25,14 @@ import { BasicColorSetUtil } from '../../../../../org/allbinary/graphics/color/B
 //not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
 import { CharArrayFactory } from '../../../../../org/allbinary/logic/java/character/CharArrayFactory.js';
 //not GWT import const CharArrayFactory = globalThis.org.allbinary.logic.java.character.CharArrayFactory;
-//not plain js import { PrimitiveLongUtil } from '../../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
+//not plain js import { PrimitiveLongUtil } 
 const PrimitiveLongUtil = globalThis.org.allbinary.logic.math.PrimitiveLongUtil;
-//not plain js import { CircularIndexUtil } from '../../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DamageFloaters } from './DamageFloaters.js';
-//not GWT import const DamageFloaters = globalThis.org.allbinary.game.combat.damage.DamageFloaters;
+//not GWT import - same folder const DamageFloaters = globalThis.org.allbinary.game.combat.damage.DamageFloaters;
 export class PtsDamageFloaters extends DamageFloaters {
     constructor(layerInterface) {
         super();

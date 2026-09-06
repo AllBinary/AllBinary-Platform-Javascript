@@ -15,9 +15,9 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 //not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const GeographicMapCellPositionAreaInterface = globalThis.org.allbinary.game.layer.GeographicMapCellPositionAreaInterface;
+//not GWT import - same folder const GeographicMapCellPositionAreaInterface = globalThis.org.allbinary.game.layer.GeographicMapCellPositionAreaInterface;
 export class GeographicMapCellPositionAreaBase extends Object {
     getNextSurroundingGeographicMapCellPosition() {
         throw new RuntimeException();

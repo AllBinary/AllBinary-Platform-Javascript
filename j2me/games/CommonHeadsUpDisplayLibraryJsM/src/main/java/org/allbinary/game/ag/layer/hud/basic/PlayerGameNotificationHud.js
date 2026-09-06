@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } from '../../../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { GameAdStateFactory } from '../../../../../../../org/allbinary/business/advertisement/GameAdStateFactory.js';
 //not GWT import const GameAdStateFactory = globalThis.org.allbinary.business.advertisement.GameAdStateFactory;
@@ -27,31 +27,31 @@ import { GameNotificationEventHandler } from '../../../../../../../org/allbinary
 //not GWT import const GameNotificationEventHandler = globalThis.org.allbinary.game.layer.hud.event.GameNotificationEventHandler;
 import { CustomGPoint } from '../../../../../../../org/allbinary/graphics/CustomGPoint.js';
 //not GWT import const CustomGPoint = globalThis.org.allbinary.graphics.CustomGPoint;
-//not plain js import { GPoint } from '../../../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { DisplayInfoSingleton } from '../../../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
 //not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
-//not plain js import { LogUtil } from '../../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } from '../../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
 import { GameTickTimeDelayHelperFactory } from '../../../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
 //not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
 import { TimeDelayHelper } from '../../../../../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
-//not plain js import { CircularIndexUtil } from '../../../../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import { SetAndRemoveProcessor } from './SetAndRemoveProcessor.js';
-//not GWT import const SetAndRemoveProcessor = globalThis.org.allbinary.game.ag.layer.hud.basic.SetAndRemoveProcessor;
+//not GWT import - same folder const SetAndRemoveProcessor = globalThis.org.allbinary.game.ag.layer.hud.basic.SetAndRemoveProcessor;
 //import { NextUnremoveableProcessor } from './NextUnremoveableProcessor.js';
-//not GWT import const NextUnremoveableProcessor = globalThis.org.allbinary.game.ag.layer.hud.basic.NextUnremoveableProcessor;
+//not GWT import - same folder const NextUnremoveableProcessor = globalThis.org.allbinary.game.ag.layer.hud.basic.NextUnremoveableProcessor;
 export class PlayerGameNotificationHud extends GameNotificationHud {
     constructor(location, direction, bufferZone, basicColor) {
         super(location, direction, bufferZone, basicColor);

@@ -11,13 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+/* Generated Code Do Not Modify */
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { NullPaintable } from '../../../../org/allbinary/graphics/paint/NullPaintable.js';
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 import { StatePaintable } from '../../../../org/allbinary/graphics/paint/StatePaintable.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const StatePaintable = globalThis.org.allbinary.graphics.paint.StatePaintable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicGameDemoPaintable extends StatePaintable {
     constructor(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface) {

@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Displayable } from '../../../../../javax/microedition/lcdui/Displayable.js';
+//not plain js import { Displayable } 
 const Displayable = globalThis.javax.microedition.lcdui.Displayable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScreenRepaintUtil extends Object {

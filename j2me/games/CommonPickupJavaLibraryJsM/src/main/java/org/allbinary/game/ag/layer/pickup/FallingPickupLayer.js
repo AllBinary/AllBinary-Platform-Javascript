@@ -17,7 +17,7 @@ import { CountedPickedUpLayerInterfaceFactory } from '../../../../../../org/allb
 //not GWT import const CountedPickedUpLayerInterfaceFactory = globalThis.org.allbinary.game.layer.pickup.CountedPickedUpLayerInterfaceFactory;
 import { PickupLayer } from '../../../../../../org/allbinary/game/layer/pickup/PickupLayer.js';
 //not GWT import const TickableInterface = globalThis.org?.allbinary?.game?.tick?.TickableInterface;
-//not plain js import { PointFactory } from '../../../../../../org/allbinary/graphics/PointFactory.js';
+//not plain js import { PointFactory } 
 const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
 import { Rectangle } from '../../../../../../org/allbinary/graphics/Rectangle.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const PartInterface = globalThis.org.allbinary.game.part.PartInterface;
+//not GWT import - same folder const PartInterface = globalThis.org.allbinary.game.part.PartInterface;
 export class PartInterfaceUtil extends Object {
     static getZeroArray() {
         //if statement needs to be on the same line and ternary does not work the same way.

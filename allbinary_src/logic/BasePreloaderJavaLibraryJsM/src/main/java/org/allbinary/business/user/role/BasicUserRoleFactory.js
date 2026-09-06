@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicUserRole } from './BasicUserRole.js';
-//not GWT import const BasicUserRole = globalThis.org.allbinary.business.user.role.BasicUserRole;
+//not GWT import - same folder const BasicUserRole = globalThis.org.allbinary.business.user.role.BasicUserRole;
 export class BasicUserRoleFactory extends Object {
     constructor() {
         super(...arguments);

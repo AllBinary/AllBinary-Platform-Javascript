@@ -13,19 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { NullUtil } from '../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { CommonPhoneStrings } from '../../../../org/allbinary/string/CommonPhoneStrings.js';
+//not plain js import { CommonPhoneStrings } 
 const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKey } from './GameKey.js';
-//not GWT import const GameKey = globalThis.org.allbinary.game.input.GameKey;
+//not GWT import - same folder const GameKey = globalThis.org.allbinary.game.input.GameKey;
 import { InputFactory } from './InputFactory.js';
-//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
+//not GWT import - same folder const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
 export class GameKeyFactory extends Object {
     constructor() {
         super(...arguments);

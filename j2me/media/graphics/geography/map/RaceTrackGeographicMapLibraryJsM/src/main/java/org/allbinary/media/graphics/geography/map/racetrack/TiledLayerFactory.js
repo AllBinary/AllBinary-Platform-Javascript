@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not plain js import { TiledLayer } from '../../../../../../../javax/microedition/lcdui/game/TiledLayer.js';
+//not plain js import { TiledLayer } 
 const TiledLayer = globalThis.javax.microedition.lcdui.game.TiledLayer;
-//not GWT import const RaceTrackData = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackData;
+//not GWT import - same folder const RaceTrackData = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackData;
 export class TiledLayerFactory extends Object {
     getInstance(raceTrackData) {
         var mapArray = raceTrackData.getMapArray();

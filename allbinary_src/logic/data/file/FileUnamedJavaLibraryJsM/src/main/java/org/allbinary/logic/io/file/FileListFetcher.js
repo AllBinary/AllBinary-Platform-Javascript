@@ -23,13 +23,13 @@ import { SubDirectory } from '../../../../../org/allbinary/logic/io/file/directo
 //not GWT import const SubDirectory = globalThis.org.allbinary.logic.io.file.directory.SubDirectory;
 import { VisitorFileFilter } from '../../../../../org/allbinary/logic/io/file/filter/VisitorFileFilter.js';
 //not GWT import const VisitorFileFilter = globalThis.org.allbinary.logic.io.file.filter.VisitorFileFilter;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFile } from './AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import - same folder const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
 export class FileListFetcher extends Object {
     constructor() {
         super(...arguments);

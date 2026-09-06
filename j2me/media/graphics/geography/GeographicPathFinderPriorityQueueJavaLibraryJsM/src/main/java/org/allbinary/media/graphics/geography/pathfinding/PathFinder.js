@@ -16,28 +16,28 @@ import { HashSet } from '../../../../../../java/util/HashSet.js';
 //not GWT import const HashSet = globalThis.java.util.HashSet;
 import { PriorityQueue } from '../../../../../../java/util/PriorityQueue.js';
 //not GWT import const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
-//not plain js import { NullUtil } from '../../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { MathUtil } from '../../../../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const RaceTrackGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { BasicArrayListUtil } from '../../../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicPathFinderBase } from './GeographicPathFinderBase.js';
-//not GWT import const GeographicPathFinderBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.GeographicPathFinderBase;
+//not GWT import - same folder const GeographicPathFinderBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.GeographicPathFinderBase;
 import { PathFindingNodeCost } from './PathFindingNodeCost.js';
-//not GWT import const PathFindingNodeCost = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCost;
+//not GWT import - same folder const PathFindingNodeCost = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCost;
 import { PathFindingNodeCostInfo } from './PathFindingNodeCostInfo.js';
-//not GWT import const MultipassState = globalThis.org.allbinary.media.graphics.geography.pathfinding.MultipassState;
+//not GWT import - same folder const MultipassState = globalThis.org.allbinary.media.graphics.geography.pathfinding.MultipassState;
 export class PathFinder extends GeographicPathFinderBase {
     constructor() {
         super(...arguments);

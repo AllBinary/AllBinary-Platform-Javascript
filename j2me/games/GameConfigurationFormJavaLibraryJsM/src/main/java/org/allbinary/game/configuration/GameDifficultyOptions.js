@@ -12,11 +12,11 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../java/lang/Integer.js';
-//not plain js import { Choice, ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
+//not plain js import { Choice } 
 const Choice = globalThis.javax.microedition.lcdui.Choice;
-//not plain js import { ChoiceGroup } from '../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not plain js import { ChoiceGroup } 
 const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
-//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
@@ -26,11 +26,11 @@ import { GameDifficultyFactory } from '../../../../org/allbinary/game/configurat
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
 //not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
-//not plain js import { StringMaker } from '../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameDifficultyOptions extends CommandForm {

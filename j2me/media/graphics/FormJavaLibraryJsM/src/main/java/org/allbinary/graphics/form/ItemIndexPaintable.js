@@ -13,10 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
+//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ItemIndexPaintable extends Object {
     static getInstance() {

@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const IntBuffer = globalThis.org.allbinary.opengles.IntBuffer;
+//not GWT import - same folder const IntBuffer = globalThis.org.allbinary.opengles.IntBuffer;
 //JOGLEToKhronosGL11
 export class JOGL11 extends JOGL10 {
     constructor(gl) {

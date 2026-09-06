@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import const CollidableBaseBehavior = globalThis.org.allbinary.game.collision.CollidableBaseBehavior;
+//not GWT import - same folder const CollidableBaseBehavior = globalThis.org.allbinary.game.collision.CollidableBaseBehavior;
 export class CollidableBaseBehaviorFactory extends Object {
     createBehavior() {
         throw new RuntimeException();

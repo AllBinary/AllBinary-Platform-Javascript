@@ -14,13 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 //not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
-//not plain js import { ForcedLogUtil } from '../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
 import { EventStrings } from '../../../org/allbinary/logic/util/event/EventStrings.js';
-//not GWT import const BoundsVisitorInterface = globalThis.org.allbinary.bounds.BoundsVisitorInterface;
+//not GWT import - same folder const BoundsVisitorInterface = globalThis.org.allbinary.bounds.BoundsVisitorInterface;
 export class LayerBounds extends Object {
     constructor(rectangle) {
         super();

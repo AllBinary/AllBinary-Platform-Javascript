@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { OpenGLESImage } from './OpenGLESImage.js';
+//not plain js - same folder import { OpenGLESImage } 
 const OpenGLESImage = globalThis.org.allbinary.image.opengles.OpenGLESImage;
 export class OpenGLESImageTranslate extends Object {
     static getInstance() {

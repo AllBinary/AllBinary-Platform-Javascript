@@ -16,13 +16,13 @@ import { BaseViewWrapper } from '../../../org/allbinary/android/view/BaseViewWra
 //not GWT import const BaseViewWrapper = globalThis.org.allbinary.android.view.BaseViewWrapper;
 import { ViewWrapper } from '../../../org/allbinary/android/view/ViewWrapper.js';
 //not GWT import const ViewWrapper = globalThis.org.allbinary.android.view.ViewWrapper;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseGameStatistics } from './BaseGameStatistics.js';
-//not GWT import const BaseGameStatistics = globalThis.org.allbinary.canvas.BaseGameStatistics;
+//not GWT import - same folder const BaseGameStatistics = globalThis.org.allbinary.canvas.BaseGameStatistics;
 export class AndroidGameStatistics extends BaseGameStatistics {
     constructor() {
         super();

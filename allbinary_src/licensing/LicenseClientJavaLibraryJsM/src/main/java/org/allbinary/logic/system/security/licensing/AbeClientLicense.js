@@ -13,24 +13,25 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-import { StdUtil } from '../../../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../../../org/allbinary/logic/string/StringValidationUtil.js';
 //not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const LicenseType = globalThis.org.allbinary.logic.system.security.licensing.LicenseType;
+//not GWT import - same folder const LicenseType = globalThis.org.allbinary.logic.system.security.licensing.LicenseType;
 import { AbeClientInformationData } from './AbeClientInformationData.js';
-//not GWT import const AbeClientInformationData = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationData;
+//not GWT import - same folder const AbeClientInformationData = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationData;
 import { LicenseTypeFactory } from './LicenseTypeFactory.js';
-//not GWT import const LicenseTypeFactory = globalThis.org.allbinary.logic.system.security.licensing.LicenseTypeFactory;
+//not GWT import - same folder const LicenseTypeFactory = globalThis.org.allbinary.logic.system.security.licensing.LicenseTypeFactory;
 export class AbeClientLicense extends Object {
     static hasRequiredKeys(resultHashtable) {
         var abeClientInformationData = AbeClientInformationData.getInstance();

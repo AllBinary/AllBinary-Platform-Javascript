@@ -21,8 +21,8 @@ import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/open
 //not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
 import { ImageCacheFactory } from '../../../../../org/allbinary/image/ImageCacheFactory.js';
 //not GWT import const ImageCacheFactory = globalThis.org.allbinary.image.ImageCacheFactory;
-import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extends BaseResourceAnimationInterfaceFactoryInterfaceFactory {
     static createFactory() {

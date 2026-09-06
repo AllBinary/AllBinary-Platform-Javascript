@@ -11,8 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { Canvas } from '../../../../../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { BasicAI } from '../../../../../../org/allbinary/game/ai/BasicAI.js';
 //not GWT import const BasicAI = globalThis.org.allbinary.game.ai.BasicAI;
@@ -24,13 +23,15 @@ import { WeaponLayer } from '../../../../../../org/allbinary/game/layer/weapon/W
 //not GWT import const WeaponLayer = globalThis.org.allbinary.game.layer.weapon.WeaponLayer;
 import { AllBinaryLayer } from '../../../../../../org/allbinary/layer/AllBinaryLayer.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { MathUtil } from '../../../../../../org/allbinary/logic/math/MathUtil.js';
+//not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePatrolAI } from './BasePatrolAI.js';
-//not GWT import const BasePatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.BasePatrolAI;
+//not GWT import - same folder const BasePatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.BasePatrolAI;
 export class FlockingAI extends BasicAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(ownerLayerInterface, gameInput);
@@ -51,9 +52,12 @@ export class FlockingAI extends BasicAI {
         ;
         var size = list.size();
         ;
+        var allBinaryLayer;
+        ;
+        var ownerLayerInterface;
+        ;
         for (var index = 0; index < size; index++) {
-            var allBinaryLayer = list.get(index);
-            ;
+            allBinaryLayer = list.get(index);
             if (allBinaryLayer.getType() != WeaponLayer.getStaticType()) {
                 var distance = this.getXYDistance(allBinaryLayer);
                 ;
@@ -68,8 +72,7 @@ export class FlockingAI extends BasicAI {
         }
         if (maxDistance > this.allowedDistance) {
             if (farAllbinaryLayer != AllBinaryLayer.NULL_ALLBINARY_LAYER) {
-                var ownerLayerInterface = this.getOwnerLayerInterface();
-                ;
+                ownerLayerInterface = this.getOwnerLayerInterface();
                 if (farAllbinaryLayer.getXP() < ownerLayerInterface.getXP()) {
                     this.processKeyAI(Canvas.LEFT);
                 }

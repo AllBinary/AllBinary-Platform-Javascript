@@ -14,7 +14,6 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Long } from '../../../java/lang/Long.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameTickTimeDelayHelper extends Object {
     constructor(startTime) {

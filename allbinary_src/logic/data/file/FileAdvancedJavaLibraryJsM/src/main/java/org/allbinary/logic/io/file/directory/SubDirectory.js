@@ -14,15 +14,15 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { BasicArrayList } from '../../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Directory } from './Directory.js';
-//not GWT import const Directory = globalThis.org.allbinary.logic.io.file.directory.Directory;
+//not GWT import - same folder const Directory = globalThis.org.allbinary.logic.io.file.directory.Directory;
 export class SubDirectory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

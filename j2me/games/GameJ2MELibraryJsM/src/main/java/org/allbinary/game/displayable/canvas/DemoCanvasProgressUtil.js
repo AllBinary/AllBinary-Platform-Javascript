@@ -17,7 +17,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 import { ProgressCanvasFactory } from '../../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
 //not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import { PaintableComposite } from '../../../../../org/allbinary/graphics/paint/PaintableComposite.js';
-//not GWT import const DemoCanvas = globalThis.org.allbinary.game.displayable.canvas.DemoCanvas;
+//not GWT import - same folder const DemoCanvas = globalThis.org.allbinary.game.displayable.canvas.DemoCanvas;
 export class DemoCanvasProgressUtil extends Object {
     static showProgress(demoCanvas) {
         DemoCanvasProgressUtil.showProgressOptionallyInTheBackground(demoCanvas, false);

@@ -2,18 +2,16 @@
 import { Object } from '../../../java/lang/Object.js';
 import { IndexOutOfBoundsException } from '../../../java/lang/IndexOutOfBoundsException.js';
 import { System } from '../../../java/lang/System.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonLabels } from '../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not plain js import { CommonSeps } from '../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { ArrayUtil } from './ArrayUtil.js';
+//not plain js - same folder import { ArrayUtil } 
 const ArrayUtil = globalThis.org.allbinary.util.ArrayUtil;
-//not plain js import { BasicArrayListS } from './BasicArrayListS.js';
+//not plain js - same folder import { BasicArrayListS } 
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //This is a very fast and simple resizable list.
 export class BasicArrayList extends Object {

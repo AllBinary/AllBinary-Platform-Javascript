@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { KeyValuePersistance } from './KeyValuePersistance.js';
-//not GWT import const KeyValuePersistance = globalThis.org.allbinary.game.configuration.persistance.KeyValuePersistance;
+//not GWT import - same folder const KeyValuePersistance = globalThis.org.allbinary.game.configuration.persistance.KeyValuePersistance;
 import { GamePersistanceStrings } from './GamePersistanceStrings.js';
-//not GWT import const GamePersistanceStrings = globalThis.org.allbinary.game.configuration.persistance.GamePersistanceStrings;
+//not GWT import - same folder const GamePersistanceStrings = globalThis.org.allbinary.game.configuration.persistance.GamePersistanceStrings;
 export class GameConfigurationPersistanceSingleton extends KeyValuePersistance {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

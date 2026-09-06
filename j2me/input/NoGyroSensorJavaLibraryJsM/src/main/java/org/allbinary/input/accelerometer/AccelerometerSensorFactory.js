@@ -22,7 +22,7 @@ import { AllBinaryOrientationSensor } from '../../../../org/allbinary/input/gyro
 //not GWT import const AllBinaryOrientationSensor = globalThis.org.allbinary.input.gyro.AllBinaryOrientationSensor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoAccelerometerSensor } from './NoAccelerometerSensor.js';
-//not GWT import const NoAccelerometerSensor = globalThis.org.allbinary.input.accelerometer.NoAccelerometerSensor;
+//not GWT import - same folder const NoAccelerometerSensor = globalThis.org.allbinary.input.accelerometer.NoAccelerometerSensor;
 export class AccelerometerSensorFactory extends Object {
     //@Throws(Exception.constructor)
     static init() {

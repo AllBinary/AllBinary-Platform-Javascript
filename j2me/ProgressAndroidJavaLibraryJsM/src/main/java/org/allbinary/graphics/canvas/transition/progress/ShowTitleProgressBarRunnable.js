@@ -13,14 +13,14 @@
 */
 import { TransistionTypes } from '../../../../../../org/allbinary/animation/transition/TransistionTypes.js';
 //not GWT import const TransistionTypes = globalThis.org.allbinary.animation.transition.TransistionTypes;
-//not plain js import { CommonStrings } from '../../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const Activity = globalThis.android.app.Activity;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressRunnable } from './ProgressRunnable.js';
-//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
+//not GWT import - same folder const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 export class ShowTitleProgressBarRunnable extends ProgressRunnable {
     constructor(midletActivity, progressCanvas) {
         super(midletActivity, progressCanvas);

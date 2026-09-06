@@ -13,13 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const IndexedAnimationInterface = globalThis.org.allbinary.animation.IndexedAnimationInterface;
+//not GWT import - same folder const IndexedAnimationInterface = globalThis.org.allbinary.animation.IndexedAnimationInterface;
 import { NullIndexedAnimation } from './NullIndexedAnimation.js';
-//not GWT import const NullIndexedAnimation = globalThis.org.allbinary.animation.NullIndexedAnimation;
+//not GWT import - same folder const NullIndexedAnimation = globalThis.org.allbinary.animation.NullIndexedAnimation;
 import { IndexedAnimationBehavior } from './IndexedAnimationBehavior.js';
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import - same folder const Animation = globalThis.org.allbinary.animation.Animation;
 export class NullIndexedAnimationFactory extends Object {
     static getFactoryInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

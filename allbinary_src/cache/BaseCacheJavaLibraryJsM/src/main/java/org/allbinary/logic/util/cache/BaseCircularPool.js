@@ -13,12 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { NullUtil } from '../../../../../org/allbinary/logic/NullUtil.js';
+//not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { CircularIndexUtil } from '../../../../../org/allbinary/util/CircularIndexUtil.js';
+//not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import const AllBinaryObjectFactoryInterface = globalThis.org.allbinary.logic.util.cache.AllBinaryObjectFactoryInterface;
+//not GWT import - same folder const AllBinaryObjectFactoryInterface = globalThis.org.allbinary.logic.util.cache.AllBinaryObjectFactoryInterface;
 export class BaseCircularPool extends Object {
     constructor() {
         super(...arguments);

@@ -13,22 +13,22 @@
 */
 import { Matrix } from '../../../../android/graphics/Matrix.js';
 //not GWT import const Matrix = globalThis.android.graphics.Matrix;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { AndroidImageUtil } from '../../../../org/allbinary/media/image/AndroidImageUtil.js';
 //not GWT import const AndroidImageUtil = globalThis.org.allbinary.media.image.AndroidImageUtil;
-//not plain js import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
-const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
-//not plain js import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
-const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
+import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUtil.js';
+//not GWT import const ImageCopyUtil = globalThis.org.allbinary.media.image.ImageCopyUtil;
+import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
+//not GWT import const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
+//not GWT import - same folder const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
 export class AllBinaryNoFlickerAndroidImageRotationAnimation extends ImageBaseRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);

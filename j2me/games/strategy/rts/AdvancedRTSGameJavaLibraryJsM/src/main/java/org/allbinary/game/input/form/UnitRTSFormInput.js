@@ -11,7 +11,7 @@
         *    Created By: Travis Berthelot
 */
 //not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not GWT import const AdvancedRTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.AdvancedRTSPlayerLayerInterface;
 import { RTSGameStrings } from '../../../../../org/allbinary/game/layer/RTSGameStrings.js';
@@ -28,23 +28,23 @@ import { GameNotificationEventHandler } from '../../../../../org/allbinary/game/
 //not GWT import const GameNotificationEventHandler = globalThis.org.allbinary.game.layer.hud.event.GameNotificationEventHandler;
 import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
 //not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
-//not plain js import { GPoint } from '../../../../../org/allbinary/graphics/GPoint.js';
+//not plain js import { GPoint } 
 const GPoint = globalThis.org.allbinary.graphics.GPoint;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 import { Layer } from '../../../../../org/allbinary/layer/Layer.js';
 //not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import { ErrorSound } from '../../../../../org/allbinary/media/audio/ErrorSound.js';
 //not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
+//not GWT import - same folder const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
 import { AssignWaypointsUtil } from './AssignWaypointsUtil.js';
-//not GWT import const AssignWaypointsUtil = globalThis.org.allbinary.game.input.form.AssignWaypointsUtil;
+//not GWT import - same folder const AssignWaypointsUtil = globalThis.org.allbinary.game.input.form.AssignWaypointsUtil;
 import { PlayersSingletonFactory } from './PlayersSingletonFactory.js';
-//not GWT import const PlayersSingletonFactory = globalThis.org.allbinary.game.input.form.PlayersSingletonFactory;
+//not GWT import - same folder const PlayersSingletonFactory = globalThis.org.allbinary.game.input.form.PlayersSingletonFactory;
 export class UnitRTSFormInput extends RTSFormInput {
     constructor(groupInterface) {
         super(groupInterface);

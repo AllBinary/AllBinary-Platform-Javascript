@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
+/* Generated Code Do Not Modify */
 import { LocalPlayerInputIdFactory } from '../../../../../org/allbinary/game/input/LocalPlayerInputIdFactory.js';
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
+//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DownGameKeyEventHandlerBase } from './DownGameKeyEventHandlerBase.js';
-//not GWT import const DownGameKeyEventHandlerBase = globalThis.org.allbinary.game.input.event.DownGameKeyEventHandlerBase;
+//not GWT import - same folder const DownGameKeyEventHandlerBase = globalThis.org.allbinary.game.input.event.DownGameKeyEventHandlerBase;
 export class DownGameKeyEventHandler extends DownGameKeyEventHandlerBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

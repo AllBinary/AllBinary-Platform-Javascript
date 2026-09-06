@@ -18,7 +18,7 @@ import { AndroidInfoFactory } from '../../../../../org/allbinary/android/Android
 import { GameInputMotionInfoAPI1 } from '../../../../../org/allbinary/android/input/motion/api1/GameInputMotionInfoAPI1.js';
 //not GWT import const GameInputMotionInfoAPI1 = globalThis.org.allbinary.android.input.motion.api1.GameInputMotionInfoAPI1;
 import { GameInputMotionInfoAPI5 } from '../../../../../org/allbinary/android/input/motion/api5/GameInputMotionInfoAPI5.js';
-//not GWT import const GameInputMotionInfo = globalThis.org.allbinary.android.input.motion.GameInputMotionInfo;
+//not GWT import - same folder const GameInputMotionInfo = globalThis.org.allbinary.android.input.motion.GameInputMotionInfo;
 export class GameInputMotionInfoFactory extends Object {
     static getInstance() {
         var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();

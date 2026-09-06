@@ -22,7 +22,7 @@ import { DropCellPositionHistory } from '../../../../../../../org/allbinary/medi
 //not GWT import const DropCellPositionHistory = globalThis.org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomMapGeneratorBase } from './CustomMapGeneratorBase.js';
-//not GWT import const RaceTrackGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMap;
+//not GWT import - same folder const RaceTrackGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMap;
 export class CustomMapGenerator extends CustomMapGeneratorBase {
     constructor(raceTrackGeographicMap) {
         super();

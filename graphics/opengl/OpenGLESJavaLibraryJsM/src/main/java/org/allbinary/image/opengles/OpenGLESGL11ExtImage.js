@@ -16,17 +16,17 @@ import { GL10 } from '../../../../javax/microedition/khronos/opengles/GL10.js';
 //not GWT import const GL11 = globalThis.javax.microedition.khronos.opengles.GL11;
 import { GL11Ext } from '../../../../javax/microedition/khronos/opengles/GL11Ext.js';
 //not GWT import const GL11Ext = globalThis.javax.microedition.khronos.opengles.GL11Ext;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
 //not GWT import const DisplayChangeEvent = globalThis.org.allbinary.graphics.displayable.event.DisplayChangeEvent;
 import { OpenGLLogUtil } from '../../../../org/allbinary/graphics/opengles/OpenGLLogUtil.js';
 //not GWT import const OpenGLLogUtil = globalThis.org.allbinary.graphics.opengles.OpenGLLogUtil;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const PlatformTextureBaseFactory = globalThis.org.allbinary.platform.opengles.PlatformTextureBaseFactory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js import { OpenGLESImage } from './OpenGLESImage.js';
+//not plain js - same folder import { OpenGLESImage } 
 const OpenGLESImage = globalThis.org.allbinary.image.opengles.OpenGLESImage;
 //Many devices don't support this even though it is supposed to
 export class OpenGLESGL11ExtImage extends OpenGLESImage {

@@ -16,23 +16,23 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
 import { DirectionUtil } from '../../../../../org/allbinary/direction/DirectionUtil.js';
 //not GWT import const DirectionUtil = globalThis.org.allbinary.direction.DirectionUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not plain js import { BasicDecimal } 
 const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 import { AxisMathVectorUtil } from '../../../../../org/allbinary/logic/math/vector/AxisMathVectorUtil.js';
 //not GWT import const AxisMathVectorUtil = globalThis.org.allbinary.logic.math.vector.AxisMathVectorUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { Angle } from '../../../../../org/allbinary/math/Angle.js';
+//not plain js import { Angle } 
 const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { PositionStrings } from '../../../../../org/allbinary/math/PositionStrings.js';
+//not plain js import { PositionStrings } 
 const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const BasicVelocityInterface = globalThis.org.allbinary.game.physics.velocity.BasicVelocityInterface;
+//not GWT import - same folder const BasicVelocityInterface = globalThis.org.allbinary.game.physics.velocity.BasicVelocityInterface;
 export class BasicVelocityProperties extends Object {
     constructor() {
         super();

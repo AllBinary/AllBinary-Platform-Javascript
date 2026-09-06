@@ -13,17 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { TiledLayer } from '../../../../javax/microedition/lcdui/game/TiledLayer.js';
+//not plain js import { TiledLayer } 
 const TiledLayer = globalThis.javax.microedition.lcdui.game.TiledLayer;
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 //not GWT import const RaceTrackInfo = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackInfo;
 import { TiledLayerFactory } from '../../../../org/allbinary/media/graphics/geography/map/racetrack/TiledLayerFactory.js';
-//not GWT import const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
+//not GWT import - same folder const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
 import { AllBinaryJ2METiledLayer } from './AllBinaryJ2METiledLayer.js';
-//not GWT import const AllBinaryJ2METiledLayer = globalThis.org.allbinary.game.layer.AllBinaryJ2METiledLayer;
+//not GWT import - same folder const AllBinaryJ2METiledLayer = globalThis.org.allbinary.game.layer.AllBinaryJ2METiledLayer;
 export class AllBinaryTiledLayerFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(raceTrackInfo, raceTrackData) {

@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbeNoLicense } from './AbeNoLicense.js';
-//not GWT import const AbeLicenseInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeLicenseInterface;
+//not GWT import - same folder const AbeLicenseInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeLicenseInterface;
 export class LicenseInterfaceSingleton extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

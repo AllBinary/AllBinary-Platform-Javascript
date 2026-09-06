@@ -29,7 +29,7 @@ import { GameNotificationEventHandler } from '../../../../../org/allbinary/game/
 //not GWT import const GameNotificationEventHandler = globalThis.org.allbinary.game.layer.hud.event.GameNotificationEventHandler;
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import { ErrorSound } from '../../../../../org/allbinary/media/audio/ErrorSound.js';
 //not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
@@ -37,7 +37,7 @@ import { DropCellPositionHistory } from '../../../../../org/allbinary/media/grap
 //not GWT import const DropCellPositionHistory = globalThis.org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BuildingRTSFormInput } from './BuildingRTSFormInput.js';
-//not GWT import const BuildingRTSFormInput = globalThis.org.allbinary.game.input.form.BuildingRTSFormInput;
+//not GWT import - same folder const BuildingRTSFormInput = globalThis.org.allbinary.game.input.form.BuildingRTSFormInput;
 export class BuildingAdvancedRTSFormInput extends BuildingRTSFormInput {
     constructor(groupInterface, isUnitProducer) {
         super(groupInterface, isUnitProducer);

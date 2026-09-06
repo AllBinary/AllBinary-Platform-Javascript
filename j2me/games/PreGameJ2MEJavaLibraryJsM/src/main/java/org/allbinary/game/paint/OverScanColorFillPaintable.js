@@ -12,12 +12,12 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { Graphics } from '../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ColorFillPaintable } from './ColorFillPaintable.js';
-//not GWT import const ColorFillPaintable = globalThis.org.allbinary.game.paint.ColorFillPaintable;
+//not GWT import - same folder const ColorFillPaintable = globalThis.org.allbinary.game.paint.ColorFillPaintable;
 export class OverScanColorFillPaintable extends ColorFillPaintable {
     constructor(basicColor) {
         super(basicColor);

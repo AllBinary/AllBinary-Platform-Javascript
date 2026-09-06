@@ -15,7 +15,7 @@
 import { CollisionTypeFactory } from '../../../../org/allbinary/game/collision/CollisionTypeFactory.js';
 //not GWT import const CollisionTypeFactory = globalThis.org.allbinary.game.collision.CollisionTypeFactory;
 import { CollidableDestroyableDamageableBehavior } from '../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableBehavior.js';
-//not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
+//not GWT import - same folder const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
 export class CollidableRTSBehavior extends CollidableDestroyableDamageableBehavior {
     constructor(collidable) {
         super(collidable);

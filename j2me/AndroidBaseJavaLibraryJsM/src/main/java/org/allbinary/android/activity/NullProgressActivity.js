@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const ProgressActivityInterface = globalThis.org.allbinary.android.activity.ProgressActivityInterface;
+//not GWT import - same folder const ProgressActivityInterface = globalThis.org.allbinary.android.activity.ProgressActivityInterface;
 export class NullProgressActivity extends Object {
     runOnUiThread(action) {
     }

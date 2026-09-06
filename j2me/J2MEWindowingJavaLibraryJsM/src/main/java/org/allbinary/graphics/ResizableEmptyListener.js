@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const ResizableListenerInterface = globalThis.org.allbinary.graphics.ResizableListenerInterface;
+//not GWT import - same folder const ResizableListenerInterface = globalThis.org.allbinary.graphics.ResizableListenerInterface;
 export class ResizableEmptyListener extends Object {
     onResizable(isResizable) {
     }

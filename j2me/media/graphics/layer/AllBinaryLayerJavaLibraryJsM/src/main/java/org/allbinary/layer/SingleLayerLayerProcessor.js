@@ -13,9 +13,9 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerProcessor } from './LayerProcessor.js';
-//not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
+//not GWT import - same folder const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
 import { SingleLayerLayerManager } from './SingleLayerLayerManager.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import - same folder const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
 export class SingleLayerLayerProcessor extends LayerProcessor {
     constructor() {
         super(new SingleLayerLayerManager());

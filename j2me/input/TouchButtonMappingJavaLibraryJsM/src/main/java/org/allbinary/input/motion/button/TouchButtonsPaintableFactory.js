@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonsPaintable } from './TouchButtonsPaintable.js';
-//not GWT import const TouchButtonsPaintable = globalThis.org.allbinary.input.motion.button.TouchButtonsPaintable;
+//not GWT import - same folder const TouchButtonsPaintable = globalThis.org.allbinary.input.motion.button.TouchButtonsPaintable;
 export class TouchButtonsPaintableFactory extends Object {
     static getInstance(basicColor) {
         //if statement needs to be on the same line and ternary does not work the same way.

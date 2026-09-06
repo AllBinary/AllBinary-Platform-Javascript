@@ -13,16 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../../java/lang/Exception.js';
-//not plain js import { StringMaker } from '../../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonSeps } from '../../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
-//not plain js import { CommonLabels } from '../../../../../../org/allbinary/string/CommonLabels.js';
+//not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PathFindingNode } from './PathFindingNode.js';
-//not GWT import const PathFindingNodeCostInfo = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfo;
+//not GWT import - same folder const PathFindingNodeCostInfo = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfo;
 export class PathFindingNodeCost extends PathFindingNode {
     constructor(parent = {}, geographicMapCellPosition, pathFindingNodeCostInfo) {
         super(parent, geographicMapCellPosition);

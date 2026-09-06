@@ -13,48 +13,49 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { KeyEvent } from '../../../../java/awt/event/KeyEvent.js';
-//not GWT import const KeyEvent = globalThis.java.awt.event.KeyEvent;
-//not plain js import { PositionStrings } from '../../../../org/allbinary/math/PositionStrings.js';
+//not plain js import { PositionStrings } 
 const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
-//not plain js import { CommonPhoneStrings } from '../../../../org/allbinary/string/CommonPhoneStrings.js';
+//not plain js import { CommonPhoneStrings } 
 const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
-//not plain js import { CommonSeps } from '../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+//not plain js - same folder import { ABKeyEventWrapper } 
+const ABKeyEventWrapper = globalThis.org.allbinary.game.input.ABKeyEventWrapper;
 import { PCGameKey } from './PCGameKey.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
 export class PCKeyFactory extends Object {
     constructor() {
         super(...arguments);
-        this.UNKNOWN = new PCGameKey(KeyEvent.VK_UNDEFINED, "UNKNOWN");
+        this.keyEventWrapper = ABKeyEventWrapper.getInstance();
+        this.UNKNOWN = new PCGameKey(this.keyEventWrapper.VK_UNDEFINED, "UNKNOWN");
         this.ENTER = new PCGameKey(5, "Enter");
-        this._A = new PCGameKey(KeyEvent.VK_A, "A");
-        this._B = new PCGameKey(KeyEvent.VK_B, "B");
-        this._C = new PCGameKey(KeyEvent.VK_C, "C");
-        this._D = new PCGameKey(KeyEvent.VK_D, "D");
-        this._E = new PCGameKey(KeyEvent.VK_E, "E");
-        this._F = new PCGameKey(KeyEvent.VK_F, "F");
-        this._G = new PCGameKey(KeyEvent.VK_G, "G");
-        this._H = new PCGameKey(KeyEvent.VK_H, "H");
-        this._I = new PCGameKey(KeyEvent.VK_I, "I");
-        this._J = new PCGameKey(KeyEvent.VK_J, "J");
-        this._K = new PCGameKey(KeyEvent.VK_K, "K");
-        this._L = new PCGameKey(KeyEvent.VK_L, "L");
-        this._M = new PCGameKey(KeyEvent.VK_M, "M");
-        this._N = new PCGameKey(KeyEvent.VK_N, "N");
-        this._O = new PCGameKey(KeyEvent.VK_O, "O");
-        this._P = new PCGameKey(KeyEvent.VK_P, "P");
-        this._Q = new PCGameKey(KeyEvent.VK_Q, "Q");
-        this._R = new PCGameKey(KeyEvent.VK_R, "R");
-        this._S = new PCGameKey(KeyEvent.VK_S, "S");
-        this._T = new PCGameKey(KeyEvent.VK_T, "T");
-        this._U = new PCGameKey(KeyEvent.VK_U, "U");
-        this._V = new PCGameKey(KeyEvent.VK_V, "V");
-        this._W = new PCGameKey(KeyEvent.VK_W, "W");
-        this._X = new PCGameKey(KeyEvent.VK_X, "X");
-        this._Y = new PCGameKey(KeyEvent.VK_Y, "Y");
-        this._Z = new PCGameKey(KeyEvent.VK_Z, "Z");
+        this._A = new PCGameKey(this.keyEventWrapper.VK_A, "A");
+        this._B = new PCGameKey(this.keyEventWrapper.VK_B, "B");
+        this._C = new PCGameKey(this.keyEventWrapper.VK_C, "C");
+        this._D = new PCGameKey(this.keyEventWrapper.VK_D, "D");
+        this._E = new PCGameKey(this.keyEventWrapper.VK_E, "E");
+        this._F = new PCGameKey(this.keyEventWrapper.VK_F, "F");
+        this._G = new PCGameKey(this.keyEventWrapper.VK_G, "G");
+        this._H = new PCGameKey(this.keyEventWrapper.VK_H, "H");
+        this._I = new PCGameKey(this.keyEventWrapper.VK_I, "I");
+        this._J = new PCGameKey(this.keyEventWrapper.VK_J, "J");
+        this._K = new PCGameKey(this.keyEventWrapper.VK_K, "K");
+        this._L = new PCGameKey(this.keyEventWrapper.VK_L, "L");
+        this._M = new PCGameKey(this.keyEventWrapper.VK_M, "M");
+        this._N = new PCGameKey(this.keyEventWrapper.VK_N, "N");
+        this._O = new PCGameKey(this.keyEventWrapper.VK_O, "O");
+        this._P = new PCGameKey(this.keyEventWrapper.VK_P, "P");
+        this._Q = new PCGameKey(this.keyEventWrapper.VK_Q, "Q");
+        this._R = new PCGameKey(this.keyEventWrapper.VK_R, "R");
+        this._S = new PCGameKey(this.keyEventWrapper.VK_S, "S");
+        this._T = new PCGameKey(this.keyEventWrapper.VK_T, "T");
+        this._U = new PCGameKey(this.keyEventWrapper.VK_U, "U");
+        this._V = new PCGameKey(this.keyEventWrapper.VK_V, "V");
+        this._W = new PCGameKey(this.keyEventWrapper.VK_W, "W");
+        this._X = new PCGameKey(this.keyEventWrapper.VK_X, "X");
+        this._Y = new PCGameKey(this.keyEventWrapper.VK_Y, "Y");
+        this._Z = new PCGameKey(this.keyEventWrapper.VK_Z, "Z");
         this.a = new PCGameKey(97, "a");
         this.b = new PCGameKey(98, "b");
         this.c = new PCGameKey(99, "c");
@@ -81,32 +82,32 @@ export class PCKeyFactory extends Object {
         this.x = new PCGameKey(120, PositionStrings.getInstance().X);
         this.y = new PCGameKey(121, PositionStrings.getInstance().Y);
         this.z = new PCGameKey(122, "z");
-        this.ZERO = new PCGameKey(KeyEvent.VK_0, CommonPhoneStrings.getInstance().ZERO);
-        this.ONE = new PCGameKey(KeyEvent.VK_1, CommonPhoneStrings.getInstance().ONE);
-        this.TWO = new PCGameKey(KeyEvent.VK_2, CommonPhoneStrings.getInstance().TWO);
-        this.THREE = new PCGameKey(KeyEvent.VK_3, CommonPhoneStrings.getInstance().THREE);
-        this.FOUR = new PCGameKey(KeyEvent.VK_4, CommonPhoneStrings.getInstance().FOUR);
-        this.FIVE = new PCGameKey(KeyEvent.VK_5, CommonPhoneStrings.getInstance().FIVE);
-        this.SIX = new PCGameKey(KeyEvent.VK_6, CommonPhoneStrings.getInstance().SIX);
-        this.SEVEN = new PCGameKey(KeyEvent.VK_7, CommonPhoneStrings.getInstance().SEVEN);
-        this.EIGHT = new PCGameKey(KeyEvent.VK_8, CommonPhoneStrings.getInstance().EIGHT);
-        this.NINE = new PCGameKey(KeyEvent.VK_9, CommonPhoneStrings.getInstance().NINE);
-        this.DPAD_UP = new PCGameKey(KeyEvent.VK_UP, CommonPhoneStrings.getInstance().UP);
-        this.DPAD_DOWN = new PCGameKey(KeyEvent.VK_DOWN, CommonPhoneStrings.getInstance().DOWN);
-        this.DPAD_LEFT = new PCGameKey(KeyEvent.VK_LEFT, CommonPhoneStrings.getInstance().LEFT);
-        this.DPAD_RIGHT = new PCGameKey(KeyEvent.VK_RIGHT, CommonPhoneStrings.getInstance().RIGHT);
+        this.ZERO = new PCGameKey(this.keyEventWrapper.VK_0, CommonPhoneStrings.getInstance().ZERO);
+        this.ONE = new PCGameKey(this.keyEventWrapper.VK_1, CommonPhoneStrings.getInstance().ONE);
+        this.TWO = new PCGameKey(this.keyEventWrapper.VK_2, CommonPhoneStrings.getInstance().TWO);
+        this.THREE = new PCGameKey(this.keyEventWrapper.VK_3, CommonPhoneStrings.getInstance().THREE);
+        this.FOUR = new PCGameKey(this.keyEventWrapper.VK_4, CommonPhoneStrings.getInstance().FOUR);
+        this.FIVE = new PCGameKey(this.keyEventWrapper.VK_5, CommonPhoneStrings.getInstance().FIVE);
+        this.SIX = new PCGameKey(this.keyEventWrapper.VK_6, CommonPhoneStrings.getInstance().SIX);
+        this.SEVEN = new PCGameKey(this.keyEventWrapper.VK_7, CommonPhoneStrings.getInstance().SEVEN);
+        this.EIGHT = new PCGameKey(this.keyEventWrapper.VK_8, CommonPhoneStrings.getInstance().EIGHT);
+        this.NINE = new PCGameKey(this.keyEventWrapper.VK_9, CommonPhoneStrings.getInstance().NINE);
+        this.DPAD_UP = new PCGameKey(this.keyEventWrapper.VK_UP, CommonPhoneStrings.getInstance().UP);
+        this.DPAD_DOWN = new PCGameKey(this.keyEventWrapper.VK_DOWN, CommonPhoneStrings.getInstance().DOWN);
+        this.DPAD_LEFT = new PCGameKey(this.keyEventWrapper.VK_LEFT, CommonPhoneStrings.getInstance().LEFT);
+        this.DPAD_RIGHT = new PCGameKey(this.keyEventWrapper.VK_RIGHT, CommonPhoneStrings.getInstance().RIGHT);
         this.DPAD_UP2 = this.DPAD_UP;
         this.DPAD_DOWN2 = this.DPAD_DOWN;
         this.DPAD_LEFT2 = this.DPAD_LEFT;
         this.DPAD_RIGHT2 = this.DPAD_RIGHT;
-        this.COMMA = new PCGameKey(KeyEvent.VK_COMMA, "COMMA");
-        this.SPACE = new PCGameKey(KeyEvent.VK_SPACE, "SPACE");
-        this.DEL = new PCGameKey(KeyEvent.VK_DELETE, "DEL");
+        this.COMMA = new PCGameKey(this.keyEventWrapper.VK_COMMA, "COMMA");
+        this.SPACE = new PCGameKey(this.keyEventWrapper.VK_SPACE, "SPACE");
+        this.DEL = new PCGameKey(this.keyEventWrapper.VK_DELETE, "DEL");
         this.STAR = new PCGameKey(42, CommonPhoneStrings.getInstance().STAR);
         this.QUESTION = new PCGameKey(47, "?");
-        this.PERIOD = new PCGameKey(KeyEvent.VK_PERIOD, CommonSeps.getInstance().PERIOD);
-        this.ESCAPE = new PCGameKey(KeyEvent.VK_ESCAPE, "Esc");
-        this.BACK_SPACE = new PCGameKey(KeyEvent.VK_BACK_SPACE, "Backspace");
+        this.PERIOD = new PCGameKey(this.keyEventWrapper.VK_PERIOD, CommonSeps.getInstance().PERIOD);
+        this.ESCAPE = new PCGameKey(this.keyEventWrapper.VK_ESCAPE, "Esc");
+        this.BACK_SPACE = new PCGameKey(this.keyEventWrapper.VK_BACK_SPACE, "Backspace");
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

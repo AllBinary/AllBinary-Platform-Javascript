@@ -17,19 +17,19 @@ import { Exception } from '../../../../java/lang/Exception.js';
 //not GWT import const Canvas = globalThis.android.graphics.Canvas;
 import { Matrix } from '../../../../android/graphics/Matrix.js';
 //not GWT import const Matrix = globalThis.android.graphics.Matrix;
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
 //not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
-//not plain js import { LogUtil } from '../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { BasicArrayList } from '../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const AndroidImageInterface = globalThis.org.microemu.android.device.AndroidImageInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)

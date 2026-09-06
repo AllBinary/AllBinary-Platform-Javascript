@@ -12,11 +12,11 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { StringMaker } from '../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidGameStatistics } from './AndroidGameStatistics.js';
-//not GWT import const AndroidGameStatistics = globalThis.org.allbinary.canvas.AndroidGameStatistics;
+//not GWT import - same folder const AndroidGameStatistics = globalThis.org.allbinary.canvas.AndroidGameStatistics;
 //ActualPlatform
 /*actual*/ export class GameStatisticsFactory extends AndroidGameStatistics {
     constructor() {

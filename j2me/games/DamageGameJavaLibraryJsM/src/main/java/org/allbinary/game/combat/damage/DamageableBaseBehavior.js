@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const DamageableInterface = globalThis.org.allbinary.game.combat.damage.DamageableInterface;
+//not GWT import - same folder const DamageableInterface = globalThis.org.allbinary.game.combat.damage.DamageableInterface;
 export class DamageableBaseBehavior extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

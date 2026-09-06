@@ -14,16 +14,16 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { FilePathData } from '../../../../../../org/allbinary/logic/io/file/FilePathData.js';
+//not plain js import { FilePathData } 
 const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
 //not GWT import const AbFilePath = globalThis.org.allbinary.logic.io.path.AbFilePath;
 import { AbPath } from '../../../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
-//not plain js import { AbPathData } from '../../../../../../org/allbinary/logic/io/path/AbPathData.js';
+//not plain js import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
-//not plain js import { StringUtil } from '../../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../../../org/allbinary/logic/string/StringValidationUtil.js';
 //not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;

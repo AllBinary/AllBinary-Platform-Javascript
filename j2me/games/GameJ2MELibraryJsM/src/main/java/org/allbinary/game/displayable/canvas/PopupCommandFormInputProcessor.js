@@ -12,12 +12,11 @@
         *  Created By: Travis Berthelot
 */
 //not GWT import const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const JsConstructor = globalThis.jsinterop.annotations.JsConstructor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommandFormInputProcessor } from './CommandFormInputProcessor.js';
-//not GWT import const PopupMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInputProcessor;
+//not GWT import - same folder const PopupMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInputProcessor;
 export class PopupCommandFormInputProcessor extends CommandFormInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCanvas, form, popupMenuInputProcessor) {
         super(gameKeyEventList, playerInputId, gameCanvas, form);

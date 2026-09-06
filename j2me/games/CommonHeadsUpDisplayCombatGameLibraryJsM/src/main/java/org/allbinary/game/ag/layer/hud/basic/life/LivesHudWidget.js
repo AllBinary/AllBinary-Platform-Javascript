@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } from '../../../../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 //not GWT import const Life = globalThis.org.allbinary.game.ag.life.Life;
 import { BasicHud } from '../../../../../../../../org/allbinary/game/graphics/hud/BasicHud.js';

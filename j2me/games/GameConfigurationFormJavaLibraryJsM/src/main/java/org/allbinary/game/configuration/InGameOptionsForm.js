@@ -11,12 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Choice, ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
+//not plain js import { Choice } 
 const Choice = globalThis.javax.microedition.lcdui.Choice;
-//not plain js import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } from '../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
 //not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
@@ -26,9 +25,8 @@ import { InGameFeatureChoiceGroups } from '../../../../org/allbinary/game/config
 //not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
 //not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
-//not plain js import { StringUtil } from '../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InGameOptionsForm extends CommandForm {
     constructor(commandListener, title, backgrounBasicColor, foregroundBasicColor) {

@@ -17,9 +17,9 @@ import { WeaponLayerCircularPool } from '../../../../../../../org/allbinary/game
 //not GWT import const ViewPositionFactoryInterface = globalThis.org.allbinary.view.ViewPositionFactoryInterface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MineCountedPickedUpLayerInterfaceFactory } from './MineCountedPickedUpLayerInterfaceFactory.js';
-//not GWT import const MineCountedPickedUpLayerInterfaceFactory = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineCountedPickedUpLayerInterfaceFactory;
+//not GWT import - same folder const MineCountedPickedUpLayerInterfaceFactory = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineCountedPickedUpLayerInterfaceFactory;
 import { MineLayerFactory } from './MineLayerFactory.js';
-//not GWT import const MineLayerFactory = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineLayerFactory;
+//not GWT import - same folder const MineLayerFactory = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineLayerFactory;
 export class MineLayerCircularStaticPool extends Object {
     //@Throws(Exception.constructor)
     static init(viewPositionFactoryInterface) {

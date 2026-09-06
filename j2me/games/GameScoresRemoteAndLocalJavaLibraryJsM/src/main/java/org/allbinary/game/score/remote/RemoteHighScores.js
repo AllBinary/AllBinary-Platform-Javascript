@@ -12,11 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { Long } from '../../../../../java/lang/Long.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not GWT import const Enumeration = globalThis.java.util.Enumeration;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
-const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
 import { HighScore } from '../../../../../org/allbinary/game/score/HighScore.js';
 //not GWT import const HighScore = globalThis.org.allbinary.game.score.HighScore;
@@ -24,22 +22,24 @@ import { HighScores } from '../../../../../org/allbinary/game/score/HighScores.j
 //not GWT import const HighScores = globalThis.org.allbinary.game.score.HighScores;
 import { RemoteErrorHighScoresSingletonFactory } from '../../../../../org/allbinary/game/score/RemoteErrorHighScoresSingletonFactory.js';
 //not GWT import const RemoteErrorHighScoresSingletonFactory = globalThis.org.allbinary.game.score.RemoteErrorHighScoresSingletonFactory;
-import { StdUtil } from '../../../../../org/allbinary/logic/StdUtil.js';
-//not GWT import const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { EnumerationUtil } from '../../../../../org/allbinary/util/EnumerationUtil.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RemoteHighScoresProcessorFactory } from './RemoteHighScoresProcessorFactory.js';
-//not GWT import const RemoteHighScoresProcessorFactory = globalThis.org.allbinary.game.score.remote.RemoteHighScoresProcessorFactory;
+//not GWT import - same folder const RemoteHighScoresProcessorFactory = globalThis.org.allbinary.game.score.remote.RemoteHighScoresProcessorFactory;
 import { RemoteHighScoresSubmissionProcessorFactory } from './RemoteHighScoresSubmissionProcessorFactory.js';
-//not GWT import const RemoteHighScoresSubmissionProcessorFactory = globalThis.org.allbinary.game.score.remote.RemoteHighScoresSubmissionProcessorFactory;
+//not GWT import - same folder const RemoteHighScoresSubmissionProcessorFactory = globalThis.org.allbinary.game.score.remote.RemoteHighScoresSubmissionProcessorFactory;
 import { RemoteHighScoresData } from './RemoteHighScoresData.js';
-//not GWT import const RemoteHighScoresData = globalThis.org.allbinary.game.score.remote.RemoteHighScoresData;
+//not GWT import - same folder const RemoteHighScoresData = globalThis.org.allbinary.game.score.remote.RemoteHighScoresData;
 export class RemoteHighScores extends HighScores {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getInstance(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending) {

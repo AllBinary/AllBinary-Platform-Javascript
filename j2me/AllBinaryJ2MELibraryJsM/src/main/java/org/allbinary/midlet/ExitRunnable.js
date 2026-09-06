@@ -13,14 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
 import { NullCanvas } from '../../../javax/microedition/lcdui/NullCanvas.js';
 //not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
-//not plain js import { LogUtil } from '../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { CommonStrings } from '../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
+//not GWT import - same folder const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
 export class ExitRunnable extends Object {
     constructor(midlet, processor, isProgress) {
         super();

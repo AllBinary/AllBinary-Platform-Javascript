@@ -13,14 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
-//not plain js import { Image } from '../../../../javax/microedition/lcdui/Image.js';
+//not plain js import { Image } 
 const Image = globalThis.javax.microedition.lcdui.Image;
 //not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
-//not plain js import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not plain js import { AngleInfo } 
 const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayBaseRotationAnimation } from './ImageArrayBaseRotationAnimation.js';
-//not GWT import const ImageArrayRotationAnimationInfo = globalThis.org.allbinary.animation.image.ImageArrayRotationAnimationInfo;
+//not GWT import - same folder const ImageArrayRotationAnimationInfo = globalThis.org.allbinary.animation.image.ImageArrayRotationAnimationInfo;
 export class ImageArrayRotationAnimation extends ImageArrayBaseRotationAnimation {
     //@Throws(Exception.constructor)
     static createAnimation(anyType = {}, animationBehavior) {

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
-//not plain js import { Canvas } from '../../javax/microedition/lcdui/Canvas.js';
+//not plain js import { Canvas } 
 const Canvas = globalThis.javax.microedition.lcdui.Canvas;
 import { MultiPlayerGameFeatureFactory } from '../../org/allbinary/game/configuration/feature/MultiPlayerGameFeatureFactory.js';
 //not GWT import const MultiPlayerGameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MultiPlayerGameFeatureFactory;

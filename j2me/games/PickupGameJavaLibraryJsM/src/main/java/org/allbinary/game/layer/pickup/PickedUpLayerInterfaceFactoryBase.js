@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
-//not GWT import const PickedUpLayerType = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerType;
+//not GWT import - same folder const PickedUpLayerType = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerType;
 export class PickedUpLayerInterfaceFactoryBase extends Object {
     getIconLayer() {
         throw new RuntimeException();

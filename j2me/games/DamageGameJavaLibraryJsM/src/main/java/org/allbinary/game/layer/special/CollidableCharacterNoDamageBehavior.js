@@ -14,11 +14,11 @@
 //not GWT import const CollisionType = globalThis.org.allbinary.game.collision.CollisionType;
 import { CollisionTypeFactory } from '../../../../../org/allbinary/game/collision/CollisionTypeFactory.js';
 //not GWT import const PickedUpLayerInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterface;
-//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableDestroyableDamageableBehavior } from './CollidableDestroyableDamageableBehavior.js';
-//not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
+//not GWT import - same folder const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
 export class CollidableCharacterNoDamageBehavior extends CollidableDestroyableDamageableBehavior {
     constructor(collidable) {
         super(collidable);

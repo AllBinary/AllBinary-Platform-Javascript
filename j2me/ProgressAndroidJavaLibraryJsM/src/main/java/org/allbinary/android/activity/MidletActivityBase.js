@@ -13,7 +13,7 @@
 */
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 import { Activity } from '../../../../android/app/Activity.js';
-//not GWT import const KeyInputViewCompositeInterface = globalThis.org.allbinary.android.activity.KeyInputViewCompositeInterface;
+//not GWT import - same folder const KeyInputViewCompositeInterface = globalThis.org.allbinary.android.activity.KeyInputViewCompositeInterface;
 export class MidletActivityBase extends Activity {
     onGameFeatureChange(gameFeatureEvent) {
     }

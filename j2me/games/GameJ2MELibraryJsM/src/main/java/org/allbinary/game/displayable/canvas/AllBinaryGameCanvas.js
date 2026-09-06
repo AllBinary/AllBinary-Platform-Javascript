@@ -13,23 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../java/lang/Exception.js';
-import { System } from '../../../../../java/lang/System.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { Thread } from '../../../../../java/lang/Thread.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
-const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
-const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not plain js import { ChoiceGroup } 
 const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
-//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Font } from '../../../../../javax/microedition/lcdui/Font.js';
+//not plain js import { Font } 
 const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Item } from '../../../../../javax/microedition/lcdui/Item.js';
+//not plain js import { Item } 
 const Item = globalThis.javax.microedition.lcdui.Item;
 import { NullCommandListener } from '../../../../../javax/microedition/lcdui/NullCommandListener.js';
 //not GWT import const NullCommandListener = globalThis.javax.microedition.lcdui.NullCommandListener;
@@ -173,15 +167,17 @@ import { TouchScreenFactory } from '../../../../../org/allbinary/input/motion/bu
 //not GWT import const TouchScreenFactory = globalThis.org.allbinary.input.motion.button.TouchScreenFactory;
 import { BasicMotionGesturesHandler } from '../../../../../org/allbinary/input/motion/gesture/observer/BasicMotionGesturesHandler.js';
 //not GWT import const BasicMotionGesturesHandler = globalThis.org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler;
-//not plain js import { ForcedLogUtil } from '../../../../../org/allbinary/logic/communication/log/ForcedLogUtil.js';
+//not plain js import { ABSystemWrapper } 
+const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
+//not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PreLogUtil } from '../../../../../org/allbinary/logic/communication/log/PreLogUtil.js';
+//not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { OperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/OperatingSystemFactory.js';
 //not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
@@ -195,9 +191,9 @@ import { SecondaryPlayerQueueFactory } from '../../../../../org/allbinary/media/
 //not GWT import const SecondaryPlayerQueueFactory = globalThis.org.allbinary.media.audio.SecondaryPlayerQueueFactory;
 import { SelectSound } from '../../../../../org/allbinary/media/audio/SelectSound.js';
 //not GWT import const SelectSound = globalThis.org.allbinary.media.audio.SelectSound;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { SecondaryThreadPool } from '../../../../../org/allbinary/thread/SecondaryThreadPool.js';
 //not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
@@ -205,59 +201,61 @@ import { GameTickTimeDelayHelperFactory } from '../../../../../org/allbinary/tim
 //not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
 //not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
-//not plain js import { BasicArrayList } from '../../../../../org/allbinary/util/BasicArrayList.js';
+//not plain js import { ABHashtable } 
+const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } from '../../../../../org/allbinary/util/BasicArrayListD.js';
+//not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not plain js import { BasicArrayListUtil } from '../../../../../org/allbinary/util/BasicArrayListUtil.js';
+//not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import const PopupMenuInterface = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInterface;
+//not GWT import - same folder const PopupMenuInterface = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInterface;
 import { GameCanvasRunnable } from './GameCanvasRunnable.js';
-//not GWT import const GameCanvasRunnable = globalThis.org.allbinary.game.displayable.canvas.GameCanvasRunnable;
+//not GWT import - same folder const GameCanvasRunnable = globalThis.org.allbinary.game.displayable.canvas.GameCanvasRunnable;
 import { GameCanvasPauseRunnable } from './GameCanvasPauseRunnable.js';
-//not GWT import const GameCanvasPauseRunnable = globalThis.org.allbinary.game.displayable.canvas.GameCanvasPauseRunnable;
+//not GWT import - same folder const GameCanvasPauseRunnable = globalThis.org.allbinary.game.displayable.canvas.GameCanvasPauseRunnable;
 import { FormUtil } from './FormUtil.js';
-//not GWT import const FormUtil = globalThis.org.allbinary.game.displayable.canvas.FormUtil;
+//not GWT import - same folder const FormUtil = globalThis.org.allbinary.game.displayable.canvas.FormUtil;
 import { MyFormUtil } from './MyFormUtil.js';
-//not GWT import const MyFormUtil = globalThis.org.allbinary.game.displayable.canvas.MyFormUtil;
+//not GWT import - same folder const MyFormUtil = globalThis.org.allbinary.game.displayable.canvas.MyFormUtil;
 import { EndGameInfo } from './EndGameInfo.js';
-//not GWT import const EndGameInfo = globalThis.org.allbinary.game.displayable.canvas.EndGameInfo;
+//not GWT import - same folder const EndGameInfo = globalThis.org.allbinary.game.displayable.canvas.EndGameInfo;
 import { NoMenuInputProcessor } from './NoMenuInputProcessor.js';
-//not GWT import const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
+//not GWT import - same folder const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
 import { DemoGameBehavior } from './DemoGameBehavior.js';
-//not GWT import const DemoGameBehavior = globalThis.org.allbinary.game.displayable.canvas.DemoGameBehavior;
+//not GWT import - same folder const DemoGameBehavior = globalThis.org.allbinary.game.displayable.canvas.DemoGameBehavior;
 import { BaseMenuBehavior } from './BaseMenuBehavior.js';
-//not GWT import const BaseMenuBehavior = globalThis.org.allbinary.game.displayable.canvas.BaseMenuBehavior;
+//not GWT import - same folder const BaseMenuBehavior = globalThis.org.allbinary.game.displayable.canvas.BaseMenuBehavior;
 import { BaseGameBehavior } from './BaseGameBehavior.js';
-//not GWT import const BaseGameBehavior = globalThis.org.allbinary.game.displayable.canvas.BaseGameBehavior;
+//not GWT import - same folder const BaseGameBehavior = globalThis.org.allbinary.game.displayable.canvas.BaseGameBehavior;
 import { BasicPopupMenuPaintable } from './BasicPopupMenuPaintable.js';
-//not GWT import const BasicPopupMenuPaintable = globalThis.org.allbinary.game.displayable.canvas.BasicPopupMenuPaintable;
+//not GWT import - same folder const BasicPopupMenuPaintable = globalThis.org.allbinary.game.displayable.canvas.BasicPopupMenuPaintable;
 import { PopupMenuInputProcessor } from './PopupMenuInputProcessor.js';
-//not GWT import const PopupMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInputProcessor;
+//not GWT import - same folder const PopupMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInputProcessor;
 import { InGameMenuBehavior } from './InGameMenuBehavior.js';
-//not GWT import const InGameMenuBehavior = globalThis.org.allbinary.game.displayable.canvas.InGameMenuBehavior;
+//not GWT import - same folder const InGameMenuBehavior = globalThis.org.allbinary.game.displayable.canvas.InGameMenuBehavior;
 import { GameLimitedCommandTextItemArrayFactory } from './GameLimitedCommandTextItemArrayFactory.js';
-//not GWT import const GameLimitedCommandTextItemArrayFactory = globalThis.org.allbinary.game.displayable.canvas.GameLimitedCommandTextItemArrayFactory;
+//not GWT import - same folder const GameLimitedCommandTextItemArrayFactory = globalThis.org.allbinary.game.displayable.canvas.GameLimitedCommandTextItemArrayFactory;
 import { PopupCommandFormInputProcessor } from './PopupCommandFormInputProcessor.js';
-//not GWT import const PopupCommandFormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupCommandFormInputProcessor;
+//not GWT import - same folder const PopupCommandFormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupCommandFormInputProcessor;
 import { NullWaitGameRunnable } from './NullWaitGameRunnable.js';
-//not GWT import const NullWaitGameRunnable = globalThis.org.allbinary.game.displayable.canvas.NullWaitGameRunnable;
+//not GWT import - same folder const NullWaitGameRunnable = globalThis.org.allbinary.game.displayable.canvas.NullWaitGameRunnable;
 import { GameProcessor } from './GameProcessor.js';
-//not GWT import const GameProcessor = globalThis.org.allbinary.game.displayable.canvas.GameProcessor;
+//not GWT import - same folder const GameProcessor = globalThis.org.allbinary.game.displayable.canvas.GameProcessor;
 import { CheatGameInputProcessor } from './CheatGameInputProcessor.js';
-//not GWT import const CheatGameInputProcessor = globalThis.org.allbinary.game.displayable.canvas.CheatGameInputProcessor;
+//not GWT import - same folder const CheatGameInputProcessor = globalThis.org.allbinary.game.displayable.canvas.CheatGameInputProcessor;
 import { EndGameProcessor } from './EndGameProcessor.js';
-//not GWT import const EndGameProcessor = globalThis.org.allbinary.game.displayable.canvas.EndGameProcessor;
+//not GWT import - same folder const EndGameProcessor = globalThis.org.allbinary.game.displayable.canvas.EndGameProcessor;
 import { StartIntermissionProcessor } from './StartIntermissionProcessor.js';
-//not GWT import const StartIntermissionProcessor = globalThis.org.allbinary.game.displayable.canvas.StartIntermissionProcessor;
+//not GWT import - same folder const StartIntermissionProcessor = globalThis.org.allbinary.game.displayable.canvas.StartIntermissionProcessor;
 import { EndGamePaintable } from './EndGamePaintable.js';
-//not GWT import const EndGamePaintable = globalThis.org.allbinary.game.displayable.canvas.EndGamePaintable;
+//not GWT import - same folder const EndGamePaintable = globalThis.org.allbinary.game.displayable.canvas.EndGamePaintable;
 import { NullDemoPaintable } from './NullDemoPaintable.js';
-//not GWT import const DemoPaintableInterface = globalThis.org.allbinary.game.displayable.canvas.DemoPaintableInterface;
+//not GWT import - same folder const DemoPaintableInterface = globalThis.org.allbinary.game.displayable.canvas.DemoPaintableInterface;
 import { GameCanvasInputProcessor } from './GameCanvasInputProcessor.js';
-//not GWT import const GameCanvasInputProcessor = globalThis.org.allbinary.game.displayable.canvas.GameCanvasInputProcessor;
+//not GWT import - same folder const GameCanvasInputProcessor = globalThis.org.allbinary.game.displayable.canvas.GameCanvasInputProcessor;
 import { FormInputProcessor } from './FormInputProcessor.js';
-//not GWT import const FormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.FormInputProcessor;
+//not GWT import - same folder const FormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.FormInputProcessor;
 export class AllBinaryGameCanvas extends RunnableCanvas {
     constructor(commandListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered) {
         super(commandListener, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, true);
@@ -521,13 +519,13 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         this.closeMenu();
         super.pause();
         this.touchButtonFactory.toggle(this.isPaused(), BasicArrayListUtil.getInstance().getImmutableInstance());
-        System.gc();
+        this.systemWrapper.gc();
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     unPause() {
         this.logUtil.putF(this.commonStrings.START, this, this.gameStrings.UNPAUSE);
         this.closeMenu();
-        System.gc();
+        this.systemWrapper.gc();
         super.unPause();
         this.touchButtonFactory.toggle(this.isPaused(), BasicArrayListUtil.getInstance().getImmutableInstance());
         this.gameBehavior.unPause(this);
@@ -995,7 +993,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         ;
         if (hashtable !=
             null
-            && hashtable.length > 0) {
+            && hashtable.size() > 0) {
             var levelAsString = hashtable.get(GameInfo.LEVEL_NAME);
             ;
             var level = Integer.valueOf(levelAsString).intValue();

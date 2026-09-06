@@ -11,12 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { Command } from '../../../../../javax/microedition/lcdui/Command.js';
+//not plain js import { Command } 
 const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } from '../../../../../javax/microedition/lcdui/CommandListener.js';
+//not plain js import { CommandListener } 
 const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Graphics } from '../../../../../javax/microedition/lcdui/Graphics.js';
+//not plain js import { Graphics } 
 const Graphics = globalThis.javax.microedition.lcdui.Graphics;
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
@@ -40,16 +39,18 @@ import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullP
 //not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
 import { SimpleTextPaintable } from '../../../../../org/allbinary/graphics/paint/SimpleTextPaintable.js';
 //not GWT import const SimpleTextPaintable = globalThis.org.allbinary.graphics.paint.SimpleTextPaintable;
-//not plain js import { LogUtil } from '../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not plain js import { CommonStrings } from '../../../../../org/allbinary/string/CommonStrings.js';
+//not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { ARunnable } from '../../../../../org/allbinary/thread/ARunnable.js';
+//not plain js import { ARunnable } 
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 import { SecondaryThreadPool } from '../../../../../org/allbinary/thread/SecondaryThreadPool.js';
-//not GWT import const JsProperty = globalThis.jsinterop.annotations.JsProperty;
+//not GWT import const SecondaryThreadPool = globalThis.org.allbinary.thread.SecondaryThreadPool;
+//not plain js import { ABSystemWrapper } 
+const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HighScoresCanvas extends GameCommandCanvas {
     constructor(commandListener, allBinaryGameLayerManager, gameInfo, paintable, highScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface) {
@@ -100,14 +101,18 @@ export class HighScoresCanvas extends GameCommandCanvas {
                     }
                     var stringMaker = new StringMaker();
                     ;
-                    logUtil.putF(stringMaker.append("HighScoresCanvas - Request repaint to be sure: ").appendlong(Date.now()).toString(), this, commonStrings.RUN);
+                    var systemWrapper = ABSystemWrapper.getInstance();
+                    ;
+                    var currentTimeMillis = systemWrapper.currentTimeMillis();
+                    ;
+                    logUtil.putF(stringMaker.append("HighScoresCanvas - Request repaint to be sure: ").appendlong(currentTimeMillis).toString(), this, commonStrings.RUN);
                     highScoresCanvas.repaintBehavior.onChangeRepaint(highScoresCanvas);
                     if (!isHTML) {
                         while (!highScoresCanvas.hasPainted) {
                         }
                     }
                     stringMaker.delete(0, stringMaker.length());
-                    logUtil.putF(stringMaker.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ").appendlong(Date.now()).toString(), this, commonStrings.RUN);
+                    logUtil.putF(stringMaker.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ").appendlong(currentTimeMillis).toString(), this, commonStrings.RUN);
                     highScoresCanvas.executeUpdate();
                     //: 
                 }

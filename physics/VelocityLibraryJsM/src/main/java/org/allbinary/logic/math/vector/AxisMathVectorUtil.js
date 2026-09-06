@@ -13,10 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const JsType = globalThis.jsinterop.annotations.JsType;
-//not plain js import { NoDecimalTrigTable } from '../../../../../org/allbinary/math/NoDecimalTrigTable.js';
+//not plain js import { NoDecimalTrigTable } 
 const NoDecimalTrigTable = globalThis.org.allbinary.math.NoDecimalTrigTable;
-//not GWT import const JsMethod = globalThis.jsinterop.annotations.JsMethod;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AxisMathVectorUtil extends Object {
     constructor() {

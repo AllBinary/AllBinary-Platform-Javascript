@@ -15,7 +15,7 @@ import { BasicGameResources } from '../../../../../org/allbinary/game/layer/reso
 //not GWT import const BasicGameResources = globalThis.org.allbinary.game.layer.resources.BasicGameResources;
 import { GameGraphicsResourceUtil } from '../../../../../org/allbinary/game/layer/resources/GameGraphicsResourceUtil.js';
 //not GWT import const GameGraphicsResourceUtil = globalThis.org.allbinary.game.layer.resources.GameGraphicsResourceUtil;
-//not plain js import { StringUtil } from '../../../../../org/allbinary/logic/string/StringUtil.js';
+//not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class FlagGameResources extends BasicGameResources {

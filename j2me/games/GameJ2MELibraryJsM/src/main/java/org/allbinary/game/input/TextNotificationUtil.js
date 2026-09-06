@@ -21,7 +21,7 @@ import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/Basi
 //not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
 import { BooleanFactory } from '../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
-//not plain js import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not plain js import { SmallIntegerSingletonFactory } 
 const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import { ErrorSound } from '../../../../org/allbinary/media/audio/ErrorSound.js';
 //not GWT import const ErrorSound = globalThis.org.allbinary.media.audio.ErrorSound;

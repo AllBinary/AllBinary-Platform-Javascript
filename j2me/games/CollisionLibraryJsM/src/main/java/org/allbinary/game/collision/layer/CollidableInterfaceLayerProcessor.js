@@ -16,9 +16,9 @@ import { LayerProcessor } from '../../../../../org/allbinary/layer/LayerProcesso
 //not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableInterfaceLayerManager } from './CollidableInterfaceLayerManager.js';
-//not GWT import const CollidableInterfaceLayerManager = globalThis.org.allbinary.game.collision.layer.CollidableInterfaceLayerManager;
+//not GWT import - same folder const CollidableInterfaceLayerManager = globalThis.org.allbinary.game.collision.layer.CollidableInterfaceLayerManager;
 import { AllBinaryCollisionManager } from './AllBinaryCollisionManager.js';
-//not GWT import const AllBinaryCollisionManager = globalThis.org.allbinary.game.collision.layer.AllBinaryCollisionManager;
+//not GWT import - same folder const AllBinaryCollisionManager = globalThis.org.allbinary.game.collision.layer.AllBinaryCollisionManager;
 export class CollidableInterfaceLayerProcessor extends LayerProcessor {
     constructor() {
         super(new CollidableInterfaceLayerManager());

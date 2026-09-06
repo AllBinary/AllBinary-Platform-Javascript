@@ -17,14 +17,14 @@ import { DomNodeHelper } from '../../../../../../org/allbinary/data/tree/dom/Dom
 //not GWT import const DomNodeHelper = globalThis.org.allbinary.data.tree.dom.DomNodeHelper;
 import { DomSearchHelper } from '../../../../../../org/allbinary/data/tree/dom/DomSearchHelper.js';
 //not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
-//not plain js import { LogUtil } from '../../../../../../org/allbinary/logic/communication/log/LogUtil.js';
+//not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TransformInfoData } from './TransformInfoData.js';
-//not GWT import const TransformInfoData = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoData;
+//not GWT import - same folder const TransformInfoData = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoData;
 import { TransformInfoProperties } from './TransformInfoProperties.js';
-//not GWT import const TransformInfoProperties = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoProperties;
+//not GWT import - same folder const TransformInfoProperties = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoProperties;
 export class TransformInfoPropertiesFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

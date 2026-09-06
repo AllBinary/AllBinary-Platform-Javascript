@@ -1,11 +1,11 @@
 /* Generated Code Do Not Modify */
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
-//not plain js import { StringMaker } from '../../../../../org/allbinary/logic/string/StringMaker.js';
+//not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { Visitor } from '../../../../../org/allbinary/logic/util/visitor/Visitor.js';
 //not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
-//not plain js import { CommonSeps } from '../../../../../org/allbinary/string/CommonSeps.js';
+//not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ObjectPermutationVisitor extends Visitor {
