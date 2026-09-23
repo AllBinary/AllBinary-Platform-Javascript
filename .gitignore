@@ -1,11 +1,11 @@
 node_modules
-.github
 *.xml
 !pom.xml
 *.java
 *.ts
 *.class
 *.iml
+.github/*.md
 .idea
 .project
 .classpath
