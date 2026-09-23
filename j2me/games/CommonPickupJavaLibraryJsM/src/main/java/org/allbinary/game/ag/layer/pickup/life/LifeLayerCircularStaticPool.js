@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 import { AllBinaryLayerCircularPool } from '../../../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
-//not GWT import - same folder const LifeLayer = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeLayer;
+//not GWT import - same folder const LifeLayer
 export class LifeLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     constructor(allbinaryLayerFactoryInterface, total) {
         super();

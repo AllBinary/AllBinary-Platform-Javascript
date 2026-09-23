@@ -21,8 +21,8 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { PrimitiveLongSingleton } 
-const PrimitiveLongSingleton = globalThis.org.allbinary.logic.math.PrimitiveLongSingleton;
+import { PrimitiveLongSingleton } from './PrimitiveLongSingleton.js';
+//not GWT import - same folder const PrimitiveLongSingleton
 //not plain js - same folder import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 export class PrimitiveLongUtil extends Object {

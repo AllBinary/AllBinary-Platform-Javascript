@@ -11,18 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { BasicHud } from '../../../../../../../../org/allbinary/game/graphics/hud/BasicHud.js';
-//not GWT import const BasicHud = globalThis.org.allbinary.game.graphics.hud.BasicHud;
+//not GWT import const BasicHud
 import { BasicColorFactory } from '../../../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not GWT import const PaintableInterface
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { PrimitiveLongUtil } 
-const PrimitiveLongUtil = globalThis.org.allbinary.logic.math.PrimitiveLongUtil;
+import { PrimitiveLongUtil } from '../../../../../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
+//not GWT import const PrimitiveLongUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LevelHudWidget extends BasicHud {
     //@Throws(Exception.constructor)

@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../org/allbinary/animation/FeaturedAnimationInterfaceFactoryInterfaceFactory.js';
-//not GWT import const FeaturedAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
+//not GWT import const FeaturedAnimationInterfaceFactoryInterfaceFactory
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const FeaturedResourceFactory = globalThis.org.allbinary.game.resource.FeaturedResourceFactory;
+//not GWT import - same folder const FeaturedResourceFactory
 import { FeaturedResourceRelativeRelationshipFactory } from './FeaturedResourceRelativeRelationshipFactory.js';
-//not GWT import - same folder const FeaturedResourceRelativeRelationshipFactory = globalThis.org.allbinary.game.resource.FeaturedResourceRelativeRelationshipFactory;
+//not GWT import - same folder const FeaturedResourceRelativeRelationshipFactory
 export class FeatureResourceInitializationUtil extends Object {
     constructor() {
         super(...arguments);

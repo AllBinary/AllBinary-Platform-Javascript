@@ -11,16 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Form } 
-const Form = globalThis.javax.microedition.lcdui.Form;
+//not GWT import const CommandListener
+import { Form } from '../../../../../javax/microedition/lcdui/Form.js';
+//not GWT import const Form
 import { NullCommandListener } from '../../../../../javax/microedition/lcdui/NullCommandListener.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const MyCommandInterface = globalThis.org.allbinary.graphics.displayable.command.MyCommandInterface;
+//not GWT import const MyCommandInterface
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
@@ -35,7 +32,7 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABStack = globalThis.org.allbinary.util.ABStack;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScreenRepaintProcessorFactory } from './ScreenRepaintProcessorFactory.js';
-//not GWT import - same folder const ScreenRepaintProcessorFactory = globalThis.org.allbinary.graphics.displayable.screen.ScreenRepaintProcessorFactory;
+//not GWT import - same folder const ScreenRepaintProcessorFactory
 export class CommandForm extends Form {
     static getNullCommandForm() {
         if (CommandForm.NULL_COMMAND_FORM == NullUtil.getInstance().NULL_OBJECT) {

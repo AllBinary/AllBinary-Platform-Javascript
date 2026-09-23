@@ -11,16 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
-//not plain js import { Angle } 
-const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } 
-const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+//not GWT import const Angle
+import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AngleFactory
+import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
+//not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorBaseRotationAnimation } from './VectorBaseRotationAnimation.js';
-//not GWT import - same folder const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import - same folder const AnimationBehavior
 export class VectorRotationAnimation extends VectorBaseRotationAnimation {
     constructor(currentPoints, basicColor, animationBehavior) {
         super(AngleInfo.getInstance((AngleFactory.getInstance().TOTAL_ANGLE / currentPoints.length)), currentPoints, basicColor, animationBehavior);

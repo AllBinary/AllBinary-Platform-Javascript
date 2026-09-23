@@ -13,17 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const GraphicsDevice = globalThis.java.awt.GraphicsDevice;
+//not GWT import const GraphicsDevice
 import { GraphicsEnvironment } from '../../../../java/awt/GraphicsEnvironment.js';
-//not GWT import const GraphicsEnvironment = globalThis.java.awt.GraphicsEnvironment;
+//not GWT import const GraphicsEnvironment
 import { Transparency } from '../../../../java/awt/Transparency.js';
-//not GWT import const Transparency = globalThis.java.awt.Transparency;
+//not GWT import const Transparency
 import { AffineTransform } from '../../../../java/awt/geom/AffineTransform.js';
-//not GWT import const AffineTransform = globalThis.java.awt.geom.AffineTransform;
+//not GWT import const AffineTransform
 import { BufferedImage } from '../../../../java/awt/image/BufferedImage.js';
-//not GWT import const BufferedImage = globalThis.java.awt.image.BufferedImage;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonLabels } 
@@ -32,7 +30,7 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const J2SEMutableImage = globalThis.org.microemu.device.j2se.J2SEMutableImage;
+//not GWT import const J2SEMutableImage
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageUtil extends Object {
     static getInstance() {

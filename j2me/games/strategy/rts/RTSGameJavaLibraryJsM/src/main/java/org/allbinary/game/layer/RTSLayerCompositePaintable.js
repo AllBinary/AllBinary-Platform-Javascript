@@ -11,16 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not GWT import const Paintable
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import - same folder const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
+//not GWT import - same folder const RTSLayer
 export class RTSLayerCompositePaintable extends Paintable {
     constructor(upgradableRTSLayerHudPaintable) {
         super();

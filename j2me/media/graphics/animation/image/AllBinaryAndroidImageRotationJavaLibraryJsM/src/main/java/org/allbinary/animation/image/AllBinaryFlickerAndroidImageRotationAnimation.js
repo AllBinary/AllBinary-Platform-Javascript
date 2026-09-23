@@ -12,19 +12,14 @@
         *  Created By: Travis Berthelot
 */
 import { Matrix } from '../../../../android/graphics/Matrix.js';
-//not GWT import const Matrix = globalThis.android.graphics.Matrix;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
-//not plain js import { AngleInfo } 
-const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+//not GWT import const AngleInfo
 import { AndroidImageUtil } from '../../../../org/allbinary/media/image/AndroidImageUtil.js';
-//not GWT import const AndroidImageUtil = globalThis.org.allbinary.media.image.AndroidImageUtil;
+//not GWT import const AndroidImageUtil
 import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageModifierUtil.js';
-//not GWT import const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
+//not GWT import const ImageModifierUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
+//not GWT import - same folder const ImageBaseRotationAnimation
 export class AllBinaryFlickerAndroidImageRotationAnimation extends ImageBaseRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);

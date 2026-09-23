@@ -13,14 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not GWT import const PaintableInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameFeatureImageCacheFactory } from './GameFeatureImageCacheFactory.js';
-//not GWT import - same folder const GameFeatureImageCacheFactory = globalThis.org.allbinary.image.GameFeatureImageCacheFactory;
+//not GWT import - same folder const GameFeatureImageCacheFactory
 export class PaintableToImageUtil extends Object {
     //@Throws(Exception.constructor)
     static getImage(paintableInterface, width, height) {

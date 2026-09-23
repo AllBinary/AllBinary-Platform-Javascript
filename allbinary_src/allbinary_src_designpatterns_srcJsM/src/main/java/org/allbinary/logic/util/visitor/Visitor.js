@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const VisitorInterface = globalThis.org.allbinary.logic.util.visitor.VisitorInterface;
+//not GWT import - same folder const VisitorInterface
 export class Visitor extends Object {
     constructor() {
         super(...arguments);

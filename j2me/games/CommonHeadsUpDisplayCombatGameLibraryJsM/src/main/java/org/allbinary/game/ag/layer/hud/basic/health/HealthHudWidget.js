@@ -11,19 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import const Animation
 import { BasicHud } from '../../../../../../../../org/allbinary/game/graphics/hud/BasicHud.js';
-//not GWT import const HealthListenerInterface = globalThis.org.allbinary.game.health.HealthListenerInterface;
+//not GWT import const HealthListenerInterface
 import { BasicColorFactory } from '../../../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
+//not GWT import const GameTickTimeDelayHelper
 import { GameTickTimeDelayHelperFactory } from '../../../../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
-//not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
+//not GWT import const GameTickTimeDelayHelperFactory
 import { NoTimeDelayHelper } from '../../../../../../../../org/allbinary/time/NoTimeDelayHelper.js';
-//not GWT import const NoTimeDelayHelper = globalThis.org.allbinary.time.NoTimeDelayHelper;
+//not GWT import const NoTimeDelayHelper
 import { TimeDelayHelper } from '../../../../../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import const TimeDelayHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class HealthHudWidget extends BasicHud {
     constructor(animationInterface, healthInterface, location, direction) {

@@ -15,14 +15,14 @@
 import { Object } from '../../java/lang/Object.js';
 import { Integer } from '../../java/lang/Integer.js';
 import { LicenseInitInfoUtil } from '../../org/allbinary/business/init/LicenseInitInfoUtil.js';
-//not GWT import const LicenseInitInfoUtil = globalThis.org.allbinary.business.init.LicenseInitInfoUtil;
+//not GWT import const LicenseInitInfoUtil
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 import { PartnerIdentifierFileUtil } from '../../org/allbinary/logic/system/security/licensing/PartnerIdentifierFileUtil.js';
-//not GWT import const PartnerIdentifierFileUtil = globalThis.org.allbinary.logic.system.security.licensing.PartnerIdentifierFileUtil;
+//not GWT import const PartnerIdentifierFileUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidResources } from './AndroidResources.js';
-//not GWT import - same folder const AndroidResources = globalThis.org.allbinary.AndroidResources;
+//not GWT import - same folder const AndroidResources
 export class AllBinaryAndroidGameInitializationUtil extends Object {
     static init() {
         var resourceUtil = ResourceUtil.getInstance();

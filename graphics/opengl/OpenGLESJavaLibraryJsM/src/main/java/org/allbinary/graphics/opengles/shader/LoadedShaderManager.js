@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderManager } from './ShaderManager.js';
-//not GWT import - same folder const ShaderManager = globalThis.org.allbinary.graphics.opengles.shader.ShaderManager;
+//not GWT import - same folder const ShaderManager
 export class LoadedShaderManager extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

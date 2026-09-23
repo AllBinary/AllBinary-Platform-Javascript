@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { BaseMusicService } from '../../../../../org/allbinary/media/audio/music/BaseMusicService.js';
-//not GWT import const BaseMusicService = globalThis.org.allbinary.media.audio.music.BaseMusicService;
+//not GWT import const BaseMusicService
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MusicService extends BaseMusicService {
 }

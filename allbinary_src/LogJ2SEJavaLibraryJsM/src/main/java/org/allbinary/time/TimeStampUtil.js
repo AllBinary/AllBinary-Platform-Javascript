@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { SimpleDateFormat } from '../../../java/text/SimpleDateFormat.js';
-//not GWT import const SimpleDateFormat = globalThis.java.text.SimpleDateFormat;
+//not GWT import const SimpleDateFormat
 import { Calendar } from '../../../java/util/Calendar.js';
-//not GWT import const Calendar = globalThis.java.util.Calendar;
+//not GWT import const Calendar
 //import { Date } from '../../../java/util/Date.js';
-//not GWT import const Date = globalThis.java.util.Date;
+//not GWT import const Date
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //ActualPlatform
 /*actual*/ export class TimeStampUtil extends Object {

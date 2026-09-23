@@ -21,7 +21,7 @@ const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCGameKey } from './PCGameKey.js';
-//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input
 export class PCKeyFactory extends Object {
     constructor() {
         super(...arguments);

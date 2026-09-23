@@ -11,13 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const GPoint
 import { RelativeRelationship } from '../../../../org/allbinary/graphics/RelativeRelationship.js';
-//not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
+//not GWT import const RelativeRelationship
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)

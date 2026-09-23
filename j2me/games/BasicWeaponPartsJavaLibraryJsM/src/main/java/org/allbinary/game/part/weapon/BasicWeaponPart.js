@@ -14,22 +14,20 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import const Animation
 import { NullAnimationFactory } from '../../../../../org/allbinary/animation/NullAnimationFactory.js';
-//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
+//not GWT import const NullAnimationFactory
 import { WeaponProperties } from '../../../../../org/allbinary/game/combat/weapon/WeaponProperties.js';
-//not GWT import const PartInterface = globalThis.org?.allbinary?.game?.part?.PartInterface;
+//not GWT import const PartInterface
 import { NoScoreable } from '../../../../../org/allbinary/game/score/NoScoreable.js';
-//not GWT import const ScoreableInterface = globalThis.org.allbinary.game.score.ScoreableInterface;
+//not GWT import const ScoreableInterface
 import { RelativeRelationship } from '../../../../../org/allbinary/graphics/RelativeRelationship.js';
-//not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
+//not GWT import const RelativeRelationship
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const SalvoInterface = globalThis.org.allbinary.game.part.weapon.SalvoInterface;
+//not GWT import - same folder const SalvoInterface
 export class BasicWeaponPart extends Object {
     static createBasicWeaponPart(animationInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.

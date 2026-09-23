@@ -11,7 +11,4 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
 export {};

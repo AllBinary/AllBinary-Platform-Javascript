@@ -15,9 +15,9 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not GWT import const AbeClientInformationInterface
 import { AbeLicenseInterfaceFactory } from '../../../../../org/allbinary/logic/system/security/licensing/AbeLicenseInterfaceFactory.js';
-//not GWT import const LicensingException = globalThis.org.allbinary.logic.system.security.licensing.LicensingException;
+//not GWT import const LicensingException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbKeys extends Object {
     static getInstance() {

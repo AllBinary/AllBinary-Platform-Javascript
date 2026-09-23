@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
-//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
+//not GWT import const AbFileNativeUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileInputStream } from './AbFileInputStream.js';
-//not GWT import - same folder const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
+//not GWT import - same folder const AbFileInputStream
 export class AbFileLocalInputStream extends AbFileInputStream {
     constructor(file) {
         super(AbFileNativeUtil.get(file));

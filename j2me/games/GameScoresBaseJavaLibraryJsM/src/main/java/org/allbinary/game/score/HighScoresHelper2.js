@@ -16,9 +16,9 @@
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresHelperBase } from './HighScoresHelperBase.js';
-//not GWT import - same folder const HighScoresHelperBase = globalThis.org.allbinary.game.score.HighScoresHelperBase;
+//not GWT import - same folder const HighScoresHelperBase
 import { NullHighScoresSingletonFactory } from './NullHighScoresSingletonFactory.js';
-//not GWT import - same folder const HighScores = globalThis.org.allbinary.game.score.HighScores;
+//not GWT import - same folder const HighScores
 export class HighScoresHelper2 extends HighScoresHelperBase {
     constructor() {
         super(...arguments);

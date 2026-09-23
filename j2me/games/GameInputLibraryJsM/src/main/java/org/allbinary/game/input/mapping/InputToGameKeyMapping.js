@@ -12,13 +12,11 @@
         *  Created By: Travis Berthelot
 */
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not GWT import const GameKey = globalThis.org.allbinary.game.input.GameKey;
+//not GWT import const GameKey
 import { GameKeyFactory } from '../../../../../org/allbinary/game/input/GameKeyFactory.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import const Input
 import { InputFactory } from '../../../../../org/allbinary/game/input/InputFactory.js';
-//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
+//not GWT import const InputFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { PreLogUtil } 
@@ -37,7 +35,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputMapping } from './InputMapping.js';
-//not GWT import - same folder const InputMapping = globalThis.org.allbinary.game.input.mapping.InputMapping;
+//not GWT import - same folder const InputMapping
 export class InputToGameKeyMapping extends InputMapping {
     static getNullInstance() {
         if (InputToGameKeyMapping.instance == NullUtil.getInstance().NULL_OBJECT) {

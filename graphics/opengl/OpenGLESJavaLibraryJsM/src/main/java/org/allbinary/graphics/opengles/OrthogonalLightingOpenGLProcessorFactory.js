@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullOpenGLProcessorFactory } from './NullOpenGLProcessorFactory.js';
-//not GWT import - same folder const OpenGLProcessor = globalThis.org.allbinary.graphics.opengles.OpenGLProcessor;
+//not GWT import - same folder const OpenGLProcessor
 export class OrthogonalLightingOpenGLProcessorFactory extends Object {
     constructor() {
         super(...arguments);

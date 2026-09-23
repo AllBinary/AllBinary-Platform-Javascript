@@ -11,21 +11,20 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not GWT import const ArtificialIntelligenceInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceInterface;
+import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const ArtificialIntelligenceInterface
 import { Direction } from '../../../../../org/allbinary/direction/Direction.js';
-//not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
+//not GWT import const Direction
 import { DirectionFactory } from '../../../../../org/allbinary/direction/DirectionFactory.js';
-//not GWT import const DirectionalInterface = globalThis.org.allbinary.direction.DirectionalInterface;
+//not GWT import const DirectionalInterface
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const DestroyedEvent = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEvent;
+//not GWT import const DestroyedEvent
 import { DestroyedEventHandler } from '../../../../../org/allbinary/game/combat/destroy/event/DestroyedEventHandler.js';
-//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
+//not GWT import const TrackingEvent
 import { TrackingEventHandler } from '../../../../../org/allbinary/game/tracking/TrackingEventHandler.js';
-//not GWT import const TrackingEventListenerInterface = globalThis.org.allbinary.game.tracking.TrackingEventListenerInterface;
+//not GWT import const TrackingEventListenerInterface
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //not plain js import { MathUtil } 
@@ -34,13 +33,13 @@ const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not GWT import const AllBinaryEventObject
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
-//not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
+//not GWT import const GameTickTimeDelayHelper
 import { GameTickTimeDelayHelperFactory } from '../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
-//not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
+//not GWT import const GameTickTimeDelayHelperFactory
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import const TimeDelayHelper
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 

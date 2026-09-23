@@ -17,7 +17,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThreadPool } from './ThreadPool.js';
-//not GWT import - same folder const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
+//not GWT import - same folder const ThreadPool
 export class PrimaryThreadPool extends ThreadPool {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

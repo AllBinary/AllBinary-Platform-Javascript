@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const AllBinaryEventObjectFactoryInterface = globalThis.org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface;
+//not GWT import const AllBinaryEventObjectFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEvent } from './TrackingEvent.js';
-//not GWT import - same folder const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
+//not GWT import - same folder const TrackingEvent
 import { TrackingEventHandler } from './TrackingEventHandler.js';
-//not GWT import - same folder const TrackingEventHandler = globalThis.org.allbinary.game.tracking.TrackingEventHandler;
+//not GWT import - same folder const TrackingEventHandler
 export class TrackingEventFactory extends Object {
     constructor() {
         super();

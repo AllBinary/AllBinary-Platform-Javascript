@@ -11,14 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { NumberStringHud } from '../../../../../../../../org/allbinary/game/ag/layer/hud/basic/NumberStringHud.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScoreHudWidget extends NumberStringHud {
     //@Throws(Exception.constructor)

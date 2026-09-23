@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LocationPaintable } from './LocationPaintable.js';
-//not GWT import - same folder const LocationPaintable = globalThis.org.allbinary.graphics.paint.LocationPaintable;
+//not GWT import - same folder const LocationPaintable
 export class NullLocationPaintable extends LocationPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

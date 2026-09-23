@@ -13,16 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../../../java/lang/Exception.js';
-//not GWT import const AdvancedRTSGameLayer = globalThis.org.allbinary.game.layer.AdvancedRTSGameLayer;
+//not GWT import const AdvancedRTSGameLayer
 import { WaypointLayer } from '../../../../../../../org/allbinary/game/layer/waypoint/WaypointLayer.js';
-//not GWT import const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
+//not GWT import const CellPosition
 import { AllBinaryLayer } from '../../../../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const GeographicMapCellTypeFactory = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory;
+//not GWT import const GeographicMapCellTypeFactory
 import { DropCellPositionHistory } from '../../../../../../../org/allbinary/media/graphics/geography/map/drop/DropCellPositionHistory.js';
-//not GWT import const DropCellPositionHistory = globalThis.org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory;
+//not GWT import const DropCellPositionHistory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomMapGeneratorBase } from './CustomMapGeneratorBase.js';
-//not GWT import - same folder const RaceTrackGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMap;
+//not GWT import - same folder const RaceTrackGeographicMap
 export class CustomMapGenerator extends CustomMapGeneratorBase {
     constructor(raceTrackGeographicMap) {
         super();

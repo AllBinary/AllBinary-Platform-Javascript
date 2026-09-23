@@ -12,12 +12,13 @@
         *  Created By: Travis Berthelot
 */
 import { Thread } from '../../../java/lang/Thread.js';
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not GWT import const CommandListener
+import { TsUtil } from '../../../org/allbinary/TsUtil.js';
+//not GWT import const TsUtil
 import { NullWaitGameRunnable } from '../../../org/allbinary/game/displayable/canvas/NullWaitGameRunnable.js';
-//not GWT import const NullWaitGameRunnable = globalThis.org.allbinary.game.displayable.canvas.NullWaitGameRunnable;
+//not GWT import const NullWaitGameRunnable
 import { MyCanvas } from '../../../org/allbinary/graphics/displayable/MyCanvas.js';
-//not GWT import const MyCanvas = globalThis.org.allbinary.graphics.displayable.MyCanvas;
+//not GWT import const MyCanvas
 //not plain js import { ABSystemWrapper } 
 const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
 //not plain js import { NullUtil } 
@@ -33,24 +34,25 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { NullThread } from '../../../org/allbinary/thread/NullThread.js';
-//not GWT import const RunnableInterface = globalThis.org.allbinary.thread.RunnableInterface;
+//not GWT import const RunnableInterface
 import { ThreadObjectUtil } from '../../../org/allbinary/thread/ThreadObjectUtil.js';
-//not GWT import const ThreadObjectUtil = globalThis.org.allbinary.thread.ThreadObjectUtil;
+//not GWT import const ThreadObjectUtil
 import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import const TimeDelayHelper
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Processor } from './Processor.js';
-//not GWT import - same folder const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import - same folder const Processor
 import { RunnableCanvasRefreshHelper } from './RunnableCanvasRefreshHelper.js';
-//not GWT import - same folder const RunnableCanvasRefreshHelper = globalThis.org.allbinary.canvas.RunnableCanvasRefreshHelper;
+//not GWT import - same folder const RunnableCanvasRefreshHelper
 export class RunnableCanvas extends MyCanvas {
     constructor(commandListener, childNameList, hasParam) {
         super(CommonStrings.getInstance().UNKNOWN, childNameList);
         this.nullUtil = NullUtil.getInstance();
         this.stdUtil = StdUtil.getInstance();
         this.systemWrapper = ABSystemWrapper.getInstance();
+        this.tsUtil = TsUtil.getInstance();
         this.thread = NullThread.NULL_THREAD;
         this.currentThread = NullThread.NULL_THREAD;
         this.running = false;
@@ -69,7 +71,7 @@ export class RunnableCanvas extends MyCanvas {
         this.pauseWait = 0;
         this.notified = false;
         //For kotlin this is before the body of the constructor.
-        this.logUtil.putF(new StringMaker().append("delay: ").appendint(this.loopTimeHelper.delay).toString(), this, this.commonStrings.CONSTRUCTOR);
+        this.logUtil.putF(new StringMaker().append("RunnableCanvas delay: ").appendint(this.loopTimeHelper.delay).toString(), this, this.commonStrings.CONSTRUCTOR);
         this.runnableCanvasRefreshHelper = new RunnableCanvasRefreshHelper(this);
         if (commandListener !=
             null) {

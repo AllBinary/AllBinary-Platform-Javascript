@@ -13,20 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const WritableRaster = globalThis.java.awt.image.WritableRaster;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageUtil } from './ImageUtil.js';
-//not GWT import - same folder const ImageUtil = globalThis.org.allbinary.media.image.ImageUtil;
+//not GWT import - same folder const ImageUtil
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil = globalThis.org.allbinary.media.image.ImageCreationUtil;
+//not GWT import - same folder const ImageCreationUtil
 export class ImageModifierUtil extends Object {
     constructor() {
         super(...arguments);

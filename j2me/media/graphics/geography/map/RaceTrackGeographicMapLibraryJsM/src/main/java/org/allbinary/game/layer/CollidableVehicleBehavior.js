@@ -11,14 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const PickedUpLayerInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterface;
+//not GWT import const PickedUpLayerInterface
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not GWT import const CollisionType = globalThis.org.allbinary.game.collision.CollisionType;
+//not GWT import const CollisionType
 import { CollisionTypeFactory } from '../../../../org/allbinary/game/collision/CollisionTypeFactory.js';
-//not GWT import const CollisionTypeFactory = globalThis.org.allbinary.game.collision.CollisionTypeFactory;
+//not GWT import const CollisionTypeFactory
 import { CollidableDestroyableDamageableBehavior } from '../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableBehavior.js';
-//not GWT import - same folder const VehicleFrictionProperties = globalThis.org.allbinary.game.layer.VehicleFrictionProperties;
+//not GWT import - same folder const VehicleFrictionProperties
 export class CollidableVehicleBehavior extends CollidableDestroyableDamageableBehavior {
     constructor(collidable) {
         super(collidable);

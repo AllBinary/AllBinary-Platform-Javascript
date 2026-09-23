@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSPlayerGameInputProcessor } from './RTSPlayerGameInputProcessor.js';
-//not GWT import - same folder const RTSPlayerGameInput = globalThis.org.allbinary.game.input.RTSPlayerGameInput;
+//not GWT import - same folder const RTSPlayerGameInput
 export class RTSPlayerRightGameInputProcessor extends RTSPlayerGameInputProcessor {
     constructor(rtsPlayerGameInput) {
         super(rtsPlayerGameInput);

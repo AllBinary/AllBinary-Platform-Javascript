@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not GWT import const VideoInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.VideoInterface;
+//not GWT import const VideoInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PCI extends Object {
     constructor(data) {

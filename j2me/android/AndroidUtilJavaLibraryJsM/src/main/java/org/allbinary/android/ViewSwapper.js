@@ -1,6 +1,6 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const ViewGroup = globalThis.android.view.ViewGroup;
+//not GWT import const ViewGroup
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ViewSwapper extends Object {
     constructor(activity, rootViewId) {

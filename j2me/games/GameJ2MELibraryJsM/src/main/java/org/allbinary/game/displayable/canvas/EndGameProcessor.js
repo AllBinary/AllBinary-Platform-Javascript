@@ -12,13 +12,13 @@
         *  Created By: Travis Berthelot
 */
 import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
-//not GWT import const HighScoresHelperBase = globalThis.org.allbinary.game.score.HighScoresHelperBase;
+//not GWT import const HighScoresHelperBase
 import { NullHighScoresSingletonFactory } from '../../../../../org/allbinary/game/score/NullHighScoresSingletonFactory.js';
-//not GWT import const NullHighScoresSingletonFactory = globalThis.org.allbinary.game.score.NullHighScoresSingletonFactory;
+//not GWT import const NullHighScoresSingletonFactory
 import { GameStateFactory } from '../../../../../org/allbinary/game/state/GameStateFactory.js';
-//not GWT import const GameStateFactory = globalThis.org.allbinary.game.state.GameStateFactory;
+//not GWT import const GameStateFactory
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas
 export class EndGameProcessor extends Processor {
     constructor(gameCanvas) {
         super();

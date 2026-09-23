@@ -11,11 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
+//not GWT import const Layer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PaintableLayerComposite extends Paintable {
     constructor(paintableArray) {

@@ -13,17 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Context = globalThis.android.content.Context;
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not GWT import const CommandListener
 import { Intent } from '../../../../../android/content/Intent.js';
-//not GWT import const Intent = globalThis.android.content.Intent;
+//not GWT import const Intent
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not GWT import const TsUtil
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
@@ -34,7 +28,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AboutCommandProcessor } from './AboutCommandProcessor.js';
-//not GWT import - same folder const AboutCommandProcessor = globalThis.org.allbinary.graphics.displayable.screen.AboutCommandProcessor;
+//not GWT import - same folder const AboutCommandProcessor
 export class WebCommandProcessor extends Object {
     constructor() {
         super(...arguments);

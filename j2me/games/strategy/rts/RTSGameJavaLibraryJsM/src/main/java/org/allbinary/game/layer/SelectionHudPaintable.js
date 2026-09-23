@@ -11,32 +11,28 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import const Animation
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import const DisplayInfoSingleton
 import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontProcessor.js';
-//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
+//not GWT import const UpdateMyFontInterface
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-//not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
+//not GWT import const UpdateMyFontProcessor
 import { InitUpdatePaintable } from '../../../../org/allbinary/graphics/paint/InitUpdatePaintable.js';
-//not GWT import const InitUpdatePaintable = globalThis.org.allbinary.graphics.paint.InitUpdatePaintable;
+//not GWT import const InitUpdatePaintable
 import { CommonButtons } from '../../../../org/allbinary/input/motion/button/CommonButtons.js';
-//not GWT import const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
+//not GWT import const CommonButtons
 import { TouchButtonLocationHelper } from '../../../../org/allbinary/input/motion/button/TouchButtonLocationHelper.js';
-//not GWT import const TouchButtonLocationHelper = globalThis.org.allbinary.input.motion.button.TouchButtonLocationHelper;
-//not plain js import { PrimitiveLongUtil } 
-const PrimitiveLongUtil = globalThis.org.allbinary.logic.math.PrimitiveLongUtil;
+//not GWT import const TouchButtonLocationHelper
+import { PrimitiveLongUtil } from '../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
+//not GWT import const PrimitiveLongUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SelectionHudPaintable extends InitUpdatePaintable {
     constructor() {

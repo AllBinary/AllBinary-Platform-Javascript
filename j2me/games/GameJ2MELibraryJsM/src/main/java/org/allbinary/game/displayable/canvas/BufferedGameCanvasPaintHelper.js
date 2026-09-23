@@ -13,23 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 import { NullCanvas } from '../../../../../javax/microedition/lcdui/NullCanvas.js';
-//not GWT import const NullCanvas = globalThis.javax.microedition.lcdui.NullCanvas;
+//not GWT import const NullCanvas
 import { NullImage } from '../../../../../javax/microedition/lcdui/NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not GWT import const NullImage
 import { Anchor } from '../../../../../org/allbinary/graphics/Anchor.js';
-//not GWT import const MyCanvas = globalThis.org.allbinary.graphics.displayable.MyCanvas;
+//not GWT import const MyCanvas
 import { ProcessPaintable } from '../../../../../org/allbinary/graphics/paint/ProcessPaintable.js';
-//not GWT import const ProcessPaintable = globalThis.org.allbinary.graphics.paint.ProcessPaintable;
+//not GWT import const ProcessPaintable
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas
 export class BufferedGameCanvasPaintHelper extends ProcessPaintable {
     constructor(gameCanvas) {
         super();

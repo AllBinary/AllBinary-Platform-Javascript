@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import const HashMap = globalThis.java.util.HashMap;
+//not GWT import const HashMap
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MediaTypeData } from './MediaTypeData.js';
-//not GWT import - same folder const MediaTypeData = globalThis.org.allbinary.logic.visual.media.MediaTypeData;
+//not GWT import - same folder const MediaTypeData
 import { MediaDataFactory } from './MediaDataFactory.js';
-//not GWT import - same folder const MediaDataFactory = globalThis.org.allbinary.logic.visual.media.MediaDataFactory;
+//not GWT import - same folder const MediaDataFactory
 export class MediaData extends Object {
     //@Throws(Exception.constructor)
     static get(a_Name) {

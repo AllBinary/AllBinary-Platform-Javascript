@@ -11,25 +11,23 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
+//not GWT import const RTSFormInput
 import { MultiSelectPaintable } from '../../../../org/allbinary/game/layer/MultiSelectPaintable.js';
-//not GWT import const MultiSelectPaintable = globalThis.org.allbinary.game.layer.MultiSelectPaintable;
+//not GWT import const MultiSelectPaintable
 import { RTSGameStrings } from '../../../../org/allbinary/game/layer/RTSGameStrings.js';
-//not GWT import const RTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.RTSPlayerLayerInterface;
+//not GWT import const RTSPlayerLayerInterface
 import { GameStateFactory } from '../../../../org/allbinary/game/state/GameStateFactory.js';
-//not GWT import const GameStateFactory = globalThis.org.allbinary.game.state.GameStateFactory;
+//not GWT import const GameStateFactory
 import { EndLevelNoBuildingSelectedTouchButtonsBuilder } from '../../../../org/allbinary/input/motion/button/EndLevelNoBuildingSelectedTouchButtonsBuilder.js';
-//not GWT import const EndLevelNoBuildingSelectedTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.EndLevelNoBuildingSelectedTouchButtonsBuilder;
+//not GWT import const EndLevelNoBuildingSelectedTouchButtonsBuilder
 import { EndLevelTouchButtonsBuilder } from '../../../../org/allbinary/input/motion/button/EndLevelTouchButtonsBuilder.js';
-//not GWT import const EndLevelTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.EndLevelTouchButtonsBuilder;
+//not GWT import const EndLevelTouchButtonsBuilder
 import { NoBuildingSelectedTouchButtonsBuilder } from '../../../../org/allbinary/input/motion/button/NoBuildingSelectedTouchButtonsBuilder.js';
-//not GWT import const NoBuildingSelectedTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.NoBuildingSelectedTouchButtonsBuilder;
+//not GWT import const NoBuildingSelectedTouchButtonsBuilder
 import { RTSTouchButtonsBuilder } from '../../../../org/allbinary/input/motion/button/RTSTouchButtonsBuilder.js';
-//not GWT import const RTSTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.RTSTouchButtonsBuilder;
+//not GWT import const RTSTouchButtonsBuilder
 import { SelectBuildingSound } from '../../../../org/allbinary/media/audio/SelectBuildingSound.js';
-//not GWT import const SelectBuildingSound = globalThis.org.allbinary.media.audio.SelectBuildingSound;
+//not GWT import const SelectBuildingSound
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { CommonSeps } 
@@ -39,42 +37,40 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { BooleanFactory } from '../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-//not GWT import const AllBinaryGameLayerManager = globalThis.org.allbinary.game.layer.AllBinaryGameLayerManager;
+//not GWT import const AllBinaryGameLayerManager
 import { GameNotificationEvent } from '../../../../org/allbinary/game/layer/hud/event/GameNotificationEvent.js';
-//not GWT import const GameNotificationEvent = globalThis.org.allbinary.game.layer.hud.event.GameNotificationEvent;
+//not GWT import const GameNotificationEvent
 import { GameNotificationEventHandler } from '../../../../org/allbinary/game/layer/hud/event/GameNotificationEventHandler.js';
-//not GWT import const GameNotificationEventHandler = globalThis.org.allbinary.game.layer.hud.event.GameNotificationEventHandler;
+//not GWT import const GameNotificationEventHandler
 import { CollidableDestroyableDamageableLayer } from '../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
-//not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const GPoint
+import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const PointFactory
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { ScrollSelectionForm } from '../../../../org/allbinary/graphics/form/ScrollSelectionForm.js';
-//not GWT import const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
+//not GWT import const ScrollSelectionForm
 import { ABCustomItem } from '../../../../org/allbinary/graphics/form/item/ABCustomItem.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 import { NullInitUpdatePaintable } from '../../../../org/allbinary/graphics/paint/NullInitUpdatePaintable.js';
-//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
+//not GWT import const MotionGestureInput
 import { TouchMotionGestureFactory } from '../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
-//not GWT import const BaseMotionGestureEventListener = globalThis.org.allbinary.input.motion.gesture.observer.BaseMotionGestureEventListener;
+//not GWT import const BaseMotionGestureEventListener
 import { BasicMotionGesturesHandler } from '../../../../org/allbinary/input/motion/gesture/observer/BasicMotionGesturesHandler.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not GWT import const AllBinaryLayerManager
+import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 //not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { RectangleCollisionUtil } 
-const RectangleCollisionUtil = globalThis.org.allbinary.math.RectangleCollisionUtil;
+import { RectangleCollisionUtil } from '../../../../org/allbinary/math/RectangleCollisionUtil.js';
+//not GWT import const RectangleCollisionUtil
 import { ErrorSound } from '../../../../org/allbinary/media/audio/ErrorSound.js';
-//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
+//not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSPlayerGameInput } from './RTSPlayerGameInput.js';
-//not GWT import - same folder const SelectRTSLayerVisitorFactoryInterface = globalThis.org.allbinary.game.input.SelectRTSLayerVisitorFactoryInterface;
+//not GWT import - same folder const SelectRTSLayerVisitorFactoryInterface
 export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
     constructor(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface, touchButtonsBuilderFactory) {
         super(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface);

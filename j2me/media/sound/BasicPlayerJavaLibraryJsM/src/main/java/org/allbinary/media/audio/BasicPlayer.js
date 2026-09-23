@@ -13,15 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Control } 
-const Control = globalThis.javax.microedition.media.Control;
-//not plain js import { MediaException } 
-const MediaException = globalThis.javax.microedition.media.MediaException;
-//not plain js import { Player } 
-const Player = globalThis.javax.microedition.media.Player;
-const PlayerI = globalThis.javax.microedition.media.Player;
-//not plain js import { PlayerListener } 
-const PlayerListener = globalThis.javax.microedition.media.PlayerListener;
+//not GWT import const MediaException
+import { PlayerI } from '../../../../javax/microedition/media/Player.js';
+//not GWT import const PlayerListener
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
@@ -30,9 +24,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const Controllable2 = globalThis.org.allbinary.media.audio.Controllable2;
+//not GWT import - same folder const Controllable2
 import { NullControl } from './NullControl.js';
-//not GWT import - same folder const NullControl = globalThis.org.allbinary.media.audio.NullControl;
+//not GWT import - same folder const NullControl
 //BasicPlayerJavaLibrary
 export class BasicPlayer extends Object {
     constructor() {

@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not GWT import const AllBinaryLayerFactoryInterface = globalThis.org.allbinary.layer.AllBinaryLayerFactoryInterface;
+//not GWT import const AllBinaryLayerFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LifeLayer } from './LifeLayer.js';
-//not GWT import - same folder const LifeLayer = globalThis.org.allbinary.game.ag.layer.pickup.life.LifeLayer;
+//not GWT import - same folder const LifeLayer
 export class LifeLayerFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance() {

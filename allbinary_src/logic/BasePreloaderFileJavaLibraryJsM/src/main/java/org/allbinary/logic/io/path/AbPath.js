@@ -18,20 +18,20 @@ import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
 //not plain js import { FilePathData } 
 const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
 import { FilePathUtil } from '../../../../../org/allbinary/logic/io/file/FilePathUtil.js';
-//not GWT import const FilePathUtil = globalThis.org.allbinary.logic.io.file.FilePathUtil;
+//not GWT import const FilePathUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../../org/allbinary/logic/string/StringValidationUtil.js';
-//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not GWT import const StringValidationUtil
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //not plain js - same folder import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 import { PathUtil } from './PathUtil.js';
-//not GWT import - same folder const PathUtil = globalThis.org.allbinary.logic.io.path.PathUtil;
+//not GWT import - same folder const PathUtil
 export class AbPath extends Object {
     static createAbPath() {
         try {

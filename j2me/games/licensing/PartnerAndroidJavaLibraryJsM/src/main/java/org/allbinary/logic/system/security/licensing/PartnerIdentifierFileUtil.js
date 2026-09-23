@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not GWT import const InputStream
 import { InputStreamReader } from '../../../../../../java/io/InputStreamReader.js';
-//not GWT import const InputStreamReader = globalThis.java.io.InputStreamReader;
+//not GWT import const InputStreamReader
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //not plain js import { LogUtil } 

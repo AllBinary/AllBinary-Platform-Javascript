@@ -11,16 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import const Animation
 import { AnimationBehaviorFactory } from '../../../../org/allbinary/animation/AnimationBehaviorFactory.js';
-//not GWT import const RotationAnimation = globalThis.org.allbinary.animation.RotationAnimation;
+//not GWT import const RotationAnimation
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompoundAnimationInterfaceFactory } from './CompoundAnimationInterfaceFactory.js';
-//not GWT import - same folder const CompoundAnimationInterfaceFactory = globalThis.org.allbinary.animation.compound.CompoundAnimationInterfaceFactory;
+//not GWT import - same folder const CompoundAnimationInterfaceFactory
 import { CompoundRotationAnimation } from './CompoundRotationAnimation.js';
-//not GWT import - same folder const CompoundRotationAnimation = globalThis.org.allbinary.animation.compound.CompoundRotationAnimation;
+//not GWT import - same folder const CompoundRotationAnimation
 export class CompoundRotationAnimationInterfaceFactory extends CompoundAnimationInterfaceFactory {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {
         super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory);

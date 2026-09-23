@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { NullOpenGLProcessorFactory } from '../../../../../org/allbinary/graphics/opengles/NullOpenGLProcessorFactory.js';
-//not GWT import const OpenGLProcessor = globalThis.org.allbinary.graphics.opengles.OpenGLProcessor;
+//not GWT import const OpenGLProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderComposite } from './ShaderComposite.js';
-//not GWT import - same folder const ModelViewProjection = globalThis.org.allbinary.graphics.opengles.shader.ModelViewProjection;
+//not GWT import - same folder const ModelViewProjection
 export class PlatformShaderComposite extends ShaderComposite {
     constructor(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor) {
         super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, NullOpenGLProcessorFactory.getInstance());

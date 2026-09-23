@@ -12,24 +12,24 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../java/lang/Integer.js';
-//not plain js import { Choice } 
-const Choice = globalThis.javax.microedition.lcdui.Choice;
-//not plain js import { ChoiceGroup } 
-const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Item } 
-const Item = globalThis.javax.microedition.lcdui.Item;
+import { ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
+//not GWT import const Choice
+import { ChoiceGroup } from '../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not GWT import const CommandListener
+import { Item } from '../../../../javax/microedition/lcdui/Item.js';
+//not GWT import const Item
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
-//not plain js import { StringItem } 
-const StringItem = globalThis.javax.microedition.lcdui.StringItem;
+//not GWT import const NullImage
+import { StringItem } from '../../../../javax/microedition/lcdui/StringItem.js';
+//not GWT import const StringItem
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
-//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
+//not GWT import const GameCommandsFactory
 import { GamePersistanceSingleton } from '../../../../org/allbinary/game/configuration/persistance/GamePersistanceSingleton.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
-//not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
+//not GWT import const CommandForm
+import { MEUtil } from '../../../../org/allbinary/logic/MEUtil.js';
+//not GWT import const MEUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
@@ -40,6 +40,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export class LoadGameForm extends CommandForm {
     constructor(commandListener, title, backgrounBasicColor, foregroundBasicColor) {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
+        this.meUtil = MEUtil.getInstance();
         this.areChoices = false;
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
@@ -65,7 +66,7 @@ export class LoadGameForm extends CommandForm {
             this.areChoices = true;
         }
         else {
-            this.append(new StringItem("No Saved Games", StringUtil.getInstance().EMPTY_STRING, Item.PLAIN));
+            this.meUtil.appendItem(this, new StringItem("No Saved Games", StringUtil.getInstance().EMPTY_STRING, Item.PLAIN));
             this.areChoices = false;
         }
         super.update();
@@ -76,7 +77,7 @@ export class LoadGameForm extends CommandForm {
         if (list.size() > 0) {
             choiceGroup.setSelectedIndex(0, true);
         }
-        this.append(choiceGroup);
+        this.meUtil.appendItem(this, choiceGroup);
     }
     getChoiceGroup(list, name, option) {
         var METHOD_NAME = "getChoiceGroup";

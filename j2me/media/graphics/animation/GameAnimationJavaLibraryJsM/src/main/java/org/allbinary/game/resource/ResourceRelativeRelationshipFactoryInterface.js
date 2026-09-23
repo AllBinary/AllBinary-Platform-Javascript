@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
+//not GWT import const RelativeRelationship
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export {};

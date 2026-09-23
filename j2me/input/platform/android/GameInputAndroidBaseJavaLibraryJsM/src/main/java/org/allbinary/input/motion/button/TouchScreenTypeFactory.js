@@ -13,18 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 import { Configuration } from '../../../../../android/content/res/Configuration.js';
-//not GWT import const Configuration = globalThis.android.content.res.Configuration;
+//not GWT import const Configuration
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchScreenFactory } from './TouchScreenFactory.js';
-//not GWT import - same folder const TouchScreenFactory = globalThis.org.allbinary.input.motion.button.TouchScreenFactory;
+//not GWT import - same folder const TouchScreenFactory
 import { TouchScreenTypesFactory } from './TouchScreenTypesFactory.js';
-//not GWT import - same folder const TouchScreenTypesFactory = globalThis.org.allbinary.input.motion.button.TouchScreenTypesFactory;
+//not GWT import - same folder const TouchScreenTypesFactory
 export class TouchScreenTypeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

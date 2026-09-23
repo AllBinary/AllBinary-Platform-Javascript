@@ -1,16 +1,16 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const MalformedURLException = globalThis.java.net.MalformedURLException;
+//not GWT import const MalformedURLException
 import { URL } from '../../../java/net/URL.js';
-//not GWT import const URL = globalThis.java.net.URL;
+//not GWT import const URL
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const CryptInterface = globalThis.org.allbinary.init.crypt.jcehelper.CryptInterface;
+//not GWT import const CryptInterface
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const XmlRpcHandler = globalThis.org.apache.xmlrpc.XmlRpcHandler;
+//not GWT import - same folder const XmlRpcHandler
 export class XmlRpcClient extends Object {
     constructor(url) {
         super();

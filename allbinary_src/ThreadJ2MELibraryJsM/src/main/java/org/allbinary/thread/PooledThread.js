@@ -22,7 +22,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThreadObjectUtil } from './ThreadObjectUtil.js';
-//not GWT import - same folder const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
+//not GWT import - same folder const ThreadPool
 export class PooledThread extends Thread {
     constructor(threadPool) {
         super(threadPool.createName());

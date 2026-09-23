@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { ArtificialIntelligence } from '../../../../../../org/allbinary/ai/ArtificialIntelligence.js';
-//not GWT import const ArtificialIntelligenceTransitionInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceTransitionInterface;
+//not GWT import const ArtificialIntelligenceTransitionInterface
 import { ArrayAI } from '../../../../../../org/allbinary/game/ag/ai/ArrayAI.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 

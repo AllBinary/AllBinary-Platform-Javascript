@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import - same folder const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
+//not GWT import - same folder const GeographicMapCellPosition
 export class NoGeographicMapCellPositionFactoryInitVisitor extends Object {
     //@Throws(Exception.constructor)
     visit(tiledLayer, cellPosition) {

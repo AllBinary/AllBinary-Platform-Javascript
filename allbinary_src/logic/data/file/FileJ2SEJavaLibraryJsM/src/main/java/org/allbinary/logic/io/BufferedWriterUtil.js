@@ -14,15 +14,15 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { BufferedWriter } from '../../../../java/io/BufferedWriter.js';
-//not GWT import const BufferedWriter = globalThis.java.io.BufferedWriter;
+//not GWT import const BufferedWriter
 import { FileWriter } from '../../../../java/io/FileWriter.js';
-//not GWT import const FileWriter = globalThis.java.io.FileWriter;
+//not GWT import const FileWriter
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
-//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
+//not GWT import const AbFileNativeUtil
 //not plain js import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 //not plain js import { StringMaker } 

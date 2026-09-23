@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const RectangleResourceFactoryInterface = globalThis.org.allbinary.game.resource.RectangleResourceFactoryInterface;
+//not GWT import const RectangleResourceFactoryInterface
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 export {};

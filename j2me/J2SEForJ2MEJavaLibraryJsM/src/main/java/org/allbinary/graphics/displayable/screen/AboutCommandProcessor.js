@@ -13,12 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not GWT import const CommandListener
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AboutCommandProcessor extends Object {
     static getInstance() {

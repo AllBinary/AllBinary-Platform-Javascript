@@ -15,6 +15,8 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
+//not plain js import { StringUtil } 
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
@@ -43,6 +45,11 @@ const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormat
         var message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
         ;
         console.log(PreLogUtil.LOG_SUCCESS + message);
+    }
+    static getClassName(anyType = {}) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return anyType.constructor.name.toString();
+        ;
     }
     constructor() {
         super();

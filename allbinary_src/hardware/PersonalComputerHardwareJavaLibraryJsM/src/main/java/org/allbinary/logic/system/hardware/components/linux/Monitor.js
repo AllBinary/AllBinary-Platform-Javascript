@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not GWT import const MonitorInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.MonitorInterface;
+//not GWT import const MonitorInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Monitor extends Object {
     constructor(data) {

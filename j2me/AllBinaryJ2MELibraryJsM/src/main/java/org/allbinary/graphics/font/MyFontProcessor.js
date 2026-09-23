@@ -13,10 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MyFontProcessor extends Object {
     static defaultCharWidth(font) {
@@ -30,7 +27,7 @@ export class MyFontProcessor extends Object {
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return instance;
+        return MyFontProcessor.instance;
     }
     process(graphics) {
     }

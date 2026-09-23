@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import - same folder const Animation
 export class SingletonAnimationInterfaceFactory extends Object {
     constructor(animationInterface) {
         super();

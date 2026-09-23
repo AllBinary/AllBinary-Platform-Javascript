@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GenericOperatingSystem } from './GenericOperatingSystem.js';
-//not GWT import - same folder const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
+//not GWT import - same folder const GenericOperatingSystem
 export class NoOperatingSystem extends GenericOperatingSystem {
     constructor() {
         super();

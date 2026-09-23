@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { NullPathFindingLayer } from '../../../../../org/allbinary/game/layer/NullPathFindingLayer.js';
-//not GWT import const WaypointLayer = globalThis.org.allbinary.game.layer.waypoint.WaypointLayer;
+//not GWT import const WaypointLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PrimaryWaypointHelper extends Object {
     static getInstance() {

@@ -14,7 +14,7 @@
 import { Object } from '../../../java/lang/Object.js';
 import { Integer } from '../../../java/lang/Integer.js';
 import { Build } from '../../../android/os/Build.js';
-//not GWT import const Build = globalThis.android.os.Build;
+//not GWT import const Build
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AndroidInfoFactory extends Object {
     constructor() {

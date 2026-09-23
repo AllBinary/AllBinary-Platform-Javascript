@@ -13,21 +13,21 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const OutputStream = globalThis.java.io.OutputStream;
+//not GWT import const OutputStream
 import { LicenseInitInfoUtil } from '../../../../../../org/allbinary/business/init/LicenseInitInfoUtil.js';
-//not GWT import const LicenseInitInfoUtil = globalThis.org.allbinary.business.init.LicenseInitInfoUtil;
+//not GWT import const LicenseInitInfoUtil
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { FileStreamFactory } from '../../../../../../org/allbinary/logic/io/FileStreamFactory.js';
-//not GWT import const FileStreamFactory = globalThis.org.allbinary.logic.io.FileStreamFactory;
+//not GWT import const FileStreamFactory
 import { StreamUtil } from '../../../../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not GWT import const StreamUtil
 import { FileFactory } from '../../../../../../org/allbinary/logic/io/file/FileFactory.js';
-//not GWT import const FileFactory = globalThis.org.allbinary.logic.io.file.FileFactory;
+//not GWT import const FileFactory
 import { SimpleFileUtil } from '../../../../../../org/allbinary/logic/io/file/SimpleFileUtil.js';
-//not GWT import const SimpleFileUtil = globalThis.org.allbinary.logic.io.file.SimpleFileUtil;
+//not GWT import const SimpleFileUtil
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 

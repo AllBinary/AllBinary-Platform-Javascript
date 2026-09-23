@@ -13,7 +13,7 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ItemPaintable } from './ItemPaintable.js';
-//not GWT import - same folder const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
+//not GWT import - same folder const PaintableForm
 export class ItemPaintableFactory extends ItemPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

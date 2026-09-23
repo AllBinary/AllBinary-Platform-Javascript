@@ -11,39 +11,35 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Choice } 
-const Choice = globalThis.javax.microedition.lcdui.Choice;
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Item } 
-const Item = globalThis.javax.microedition.lcdui.Item;
-//not plain js import { TextField } 
-const TextField = globalThis.javax.microedition.lcdui.TextField;
+import { ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
+//not GWT import const Item
+import { TextField } from '../../../../javax/microedition/lcdui/TextField.js';
+//not GWT import const TextField
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
-//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
+//not GWT import const GameCommandsFactory
 import { GameFeatureChoiceGroups } from '../../../../org/allbinary/game/configuration/feature/GameFeatureChoiceGroups.js';
-//not GWT import const GameFeatureChoiceGroups = globalThis.org.allbinary.game.configuration.feature.GameFeatureChoiceGroups;
+//not GWT import const GameFeatureChoiceGroups
 import { GameFeatureFormUtil } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFormUtil.js';
-//not GWT import const GameFeatureFormUtil = globalThis.org.allbinary.game.configuration.feature.GameFeatureFormUtil;
+//not GWT import const GameFeatureFormUtil
 import { GameFeatureItemCommandListener } from '../../../../org/allbinary/game/configuration/feature/GameFeatureItemCommandListener.js';
-//not GWT import const GameFeatureItemCommandListener = globalThis.org.allbinary.game.configuration.feature.GameFeatureItemCommandListener;
+//not GWT import const GameFeatureItemCommandListener
 import { GameFeatureItemStateListener } from '../../../../org/allbinary/game/configuration/feature/GameFeatureItemStateListener.js';
-//not GWT import const GameFeatureItemStateListener = globalThis.org.allbinary.game.configuration.feature.GameFeatureItemStateListener;
+//not GWT import const GameFeatureItemStateListener
 import { SensorFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/SensorFeatureFactory.js';
-//not GWT import const SensorFeatureFactory = globalThis.org.allbinary.game.configuration.feature.SensorFeatureFactory;
+//not GWT import const SensorFeatureFactory
 import { GameConfigurationPersistanceSingleton } from '../../../../org/allbinary/game/configuration/persistance/GameConfigurationPersistanceSingleton.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { MyCommandsFactory } from '../../../../org/allbinary/graphics/displayable/command/MyCommandsFactory.js';
-//not GWT import const MyCommandsFactory = globalThis.org.allbinary.graphics.displayable.command.MyCommandsFactory;
+//not GWT import const MyCommandsFactory
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
-//not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
+//not GWT import const CommandForm
 import { OrientationData } from '../../../../org/allbinary/input/gyro/OrientationData.js';
-//not GWT import const OrientationData = globalThis.org.allbinary.input.gyro.OrientationData;
+//not GWT import const OrientationData
+import { MEUtil } from '../../../../org/allbinary/logic/MEUtil.js';
+//not GWT import const MEUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not GWT import const AbeClientInformationInterface
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { HashtableUtil } 
@@ -54,18 +50,19 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfigurationTextInput } from './GameConfigurationTextInput.js';
-//not GWT import - same folder const GameConfigurationTextInput = globalThis.org.allbinary.game.configuration.GameConfigurationTextInput;
+//not GWT import - same folder const GameConfigurationTextInput
 import { GameConfigurationSingleton } from './GameConfigurationSingleton.js';
-//not GWT import - same folder const GameConfiguration = globalThis.org.allbinary.game.configuration.GameConfiguration;
+//not GWT import - same folder const GameConfiguration
 import { GameConfigurationGauge } from './GameConfigurationGauge.js';
-//not GWT import - same folder const GameConfigurationGauge = globalThis.org.allbinary.game.configuration.GameConfigurationGauge;
+//not GWT import - same folder const GameConfigurationGauge
 import { GameConfigurationUtil } from './GameConfigurationUtil.js';
-//not GWT import - same folder const GameConfigurationUtil = globalThis.org.allbinary.game.configuration.GameConfigurationUtil;
+//not GWT import - same folder const GameConfigurationUtil
 import { GameConfigurationCentral } from './GameConfigurationCentral.js';
-//not GWT import - same folder const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
+//not GWT import - same folder const GameConfigurationCentral
 export class GameOptionsForm extends CommandForm {
     constructor(commandListener, title, backgrounBasicColor, foregroundBasicColor) {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
+        this.meUtil = MEUtil.getInstance();
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
         this.addConfiguration();
@@ -115,7 +112,7 @@ export class GameOptionsForm extends CommandForm {
         for (var index = 0; index < size; index++) {
             gameConfigurationTextInput = hashtable.get(objectArray[index]);
             textField = new TextField(gameConfigurationTextInput.getLabel(), gameConfigurationTextInput.getText(), 30, TextField.ANY);
-            this.append(textField);
+            this.meUtil.appendItem(this, textField);
         }
     }
     addConfiguration() {
@@ -142,7 +139,7 @@ export class GameOptionsForm extends CommandForm {
             gauge = new GameConfigurationGauge(gameConfiguration);
             gauge.setDefaultCommand(GAUGE_CHANGE);
             gauge.setItemCommandListener(new GameFeatureItemCommandListener(this));
-            this.append(gauge);
+            this.meUtil.appendItem(this, gauge);
         }
     }
     initCommands(cmdListener) {

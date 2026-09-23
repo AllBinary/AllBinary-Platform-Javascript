@@ -14,21 +14,21 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { PATH_GLOBALS } from '../../../../org/allbinary/globals/PATH_GLOBALS.js';
-//not GWT import const PATH_GLOBALS = globalThis.org.allbinary.globals.PATH_GLOBALS;
+//not GWT import const PATH_GLOBALS
 import { URLGLOBALS } from '../../../../org/allbinary/globals/URLGLOBALS.js';
-//not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
+//not GWT import const URLGLOBALS
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbIOSystem } from '../../../../org/allbinary/logic/io/AbIOSystem.js';
-//not GWT import const AbIOSystem = globalThis.org.allbinary.logic.io.AbIOSystem;
+//not GWT import const AbIOSystem
 import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { FileUtil } from '../../../../org/allbinary/logic/io/file/FileUtil.js';
-//not GWT import const FileUtil = globalThis.org.allbinary.logic.io.file.FileUtil;
+//not GWT import const FileUtil
 import { Directory } from '../../../../org/allbinary/logic/io/file/directory/Directory.js';
-//not GWT import const Directory = globalThis.org.allbinary.logic.io.file.directory.Directory;
+//not GWT import const Directory
 import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
-//not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
+//not GWT import const AbPath
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 

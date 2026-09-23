@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const WaypointLayerInterface = globalThis.org.allbinary.game.layer.waypoint.WaypointLayerInterface;
+//not GWT import const WaypointLayerInterface
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export {};

@@ -22,9 +22,9 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
+//not GWT import const HardwareInterface
 import { ComponentFactory } from '../../../../../../org/allbinary/logic/system/hardware/components/ComponentFactory.js';
-//not GWT import const VideoInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.VideoInterface;
+//not GWT import const VideoInterface
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { ABHashtable } 

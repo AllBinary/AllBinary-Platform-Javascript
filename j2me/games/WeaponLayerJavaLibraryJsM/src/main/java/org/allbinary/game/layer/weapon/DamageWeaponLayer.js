@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
+//not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WeaponLayer } from './WeaponLayer.js';
-//not GWT import - same folder const WeaponLayer = globalThis.org.allbinary.game.layer.weapon.WeaponLayer;
+//not GWT import - same folder const WeaponLayer
 import { CollidableDamageWeaponBehavior } from './CollidableDamageWeaponBehavior.js';
-//not GWT import - same folder const CollidableDamageWeaponBehavior = globalThis.org.allbinary.game.layer.weapon.CollidableDamageWeaponBehavior;
+//not GWT import - same folder const CollidableDamageWeaponBehavior
 export class DamageWeaponLayer extends WeaponLayer {
     constructor(name, remoteInfo, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition, username, actorSessionId, id, multiPlayerType) {
         super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition);

@@ -15,9 +15,9 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameFeature } from './GameFeature.js';
-//not GWT import - same folder const GameFeature = globalThis.org.allbinary.game.configuration.feature.GameFeature;
+//not GWT import - same folder const GameFeature
 import { Feature } from './Feature.js';
-//not GWT import - same folder const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
+//not GWT import - same folder const Feature
 export class GameFeatureFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Scoreable } from '../../../../../../../../org/allbinary/game/score/Scoreable.js';
-//not GWT import - same folder const ScoreHudWidget = globalThis.org.allbinary.game.ag.layer.hud.basic.score.ScoreHudWidget;
+//not GWT import - same folder const ScoreHudWidget
 export class ScoreableAddOnlyForHud extends Scoreable {
     constructor(scoreVectorGraphic) {
         super(0);

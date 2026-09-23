@@ -13,8 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { RecordFilter } 
-const RecordFilter = globalThis.javax.microedition.rms.RecordFilter;
+//not GWT import const RecordFilter
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NullRecordFilter extends Object {
     matches(candidate) {

@@ -13,12 +13,12 @@
 */
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import const GeographicMapCellTypeFactory = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory;
+//not GWT import const GeographicMapCellTypeFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseRaceTrackGeographicMap } from './BaseRaceTrackGeographicMap.js';
-//not GWT import - same folder const CustomMapGeneratorBase = globalThis.org.allbinary.media.graphics.geography.map.racetrack.CustomMapGeneratorBase;
+//not GWT import - same folder const CustomMapGeneratorBase
 import { BasicGeographicMapFactory } from './BasicGeographicMapFactory.js';
-//not GWT import - same folder const CustomMapGeneratorBaseFactory = globalThis.org.allbinary.media.graphics.geography.map.racetrack.CustomMapGeneratorBaseFactory;
+//not GWT import - same folder const CustomMapGeneratorBaseFactory
 export class RaceTrackGeographicMap extends BaseRaceTrackGeographicMap {
     constructor(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory, customMapGeneratorBaseFactory) {
         super(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface.getInstance(raceTrackInfo, raceTrackData), new BasicGeographicMapFactory().getInstance(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory);

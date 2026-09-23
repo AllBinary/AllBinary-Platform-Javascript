@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
+//not GWT import const CollidableCompositeLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyableBaseBehavior } from './DestroyableBaseBehavior.js';
-//not GWT import - same folder const DestroyableBaseBehavior = globalThis.org.allbinary.game.combat.destroy.DestroyableBaseBehavior;
+//not GWT import - same folder const DestroyableBaseBehavior
 import { DestroyedLayerProcessor } from './DestroyedLayerProcessor.js';
-//not GWT import - same folder const DestroyedLayerProcessor = globalThis.org.allbinary.game.combat.destroy.DestroyedLayerProcessor;
+//not GWT import - same folder const DestroyedLayerProcessor
 export class DestroyableSimpleBehavior extends DestroyableBaseBehavior {
     constructor(ownerLayer) {
         super();

@@ -11,14 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
+//not GWT import const RunnableCanvas
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameRunnable } from './GameRunnable.js';
-//not GWT import - same folder const GameRunnable = globalThis.org.allbinary.game.displayable.canvas.GameRunnable;
+//not GWT import - same folder const GameRunnable
 export class RunnableCanvasSingleThreadStartRunnable extends GameRunnable {
     constructor(demoCanvas) {
         super();

@@ -14,12 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { WeaponLayerCircularPool } from '../../../../../../../org/allbinary/game/layer/weapon/WeaponLayerCircularPool.js';
-//not GWT import const ViewPositionFactoryInterface = globalThis.org.allbinary.view.ViewPositionFactoryInterface;
+//not GWT import const ViewPositionFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MineCountedPickedUpLayerInterfaceFactory } from './MineCountedPickedUpLayerInterfaceFactory.js';
-//not GWT import - same folder const MineCountedPickedUpLayerInterfaceFactory = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineCountedPickedUpLayerInterfaceFactory;
+//not GWT import - same folder const MineCountedPickedUpLayerInterfaceFactory
 import { MineLayerFactory } from './MineLayerFactory.js';
-//not GWT import - same folder const MineLayerFactory = globalThis.org.allbinary.game.ag.layer.weapon.mine.MineLayerFactory;
+//not GWT import - same folder const MineLayerFactory
 export class MineLayerCircularStaticPool extends Object {
     //@Throws(Exception.constructor)
     static init(viewPositionFactoryInterface) {

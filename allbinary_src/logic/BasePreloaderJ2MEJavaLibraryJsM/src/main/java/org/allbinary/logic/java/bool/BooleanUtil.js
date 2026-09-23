@@ -15,14 +15,14 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not GWT import const TsUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { StringValidationUtil } from '../../../../../org/allbinary/logic/string/StringValidationUtil.js';
-//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not GWT import const StringValidationUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BooleanFactory } from './BooleanFactory.js';
-//not GWT import - same folder const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
+//not GWT import - same folder const BooleanFactory
 export class BooleanUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

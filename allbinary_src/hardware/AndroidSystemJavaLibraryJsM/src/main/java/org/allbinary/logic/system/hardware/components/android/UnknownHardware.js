@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not GWT import const HardwareComponentInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface;
+//not GWT import const HardwareComponentInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class UnknownHardware extends Object {
     constructor(data) {

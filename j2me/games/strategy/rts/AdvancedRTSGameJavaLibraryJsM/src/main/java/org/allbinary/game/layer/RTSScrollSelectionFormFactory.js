@@ -13,23 +13,23 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const ABCustomItem
+import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const PointFactory
 import { Rectangle } from '../../../../org/allbinary/graphics/Rectangle.js';
-//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not GWT import const Rectangle
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import const DisplayInfoSingleton
 import { FormTypeFactory } from '../../../../org/allbinary/graphics/form/FormTypeFactory.js';
-//not GWT import const FormTypeFactory = globalThis.org.allbinary.graphics.form.FormTypeFactory;
+//not GWT import const FormTypeFactory
 import { MultipleScrollSelectionHorizontalForm } from '../../../../org/allbinary/graphics/form/MultipleScrollSelectionHorizontalForm.js';
-//not GWT import const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
+//not GWT import const ScrollSelectionForm
 import { CommonButtons } from '../../../../org/allbinary/input/motion/button/CommonButtons.js';
-//not GWT import const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
+//not GWT import const CommonButtons
 import { TouchButtonLocationHelper } from '../../../../org/allbinary/input/motion/button/TouchButtonLocationHelper.js';
-//not GWT import const TouchButtonLocationHelper = globalThis.org.allbinary.input.motion.button.TouchButtonLocationHelper;
+//not GWT import const TouchButtonLocationHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RTSScrollSelectionFormFactory extends Object {
     //@Throws(Exception.constructor)

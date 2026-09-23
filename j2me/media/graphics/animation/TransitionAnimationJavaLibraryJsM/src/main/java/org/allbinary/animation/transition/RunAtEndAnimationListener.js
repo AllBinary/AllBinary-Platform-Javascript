@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const AnimationListenerInterface = globalThis.org.allbinary.animation.transition.AnimationListenerInterface;
+//not GWT import - same folder const AnimationListenerInterface
 export class RunAtEndAnimationListener extends Object {
     constructor(runnable) {
         super();

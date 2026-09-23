@@ -12,20 +12,20 @@
         *  Created By: Travis Berthelot
 */
 import { Integer } from '../../../../java/lang/Integer.js';
-//not plain js import { Choice } 
-const Choice = globalThis.javax.microedition.lcdui.Choice;
-//not plain js import { ChoiceGroup } 
-const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+import { ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
+//not GWT import const Choice
+import { ChoiceGroup } from '../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not GWT import const CommandListener
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not GWT import const NullImage
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
-//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
+//not GWT import const GameCommandsFactory
 import { GameDifficultyFactory } from '../../../../org/allbinary/game/configuration/persistance/GameDifficultyFactory.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
-//not GWT import const CommandForm = globalThis.org.allbinary.graphics.displayable.screen.CommandForm;
+//not GWT import const CommandForm
+import { MEUtil } from '../../../../org/allbinary/logic/MEUtil.js';
+//not GWT import const MEUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
@@ -36,6 +36,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export class GameDifficultyOptions extends CommandForm {
     constructor(commandListener, title, list, backgrounBasicColor, foregroundBasicColor) {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
+        this.meUtil = MEUtil.getInstance();
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
         this.list = list;
@@ -77,7 +78,7 @@ export class GameDifficultyOptions extends CommandForm {
         if (list.size() > 0) {
             choiceGroup.setSelectedIndex(0, true);
         }
-        this.append(choiceGroup);
+        this.meUtil.appendItem(this, choiceGroup);
     }
     getChoiceGroup(list, name, option) {
         var METHOD_NAME = "addChoiceGroup";
@@ -88,9 +89,10 @@ export class GameDifficultyOptions extends CommandForm {
         ;
         var size = list.size();
         ;
+        var anyType;
+        ;
         for (var index = 0; index < size; index++) {
-            var anyType = list.objectArray[index];
-            ;
+            anyType = list.objectArray[index];
             this.logUtil.putF(new StringMaker().append(NAME).append(anyType.toString()).toString(), this, METHOD_NAME);
             choiceGroup.append(anyType.toString(), NullImage.NULL_IMAGE);
         }

@@ -13,9 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
-//not GWT import - same folder const ScoreableInterface = globalThis.org.allbinary.game.score.ScoreableInterface;
+import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import - same folder const ScoreableInterface
 export class Scoreable extends Object {
     constructor(points) {
         super();

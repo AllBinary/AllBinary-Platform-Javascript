@@ -12,62 +12,60 @@
         *  Created By: Travis Berthelot
 */
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
+//not GWT import const RTSFormInput
 import { MultiPlayerGameLayer } from '../../../../org/allbinary/game/multiplayer/layer/MultiPlayerGameLayer.js';
-//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
+//not GWT import const IndexedAnimation
 import { NullAnimationFactory } from '../../../../org/allbinary/animation/NullAnimationFactory.js';
-//not GWT import const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
+//not GWT import const NullAnimationFactory
 import { NullIndexedAnimationFactory } from '../../../../org/allbinary/animation/NullIndexedAnimationFactory.js';
-//not GWT import const CaptionAnimationHelperBase = globalThis.org.allbinary.animation.caption.CaptionAnimationHelperBase;
+//not GWT import const CaptionAnimationHelperBase
 import { DestroyedLayerProcessor } from '../../../../org/allbinary/game/combat/destroy/DestroyedLayerProcessor.js';
-//not GWT import const DestroyedLayerProcessor = globalThis.org.allbinary.game.combat.destroy.DestroyedLayerProcessor;
+//not GWT import const DestroyedLayerProcessor
 import { Health } from '../../../../org/allbinary/game/health/Health.js';
-//not GWT import const Group = globalThis.org.allbinary.game.identification.Group;
+//not GWT import const Group
 import { GroupFactory } from '../../../../org/allbinary/game/identification/GroupFactory.js';
-//not GWT import const GameInputProcessor = globalThis.org.allbinary.game.input.GameInputProcessor;
+//not GWT import const GameInputProcessor
 import { GameInputProcessorUtil } from '../../../../org/allbinary/game/input/GameInputProcessorUtil.js';
-//not GWT import const GameKeyEventSourceInterface = globalThis.org.allbinary.game.input.GameKeyEventSourceInterface;
+//not GWT import const GameKeyEventSourceInterface
 import { InputFactory } from '../../../../org/allbinary/game/input/InputFactory.js';
-//not GWT import const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
+//not GWT import const InputFactory
 import { NullRTSFormInputFactory } from '../../../../org/allbinary/game/input/form/NullRTSFormInputFactory.js';
-//not GWT import const NullRTSFormInputFactory = globalThis.org.allbinary.game.input.form.NullRTSFormInputFactory;
+//not GWT import const NullRTSFormInputFactory
 import { Waypoint2LogHelper } from '../../../../org/allbinary/game/layer/waypoint/Waypoint2LogHelper.js';
-//not GWT import const Waypoint2LogHelper = globalThis.org.allbinary.game.layer.waypoint.Waypoint2LogHelper;
+//not GWT import const Waypoint2LogHelper
 import { WaypointLogHelper } from '../../../../org/allbinary/game/layer/waypoint/WaypointLogHelper.js';
-//not GWT import const WaypointLogHelper = globalThis.org.allbinary.game.layer.waypoint.WaypointLogHelper;
+//not GWT import const WaypointLogHelper
 import { WaypointRunnableLogHelper } from '../../../../org/allbinary/game/layer/waypoint/WaypointRunnableLogHelper.js';
-//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
+//not GWT import const TrackingEvent
 import { TileLayerPositionIntoViewPosition } from '../../../../org/allbinary/game/view/TileLayerPositionIntoViewPosition.js';
-//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not GWT import const Rectangle
 import { RectangleFactory } from '../../../../org/allbinary/graphics/RectangleFactory.js';
-//not GWT import const RectangleFactory = globalThis.org.allbinary.graphics.RectangleFactory;
+//not GWT import const RectangleFactory
 import { ScrollSelectionForm } from '../../../../org/allbinary/graphics/form/ScrollSelectionForm.js';
-//not GWT import const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
+//not GWT import const BasicGeographicMap
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import const TimeDelayHelper
 import { ViewPositionEventHandler } from '../../../../org/allbinary/view/event/ViewPositionEventHandler.js';
-//not GWT import const ViewPositionEventHandler = globalThis.org.allbinary.view.event.ViewPositionEventHandler;
+//not GWT import const ViewPositionEventHandler
 import { RemoteInfo } from '../../../../org/allbinary/game/multiplayer/layer/RemoteInfo.js';
-//not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
+//not GWT import const RemoteInfo
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { LayerDistanceUtil } from '../../../../org/allbinary/math/LayerDistanceUtil.js';
-//not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
+//not GWT import const GeographicMapCompositeInterface
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
+//not GWT import - same folder const PathFindingLayerInterface
 import { RTSLayer2LogHelper } from './RTSLayer2LogHelper.js';
-//not GWT import - same folder const GeographicMapCellPositionAreaBase = globalThis.org.allbinary.game.layer.GeographicMapCellPositionAreaBase;
+//not GWT import - same folder const GeographicMapCellPositionAreaBase
 import { GeographicMapCellPositionArea } from './GeographicMapCellPositionArea.js';
-//not GWT import - same folder const RTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.RTSPlayerLayerInterface;
+//not GWT import - same folder const RTSPlayerLayerInterface
 import { RTSLayerUtil } from './RTSLayerUtil.js';
-//not GWT import - same folder const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
+//not GWT import - same folder const SelectionHudPaintable
 export class RTSLayer extends MultiPlayerGameLayer {
     //@Throws(Exception.constructor)
     static createSimulatedInstance(remoteInfo) {

@@ -14,27 +14,27 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { PATH_GLOBALS } from '../../../../org/allbinary/globals/PATH_GLOBALS.js';
-//not GWT import const PATH_GLOBALS = globalThis.org.allbinary.globals.PATH_GLOBALS;
+//not GWT import const PATH_GLOBALS
 import { URLGLOBALS } from '../../../../org/allbinary/globals/URLGLOBALS.js';
-//not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
+//not GWT import const URLGLOBALS
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbDataInputStream } from '../../../../org/allbinary/logic/io/AbDataInputStream.js';
-//not GWT import const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
+//not GWT import const AbDataOutputStream
 import { AbFileLocalInputStream } from '../../../../org/allbinary/logic/io/AbFileLocalInputStream.js';
-//not GWT import const AbFileLocalInputStream = globalThis.org.allbinary.logic.io.AbFileLocalInputStream;
+//not GWT import const AbFileLocalInputStream
 import { DataOutputStreamFactory } from '../../../../org/allbinary/logic/io/DataOutputStreamFactory.js';
-//not GWT import const DataOutputStreamFactory = globalThis.org.allbinary.logic.io.DataOutputStreamFactory;
+//not GWT import const DataOutputStreamFactory
 import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
-//not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
+//not GWT import const AbPath
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { DatabaseEncoder } from '../../../../org/allbinary/logic/system/security/crypt/DatabaseEncoder.js';
-//not GWT import const DatabaseEncoder = globalThis.org.allbinary.logic.system.security.crypt.DatabaseEncoder;
+//not GWT import const DatabaseEncoder
 import { WeakCrypt } from '../../../../org/allbinary/logic/system/security/crypt/WeakCrypt.js';
-//not GWT import const WeakCrypt = globalThis.org.allbinary.logic.system.security.crypt.WeakCrypt;
+//not GWT import const WeakCrypt
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InstallerInfo extends Object {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

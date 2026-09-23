@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialGameInputProcessor } from './SpecialGameInputProcessor.js';
-//not GWT import - same folder const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
+//not GWT import - same folder const CollidableDestroyableDamageableLayer
 export class SpecialAnalogRightGameInputProcessor extends SpecialGameInputProcessor {
     constructor(collidableDestroyableDamageableLayer) {
         super(collidableDestroyableDamageableLayer);

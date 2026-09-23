@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 import { Context } from '../../../../../android/content/Context.js';
-//not GWT import const View = globalThis.android.view.View;
+//not GWT import const View
 import { InputMethodManager } from '../../../../../android/view/inputmethod/InputMethodManager.js';
-//not GWT import const ViewCompositeInterface = globalThis.org.allbinary.android.activity.ViewCompositeInterface;
+//not GWT import const ViewCompositeInterface
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //not plain js import { LogUtil } 

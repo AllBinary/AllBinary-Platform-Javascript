@@ -11,18 +11,18 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
+//not GWT import const MotionGestureInput
 import { TouchMotionGestureFactory } from '../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
-//not GWT import const TouchMotionGestureFactory = globalThis.org.allbinary.input.motion.gesture.TouchMotionGestureFactory;
+//not GWT import const TouchMotionGestureFactory
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
-//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not GWT import const AllBinaryEventObject
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const CompleteMotionGestureInputInterface = globalThis.org.allbinary.game.input.CompleteMotionGestureInputInterface;
+//not GWT import - same folder const CompleteMotionGestureInputInterface
 export class CompleteMotionGestureInputEvent extends AllBinaryEventObject {
     constructor(name, motionGestureInput) {
         super(motionGestureInput);

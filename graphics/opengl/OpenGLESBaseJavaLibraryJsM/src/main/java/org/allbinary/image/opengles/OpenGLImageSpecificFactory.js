@@ -21,7 +21,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLImageFactory } from './OpenGLImageFactory.js';
-//not GWT import - same folder const OpenGLImageFactory = globalThis.org.allbinary.image.opengles.OpenGLImageFactory;
+//not GWT import - same folder const OpenGLImageFactory
 export class OpenGLImageSpecificFactory extends Object {
     constructor() {
         super(...arguments);

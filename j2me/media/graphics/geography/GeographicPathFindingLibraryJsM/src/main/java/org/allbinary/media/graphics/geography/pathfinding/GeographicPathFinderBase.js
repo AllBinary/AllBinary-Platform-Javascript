@@ -18,7 +18,7 @@ import { RuntimeException } from '../../../../../../java/lang/RuntimeException.j
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const MultipassState = globalThis.org.allbinary.media.graphics.geography.pathfinding.MultipassState;
+//not GWT import - same folder const MultipassState
 export class GeographicPathFinderBase extends Object {
     constructor() {
         super(...arguments);

@@ -15,10 +15,10 @@
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressRunnable } from './ProgressRunnable.js';
-//not GWT import - same folder const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
+//not GWT import - same folder const ProgressCanvas
 export class TitleProgressBarSetProgressRunnable extends ProgressRunnable {
     constructor(midletActivity, progressCanvas) {
         super(midletActivity, progressCanvas);

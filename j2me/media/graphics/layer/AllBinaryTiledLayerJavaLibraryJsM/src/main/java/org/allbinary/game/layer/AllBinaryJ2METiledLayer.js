@@ -11,19 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { TiledLayer } 
-const TiledLayer = globalThis.javax.microedition.lcdui.game.TiledLayer;
+import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not GWT import const TiledLayer
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryTiledLayer } from './AllBinaryTiledLayer.js';
-//not GWT import - same folder const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
+//not GWT import - same folder const AllBinaryTiledLayer
 export class AllBinaryJ2METiledLayer extends AllBinaryTiledLayer {
     constructor(dataId, tiledLayer, mapTwoDArray, debugColor) {
         super(dataId, tiledLayer.getWidth(), tiledLayer.getHeight(), tiledLayer.getCellWidth(), tiledLayer.getCellHeight());

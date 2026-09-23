@@ -11,24 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const File = globalThis.java.io.File;
+//not GWT import const File
 import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { AbFileNativeUtil } from '../../../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
-//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
+//not GWT import const AbFileNativeUtil
 import { CommonDataFileStrings } from '../../../../../../org/allbinary/logic/io/file/CommonDataFileStrings.js';
-//not GWT import const CommonDataFileStrings = globalThis.org.allbinary.logic.io.file.CommonDataFileStrings;
+//not GWT import const CommonDataFileStrings
 import { IncludeFileExtensionsBooleanFileVisitor } from '../../../../../../org/allbinary/logic/io/file/visitor/IncludeFileExtensionsBooleanFileVisitor.js';
-//not GWT import const IncludeFileExtensionsBooleanFileVisitor = globalThis.org.allbinary.logic.io.file.visitor.IncludeFileExtensionsBooleanFileVisitor;
+//not GWT import const IncludeFileExtensionsBooleanFileVisitor
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackedStrings } from './TrackedStrings.js';
-//not GWT import - same folder const TrackedStrings = globalThis.org.allbinary.logic.io.file.directory.TrackedStrings;
+//not GWT import - same folder const TrackedStrings
 import { ProcessBuilder } from './ProcessBuilder.js';
-//not GWT import - same folder const Process = globalThis.org.allbinary.logic.io.file.directory.Process;
+//not GWT import - same folder const Process
 export class DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor extends IncludeFileExtensionsBooleanFileVisitor {
     static main(args) {
         var commonFileStrings = CommonDataFileStrings.getInstance();

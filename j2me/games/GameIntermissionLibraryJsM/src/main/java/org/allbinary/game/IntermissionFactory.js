@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const GameState = globalThis.org.allbinary.game.state.GameState;
+//not GWT import const GameState
 import { GameStateFactory } from '../../../org/allbinary/game/state/GameStateFactory.js';
-//not GWT import const GameStateFactory = globalThis.org.allbinary.game.state.GameStateFactory;
+//not GWT import const GameStateFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class IntermissionFactory extends Object {
     constructor() {

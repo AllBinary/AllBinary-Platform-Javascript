@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableNeverCollideBehavior } from './CollidableNeverCollideBehavior.js';
-//not GWT import - same folder const CollidableNeverCollideBehavior = globalThis.org.allbinary.game.collision.CollidableNeverCollideBehavior;
+//not GWT import - same folder const CollidableNeverCollideBehavior
 import { CollisionTypeFactory } from './CollisionTypeFactory.js';
-//not GWT import - same folder const CollisionType = globalThis.org.allbinary.game.collision.CollisionType;
+//not GWT import - same folder const CollisionType
 export class CollidableAlwaysPickupNeverCollideBehavior extends CollidableNeverCollideBehavior {
     constructor() {
         super(true);

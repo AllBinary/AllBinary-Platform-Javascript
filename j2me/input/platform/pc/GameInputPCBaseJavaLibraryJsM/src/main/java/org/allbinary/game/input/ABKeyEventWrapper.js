@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { KeyEvent } from '../../../../java/awt/event/KeyEvent.js';
-//not GWT import const KeyEvent = globalThis.java.awt.event.KeyEvent;
+//not GWT import const KeyEvent
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABKeyEventWrapper extends Object {
     constructor() {
@@ -211,7 +211,7 @@ export class ABKeyEventWrapper extends Object {
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return instance;
+        return ABKeyEventWrapper.instance;
     }
 }
 ABKeyEventWrapper.instance = new ABKeyEventWrapper();

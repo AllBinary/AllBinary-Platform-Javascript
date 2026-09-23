@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const SoundsFactoryInterface = globalThis.org.allbinary.media.audio.SoundsFactoryInterface;
+//not GWT import - same folder const SoundsFactoryInterface
 export class AllBinaryMediaManagerShutdown extends Object {
     //@Throws(Exception.constructor)
     static shutdown(soundsFactoryInterface) {

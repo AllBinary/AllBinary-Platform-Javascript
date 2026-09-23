@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { ByteArrayInputStream } from '../../../../../java/io/ByteArrayInputStream.js';
-//not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
+//not GWT import const ByteArrayInputStream
 import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not GWT import const InputStream
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not GWT import const TsUtil
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const CryptInterface = globalThis.org.allbinary.init.crypt.jcehelper.CryptInterface;
+//not GWT import - same folder const CryptInterface
 export class BasicCryptUtil extends Object {
     constructor() {
         super(...arguments);

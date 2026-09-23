@@ -28,6 +28,7 @@ export class CommonLabels extends Object {
         this.START = this.START_LABEL;
         this.ELAPSED = " Elapsed: ";
         this.CURRENT = " Current: ";
+        this.NEXT = "Next";
         this.ITEM_LABEL = "Item: ";
         this.RESULT_ = "Result: ";
         this.COLON_SEP = ": ";

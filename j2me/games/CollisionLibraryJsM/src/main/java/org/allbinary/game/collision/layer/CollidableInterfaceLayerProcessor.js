@@ -11,14 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 import { LayerProcessor } from '../../../../../org/allbinary/layer/LayerProcessor.js';
-//not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
+//not GWT import const LayerProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableInterfaceLayerManager } from './CollidableInterfaceLayerManager.js';
-//not GWT import - same folder const CollidableInterfaceLayerManager = globalThis.org.allbinary.game.collision.layer.CollidableInterfaceLayerManager;
+//not GWT import - same folder const CollidableInterfaceLayerManager
 import { AllBinaryCollisionManager } from './AllBinaryCollisionManager.js';
-//not GWT import - same folder const AllBinaryCollisionManager = globalThis.org.allbinary.game.collision.layer.AllBinaryCollisionManager;
+//not GWT import - same folder const AllBinaryCollisionManager
 export class CollidableInterfaceLayerProcessor extends LayerProcessor {
     constructor() {
         super(new CollidableInterfaceLayerManager());

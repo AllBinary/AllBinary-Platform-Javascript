@@ -1,9 +1,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-//not GWT import const OpenGLBitmap = globalThis.org.allbinary.graphics.OpenGLBitmap;
-//not plain js import { OpenGLESImage } 
-const OpenGLESImage = globalThis.org.allbinary.image.opengles.OpenGLESImage;
+//not GWT import const OpenGLESImage
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLGLUUtils extends Object {
     static getInstance() {

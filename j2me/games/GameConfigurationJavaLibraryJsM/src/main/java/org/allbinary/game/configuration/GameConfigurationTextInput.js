@@ -13,8 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { TextField } 
-const TextField = globalThis.javax.microedition.lcdui.TextField;
+//not GWT import const TextField
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { StringUtil } 

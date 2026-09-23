@@ -13,21 +13,20 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../java/lang/Exception.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { Processor } from '../../../../org/allbinary/canvas/Processor.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontProcessor.js';
-//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
+//not GWT import const UpdateMyFontInterface
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollSelectionForm } from './ScrollSelectionForm.js';
-//not GWT import - same folder const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
+//not GWT import - same folder const ScrollSelectionForm
 import { ItemIndexDx } from './ItemIndexDx.js';
-//not GWT import - same folder const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
+//not GWT import - same folder const ItemPaintableFactory
 import { FormTypeFactory } from './FormTypeFactory.js';
-//not GWT import - same folder const FormType = globalThis.org.allbinary.graphics.form.FormType;
+//not GWT import - same folder const FormType
 export class ScrollCurrentSelectionForm extends ScrollSelectionForm {
     constructor(title, items, formPaintableFactory, border, adjustedExtraBorder, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, formPaintableFactory, border, adjustedExtraBorder, backgroundBasicColor, foregroundBasicColor);

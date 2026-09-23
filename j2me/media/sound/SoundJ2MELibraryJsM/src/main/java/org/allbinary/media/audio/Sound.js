@@ -13,16 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Player } 
-const Player = globalThis.javax.microedition.media.Player;
-const PlayerI = globalThis.javax.microedition.media.Player;
+//not GWT import const Player
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const SoundInterface = globalThis.org.allbinary.media.audio.SoundInterface;
+//not GWT import - same folder const SoundInterface
 import { NoPlayer } from './NoPlayer.js';
-//not GWT import - same folder const NoPlayer = globalThis.org.allbinary.media.audio.NoPlayer;
+//not GWT import - same folder const NoPlayer
 export class Sound extends Object {
     constructor(resource) {
         super();

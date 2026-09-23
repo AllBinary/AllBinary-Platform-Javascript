@@ -13,13 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+import { Math } from '../../../../../java/lang/Math.js';
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import const DisplayInfoSingleton
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommonButtons } from './CommonButtons.js';
-//not GWT import - same folder const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
+//not GWT import - same folder const CommonButtons
 export class TouchButtonLocationHelper extends Object {
     constructor() {
         super();
@@ -27,8 +28,8 @@ export class TouchButtonLocationHelper extends Object {
         ;
         var displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        this.totalColumns = displayInfo.getLastWidth() / buttonSize;
-        this.totalRows = displayInfo.getLastHeight() / buttonSize;
+        this.totalColumns = Math.round(displayInfo.getLastWidth() / buttonSize);
+        this.totalRows = Math.round(displayInfo.getLastHeight() / buttonSize);
         this.columnsRemainder = displayInfo.getLastWidth() % buttonSize;
         this.columnsRemainderHalf = (this.columnsRemainder >> 1);
         this.rowsRemainder = displayInfo.getLastHeight() % buttonSize;

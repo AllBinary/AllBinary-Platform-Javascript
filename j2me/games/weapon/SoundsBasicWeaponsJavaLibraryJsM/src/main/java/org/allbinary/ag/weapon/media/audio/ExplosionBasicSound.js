@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { CompositeSound } from '../../../../../../org/allbinary/media/audio/CompositeSound.js';
-//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import const Sound
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ExplosionBasicSound extends CompositeSound {
     static getInstance() {

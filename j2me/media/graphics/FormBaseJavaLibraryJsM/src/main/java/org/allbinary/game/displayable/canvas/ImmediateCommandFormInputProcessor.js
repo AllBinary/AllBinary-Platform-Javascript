@@ -11,14 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
+//not GWT import const MotionGestureEvent
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import const TimeDelayHelper
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommandFormInputProcessor } from './CommandFormInputProcessor.js';
-//not GWT import - same folder const GameCommandCanvas = globalThis.org.allbinary.game.displayable.canvas.GameCommandCanvas;
+//not GWT import - same folder const GameCommandCanvas
 export class ImmediateCommandFormInputProcessor extends CommandFormInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCommandCanvas, form) {
         super(gameKeyEventList, playerInputId, gameCommandCanvas, form);

@@ -13,11 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
+//not GWT import const Layer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LinePathAnimation extends Object {
     static getInstance() {

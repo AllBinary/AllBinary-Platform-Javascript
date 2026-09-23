@@ -13,14 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const VectorAnimationFactoryInterface = globalThis.org.allbinary.animation.VectorAnimationFactoryInterface;
+//not GWT import - same folder const VectorAnimationFactoryInterface
 import { VectorRotationGenerator } from './VectorRotationGenerator.js';
-//not GWT import - same folder const VectorRotationGenerator = globalThis.org.allbinary.animation.VectorRotationGenerator;
+//not GWT import - same folder const VectorRotationGenerator
 import { VectorExplosionGenerator } from './VectorExplosionGenerator.js';
-//not GWT import - same folder const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import - same folder const Animation
 export class IndependentVectorExplosionRotationAnimationFactory extends Object {
     constructor(vectorInfo, basicColor, vectorAnimationFactoryInterface) {
         super();

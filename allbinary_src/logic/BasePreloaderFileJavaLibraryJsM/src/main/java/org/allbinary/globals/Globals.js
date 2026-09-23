@@ -18,18 +18,18 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { StringValidationUtil } from '../../../org/allbinary/logic/string/StringValidationUtil.js';
-//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not GWT import const StringValidationUtil
 import { WebappClassLoaderInfo } from '../../../org/allbinary/logic/system/loader/WebappClassLoaderInfo.js';
-//not GWT import const WebappClassLoaderInfo = globalThis.org.allbinary.logic.system.loader.WebappClassLoaderInfo;
+//not GWT import const WebappClassLoaderInfo
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AppUrlGlobals } from './AppUrlGlobals.js';
-//not GWT import - same folder const AppUrlGlobals = globalThis.org.allbinary.globals.AppUrlGlobals;
+//not GWT import - same folder const AppUrlGlobals
 import { URLGLOBALS } from './URLGLOBALS.js';
-//not GWT import - same folder const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
+//not GWT import - same folder const URLGLOBALS
 export class Globals extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

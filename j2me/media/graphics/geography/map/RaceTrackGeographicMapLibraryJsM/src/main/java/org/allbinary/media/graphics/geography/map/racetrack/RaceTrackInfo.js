@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not GWT import - same folder const RaceTrackFrictionProperties = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackFrictionProperties;
+//not GWT import - same folder const RaceTrackFrictionProperties
 export class RaceTrackInfo extends Object {
     constructor(id, name, raceTrackFrictionProperties, foregroundBasicColor, backgroundBasicColor, qualifyTime, worstContinuePosition, totalLaps) {
         super();

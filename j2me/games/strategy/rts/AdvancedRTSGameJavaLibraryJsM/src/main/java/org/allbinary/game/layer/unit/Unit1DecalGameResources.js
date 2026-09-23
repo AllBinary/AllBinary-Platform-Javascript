@@ -12,13 +12,13 @@
         *  Created By: Travis Berthelot
 */
 import { BasicGameResources } from '../../../../../org/allbinary/game/layer/resources/BasicGameResources.js';
-//not GWT import const BasicGameResources = globalThis.org.allbinary.game.layer.resources.BasicGameResources;
+//not GWT import const BasicGameResources
 import { GameGraphicsResourceUtil } from '../../../../../org/allbinary/game/layer/resources/GameGraphicsResourceUtil.js';
-//not GWT import const GameGraphicsResourceUtil = globalThis.org.allbinary.game.layer.resources.GameGraphicsResourceUtil;
+//not GWT import const GameGraphicsResourceUtil
 import { AndroidUtil } from '../../../../../org/allbinary/AndroidUtil.js';
-//not GWT import const AndroidUtil = globalThis.org.allbinary.AndroidUtil;
+//not GWT import const AndroidUtil
 import { GraphicsFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/GraphicsFeatureFactory.js';
-//not GWT import const GraphicsFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
+//not GWT import const GraphicsFeatureFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Unit1DecalGameResources extends BasicGameResources {
     static getInstance() {

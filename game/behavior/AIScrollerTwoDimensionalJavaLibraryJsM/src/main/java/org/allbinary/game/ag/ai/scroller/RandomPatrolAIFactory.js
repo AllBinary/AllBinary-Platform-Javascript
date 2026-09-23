@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RandomPatrolAI } from './RandomPatrolAI.js';
-//not GWT import - same folder const RandomPatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.RandomPatrolAI;
+//not GWT import - same folder const RandomPatrolAI
 export class RandomPatrolAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

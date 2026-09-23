@@ -1,10 +1,8 @@
 /* Generated Code Do Not Modify */
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { ABCustomItem } from '../../../../org/allbinary/graphics/form/item/ABCustomItem.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringUtil } 
@@ -13,7 +11,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomScreen } from './CustomScreen.js';
-//not GWT import - same folder const CustomScreen = globalThis.org.allbinary.graphics.form.CustomScreen;
+//not GWT import - same folder const CustomScreen
 export class ABCustomForm extends CustomScreen {
     constructor(title, items, backgroundBasicColor, foregroundBasicColor) {
         super();

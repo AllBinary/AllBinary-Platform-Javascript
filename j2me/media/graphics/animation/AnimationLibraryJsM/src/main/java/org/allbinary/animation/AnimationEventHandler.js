@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { BasicEventHandler } from '../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import const BasicEventHandler = globalThis.org.allbinary.logic.util.event.handler.BasicEventHandler;
+//not GWT import const BasicEventHandler
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AnimationEventHandler extends BasicEventHandler {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

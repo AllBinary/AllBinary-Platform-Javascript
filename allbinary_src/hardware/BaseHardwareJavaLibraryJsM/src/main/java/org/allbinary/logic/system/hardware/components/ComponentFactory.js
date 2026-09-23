@@ -17,7 +17,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Component } from './Component.js';
-//not GWT import - same folder const Component = globalThis.org.allbinary.logic.system.hardware.components.Component;
+//not GWT import - same folder const Component
 export class ComponentFactory extends Object {
     constructor() {
         super(...arguments);

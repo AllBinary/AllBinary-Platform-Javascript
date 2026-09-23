@@ -11,49 +11,44 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { NullCanvas } from '../../../../../../javax/microedition/lcdui/NullCanvas.js';
-//not GWT import const NullCanvas = globalThis.javax.microedition.lcdui.NullCanvas;
+//not GWT import const NullCanvas
 import { NullCommandListener } from '../../../../../../javax/microedition/lcdui/NullCommandListener.js';
-//not GWT import const NullCommandListener = globalThis.javax.microedition.lcdui.NullCommandListener;
+//not GWT import const NullCommandListener
 import { Processor } from '../../../../../../org/allbinary/canvas/Processor.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import const Processor
 import { RunnableCanvas } from '../../../../../../org/allbinary/canvas/RunnableCanvas.js';
-//not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
+//not GWT import const RunnableCanvas
 import { GameCommandsFactory } from '../../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { CanvasStrings } from '../../../../../../org/allbinary/graphics/displayable/CanvasStrings.js';
-//not GWT import const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
+//not GWT import const CanvasStrings
 import { MyFontProcessor } from '../../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
-//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
+//not GWT import const UpdateMyFontInterface
 import { UpdateMyFontProcessor } from '../../../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-//not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
+//not GWT import const UpdateMyFontProcessor
 import { ABCustomGaugeItem } from '../../../../../../org/allbinary/graphics/form/item/ABCustomGaugeItem.js';
-//not GWT import const ABCustomGaugeItem = globalThis.org.allbinary.graphics.form.item.ABCustomGaugeItem;
+//not GWT import const ABCustomGaugeItem
 import { NullPaintable } from '../../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const NullPaintable = globalThis.org.allbinary.graphics.paint.NullPaintable;
+//not GWT import const NullPaintable
 import { Paintable } from '../../../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not GWT import const PaintableInterface
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AllBinaryMidlet } from '../../../../../../org/allbinary/midlet/AllBinaryMidlet.js';
-//not GWT import const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
+//not GWT import const AllBinaryMidlet
 import { PathFindingThreadPool } from '../../../../../../org/allbinary/thread/PathFindingThreadPool.js';
-//not GWT import const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
+//not GWT import const ThreadPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import { ProgressPaintable } from './ProgressPaintable.js';
-//not GWT import - same folder const ProgressPaintable = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressPaintable;
+//not GWT import - same folder const ProgressPaintable
 export class ProgressCanvas extends RunnableCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, false);

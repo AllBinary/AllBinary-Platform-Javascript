@@ -13,22 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { Item } 
-const Item = globalThis.javax.microedition.lcdui.Item;
-//not plain js import { ItemCommandListener } 
-const ItemCommandListener = globalThis.javax.microedition.lcdui.ItemCommandListener;
+//not GWT import const ItemCommandListener
 import { GameConfigurationGauge } from '../../../../../org/allbinary/game/configuration/GameConfigurationGauge.js';
-//not GWT import const GameConfigurationGauge = globalThis.org.allbinary.game.configuration.GameConfigurationGauge;
+//not GWT import const GameConfigurationGauge
 import { GameConfigurationUtil } from '../../../../../org/allbinary/game/configuration/GameConfigurationUtil.js';
-//not GWT import const GameOptionsForm = globalThis.org.allbinary.game.configuration.GameOptionsForm;
+//not GWT import const GameOptionsForm
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { MidletStrings } from '../../../../../org/allbinary/midlet/MidletStrings.js';
-//not GWT import const MidletStrings = globalThis.org.allbinary.midlet.MidletStrings;
+//not GWT import const MidletStrings
 //not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonStrings } 

@@ -15,15 +15,15 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
-//not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
+//not GWT import const ByteArrayInputStream
 import { ByteArrayOutputStream } from '../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
+//not GWT import const ByteArrayOutputStream
 import { FileInputStream } from '../../../../java/io/FileInputStream.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not GWT import const InputStream
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { StreamUtil } from '../../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not GWT import const StreamUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 

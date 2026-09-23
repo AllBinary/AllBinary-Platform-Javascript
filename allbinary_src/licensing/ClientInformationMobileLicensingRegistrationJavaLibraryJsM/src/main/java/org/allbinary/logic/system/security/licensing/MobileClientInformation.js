@@ -16,7 +16,7 @@ import { Integer } from '../../../../../../java/lang/Integer.js';
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { RegistrationConfiguration } from '../../../../../../org/allbinary/logic/system/security/licensing/registration/RegistrationConfiguration.js';
-//not GWT import const RegistrationConfiguration = globalThis.org.allbinary.logic.system.security.licensing.registration.RegistrationConfiguration;
+//not GWT import const RegistrationConfiguration
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { CommonStrings } 
@@ -25,9 +25,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbeClientInformation } from './AbeClientInformation.js';
-//not GWT import - same folder const AbeClientInformation = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformation;
+//not GWT import - same folder const AbeClientInformation
 import { PartnerIdentifierFileUtil } from './PartnerIdentifierFileUtil.js';
-//not GWT import - same folder const PartnerIdentifierFileUtil = globalThis.org.allbinary.logic.system.security.licensing.PartnerIdentifierFileUtil;
+//not GWT import - same folder const PartnerIdentifierFileUtil
 export class MobileClientInformation extends AbeClientInformation {
     constructor(name, version, specialName, shortName) {
         super(name, version, new StringMaker().append(specialName).append(CommonSeps.getInstance().SPACE).append(PartnerIdentifierFileUtil.getInstance().get()).toString(), shortName);

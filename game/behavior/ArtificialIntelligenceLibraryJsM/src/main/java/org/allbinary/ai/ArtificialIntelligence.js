@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const ArtificialIntelligenceInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceInterface;
+//not GWT import - same folder const ArtificialIntelligenceInterface
 export class ArtificialIntelligence extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

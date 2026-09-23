@@ -13,10 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not GWT import const Canvas
 import { MultiPlayerGameFeatureFactory } from '../../org/allbinary/game/configuration/feature/MultiPlayerGameFeatureFactory.js';
-//not GWT import const MultiPlayerGameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MultiPlayerGameFeatureFactory;
+//not GWT import const MultiPlayerGameFeatureFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PostGameCommandFactory extends Object {
     static getInstance() {

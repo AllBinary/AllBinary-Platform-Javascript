@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicWeaponPart } from './BasicWeaponPart.js';
-//not GWT import - same folder const BasicWeaponPartFactoryInterface = globalThis.org.allbinary.game.part.weapon.BasicWeaponPartFactoryInterface;
+//not GWT import - same folder const BasicWeaponPartFactoryInterface
 export class BasicWeaponPartCircularPool extends Object {
     constructor() {
         super(...arguments);

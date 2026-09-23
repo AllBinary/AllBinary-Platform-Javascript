@@ -1,15 +1,11 @@
 /* Generated Code Do Not Modify */
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
+//not GWT import const Visitor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABTextItem } from './ABTextItem.js';
-//not GWT import - same folder const ABTextItem = globalThis.org.allbinary.graphics.form.item.ABTextItem;
+//not GWT import - same folder const ABTextItem
 export class ABTextFieldItem extends ABTextItem {
     constructor(canvas, visitor, label, value, maxSize, layout, altText, font, backgroundBasicColor, foregroundBasicColor) {
         super(label, layout, altText, backgroundBasicColor, foregroundBasicColor);

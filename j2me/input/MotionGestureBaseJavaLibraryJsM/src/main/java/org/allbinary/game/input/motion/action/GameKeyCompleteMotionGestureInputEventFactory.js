@@ -23,7 +23,7 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const GameKeyCompleteMotionGestureInputEvent = globalThis.org.allbinary.game.input.motion.action.GameKeyCompleteMotionGestureInputEvent;
+//not GWT import - same folder const GameKeyCompleteMotionGestureInputEvent
 export class GameKeyCompleteMotionGestureInputEventFactory extends Object {
     constructor() {
         super(...arguments);

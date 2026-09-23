@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
+//not GWT import const CollidableCompositeLayer
 import { CollidableRTSBehavior } from '../../../../../org/allbinary/game/layer/CollidableRTSBehavior.js';
-//not GWT import const CollidableInterfaceCompositeInterface = globalThis.org.allbinary.game.collision.CollidableInterfaceCompositeInterface;
+//not GWT import const CollidableInterfaceCompositeInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CollidableWaypointBehavior extends CollidableRTSBehavior {
     constructor(collidable) {

@@ -23,7 +23,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput = globalThis.org.allbinary.input.motion.button.BaseTouchInput;
+//not GWT import - same folder const BaseTouchInput
 export class BasicTouchButtonsBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);

@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScreenEmptyListener } from './ScreenEmptyListener.js';
-//not GWT import - same folder const ScreenListenerInterface = globalThis.org.allbinary.graphics.ScreenListenerInterface;
+//not GWT import - same folder const ScreenListenerInterface
 export class ScreenListenerHandler extends Object {
     constructor() {
         super(...arguments);

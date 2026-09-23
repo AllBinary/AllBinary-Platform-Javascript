@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { GLU } from '../../../com/jogamp/opengl/glu/GLU.js';
-//not GWT import - same folder const FloatBuffer = globalThis.org.allbinary.opengles.FloatBuffer;
+//not GWT import - same folder const FloatBuffer
 //JOGLEToKhronosGL10
 export class JOGL10 extends Object {
     constructor(gl, gl2) {

@@ -15,10 +15,10 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Integer } from '../../../../java/lang/Integer.js';
 import { DirectionFactory } from '../../../../org/allbinary/direction/DirectionFactory.js';
-//not GWT import const DirectionFactory = globalThis.org.allbinary.direction.DirectionFactory;
+//not GWT import const DirectionFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerPlacementType } from './LayerPlacementType.js';
-//not GWT import - same folder const LayerPlacementType = globalThis.org.allbinary.game.layer.LayerPlacementType;
+//not GWT import - same folder const LayerPlacementType
 export class LayerPlacementTypeFactory extends Object {
     constructor() {
         super(...arguments);

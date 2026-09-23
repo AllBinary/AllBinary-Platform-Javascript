@@ -15,9 +15,9 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import - same folder const BasicColor
 import { BasicColorFactory } from './BasicColorFactory.js';
-//not GWT import - same folder const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import - same folder const BasicColorFactory
 export class SmallBasicColorCacheFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

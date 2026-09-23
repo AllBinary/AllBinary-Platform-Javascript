@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Math } from '../../../java/lang/Math.js';
-//not GWT import const Buffer = globalThis.java.nio.Buffer;
+//not GWT import const Buffer
 import { ByteBuffer } from '../../../java/nio/ByteBuffer.js';
-//not GWT import const ByteBuffer = globalThis.java.nio.ByteBuffer;
+//not GWT import const ByteBuffer
 import { ByteOrder } from '../../../java/nio/ByteOrder.js';
-//not GWT import const FloatBuffer = globalThis.java.nio.FloatBuffer;
+//not GWT import const FloatBuffer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GLUtil extends Object {
     constructor() {

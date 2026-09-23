@@ -15,9 +15,9 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
+//not GWT import const ByteArrayOutputStream
 import { PrintStream } from '../../../../../java/io/PrintStream.js';
-//not GWT import const PrintStream = globalThis.java.io.PrintStream;
+//not GWT import const PrintStream
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //ActualPlatform
 /*actual*/ export class ExceptionUtil extends Object {

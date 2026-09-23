@@ -15,9 +15,9 @@
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../../../../java/lang/RuntimeException.js';
 import { BasicHudFactory } from '../../../../../../../org/allbinary/game/graphics/hud/BasicHudFactory.js';
-//not GWT import const BasicHudFactory = globalThis.org.allbinary.game.graphics.hud.BasicHudFactory;
+//not GWT import const BasicHudFactory
 import { BasicColorFactory } from '../../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
@@ -28,7 +28,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NumberStringHud } from './NumberStringHud.js';
-//not GWT import - same folder const NumberStringHud = globalThis.org.allbinary.game.ag.layer.hud.basic.NumberStringHud;
+//not GWT import - same folder const NumberStringHud
 export class NumberStringHudFactory extends Object {
     constructor() {
         super(...arguments);

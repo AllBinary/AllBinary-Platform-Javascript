@@ -11,12 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
+//not GWT import const AnimationBehaviorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryAndroidImageRotationAnimationFactory } from './AllBinaryAndroidImageRotationAnimationFactory.js';
-//not GWT import - same folder const AllBinaryAndroidImageRotationAnimationFactory = globalThis.org.allbinary.animation.image.AllBinaryAndroidImageRotationAnimationFactory;
+//not GWT import - same folder const AllBinaryAndroidImageRotationAnimationFactory
 export class AllBinaryPlatformImageRotationAnimationFactory extends AllBinaryAndroidImageRotationAnimationFactory {
     constructor(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation) {
         super(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation);

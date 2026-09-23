@@ -14,17 +14,17 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const OutputStream = globalThis.java.io.OutputStream;
+//not GWT import const OutputStream
 import { StringBufferInputStream } from '../../../../../java/io/StringBufferInputStream.js';
-//not GWT import const Transformer = globalThis.javax.xml.transform.Transformer;
+//not GWT import const Transformer
 import { TransformerFactory } from '../../../../../javax/xml/transform/TransformerFactory.js';
-//not GWT import const URIResolver = globalThis.javax.xml.transform.URIResolver;
+//not GWT import const URIResolver
 import { StreamResult } from '../../../../../javax/xml/transform/stream/StreamResult.js';
-//not GWT import const StreamResult = globalThis.javax.xml.transform.stream.StreamResult;
+//not GWT import const StreamResult
 import { StreamSource } from '../../../../../javax/xml/transform/stream/StreamSource.js';
-//not GWT import const StreamSource = globalThis.javax.xml.transform.stream.StreamSource;
+//not GWT import const StreamSource
 import { DomDocumentHelper } from '../../../../../org/allbinary/data/tree/dom/document/DomDocumentHelper.js';
-//not GWT import const Document = globalThis.org.w3c.dom.Document;
+//not GWT import const Document
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import org.allbinary.data.tree.dom.document.DomDocumentHelper;
 export class XslHelper extends Object {

@@ -12,21 +12,25 @@
         *  Created By: Travis Berthelot
 */
 import { Long } from '../../../../../java/lang/Long.js';
-//not GWT import const Enumeration = globalThis.java.util.Enumeration;
+//not GWT import const Enumeration
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
+//not GWT import const GameInfo
 import { HighScore } from '../../../../../org/allbinary/game/score/HighScore.js';
-//not GWT import const HighScore = globalThis.org.allbinary.game.score.HighScore;
+//not GWT import const HighScore
 import { HighScores } from '../../../../../org/allbinary/game/score/HighScores.js';
-//not GWT import const HighScores = globalThis.org.allbinary.game.score.HighScores;
+//not GWT import const HighScores
 import { RemoteErrorHighScoresSingletonFactory } from '../../../../../org/allbinary/game/score/RemoteErrorHighScoresSingletonFactory.js';
-//not GWT import const RemoteErrorHighScoresSingletonFactory = globalThis.org.allbinary.game.score.RemoteErrorHighScoresSingletonFactory;
+//not GWT import const RemoteErrorHighScoresSingletonFactory
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not plain js import { StringMaker } 
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
+//not GWT import const AbeClientInformationInterface
+//not plain js import { CommonLabels } 
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { ABHashtable } 
@@ -35,11 +39,11 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RemoteHighScoresProcessorFactory } from './RemoteHighScoresProcessorFactory.js';
-//not GWT import - same folder const RemoteHighScoresProcessorFactory = globalThis.org.allbinary.game.score.remote.RemoteHighScoresProcessorFactory;
+//not GWT import - same folder const RemoteHighScoresProcessorFactory
 import { RemoteHighScoresSubmissionProcessorFactory } from './RemoteHighScoresSubmissionProcessorFactory.js';
-//not GWT import - same folder const RemoteHighScoresSubmissionProcessorFactory = globalThis.org.allbinary.game.score.remote.RemoteHighScoresSubmissionProcessorFactory;
+//not GWT import - same folder const RemoteHighScoresSubmissionProcessorFactory
 import { RemoteHighScoresData } from './RemoteHighScoresData.js';
-//not GWT import - same folder const RemoteHighScoresData = globalThis.org.allbinary.game.score.remote.RemoteHighScoresData;
+//not GWT import - same folder const RemoteHighScoresData
 export class RemoteHighScores extends HighScores {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getInstance(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending) {
@@ -111,7 +115,7 @@ export class RemoteHighScores extends HighScores {
             }
         }
         else {
-            var NEXT_ELEMENT = "NextElement: ";
+            var NEXT_ELEMENT = new StringMaker().append(CommonLabels.getInstance().NEXT).append("Element: ").toString();
             ;
             var commonStrings = CommonStrings.getInstance();
             ;

@@ -12,14 +12,14 @@
         *  Created By: Travis Berthelot
 */
 import { LayerManagerEvent } from '../../../org/allbinary/layer/event/LayerManagerEvent.js';
-//not GWT import const LayerManagerEvent = globalThis.org.allbinary.layer.event.LayerManagerEvent;
+//not GWT import const LayerManagerEvent
 import { LayerManagerEventHandler } from '../../../org/allbinary/layer/event/LayerManagerEventHandler.js';
-//not GWT import const LayerManagerEventHandler = globalThis.org.allbinary.layer.event.LayerManagerEventHandler;
+//not GWT import const LayerManagerEventHandler
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerManager } from './LayerManager.js';
-//not GWT import - same folder const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
+//not GWT import - same folder const LayerProcessor
 import { LayerManagerNoDebug } from './LayerManagerNoDebug.js';
-//not GWT import - same folder const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import - same folder const AllBinaryLayer
 export class AllBinaryLayerManager extends LayerManager {
     constructor() {
         super(LayerManagerNoDebug.getInstance());

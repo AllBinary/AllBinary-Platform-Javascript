@@ -1,27 +1,27 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Exception } from '../../../java/lang/Exception.js';
-//not GWT import const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
+//not GWT import const Feature
 import { Features } from '../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { MainFeatureFactory } from '../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
-//not GWT import const MainFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MainFeatureFactory;
+//not GWT import const MainFeatureFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbDataInputStream } from '../../../org/allbinary/logic/io/AbDataInputStream.js';
-//not GWT import const AbDataInputStream = globalThis.org.allbinary.logic.io.AbDataInputStream;
+//not GWT import const AbDataInputStream
 import { AbDataOutputStream } from '../../../org/allbinary/logic/io/AbDataOutputStream.js';
-//not GWT import const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
+//not GWT import const AbDataOutputStream
 import { FileStreamFactory } from '../../../org/allbinary/logic/io/FileStreamFactory.js';
-//not GWT import const FileStreamFactory = globalThis.org.allbinary.logic.io.FileStreamFactory;
+//not GWT import const FileStreamFactory
 import { NullCloseable } from '../../../org/allbinary/logic/io/NullCloseable.js';
-//not GWT import const NullCloseable = globalThis.org.allbinary.logic.io.NullCloseable;
+//not GWT import const NullCloseable
 import { StreamUtil } from '../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not GWT import const StreamUtil
 import { FileFactory } from '../../../org/allbinary/logic/io/file/FileFactory.js';
-//not GWT import const FileFactory = globalThis.org.allbinary.logic.io.file.FileFactory;
+//not GWT import const FileFactory
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 

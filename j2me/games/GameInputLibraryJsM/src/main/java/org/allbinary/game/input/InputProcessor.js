@@ -13,11 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+//not GWT import const Canvas
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInputStrings } from './GameInputStrings.js';
-//not GWT import - same folder const GameInputStrings = globalThis.org.allbinary.game.input.GameInputStrings;
+//not GWT import - same folder const GameInputStrings
 export class InputProcessor extends Object {
     constructor() {
         super(...arguments);

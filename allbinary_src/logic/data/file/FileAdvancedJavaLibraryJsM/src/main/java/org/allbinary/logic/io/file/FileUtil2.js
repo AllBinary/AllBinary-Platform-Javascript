@@ -16,16 +16,16 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFileInputStream } from '../../../../../org/allbinary/logic/io/AbFileInputStream.js';
-//not GWT import const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
+//not GWT import const AbFileInputStream
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not GWT import const StreamUtil
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleFileUtil } from './SimpleFileUtil.js';
-//not GWT import - same folder const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import - same folder const AbFile
 export class FileUtil2 extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

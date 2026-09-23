@@ -13,11 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js - same folder import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import - same folder const GPoint
+import { PointFactory } from './PointFactory.js';
+//not GWT import - same folder const PointFactory
 export class Line extends Object {
     constructor(p1, p2) {
         super();

@@ -1,7 +1,7 @@
 /* Generated Code Do Not Modify */
-//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not GWT import const GL10
 import { OpenGLProcessor } from '../../../../../org/allbinary/graphics/opengles/OpenGLProcessor.js';
-//not GWT import const OpenGLProcessor = globalThis.org.allbinary.graphics.opengles.OpenGLProcessor;
+//not GWT import const OpenGLProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ShaderOpenGLProcessor extends OpenGLProcessor {
     constructor() {

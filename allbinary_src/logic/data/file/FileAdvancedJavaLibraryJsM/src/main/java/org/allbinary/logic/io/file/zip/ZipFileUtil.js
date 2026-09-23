@@ -14,26 +14,26 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { ZipEntry } from '../../../../../../java/util/zip/ZipEntry.js';
-//not GWT import const ZipEntry = globalThis.java.util.zip.ZipEntry;
+//not GWT import const ZipEntry
 import { ZipInputStream } from '../../../../../../java/util/zip/ZipInputStream.js';
-//not GWT import const ZipInputStream = globalThis.java.util.zip.ZipInputStream;
+//not GWT import const ZipInputStream
 import { ZipOutputStream } from '../../../../../../java/util/zip/ZipOutputStream.js';
-//not GWT import const ZipOutputStream = globalThis.java.util.zip.ZipOutputStream;
+//not GWT import const ZipOutputStream
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
+//not GWT import const AbDataOutputStream
 import { AbFileInputStream } from '../../../../../../org/allbinary/logic/io/AbFileInputStream.js';
-//not GWT import const AbFileInputStream = globalThis.org.allbinary.logic.io.AbFileInputStream;
+//not GWT import const AbFileInputStream
 import { AbFileOutputStream } from '../../../../../../org/allbinary/logic/io/AbFileOutputStream.js';
-//not GWT import const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
+//not GWT import const AbFileOutputStream
 import { DataOutputStreamFactory } from '../../../../../../org/allbinary/logic/io/DataOutputStreamFactory.js';
-//not GWT import const DataOutputStreamFactory = globalThis.org.allbinary.logic.io.DataOutputStreamFactory;
+//not GWT import const DataOutputStreamFactory
 import { StreamUtil } from '../../../../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not GWT import const StreamUtil
 import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { FileUtil } from '../../../../../../org/allbinary/logic/io/file/FileUtil.js';
-//not GWT import const FileUtil = globalThis.org.allbinary.logic.io.file.FileUtil;
+//not GWT import const FileUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonStrings } 

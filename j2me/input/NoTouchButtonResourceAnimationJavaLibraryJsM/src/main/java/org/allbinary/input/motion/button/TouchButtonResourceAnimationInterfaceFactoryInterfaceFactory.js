@@ -12,15 +12,15 @@
         *  Created By: Travis Berthelot
 */
 import { BaseResourceAnimationInterfaceFactoryInterfaceFactory } from '../../../../../org/allbinary/animation/resource/BaseResourceAnimationInterfaceFactoryInterfaceFactory.js';
-//not GWT import const BaseResourceAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
+//not GWT import const BaseResourceAnimationInterfaceFactoryInterfaceFactory
 import { Features } from '../../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { ResourceLoadingLevelFactory } from '../../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
-//not GWT import const ResourceLoadingLevelFactory = globalThis.org.allbinary.game.resource.ResourceLoadingLevelFactory;
+//not GWT import const ResourceLoadingLevelFactory
 import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
-//not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
+//not GWT import const ImageCache
 import { ImageCacheFactory } from '../../../../../org/allbinary/image/ImageCacheFactory.js';
-//not GWT import const ImageCacheFactory = globalThis.org.allbinary.image.ImageCacheFactory;
+//not GWT import const ImageCacheFactory
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)

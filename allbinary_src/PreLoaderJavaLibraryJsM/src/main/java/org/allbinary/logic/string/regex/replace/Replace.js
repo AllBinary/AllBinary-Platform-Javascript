@@ -14,20 +14,23 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Integer } from '../../../../../../java/lang/Integer.js';
-import { HashMap } from '../../../../../../java/util/HashMap.js';
-//not GWT import const Set = globalThis.java.util.Set;
+//not GWT import const HashMap
+import { J2SEUtil } from '../../../../../../org/allbinary/J2SEUtil.js';
+//not GWT import const J2SEUtil
 import { AppUrlGlobals } from '../../../../../../org/allbinary/globals/AppUrlGlobals.js';
-//not GWT import const AppUrlGlobals = globalThis.org.allbinary.globals.AppUrlGlobals;
+//not GWT import const AppUrlGlobals
 import { URLGLOBALS } from '../../../../../../org/allbinary/globals/URLGLOBALS.js';
-//not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
+//not GWT import const URLGLOBALS
+//not plain js import { StdUtil } 
+const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { CommonStrings } 
-const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
+import { LogConfigTypes } from '../../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypes.js';
+//not GWT import const LogConfigTypes
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Replace extends Object {
     static main(args) {
@@ -57,11 +60,11 @@ export class Replace extends Object {
     constructor(key, value) {
         super();
         this.logUtil = LogUtil.getInstance();
-        this.commonStrings = CommonStrings.getInstance();
+        this.j2seUtil = J2SEUtil.getInstance();
         this.REPLACERS_ = "Replacers: ";
         this.ALL = "all";
         this.FOUND_KEY = "found key total: ";
-        this.hashMap = new HashMap();
+        this.hashMap = StdUtil.getInstance().createHashMap();
         this.hashMap.put([
             key
         ], [
@@ -71,17 +74,17 @@ export class Replace extends Object {
     constructor(keys, values) {
         super();
         this.logUtil = LogUtil.getInstance();
-        this.commonStrings = CommonStrings.getInstance();
+        this.j2seUtil = J2SEUtil.getInstance();
         this.REPLACERS_ = "Replacers: ";
         this.ALL = "all";
         this.FOUND_KEY = "found key total: ";
-        this.hashMap = new HashMap();
+        this.hashMap = StdUtil.getInstance().createHashMap();
         this.hashMap.put(keys, values);
     }
     constructor(hashMap) {
         super();
         this.logUtil = LogUtil.getInstance();
-        this.commonStrings = CommonStrings.getInstance();
+        this.j2seUtil = J2SEUtil.getInstance();
         this.REPLACERS_ = "Replacers: ";
         this.ALL = "all";
         this.FOUND_KEY = "found key total: ";
@@ -97,13 +100,11 @@ export class Replace extends Object {
         ;
         var totalNumberOfReplaces = 0;
         ;
-        var keySet = this.hashMap.keys();
-        ;
         var keys;
         ;
         var values;
         ;
-        var keyArray = keySet.();
+        var keyArray = this.j2seUtil.getHashMapAsArray(this.hashMap);
         ;
         var size = keyArray.length;
         ;
@@ -114,6 +115,14 @@ export class Replace extends Object {
             ;
             var index = 0;
             ;
+            var nextKey;
+            ;
+            var end = 0;
+            ;
+            var nextSecondKey;
+            ;
+            var begin2 = 0;
+            ;
             while (index < replace.length) {
                 var begin = replace.indexOf(keys[0], index);
                 ;
@@ -122,8 +131,8 @@ export class Replace extends Object {
                     if (foundTotal % 100 == 0) {
                         console.log(this.FOUND_KEY + foundTotal);
                     }
-                    var end = begin + keys[0].length();
-                    ;
+                    nextKey = keys[0];
+                    end = begin + nextKey.length;
                     newStringBuffer.delete(0, newStringBuffer.length());
                     newStringBuffer.append(replace.substring(0, begin));
                     newStringBuffer.append(values[0]);
@@ -131,10 +140,10 @@ export class Replace extends Object {
                     newStringBuffer.append(replace.substring(end, replace.length));
                     replace = newStringBuffer.toString();
                     if (keys.length > 1) {
-                        var begin2 = replace.indexOf(keys[1], index);
-                        ;
+                        nextSecondKey = keys[1];
+                        begin2 = replace.indexOf(nextSecondKey, index);
                         if (begin2 != -1) {
-                            var end2 = begin2 + keys[1].length();
+                            var end2 = begin2 + nextSecondKey.length;
                             ;
                             newStringBuffer.delete(0, newStringBuffer.length());
                             newStringBuffer.append(replace.substring(0, begin2));
@@ -155,7 +164,7 @@ export class Replace extends Object {
             }
         }
         if (totalNumberOfReplaces > 0) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().REPLACE)) {
+            if (LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().REPLACE)) {
                 this.logUtil.putF("Total Number Of Replaces: " + totalNumberOfReplaces, this, this.ALL);
             }
         }
@@ -167,13 +176,11 @@ export class Replace extends Object {
         ;
         var totalNumberOfReplaces = 0;
         ;
-        var keySet = this.hashMap.keys();
-        ;
         var key;
         ;
         var value;
         ;
-        var keyArray = keySet.();
+        var keyArray = this.j2seUtil.getHashMapAsArray(this.hashMap);
         ;
         var size = keyArray.length;
         ;
@@ -203,7 +210,7 @@ export class Replace extends Object {
                 }
             }
         }
-        if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().REPLACE)) {
+        if (LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().REPLACE)) {
             this.logUtil.putF("Total Number Of Replaces: " + totalNumberOfReplaces, this, this.ALL);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

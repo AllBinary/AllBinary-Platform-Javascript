@@ -13,11 +13,11 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseSoundsFactory } from './BaseSoundsFactory.js';
-//not GWT import - same folder const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import - same folder const Sound
 import { SelectSound } from './SelectSound.js';
-//not GWT import - same folder const SelectSound = globalThis.org.allbinary.media.audio.SelectSound;
+//not GWT import - same folder const SelectSound
 import { ErrorSound } from './ErrorSound.js';
-//not GWT import - same folder const ErrorSound = globalThis.org.allbinary.media.audio.ErrorSound;
+//not GWT import - same folder const ErrorSound
 export class EarlySoundsFactory extends BaseSoundsFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

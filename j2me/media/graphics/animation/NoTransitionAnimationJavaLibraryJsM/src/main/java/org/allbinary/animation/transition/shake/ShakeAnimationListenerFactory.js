@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoShakeAnimationListener } from './NoShakeAnimationListener.js';
-//not GWT import - same folder const ShakeAnimationListener = globalThis.org.allbinary.animation.transition.shake.ShakeAnimationListener;
+//not GWT import - same folder const ShakeAnimationListener
 export class ShakeAnimationListenerFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

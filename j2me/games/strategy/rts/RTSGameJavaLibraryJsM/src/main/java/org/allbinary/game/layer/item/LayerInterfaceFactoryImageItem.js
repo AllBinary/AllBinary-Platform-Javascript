@@ -11,12 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 import { ABCustomImageItem } from '../../../../../org/allbinary/graphics/form/item/ABCustomImageItem.js';
-//not GWT import const LayerInterfaceFactoryInterface = globalThis.org.allbinary.layer.LayerInterfaceFactoryInterface;
+//not GWT import const LayerInterfaceFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LayerInterfaceFactoryImageItem extends ABCustomImageItem {
     constructor(label, img, layout, altText, basicColor, animationArray, layerInterfaceFactoryInterface) {

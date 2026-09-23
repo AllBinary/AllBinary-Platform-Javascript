@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import - same folder const RTSLayerFormFactoryInterface = globalThis.org.allbinary.game.input.RTSLayerFormFactoryInterface;
+//not GWT import - same folder const RTSLayerFormFactoryInterface
 export class RTSLayerFormFactory extends Object {
     getInstance(rtsLayer) {
         throw new RuntimeException();

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
+//not GWT import const GeographicMapCompositeInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TileLayerPositionIntoViewPositionUtil extends Object {
     static init(gameCanvasInterface, viewPosition) {

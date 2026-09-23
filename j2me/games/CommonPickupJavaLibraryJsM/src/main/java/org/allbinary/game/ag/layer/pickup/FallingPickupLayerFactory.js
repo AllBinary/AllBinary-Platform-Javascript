@@ -14,10 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { RemoteInfo } from '../../../../../../org/allbinary/game/multiplayer/layer/RemoteInfo.js';
-//not GWT import const AllBinaryLayerFactoryInterface = globalThis.org.allbinary.layer.AllBinaryLayerFactoryInterface;
+//not GWT import const AllBinaryLayerFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { FallingPickupLayer } from './FallingPickupLayer.js';
-//not GWT import - same folder const FallingPickupLayer = globalThis.org.allbinary.game.ag.layer.pickup.FallingPickupLayer;
+//not GWT import - same folder const FallingPickupLayer
 export class FallingPickupLayerFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance() {

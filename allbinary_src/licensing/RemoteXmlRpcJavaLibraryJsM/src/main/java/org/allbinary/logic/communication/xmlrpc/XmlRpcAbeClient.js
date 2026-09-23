@@ -24,7 +24,7 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not GWT import const AbeClientInformationInterface
 //not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonSeps } 
@@ -32,7 +32,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { NullXmlRpcHandler } from '../../../../../org/apache/xmlrpc/NullXmlRpcHandler.js';
-//not GWT import const XmlRpcHandler = globalThis.org.apache.xmlrpc.XmlRpcHandler;
+//not GWT import const XmlRpcHandler
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class XmlRpcAbeClient extends Object {
     constructor(clientInfo, remoteMethod) {

@@ -13,16 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../../java/lang/Exception.js';
-//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
+//not GWT import const Layer
 //not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleGeographicMap } from './SimpleGeographicMap.js';
-//not GWT import - same folder const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
+//not GWT import - same folder const GeographicMapCellPosition
 import { SimpleGeographicMapCellPositionFactory } from './SimpleGeographicMapCellPositionFactory.js';
-//not GWT import - same folder const GeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellType;
+//not GWT import - same folder const GeographicMapCellType
 export class BasicGeographicMap extends SimpleGeographicMap {
     constructor(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor, geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory) {
         super(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor);

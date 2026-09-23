@@ -23,7 +23,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicAI } from './BasicAI.js';
-//not GWT import - same folder const ArtificialIntelligenceInterfaceFactoryInterface = globalThis.org.allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterface;
+//not GWT import - same folder const ArtificialIntelligenceInterfaceFactoryInterface
 export class ArtificialIntelligenceInterfaceFactoryInterfaceFactory extends Object {
     constructor() {
         super(...arguments);

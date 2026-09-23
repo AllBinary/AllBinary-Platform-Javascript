@@ -18,7 +18,7 @@ import { RuntimeException } from '../../../../../../java/lang/RuntimeException.j
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const VideoInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.VideoInterface;
+//not GWT import const VideoInterface
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)

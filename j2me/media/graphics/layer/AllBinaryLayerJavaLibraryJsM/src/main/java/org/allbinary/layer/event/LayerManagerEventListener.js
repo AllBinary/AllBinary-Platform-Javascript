@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const LayerManagerEvent = globalThis.org.allbinary.layer.event.LayerManagerEvent;
+//not GWT import - same folder const LayerManagerEvent
 export class LayerManagerEventListener extends Object {
     onEvent(eventObject) {
     }

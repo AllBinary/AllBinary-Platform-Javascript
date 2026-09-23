@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Init } from '../../../../org/allbinary/init/Init.js';
-//not GWT import const Init = globalThis.org.allbinary.init.Init;
+//not GWT import const Init
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)

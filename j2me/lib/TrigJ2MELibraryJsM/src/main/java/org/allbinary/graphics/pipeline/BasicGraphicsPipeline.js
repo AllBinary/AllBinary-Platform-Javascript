@@ -13,14 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
-//not plain js import { Angle } 
-const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { NoDecimalTrigTable } 
-const NoDecimalTrigTable = globalThis.org.allbinary.math.NoDecimalTrigTable;
+//not GWT import const GPoint
+import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const Angle
+import { NoDecimalTrigTable } from '../../../../org/allbinary/math/NoDecimalTrigTable.js';
+//not GWT import const NoDecimalTrigTable
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 

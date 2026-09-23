@@ -14,11 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { AnalogControllerConfigurationEvent } from '../../../../../org/allbinary/android/input/motion/event/AnalogControllerConfigurationEvent.js';
-//not GWT import const AnalogControllerConfigurationEvent = globalThis.org.allbinary.android.input.motion.event.AnalogControllerConfigurationEvent;
+//not GWT import const AnalogControllerConfigurationEvent
 import { AnalogControllerConfigurationEventHandler } from '../../../../../org/allbinary/android/input/motion/event/AnalogControllerConfigurationEventHandler.js';
-//not GWT import const AnalogControllerConfigurationEventHandler = globalThis.org.allbinary.android.input.motion.event.AnalogControllerConfigurationEventHandler;
-//not plain js import { ScaleFactorFactory } 
-const ScaleFactorFactory = globalThis.org.allbinary.logic.math.ScaleFactorFactory;
+//not GWT import const AnalogControllerConfigurationEventHandler
+import { ScaleFactorFactory } from '../../../../../org/allbinary/logic/math/ScaleFactorFactory.js';
+//not GWT import const ScaleFactorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AnalogControllerConfigurationFactory extends Object {
     static getInstance() {

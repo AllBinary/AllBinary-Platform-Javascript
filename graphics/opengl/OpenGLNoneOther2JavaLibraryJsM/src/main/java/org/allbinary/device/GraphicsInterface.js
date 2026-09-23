@@ -11,7 +11,4 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
 export {};

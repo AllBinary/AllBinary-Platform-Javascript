@@ -13,11 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
-//not GWT import const Init = globalThis.org.allbinary.init.Init;
+//not GWT import const Init
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
@@ -26,7 +24,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InGameOptionsForm } from './InGameOptionsForm.js';
-//not GWT import - same folder const InGameOptionsForm = globalThis.org.allbinary.game.configuration.InGameOptionsForm;
+//not GWT import - same folder const InGameOptionsForm
 export class InGameOptionsFormFactory extends Object {
     constructor() {
         super(...arguments);

@@ -13,24 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Integer } from '../../../../java/lang/Integer.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
+//not GWT import const IndexedAnimation
 import { IndexedAnimationBehavior } from '../../../../org/allbinary/animation/IndexedAnimationBehavior.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import const DisplayInfoSingleton
 //not plain js import { ABSystemWrapper } 
 const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { PrimitiveIntUtil } 
-const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
+import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialAnimation } from './SpecialAnimation.js';
-//not GWT import - same folder const SpecialAnimation = globalThis.org.allbinary.animation.special.SpecialAnimation;
+//not GWT import - same folder const SpecialAnimation
 export class TitleAnimation extends SpecialAnimation {
     static createAnimation(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width) {
         //if statement needs to be on the same line and ternary does not work the same way.

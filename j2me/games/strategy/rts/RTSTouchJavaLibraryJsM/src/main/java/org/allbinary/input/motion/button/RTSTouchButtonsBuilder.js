@@ -21,13 +21,13 @@ const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput = globalThis.org.allbinary.input.motion.button.BaseTouchInput;
+//not GWT import - same folder const BaseTouchInput
 import { BasicTouchButtonsBuilder } from './BasicTouchButtonsBuilder.js';
-//not GWT import - same folder const BasicTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BasicTouchButtonsBuilder;
+//not GWT import - same folder const BasicTouchButtonsBuilder
 import { BuildingScrollTouchButtonsBuilder } from './BuildingScrollTouchButtonsBuilder.js';
-//not GWT import - same folder const BuildingScrollTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BuildingScrollTouchButtonsBuilder;
+//not GWT import - same folder const BuildingScrollTouchButtonsBuilder
 import { UpgradeDowngradeTouchButtonsBuilder } from './UpgradeDowngradeTouchButtonsBuilder.js';
-//not GWT import - same folder const UpgradeDowngradeTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.UpgradeDowngradeTouchButtonsBuilder;
+//not GWT import - same folder const UpgradeDowngradeTouchButtonsBuilder
 export class RTSTouchButtonsBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);

@@ -21,11 +21,11 @@ const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonsListBuilder } from './TouchButtonsListBuilder.js';
-//not GWT import - same folder const TouchButtonsListBuilder = globalThis.org.allbinary.input.motion.button.TouchButtonsListBuilder;
+//not GWT import - same folder const TouchButtonsListBuilder
 import { BasicTouchButtonsBuilder } from './BasicTouchButtonsBuilder.js';
-//not GWT import - same folder const BasicTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BasicTouchButtonsBuilder;
+//not GWT import - same folder const BasicTouchButtonsBuilder
 import { BuildingScrollTouchButtonsBuilder } from './BuildingScrollTouchButtonsBuilder.js';
-//not GWT import - same folder const BuildingScrollTouchButtonsBuilder = globalThis.org.allbinary.input.motion.button.BuildingScrollTouchButtonsBuilder;
+//not GWT import - same folder const BuildingScrollTouchButtonsBuilder
 export class EndLevelNoBuildingSelectedTouchButtonsBuilder extends TouchButtonsListBuilder {
     constructor() {
         super(...arguments);

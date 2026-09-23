@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { GameInputMotionInfo } from '../../../../../../org/allbinary/android/input/motion/GameInputMotionInfo.js';
-//not GWT import const GameInputMotionInfo = globalThis.org.allbinary.android.input.motion.GameInputMotionInfo;
+//not GWT import const GameInputMotionInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameInputMotionInfoAPI1 extends GameInputMotionInfo {
     static getInstance() {

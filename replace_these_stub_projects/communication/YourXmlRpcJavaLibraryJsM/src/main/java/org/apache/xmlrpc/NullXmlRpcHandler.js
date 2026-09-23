@@ -19,7 +19,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const XmlRpcHandler = globalThis.org.apache.xmlrpc.XmlRpcHandler;
+//not GWT import - same folder const XmlRpcHandler
 export class NullXmlRpcHandler extends Object {
     //@Throws(Exception.constructor)
     execute(method, params) {

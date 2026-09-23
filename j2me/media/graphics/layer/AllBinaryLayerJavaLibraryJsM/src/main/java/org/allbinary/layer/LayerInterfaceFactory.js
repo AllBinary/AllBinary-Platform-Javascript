@@ -31,7 +31,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Layer } from './Layer.js';
-//not GWT import - same folder const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import - same folder const AllBinaryLayer
 export class LayerInterfaceFactory extends Object {
     constructor() {
         super(...arguments);

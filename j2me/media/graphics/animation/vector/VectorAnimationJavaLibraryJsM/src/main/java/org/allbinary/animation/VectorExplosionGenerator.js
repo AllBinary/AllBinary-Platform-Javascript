@@ -14,14 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Exception } from '../../../java/lang/Exception.js';
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const GPoint
+import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const PointFactory
 import { RandomRotationFactory } from '../../../org/allbinary/graphics/pipeline/RandomRotationFactory.js';
-//not GWT import const RandomRotationFactory = globalThis.org.allbinary.graphics.pipeline.RandomRotationFactory;
+//not GWT import const RandomRotationFactory
 import { RandomTranslation } from '../../../org/allbinary/graphics/pipeline/RandomTranslation.js';
-//not GWT import const RandomTranslation = globalThis.org.allbinary.graphics.pipeline.RandomTranslation;
+//not GWT import const RandomTranslation
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
@@ -30,9 +29,9 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorExplosionType } from './VectorExplosionType.js';
-//not GWT import - same folder const VectorExplosionType = globalThis.org.allbinary.animation.VectorExplosionType;
+//not GWT import - same folder const VectorExplosionType
 import { VectorAnimationUtil } from './VectorAnimationUtil.js';
-//not GWT import - same folder const VectorAnimationUtil = globalThis.org.allbinary.animation.VectorAnimationUtil;
+//not GWT import - same folder const VectorAnimationUtil
 export class VectorExplosionGenerator extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const ArtificialIntelligenceInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceInterface;
+//not GWT import const ArtificialIntelligenceInterface
 import { SequenceAI } from '../../../../../org/allbinary/game/ag/ai/sequence/SequenceAI.js';
-//not GWT import const GameInput = globalThis.org.allbinary.game.input.GameInput;
+//not GWT import const GameInput
 import { GroupLayerManagerListener } from '../../../../../org/allbinary/game/layer/identification/GroupLayerManagerListener.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NumberOnOwnGroupSequenceAI extends SequenceAI {
     constructor(numberOnSameTeam, artificialIntelligenceInterface, ownerLayerInterface, gameInput) {

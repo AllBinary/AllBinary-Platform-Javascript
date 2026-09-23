@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const VelocityInterfaceCompositeInterface = globalThis.org.allbinary.game.physics.velocity.VelocityInterfaceCompositeInterface;
+//not GWT import const VelocityInterfaceCompositeInterface
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class StopAtEdgeAI extends BasicAI {
     constructor(ownerLayerInterface, gameInput) {

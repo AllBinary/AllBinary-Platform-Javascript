@@ -14,18 +14,18 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { Features } from '../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { OpenGLFeatureFactory } from '../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
-//not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+//not GWT import const OpenGLFeatureFactory
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 import { Memory } from '../../../org/allbinary/system/Memory.js';
-//not GWT import const Memory = globalThis.org.allbinary.system.Memory;
+//not GWT import const Memory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameStatisticsFactory } from './GameStatisticsFactory.js';
-//not GWT import - same folder const GameStatisticsFactory = globalThis.org.allbinary.canvas.GameStatisticsFactory;
+//not GWT import - same folder const GameStatisticsFactory
 export class SpecialMessageUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

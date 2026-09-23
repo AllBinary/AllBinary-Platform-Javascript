@@ -11,11 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const LayerBounds = globalThis.org.allbinary.bounds.LayerBounds;
+//not GWT import const LayerBounds
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BoundBounceAI extends BasicAI {
     constructor(ownerLayerInterface, gameInput, layerBounds, boundsVisitorInterface) {

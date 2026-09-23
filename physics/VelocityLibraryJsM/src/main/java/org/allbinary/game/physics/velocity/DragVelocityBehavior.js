@@ -11,12 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { BasicDecimal } 
-const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+//not GWT import const BasicDecimal
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VelocityBehaviorBase } from './VelocityBehaviorBase.js';
-//not GWT import - same folder const BasicVelocityProperties = globalThis.org.allbinary.game.physics.velocity.BasicVelocityProperties;
+//not GWT import - same folder const BasicVelocityProperties
 export class DragVelocityBehavior extends VelocityBehaviorBase {
     reduce(velocityProperties, nominator, denominator) {
         if (velocityProperties.getVelocityXBasicDecimalP().getUnscaled() != 0) {

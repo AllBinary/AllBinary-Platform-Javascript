@@ -13,22 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const BaseResourceAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
+//not GWT import const BaseResourceAnimationInterfaceFactoryInterfaceFactory
 import { Features } from '../../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { MainFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
-//not GWT import const LayerPlacementInterfaceBasicArrayListFactoryInterface = globalThis.org.allbinary.game.layer.LayerPlacementInterfaceBasicArrayListFactoryInterface;
+//not GWT import const LayerPlacementInterfaceBasicArrayListFactoryInterface
 import { ResourceLoadingLevelFactory } from '../../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
-//not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
+//not GWT import const ImageCache
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const OnDemandResourcesFactory = globalThis.org.allbinary.game.layer.resources.OnDemandResourcesFactory;
+//not GWT import - same folder const OnDemandResourcesFactory
 import { OnDemandResources } from './OnDemandResources.js';
-//not GWT import - same folder const OnDemandResources = globalThis.org.allbinary.game.layer.resources.OnDemandResources;
+//not GWT import - same folder const OnDemandResources
 export class OnDemandLoader extends Object {
     constructor(onDemandResourcesFactory, gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory, resourceAnimationInterfaceFactoryInterfaceFactory) {
         super();

@@ -25,9 +25,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import - same folder const Sound
 import { NoSound } from './NoSound.js';
-//not GWT import - same folder const NoSound = globalThis.org.allbinary.media.audio.NoSound;
+//not GWT import - same folder const NoSound
 export class PlayerQueue extends Object {
     constructor(max) {
         super();

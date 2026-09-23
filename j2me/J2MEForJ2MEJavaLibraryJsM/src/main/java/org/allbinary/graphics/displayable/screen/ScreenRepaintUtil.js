@@ -13,8 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Displayable } 
-const Displayable = globalThis.javax.microedition.lcdui.Displayable;
+//not GWT import const Displayable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScreenRepaintUtil extends Object {
     static repaint(displayable) {

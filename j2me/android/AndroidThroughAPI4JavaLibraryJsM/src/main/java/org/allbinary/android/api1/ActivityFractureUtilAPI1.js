@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { ActivityFractureUtil } from '../../../../org/allbinary/android/ActivityFractureUtil.js';
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 import { WindowManager } from '../../../../android/view/WindowManager.js';
-//not GWT import const WindowManager = globalThis.android.view.WindowManager;
+//not GWT import const WindowManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ActivityFractureUtilAPI1 extends ActivityFractureUtil {
     static getInstance() {

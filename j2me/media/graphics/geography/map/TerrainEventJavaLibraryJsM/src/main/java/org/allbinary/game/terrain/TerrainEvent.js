@@ -17,10 +17,10 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
-//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicTerrainInfo } from './BasicTerrainInfo.js';
-//not GWT import - same folder const BasicTerrainInfo = globalThis.org.allbinary.game.terrain.BasicTerrainInfo;
+//not GWT import - same folder const BasicTerrainInfo
 export class TerrainEvent extends AllBinaryEventObject {
     constructor(basicTerrainInfo = {}) {
         super(basicTerrainInfo);

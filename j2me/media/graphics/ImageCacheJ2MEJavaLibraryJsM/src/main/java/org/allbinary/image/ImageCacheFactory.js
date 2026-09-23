@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCache } from './ImageCache.js';
-//not GWT import - same folder const ImageCache = globalThis.org.allbinary.image.ImageCache;
+//not GWT import - same folder const ImageCache
 export class ImageCacheFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -25,3 +25,8 @@ export class ImageCacheFactory extends Object {
     }
 }
 ImageCacheFactory.IMAGE_CACHE = new ImageCache();
+//JSNI Expose so JSNI can access this class *** 
+globalThis.org.allbinary = globalThis.org.allbinary || {};
+globalThis.org.allbinary.image = globalThis.org.allbinary.image || {};
+globalThis.org.allbinary.image.ImageCacheFactory = ImageCacheFactory;
+console.log('Exported ImageCacheFactory as globalThis');

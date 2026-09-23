@@ -11,16 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
-//not plain js import { AngleInfo } 
-const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+//not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation = globalThis.org.allbinary.animation.image.ImageBaseRotationAnimation;
+//not GWT import - same folder const ImageBaseRotationAnimation
 export class AdjustedImageBaseRotationAnimation extends ImageBaseRotationAnimation {
     constructor(image, angleInfo, totalAngle, dx, dy, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);

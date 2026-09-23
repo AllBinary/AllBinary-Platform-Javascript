@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const DestroyableInterface = globalThis.org.allbinary.game.combat.destroy.DestroyableInterface;
+//not GWT import - same folder const DestroyableInterface
 export class DestroyableBaseBehavior extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

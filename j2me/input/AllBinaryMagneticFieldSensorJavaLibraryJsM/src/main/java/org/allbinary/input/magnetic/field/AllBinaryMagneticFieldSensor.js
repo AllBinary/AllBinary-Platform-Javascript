@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { AllBinarySensor } from '../../../../../org/allbinary/input/AllBinarySensor.js';
-//not GWT import const AllBinarySensor = globalThis.org.allbinary.input.AllBinarySensor;
+//not GWT import const AllBinarySensor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AllBinaryMagneticFieldSensor extends AllBinarySensor {
     constructor() {

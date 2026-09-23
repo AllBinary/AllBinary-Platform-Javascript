@@ -11,18 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import const Animation
 import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../../org/allbinary/animation/FeaturedAnimationInterfaceFactoryInterfaceFactory.js';
-//not GWT import const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const GPoint
+import { PointFactory } from '../../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const PointFactory
 import { Rectangle } from '../../../../../org/allbinary/graphics/Rectangle.js';
-//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not GWT import const Rectangle
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButton } from './TouchButton.js';
-//not GWT import - same folder const TouchButtonResource = globalThis.org.allbinary.input.motion.button.TouchButtonResource;
+//not GWT import - same folder const TouchButtonResource
 export class FullTouchButton extends TouchButton {
     //@Throws(Exception.constructor)
     static createButton(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder) {

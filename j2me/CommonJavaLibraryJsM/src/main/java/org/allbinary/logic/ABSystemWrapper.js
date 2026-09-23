@@ -18,7 +18,7 @@ import { System } from '../../../java/lang/System.js';
 export class ABSystemWrapper extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return instance;
+        return ABSystemWrapper.instance;
     }
     arraycopy(src = {}, srcPos, dest = {}, destPos, length) {
         System.arraycopy(src, srcPos, dest, destPos, length);
@@ -27,9 +27,6 @@ export class ABSystemWrapper extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return Date.now();
         ;
-    }
-    gc() {
-        System.gc();
     }
 }
 ABSystemWrapper.instance = new ABSystemWrapper();

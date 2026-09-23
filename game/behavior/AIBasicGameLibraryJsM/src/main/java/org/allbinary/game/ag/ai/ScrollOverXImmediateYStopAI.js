@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const GameInput = globalThis.org.allbinary.game.input.GameInput;
+//not GWT import const GameInput
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScrollOverXImmediateYStopAI extends BasicAI {
     constructor(ownerLayerInterface, gameInput) {

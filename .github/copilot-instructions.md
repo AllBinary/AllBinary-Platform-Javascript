@@ -1,1 +1,0 @@
-- Avoid providing solutions in something other than Java unless explicitly requested.

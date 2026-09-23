@@ -1,7 +1,6 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
+//not GWT import const Font
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)

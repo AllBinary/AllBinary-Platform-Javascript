@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 import { BooleanFactory } from '../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-//not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
+//not GWT import const BooleanFactory
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { BasicArrayList } 
@@ -25,7 +25,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const ValidatorBaseInterface = globalThis.org.allbinary.logic.control.validate.ValidatorBaseInterface;
+//not GWT import - same folder const ValidatorBaseInterface
 export class ValidatorBase extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

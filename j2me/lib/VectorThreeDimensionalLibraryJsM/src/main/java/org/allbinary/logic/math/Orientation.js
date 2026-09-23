@@ -16,8 +16,8 @@ import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { BasicDecimal } 
-const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+import { BasicDecimal } from './BasicDecimal.js';
+//not GWT import - same folder const BasicDecimal
 export class Orientation extends Object {
     static getInstance(yaw, pitch, roll) {
         Orientation.SINGLETON.yaw.setint(yaw);

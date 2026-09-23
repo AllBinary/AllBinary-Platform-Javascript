@@ -19,9 +19,9 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const HealthInterface = globalThis.org.allbinary.game.health.HealthInterface;
+//not GWT import - same folder const HealthInterface
 import { NullHealthListener } from './NullHealthListener.js';
-//not GWT import - same folder const HealthListenerInterface = globalThis.org.allbinary.game.health.HealthListenerInterface;
+//not GWT import - same folder const HealthListenerInterface
 export class Health extends Object {
     constructor(maxHealth) {
         super();

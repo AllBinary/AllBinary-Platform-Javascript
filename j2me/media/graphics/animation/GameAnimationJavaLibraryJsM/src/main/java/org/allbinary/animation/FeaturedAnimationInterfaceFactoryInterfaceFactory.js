@@ -13,17 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../java/lang/Exception.js';
-//not GWT import const FeatureResourceAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.resource.FeatureResourceAnimationInterfaceFactoryInterface;
+//not GWT import const FeatureResourceAnimationInterfaceFactoryInterface
 import { GameConfigurationCentral } from '../../../org/allbinary/game/configuration/GameConfigurationCentral.js';
-//not GWT import const GameConfigurationCentral = globalThis.org.allbinary.game.configuration.GameConfigurationCentral;
+//not GWT import const GameConfigurationCentral
 import { FeaturedResourceFactory } from '../../../org/allbinary/game/resource/FeaturedResourceFactory.js';
-//not GWT import const FeaturedResourceFactory = globalThis.org.allbinary.game.resource.FeaturedResourceFactory;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const FeaturedResourceFactory
+import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const PointFactory
 import { Rectangle } from '../../../org/allbinary/graphics/Rectangle.js';
-//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not GWT import const Rectangle
 import { RectangleFactory } from '../../../org/allbinary/graphics/RectangleFactory.js';
-//not GWT import const RectangleFactory = globalThis.org.allbinary.graphics.RectangleFactory;
+//not GWT import const RectangleFactory
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
@@ -34,9 +34,9 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const BasicAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.BasicAnimationInterfaceFactoryInterface;
+//not GWT import - same folder const BasicAnimationInterfaceFactoryInterface
 import { NullAnimationFactory } from './NullAnimationFactory.js';
-//not GWT import - same folder const NullAnimationFactory = globalThis.org.allbinary.animation.NullAnimationFactory;
+//not GWT import - same folder const NullAnimationFactory
 export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedResourceFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

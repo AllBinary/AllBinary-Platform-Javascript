@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const FileLock = globalThis.java.nio.channels.FileLock;
+//not GWT import const FileLock
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
@@ -23,9 +23,9 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFileOutputStream } from '../../../../../org/allbinary/logic/io/AbFileOutputStream.js';
-//not GWT import const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
+//not GWT import const AbFileOutputStream
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import - same folder const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import - same folder const AbFile
 export class FileLockUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

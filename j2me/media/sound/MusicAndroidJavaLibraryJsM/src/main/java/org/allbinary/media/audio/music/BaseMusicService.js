@@ -3,11 +3,11 @@ import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
 import { System } from '../../../../../java/lang/System.js';
 import { Thread } from '../../../../../java/lang/Thread.js';
 import { Service } from '../../../../../android/app/Service.js';
-//not GWT import const Intent = globalThis.android.content.Intent;
+//not GWT import const Intent
 import { MediaPlayer } from '../../../../../android/media/MediaPlayer.js';
-//not GWT import const IBinder = globalThis.android.os.IBinder;
+//not GWT import const IBinder
 import { NullAndroidCanvas } from '../../../../../org/allbinary/android/NullAndroidCanvas.js';
-//not GWT import const NullAndroidCanvas = globalThis.org.allbinary.android.NullAndroidCanvas;
+//not GWT import const NullAndroidCanvas
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonLabels } 
@@ -20,7 +20,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MusicStrings } from './MusicStrings.js';
-//not GWT import - same folder const MusicStrings = globalThis.org.allbinary.media.audio.music.MusicStrings;
+//not GWT import - same folder const MusicStrings
 export class BaseMusicService extends Service {
     constructor() {
         super(...arguments);

@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import - same folder const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not GWT import - same folder const Paintable
 export class ProcessPaintable extends Paintable {
     process() {
     }

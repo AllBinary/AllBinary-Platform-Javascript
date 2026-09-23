@@ -14,18 +14,18 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { NoShakeAnimationListener } from '../../../../org/allbinary/animation/transition/shake/NoShakeAnimationListener.js';
-//not GWT import const ShakeAnimationListener = globalThis.org.allbinary.animation.transition.shake.ShakeAnimationListener;
+//not GWT import const ShakeAnimationListener
 import { ShakeAnimationListenerFactory } from '../../../../org/allbinary/animation/transition/shake/ShakeAnimationListenerFactory.js';
-//not GWT import const ShakeAnimationListenerFactory = globalThis.org.allbinary.animation.transition.shake.ShakeAnimationListenerFactory;
+//not GWT import const ShakeAnimationListenerFactory
 import { GameConfigurationCentral } from '../../../../org/allbinary/game/configuration/GameConfigurationCentral.js';
-//not GWT import const TickableInterface = globalThis.org?.allbinary?.game?.tick?.TickableInterface;
+//not GWT import const TickableInterface
 import { AllBinaryNoVibration } from '../../../../org/allbinary/media/AllBinaryNoVibration.js';
-//not GWT import const AllBinaryNoVibration = globalThis.org.allbinary.media.AllBinaryNoVibration;
+//not GWT import const AllBinaryNoVibration
 import { AllBinaryVibration } from '../../../../org/allbinary/media/AllBinaryVibration.js';
-//not GWT import const AllBinaryVibrationME = globalThis.org.allbinary.media.AllBinaryVibrationME;
+//not GWT import const AllBinaryVibrationME
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointBehaviorBase } from './WaypointBehaviorBase.js';
-//not GWT import - same folder const WaypointBehaviorBase = globalThis.org.allbinary.game.layer.WaypointBehaviorBase;
+//not GWT import - same folder const WaypointBehaviorBase
 export class AdvancedRTSProperties extends Object {
     static createPropertiesSimulated() {
         //if statement needs to be on the same line and ternary does not work the same way.

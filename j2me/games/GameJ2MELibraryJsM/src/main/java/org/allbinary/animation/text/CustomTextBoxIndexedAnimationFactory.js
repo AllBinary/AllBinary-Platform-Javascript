@@ -13,13 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { TextField } 
-const TextField = globalThis.javax.microedition.lcdui.TextField;
-//not GWT import const AnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.AnimationInterfaceFactoryInterface;
+import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not GWT import const Font
+import { TextField } from '../../../../javax/microedition/lcdui/TextField.js';
+//not GWT import const AnimationInterfaceFactoryInterface
 import { ABToGBUtil } from '../../../../org/allbinary/game/canvas/ABToGBUtil.js';
-//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import const AllBinaryGameCanvas
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
@@ -27,12 +26,12 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { ScaleProperties } from '../../../../org/allbinary/media/ScaleProperties.js';
-//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
+//not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomTextBox2 } from './CustomTextBox2.js';
-//not GWT import - same folder const CustomTextBox2 = globalThis.org.allbinary.animation.text.CustomTextBox2;
+//not GWT import - same folder const CustomTextBox2
 import { CustomTextBoxIndexedAnimation } from './CustomTextBoxIndexedAnimation.js';
-//not GWT import - same folder const CustomTextBoxIndexedAnimation = globalThis.org.allbinary.animation.text.CustomTextBoxIndexedAnimation;
+//not GWT import - same folder const CustomTextBoxIndexedAnimation
 export class CustomTextBoxIndexedAnimationFactory extends Object {
     constructor(fontSize, maxLength) {
         super();

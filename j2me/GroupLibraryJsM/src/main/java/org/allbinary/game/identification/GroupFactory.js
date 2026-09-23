@@ -25,7 +25,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Group } from './Group.js';
-//not GWT import - same folder const Group = globalThis.org.allbinary.game.identification.Group;
+//not GWT import - same folder const Group
 export class GroupFactory extends Object {
     constructor() {
         super(...arguments);

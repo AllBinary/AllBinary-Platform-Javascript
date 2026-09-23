@@ -13,22 +13,22 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const ArtificialIntelligenceInterface = globalThis.org.allbinary.ai.ArtificialIntelligenceInterface;
+//not GWT import const ArtificialIntelligenceInterface
 import { BasicRandomAIFactory } from '../../../../../org/allbinary/game/ag/ai/tactical/BasicRandomAIFactory.js';
-//not GWT import const ArtificialIntelligenceInterfaceFactoryInterface = globalThis.org.allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterface;
+//not GWT import const ArtificialIntelligenceInterfaceFactoryInterface
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
+//not GWT import const Visitor
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThrustAIVisitorFactory } from './ThrustAIVisitorFactory.js';
-//not GWT import - same folder const ThrustAIVisitorFactory = globalThis.org.allbinary.game.ag.ai.ThrustAIVisitorFactory;
+//not GWT import - same folder const ThrustAIVisitorFactory
 import { BasicProbabilityAIDataFactory } from './BasicProbabilityAIDataFactory.js';
-//not GWT import - same folder const BasicProbabilityAIDataFactory = globalThis.org.allbinary.game.ag.ai.BasicProbabilityAIDataFactory;
+//not GWT import - same folder const BasicProbabilityAIDataFactory
 import { LastKeyAIVisitorFactory } from './LastKeyAIVisitorFactory.js';
-//not GWT import - same folder const LastKeyAIVisitorFactory = globalThis.org.allbinary.game.ag.ai.LastKeyAIVisitorFactory;
+//not GWT import - same folder const LastKeyAIVisitorFactory
 import { DiveAndDirectionalTrackingAI } from './DiveAndDirectionalTrackingAI.js';
-//not GWT import - same folder const DiveAndDirectionalTrackingAI = globalThis.org.allbinary.game.ag.ai.DiveAndDirectionalTrackingAI;
+//not GWT import - same folder const DiveAndDirectionalTrackingAI
 export class DiveAndDirectionalTrackingAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

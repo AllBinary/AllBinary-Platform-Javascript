@@ -11,11 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { Animation } from '../../../../org/allbinary/animation/Animation.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CaptionAnimationHelperBase extends Animation {
     isShowing() {

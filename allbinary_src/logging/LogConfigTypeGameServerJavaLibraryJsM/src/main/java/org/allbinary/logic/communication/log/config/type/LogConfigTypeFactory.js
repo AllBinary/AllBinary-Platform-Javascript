@@ -14,12 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { LogConfigTypes } from '../../../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypes.js';
-//not GWT import const LogConfigTypes = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypes;
+//not GWT import const LogConfigTypes
 import { LogConfigTypeFactory } from '../../../../../../../org/allbinary/logic/communication/log/config/type/LogConfigTypeFactory.js';
-//not GWT import const LogConfigTypeFactory = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory;
+//not GWT import const LogConfigTypeFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigType } from './LogConfigType.js';
-//not GWT import - same folder const LogConfigType = globalThis.org.allbinary.logic.communication.log.config.type.LogConfigType;
+//not GWT import - same folder const LogConfigType
 export class LogConfigTypeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

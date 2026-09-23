@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLImageUtilBase extends Object {
     paint(alphaBitmap, originalBitmap, index) {

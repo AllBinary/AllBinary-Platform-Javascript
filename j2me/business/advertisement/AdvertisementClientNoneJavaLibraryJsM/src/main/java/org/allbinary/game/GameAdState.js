@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { GameAdStateBase } from '../../../org/allbinary/business/advertisement/GameAdStateBase.js';
-//not GWT import const VirtualKeyboardEvent = globalThis.org.allbinary.input.event.VirtualKeyboardEvent;
+//not GWT import const VirtualKeyboardEvent
 import { VirtualKeyboardEventHandler } from '../../../org/allbinary/input/event/VirtualKeyboardEventHandler.js';
-//not GWT import const VirtualKeyboardEventListenerInterface = globalThis.org.allbinary.input.event.VirtualKeyboardEventListenerInterface;
+//not GWT import const VirtualKeyboardEventListenerInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameAdState extends GameAdStateBase {
     constructor(adConfiguration) {

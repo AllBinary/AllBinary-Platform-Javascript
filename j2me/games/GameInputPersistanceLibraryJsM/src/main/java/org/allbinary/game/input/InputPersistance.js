@@ -13,36 +13,34 @@
 */
 import { Integer } from '../../../../java/lang/Integer.js';
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
-//not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
+//not GWT import const ByteArrayInputStream
 import { ByteArrayOutputStream } from '../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
+//not GWT import const ByteArrayOutputStream
 import { DataInputStream } from '../../../../java/io/DataInputStream.js';
-//not GWT import const DataInputStream = globalThis.java.io.DataInputStream;
+//not GWT import const DataInputStream
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
-//not GWT import const DataOutputStream = globalThis.java.io.DataOutputStream;
-//not plain js import { RecordEnumeration } 
-const RecordEnumeration = globalThis.javax.microedition.rms.RecordEnumeration;
-//not plain js import { RecordStore } 
-const RecordStore = globalThis.javax.microedition.rms.RecordStore;
+//not GWT import const RecordEnumeration
+import { RecordStore } from '../../../../javax/microedition/rms/RecordStore.js';
+//not GWT import const RecordStore
 import { TsUtil } from '../../../../org/allbinary/TsUtil.js';
-//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not GWT import const TsUtil
 import { BasicPersitance } from '../../../../org/allbinary/game/configuration/persistance/BasicPersitance.js';
-//not GWT import const BasicPersitance = globalThis.org.allbinary.game.configuration.persistance.BasicPersitance;
+//not GWT import const BasicPersitance
 import { NullRecordComparator } from '../../../../org/allbinary/game/configuration/persistance/NullRecordComparator.js';
-//not GWT import const NullRecordComparator = globalThis.org.allbinary.game.configuration.persistance.NullRecordComparator;
+//not GWT import const NullRecordComparator
 import { NullRecordFilter } from '../../../../org/allbinary/game/configuration/persistance/NullRecordFilter.js';
-//not GWT import const NullRecordFilter = globalThis.org.allbinary.game.configuration.persistance.NullRecordFilter;
+//not GWT import const NullRecordFilter
 import { NullRecordStore } from '../../../../org/allbinary/game/configuration/persistance/NullRecordStore.js';
-//not GWT import const NullRecordStore = globalThis.org.allbinary.game.configuration.persistance.NullRecordStore;
+//not GWT import const NullRecordStore
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not GWT import const AbeClientInformationInterface
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { BasicArrayList } 
@@ -53,11 +51,11 @@ const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input
 import { GameKeyMappingFactory } from './GameKeyMappingFactory.js';
-//not GWT import - same folder const GameKeyMappingFactory = globalThis.org.allbinary.game.input.GameKeyMappingFactory;
+//not GWT import - same folder const GameKeyMappingFactory
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const InputFactory = globalThis.org.allbinary.game.input.InputFactory;
+//not GWT import - same folder const InputFactory
 //GameInputPersistanceLibrary
 export class InputPersistance extends BasicPersitance {
     constructor(name) {

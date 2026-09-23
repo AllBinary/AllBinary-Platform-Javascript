@@ -14,16 +14,16 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
-//not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
+//not GWT import const GameFeatureFactory
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SourceCollisionHelper } from './SourceCollisionHelper.js';
-//not GWT import - same folder const SourceCollisionHelper = globalThis.org.allbinary.game.collision.SourceCollisionHelper;
+//not GWT import - same folder const SourceCollisionHelper
 import { CollisionHelper } from './CollisionHelper.js';
-//not GWT import - same folder const CollisionHelper = globalThis.org.allbinary.game.collision.CollisionHelper;
+//not GWT import - same folder const CollisionHelper
 export class CollidableHelperFactory extends Object {
     static getInstance() {
         if (Features.getInstance().isFeature(GameFeatureFactory.getInstance().COLLISIONS_WITH_SOURCE)) {

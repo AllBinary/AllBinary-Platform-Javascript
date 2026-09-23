@@ -15,31 +15,31 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
 import { DomSearchHelper } from '../../../../../../org/allbinary/data/tree/dom/DomSearchHelper.js';
-//not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
+//not GWT import const DomSearchHelper
 import { DomDocumentHelper } from '../../../../../../org/allbinary/data/tree/dom/document/DomDocumentHelper.js';
-//not GWT import const DomDocumentHelper = globalThis.org.allbinary.data.tree.dom.document.DomDocumentHelper;
+//not GWT import const DomDocumentHelper
 import { PATH_GLOBALS } from '../../../../../../org/allbinary/globals/PATH_GLOBALS.js';
-//not GWT import const PATH_GLOBALS = globalThis.org.allbinary.globals.PATH_GLOBALS;
+//not GWT import const PATH_GLOBALS
 import { URLGLOBALS } from '../../../../../../org/allbinary/globals/URLGLOBALS.js';
-//not GWT import const URLGLOBALS = globalThis.org.allbinary.globals.URLGLOBALS;
+//not GWT import const URLGLOBALS
 import { AbFileLocalInputStream } from '../../../../../../org/allbinary/logic/io/AbFileLocalInputStream.js';
-//not GWT import const AbFileLocalInputStream = globalThis.org.allbinary.logic.io.AbFileLocalInputStream;
+//not GWT import const AbFileLocalInputStream
 import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { AbPath } from '../../../../../../org/allbinary/logic/io/path/AbPath.js';
-//not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
+//not GWT import const AbPath
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
+//not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigsData } from './LogConfigsData.js';
-//not GWT import - same folder const LogConfigsData = globalThis.org.allbinary.logic.communication.log.config.LogConfigsData;
+//not GWT import - same folder const LogConfigsData
 import { LogConfigData } from './LogConfigData.js';
-//not GWT import - same folder const LogConfigData = globalThis.org.allbinary.logic.communication.log.config.LogConfigData;
+//not GWT import - same folder const LogConfigData
 import { LogConfig } from './LogConfig.js';
-//not GWT import - same folder const LogConfig = globalThis.org.allbinary.logic.communication.log.config.LogConfig;
+//not GWT import - same folder const LogConfig
 export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

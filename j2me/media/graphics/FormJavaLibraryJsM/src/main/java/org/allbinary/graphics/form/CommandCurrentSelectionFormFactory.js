@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { TouchFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/TouchFeatureFactory.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollSelectionFormNoneFactory } from './ScrollSelectionFormNoneFactory.js';
-//not GWT import - same folder const ScrollSelectionFormNoneFactory = globalThis.org.allbinary.graphics.form.ScrollSelectionFormNoneFactory;
+//not GWT import - same folder const ScrollSelectionFormNoneFactory
 import { CommandCurrentSelectionForm } from './CommandCurrentSelectionForm.js';
-//not GWT import - same folder const FormType = globalThis.org.allbinary.graphics.form.FormType;
+//not GWT import - same folder const FormType
 export class CommandCurrentSelectionFormFactory extends Object {
     //@Throws(Exception.constructor)
     static getInstance(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {

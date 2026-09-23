@@ -11,11 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import - same folder const PaintableForm = globalThis.org.allbinary.graphics.form.PaintableForm;
+//not GWT import - same folder const PaintableForm
 export class FormPaintable extends Paintable {
     constructor(form) {
         super();

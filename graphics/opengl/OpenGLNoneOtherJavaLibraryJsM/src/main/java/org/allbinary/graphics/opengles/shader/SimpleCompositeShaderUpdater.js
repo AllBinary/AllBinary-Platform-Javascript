@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompositeShaderUpdater } from './CompositeShaderUpdater.js';
-//not GWT import - same folder const CompositeShaderUpdater = globalThis.org.allbinary.graphics.opengles.shader.CompositeShaderUpdater;
+//not GWT import - same folder const CompositeShaderUpdater
 export class SimpleCompositeShaderUpdater extends CompositeShaderUpdater {
     constructor(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray) {
         super(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray);

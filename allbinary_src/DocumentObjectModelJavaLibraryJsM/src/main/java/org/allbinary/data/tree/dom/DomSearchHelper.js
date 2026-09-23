@@ -18,7 +18,7 @@ import { Exception } from '../../../../../java/lang/Exception.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
+//not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DomSearchHelper extends Object {
     static getNodeNoThrow(nodeName, nodeList) {

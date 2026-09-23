@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const ClientInformationFactory = globalThis.org.allbinary.logic.system.security.licensing.ClientInformationFactory;
+//not GWT import const ClientInformationFactory
 import { LicenseServerInitFileUtil } from '../../../../org/allbinary/logic/system/security/licensing/LicenseServerInitFileUtil.js';
-//not GWT import const LicenseServerInitFileUtil = globalThis.org.allbinary.logic.system.security.licensing.LicenseServerInitFileUtil;
+//not GWT import const LicenseServerInitFileUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DemoGameMidlet } from './DemoGameMidlet.js';
-//not GWT import - same folder const LicenseCheckRunnableFactory = globalThis.org.allbinary.game.midlet.LicenseCheckRunnableFactory;
+//not GWT import - same folder const LicenseCheckRunnableFactory
 export class SpecialDemoGameMidlet extends DemoGameMidlet {
     constructor(clientInformationFactory, licenseLoadingType, demoSetupFactory, licenseCheckRunnableFactory) {
         super(clientInformationFactory);

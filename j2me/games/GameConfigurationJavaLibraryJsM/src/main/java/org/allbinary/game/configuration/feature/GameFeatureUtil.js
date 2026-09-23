@@ -13,11 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Enumeration = globalThis.java.util.Enumeration;
-//not plain js import { ChoiceGroup } 
-const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
+//not GWT import const ChoiceGroup
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not GWT import const TsUtil
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
@@ -34,11 +32,11 @@ const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Features } from './Features.js';
-//not GWT import - same folder const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import - same folder const Features
 import { Feature } from './Feature.js';
-//not GWT import - same folder const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
+//not GWT import - same folder const Feature
 import { GameFeatureChoiceGroups } from './GameFeatureChoiceGroups.js';
-//not GWT import - same folder const GameFeatureChoiceGroups = globalThis.org.allbinary.game.configuration.feature.GameFeatureChoiceGroups;
+//not GWT import - same folder const GameFeatureChoiceGroups
 export class GameFeatureUtil extends Object {
     constructor() {
         super(...arguments);

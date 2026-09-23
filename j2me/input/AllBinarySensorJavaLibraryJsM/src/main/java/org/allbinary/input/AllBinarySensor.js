@@ -19,7 +19,7 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinarySensorListener = globalThis.org.allbinary.input.AllBinarySensorListener;
+//not GWT import - same folder const AllBinarySensorListener
 export class AllBinarySensor extends Object {
     static setMax(max) {
         AllBinarySensor.max = max;

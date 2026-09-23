@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import const Animation
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IconLayer } from './IconLayer.js';
-//not GWT import - same folder const IconLayer = globalThis.org.allbinary.game.layer.pickup.IconLayer;
+//not GWT import - same folder const IconLayer
 export class IconLayerFactory extends Object {
     //@Throws(Exception.constructor)
     static getInstance(animationInterface, width, height) {

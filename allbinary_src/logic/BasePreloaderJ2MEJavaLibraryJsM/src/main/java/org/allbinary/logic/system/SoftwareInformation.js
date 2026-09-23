@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { KotlinUtil } from '../../../../org/allbinary/KotlinUtil.js';
-//not GWT import const KotlinUtil = globalThis.org.allbinary.KotlinUtil;
+//not GWT import const KotlinUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 

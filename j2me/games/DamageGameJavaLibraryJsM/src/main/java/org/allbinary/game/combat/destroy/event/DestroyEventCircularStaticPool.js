@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 import { AllBinaryEventCircularPool } from '../../../../../../org/allbinary/logic/util/event/AllBinaryEventCircularPool.js';
-//not GWT import const AllBinaryEventCircularPool = globalThis.org.allbinary.logic.util.event.AllBinaryEventCircularPool;
+//not GWT import const AllBinaryEventCircularPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyEventFactory } from './DestroyEventFactory.js';
-//not GWT import - same folder const DestroyedEvent = globalThis.org.allbinary.game.combat.destroy.event.DestroyedEvent;
+//not GWT import - same folder const DestroyedEvent
 export class DestroyEventCircularStaticPool extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,10 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import - same folder const Health = globalThis.org.allbinary.game.health.Health;
+//not GWT import - same folder const Health
 export class HealthBar extends Paintable {
     constructor(layerInterface, healthInterface, animationInterface, direction) {
         super();

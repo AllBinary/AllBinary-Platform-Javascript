@@ -14,12 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../java/lang/Exception.js';
 import { InitInfo } from '../../../org/allbinary/business/init/InitInfo.js';
-//not GWT import const InitInfo = globalThis.org.allbinary.business.init.InitInfo;
+//not GWT import const InitInfo
 import { StringValidationUtil } from '../../../org/allbinary/logic/string/StringValidationUtil.js';
-//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not GWT import const StringValidationUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UrlGlobalsInterface } from './UrlGlobalsInterface.js';
-//not GWT import - same folder const UrlGlobalsInterface = globalThis.org.allbinary.globals.UrlGlobalsInterface;
+//not GWT import - same folder const UrlGlobalsInterface
 export class WebAppUrlGlobals extends UrlGlobalsInterface {
     constructor() {
         super(...arguments);

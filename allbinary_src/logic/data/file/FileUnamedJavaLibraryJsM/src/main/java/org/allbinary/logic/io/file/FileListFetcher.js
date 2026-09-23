@@ -14,22 +14,22 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { DirectoryBooleanFileVisitor } from '../../../../../org/allbinary/logic/io/file/directory/DirectoryBooleanFileVisitor.js';
-//not GWT import const DirectoryBooleanFileVisitor = globalThis.org.allbinary.logic.io.file.directory.DirectoryBooleanFileVisitor;
+//not GWT import const DirectoryBooleanFileVisitor
 import { DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor } from '../../../../../org/allbinary/logic/io/file/directory/DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor.js';
-//not GWT import const DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor = globalThis.org.allbinary.logic.io.file.directory.DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor;
+//not GWT import const DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor
 import { DirectoryOrIncludeFileExtensionBooleanFileVisitor } from '../../../../../org/allbinary/logic/io/file/directory/DirectoryOrIncludeFileExtensionBooleanFileVisitor.js';
-//not GWT import const DirectoryOrIncludeFileExtensionBooleanFileVisitor = globalThis.org.allbinary.logic.io.file.directory.DirectoryOrIncludeFileExtensionBooleanFileVisitor;
+//not GWT import const DirectoryOrIncludeFileExtensionBooleanFileVisitor
 import { SubDirectory } from '../../../../../org/allbinary/logic/io/file/directory/SubDirectory.js';
-//not GWT import const SubDirectory = globalThis.org.allbinary.logic.io.file.directory.SubDirectory;
+//not GWT import const SubDirectory
 import { VisitorFileFilter } from '../../../../../org/allbinary/logic/io/file/filter/VisitorFileFilter.js';
-//not GWT import const VisitorFileFilter = globalThis.org.allbinary.logic.io.file.filter.VisitorFileFilter;
+//not GWT import const VisitorFileFilter
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFile } from './AbFile.js';
-//not GWT import - same folder const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import - same folder const AbFile
 export class FileListFetcher extends Object {
     constructor() {
         super(...arguments);

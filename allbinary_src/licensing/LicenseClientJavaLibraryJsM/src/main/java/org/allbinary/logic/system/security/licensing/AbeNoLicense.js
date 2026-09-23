@@ -19,9 +19,9 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const AbeLicenseInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeLicenseInterface;
+//not GWT import - same folder const AbeLicenseInterface
 import { LicenseTypeFactory } from './LicenseTypeFactory.js';
-//not GWT import - same folder const LicenseType = globalThis.org.allbinary.logic.system.security.licensing.LicenseType;
+//not GWT import - same folder const LicenseType
 export class AbeNoLicense extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -1,13 +1,13 @@
 /* Generated Code Do Not Modify */
-//not plain js import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } 
-const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AngleFactory
+import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
+//not GWT import const AngleInfo
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RotationAnimation } from './RotationAnimation.js';
-//not GWT import - same folder const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import - same folder const AnimationBehavior
 export class NullRotationAnimation extends RotationAnimation {
     static createTotalAngle(angleInfo, totalAngle, animationBehavior) {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -1,7 +1,7 @@
 /* Generated Code Do Not Modify */
-//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not GWT import const GL10
 import { ObjectThreedOpenGLProcessor } from '../../../../org/allbinary/graphics/threed/min3d/renderer/processor/ObjectThreedOpenGLProcessor.js';
-//not GWT import const ObjectThreedOpenGLProcessor = globalThis.org.allbinary.graphics.threed.min3d.renderer.processor.ObjectThreedOpenGLProcessor;
+//not GWT import const ObjectThreedOpenGLProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class EnableFacesShaderOpenGLProcessor extends ObjectThreedOpenGLProcessor {
     static getInstance() {

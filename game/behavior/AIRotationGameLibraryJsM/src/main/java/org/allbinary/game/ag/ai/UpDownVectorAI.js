@@ -12,9 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { BasicDecimal } 
-const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+//not GWT import const BasicDecimal
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class UpDownVectorAI extends BasicAI {
     constructor(ownerLayerInterface, gameInput) {

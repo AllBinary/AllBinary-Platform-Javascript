@@ -19,7 +19,7 @@ const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGraphicsPipeline } from './BasicGraphicsPipeline.js';
-//not GWT import - same folder const BasicGraphicsPipeline = globalThis.org.allbinary.graphics.pipeline.BasicGraphicsPipeline;
+//not GWT import - same folder const BasicGraphicsPipeline
 export class RandomTranslation extends Object {
     //@Throws(Exception.constructor)
     static getInstance(vector, howMuch) {

@@ -14,15 +14,15 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { BufferedReader } from '../../../../java/io/BufferedReader.js';
-//not GWT import const BufferedReader = globalThis.java.io.BufferedReader;
+//not GWT import const BufferedReader
 import { BufferedWriter } from '../../../../java/io/BufferedWriter.js';
-//not GWT import const BufferedWriter = globalThis.java.io.BufferedWriter;
+//not GWT import const BufferedWriter
 import { FileReader } from '../../../../java/io/FileReader.js';
-//not GWT import const FileReader = globalThis.java.io.FileReader;
+//not GWT import const FileReader
 import { FileWriter } from '../../../../java/io/FileWriter.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
-//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
+//not GWT import const AbFileNativeUtil
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const Display = globalThis.org.eclipse.swt.widgets.Display;
+//not GWT import const Display
 //not plain js import { NullRunnable } 
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)

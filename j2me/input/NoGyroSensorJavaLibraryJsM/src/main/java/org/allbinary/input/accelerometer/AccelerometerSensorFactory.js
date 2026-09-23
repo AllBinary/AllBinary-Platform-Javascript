@@ -15,14 +15,14 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { SensorFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/SensorFeatureFactory.js';
-//not GWT import const SensorFeatureFactory = globalThis.org.allbinary.game.configuration.feature.SensorFeatureFactory;
+//not GWT import const SensorFeatureFactory
 import { AllBinaryOrientationSensor } from '../../../../org/allbinary/input/gyro/AllBinaryOrientationSensor.js';
-//not GWT import const AllBinaryOrientationSensor = globalThis.org.allbinary.input.gyro.AllBinaryOrientationSensor;
+//not GWT import const AllBinaryOrientationSensor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoAccelerometerSensor } from './NoAccelerometerSensor.js';
-//not GWT import - same folder const NoAccelerometerSensor = globalThis.org.allbinary.input.accelerometer.NoAccelerometerSensor;
+//not GWT import - same folder const NoAccelerometerSensor
 export class AccelerometerSensorFactory extends Object {
     //@Throws(Exception.constructor)
     static init() {

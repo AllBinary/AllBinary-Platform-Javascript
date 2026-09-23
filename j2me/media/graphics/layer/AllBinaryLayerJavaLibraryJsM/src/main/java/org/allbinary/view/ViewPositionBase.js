@@ -12,8 +12,8 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
+import { GPoint } from '../../../org/allbinary/graphics/GPoint.js';
+//not GWT import const GPoint
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ViewPositionBase extends GPoint {
     constructor(x, y, z) {

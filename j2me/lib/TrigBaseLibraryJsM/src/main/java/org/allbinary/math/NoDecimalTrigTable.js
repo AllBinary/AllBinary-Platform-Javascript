@@ -26,12 +26,11 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+import { AngleFactory } from './AngleFactory.js';
+//not GWT import - same folder const AngleFactory
 //not plain js - same folder import { PositionStrings } 
 const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
-//not plain js - same folder import { Angle } 
-const Angle = globalThis.org.allbinary.math.Angle;
+//not GWT import - same folder const Angle
 export class NoDecimalTrigTable extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -13,7 +13,4 @@
 */
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import const LayerInterface = globalThis.org.allbinary.layer.LayerInterface;
-//not plain js import { BasicDecimal } 
-const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
 export {};

@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
+//not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameLayerUtil extends Object {
     static isOnScreen(layer) {

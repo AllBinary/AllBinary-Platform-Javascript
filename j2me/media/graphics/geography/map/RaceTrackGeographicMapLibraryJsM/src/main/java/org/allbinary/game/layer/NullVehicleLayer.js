@@ -14,15 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const Group = globalThis.org.allbinary.game.identification.Group;
-//not plain js import { BasicDecimal } 
-const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
-//not GWT import const GeographicMapCellPositionTracking = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPositionTracking;
+//not GWT import const GeographicMapCellPositionTracking
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const VehicleProperties = globalThis.org.allbinary.game.layer.VehicleProperties;
+//not GWT import - same folder const VehicleProperties
 export class NullVehicleLayer extends Object {
     getName() {
         throw new RuntimeException();

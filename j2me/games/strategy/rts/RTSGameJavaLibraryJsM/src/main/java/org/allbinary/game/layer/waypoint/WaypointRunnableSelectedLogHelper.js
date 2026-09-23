@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
+//not GWT import const PathFindingLayerInterface
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
@@ -20,7 +20,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointRunnableLogHelper } from './WaypointRunnableLogHelper.js';
-//not GWT import - same folder const WaypointRunnableLogHelper = globalThis.org.allbinary.game.layer.waypoint.WaypointRunnableLogHelper;
+//not GWT import - same folder const WaypointRunnableLogHelper
 export class WaypointRunnableSelectedLogHelper extends WaypointRunnableLogHelper {
     constructor() {
         super(...arguments);

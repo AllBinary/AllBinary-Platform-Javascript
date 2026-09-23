@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { FormTypeFactory } from '../../../../../org/allbinary/graphics/form/FormTypeFactory.js';
-//not GWT import const ItemPaintableFactory = globalThis.org.allbinary.graphics.form.ItemPaintableFactory;
+//not GWT import const ItemPaintableFactory
 import { ScrollCurrentSelectionForm } from '../../../../../org/allbinary/graphics/form/ScrollCurrentSelectionForm.js';
-//not GWT import const ScrollCurrentSelectionForm = globalThis.org.allbinary.graphics.form.ScrollCurrentSelectionForm;
+//not GWT import const ScrollCurrentSelectionForm
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PreGameScrollSelectionForm extends ScrollCurrentSelectionForm {
     constructor(title, items, formPaintableFactory, backgroundBasicColor, foregroundBasicColor) {

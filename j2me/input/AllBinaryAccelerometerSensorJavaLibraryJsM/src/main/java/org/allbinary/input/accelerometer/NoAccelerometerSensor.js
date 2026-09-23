@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { AllBinaryOrientationSensor } from '../../../../org/allbinary/input/gyro/AllBinaryOrientationSensor.js';
-//not GWT import const AllBinaryOrientationSensor = globalThis.org.allbinary.input.gyro.AllBinaryOrientationSensor;
+//not GWT import const AllBinaryOrientationSensor
 import { Orientation } from '../../../../org/allbinary/logic/math/Orientation.js';
-//not GWT import const Orientation = globalThis.org.allbinary.logic.math.Orientation;
+//not GWT import const Orientation
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NoAccelerometerSensor extends AllBinaryOrientationSensor {
     constructor() {

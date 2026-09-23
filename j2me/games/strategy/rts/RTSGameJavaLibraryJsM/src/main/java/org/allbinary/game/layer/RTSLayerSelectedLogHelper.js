@@ -22,18 +22,15 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not plain js import { AngleInfo } 
-const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not plain js import { NamedAngle } 
-const NamedAngle = globalThis.org.allbinary.math.NamedAngle;
+//not GWT import const NamedAngle
 //not plain js import { PositionStrings } 
 const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
-//not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
+//not GWT import const GeographicMapCellPosition
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSLayerLogHelper } from './RTSLayerLogHelper.js';
-//not GWT import - same folder const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
+//not GWT import - same folder const PathFindingLayerInterface
 export class RTSLayerSelectedLogHelper extends RTSLayerLogHelper {
     constructor() {
         super(...arguments);

@@ -17,11 +17,11 @@ import { Object } from '../../../../../../../java/lang/Object.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
+//not GWT import const CellPosition
 import { CellPositionFactory } from '../../../../../../../org/allbinary/graphics/CellPositionFactory.js';
-//not GWT import const CellPositionFactory = globalThis.org.allbinary.graphics.CellPositionFactory;
+//not GWT import const CellPositionFactory
 import { AllBinaryLayer } from '../../../../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DropCellPositionHistory extends Object {
     constructor() {

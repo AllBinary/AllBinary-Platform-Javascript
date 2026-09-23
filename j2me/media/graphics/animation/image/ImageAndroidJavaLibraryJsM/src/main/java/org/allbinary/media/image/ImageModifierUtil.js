@@ -14,14 +14,11 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Paint } from '../../../../android/graphics/Paint.js';
-//not GWT import const Paint = globalThis.android.graphics.Paint;
+//not GWT import const Paint
 import { PorterDuff } from '../../../../android/graphics/PorterDuff.js';
-//not GWT import const PorterDuff = globalThis.android.graphics.PorterDuff;
+//not GWT import const PorterDuff
 import { PorterDuffColorFilter } from '../../../../android/graphics/PorterDuffColorFilter.js';
-//not GWT import const PorterDuffColorFilter = globalThis.android.graphics.PorterDuffColorFilter;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageModifierUtil extends Object {
     constructor() {

@@ -13,9 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import - same folder const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not GWT import - same folder const PaintableInterface
 export class Paintable extends Object {
     setBasicColorP(basicColor) {
     }

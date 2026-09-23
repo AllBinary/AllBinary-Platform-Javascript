@@ -14,13 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { Security } from '../../../../../../../java/security/Security.js';
-//not GWT import const KeySpec = globalThis.java.security.spec.KeySpec;
+//not GWT import const KeySpec
 import { Cipher } from '../../../../../../../javax/crypto/Cipher.js';
-//not GWT import const SecretKey = globalThis.javax.crypto.SecretKey;
+//not GWT import const SecretKey
 import { SecretKeyFactory } from '../../../../../../../javax/crypto/SecretKeyFactory.js';
-//not GWT import const SecretKeyFactory = globalThis.javax.crypto.SecretKeyFactory;
+//not GWT import const SecretKeyFactory
 import { TsUtil } from '../../../../../../../org/allbinary/TsUtil.js';
-//not GWT import const CryptInterface = globalThis.org.allbinary.init.crypt.jcehelper.CryptInterface;
+//not GWT import const CryptInterface
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { PreLogUtil } 
@@ -28,14 +28,14 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { BouncyCastleProvider } from '../../../../../../../org/bouncycastle/jce/provider/BouncyCastleProvider.js';
-//not GWT import const BouncyCastleProvider = globalThis.org.bouncycastle.jce.provider.BouncyCastleProvider;
+//not GWT import const BouncyCastleProvider
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseSecretComposite } from './BaseSecretComposite.js';
-//not GWT import - same folder const BaseSecretComposite = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.BaseSecretComposite;
+//not GWT import - same folder const BaseSecretComposite
 import { KeySpecFactory } from './KeySpecFactory.js';
-//not GWT import - same folder const KeySpecFactory = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.KeySpecFactory;
+//not GWT import - same folder const KeySpecFactory
 import { SecretComposite } from './SecretComposite.js';
-//not GWT import - same folder const SecretComposite = globalThis.org.allbinary.logic.system.security.crypt.jcehelper.SecretComposite;
+//not GWT import - same folder const SecretComposite
 export class AbCrypt extends Object {
     constructor(algorithm) {
         super();

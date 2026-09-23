@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not GWT import const MediaInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.MediaInterface;
+//not GWT import const MediaInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Media extends Object {
     constructor(data) {

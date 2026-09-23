@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ActivityFractureUtil extends Object {
     //@Throws(Exception.constructor)

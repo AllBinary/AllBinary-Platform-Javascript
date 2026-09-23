@@ -13,14 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const AllBinaryLayer
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpinnerAI } from './SpinnerAI.js';
-//not GWT import - same folder const SpinnerAI = globalThis.org.allbinary.game.ag.ai.SpinnerAI;
+//not GWT import - same folder const SpinnerAI
 export class SpinnerAIFactory extends Object {
     getInstance(hashtable, ownerLayerInterface, gameInput) {
         var direction = [Canvas.LEFT];

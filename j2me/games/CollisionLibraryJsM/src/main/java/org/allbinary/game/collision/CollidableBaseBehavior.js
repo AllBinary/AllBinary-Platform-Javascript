@@ -14,9 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
@@ -25,11 +23,11 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const CollidableInterface = globalThis.org.allbinary.game.collision.CollidableInterface;
+//not GWT import - same folder const CollidableInterface
 import { LayerCollisionUtil } from './LayerCollisionUtil.js';
-//not GWT import - same folder const CollidableInterfaceCompositeInterface = globalThis.org.allbinary.game.collision.CollidableInterfaceCompositeInterface;
+//not GWT import - same folder const CollidableInterfaceCompositeInterface
 import { CollisionTypeFactory } from './CollisionTypeFactory.js';
-//not GWT import - same folder const CollisionType = globalThis.org.allbinary.game.collision.CollisionType;
+//not GWT import - same folder const CollisionType
 export class CollidableBaseBehavior extends Object {
     constructor(collidable) {
         super();

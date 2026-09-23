@@ -13,8 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { Angle } 
-const Angle = globalThis.org.allbinary.math.Angle;
+import { Angle } from './Angle.js';
+//not GWT import - same folder const Angle
 export class NamedAngle extends Angle {
     constructor(angle, name) {
         super(angle);

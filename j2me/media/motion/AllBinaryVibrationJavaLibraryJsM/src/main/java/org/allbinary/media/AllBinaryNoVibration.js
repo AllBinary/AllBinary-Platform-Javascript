@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryVibrationME } from './AllBinaryVibrationME.js';
-//not GWT import - same folder const AllBinaryVibrationME = globalThis.org.allbinary.media.AllBinaryVibrationME;
+//not GWT import - same folder const AllBinaryVibrationME
 export class AllBinaryNoVibration extends AllBinaryVibrationME {
     vibrate(duration, type, volume) {
     }

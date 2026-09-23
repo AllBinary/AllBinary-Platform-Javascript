@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Thread } from '../../../../../java/lang/Thread.js';
-//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not GWT import const GL10
 import { InitEmulatorFactory } from '../../../../../org/allbinary/emulator/InitEmulatorFactory.js';
-//not GWT import const InitEmulatorFactory = globalThis.org.allbinary.emulator.InitEmulatorFactory;
+//not GWT import const InitEmulatorFactory
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { LogUtil } 
@@ -25,7 +25,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RendererStrings } from './RendererStrings.js';
-//not GWT import - same folder const RendererStrings = globalThis.org.allbinary.graphics.opengles.renderer.RendererStrings;
+//not GWT import - same folder const RendererStrings
 export class EmulatorCustomRenderer extends Object {
     constructor() {
         super(...arguments);

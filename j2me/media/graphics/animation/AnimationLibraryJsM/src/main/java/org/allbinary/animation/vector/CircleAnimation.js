@@ -11,13 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 import { Animation } from '../../../../org/allbinary/animation/Animation.js';
-//not GWT import const ColorCompositeInterface = globalThis.org.allbinary.graphics.color.ColorCompositeInterface;
-//not plain js import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not GWT import const ColorCompositeInterface
+import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AngleFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CircleAnimation extends Animation {
     constructor(width, height, basicColor) {

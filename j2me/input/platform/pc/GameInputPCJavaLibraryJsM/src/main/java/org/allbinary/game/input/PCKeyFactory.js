@@ -23,7 +23,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js - same folder import { ABKeyEventWrapper } 
 const ABKeyEventWrapper = globalThis.org.allbinary.game.input.ABKeyEventWrapper;
 import { PCGameKey } from './PCGameKey.js';
-//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input
 export class PCKeyFactory extends Object {
     constructor() {
         super(...arguments);

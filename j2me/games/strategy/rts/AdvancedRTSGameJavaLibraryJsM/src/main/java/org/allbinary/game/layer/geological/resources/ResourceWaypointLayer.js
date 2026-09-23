@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const SelectionHudPaintable = globalThis.org.allbinary.game.layer.SelectionHudPaintable;
+//not GWT import const SelectionHudPaintable
 import { WaypointLayer } from '../../../../../../org/allbinary/game/layer/waypoint/WaypointLayer.js';
-//not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
+//not GWT import const RemoteInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeologicalResourceInfoHudPaintableSingleton } from './GeologicalResourceInfoHudPaintableSingleton.js';
-//not GWT import - same folder const GeologicalResourceInfoHudPaintable = globalThis.org.allbinary.game.layer.geological.resources.GeologicalResourceInfoHudPaintable;
+//not GWT import - same folder const GeologicalResourceInfoHudPaintable
 export class ResourceWaypointLayer extends WaypointLayer {
     constructor(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y) {
         super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y);

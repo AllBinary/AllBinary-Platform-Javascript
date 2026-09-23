@@ -11,14 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { BasicHud } from '../../../../../../org/allbinary/game/graphics/hud/BasicHud.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LapWidget extends BasicHud {
     constructor(location, direction, basicColor) {

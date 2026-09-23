@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const ABTextFieldItem = globalThis.org.allbinary.graphics.form.item.ABTextFieldItem;
+//not GWT import const ABTextFieldItem
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TextFieldItemValidator } from './TextFieldItemValidator.js';
-//not GWT import - same folder const TextFieldItemValidator = globalThis.org.allbinary.graphics.form.item.validation.TextFieldItemValidator;
+//not GWT import - same folder const TextFieldItemValidator
 export class UsernameValidator extends TextFieldItemValidator {
     constructor(textFieldItem, min, max, allowOnEmpty) {
         super(textFieldItem, min, max, allowOnEmpty);

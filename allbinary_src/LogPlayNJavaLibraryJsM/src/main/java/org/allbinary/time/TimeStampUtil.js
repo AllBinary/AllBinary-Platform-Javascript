@@ -13,6 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+import { DateTimeFormat } from '../../../com/google/gwt/i18n/client/DateTimeFormat.js';
+//not GWT import const DateTimeFormat
+//import { Date } from '../../../java/util/Date.js';
+//not GWT import const Date
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //ActualPlatform
 /*actual*/ export class TimeStampUtil extends Object {
@@ -23,9 +27,14 @@ import { Object } from '../../../java/lang/Object.js';
     constructor() {
         super();
     }
-    /*actual*/ getAsString() {
+    getAsString() {
+        var simpleDataFormat = DateTimeFormat.getFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        ;
+        var date = new Date();
+        ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return "JavaScript version";
+        return simpleDataFormat.format(date);
+        ;
     }
 }
 TimeStampUtil.instance = new TimeStampUtil();

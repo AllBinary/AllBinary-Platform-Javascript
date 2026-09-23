@@ -13,14 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import const Input
 import { InputFactory } from '../../../../../../org/allbinary/game/input/InputFactory.js';
-//not GWT import const MotionGestureInput = globalThis.org.allbinary.input.motion.gesture.MotionGestureInput;
+//not GWT import const MotionGestureInput
 import { TouchMotionGestureFactory } from '../../../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
-//not GWT import const AllBinaryEventObjectFactoryInterface = globalThis.org.allbinary.logic.util.event.AllBinaryEventObjectFactoryInterface;
+//not GWT import const AllBinaryEventObjectFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionGestureEvent } from './MotionGestureEvent.js';
-//not GWT import - same folder const MotionGestureEvent = globalThis.org.allbinary.input.motion.gesture.observer.MotionGestureEvent;
+//not GWT import - same folder const MotionGestureEvent
 export class MotionEventFactory extends Object {
     constructor(source = {}, id) {
         super();

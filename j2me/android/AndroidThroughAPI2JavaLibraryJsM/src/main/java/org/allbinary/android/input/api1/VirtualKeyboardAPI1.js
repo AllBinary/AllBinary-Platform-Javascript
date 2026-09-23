@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { VirtualKeyboard } from '../../../../../org/allbinary/android/input/VirtualKeyboard.js';
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class VirtualKeyboardAPI1 extends VirtualKeyboard {
     constructor(activity) {

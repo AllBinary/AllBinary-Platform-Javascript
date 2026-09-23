@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Stack } from '../../../java/util/Stack.js';
-//not GWT import const Stack = globalThis.java.util.Stack;
+//not GWT import const Stack
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABStack extends Stack {
 }

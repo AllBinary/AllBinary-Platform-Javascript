@@ -20,11 +20,11 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const HighScoresHelperBaseInterface = globalThis.org.allbinary.game.score.HighScoresHelperBaseInterface;
+//not GWT import - same folder const HighScoresHelperBaseInterface
 import { LastFetchHighScoresFactory } from './LastFetchHighScoresFactory.js';
-//not GWT import - same folder const HighScores = globalThis.org.allbinary.game.score.HighScores;
+//not GWT import - same folder const HighScores
 import { NullHighScoresSingletonFactory } from './NullHighScoresSingletonFactory.js';
-//not GWT import - same folder const NullHighScoresSingletonFactory = globalThis.org.allbinary.game.score.NullHighScoresSingletonFactory;
+//not GWT import - same folder const NullHighScoresSingletonFactory
 export class HighScoresHelperBase extends Object {
     constructor() {
         super(...arguments);

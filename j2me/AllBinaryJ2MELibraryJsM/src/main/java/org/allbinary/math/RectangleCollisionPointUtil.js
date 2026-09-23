@@ -13,13 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const GPoint
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { RectangleCollisionUtil } 
-const RectangleCollisionUtil = globalThis.org.allbinary.math.RectangleCollisionUtil;
+import { RectangleCollisionUtil } from './RectangleCollisionUtil.js';
+//not GWT import - same folder const RectangleCollisionUtil
 export class RectangleCollisionPointUtil extends Object {
     static allPointsInside(rectX1, rectY1, rectX2, rectY2, list) {
         var rectangleCollisionUtil = RectangleCollisionUtil.getInstance();

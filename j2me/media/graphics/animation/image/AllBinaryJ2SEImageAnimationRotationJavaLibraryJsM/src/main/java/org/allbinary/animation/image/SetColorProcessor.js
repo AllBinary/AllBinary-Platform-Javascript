@@ -11,13 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
+//not GWT import const ImageModifierUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ModifierBaseProcessor } from './ModifierBaseProcessor.js';
-//not GWT import - same folder const ModifierBaseProcessor = globalThis.org.allbinary.animation.image.ModifierBaseProcessor;
+//not GWT import - same folder const ModifierBaseProcessor
 export class SetColorProcessor extends ModifierBaseProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

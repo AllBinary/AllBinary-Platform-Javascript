@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { V } from '../../../org/allbinary/graph/V.js';
-//not GWT import const V = globalThis.org.allbinary.graph.V;
+//not GWT import const V
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 

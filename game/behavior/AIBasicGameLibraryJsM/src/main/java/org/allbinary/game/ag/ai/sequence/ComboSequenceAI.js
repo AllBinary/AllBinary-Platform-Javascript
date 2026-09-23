@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SequenceAI } from './SequenceAI.js';
-//not GWT import - same folder const SequenceAI = globalThis.org.allbinary.game.ag.ai.sequence.SequenceAI;
+//not GWT import - same folder const SequenceAI
 export class ComboSequenceAI extends SequenceAI {
     constructor(artificialIntelligenceInterface, ownerLayerInterface, gameInput) {
         super(artificialIntelligenceInterface, ownerLayerInterface, gameInput);

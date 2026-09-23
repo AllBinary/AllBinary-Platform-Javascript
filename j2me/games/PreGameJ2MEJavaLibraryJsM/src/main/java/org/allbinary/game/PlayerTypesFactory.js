@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerType } from './PlayerType.js';
-//not GWT import - same folder const PlayerType = globalThis.org.allbinary.game.PlayerType;
+//not GWT import - same folder const PlayerType
 export class PlayerTypesFactory extends Object {
     constructor() {
         super(...arguments);

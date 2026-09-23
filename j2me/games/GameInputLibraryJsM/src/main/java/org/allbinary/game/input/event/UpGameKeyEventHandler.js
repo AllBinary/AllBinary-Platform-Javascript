@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { LocalPlayerInputIdFactory } from '../../../../../org/allbinary/game/input/LocalPlayerInputIdFactory.js';
-//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
+//not GWT import const EventListenerInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UpGameKeyEventHandlerBase } from './UpGameKeyEventHandlerBase.js';
-//not GWT import - same folder const UpGameKeyEventHandlerBase = globalThis.org.allbinary.game.input.event.UpGameKeyEventHandlerBase;
+//not GWT import - same folder const UpGameKeyEventHandlerBase
 export class UpGameKeyEventHandler extends UpGameKeyEventHandlerBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

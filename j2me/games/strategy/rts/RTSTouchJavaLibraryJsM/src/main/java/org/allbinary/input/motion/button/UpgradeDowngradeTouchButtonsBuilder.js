@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { TouchButtonDowngradeResource } from '../../../../../org/allbinary/game/input/resource/TouchButtonDowngradeResource.js';
-//not GWT import const TouchButtonDowngradeResource = globalThis.org.allbinary.game.input.resource.TouchButtonDowngradeResource;
+//not GWT import const TouchButtonDowngradeResource
 import { TouchButtonUpgradeResource } from '../../../../../org/allbinary/game/input/resource/TouchButtonUpgradeResource.js';
-//not GWT import const TouchButtonUpgradeResource = globalThis.org.allbinary.game.input.resource.TouchButtonUpgradeResource;
+//not GWT import const TouchButtonUpgradeResource
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
@@ -24,20 +24,20 @@ const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { CellPositionFactory } from '../../../../../org/allbinary/graphics/CellPositionFactory.js';
-//not GWT import const CellPositionFactory = globalThis.org.allbinary.graphics.CellPositionFactory;
+//not GWT import const CellPositionFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput = globalThis.org.allbinary.input.motion.button.BaseTouchInput;
+//not GWT import - same folder const BaseTouchInput
 import { TouchButtonLocationHelper } from './TouchButtonLocationHelper.js';
-//not GWT import - same folder const TouchButtonLocationHelper = globalThis.org.allbinary.input.motion.button.TouchButtonLocationHelper;
+//not GWT import - same folder const TouchButtonLocationHelper
 import { BasicTouchButtonCellPositionFactory } from './BasicTouchButtonCellPositionFactory.js';
-//not GWT import - same folder const BasicTouchButtonCellPositionFactory = globalThis.org.allbinary.input.motion.button.BasicTouchButtonCellPositionFactory;
+//not GWT import - same folder const BasicTouchButtonCellPositionFactory
 import { CommonButtons } from './CommonButtons.js';
-//not GWT import - same folder const CommonButtons = globalThis.org.allbinary.input.motion.button.CommonButtons;
+//not GWT import - same folder const CommonButtons
 import { TouchButton } from './TouchButton.js';
-//not GWT import - same folder const TouchButton = globalThis.org.allbinary.input.motion.button.TouchButton;
+//not GWT import - same folder const TouchButton
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
-//not GWT import - same folder const BasicTouchInputFactory = globalThis.org.allbinary.input.motion.button.BasicTouchInputFactory;
+//not GWT import - same folder const BasicTouchInputFactory
 export class UpgradeDowngradeTouchButtonsBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);

@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { ByteArrayOutputStream } from '../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const ByteArrayOutputStream = globalThis.java.io.ByteArrayOutputStream;
+//not GWT import const ByteArrayOutputStream
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
-//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
+//not GWT import const GameInfo
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 

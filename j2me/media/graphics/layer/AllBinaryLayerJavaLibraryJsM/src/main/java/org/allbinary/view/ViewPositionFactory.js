@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const ViewPositionFactoryInterface = globalThis.org.allbinary.view.ViewPositionFactoryInterface;
+//not GWT import - same folder const ViewPositionFactoryInterface
 import { ViewPosition } from './ViewPosition.js';
-//not GWT import - same folder const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
+//not GWT import - same folder const ViewPositionBase
 export class ViewPositionFactory extends Object {
     getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

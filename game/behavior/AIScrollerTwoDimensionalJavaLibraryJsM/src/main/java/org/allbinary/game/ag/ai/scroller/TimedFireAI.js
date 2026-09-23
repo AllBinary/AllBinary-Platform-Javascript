@@ -11,16 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+import { Canvas } from '../../../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const Canvas
 import { BasicAI } from '../../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not GWT import const AllBinaryLayerManager
+import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 import { GameTickTimeDelayHelperFactory } from '../../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
-//not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
+//not GWT import const GameTickTimeDelayHelperFactory
 import { TimeDelayHelper } from '../../../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import - same folder const TimeFiredInterface = globalThis.org.allbinary.game.ag.ai.scroller.TimeFiredInterface;
+//not GWT import - same folder const TimeFiredInterface
 export class TimedFireAI extends BasicAI {
     constructor(delay, ownerLayerInterface, gameInput) {
         super(ownerLayerInterface, gameInput);

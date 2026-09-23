@@ -19,9 +19,9 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../org/allbinary/logic/string/StringValidationUtil.js';
-//not GWT import const StringValidationUtil = globalThis.org.allbinary.logic.string.StringValidationUtil;
+//not GWT import const StringValidationUtil
 import { Tokenizer } from '../../../org/allbinary/logic/string/tokens/Tokenizer.js';
-//not GWT import const Tokenizer = globalThis.org.allbinary.logic.string.tokens.Tokenizer;
+//not GWT import const Tokenizer
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { BasicArrayList } 

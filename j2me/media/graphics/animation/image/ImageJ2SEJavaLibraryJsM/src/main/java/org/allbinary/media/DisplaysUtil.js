@@ -13,15 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const GraphicsDevice = globalThis.java.awt.GraphicsDevice;
+//not GWT import const GraphicsDevice
 import { GraphicsEnvironment } from '../../../java/awt/GraphicsEnvironment.js';
-//not GWT import const GraphicsEnvironment = globalThis.java.awt.GraphicsEnvironment;
+//not GWT import const GraphicsEnvironment
 import { Toolkit } from '../../../java/awt/Toolkit.js';
-//not GWT import const Toolkit = globalThis.java.awt.Toolkit;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
+//not GWT import const Toolkit
+import { PointFactory } from '../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const PointFactory
 import { Rectangle } from '../../../org/allbinary/graphics/Rectangle.js';
-//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not GWT import const Rectangle
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DisplaysUtil extends Object {
     static getInstance() {

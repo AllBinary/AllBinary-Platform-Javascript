@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const InitInterface = globalThis.org.allbinary.init.InitInterface;
+//not GWT import - same folder const InitInterface
 export class Init extends Object {
     constructor() {
         super(...arguments);

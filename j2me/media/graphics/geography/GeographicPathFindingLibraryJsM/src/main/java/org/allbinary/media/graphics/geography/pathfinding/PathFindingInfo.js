@@ -17,11 +17,11 @@ import { Object } from '../../../../../../java/lang/Object.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import - same folder const PathFindingInfoInterface = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingInfoInterface;
+//not GWT import - same folder const PathFindingInfoInterface
 import { PathFindingNodeCostInfoFactoryBase } from './PathFindingNodeCostInfoFactoryBase.js';
-//not GWT import - same folder const PathFindingNodeCostInfoFactoryBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactoryBase;
+//not GWT import - same folder const PathFindingNodeCostInfoFactoryBase
 import { GeographicPathFinderBase } from './GeographicPathFinderBase.js';
-//not GWT import - same folder const PathFindingNode = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNode;
+//not GWT import - same folder const PathFindingNode
 export class PathFindingInfo extends Object {
     constructor(pathFindingNodeCostInfoFactoryInterface, startPathFindingNodeList, endPathFindingNodeList) {
         super();

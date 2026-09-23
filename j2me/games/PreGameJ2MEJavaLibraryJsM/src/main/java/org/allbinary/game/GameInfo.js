@@ -24,17 +24,19 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
+//not plain js import { CommonLabels } 
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameTypeFactory } from './GameTypeFactory.js';
-//not GWT import - same folder const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
+//not GWT import - same folder const GameTypeFactory
 import { GameMode } from './GameMode.js';
-//not GWT import - same folder const GameMode = globalThis.org.allbinary.game.GameMode;
+//not GWT import - same folder const GameMode
 import { PlayerTypesFactory } from './PlayerTypesFactory.js';
-//not GWT import - same folder const PlayerTypesFactory = globalThis.org.allbinary.game.PlayerTypesFactory;
+//not GWT import - same folder const PlayerTypesFactory
 import { GameInfoData } from './GameInfoData.js';
-//not GWT import - same folder const PlayerType = globalThis.org.allbinary.game.PlayerType;
+//not GWT import - same folder const PlayerType
 export class GameInfo extends Object {
     constructor(gameType, gameMode, playerType, highestLevel, currentLevel) {
         super();
@@ -43,7 +45,6 @@ export class GameInfo extends Object {
         this.highestLevel = 0;
         this.NEW_LEVEL = "New Level: ";
         this.SET_CURRENT_LEVEL = "setCurrentLevel";
-        this.NEXT = "Next ";
         this.NEXT_GAME_LEVEL = "nextGameLevel";
         this.gameType = gameType;
         this.gameMode = gameMode;
@@ -82,7 +83,7 @@ export class GameInfo extends Object {
         if (this.getCurrentLevel() < this.getHighestLevel()) {
             this.currentLevel++;
         }
-        this.logUtil.putF(new StringMaker().append(this.NEXT).append(this.NEW_LEVEL).appendint(this.getCurrentLevel()).toString(), this, this.NEXT_GAME_LEVEL);
+        this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().NEXT).append(CommonSeps.getInstance().SPACE).append(this.NEW_LEVEL).appendint(this.getCurrentLevel()).toString(), this, this.NEXT_GAME_LEVEL);
     }
     previousGameLevel() {
         if (this.getCurrentLevel() > 1)

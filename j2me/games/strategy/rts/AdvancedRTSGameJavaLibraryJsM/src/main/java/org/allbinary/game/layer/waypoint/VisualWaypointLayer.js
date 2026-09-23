@@ -10,12 +10,12 @@
         *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
         *    Created By: Travis Berthelot
 */
-//not GWT import const RemoteInfo = globalThis.org.allbinary.game.multiplayer.layer.RemoteInfo;
+//not GWT import const RemoteInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointLayer } from './WaypointLayer.js';
-//not GWT import - same folder const WaypointLayer = globalThis.org.allbinary.game.layer.waypoint.WaypointLayer;
+//not GWT import - same folder const WaypointLayer
 import { WaypointInfoHudPaintableSingleton } from './WaypointInfoHudPaintableSingleton.js';
-//not GWT import - same folder const WaypointInfoHudPaintable = globalThis.org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable;
+//not GWT import - same folder const WaypointInfoHudPaintable
 export class VisualWaypointLayer extends WaypointLayer {
     constructor(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y) {
         super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y);

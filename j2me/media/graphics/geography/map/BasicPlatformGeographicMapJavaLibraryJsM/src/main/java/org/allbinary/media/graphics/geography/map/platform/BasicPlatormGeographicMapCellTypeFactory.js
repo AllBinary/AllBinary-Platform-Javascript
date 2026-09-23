@@ -11,13 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Enumeration = globalThis.java.util.Enumeration;
+//not GWT import const Enumeration
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { GeographicMapCellType } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellType.js';
-//not GWT import const GeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellType;
+//not GWT import const GeographicMapCellType
 import { GeographicMapCellTypeFactory } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellTypeFactory.js';
-//not GWT import const GeographicMapCellTypeFactory = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory;
+//not GWT import const GeographicMapCellTypeFactory
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
@@ -26,7 +26,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicPlatormGeographicMapCellType } from './BasicPlatormGeographicMapCellType.js';
-//not GWT import - same folder const BasicPlatormGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.platform.BasicPlatormGeographicMapCellType;
+//not GWT import - same folder const BasicPlatormGeographicMapCellType
 export class BasicPlatormGeographicMapCellTypeFactory extends GeographicMapCellTypeFactory {
     constructor(tileTypeToTileIdsMap, maxTileId) {
         super();

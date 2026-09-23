@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const LayerManager = globalThis.org.allbinary.layer.LayerManager;
+//not GWT import const LayerManager
 import { LayerProcessor } from '../../../../org/allbinary/layer/LayerProcessor.js';
-//not GWT import const LayerProcessor = globalThis.org.allbinary.layer.LayerProcessor;
+//not GWT import const LayerProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OptimizedAllBinaryCollisionLayerManager } from './OptimizedAllBinaryCollisionLayerManager.js';
-//not GWT import - same folder const CollidableBaseBehavior = globalThis.org.allbinary.game.collision.CollidableBaseBehavior;
+//not GWT import - same folder const CollidableBaseBehavior
 export class OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer extends LayerProcessor {
     constructor() {
         super(new OptimizedAllBinaryCollisionLayerManager());

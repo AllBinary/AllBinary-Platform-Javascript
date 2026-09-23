@@ -11,13 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import const AnimationBehavior
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomTextAnimation } from './CustomTextAnimation.js';
-//not GWT import - same folder const CustomTextAnimation = globalThis.org.allbinary.animation.text.CustomTextAnimation;
+//not GWT import - same folder const CustomTextAnimation
 export class AdjustCustomTextAnimation extends CustomTextAnimation {
     constructor(text, fontSize, dx, dy, animationBehavior) {
         super(text, fontSize, animationBehavior);

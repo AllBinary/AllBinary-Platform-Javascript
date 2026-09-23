@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const AdvancedRTSGameLayer = globalThis.org.allbinary.game.layer.AdvancedRTSGameLayer;
+//not GWT import const AdvancedRTSGameLayer
 import { NullPathFindingLayer } from '../../../../../org/allbinary/game/layer/NullPathFindingLayer.js';
-//not GWT import const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
+//not GWT import const RTSLayer
 import { RTSLayerEvent } from '../../../../../org/allbinary/game/layer/RTSLayerEvent.js';
-//not GWT import const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
+//not GWT import const UnitWaypointBehavior
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { CommonStrings } 
@@ -26,7 +26,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PrimaryWaypointHelper } from './PrimaryWaypointHelper.js';
-//not GWT import - same folder const PrimaryWaypointHelper = globalThis.org.allbinary.game.input.form.PrimaryWaypointHelper;
+//not GWT import - same folder const PrimaryWaypointHelper
 export class AssignWaypointsUtil extends Object {
     constructor() {
         super(...arguments);

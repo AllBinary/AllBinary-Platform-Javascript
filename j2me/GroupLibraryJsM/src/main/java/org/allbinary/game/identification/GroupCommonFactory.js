@@ -15,8 +15,8 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GroupCommonFactory extends Object {
     constructor() {

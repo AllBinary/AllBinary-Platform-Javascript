@@ -12,18 +12,17 @@
         *  Created By: Travis Berthelot
 */
 import { Math } from '../../../../../../java/lang/Math.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not GWT import const DirectionCompositeInterface = globalThis.org.allbinary.direction.DirectionCompositeInterface;
+import { Canvas } from '../../../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const DirectionCompositeInterface
 import { DirectionFactory } from '../../../../../../org/allbinary/direction/DirectionFactory.js';
-//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
+//not GWT import const TrackingEvent
 import { TrackingEventHandler } from '../../../../../../org/allbinary/game/tracking/TrackingEventHandler.js';
-//not GWT import const LayerInterface = globalThis.org.allbinary.layer.LayerInterface;
+//not GWT import const LayerInterface
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not GWT import const AllBinaryEventObject
 import { EventStrings } from '../../../../../../org/allbinary/logic/util/event/EventStrings.js';
-//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
+//not GWT import const EventStrings
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
@@ -32,7 +31,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePatrolAI } from './BasePatrolAI.js';
-//not GWT import - same folder const BasePatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.BasePatrolAI;
+//not GWT import - same folder const BasePatrolAI
 export class PacePatrolAI extends BasePatrolAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(hashtable, ownerLayerInterface, gameInput);

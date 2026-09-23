@@ -14,16 +14,16 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { BasicColorFactory } from '../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { NullPaintable } from '../../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not GWT import const PaintableInterface
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressCanvas } from './ProgressCanvas.js';
-//not GWT import - same folder const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
+//not GWT import - same folder const ProgressCanvas
 export class ProgressCanvasFactory extends Object {
     static getInstance() {
         if (ProgressCanvasFactory.PROGRESS_FORM_SCREEN == NullUtil.getInstance().NULL_OBJECT) {
@@ -39,3 +39,12 @@ export class ProgressCanvasFactory extends Object {
     }
 }
 ProgressCanvasFactory.PROGRESS_FORM_SCREEN = NullUtil.getInstance().NULL_OBJECT;
+//JSNI Expose so JSNI can access this class *** 
+globalThis.org.allbinary = globalThis.org.allbinary || {};
+globalThis.org.allbinary.graphics;
+globalThis.org.allbinary.graphics || {};
+globalThis.org.allbinary.graphics.canvas = globalThis.org.allbinary.graphics.canvas || {};
+globalThis.org.allbinary.graphics.canvas.transition = globalThis.org.allbinary.graphics.canvas.transition || {};
+globalThis.org.allbinary.graphics.canvas.transition.progress = globalThis.org.allbinary.graphics.canvas.transition.progress || {};
+globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory = ProgressCanvasFactory;
+console.log('Exported ProgressCanvasFactory as globalThis');

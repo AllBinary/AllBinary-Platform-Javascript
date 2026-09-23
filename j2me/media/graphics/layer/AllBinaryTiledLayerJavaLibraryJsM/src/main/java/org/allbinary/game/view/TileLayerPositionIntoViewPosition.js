@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
+//not GWT import const Layer
 import { NullLayer } from '../../../../org/allbinary/layer/NullLayer.js';
-//not GWT import const NullLayer = globalThis.org.allbinary.layer.NullLayer;
+//not GWT import const NullLayer
 import { ViewPosition } from '../../../../org/allbinary/view/ViewPosition.js';
-//not GWT import const ViewPosition = globalThis.org.allbinary.view.ViewPosition;
+//not GWT import const ViewPosition
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TileLayerPositionIntoViewPosition extends ViewPosition {
     constructor() {

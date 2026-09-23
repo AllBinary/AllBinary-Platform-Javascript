@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const TouchButtonInput = globalThis.org.allbinary.input.motion.button.TouchButtonInput;
+//not GWT import - same folder const TouchButtonInput
 export class TouchButtonVisitor extends Object {
     //@Throws(Exception.constructor)
     process(touchButtonInput, string) {

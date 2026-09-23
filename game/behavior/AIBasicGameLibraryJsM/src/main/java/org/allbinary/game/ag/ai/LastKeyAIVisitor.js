@@ -11,13 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const BasicAI = globalThis.org.allbinary.game.ai.BasicAI;
+//not GWT import const BasicAI
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { BooleanFactory } from '../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-//not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
+//not GWT import const BooleanFactory
 import { Visitor } from '../../../../../org/allbinary/logic/util/visitor/Visitor.js';
-//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
+//not GWT import const Visitor
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)

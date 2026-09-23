@@ -11,17 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScaleUtil.js';
-//not GWT import const ImageScaleUtil = globalThis.org.allbinary.media.image.ImageScaleUtil;
+//not GWT import const ImageScaleUtil
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScaleBaseProcessor } from './ScaleBaseProcessor.js';
-//not GWT import - same folder const ScaleBaseProcessor = globalThis.org.allbinary.animation.image.ScaleBaseProcessor;
+//not GWT import - same folder const ScaleBaseProcessor
 export class ScaleProcessor extends ScaleBaseProcessor {
     constructor() {
         super(...arguments);

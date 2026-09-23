@@ -19,7 +19,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicStoreFrontsEntity } from './BasicStoreFrontsEntity.js';
-//not GWT import - same folder const BasicStoreFrontInterface = globalThis.org.allbinary.business.context.modules.storefronts.BasicStoreFrontInterface;
+//not GWT import - same folder const BasicStoreFrontInterface
 export class BasicStoreFrontFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

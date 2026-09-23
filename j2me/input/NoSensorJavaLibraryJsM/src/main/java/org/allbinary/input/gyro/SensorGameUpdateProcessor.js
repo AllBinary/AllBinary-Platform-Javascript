@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const AllBinarySensor = globalThis.org.allbinary.input.AllBinarySensor;
+//not GWT import const AllBinarySensor
 import { NoAllBinarySensor } from '../../../../org/allbinary/input/NoAllBinarySensor.js';
-//not GWT import const NoAllBinarySensor = globalThis.org.allbinary.input.NoAllBinarySensor;
+//not GWT import const NoAllBinarySensor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SensorGameUpdateProcessor extends Object {
     constructor() {

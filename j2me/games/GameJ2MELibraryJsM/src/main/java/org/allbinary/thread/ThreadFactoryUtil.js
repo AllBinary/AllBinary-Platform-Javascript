@@ -15,13 +15,13 @@
 import { Object } from '../../../java/lang/Object.js';
 import { Thread } from '../../../java/lang/Thread.js';
 import { J2MEUtil } from '../../../org/allbinary/J2MEUtil.js';
-//not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
+//not GWT import const RunnableCanvas
 import { AllBinaryGameCanvas } from '../../../org/allbinary/game/displayable/canvas/AllBinaryGameCanvas.js';
-//not GWT import const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import const AllBinaryGameCanvas
 import { DemoCanvas } from '../../../org/allbinary/game/displayable/canvas/DemoCanvas.js';
-//not GWT import const GameCanvasRunnableInterface = globalThis.org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface;
+//not GWT import const GameCanvasRunnableInterface
 import { RunnableCanvasSingleThreadStartRunnable } from '../../../org/allbinary/game/displayable/canvas/RunnableCanvasSingleThreadStartRunnable.js';
-//not GWT import const RunnableCanvasSingleThreadStartRunnable = globalThis.org.allbinary.game.displayable.canvas.RunnableCanvasSingleThreadStartRunnable;
+//not GWT import const RunnableCanvasSingleThreadStartRunnable
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { PreLogUtil } 
@@ -32,9 +32,9 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const ABRunnable = globalThis.org.allbinary.thread.ABRunnable;
+//not GWT import - same folder const ABRunnable
 import { PrimaryThreadPool } from './PrimaryThreadPool.js';
-//not GWT import - same folder const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
+//not GWT import - same folder const ThreadPool
 export class ThreadFactoryUtil extends Object {
     constructor() {
         super(...arguments);

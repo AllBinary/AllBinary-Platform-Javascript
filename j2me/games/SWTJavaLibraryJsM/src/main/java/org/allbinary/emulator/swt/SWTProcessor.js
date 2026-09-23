@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { NullRunnable } 
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
-//not GWT import const Display = globalThis.org.eclipse.swt.widgets.Display;
+//not GWT import const Display
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SWTProcessor extends Object {
     static getInstance() {

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const LayerPlacementType = globalThis.org.allbinary.game.layer.LayerPlacementType;
+//not GWT import - same folder const LayerPlacementType
 export class BasicLayerPlacement extends Object {
     constructor(layerType, width, height) {
         super();

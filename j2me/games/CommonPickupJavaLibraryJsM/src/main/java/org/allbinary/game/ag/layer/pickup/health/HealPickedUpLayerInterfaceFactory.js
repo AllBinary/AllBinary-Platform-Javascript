@@ -12,22 +12,22 @@
         *  Created By: Travis Berthelot
 */
 import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../../../../org/allbinary/animation/FeaturedAnimationInterfaceFactoryInterfaceFactory.js';
-//not GWT import const FeaturedAnimationInterfaceFactoryInterfaceFactory = globalThis.org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
+//not GWT import const FeaturedAnimationInterfaceFactoryInterfaceFactory
 import { CountedPickedUpLayerInterfaceFactory } from '../../../../../../../org/allbinary/game/layer/pickup/CountedPickedUpLayerInterfaceFactory.js';
-//not GWT import const CountedPickedUpLayerInterfaceFactory = globalThis.org.allbinary.game.layer.pickup.CountedPickedUpLayerInterfaceFactory;
+//not GWT import const CountedPickedUpLayerInterfaceFactory
 import { IconLayerFactory } from '../../../../../../../org/allbinary/game/layer/pickup/IconLayerFactory.js';
-//not GWT import const IconLayerFactory = globalThis.org.allbinary.game.layer.pickup.IconLayerFactory;
+//not GWT import const IconLayerFactory
 import { PickedUpLayerInterfaceFactory } from '../../../../../../../org/allbinary/game/layer/pickup/PickedUpLayerInterfaceFactory.js';
-//not GWT import const PickedUpLayerInterfaceFactoryInterface = globalThis.org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface;
+//not GWT import const PickedUpLayerInterfaceFactoryInterface
 import { PickedUpLayerTypeFactory } from '../../../../../../../org/allbinary/game/layer/pickup/PickedUpLayerTypeFactory.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HealLayerCircularStaticPool } from './HealLayerCircularStaticPool.js';
-//not GWT import - same folder const HealLayerCircularStaticPool = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayerCircularStaticPool;
+//not GWT import - same folder const HealLayerCircularStaticPool
 import { HealLayerFactory } from './HealLayerFactory.js';
-//not GWT import - same folder const HealLayerFactory = globalThis.org.allbinary.game.ag.layer.pickup.health.HealLayerFactory;
+//not GWT import - same folder const HealLayerFactory
 import { HealthResources } from './HealthResources.js';
-//not GWT import - same folder const HealthResources = globalThis.org.allbinary.game.ag.layer.pickup.health.HealthResources;
+//not GWT import - same folder const HealthResources
 export class HealPickedUpLayerInterfaceFactory extends PickedUpLayerInterfaceFactory {
     //@Throws(Exception.constructor)
     static init() {

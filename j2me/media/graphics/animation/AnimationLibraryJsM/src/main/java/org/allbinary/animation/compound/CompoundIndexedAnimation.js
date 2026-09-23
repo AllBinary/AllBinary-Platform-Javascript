@@ -11,17 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import const AnimationBehavior
 import { IndexedAnimation } from '../../../../org/allbinary/animation/IndexedAnimation.js';
-//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
-//not plain js import { PrimitiveIntUtil } 
-const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
+//not GWT import const IndexedAnimation
+import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not GWT import const PrimitiveIntUtil
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const CompoundAnimationInterface = globalThis.org.allbinary.animation.compound.CompoundAnimationInterface;
+//not GWT import - same folder const CompoundAnimationInterface
 export class CompoundIndexedAnimation extends IndexedAnimation {
     constructor(animationInterfaceArray, animationBehavior) {
         super(animationBehavior);

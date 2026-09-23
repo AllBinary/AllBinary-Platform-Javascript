@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const MotionEvent = globalThis.android.view.MotionEvent;
+//not GWT import const MotionEvent
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MotionEventProcessor extends Object {
     constructor() {

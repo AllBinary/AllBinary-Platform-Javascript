@@ -13,9 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import - same folder const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import - same folder const BasicColor
 export class BasicColorSetUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

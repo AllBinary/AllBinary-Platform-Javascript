@@ -13,10 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
+import { Command } from '../../../../javax/microedition/lcdui/Command.js';
+//not GWT import const Command
 import { CanvasStrings } from '../../../../org/allbinary/graphics/displayable/CanvasStrings.js';
-//not GWT import const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
+//not GWT import const CanvasStrings
+//not plain js import { NullUtil } 
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
@@ -24,6 +26,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameCommandsFactory extends Object {
     static getInstance() {
+        if (GameCommandsFactory.instance == NullUtil.getInstance().NULL_OBJECT) {
+            GameCommandsFactory.instance = new GameCommandsFactory();
+        }
         //if statement needs to be on the same line and ternary does not work the same way.
         return GameCommandsFactory.instance;
     }
@@ -58,4 +63,4 @@ export class GameCommandsFactory extends Object {
         this.BUY_COMMAND = new Command("BUY", StringUtil.getInstance().EMPTY_STRING, Command.SCREEN, 1);
     }
 }
-GameCommandsFactory.instance = new GameCommandsFactory();
+GameCommandsFactory.instance = NullUtil.getInstance().NULL_OBJECT;

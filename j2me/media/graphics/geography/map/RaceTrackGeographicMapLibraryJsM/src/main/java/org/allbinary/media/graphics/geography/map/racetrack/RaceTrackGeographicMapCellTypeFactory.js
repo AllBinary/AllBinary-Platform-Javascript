@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { GeographicMapCellType } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellType.js';
-//not GWT import const GeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellType;
+//not GWT import const GeographicMapCellType
 import { GeographicMapCellTypeFactory } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellTypeFactory.js';
-//not GWT import - same folder const RaceTrackGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType;
+//not GWT import - same folder const RaceTrackGeographicMapCellType
 import { RaceTrackGeographicMapCellTypes } from './RaceTrackGeographicMapCellTypes.js';
-//not GWT import - same folder const RaceTrackGeographicMapCellTypes = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellTypes;
+//not GWT import - same folder const RaceTrackGeographicMapCellTypes
 export class RaceTrackGeographicMapCellTypeFactory extends GeographicMapCellTypeFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

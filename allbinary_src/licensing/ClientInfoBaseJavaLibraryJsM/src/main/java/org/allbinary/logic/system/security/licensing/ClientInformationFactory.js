@@ -21,7 +21,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ClientInformation } from './ClientInformation.js';
-//not GWT import - same folder const ClientInformation = globalThis.org.allbinary.logic.system.security.licensing.ClientInformation;
+//not GWT import - same folder const ClientInformation
 export class ClientInformationFactory extends Object {
     getInstance() {
         var logUtil = LogUtil.getInstance();

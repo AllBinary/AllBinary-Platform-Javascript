@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { BasicGameResources } from '../../../../../org/allbinary/game/layer/resources/BasicGameResources.js';
-//not GWT import const BasicGameResources = globalThis.org.allbinary.game.layer.resources.BasicGameResources;
+//not GWT import const BasicGameResources
 import { GameGraphicsResourceUtil } from '../../../../../org/allbinary/game/layer/resources/GameGraphicsResourceUtil.js';
-//not GWT import const GameGraphicsResourceUtil = globalThis.org.allbinary.game.layer.resources.GameGraphicsResourceUtil;
+//not GWT import const GameGraphicsResourceUtil
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)

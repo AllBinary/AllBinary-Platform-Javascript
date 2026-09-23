@@ -11,16 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
+//not GWT import const UnitWaypointBehavior
 import { WorkSound } from '../../../../../org/allbinary/media/audio/WorkSound.js';
-//not GWT import const WorkSound = globalThis.org.allbinary.media.audio.WorkSound;
+//not GWT import const WorkSound
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Waypoint } from './Waypoint.js';
-//not GWT import - same folder const WaypointInfoHudPaintable = globalThis.org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable;
+//not GWT import - same folder const WaypointInfoHudPaintable
 export class WorkWaypoint extends Waypoint {
     constructor(ownerLayer) {
         super(ownerLayer, WorkSound.getInstance());

@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { AccelerometerSensorFactory } from '../../../org/allbinary/input/accelerometer/AccelerometerSensorFactory.js';
-//not GWT import const AccelerometerSensorFactory = globalThis.org.allbinary.input.accelerometer.AccelerometerSensorFactory;
+//not GWT import const AccelerometerSensorFactory
 import { GyroSensorFactory } from '../../../org/allbinary/input/gyro/GyroSensorFactory.js';
-//not GWT import const GyroSensorFactory = globalThis.org.allbinary.input.gyro.GyroSensorFactory;
+//not GWT import const GyroSensorFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 

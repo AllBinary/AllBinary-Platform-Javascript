@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
-//not GWT import const BasicAI = globalThis.org.allbinary.game.ai.BasicAI;
+//not GWT import const BasicAI
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ArrayAI extends BasicAI {
     constructor(artificialIntelligenceInterface, ownerLayerInterface, gameInput) {

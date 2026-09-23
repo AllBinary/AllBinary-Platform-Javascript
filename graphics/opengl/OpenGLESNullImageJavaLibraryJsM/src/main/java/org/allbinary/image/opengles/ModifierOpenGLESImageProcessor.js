@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLESImageProcessor } from './OpenGLESImageProcessor.js';
-//not GWT import - same folder const OpenGLESImageProcessor = globalThis.org.allbinary.image.opengles.OpenGLESImageProcessor;
+//not GWT import - same folder const OpenGLESImageProcessor
 export class ModifierOpenGLESImageProcessor extends OpenGLESImageProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

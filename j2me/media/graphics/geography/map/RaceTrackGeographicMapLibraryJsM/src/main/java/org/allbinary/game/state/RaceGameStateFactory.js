@@ -17,7 +17,7 @@ import { Object } from '../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameStateFactory } from './GameStateFactory.js';
-//not GWT import - same folder const GameState = globalThis.org.allbinary.game.state.GameState;
+//not GWT import - same folder const GameState
 export class RaceGameStateFactory extends Object {
     constructor() {
         super(...arguments);

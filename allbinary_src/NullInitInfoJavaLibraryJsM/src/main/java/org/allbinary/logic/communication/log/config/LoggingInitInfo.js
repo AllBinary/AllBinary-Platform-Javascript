@@ -18,7 +18,7 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const LogConfig = globalThis.org.allbinary.logic.communication.log.config.LogConfig;
+//not GWT import - same folder const LogConfig
 export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

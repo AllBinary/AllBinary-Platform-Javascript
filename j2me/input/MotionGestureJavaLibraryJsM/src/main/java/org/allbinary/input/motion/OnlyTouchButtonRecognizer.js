@@ -12,10 +12,10 @@
         *  Created By: Travis Berthelot
 */
 import { TouchButtonRecognizer } from '../../../../org/allbinary/input/motion/button/TouchButtonRecognizer.js';
-//not GWT import const TouchButtonRecognizer = globalThis.org.allbinary.input.motion.button.TouchButtonRecognizer;
+//not GWT import const TouchButtonRecognizer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionRecognizer } from './MotionRecognizer.js';
-//not GWT import - same folder const MotionRecognizer = globalThis.org.allbinary.input.motion.MotionRecognizer;
+//not GWT import - same folder const MotionRecognizer
 export class OnlyTouchButtonRecognizer extends MotionRecognizer {
     constructor() {
         super();

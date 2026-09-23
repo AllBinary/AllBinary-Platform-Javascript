@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Feature } from './Feature.js';
-//not GWT import - same folder const Feature = globalThis.org.allbinary.game.configuration.feature.Feature;
+//not GWT import - same folder const Feature
 export class MainFeatureFactory extends Object {
     constructor() {
         super(...arguments);

@@ -13,9 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const Resource = globalThis.org.eclipse.swt.graphics.Resource;
+//not GWT import const Resource
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DisposalUtil extends Object {
     static getInstance() {

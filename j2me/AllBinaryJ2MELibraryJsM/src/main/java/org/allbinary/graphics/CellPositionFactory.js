@@ -21,7 +21,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CellPosition } from './CellPosition.js';
-//not GWT import - same folder const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
+//not GWT import - same folder const CellPosition
 export class CellPositionFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -31,14 +31,11 @@ export class CellPositionFactory extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.NONE = new CellPosition(-1, -1, -1, -1);
-        this.cellPositionArray = new Array(0).fill(null).map(() => new Array(0).fill(0));
+        this.cellPositionArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
         this.columns = 0;
         this.rows = 0;
     }
     init(columns, rows) {
-        this.cellPositionArray = new Array(columns).fill(null).map(() => new Array(rows).fill(0));
-        this.columns = columns;
-        this.rows = rows;
         var commonStrings = CommonStrings.getInstance();
         ;
         var stringBuffer = new StringMaker();
@@ -48,6 +45,9 @@ export class CellPositionFactory extends Object {
         stringBuffer.append(" rows: ");
         stringBuffer.appendint(rows);
         this.logUtil.putF(stringBuffer.toString(), this, commonStrings.INIT);
+        this.cellPositionArray = new Array(columns).fill(null).map(() => new Array(rows).fill(null));
+        this.columns = columns;
+        this.rows = rows;
         for (var column = 0; column < columns; column++) {
             for (var row = 0; row < rows; row++) {
                 this.createInstance(column, row);

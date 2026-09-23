@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { File } from '../../../../../java/io/File.js';
-//not GWT import const URI = globalThis.java.net.URI;
+//not GWT import const URI
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not GWT import const TsUtil
 import { AbPath } from '../../../../../org/allbinary/logic/io/path/AbPath.js';
-//not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
+//not GWT import const AbPath
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const AbFileInterface = globalThis.org.allbinary.logic.io.file.AbFileInterface;
+//not GWT import - same folder const AbFileInterface
 export class AbFile extends Object {
     //@Throws(Exception.constructor)
     static createAbFileWithChild(file, childPathName) {

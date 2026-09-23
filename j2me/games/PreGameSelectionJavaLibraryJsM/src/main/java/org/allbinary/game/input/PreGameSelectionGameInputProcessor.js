@@ -11,36 +11,36 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
+import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const Canvas
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { LockedFeatureNotificationUtil } from '../../../../org/allbinary/logic/system/security/licensing/LockedFeatureNotificationUtil.js';
-//not GWT import const LockedFeatureNotificationUtil = globalThis.org.allbinary.logic.system.security.licensing.LockedFeatureNotificationUtil;
+//not GWT import const LockedFeatureNotificationUtil
 import { LockedUtil } from '../../../../org/allbinary/logic/system/security/licensing/LockedUtil.js';
-//not GWT import const LockedUtil = globalThis.org.allbinary.logic.system.security.licensing.LockedUtil;
+//not GWT import const LockedUtil
 import { Processor } from '../../../../org/allbinary/canvas/Processor.js';
-//not GWT import const PreGameSelectorPaintable = globalThis.org.allbinary.game.displayable.canvas.PreGameSelectorPaintable;
+//not GWT import const PreGameSelectorPaintable
 import { GameKeyEventHandler } from '../../../../org/allbinary/game/input/event/GameKeyEventHandler.js';
-//not GWT import const GameKeyEventHandler = globalThis.org.allbinary.game.input.event.GameKeyEventHandler;
+//not GWT import const GameKeyEventHandler
 import { GameKeyEventUtil } from '../../../../org/allbinary/game/input/event/GameKeyEventUtil.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { SecondaryPlayerQueueFactory } from '../../../../org/allbinary/media/audio/SecondaryPlayerQueueFactory.js';
-//not GWT import const SecondaryPlayerQueueFactory = globalThis.org.allbinary.media.audio.SecondaryPlayerQueueFactory;
+//not GWT import const SecondaryPlayerQueueFactory
 import { SelectSound } from '../../../../org/allbinary/media/audio/SelectSound.js';
-//not GWT import const SelectSound = globalThis.org.allbinary.media.audio.SelectSound;
+//not GWT import const SelectSound
 import { ABRunnable } from '../../../../org/allbinary/thread/ABRunnable.js';
-//not GWT import const ABRunnable = globalThis.org.allbinary.thread.ABRunnable;
+//not GWT import const ABRunnable
 import { ThreadObjectUtil } from '../../../../org/allbinary/thread/ThreadObjectUtil.js';
-//not GWT import const ThreadObjectUtil = globalThis.org.allbinary.thread.ThreadObjectUtil;
+//not GWT import const ThreadObjectUtil
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import - same folder const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
+//not GWT import - same folder const PlayerGameInput
 import { GameInputProcessorComposite } from './GameInputProcessorComposite.js';
-//not GWT import - same folder const GameInputProcessorComposite = globalThis.org.allbinary.game.input.GameInputProcessorComposite;
+//not GWT import - same folder const GameInputProcessorComposite
 export class PreGameSelectionGameInputProcessor extends Processor {
     constructor(gameCanvas, preGameSelectorPaintable, nextGameState, lockedIndex) {
         super();

@@ -13,16 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
+//not GWT import const CellPosition
 import { CellPositionFactory } from '../../../../../org/allbinary/graphics/CellPositionFactory.js';
-//not GWT import const CellPositionFactory = globalThis.org.allbinary.graphics.CellPositionFactory;
+//not GWT import const CellPositionFactory
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonLocationHelper } from './TouchButtonLocationHelper.js';
-//not GWT import - same folder const TouchButtonLocationHelper = globalThis.org.allbinary.input.motion.button.TouchButtonLocationHelper;
+//not GWT import - same folder const TouchButtonLocationHelper
 export class BasicTouchButtonCellPositionFactory extends Object {
     constructor() {
         super();

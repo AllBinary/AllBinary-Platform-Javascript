@@ -14,8 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+import { AngleFactory } from './AngleFactory.js';
+//not GWT import - same folder const AngleFactory
 export class FrameUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

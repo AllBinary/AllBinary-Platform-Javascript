@@ -21,7 +21,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerGameInput } from './PlayerGameInput.js';
-//not GWT import - same folder const GameInputProcessorInterface = globalThis.org.allbinary.game.input.GameInputProcessorInterface;
+//not GWT import - same folder const GameInputProcessorInterface
 export class GameInputProcessorComposite extends PlayerGameInput {
     constructor(name, gameInputProcessorInterface) {
         super(new BasicArrayListD(), new BasicArrayListD(), -1);

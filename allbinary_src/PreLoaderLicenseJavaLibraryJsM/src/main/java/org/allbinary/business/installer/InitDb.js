@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const LicensingException = globalThis.org.allbinary.logic.system.security.licensing.LicensingException;
+//not GWT import const LicensingException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //Warning you must have sql root access
 export class InitDb extends Object {

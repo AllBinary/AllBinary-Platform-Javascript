@@ -1,13 +1,13 @@
 /* Generated Code Do Not Modify */
 import { KeyEvent } from '../../../../android/view/KeyEvent.js';
-//not GWT import const KeyEvent = globalThis.android.view.KeyEvent;
+//not GWT import const KeyEvent
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidAPI9KeyFactory } from './AndroidAPI9KeyFactory.js';
-//not GWT import - same folder const AndroidAPI9KeyFactory = globalThis.org.allbinary.game.input.AndroidAPI9KeyFactory;
+//not GWT import - same folder const AndroidAPI9KeyFactory
 import { AndroidGameKey } from './AndroidGameKey.js';
-//not GWT import - same folder const AndroidGameKey = globalThis.org.allbinary.game.input.AndroidGameKey;
+//not GWT import - same folder const AndroidGameKey
 export class AndroidAPI12KeyFactory extends AndroidAPI9KeyFactory {
     static getAPI12Instance() {
         if (AndroidAPI12KeyFactory.instance12 == NullUtil.getInstance().NULL_OBJECT) {

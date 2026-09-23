@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { FrictionProperties } from '../../../../org/allbinary/game/physics/FrictionProperties.js';
-//not GWT import const FrictionProperties = globalThis.org.allbinary.game.physics.FrictionProperties;
+//not GWT import const FrictionProperties
 import { FrictionData } from '../../../../org/allbinary/game/physics/friction/FrictionData.js';
-//not GWT import const FrictionData = globalThis.org.allbinary.game.physics.friction.FrictionData;
+//not GWT import const FrictionData
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class VehicleFrictionProperties extends FrictionProperties {
     constructor(tireFriction, brakeFriction, airFriction, crashFriction) {

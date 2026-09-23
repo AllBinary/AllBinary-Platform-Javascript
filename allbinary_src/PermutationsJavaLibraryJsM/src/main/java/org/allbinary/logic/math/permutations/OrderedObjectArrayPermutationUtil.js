@@ -14,14 +14,14 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Arrays } from '../../../../../java/util/Arrays.js';
-//not GWT import const Arrays = globalThis.java.util.Arrays;
+//not GWT import const Arrays
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
+//not GWT import const Visitor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ComparableObject } from './ComparableObject.js';
-//not GWT import - same folder const ComparableObject = globalThis.org.allbinary.logic.math.permutations.ComparableObject;
+//not GWT import - same folder const ComparableObject
 import { ObjectPermutationVisitor } from './ObjectPermutationVisitor.js';
-//not GWT import - same folder const ObjectPermutationVisitor = globalThis.org.allbinary.logic.math.permutations.ObjectPermutationVisitor;
+//not GWT import - same folder const ObjectPermutationVisitor
 export class OrderedObjectArrayPermutationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

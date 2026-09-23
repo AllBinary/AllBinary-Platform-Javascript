@@ -1,8 +1,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const View = globalThis.android.view.View;
+//not GWT import const View
 import { Toast } from '../../../android/widget/Toast.js';
-//not GWT import const Toast = globalThis.android.widget.Toast;
+//not GWT import const Toast
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 

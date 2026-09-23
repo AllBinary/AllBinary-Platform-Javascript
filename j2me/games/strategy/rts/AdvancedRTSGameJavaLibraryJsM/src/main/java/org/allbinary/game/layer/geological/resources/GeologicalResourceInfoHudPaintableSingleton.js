@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeologicalResourceInfoHudPaintable } from './GeologicalResourceInfoHudPaintable.js';
-//not GWT import - same folder const GeologicalResourceInfoHudPaintable = globalThis.org.allbinary.game.layer.geological.resources.GeologicalResourceInfoHudPaintable;
+//not GWT import - same folder const GeologicalResourceInfoHudPaintable
 export class GeologicalResourceInfoHudPaintableSingleton extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

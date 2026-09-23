@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not GWT import const Paintable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DamageFloaters extends Paintable {
     static getInstance() {

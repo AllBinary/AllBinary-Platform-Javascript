@@ -14,21 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
 import { RuntimeException } from '../../java/lang/RuntimeException.js';
-//not plain js import { Displayable } 
-const Displayable = globalThis.javax.microedition.lcdui.Displayable;
-//not plain js import { Form } 
-const Form = globalThis.javax.microedition.lcdui.Form;
-//not plain js import { InvalidRecordIDException } 
-const InvalidRecordIDException = globalThis.javax.microedition.rms.InvalidRecordIDException;
-//not plain js import { RecordStore } 
-const RecordStore = globalThis.javax.microedition.rms.RecordStore;
-//not plain js import { RecordStoreException } 
-const RecordStoreException = globalThis.javax.microedition.rms.RecordStoreException;
-//not plain js import { RecordStoreNotOpenException } 
-const RecordStoreNotOpenException = globalThis.javax.microedition.rms.RecordStoreNotOpenException;
+//not GWT import const Displayable
+import { Form } from '../../javax/microedition/lcdui/Form.js';
+//not GWT import const RecordStoreNotOpenException
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+//HTML
 export class TsUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,6 +91,8 @@ export class TsUtil extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
+    }
+    gc() {
     }
 }
 TsUtil.instance = new TsUtil();

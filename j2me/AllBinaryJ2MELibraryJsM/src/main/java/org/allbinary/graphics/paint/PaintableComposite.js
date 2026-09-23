@@ -11,12 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import - same folder const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not GWT import - same folder const PaintableInterface
 export class PaintableComposite extends Paintable {
     constructor(paintableArray) {
         super();

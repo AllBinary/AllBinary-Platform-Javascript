@@ -11,14 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const AnimationBehaviorFactory = globalThis.org.allbinary.animation.AnimationBehaviorFactory;
+//not GWT import const AnimationBehaviorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory = globalThis.org.allbinary.animation.image.BaseImageAnimationFactory;
+//not GWT import - same folder const BaseImageAnimationFactory
 import { TopToBottomImageAnimation } from './TopToBottomImageAnimation.js';
-//not GWT import - same folder const TopToBottomImageAnimation = globalThis.org.allbinary.animation.image.TopToBottomImageAnimation;
+//not GWT import - same folder const TopToBottomImageAnimation
 export class TopToBottomImageAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, sequenceArray, animationBehaviorFactory) {
         super(image, sequenceArray, image.getWidth(), image.getHeight(), 0, 0, animationBehaviorFactory);

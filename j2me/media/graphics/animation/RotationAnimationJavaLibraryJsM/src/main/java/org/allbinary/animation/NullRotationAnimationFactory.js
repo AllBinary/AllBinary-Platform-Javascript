@@ -13,20 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } 
-const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
-//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
+//not GWT import const Graphics
+import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AngleFactory
+import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
+//not GWT import const ScaleProperties
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const RotationAnimation = globalThis.org.allbinary.animation.RotationAnimation;
+//not GWT import - same folder const RotationAnimation
 import { NullRotationAnimation } from './NullRotationAnimation.js';
-//not GWT import - same folder const NullRotationAnimation = globalThis.org.allbinary.animation.NullRotationAnimation;
+//not GWT import - same folder const NullRotationAnimation
 import { IndexedAnimationBehavior } from './IndexedAnimationBehavior.js';
-//not GWT import - same folder const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import - same folder const Animation
 export class NullRotationAnimationFactory extends Object {
     static getFactoryInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

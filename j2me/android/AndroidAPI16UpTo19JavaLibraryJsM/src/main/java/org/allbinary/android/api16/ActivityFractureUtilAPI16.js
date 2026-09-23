@@ -11,11 +11,11 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 import { View } from '../../../../android/view/View.js';
-//not GWT import const View = globalThis.android.view.View;
+//not GWT import const View
 import { ActivityFractureUtilAPI5 } from '../../../../org/allbinary/android/api5/ActivityFractureUtilAPI5.js';
-//not GWT import const ActivityFractureUtilAPI5 = globalThis.org.allbinary.android.api5.ActivityFractureUtilAPI5;
+//not GWT import const ActivityFractureUtilAPI5
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ActivityFractureUtilAPI16 extends ActivityFractureUtilAPI5 {
     static getInstance() {

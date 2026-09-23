@@ -1,7 +1,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
 import { RuntimeException } from '../../java/lang/RuntimeException.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not GWT import const InputStream
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLResources extends Object {
     static getInstance() {

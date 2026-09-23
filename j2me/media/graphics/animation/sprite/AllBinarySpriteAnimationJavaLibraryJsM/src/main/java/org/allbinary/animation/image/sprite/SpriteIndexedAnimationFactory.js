@@ -11,25 +11,22 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { Sprite } 
-const Sprite = globalThis.javax.microedition.lcdui.game.Sprite;
+//not GWT import const Sprite
 import { AndroidUtil } from '../../../../../org/allbinary/AndroidUtil.js';
-//not GWT import const ProceduralAnimationInterfaceFactoryInterface = globalThis.org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface;
+//not GWT import const ProceduralAnimationInterfaceFactoryInterface
 import { BaseImageAnimationFactory } from '../../../../../org/allbinary/animation/image/BaseImageAnimationFactory.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorUtil } from '../../../../../org/allbinary/graphics/color/BasicColorUtil.js';
-//not GWT import const BasicColorUtil = globalThis.org.allbinary.graphics.color.BasicColorUtil;
+//not GWT import const BasicColorUtil
 import { AnimationFactorySpriteScaleUtil } from '../../../../../org/allbinary/image/sprite/AnimationFactorySpriteScaleUtil.js';
-//not GWT import const AnimationFactorySpriteScaleUtil = globalThis.org.allbinary.image.sprite.AnimationFactorySpriteScaleUtil;
-//not plain js import { PrimitiveIntUtil } 
-const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
+//not GWT import const AnimationFactorySpriteScaleUtil
+import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
-//not GWT import - same folder const SpriteIndexedAnimation = globalThis.org.allbinary.animation.image.sprite.SpriteIndexedAnimation;
+//not GWT import - same folder const SpriteIndexedAnimation
 import { AdjustedSpriteIndexedAnimation } from './AdjustedSpriteIndexedAnimation.js';
-//not GWT import - same folder const AdjustedSpriteIndexedAnimation = globalThis.org.allbinary.animation.image.sprite.AdjustedSpriteIndexedAnimation;
+//not GWT import - same folder const AdjustedSpriteIndexedAnimation
 export class SpriteIndexedAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createCWHDXY(image, basicColorArray, width, height, dx, dy, animationBehaviorFactory) {

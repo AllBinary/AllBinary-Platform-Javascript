@@ -15,15 +15,15 @@
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
-//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
+//not GWT import const J2MEUtil
 import { Features } from '../../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { SteeringVisitor } from '../../../../../org/allbinary/game/layer/SteeringVisitor.js';
-//not GWT import const AdvancedRTSGameLayer = globalThis.org.allbinary.game.layer.AdvancedRTSGameLayer;
+//not GWT import const AdvancedRTSGameLayer
 import { MultipassWaypointPathRunnable } from '../../../../../org/allbinary/game/layer/MultipassWaypointPathRunnable.js';
-//not GWT import const RTSLayer = globalThis.org.allbinary.game.layer.RTSLayer;
+//not GWT import const RTSLayer
 import { WaypointPathRunnable } from '../../../../../org/allbinary/game/layer/WaypointPathRunnable.js';
-//not GWT import const WaypointPathRunnable = globalThis.org.allbinary.game.layer.WaypointPathRunnable;
+//not GWT import const WaypointPathRunnable
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
@@ -34,34 +34,32 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const WaypointPathRunnableBase = globalThis.org.allbinary.game.layer.WaypointPathRunnableBase;
+//not GWT import const WaypointPathRunnableBase
 import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
-//not GWT import const WaypointBase = globalThis.org.allbinary.game.layer.waypoint.WaypointBase;
+//not GWT import const WaypointBase
 import { TrackingEventHandler } from '../../../../../org/allbinary/game/tracking/TrackingEventHandler.js';
-//not GWT import const TrackingEventHandler = globalThis.org.allbinary.game.tracking.TrackingEventHandler;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const GPoint
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 import { BooleanFactory } from '../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-//not GWT import const BooleanFactory = globalThis.org.allbinary.logic.java.bool.BooleanFactory;
+//not GWT import const BooleanFactory
 import { LayerDistanceUtil } from '../../../../../org/allbinary/math/LayerDistanceUtil.js';
-//not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
+//not GWT import const GeographicMapCellPosition
 import { SimpleGeographicMapCellPositionFactory } from '../../../../../org/allbinary/media/graphics/geography/map/SimpleGeographicMapCellPositionFactory.js';
-//not GWT import const SimpleGeographicMapCellPositionFactory = globalThis.org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory;
+//not GWT import const SimpleGeographicMapCellPositionFactory
 import { PathFindingThreadPool } from '../../../../../org/allbinary/thread/PathFindingThreadPool.js';
-//not GWT import const ThreadPool = globalThis.org.allbinary.thread.ThreadPool;
+//not GWT import const ThreadPool
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import const TimeDelayHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UnitWaypointBehavior } from './UnitWaypointBehavior.js';
-//not GWT import - same folder const UnitWaypointBehavior = globalThis.org.allbinary.game.layer.unit.UnitWaypointBehavior;
+//not GWT import - same folder const UnitWaypointBehavior
 import { UnitWaypointStrings } from './UnitWaypointStrings.js';
-//not GWT import - same folder const UnitLayer = globalThis.org.allbinary.game.layer.unit.UnitLayer;
+//not GWT import - same folder const UnitLayer
 //import { BuildingSteeringVisitor } from './BuildingSteeringVisitor.js';
-//not GWT import - same folder const BuildingSteeringVisitor = globalThis.org.allbinary.game.layer.unit.BuildingSteeringVisitor;
+//not GWT import - same folder const BuildingSteeringVisitor
 export class UnitWaypointBehavior2 extends UnitWaypointBehavior {
     constructor(ownerAdvancedRTSGameLayer, fakeWaypoint) {
         super(ownerAdvancedRTSGameLayer, fakeWaypoint);

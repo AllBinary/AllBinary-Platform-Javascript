@@ -19,13 +19,11 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { AngleIncrementInfo } 
-const AngleIncrementInfo = globalThis.org.allbinary.math.AngleIncrementInfo;
-//not plain js - same folder import { AngleIncrementInfoFactory } 
-const AngleIncrementInfoFactory = globalThis.org.allbinary.math.AngleIncrementInfoFactory;
-//not plain js - same folder import { FrameUtil } 
-const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
+//not GWT import - same folder const AngleIncrementInfo
+import { AngleIncrementInfoFactory } from './AngleIncrementInfoFactory.js';
+//not GWT import - same folder const AngleIncrementInfoFactory
+import { FrameUtil } from './FrameUtil.js';
+//not GWT import - same folder const FrameUtil
 export class AngleInfo extends Object {
     static getInstance(angleIncrement) {
         //if statement needs to be on the same line and ternary does not work the same way.

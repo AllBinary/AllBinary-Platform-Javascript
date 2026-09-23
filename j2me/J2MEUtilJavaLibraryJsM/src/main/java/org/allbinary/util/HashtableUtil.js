@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const Enumeration = globalThis.java.util.Enumeration;
+//not GWT import const Enumeration
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //not plain js - same folder import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;

@@ -15,158 +15,150 @@
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { Thread } from '../../../../../java/lang/Thread.js';
-//not plain js import { ChoiceGroup } 
-const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Item } 
-const Item = globalThis.javax.microedition.lcdui.Item;
+import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not GWT import const Item
 import { NullCommandListener } from '../../../../../javax/microedition/lcdui/NullCommandListener.js';
-//not GWT import const NullCommandListener = globalThis.javax.microedition.lcdui.NullCommandListener;
+//not GWT import const NullCommandListener
 import { AndroidUtil } from '../../../../../org/allbinary/AndroidUtil.js';
-//not GWT import const AndroidUtil = globalThis.org.allbinary.AndroidUtil;
+//not GWT import const AndroidUtil
 import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
-//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
+//not GWT import const J2MEUtil
 import { GameAdStateFactory } from '../../../../../org/allbinary/business/advertisement/GameAdStateFactory.js';
-//not GWT import const BaseGameStatistics = globalThis.org.allbinary.canvas.BaseGameStatistics;
+//not GWT import const BaseGameStatistics
 import { GameStatisticsFactory } from '../../../../../org/allbinary/canvas/GameStatisticsFactory.js';
-//not GWT import const GameStatisticsFactory = globalThis.org.allbinary.canvas.GameStatisticsFactory;
+//not GWT import const GameStatisticsFactory
 import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import const Processor
 import { RunnableCanvas } from '../../../../../org/allbinary/canvas/RunnableCanvas.js';
-//not GWT import const RunnableCanvas = globalThis.org.allbinary.canvas.RunnableCanvas;
+//not GWT import const RunnableCanvas
 import { DebugFactory } from '../../../../../org/allbinary/debug/DebugFactory.js';
-//not GWT import const DebugFactory = globalThis.org.allbinary.debug.DebugFactory;
+//not GWT import const DebugFactory
 import { NoDebug } from '../../../../../org/allbinary/debug/NoDebug.js';
-//not GWT import const GameAdState = globalThis.org.allbinary.game.GameAdState;
+//not GWT import const GameAdState
 import { GameInfo } from '../../../../../org/allbinary/game/GameInfo.js';
-//not GWT import const GameInfo = globalThis.org.allbinary.game.GameInfo;
+//not GWT import const GameInfo
 import { GameStrings } from '../../../../../org/allbinary/game/GameStrings.js';
-//not GWT import const GameStrings = globalThis.org.allbinary.game.GameStrings;
+//not GWT import const GameStrings
 import { GameTypeFactory } from '../../../../../org/allbinary/game/GameTypeFactory.js';
-//not GWT import const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
+//not GWT import const GameTypeFactory
 import { Intermission } from '../../../../../org/allbinary/game/Intermission.js';
-//not GWT import const IntermissionInterface = globalThis.org.allbinary.game.IntermissionInterface;
+//not GWT import const IntermissionInterface
 import { PlayerTypesFactory } from '../../../../../org/allbinary/game/PlayerTypesFactory.js';
-//not GWT import const PlayerTypesFactory = globalThis.org.allbinary.game.PlayerTypesFactory;
+//not GWT import const PlayerTypesFactory
 import { GameCommandsFactory } from '../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
-//not GWT import const GameCommandsFactory = globalThis.org.allbinary.game.commands.GameCommandsFactory;
+//not GWT import const GameCommandsFactory
 import { InGameFeatures } from '../../../../../org/allbinary/game/configuration/InGameFeatures.js';
-//not GWT import const InGameFeatures = globalThis.org.allbinary.game.configuration.InGameFeatures;
+//not GWT import const InGameFeatures
 import { InGameOptionsForm } from '../../../../../org/allbinary/game/configuration/InGameOptionsForm.js';
-//not GWT import const InGameOptionsForm = globalThis.org.allbinary.game.configuration.InGameOptionsForm;
+//not GWT import const InGameOptionsForm
 import { ChangedGameFeatureListener } from '../../../../../org/allbinary/game/configuration/event/ChangedGameFeatureListener.js';
-//not GWT import const GameInitializedEvent = globalThis.org.allbinary.game.configuration.event.GameInitializedEvent;
+//not GWT import const GameInitializedEvent
 import { GameInitializedEventHandler } from '../../../../../org/allbinary/game/configuration/event/GameInitializedEventHandler.js';
-//not GWT import const GameInitializedEventHandler = globalThis.org.allbinary.game.configuration.event.GameInitializedEventHandler;
+//not GWT import const GameInitializedEventHandler
 import { Features } from '../../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 import { GameFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
-//not GWT import const GameFeatureFactory = globalThis.org.allbinary.game.configuration.feature.GameFeatureFactory;
+//not GWT import const GameFeatureFactory
 import { GameFeatureUtil } from '../../../../../org/allbinary/game/configuration/feature/GameFeatureUtil.js';
-//not GWT import const GameFeatureUtil = globalThis.org.allbinary.game.configuration.feature.GameFeatureUtil;
+//not GWT import const GameFeatureUtil
 import { InputFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/InputFeatureFactory.js';
-//not GWT import const InputFeatureFactory = globalThis.org.allbinary.game.configuration.feature.InputFeatureFactory;
+//not GWT import const InputFeatureFactory
 import { MainFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
-//not GWT import const MainFeatureFactory = globalThis.org.allbinary.game.configuration.feature.MainFeatureFactory;
+//not GWT import const MainFeatureFactory
 import { SensorFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/SensorFeatureFactory.js';
-//not GWT import const SensorFeatureFactory = globalThis.org.allbinary.game.configuration.feature.SensorFeatureFactory;
+//not GWT import const SensorFeatureFactory
 import { TouchFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/TouchFeatureFactory.js';
-//not GWT import const TouchFeatureFactory = globalThis.org.allbinary.game.configuration.feature.TouchFeatureFactory;
+//not GWT import const TouchFeatureFactory
 import { GameLevelDisplayChangeEventListenersFactory } from '../../../../../org/allbinary/game/displayable/GameLevelDisplayChangeEventListenersFactory.js';
-//not GWT import const GameLevelDisplayChangeEventListenersFactory = globalThis.org.allbinary.game.displayable.GameLevelDisplayChangeEventListenersFactory;
+//not GWT import const GameLevelDisplayChangeEventListenersFactory
 import { BasicBuildGameInitializerFactory } from '../../../../../org/allbinary/game/init/BasicBuildGameInitializerFactory.js';
-//not GWT import const BasicBuildGameInitializerFactory = globalThis.org.allbinary.game.init.BasicBuildGameInitializerFactory;
+//not GWT import const BasicBuildGameInitializerFactory
 import { GameInitializationUtil } from '../../../../../org/allbinary/game/init/GameInitializationUtil.js';
-//not GWT import const GameInitializationUtil = globalThis.org.allbinary.game.init.GameInitializationUtil;
+//not GWT import const GameInitializationUtil
 import { GameInputStrings } from '../../../../../org/allbinary/game/input/GameInputStrings.js';
-//not GWT import const InputProcessor = globalThis.org.allbinary.game.input.InputProcessor;
+//not GWT import const InputProcessor
 import { NoPlayerGameInput } from '../../../../../org/allbinary/game/input/NoPlayerGameInput.js';
-//not GWT import const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
+//not GWT import const PlayerGameInput
 import { GameKeyEventHandler } from '../../../../../org/allbinary/game/input/event/GameKeyEventHandler.js';
-//not GWT import const GameKeyEventHandler = globalThis.org.allbinary.game.input.event.GameKeyEventHandler;
+//not GWT import const GameKeyEventHandler
 import { AllBinaryGameLayerManager } from '../../../../../org/allbinary/game/layer/AllBinaryGameLayerManager.js';
-//not GWT import const AllBinaryGameLayerManager = globalThis.org.allbinary.game.layer.AllBinaryGameLayerManager;
+//not GWT import const AllBinaryGameLayerManager
 import { SWTUtil } from '../../../../../org/allbinary/game/layer/SWTUtil.js';
-//not GWT import const ColorFillBasePaintable = globalThis.org.allbinary.game.paint.ColorFillBasePaintable;
+//not GWT import const ColorFillBasePaintable
 import { ColorFillPaintableFactory } from '../../../../../org/allbinary/game/paint/ColorFillPaintableFactory.js';
-//not GWT import const ResourceLoadingLevel = globalThis.org.allbinary.game.resource.ResourceLoadingLevel;
+//not GWT import const ResourceLoadingLevel
 import { ResourceLoadingLevelFactory } from '../../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
-//not GWT import const ResourceLoadingLevelFactory = globalThis.org.allbinary.game.resource.ResourceLoadingLevelFactory;
+//not GWT import const ResourceLoadingLevelFactory
 import { HighScore } from '../../../../../org/allbinary/game/score/HighScore.js';
-//not GWT import const HighScoresFactoryInterface = globalThis.org.allbinary.game.score.HighScoresFactoryInterface;
+//not GWT import const HighScoresFactoryInterface
 import { HighScoresPaintable } from '../../../../../org/allbinary/game/score/HighScoresPaintable.js';
-//not GWT import const HighScoresPaintable = globalThis.org.allbinary.game.score.HighScoresPaintable;
+//not GWT import const HighScoresPaintable
 import { NullHighScoresSingletonFactory } from '../../../../../org/allbinary/game/score/NullHighScoresSingletonFactory.js';
-//not GWT import const NullHighScoresSingletonFactory = globalThis.org.allbinary.game.score.NullHighScoresSingletonFactory;
+//not GWT import const NullHighScoresSingletonFactory
 import { HighScoreTextBox } from '../../../../../org/allbinary/game/score/displayable/HighScoreTextBox.js';
-//not GWT import const GameState = globalThis.org.allbinary.game.state.GameState;
+//not GWT import const GameState
 import { GameStateFactory } from '../../../../../org/allbinary/game/state/GameStateFactory.js';
-//not GWT import const GameStateFactory = globalThis.org.allbinary.game.state.GameStateFactory;
+//not GWT import const GameStateFactory
 import { GraphicsStrings } from '../../../../../org/allbinary/graphics/GraphicsStrings.js';
-//not GWT import const ScreenCapture = globalThis.org.allbinary.graphics.ScreenCapture;
+//not GWT import const ScreenCapture
 import { ScreenCaptureFactory } from '../../../../../org/allbinary/graphics/ScreenCaptureFactory.js';
-//not GWT import const ProgressCanvas = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
+//not GWT import const ProgressCanvas
 import { ProgressCanvasFactory } from '../../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
-//not GWT import const ProgressCanvasFactory = globalThis.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+//not GWT import const ProgressCanvasFactory
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { BasicColorSetUtil } from '../../../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
-//not GWT import const BasicColorSetUtil = globalThis.org.allbinary.graphics.color.BasicColorSetUtil;
+//not GWT import const BasicColorSetUtil
 import { CanvasStrings } from '../../../../../org/allbinary/graphics/displayable/CanvasStrings.js';
-//not GWT import const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
+//not GWT import const CanvasStrings
 import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import const DisplayInfoSingleton
 import { GameTickDisplayInfoSingleton } from '../../../../../org/allbinary/graphics/displayable/GameTickDisplayInfoSingleton.js';
-//not GWT import const GameTickDisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.GameTickDisplayInfoSingleton;
+//not GWT import const GameTickDisplayInfoSingleton
 import { MyCommandsFactory } from '../../../../../org/allbinary/graphics/displayable/command/MyCommandsFactory.js';
-//not GWT import const DisplayChangeEvent = globalThis.org.allbinary.graphics.displayable.event.DisplayChangeEvent;
+//not GWT import const DisplayChangeEvent
 import { DisplayChangeEventHandler } from '../../../../../org/allbinary/graphics/displayable/event/DisplayChangeEventHandler.js';
-//not GWT import const DisplayChangeEventListener = globalThis.org.allbinary.graphics.displayable.event.DisplayChangeEventListener;
+//not GWT import const DisplayChangeEventListener
 import { MyFontProcessor } from '../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
-//not GWT import const UpdateMyFontInterface = globalThis.org.allbinary.graphics.font.UpdateMyFontInterface;
+//not GWT import const UpdateMyFontInterface
 import { UpdateMyFontProcessor } from '../../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-//not GWT import const UpdateMyFontProcessor = globalThis.org.allbinary.graphics.font.UpdateMyFontProcessor;
+//not GWT import const UpdateMyFontProcessor
 import { CommandCurrentSelectionFormFactory } from '../../../../../org/allbinary/graphics/form/CommandCurrentSelectionFormFactory.js';
-//not GWT import const CommandCurrentSelectionFormFactory = globalThis.org.allbinary.graphics.form.CommandCurrentSelectionFormFactory;
+//not GWT import const CommandCurrentSelectionFormFactory
 import { FormPaintable } from '../../../../../org/allbinary/graphics/form/FormPaintable.js';
-//not GWT import const FormType = globalThis.org.allbinary.graphics.form.FormType;
+//not GWT import const FormType
 import { FormTypeFactory } from '../../../../../org/allbinary/graphics/form/FormTypeFactory.js';
-//not GWT import const FormTypeFactory = globalThis.org.allbinary.graphics.form.FormTypeFactory;
+//not GWT import const FormTypeFactory
 import { ScrollSelectionForm } from '../../../../../org/allbinary/graphics/form/ScrollSelectionForm.js';
-//not GWT import const ScrollSelectionForm = globalThis.org.allbinary.graphics.form.ScrollSelectionForm;
+//not GWT import const ScrollSelectionForm
 import { ScrollSelectionFormNoneFactory } from '../../../../../org/allbinary/graphics/form/ScrollSelectionFormNoneFactory.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 import { CurrentDisplayableFactory } from '../../../../../org/allbinary/graphics/opengles/CurrentDisplayableFactory.js';
-//not GWT import const CurrentDisplayableFactory = globalThis.org.allbinary.graphics.opengles.CurrentDisplayableFactory;
+//not GWT import const CurrentDisplayableFactory
 import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
-//not GWT import const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+//not GWT import const OpenGLFeatureFactory
 import { OpenGLFeatureUtil } from '../../../../../org/allbinary/graphics/opengles/OpenGLFeatureUtil.js';
-//not GWT import const OpenGLFeatureUtil = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureUtil;
+//not GWT import const OpenGLFeatureUtil
 import { OpenGLThreadUtil } from '../../../../../org/allbinary/graphics/opengles/OpenGLThreadUtil.js';
-//not GWT import const InitUpdatePaintable = globalThis.org.allbinary.graphics.paint.InitUpdatePaintable;
+//not GWT import const InitUpdatePaintable
 import { NullInitUpdatePaintable } from '../../../../../org/allbinary/graphics/paint/NullInitUpdatePaintable.js';
-//not GWT import const NullInitUpdatePaintable = globalThis.org.allbinary.graphics.paint.NullInitUpdatePaintable;
+//not GWT import const NullInitUpdatePaintable
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const PaintableInterface = globalThis.org.allbinary.graphics.paint.PaintableInterface;
+//not GWT import const PaintableInterface
 import { OpenGLImageSpecificFactory } from '../../../../../org/allbinary/image/opengles/OpenGLImageSpecificFactory.js';
-//not GWT import const SensorGameUpdateProcessor = globalThis.org.allbinary.input.gyro.SensorGameUpdateProcessor;
+//not GWT import const SensorGameUpdateProcessor
 import { SingleSensorGameUpdateProcessor } from '../../../../../org/allbinary/input/gyro/SingleSensorGameUpdateProcessor.js';
-//not GWT import const BaseTouchInput = globalThis.org.allbinary.input.motion.button.BaseTouchInput;
+//not GWT import const BaseTouchInput
 import { NoButtonsTouchInputFactory } from '../../../../../org/allbinary/input/motion/button/NoButtonsTouchInputFactory.js';
-//not GWT import const NoButtonsTouchInputFactory = globalThis.org.allbinary.input.motion.button.NoButtonsTouchInputFactory;
+//not GWT import const NoButtonsTouchInputFactory
 import { TouchButtonFactory } from '../../../../../org/allbinary/input/motion/button/TouchButtonFactory.js';
-//not GWT import const TouchButtonFactory = globalThis.org.allbinary.input.motion.button.TouchButtonFactory;
+//not GWT import const TouchButtonFactory
 import { TouchButtonsPaintableFactory } from '../../../../../org/allbinary/input/motion/button/TouchButtonsPaintableFactory.js';
-//not GWT import const TouchButtonsPaintableFactory = globalThis.org.allbinary.input.motion.button.TouchButtonsPaintableFactory;
+//not GWT import const TouchButtonsPaintableFactory
 import { TouchScreenFactory } from '../../../../../org/allbinary/input/motion/button/TouchScreenFactory.js';
-//not GWT import const TouchScreenFactory = globalThis.org.allbinary.input.motion.button.TouchScreenFactory;
+//not GWT import const TouchScreenFactory
 import { BasicMotionGesturesHandler } from '../../../../../org/allbinary/input/motion/gesture/observer/BasicMotionGesturesHandler.js';
-//not GWT import const BasicMotionGesturesHandler = globalThis.org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler;
+//not GWT import const BasicMotionGesturesHandler
 //not plain js import { ABSystemWrapper } 
 const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
 //not plain js import { ForcedLogUtil } 
@@ -180,27 +172,27 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { OperatingSystemFactory } from '../../../../../org/allbinary/logic/system/os/OperatingSystemFactory.js';
-//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not GWT import const AllBinaryEventObject
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
-//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
+//not GWT import const EventStrings
 import { AllBinaryMediaManager } from '../../../../../org/allbinary/media/audio/AllBinaryMediaManager.js';
-//not GWT import const PlayerQueue = globalThis.org.allbinary.media.audio.PlayerQueue;
+//not GWT import const PlayerQueue
 import { PrimaryPlayerQueueFactory } from '../../../../../org/allbinary/media/audio/PrimaryPlayerQueueFactory.js';
-//not GWT import const PrimaryPlayerQueueFactory = globalThis.org.allbinary.media.audio.PrimaryPlayerQueueFactory;
+//not GWT import const PrimaryPlayerQueueFactory
 import { SecondaryPlayerQueueFactory } from '../../../../../org/allbinary/media/audio/SecondaryPlayerQueueFactory.js';
-//not GWT import const SecondaryPlayerQueueFactory = globalThis.org.allbinary.media.audio.SecondaryPlayerQueueFactory;
+//not GWT import const SecondaryPlayerQueueFactory
 import { SelectSound } from '../../../../../org/allbinary/media/audio/SelectSound.js';
-//not GWT import const SelectSound = globalThis.org.allbinary.media.audio.SelectSound;
+//not GWT import const SelectSound
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { SecondaryThreadPool } from '../../../../../org/allbinary/thread/SecondaryThreadPool.js';
-//not GWT import const GameTickTimeDelayHelper = globalThis.org.allbinary.time.GameTickTimeDelayHelper;
+//not GWT import const GameTickTimeDelayHelper
 import { GameTickTimeDelayHelperFactory } from '../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
-//not GWT import const GameTickTimeDelayHelperFactory = globalThis.org.allbinary.time.GameTickTimeDelayHelperFactory;
+//not GWT import const GameTickTimeDelayHelperFactory
 import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import const TimeDelayHelper
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
@@ -209,53 +201,53 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import - same folder const PopupMenuInterface = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInterface;
+//not GWT import - same folder const PopupMenuInterface
 import { GameCanvasRunnable } from './GameCanvasRunnable.js';
-//not GWT import - same folder const GameCanvasRunnable = globalThis.org.allbinary.game.displayable.canvas.GameCanvasRunnable;
+//not GWT import - same folder const GameCanvasRunnable
 import { GameCanvasPauseRunnable } from './GameCanvasPauseRunnable.js';
-//not GWT import - same folder const GameCanvasPauseRunnable = globalThis.org.allbinary.game.displayable.canvas.GameCanvasPauseRunnable;
+//not GWT import - same folder const GameCanvasPauseRunnable
 import { FormUtil } from './FormUtil.js';
-//not GWT import - same folder const FormUtil = globalThis.org.allbinary.game.displayable.canvas.FormUtil;
+//not GWT import - same folder const FormUtil
 import { MyFormUtil } from './MyFormUtil.js';
-//not GWT import - same folder const MyFormUtil = globalThis.org.allbinary.game.displayable.canvas.MyFormUtil;
+//not GWT import - same folder const MyFormUtil
 import { EndGameInfo } from './EndGameInfo.js';
-//not GWT import - same folder const EndGameInfo = globalThis.org.allbinary.game.displayable.canvas.EndGameInfo;
+//not GWT import - same folder const EndGameInfo
 import { NoMenuInputProcessor } from './NoMenuInputProcessor.js';
-//not GWT import - same folder const BasicMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.BasicMenuInputProcessor;
+//not GWT import - same folder const BasicMenuInputProcessor
 import { DemoGameBehavior } from './DemoGameBehavior.js';
-//not GWT import - same folder const DemoGameBehavior = globalThis.org.allbinary.game.displayable.canvas.DemoGameBehavior;
+//not GWT import - same folder const DemoGameBehavior
 import { BaseMenuBehavior } from './BaseMenuBehavior.js';
-//not GWT import - same folder const BaseMenuBehavior = globalThis.org.allbinary.game.displayable.canvas.BaseMenuBehavior;
+//not GWT import - same folder const BaseMenuBehavior
 import { BaseGameBehavior } from './BaseGameBehavior.js';
-//not GWT import - same folder const BaseGameBehavior = globalThis.org.allbinary.game.displayable.canvas.BaseGameBehavior;
+//not GWT import - same folder const BaseGameBehavior
 import { BasicPopupMenuPaintable } from './BasicPopupMenuPaintable.js';
-//not GWT import - same folder const BasicPopupMenuPaintable = globalThis.org.allbinary.game.displayable.canvas.BasicPopupMenuPaintable;
+//not GWT import - same folder const BasicPopupMenuPaintable
 import { PopupMenuInputProcessor } from './PopupMenuInputProcessor.js';
-//not GWT import - same folder const PopupMenuInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupMenuInputProcessor;
+//not GWT import - same folder const PopupMenuInputProcessor
 import { InGameMenuBehavior } from './InGameMenuBehavior.js';
-//not GWT import - same folder const InGameMenuBehavior = globalThis.org.allbinary.game.displayable.canvas.InGameMenuBehavior;
+//not GWT import - same folder const InGameMenuBehavior
 import { GameLimitedCommandTextItemArrayFactory } from './GameLimitedCommandTextItemArrayFactory.js';
-//not GWT import - same folder const GameLimitedCommandTextItemArrayFactory = globalThis.org.allbinary.game.displayable.canvas.GameLimitedCommandTextItemArrayFactory;
+//not GWT import - same folder const GameLimitedCommandTextItemArrayFactory
 import { PopupCommandFormInputProcessor } from './PopupCommandFormInputProcessor.js';
-//not GWT import - same folder const PopupCommandFormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.PopupCommandFormInputProcessor;
+//not GWT import - same folder const PopupCommandFormInputProcessor
 import { NullWaitGameRunnable } from './NullWaitGameRunnable.js';
-//not GWT import - same folder const NullWaitGameRunnable = globalThis.org.allbinary.game.displayable.canvas.NullWaitGameRunnable;
+//not GWT import - same folder const NullWaitGameRunnable
 import { GameProcessor } from './GameProcessor.js';
-//not GWT import - same folder const GameProcessor = globalThis.org.allbinary.game.displayable.canvas.GameProcessor;
+//not GWT import - same folder const GameProcessor
 import { CheatGameInputProcessor } from './CheatGameInputProcessor.js';
-//not GWT import - same folder const CheatGameInputProcessor = globalThis.org.allbinary.game.displayable.canvas.CheatGameInputProcessor;
+//not GWT import - same folder const CheatGameInputProcessor
 import { EndGameProcessor } from './EndGameProcessor.js';
-//not GWT import - same folder const EndGameProcessor = globalThis.org.allbinary.game.displayable.canvas.EndGameProcessor;
+//not GWT import - same folder const EndGameProcessor
 import { StartIntermissionProcessor } from './StartIntermissionProcessor.js';
-//not GWT import - same folder const StartIntermissionProcessor = globalThis.org.allbinary.game.displayable.canvas.StartIntermissionProcessor;
+//not GWT import - same folder const StartIntermissionProcessor
 import { EndGamePaintable } from './EndGamePaintable.js';
-//not GWT import - same folder const EndGamePaintable = globalThis.org.allbinary.game.displayable.canvas.EndGamePaintable;
+//not GWT import - same folder const EndGamePaintable
 import { NullDemoPaintable } from './NullDemoPaintable.js';
-//not GWT import - same folder const DemoPaintableInterface = globalThis.org.allbinary.game.displayable.canvas.DemoPaintableInterface;
+//not GWT import - same folder const DemoPaintableInterface
 import { GameCanvasInputProcessor } from './GameCanvasInputProcessor.js';
-//not GWT import - same folder const GameCanvasInputProcessor = globalThis.org.allbinary.game.displayable.canvas.GameCanvasInputProcessor;
+//not GWT import - same folder const GameCanvasInputProcessor
 import { FormInputProcessor } from './FormInputProcessor.js';
-//not GWT import - same folder const FormInputProcessor = globalThis.org.allbinary.game.displayable.canvas.FormInputProcessor;
+//not GWT import - same folder const FormInputProcessor
 export class AllBinaryGameCanvas extends RunnableCanvas {
     constructor(commandListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered) {
         super(commandListener, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, true);
@@ -519,13 +511,13 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         this.closeMenu();
         super.pause();
         this.touchButtonFactory.toggle(this.isPaused(), BasicArrayListUtil.getInstance().getImmutableInstance());
-        this.systemWrapper.gc();
+        this.tsUtil.gc();
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     unPause() {
         this.logUtil.putF(this.commonStrings.START, this, this.gameStrings.UNPAUSE);
         this.closeMenu();
-        this.systemWrapper.gc();
+        this.tsUtil.gc();
         super.unPause();
         this.touchButtonFactory.toggle(this.isPaused(), BasicArrayListUtil.getInstance().getImmutableInstance());
         this.gameBehavior.unPause(this);

@@ -13,8 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
+//not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Anchor extends Object {
 }

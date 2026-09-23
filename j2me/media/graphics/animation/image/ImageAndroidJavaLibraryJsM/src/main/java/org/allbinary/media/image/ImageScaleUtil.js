@@ -14,15 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-//not GWT import const Canvas = globalThis.android.graphics.Canvas;
+//not GWT import const Canvas
 import { Matrix } from '../../../../android/graphics/Matrix.js';
-//not GWT import const Matrix = globalThis.android.graphics.Matrix;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not GWT import const NullImage
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
-//not GWT import const ImageCache = globalThis.org.allbinary.image.ImageCache;
+//not GWT import const ImageCache
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
@@ -31,7 +29,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import const AndroidImageInterface = globalThis.org.microemu.android.device.AndroidImageInterface;
+//not GWT import const AndroidImageInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageScaleUtil extends Object {
     static getInstance() {

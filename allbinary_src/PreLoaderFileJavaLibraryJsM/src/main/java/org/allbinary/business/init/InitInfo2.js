@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Directory } from '../../../../org/allbinary/logic/io/file/directory/Directory.js';
-//not GWT import const AbPath = globalThis.org.allbinary.logic.io.path.AbPath;
+//not GWT import const AbPath
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InitInfo2 extends Object {
     constructor() {

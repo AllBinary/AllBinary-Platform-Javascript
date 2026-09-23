@@ -12,12 +12,12 @@
         *  Created By: Travis Berthelot
 */
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import const PlayerGameInput = globalThis.org.allbinary.game.input.PlayerGameInput;
+//not GWT import const PlayerGameInput
 import { NullRTSFormInputFactory } from '../../../../org/allbinary/game/input/form/NullRTSFormInputFactory.js';
-//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import const Sound
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPathFindingLayer } from './NullPathFindingLayer.js';
-//not GWT import - same folder const PlayerOwnedRTSLayers = globalThis.org.allbinary.game.layer.PlayerOwnedRTSLayers;
+//not GWT import - same folder const PlayerOwnedRTSLayers
 export class NullRTSLayer extends NullPathFindingLayer {
     getName() {
         throw new RuntimeException();

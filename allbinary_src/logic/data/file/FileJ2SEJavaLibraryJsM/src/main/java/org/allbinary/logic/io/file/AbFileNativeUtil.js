@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import - same folder const AbFile
 export class AbFileNativeUtil extends Object {
     static get(file) {
         //if statement needs to be on the same line and ternary does not work the same way.

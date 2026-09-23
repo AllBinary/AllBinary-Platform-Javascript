@@ -18,10 +18,8 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
-//not plain js - same folder import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
+import { PointFactory } from './PointFactory.js';
+//not GWT import - same folder const GPoint
 export class RelativeRelationship extends Object {
     constructor(point, typesAllowedList) {
         super();

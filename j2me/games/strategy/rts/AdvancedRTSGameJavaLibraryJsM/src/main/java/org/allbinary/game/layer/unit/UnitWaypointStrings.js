@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//not plain js import { CommonLabels } 
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class UnitWaypointStrings extends Object {
     constructor() {
@@ -29,7 +31,7 @@ export class UnitWaypointStrings extends Object {
         this.ALL_VISITED = "All Visited";
         this.ALREADY_THERE_SHORT = "Again?";
         this.ALREADY_THERE = "Already There";
-        this.NEXT_PATH_NODE = "Next Path Node";
+        this.NEXT_PATH_NODE = CommonLabels.getInstance().NEXT + " Path Node";
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

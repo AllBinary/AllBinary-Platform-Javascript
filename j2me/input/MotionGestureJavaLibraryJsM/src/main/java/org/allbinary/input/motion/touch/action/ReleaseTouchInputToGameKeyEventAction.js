@@ -11,17 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const GameKey = globalThis.org.allbinary.game.input.GameKey;
+//not GWT import const GameKey
 import { GameKeyFactory } from '../../../../../../org/allbinary/game/input/GameKeyFactory.js';
-//not GWT import const GameKeyFactory = globalThis.org.allbinary.game.input.GameKeyFactory;
+//not GWT import const GameKeyFactory
 import { PlatformInputMappingFactory } from '../../../../../../org/allbinary/game/input/PlatformInputMappingFactory.js';
-//not GWT import const PlatformInputMappingFactory = globalThis.org.allbinary.game.input.PlatformInputMappingFactory;
+//not GWT import const PlatformInputMappingFactory
 import { GameKeyEventFactory } from '../../../../../../org/allbinary/game/input/event/GameKeyEventFactory.js';
-//not GWT import const GameKeyEventFactory = globalThis.org.allbinary.game.input.event.GameKeyEventFactory;
+//not GWT import const GameKeyEventFactory
 import { GameKeyCompleteMotionGestureInputEvent } from '../../../../../../org/allbinary/game/input/motion/action/GameKeyCompleteMotionGestureInputEvent.js';
-//not GWT import const GameKeyCompleteMotionGestureInputEvent = globalThis.org.allbinary.game.input.motion.action.GameKeyCompleteMotionGestureInputEvent;
+//not GWT import const GameKeyCompleteMotionGestureInputEvent
 import { TouchMotionGestureFactory } from '../../../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
-//not GWT import const TouchMotionGestureFactory = globalThis.org.allbinary.input.motion.gesture.TouchMotionGestureFactory;
+//not GWT import const TouchMotionGestureFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { CommonStrings } 

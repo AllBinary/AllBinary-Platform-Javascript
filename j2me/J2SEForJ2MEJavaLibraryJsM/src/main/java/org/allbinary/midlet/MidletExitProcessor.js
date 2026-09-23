@@ -12,10 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { System } from '../../../java/lang/System.js';
-//not plain js import { MIDlet } 
-const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
+//not GWT import const MIDlet
 import { Processor } from '../../../org/allbinary/canvas/Processor.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import const Processor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MidletExitProcessor extends Processor {
     constructor(midlet) {

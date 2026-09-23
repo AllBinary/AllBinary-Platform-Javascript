@@ -11,13 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const FileNotFoundException = globalThis.java.io.FileNotFoundException;
+//not GWT import const FileNotFoundException
 import { FileOutputStream } from '../../../../java/io/FileOutputStream.js';
-//not GWT import const IOException = globalThis.java.io.IOException;
+//not GWT import const IOException
 import { OutputStream } from '../../../../java/io/OutputStream.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
-//not GWT import const AbFileNativeUtil = globalThis.org.allbinary.logic.io.file.AbFileNativeUtil;
+//not GWT import const AbFileNativeUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbFileOutputStream extends OutputStream {
     //@Throws(FileNotFoundException.constructor)

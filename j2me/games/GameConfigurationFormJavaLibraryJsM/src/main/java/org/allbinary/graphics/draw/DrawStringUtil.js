@@ -13,13 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
+//not GWT import const J2MEUtil
 import { Anchor } from '../../../../org/allbinary/graphics/Anchor.js';
-//not GWT import const OpenGLFeatureUtil = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureUtil;
+//not GWT import const OpenGLFeatureUtil
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { PreLogUtil } 

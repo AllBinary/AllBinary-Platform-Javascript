@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import - same folder const Sound
 export class BaseSoundsFactory extends Object {
     constructor() {
         super(...arguments);

@@ -14,13 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
+//not GWT import const GenericOperatingSystem
 import { OperatingSystems } from '../../../../../org/allbinary/logic/system/os/OperatingSystems.js';
-//not GWT import const OperatingSystems = globalThis.org.allbinary.logic.system.os.OperatingSystems;
+//not GWT import const OperatingSystems
 import { LinuxHardware } from '../../../../../org/allbinary/logic/system/hardware/linux/LinuxHardware.js';
-//not GWT import const LinuxHardware = globalThis.org.allbinary.logic.system.hardware.linux.LinuxHardware;
+//not GWT import const LinuxHardware
 import { WindowsHardware } from '../../../../../org/allbinary/logic/system/hardware/windows/WindowsHardware.js';
-//not GWT import - same folder const HardwareInterface = globalThis.org.allbinary.logic.system.hardware.HardwareInterface;
+//not GWT import - same folder const HardwareInterface
 export class HardwareFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

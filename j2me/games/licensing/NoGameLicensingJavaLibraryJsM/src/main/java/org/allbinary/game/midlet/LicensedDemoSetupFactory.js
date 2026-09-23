@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DemoSetup } from './DemoSetup.js';
-//not GWT import - same folder const DemoSetup = globalThis.org.allbinary.game.midlet.DemoSetup;
+//not GWT import - same folder const DemoSetup
 export class LicensedDemoSetupFactory extends Object {
     getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

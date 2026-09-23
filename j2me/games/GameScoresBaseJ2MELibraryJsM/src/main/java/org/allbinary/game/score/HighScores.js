@@ -23,7 +23,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const HighScore = globalThis.org.allbinary.game.score.HighScore;
+//not GWT import - same folder const HighScore
 export class HighScores extends Object {
     constructor(name, heading, columnTwoHeading) {
         super();

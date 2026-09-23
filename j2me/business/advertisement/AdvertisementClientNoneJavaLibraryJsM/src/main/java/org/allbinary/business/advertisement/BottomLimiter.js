@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const GameAdState = globalThis.org.allbinary.game.GameAdState;
+//not GWT import const GameAdState
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import const DisplayInfoSingleton
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameAdStateFactory } from './GameAdStateFactory.js';
-//not GWT import - same folder const GameAdStateFactory = globalThis.org.allbinary.business.advertisement.GameAdStateFactory;
+//not GWT import - same folder const GameAdStateFactory
 export class BottomLimiter extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

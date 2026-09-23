@@ -10,9 +10,9 @@
         *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
         *    Created By: Travis Berthelot
 */
-//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
+//not GWT import const EventListenerInterface
 import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import - same folder const WaypointEventListenerInterface = globalThis.org.allbinary.game.layer.waypoint.event.WaypointEventListenerInterface;
+//not GWT import - same folder const WaypointEventListenerInterface
 export class WaypointEventHandler extends BasicEventHandler {
     constructor() {
         super();

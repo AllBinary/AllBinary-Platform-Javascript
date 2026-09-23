@@ -11,15 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AnimationBehavior = globalThis.org.allbinary.animation.AnimationBehavior;
+//not GWT import const AnimationBehavior
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
+//not GWT import const CacheableInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AdjustedImageArrayRotationAnimation } from './AdjustedImageArrayRotationAnimation.js';
-//not GWT import - same folder const ImageArrayRotationAnimationInfo = globalThis.org.allbinary.animation.image.ImageArrayRotationAnimationInfo;
+//not GWT import - same folder const ImageArrayRotationAnimationInfo
 export class ImageArrayRotationAnimationCacheable extends AdjustedImageArrayRotationAnimation {
     constructor(anyType = {}, animationBehavior) {
         super(anyType.getImageArray(), anyType.getAngleInfoP(), anyType.getTotalAngle(), anyType.getDx(), anyType.getDy(), animationBehavior);

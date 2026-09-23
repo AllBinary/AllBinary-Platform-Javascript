@@ -1,7 +1,7 @@
 /* Generated Code Do Not Modify */
-//not GWT import const Bitmap = globalThis.android.graphics.Bitmap;
+//not GWT import const Bitmap
 import { PlatformBitmapBase } from '../../../org/allbinary/platform/graphics/PlatformBitmapBase.js';
-//not GWT import const PlatformBitmapBase = globalThis.org.allbinary.platform.graphics.PlatformBitmapBase;
+//not GWT import const PlatformBitmapBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLBitmap extends PlatformBitmapBase {
     constructor(bitmap = {}) {

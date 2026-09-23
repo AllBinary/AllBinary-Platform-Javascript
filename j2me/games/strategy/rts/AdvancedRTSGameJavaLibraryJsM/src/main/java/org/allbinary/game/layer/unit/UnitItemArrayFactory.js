@@ -13,25 +13,24 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js import { ImageItem } 
-const ImageItem = globalThis.javax.microedition.lcdui.ImageItem;
+//not GWT import const Image
+import { ImageItem } from '../../../../../javax/microedition/lcdui/ImageItem.js';
+//not GWT import const ImageItem
 import { RTSGameStrings } from '../../../../../org/allbinary/game/layer/RTSGameStrings.js';
-//not GWT import const RTSGameStrings = globalThis.org.allbinary.game.layer.RTSGameStrings;
+//not GWT import const RTSGameStrings
 import { LayerInterfaceFactoryImageItem } from '../../../../../org/allbinary/game/layer/item/LayerInterfaceFactoryImageItem.js';
-//not GWT import const LayerInterfaceFactoryImageItem = globalThis.org.allbinary.game.layer.item.LayerInterfaceFactoryImageItem;
+//not GWT import const LayerInterfaceFactoryImageItem
 import { RTSLayerTextAnimation } from '../../../../../org/allbinary/game/layer/item/RTSLayerTextAnimation.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 import { GameFeatureImageCacheFactory } from '../../../../../org/allbinary/image/GameFeatureImageCacheFactory.js';
-//not GWT import const GameFeatureImageCacheFactory = globalThis.org.allbinary.image.GameFeatureImageCacheFactory;
+//not GWT import const GameFeatureImageCacheFactory
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { CustomItemUtil } from '../../../../../org/allbinary/graphics/form/item/CustomItemUtil.js';
-//not GWT import const LayerInterfaceFactoryInterface = globalThis.org.allbinary.layer.LayerInterfaceFactoryInterface;
+//not GWT import const LayerInterfaceFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class UnitItemArrayFactory extends Object {
     constructor(resources) {

@@ -11,24 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const MotionEvent = globalThis.android.view.MotionEvent;
+//not GWT import const MotionEvent
 import { SingleKeyPressGameKeyFromMotionGestureEventListener } from '../../../../../org/allbinary/game/input/motion/action/SingleKeyPressGameKeyFromMotionGestureEventListener.js';
-//not GWT import const SingleKeyPressGameKeyFromMotionGestureEventListener = globalThis.org.allbinary.game.input.motion.action.SingleKeyPressGameKeyFromMotionGestureEventListener;
+//not GWT import const SingleKeyPressGameKeyFromMotionGestureEventListener
 import { DownTrackballInputToGameKeyEventAction } from '../../../../../org/allbinary/input/motion/trackball/action/DownTrackballInputToGameKeyEventAction.js';
-//not GWT import const DownTrackballInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.trackball.action.DownTrackballInputToGameKeyEventAction;
+//not GWT import const DownTrackballInputToGameKeyEventAction
 import { LeftTrackballInputToGameKeyEventAction } from '../../../../../org/allbinary/input/motion/trackball/action/LeftTrackballInputToGameKeyEventAction.js';
-//not GWT import const LeftTrackballInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.trackball.action.LeftTrackballInputToGameKeyEventAction;
+//not GWT import const LeftTrackballInputToGameKeyEventAction
 import { RightTrackballInputToGameKeyEventAction } from '../../../../../org/allbinary/input/motion/trackball/action/RightTrackballInputToGameKeyEventAction.js';
-//not GWT import const RightTrackballInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.trackball.action.RightTrackballInputToGameKeyEventAction;
+//not GWT import const RightTrackballInputToGameKeyEventAction
 import { UpTrackballInputToGameKeyEventAction } from '../../../../../org/allbinary/input/motion/trackball/action/UpTrackballInputToGameKeyEventAction.js';
-//not GWT import const UpTrackballInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.trackball.action.UpTrackballInputToGameKeyEventAction;
+//not GWT import const UpTrackballInputToGameKeyEventAction
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionEventProcessor } from './MotionEventProcessor.js';
-//not GWT import - same folder const MotionEventProcessor = globalThis.org.allbinary.android.input.motion.MotionEventProcessor;
+//not GWT import - same folder const MotionEventProcessor
 export class TrackballGameInputMotionEventProcessor extends MotionEventProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

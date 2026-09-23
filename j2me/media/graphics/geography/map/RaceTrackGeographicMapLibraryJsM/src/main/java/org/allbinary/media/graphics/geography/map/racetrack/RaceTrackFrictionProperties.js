@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { FrictionData } from '../../../../../../../org/allbinary/game/physics/friction/FrictionData.js';
-//not GWT import const FrictionData = globalThis.org.allbinary.game.physics.friction.FrictionData;
+//not GWT import const FrictionData
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RaceTrackFrictionProperties extends Object {
     constructor(roadFriction, groundFriction) {

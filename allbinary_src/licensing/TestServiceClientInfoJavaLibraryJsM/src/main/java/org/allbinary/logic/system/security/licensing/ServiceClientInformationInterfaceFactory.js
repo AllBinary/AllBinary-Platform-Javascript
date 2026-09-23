@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TestClientInformation } from './TestClientInformation.js';
-//not GWT import - same folder const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not GWT import - same folder const AbeClientInformationInterface
 export class ServiceClientInformationInterfaceFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

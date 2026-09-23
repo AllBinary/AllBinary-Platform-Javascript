@@ -13,21 +13,21 @@
 */
 /* Generated Code Do Not Modify */
 import { Integer } from '../../../../../java/lang/Integer.js';
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 import { VirtualKeyboard } from '../../../../../org/allbinary/android/input/VirtualKeyboard.js';
-//not GWT import const VirtualKeyboardEvent = globalThis.org.allbinary.input.event.VirtualKeyboardEvent;
+//not GWT import const VirtualKeyboardEvent
 import { VirtualKeyboardEventHandler } from '../../../../../org/allbinary/input/event/VirtualKeyboardEventHandler.js';
-//not GWT import const VirtualKeyboardEventListenerInterface = globalThis.org.allbinary.input.event.VirtualKeyboardEventListenerInterface;
+//not GWT import const VirtualKeyboardEventListenerInterface
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not GWT import const AllBinaryEventObject
 import { EventStrings } from '../../../../../org/allbinary/logic/util/event/EventStrings.js';
-//not GWT import const EventStrings = globalThis.org.allbinary.logic.util.event.EventStrings;
+//not GWT import const EventStrings
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShowVirtualKeyboardRunnable } from './ShowVirtualKeyboardRunnable.js';
-//not GWT import - same folder const ShowVirtualKeyboardRunnable = globalThis.org.allbinary.android.input.api3.ShowVirtualKeyboardRunnable;
+//not GWT import - same folder const ShowVirtualKeyboardRunnable
 import { HideVirtualKeyboardRunnable } from './HideVirtualKeyboardRunnable.js';
-//not GWT import - same folder const HideVirtualKeyboardRunnable = globalThis.org.allbinary.android.input.api3.HideVirtualKeyboardRunnable;
+//not GWT import - same folder const HideVirtualKeyboardRunnable
 export class VirtualKeyboardAPI3 extends VirtualKeyboard {
     constructor(activity) {
         super();

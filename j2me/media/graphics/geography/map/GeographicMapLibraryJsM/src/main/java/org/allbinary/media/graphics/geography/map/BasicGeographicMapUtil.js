@@ -14,10 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../../java/lang/Exception.js';
-//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
+//not GWT import const Layer
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const BasicGeographicMap = globalThis.org.allbinary.media.graphics.geography.map.BasicGeographicMap;
+//not GWT import - same folder const BasicGeographicMap
 export class BasicGeographicMapUtil extends Object {
     constructor() {
         super(...arguments);

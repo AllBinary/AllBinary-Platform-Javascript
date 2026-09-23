@@ -11,6 +11,4 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
 export {};

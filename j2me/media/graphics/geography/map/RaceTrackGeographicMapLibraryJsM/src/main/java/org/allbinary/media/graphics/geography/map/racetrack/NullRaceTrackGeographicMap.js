@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../../../../java/lang/RuntimeException.js';
-//not GWT import - same folder const RaceTrackData = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackData;
+//not GWT import - same folder const RaceTrackData
 export class NullRaceTrackGeographicMap extends Object {
     getId() {
         throw new RuntimeException();

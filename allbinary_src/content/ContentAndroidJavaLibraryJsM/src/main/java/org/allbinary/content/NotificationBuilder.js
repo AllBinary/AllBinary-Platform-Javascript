@@ -14,10 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { NullParcelable } from '../../../org/allbinary/android/NullParcelable.js';
-//not GWT import const NullParcelable = globalThis.org.allbinary.android.NullParcelable;
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not GWT import const Parcelable = globalThis.android.os.Parcelable;
+//not GWT import const Parcelable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NotificationBuilder extends Object {
     build(context, command, message, integer, pendingIntent) {

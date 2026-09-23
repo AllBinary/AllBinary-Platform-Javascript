@@ -1,8 +1,8 @@
 /* Generated Code Do Not Modify */
 import { KeyEvent } from '../../../../android/view/KeyEvent.js';
-//not GWT import const KeyEvent = globalThis.android.view.KeyEvent;
+//not GWT import const KeyEvent
 import { ActivityFractureUtil } from '../../../../org/allbinary/android/ActivityFractureUtil.js';
-//not GWT import const ActivityFractureUtil = globalThis.org.allbinary.android.ActivityFractureUtil;
+//not GWT import const ActivityFractureUtil
 //not plain js import { CommonPhoneStrings } 
 const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //not plain js import { AbPathData } 
@@ -13,7 +13,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidGameKey } from './AndroidGameKey.js';
-//not GWT import - same folder const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import - same folder const Input
 export class AndroidKeyFactory extends ActivityFractureUtil {
     constructor() {
         super(...arguments);

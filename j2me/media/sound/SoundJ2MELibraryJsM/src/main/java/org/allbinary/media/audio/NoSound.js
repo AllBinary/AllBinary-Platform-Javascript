@@ -16,9 +16,9 @@
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Sound } from './Sound.js';
-//not GWT import - same folder const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import - same folder const Sound
 import { NoPlayer } from './NoPlayer.js';
-//not GWT import - same folder const NoPlayer = globalThis.org.allbinary.media.audio.NoPlayer;
+//not GWT import - same folder const NoPlayer
 export class NoSound extends Sound {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

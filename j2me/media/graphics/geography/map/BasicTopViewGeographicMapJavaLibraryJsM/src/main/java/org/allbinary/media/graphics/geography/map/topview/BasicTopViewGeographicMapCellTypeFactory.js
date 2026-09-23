@@ -16,11 +16,11 @@
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import const GeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellType;
+//not GWT import const GeographicMapCellType
 import { GeographicMapCellTypeFactory } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellTypeFactory.js';
-//not GWT import const GeographicMapCellTypeFactory = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory;
+//not GWT import const GeographicMapCellTypeFactory
 import { RaceTrackGeographicMapCellType } from '../../../../../../../org/allbinary/media/graphics/geography/map/racetrack/RaceTrackGeographicMapCellType.js';
-//not GWT import const RaceTrackGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType;
+//not GWT import const RaceTrackGeographicMapCellType
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
@@ -29,9 +29,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicTopViewGeographicMapCellType } from './BasicTopViewGeographicMapCellType.js';
-//not GWT import - same folder const BasicTopViewGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.topview.BasicTopViewGeographicMapCellType;
+//not GWT import - same folder const BasicTopViewGeographicMapCellType
 import { BasicTopViewGeographicMapStrings } from './BasicTopViewGeographicMapStrings.js';
-//not GWT import - same folder const BasicTopViewGeographicMapStrings = globalThis.org.allbinary.media.graphics.geography.map.topview.BasicTopViewGeographicMapStrings;
+//not GWT import - same folder const BasicTopViewGeographicMapStrings
 export class BasicTopViewGeographicMapCellTypeFactory extends GeographicMapCellTypeFactory {
     constructor(tileTypeToTileIdsMap, maxTileId) {
         super();

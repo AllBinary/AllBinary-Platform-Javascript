@@ -12,11 +12,11 @@
         *  Created By: Travis Berthelot
 */
 import { MotionEvent } from '../../../../../../android/view/MotionEvent.js';
-//not GWT import const MotionEvent = globalThis.android.view.MotionEvent;
+//not GWT import const MotionEvent
 import { BaseGameInputMotionEventProcessor } from '../../../../../../org/allbinary/android/input/motion/BaseGameInputMotionEventProcessor.js';
-//not GWT import const BaseGameInputMotionEventProcessor = globalThis.org.allbinary.android.input.motion.BaseGameInputMotionEventProcessor;
+//not GWT import const BaseGameInputMotionEventProcessor
 import { AllMotionRecognizer } from '../../../../../../org/allbinary/input/motion/AllMotionRecognizer.js';
-//not GWT import const MotionRecognizer = globalThis.org.allbinary.input.motion.MotionRecognizer;
+//not GWT import const MotionRecognizer
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 

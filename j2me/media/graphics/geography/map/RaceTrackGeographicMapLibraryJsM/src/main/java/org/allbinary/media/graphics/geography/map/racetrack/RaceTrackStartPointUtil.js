@@ -15,11 +15,9 @@
 import { Object } from '../../../../../../../java/lang/Object.js';
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
-//not GWT import const PathFindingNode = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNode;
+//not GWT import const GPoint
+import { PointFactory } from '../../../../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const PathFindingNode
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RaceTrackStartPointUtil extends Object {
     //@Throws(Exception.constructor)

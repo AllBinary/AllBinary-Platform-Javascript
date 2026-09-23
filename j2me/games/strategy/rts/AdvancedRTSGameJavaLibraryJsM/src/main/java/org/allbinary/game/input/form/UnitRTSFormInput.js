@@ -10,41 +10,39 @@
         *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
         *    Created By: Travis Berthelot
 */
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import const AdvancedRTSPlayerLayerInterface = globalThis.org.allbinary.game.layer.AdvancedRTSPlayerLayerInterface;
+//not GWT import const AdvancedRTSPlayerLayerInterface
 import { RTSGameStrings } from '../../../../../org/allbinary/game/layer/RTSGameStrings.js';
-//not GWT import const UnitLayer = globalThis.org.allbinary.game.layer.unit.UnitLayer;
+//not GWT import const UnitLayer
 import { WorkWaypoint } from '../../../../../org/allbinary/game/layer/waypoint/WorkWaypoint.js';
-//not GWT import const WorkWaypoint = globalThis.org.allbinary.game.layer.waypoint.WorkWaypoint;
+//not GWT import const WorkWaypoint
 import { BuildingSound } from '../../../../../org/allbinary/media/audio/BuildingSound.js';
-//not GWT import const BuildingSound = globalThis.org.allbinary.media.audio.BuildingSound;
+//not GWT import const BuildingSound
 import { BooleanFactory } from '../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-//not GWT import const GeographicMapCellPositionAreaBase = globalThis.org.allbinary.game.layer.GeographicMapCellPositionAreaBase;
+//not GWT import const GeographicMapCellPositionAreaBase
 import { GameNotificationEvent } from '../../../../../org/allbinary/game/layer/hud/event/GameNotificationEvent.js';
-//not GWT import const GameNotificationEvent = globalThis.org.allbinary.game.layer.hud.event.GameNotificationEvent;
+//not GWT import const GameNotificationEvent
 import { GameNotificationEventHandler } from '../../../../../org/allbinary/game/layer/hud/event/GameNotificationEventHandler.js';
-//not GWT import const GameNotificationEventHandler = globalThis.org.allbinary.game.layer.hud.event.GameNotificationEventHandler;
+//not GWT import const GameNotificationEventHandler
 import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
-//not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
+//not GWT import const GPoint
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 import { Layer } from '../../../../../org/allbinary/layer/Layer.js';
-//not GWT import const Layer = globalThis.org.allbinary.layer.Layer;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+//not GWT import const Layer
+import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 import { ErrorSound } from '../../../../../org/allbinary/media/audio/ErrorSound.js';
-//not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
+//not GWT import const GeographicMapCompositeInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import - same folder const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
+//not GWT import - same folder const RTSFormInput
 import { AssignWaypointsUtil } from './AssignWaypointsUtil.js';
-//not GWT import - same folder const AssignWaypointsUtil = globalThis.org.allbinary.game.input.form.AssignWaypointsUtil;
+//not GWT import - same folder const AssignWaypointsUtil
 import { PlayersSingletonFactory } from './PlayersSingletonFactory.js';
-//not GWT import - same folder const PlayersSingletonFactory = globalThis.org.allbinary.game.input.form.PlayersSingletonFactory;
+//not GWT import - same folder const PlayersSingletonFactory
 export class UnitRTSFormInput extends RTSFormInput {
     constructor(groupInterface) {
         super(groupInterface);

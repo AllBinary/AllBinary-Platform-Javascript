@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Hashtable } from '../../../java/util/Hashtable.js';
-//not GWT import const Hashtable = globalThis.java.util.Hashtable;
+//not GWT import const Hashtable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABHashtable extends Hashtable {
     constructor(initialCapacity) {

@@ -14,17 +14,19 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { DomNodeHelper } from '../../../../../../org/allbinary/data/tree/dom/DomNodeHelper.js';
-//not GWT import const DomNodeHelper = globalThis.org.allbinary.data.tree.dom.DomNodeHelper;
+//not GWT import const DomNodeHelper
 import { DomSearchHelper } from '../../../../../../org/allbinary/data/tree/dom/DomSearchHelper.js';
-//not GWT import const DomSearchHelper = globalThis.org.allbinary.data.tree.dom.DomSearchHelper;
+//not GWT import const DomSearchHelper
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import const NodeList = globalThis.org.w3c.dom.NodeList;
+//not plain js import { CommonLabels } 
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TransformInfoData } from './TransformInfoData.js';
-//not GWT import - same folder const TransformInfoData = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoData;
+//not GWT import - same folder const TransformInfoData
 import { TransformInfoProperties } from './TransformInfoProperties.js';
-//not GWT import - same folder const TransformInfoProperties = globalThis.org.allbinary.logic.visual.transform.info.TransformInfoProperties;
+//not GWT import - same folder const TransformInfoProperties
 export class TransformInfoPropertiesFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -47,7 +49,7 @@ export class TransformInfoPropertiesFactory extends Object {
         var name = attrNode.getValue();
         ;
         if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEW)) {
-            this.logUtil.putF("Next View Name: " + name, this, "toTransformInfoPropertiesHashMap()");
+            this.logUtil.putF(CommonLabels.getInstance().NEXT + " View Name: " + name, this, "toTransformInfoPropertiesHashMap()");
         }
         var labelNode = DomSearchHelper.getNodeNoThrow(transformInfoData.LABEL, transformInfoChildNodeList);
         ;

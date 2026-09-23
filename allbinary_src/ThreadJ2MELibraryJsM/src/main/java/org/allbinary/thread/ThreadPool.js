@@ -31,11 +31,11 @@ const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //not plain js - same folder import { NullRunnable } 
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 import { ThreadPoolStrings } from './ThreadPoolStrings.js';
-//not GWT import - same folder const ThreadPoolStrings = globalThis.org.allbinary.thread.ThreadPoolStrings;
+//not GWT import - same folder const ThreadPoolStrings
 import { ThreadObjectUtil } from './ThreadObjectUtil.js';
-//not GWT import - same folder const ThreadObjectUtil = globalThis.org.allbinary.thread.ThreadObjectUtil;
+//not GWT import - same folder const ThreadObjectUtil
 import { PooledThread } from './PooledThread.js';
-//not GWT import - same folder const PriorityRunnable = globalThis.org.allbinary.thread.PriorityRunnable;
+//not GWT import - same folder const PriorityRunnable
 export class ThreadPool extends Object {
     constructor(poolName, numThreads, priority) {
         super();

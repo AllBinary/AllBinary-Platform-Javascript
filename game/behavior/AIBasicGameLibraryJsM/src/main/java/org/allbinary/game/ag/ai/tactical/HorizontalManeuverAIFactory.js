@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HorizontalManeuverAI } from './HorizontalManeuverAI.js';
-//not GWT import - same folder const HorizontalManeuverAI = globalThis.org.allbinary.game.ag.ai.tactical.HorizontalManeuverAI;
+//not GWT import - same folder const HorizontalManeuverAI
 export class HorizontalManeuverAIFactory extends Object {
     getInstance(hashtable, ownerLayerInterface, gameInput) {
         //if statement needs to be on the same line and ternary does not work the same way.

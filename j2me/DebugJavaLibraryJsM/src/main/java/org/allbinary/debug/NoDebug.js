@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const DebugInterface = globalThis.org.allbinary.debug.DebugInterface;
+//not GWT import - same folder const DebugInterface
 export class NoDebug extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

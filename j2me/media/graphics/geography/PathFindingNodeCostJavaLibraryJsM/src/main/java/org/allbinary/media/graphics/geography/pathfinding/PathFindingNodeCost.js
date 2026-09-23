@@ -17,12 +17,12 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
+//not GWT import const GeographicMapCellPosition
 //not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PathFindingNode } from './PathFindingNode.js';
-//not GWT import - same folder const PathFindingNodeCostInfo = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfo;
+//not GWT import - same folder const PathFindingNodeCostInfo
 export class PathFindingNodeCost extends PathFindingNode {
     constructor(parent = {}, geographicMapCellPosition, pathFindingNodeCostInfo) {
         super(parent, geographicMapCellPosition);

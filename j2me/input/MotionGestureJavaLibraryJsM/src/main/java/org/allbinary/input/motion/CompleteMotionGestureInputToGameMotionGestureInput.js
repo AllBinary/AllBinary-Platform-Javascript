@@ -14,27 +14,27 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { TouchMotionGestureFactory } from '../../../../org/allbinary/input/motion/gesture/TouchMotionGestureFactory.js';
-//not GWT import const MotionGestureConfiguration = globalThis.org.allbinary.input.motion.gesture.configuration.MotionGestureConfiguration;
+//not GWT import const MotionGestureConfiguration
 import { MotionGestureConfigurationFactory } from '../../../../org/allbinary/input/motion/gesture/configuration/MotionGestureConfigurationFactory.js';
-//not GWT import const MotionGestureConfigurationFactory = globalThis.org.allbinary.input.motion.gesture.configuration.MotionGestureConfigurationFactory;
+//not GWT import const MotionGestureConfigurationFactory
 import { DiagonalDownLeftTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/DiagonalDownLeftTouchInputToGameKeyEventAction.js';
-//not GWT import const DiagonalDownLeftTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.DiagonalDownLeftTouchInputToGameKeyEventAction;
+//not GWT import const DiagonalDownLeftTouchInputToGameKeyEventAction
 import { DiagonalDownRightTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/DiagonalDownRightTouchInputToGameKeyEventAction.js';
-//not GWT import const DiagonalDownRightTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.DiagonalDownRightTouchInputToGameKeyEventAction;
+//not GWT import const DiagonalDownRightTouchInputToGameKeyEventAction
 import { DiagonalUpLeftTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/DiagonalUpLeftTouchInputToGameKeyEventAction.js';
-//not GWT import const DiagonalUpLeftTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.DiagonalUpLeftTouchInputToGameKeyEventAction;
+//not GWT import const DiagonalUpLeftTouchInputToGameKeyEventAction
 import { DiagonalUpRightTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/DiagonalUpRightTouchInputToGameKeyEventAction.js';
-//not GWT import const DiagonalUpRightTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.DiagonalUpRightTouchInputToGameKeyEventAction;
+//not GWT import const DiagonalUpRightTouchInputToGameKeyEventAction
 import { DownTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/DownTouchInputToGameKeyEventAction.js';
-//not GWT import const DownTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.DownTouchInputToGameKeyEventAction;
+//not GWT import const DownTouchInputToGameKeyEventAction
 import { LeftTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/LeftTouchInputToGameKeyEventAction.js';
-//not GWT import const LeftTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.LeftTouchInputToGameKeyEventAction;
+//not GWT import const LeftTouchInputToGameKeyEventAction
 import { ReleaseTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/ReleaseTouchInputToGameKeyEventAction.js';
-//not GWT import const ReleaseTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.ReleaseTouchInputToGameKeyEventAction;
+//not GWT import const ReleaseTouchInputToGameKeyEventAction
 import { RightTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/RightTouchInputToGameKeyEventAction.js';
-//not GWT import const RightTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.RightTouchInputToGameKeyEventAction;
+//not GWT import const RightTouchInputToGameKeyEventAction
 import { UpTouchInputToGameKeyEventAction } from '../../../../org/allbinary/input/motion/touch/action/UpTouchInputToGameKeyEventAction.js';
-//not GWT import const UpTouchInputToGameKeyEventAction = globalThis.org.allbinary.input.motion.touch.action.UpTouchInputToGameKeyEventAction;
+//not GWT import const UpTouchInputToGameKeyEventAction
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { PreLogUtil } 

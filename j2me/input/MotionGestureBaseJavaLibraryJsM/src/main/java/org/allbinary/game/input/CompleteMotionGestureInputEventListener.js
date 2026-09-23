@@ -1,6 +1,6 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const CompleteMotionGestureInputEvent = globalThis.org.allbinary.game.input.CompleteMotionGestureInputEvent;
+//not GWT import - same folder const CompleteMotionGestureInputEvent
 export class CompleteMotionGestureInputEventListener extends Object {
     onEvent(eventObject) {
     }

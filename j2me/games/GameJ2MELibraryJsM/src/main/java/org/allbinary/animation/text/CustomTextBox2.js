@@ -11,13 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { CustomTextBox } from '../../../../org/allbinary/graphics/form/item/CustomTextBox.js';
-//not GWT import const CustomTextBox = globalThis.org.allbinary.graphics.form.item.CustomTextBox;
+//not GWT import const CustomTextBox
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CustomTextBox2 extends CustomTextBox {
     constructor(cmdListener, label, text, maxSize, constraints, font, backgroundBasicColor, foregroundBasicColor) {

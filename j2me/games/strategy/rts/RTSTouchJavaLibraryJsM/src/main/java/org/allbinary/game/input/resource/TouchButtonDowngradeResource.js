@@ -11,9 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const TouchButtonBlankResource = globalThis.org.allbinary.input.motion.button.TouchButtonBlankResource;
+//not GWT import const TouchButtonBlankResource
 import { TouchButtonResource } from '../../../../../org/allbinary/input/motion/button/TouchButtonResource.js';
-//not GWT import const TouchButtonResource = globalThis.org.allbinary.input.motion.button.TouchButtonResource;
+//not GWT import const TouchButtonResource
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TouchButtonDowngradeResource extends TouchButtonResource {
     static getInstance() {

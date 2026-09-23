@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
-//not GWT import const Set = globalThis.java.util.Set;
+//not GWT import const Set
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //J2SEForJ2ME
 export class J2SEUtil extends Object {

@@ -13,7 +13,7 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThreadPool } from './ThreadPool.js';
-//not GWT import - same folder const PriorityRunnable = globalThis.org.allbinary.thread.PriorityRunnable;
+//not GWT import - same folder const PriorityRunnable
 //This is mainly for network communications.
 export class PathFindingThreadPool extends ThreadPool {
     static getInstance() {

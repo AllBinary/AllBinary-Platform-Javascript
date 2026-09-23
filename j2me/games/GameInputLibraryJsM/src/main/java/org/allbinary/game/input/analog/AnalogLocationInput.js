@@ -1,7 +1,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { CustomGPoint } from '../../../../../org/allbinary/graphics/CustomGPoint.js';
-//not GWT import const CustomGPoint = globalThis.org.allbinary.graphics.CustomGPoint;
+//not GWT import const CustomGPoint
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AnalogLocationInput extends Object {
     constructor(playerId) {

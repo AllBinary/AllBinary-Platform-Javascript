@@ -17,7 +17,7 @@ import { Object } from '../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Group } from './Group.js';
-//not GWT import - same folder const Group = globalThis.org.allbinary.game.identification.Group;
+//not GWT import - same folder const Group
 export class BasicGroupFactory extends Object {
     constructor() {
         super(...arguments);

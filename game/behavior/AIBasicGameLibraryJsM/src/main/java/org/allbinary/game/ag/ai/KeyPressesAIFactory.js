@@ -13,16 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const ArtificialIntelligenceInterfaceFactoryInterface = globalThis.org.allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterface;
+//not GWT import const ArtificialIntelligenceInterfaceFactoryInterface
 import { InputFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/InputFeatureFactory.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MultiKeyPressesAI } from './MultiKeyPressesAI.js';
-//not GWT import - same folder const MultiKeyPressesAI = globalThis.org.allbinary.game.ag.ai.MultiKeyPressesAI;
+//not GWT import - same folder const MultiKeyPressesAI
 import { KeyPressesAI } from './KeyPressesAI.js';
-//not GWT import - same folder const KeyPressesAI = globalThis.org.allbinary.game.ag.ai.KeyPressesAI;
+//not GWT import - same folder const KeyPressesAI
 export class KeyPressesAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

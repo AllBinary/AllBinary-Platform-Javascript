@@ -14,12 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { NullCanvas } from '../../../javax/microedition/lcdui/NullCanvas.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import const Processor
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
+//not GWT import - same folder const AllBinaryMidlet
 export class ExitRunnable extends Object {
     constructor(midlet, processor, isProgress) {
         super();

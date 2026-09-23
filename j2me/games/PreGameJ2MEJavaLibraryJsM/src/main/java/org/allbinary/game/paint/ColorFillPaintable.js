@@ -11,15 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/displayable/DisplayInfoSingleton.js';
-//not GWT import const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import const DisplayInfoSingleton
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ColorFillBasePaintable } from './ColorFillBasePaintable.js';
-//not GWT import - same folder const ColorFillBasePaintable = globalThis.org.allbinary.game.paint.ColorFillBasePaintable;
+//not GWT import - same folder const ColorFillBasePaintable
 export class ColorFillPaintable extends ColorFillBasePaintable {
     constructor(basicColor) {
         super(basicColor);

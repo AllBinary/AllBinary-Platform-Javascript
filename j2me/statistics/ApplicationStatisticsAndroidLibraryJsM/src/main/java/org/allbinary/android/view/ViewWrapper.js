@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const View = globalThis.android.view.View;
+//not GWT import const View
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseViewWrapper } from './BaseViewWrapper.js';
-//not GWT import - same folder const BaseViewWrapper = globalThis.org.allbinary.android.view.BaseViewWrapper;
+//not GWT import - same folder const BaseViewWrapper
 export class ViewWrapper extends BaseViewWrapper {
     constructor(view) {
         super();

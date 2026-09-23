@@ -18,9 +18,9 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
-//not GWT import - same folder const Comparable = globalThis.org.allbinary.media.graphics.geography.pathfinding.Comparable;
+//not GWT import - same folder const Comparable
 import { PathFindingNodeCostInfoData } from './PathFindingNodeCostInfoData.js';
-//not GWT import - same folder const PathFindingNodeCostInfoData = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoData;
+//not GWT import - same folder const PathFindingNodeCostInfoData
 export class PathFindingNodeCostInfo extends Object {
     constructor(costFromStart, costToGoal) {
         super();

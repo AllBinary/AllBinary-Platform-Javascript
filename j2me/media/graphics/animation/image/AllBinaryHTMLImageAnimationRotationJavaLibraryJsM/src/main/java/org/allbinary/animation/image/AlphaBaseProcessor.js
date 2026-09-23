@@ -13,9 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not GWT import const ImageModifierUtil = globalThis.org.allbinary.media.image.ImageModifierUtil;
+//not GWT import const ImageModifierUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AlphaBaseProcessor extends Object {
     static getInstance() {

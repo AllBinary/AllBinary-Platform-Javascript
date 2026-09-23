@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
+import { Font } from '../../../../javax/microedition/lcdui/Font.js';
+//not GWT import const Font
 import { AvianUtil } from '../../../../org/allbinary/AvianUtil.js';
-//not GWT import const AvianUtil = globalThis.org.allbinary.AvianUtil;
+//not GWT import const AvianUtil
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)

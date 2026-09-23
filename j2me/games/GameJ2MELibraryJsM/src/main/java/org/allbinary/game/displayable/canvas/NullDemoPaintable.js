@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const DemoPaintableInterface = globalThis.org.allbinary.game.displayable.canvas.DemoPaintableInterface;
+//not GWT import - same folder const DemoPaintableInterface
 export class NullDemoPaintable extends Object {
     showGamePaintable() {
     }

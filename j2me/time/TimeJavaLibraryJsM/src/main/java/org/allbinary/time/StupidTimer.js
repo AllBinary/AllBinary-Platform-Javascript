@@ -11,11 +11,11 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
+//not GWT import const Visitor
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { ThreadObjectUtil } from '../../../org/allbinary/thread/ThreadObjectUtil.js';
-//not GWT import - same folder const TimeDelayHelper = globalThis.org.allbinary.time.TimeDelayHelper;
+//not GWT import - same folder const TimeDelayHelper
 export class StupidTimer extends Object {
     constructor() {
         super(...arguments);

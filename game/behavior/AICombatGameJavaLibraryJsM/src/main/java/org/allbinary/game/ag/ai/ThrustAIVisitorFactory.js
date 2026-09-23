@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThrustAIVisitor } from './ThrustAIVisitor.js';
-//not GWT import - same folder const ThrustAIVisitor = globalThis.org.allbinary.game.ag.ai.ThrustAIVisitor;
+//not GWT import - same folder const ThrustAIVisitor
 export class ThrustAIVisitorFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -11,11 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { ItemStateListener } 
-const ItemStateListener = globalThis.javax.microedition.lcdui.ItemStateListener;
-//not GWT import const RunnableInterface = globalThis.org.allbinary.thread.RunnableInterface;
+//not GWT import const RunnableInterface
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 export {};

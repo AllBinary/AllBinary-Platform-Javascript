@@ -14,23 +14,23 @@
 import { ClassLoader } from '../../../../../java/lang/ClassLoader.js';
 import { ClassNotFoundException } from '../../../../../java/lang/ClassNotFoundException.js';
 import { FileInputStream } from '../../../../../java/io/FileInputStream.js';
-//not GWT import const Map = globalThis.java.util.Map;
+//not GWT import const Map
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 import { LogBuffer } from '../../../../../org/allbinary/logic/communication/log/LogBuffer.js';
-//not GWT import const LogBuffer = globalThis.org.allbinary.logic.communication.log.LogBuffer;
+//not GWT import const LogBuffer
 //not plain js import { LogFactory } 
 const LogFactory = globalThis.org.allbinary.logic.communication.log.LogFactory;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import const StreamUtil = globalThis.org.allbinary.logic.io.StreamUtil;
+//not GWT import const StreamUtil
 //not plain js import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AbCryptUtil } from '../../../../../org/allbinary/logic/system/security/AbCryptUtil.js';
-//not GWT import - same folder const NoClassDefFoundError = globalThis.org.allbinary.logic.system.loader.NoClassDefFoundError;
+//not GWT import - same folder const NoClassDefFoundError
 export class AbeClassLoader extends ClassLoader {
     constructor(parent, key) {
         super(parent);

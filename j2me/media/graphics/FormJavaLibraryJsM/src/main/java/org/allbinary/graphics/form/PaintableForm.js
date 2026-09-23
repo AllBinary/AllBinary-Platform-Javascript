@@ -1,22 +1,20 @@
 /* Generated Code Do Not Modify */
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not GWT import const Rectangle = globalThis.org.allbinary.graphics.Rectangle;
+//not GWT import const Rectangle
 import { RectangleFactory } from '../../../../org/allbinary/graphics/RectangleFactory.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 import { CanvasStrings } from '../../../../org/allbinary/graphics/displayable/CanvasStrings.js';
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABCustomForm } from './ABCustomForm.js';
-//not GWT import - same folder const ABCustomForm = globalThis.org.allbinary.graphics.form.ABCustomForm;
+//not GWT import - same folder const ABCustomForm
 import { FormTypeFactory } from './FormTypeFactory.js';
-//not GWT import - same folder const FormType = globalThis.org.allbinary.graphics.form.FormType;
+//not GWT import - same folder const FormType
 export class PaintableForm extends ABCustomForm {
     static getNullPaintableForm() {
         if (PaintableForm.NULL_PAINTABLE_FORM == NullUtil.getInstance().NULL_OBJECT) {

@@ -1,7 +1,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
 import { R } from '../../org/allbinary/game/testgamedemo/R.js';
-//not GWT import const R = globalThis.org.allbinary.game.testgamedemo.R;
+//not GWT import const R
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AndroidResources extends Object {
     constructor() {

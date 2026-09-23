@@ -13,12 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
+//not GWT import const Command
 import { Intent } from '../../../android/content/Intent.js';
-//not GWT import const Intent = globalThis.android.content.Intent;
+//not GWT import const Intent
 import { Uri } from '../../../android/net/Uri.js';
-//not GWT import const Uri = globalThis.android.net.Uri;
+//not GWT import const Uri
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //not plain js import { StdUtil } 

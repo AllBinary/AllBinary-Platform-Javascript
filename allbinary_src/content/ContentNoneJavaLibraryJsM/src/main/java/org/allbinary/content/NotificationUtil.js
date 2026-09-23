@@ -13,8 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
+//not GWT import const Command
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NotificationUtil extends Object {
     static getInstance() {

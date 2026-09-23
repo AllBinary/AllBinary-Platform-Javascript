@@ -12,20 +12,20 @@
         *  Created By: Travis Berthelot
 */
 import { DamageFloaters } from '../../../../../org/allbinary/game/combat/damage/DamageFloaters.js';
-//not GWT import const DamageFloaters = globalThis.org.allbinary.game.combat.damage.DamageFloaters;
+//not GWT import const DamageFloaters
 import { TrackingEvent } from '../../../../../org/allbinary/game/tracking/TrackingEvent.js';
-//not GWT import const TrackingEvent = globalThis.org.allbinary.game.tracking.TrackingEvent;
+//not GWT import const TrackingEvent
 import { TrackingEventHandler } from '../../../../../org/allbinary/game/tracking/TrackingEventHandler.js';
-//not GWT import const TrackingEventHandler = globalThis.org.allbinary.game.tracking.TrackingEventHandler;
+//not GWT import const TrackingEventHandler
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not GWT import const Paintable
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BuildingPropertiesFactory } from './BuildingPropertiesFactory.js';
-//not GWT import - same folder const BuildingLayer = globalThis.org.allbinary.game.layer.building.BuildingLayer;
+//not GWT import - same folder const BuildingLayer
 export class SimulatedBuildingPropertiesFactory extends BuildingPropertiesFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

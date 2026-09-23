@@ -15,11 +15,11 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Long } from '../../../../java/lang/Long.js';
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
-//not GWT import const ByteArrayInputStream = globalThis.java.io.ByteArrayInputStream;
+//not GWT import const ByteArrayInputStream
 import { DataInputStream } from '../../../../java/io/DataInputStream.js';
-//not GWT import const IOException = globalThis.java.io.IOException;
-//not plain js import { RecordComparator } 
-const RecordComparator = globalThis.javax.microedition.rms.RecordComparator;
+//not GWT import const IOException
+import { RecordComparatorI } from '../../../../javax/microedition/rms/RecordComparator.js';
+//not GWT import const RecordComparator
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 

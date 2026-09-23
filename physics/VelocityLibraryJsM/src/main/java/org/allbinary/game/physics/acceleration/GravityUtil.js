@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const BasicVelocityProperties = globalThis.org.allbinary.game.physics.velocity.BasicVelocityProperties;
+//not GWT import const BasicVelocityProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GravityUtil extends Object {
     constructor() {

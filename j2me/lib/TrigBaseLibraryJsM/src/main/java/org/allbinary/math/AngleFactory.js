@@ -25,12 +25,12 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { Angle } 
-const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js - same folder import { NamedAngle } 
-const NamedAngle = globalThis.org.allbinary.math.NamedAngle;
-//not plain js - same folder import { FrameUtil } 
-const FrameUtil = globalThis.org.allbinary.math.FrameUtil;
+import { Angle } from './Angle.js';
+//not GWT import - same folder const Angle
+import { NamedAngle } from './NamedAngle.js';
+//not GWT import - same folder const NamedAngle
+import { FrameUtil } from './FrameUtil.js';
+//not GWT import - same folder const FrameUtil
 export class AngleFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

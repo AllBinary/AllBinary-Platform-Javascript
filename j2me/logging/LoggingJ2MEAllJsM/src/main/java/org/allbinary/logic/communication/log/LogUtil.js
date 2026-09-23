@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import const TsUtil = globalThis.org.allbinary.TsUtil;
+//not GWT import const TsUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 

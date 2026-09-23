@@ -16,7 +16,7 @@ import { Object } from '../../../java/lang/Object.js';
 import { Exception } from '../../../java/lang/Exception.js';
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import - same folder const AllBinaryLayer
 export class LayerProcessor extends Object {
     constructor(layerManager) {
         super();

@@ -17,9 +17,9 @@ import { Object } from '../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const GameKey = globalThis.org.allbinary.game.input.GameKey;
+//not GWT import - same folder const GameKey
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import - same folder const GameKeyFactory = globalThis.org.allbinary.game.input.GameKeyFactory;
+//not GWT import - same folder const GameKeyFactory
 export class GameKeyMappingFactory extends Object {
     static getInstance() {
         if (GameKeyMappingFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

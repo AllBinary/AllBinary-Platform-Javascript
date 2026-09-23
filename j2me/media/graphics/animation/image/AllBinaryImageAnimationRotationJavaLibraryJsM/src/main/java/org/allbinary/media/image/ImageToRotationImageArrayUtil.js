@@ -13,11 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageRotationUtil } from './ImageRotationUtil.js';
-//not GWT import - same folder const ImageRotationUtil = globalThis.org.allbinary.media.image.ImageRotationUtil;
+//not GWT import - same folder const ImageRotationUtil
 export class ImageToRotationImageArrayUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

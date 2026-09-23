@@ -14,11 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 import { NullImage } from '../../../javax/microedition/lcdui/NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not GWT import const NullImage
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { LogUtil } 
@@ -37,7 +35,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageFactory } from './ImageFactory.js';
-//not GWT import - same folder const ImageFactory = globalThis.org.allbinary.image.ImageFactory;
+//not GWT import - same folder const ImageFactory
 export class ImageCacheBase extends Object {
     constructor() {
         super();

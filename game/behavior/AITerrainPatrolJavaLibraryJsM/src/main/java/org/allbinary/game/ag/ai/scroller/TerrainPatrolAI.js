@@ -11,26 +11,24 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const GameInput = globalThis.org.allbinary.game.input.GameInput;
+//not GWT import const GameInput
 import { BasicTerrainInfo } from '../../../../../../org/allbinary/game/terrain/BasicTerrainInfo.js';
-//not GWT import const TerrainEvent = globalThis.org.allbinary.game.terrain.TerrainEvent;
+//not GWT import const TerrainEvent
 import { TerrainEventCircularStaticPool } from '../../../../../../org/allbinary/game/terrain/TerrainEventCircularStaticPool.js';
-//not GWT import const TerrainEventCircularStaticPool = globalThis.org.allbinary.game.terrain.TerrainEventCircularStaticPool;
+//not GWT import const TerrainEventCircularStaticPool
 import { TerrainEventHandler } from '../../../../../../org/allbinary/game/terrain/TerrainEventHandler.js';
-//not GWT import const TerrainEventHandler = globalThis.org.allbinary.game.terrain.TerrainEventHandler;
+//not GWT import const TerrainEventHandler
 import { TerrainEventListener } from '../../../../../../org/allbinary/game/terrain/TerrainEventListener.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { Angle } 
-const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
+//not GWT import const Angle
+import { AngleFactory } from '../../../../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AngleFactory
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PacePatrolAI } from './PacePatrolAI.js';
-//not GWT import - same folder const PacePatrolAI = globalThis.org.allbinary.game.ag.ai.scroller.PacePatrolAI;
+//not GWT import - same folder const PacePatrolAI
 export class TerrainPatrolAI extends PacePatrolAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(hashtable, ownerLayerInterface, gameInput);

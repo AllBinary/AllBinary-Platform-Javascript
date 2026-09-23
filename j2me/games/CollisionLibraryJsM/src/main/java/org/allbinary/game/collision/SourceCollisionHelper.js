@@ -11,10 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollisionHelper } from './CollisionHelper.js';
-//not GWT import - same folder const CollisionHelper = globalThis.org.allbinary.game.collision.CollisionHelper;
+//not GWT import - same folder const CollisionHelper
 export class SourceCollisionHelper extends CollisionHelper {
     constructor(layerInterface) {
         super(layerInterface);

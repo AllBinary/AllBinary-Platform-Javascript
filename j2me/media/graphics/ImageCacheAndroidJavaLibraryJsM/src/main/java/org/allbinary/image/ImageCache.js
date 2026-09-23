@@ -13,11 +13,11 @@
 */
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
 import { Thread } from '../../../java/lang/Thread.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 import { NullImage } from '../../../javax/microedition/lcdui/NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not GWT import const NullImage
+import { TsUtil } from '../../../org/allbinary/TsUtil.js';
+//not GWT import const TsUtil
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { StringMaker } 
@@ -25,21 +25,22 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 import { GDResources } from '../../../org/allbinary/game/gd/resource/GDResources.js';
-//not GWT import const GDResources = globalThis.org.allbinary.game.gd.resource.GDResources;
+//not GWT import const GDResources
 //not plain js import { ABSystemWrapper } 
 const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { Memory } from '../../../org/allbinary/system/Memory.js';
-//not GWT import const Memory = globalThis.org.allbinary.system.Memory;
+//not GWT import const Memory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCacheBase } from './ImageCacheBase.js';
-//not GWT import - same folder const ImageCacheBase = globalThis.org.allbinary.image.ImageCacheBase;
+//not GWT import - same folder const ImageCacheBase
 export class ImageCache extends ImageCacheBase {
     constructor() {
         super();
         this.commonStrings = CommonStrings.getInstance();
         this.systemWrapper = ABSystemWrapper.getInstance();
+        this.tsUtil = TsUtil.getInstance();
     }
     addListener(renderer = {}) {
     }
@@ -68,7 +69,7 @@ export class ImageCache extends ImageCacheBase {
         if (image == NullImage.NULL_IMAGE) {
             this.volume += width * height;
             if (this.volume > 32000) {
-                this.systemWrapper.gc();
+                this.tsUtil.gc();
                 this.volume = 0;
             }
             image = this.createImage(caller, width, height);
@@ -102,8 +103,8 @@ export class ImageCache extends ImageCacheBase {
             catch (e) {
                 this.logUtil.put("Exception: Trying Again After GC", this, this.commonStrings.GET, e);
                 this.logUtil.putF(new StringMaker().append("InputStream: ").append(StringUtil.getInstance().toString(inputStream)).toString(), this, this.commonStrings.GET);
-                this.systemWrapper.gc();
-                this.systemWrapper.gc();
+                this.tsUtil.gc();
+                this.tsUtil.gc();
                 this.logUtil.putF(Memory.getInfo(), this, this.commonStrings.GET);
                 Thread.sleep(100);
                 image = this.createImageFromInputStream(key, inputStream);

@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const DisplayChangeEvent = globalThis.org.allbinary.graphics.displayable.event.DisplayChangeEvent;
+//not GWT import const DisplayChangeEvent
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseMenuBehavior } from './BaseMenuBehavior.js';
-//not GWT import - same folder const AllBinaryGameCanvas = globalThis.org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+//not GWT import - same folder const AllBinaryGameCanvas
 import { GameCanvasNonBotPaintable } from './GameCanvasNonBotPaintable.js';
-//not GWT import - same folder const GameCanvasNonBotPaintable = globalThis.org.allbinary.game.displayable.canvas.GameCanvasNonBotPaintable;
+//not GWT import - same folder const GameCanvasNonBotPaintable
 export class InGameMenuBehavior extends BaseMenuBehavior {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

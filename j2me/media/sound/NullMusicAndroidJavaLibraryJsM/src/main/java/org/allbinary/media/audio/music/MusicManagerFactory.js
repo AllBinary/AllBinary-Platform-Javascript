@@ -17,9 +17,9 @@ import { Object } from '../../../../../java/lang/Object.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MusicManager } from './MusicManager.js';
-//not GWT import - same folder const MusicManager = globalThis.org.allbinary.media.audio.music.MusicManager;
+//not GWT import - same folder const MusicManager
 import { MusicService } from './MusicService.js';
-//not GWT import - same folder const MusicService = globalThis.org.allbinary.media.audio.music.MusicService;
+//not GWT import - same folder const MusicService
 export class MusicManagerFactory extends Object {
     static createMusicManager(soundList) {
         //if statement needs to be on the same line and ternary does not work the same way.

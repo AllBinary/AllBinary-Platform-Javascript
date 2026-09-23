@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { File } from '../../../../../java/io/File.js';
-//not GWT import const File = globalThis.java.io.File;
+//not GWT import const File
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class FilePathData extends Object {
     static getInstance() {

@@ -13,15 +13,13 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not GWT import const NotificationManager = globalThis.android.app.NotificationManager;
+//not GWT import const NotificationManager
 import { PendingIntent } from '../../../android/app/PendingIntent.js';
-//not GWT import const PendingIntent = globalThis.android.app.PendingIntent;
+//not GWT import const PendingIntent
 import { Context } from '../../../android/content/Context.js';
-//not GWT import const Intent = globalThis.android.content.Intent;
+//not GWT import const Intent
 import { AndroidInfoFactory } from '../../../org/allbinary/android/AndroidInfoFactory.js';
-//not GWT import const AndroidInfoFactory = globalThis.org.allbinary.android.AndroidInfoFactory;
+//not GWT import const AndroidInfoFactory
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //not plain js import { LogUtil } 
@@ -30,11 +28,11 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NotificationBuilder } from './NotificationBuilder.js';
-//not GWT import - same folder const NotificationBuilder = globalThis.org.allbinary.content.NotificationBuilder;
+//not GWT import - same folder const NotificationBuilder
 import { NotificationBuilderAPI23 } from './NotificationBuilderAPI23.js';
-//not GWT import - same folder const NotificationBuilderAPI23 = globalThis.org.allbinary.content.NotificationBuilderAPI23;
+//not GWT import - same folder const NotificationBuilderAPI23
 import { CommandUriAction } from './CommandUriAction.js';
-//not GWT import - same folder const CommandUriAction = globalThis.org.allbinary.content.CommandUriAction;
+//not GWT import - same folder const CommandUriAction
 export class NotificationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

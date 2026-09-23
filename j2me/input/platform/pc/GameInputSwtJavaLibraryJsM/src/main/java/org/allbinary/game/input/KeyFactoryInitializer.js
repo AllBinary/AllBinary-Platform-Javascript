@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Init } from '../../../../org/allbinary/init/Init.js';
-//not GWT import const Init = globalThis.org.allbinary.init.Init;
+//not GWT import const Init
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not plain js import { SmallIntegerSingletonFactory } 
-const SmallIntegerSingletonFactory = globalThis.org.allbinary.logic.math.SmallIntegerSingletonFactory;
+import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
+//not GWT import const SmallIntegerSingletonFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class KeyFactoryInitializer extends Init {
     constructor() {

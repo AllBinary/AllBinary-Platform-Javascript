@@ -13,14 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const AbFile = globalThis.org.allbinary.logic.io.file.AbFile;
+//not GWT import const AbFile
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileOutputStream } from './AbFileOutputStream.js';
-//not GWT import - same folder const AbFileOutputStream = globalThis.org.allbinary.logic.io.AbFileOutputStream;
+//not GWT import - same folder const AbFileOutputStream
 import { AbDataOutputStream } from './AbDataOutputStream.js';
-//not GWT import - same folder const AbDataOutputStream = globalThis.org.allbinary.logic.io.AbDataOutputStream;
+//not GWT import - same folder const AbDataOutputStream
 import { FileStreamFactory } from './FileStreamFactory.js';
-//not GWT import - same folder const FileStreamFactory = globalThis.org.allbinary.logic.io.FileStreamFactory;
+//not GWT import - same folder const FileStreamFactory
 export class DataOutputStreamFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

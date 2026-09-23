@@ -11,23 +11,18 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const GL = globalThis.javax.microedition.khronos.opengles.GL;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const IndexedAnimation = globalThis.org.allbinary.animation.IndexedAnimation;
+//not GWT import const IndexedAnimation
 import { RotationAnimation } from '../../../../org/allbinary/animation/RotationAnimation.js';
-//not GWT import const Direction = globalThis.org.allbinary.direction.Direction;
-//not plain js import { PrimitiveIntUtil } 
-const PrimitiveIntUtil = globalThis.org.allbinary.logic.math.PrimitiveIntUtil;
-//not plain js import { Angle } 
-const Angle = globalThis.org.allbinary.math.Angle;
-//not plain js import { AngleFactory } 
-const AngleFactory = globalThis.org.allbinary.math.AngleFactory;
-//not plain js import { AngleInfo } 
-const AngleInfo = globalThis.org.allbinary.math.AngleInfo;
+//not GWT import const Direction
+import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
+//not GWT import const Angle
+import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
+//not GWT import const AngleFactory
+import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
+//not GWT import const AngleInfo
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const CompoundAnimationInterface = globalThis.org.allbinary.animation.compound.CompoundAnimationInterface;
+//not GWT import - same folder const CompoundAnimationInterface
 export class AutoCompoundRotationAnimation extends RotationAnimation {
     constructor(animationInterfaceArray, animationBehavior) {
         super(AngleInfo.getInstance(AngleFactory.getInstance().QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior);

@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { File } from '../../../../../java/io/File.js';
-//not GWT import const File = globalThis.java.io.File;
+//not GWT import const File
 import { FileInputStream } from '../../../../../java/io/FileInputStream.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not GWT import const InputStream
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 

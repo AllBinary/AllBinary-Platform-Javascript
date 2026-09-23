@@ -17,7 +17,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const AllBinaryObjectFactoryInterface = globalThis.org.allbinary.logic.util.cache.AllBinaryObjectFactoryInterface;
+//not GWT import - same folder const AllBinaryObjectFactoryInterface
 export class BaseCircularPool extends Object {
     constructor() {
         super(...arguments);

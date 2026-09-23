@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicVelocityProperties } from './BasicVelocityProperties.js';
-//not GWT import - same folder const VelocityInterface = globalThis.org.allbinary.game.physics.velocity.VelocityInterface;
+//not GWT import - same folder const VelocityInterface
 export class VelocityProperties extends BasicVelocityProperties {
     constructor(maxForwardVelocity, maxReverseVelocity) {
         super();

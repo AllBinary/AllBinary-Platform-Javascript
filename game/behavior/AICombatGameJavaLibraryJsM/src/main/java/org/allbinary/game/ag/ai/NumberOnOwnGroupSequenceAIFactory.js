@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
@@ -29,9 +29,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NumberInSameGroupSequence } from './NumberInSameGroupSequence.js';
-//not GWT import - same folder const NumberInSameGroupSequence = globalThis.org.allbinary.game.ag.ai.NumberInSameGroupSequence;
+//not GWT import - same folder const NumberInSameGroupSequence
 import { NumberOnOwnGroupSequenceAI } from './NumberOnOwnGroupSequenceAI.js';
-//not GWT import - same folder const NumberOnOwnGroupSequenceAI = globalThis.org.allbinary.game.ag.ai.NumberOnOwnGroupSequenceAI;
+//not GWT import - same folder const NumberOnOwnGroupSequenceAI
 export class NumberOnOwnGroupSequenceAIFactory extends Object {
     constructor() {
         super(...arguments);

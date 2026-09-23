@@ -10,9 +10,9 @@
         *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
         *    Created By: Travis Berthelot
 */
-//not GWT import const EventListenerInterface = globalThis.org.allbinary.logic.util.event.EventListenerInterface;
+//not GWT import const EventListenerInterface
 import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import - same folder const BuildingEventListenerInterface = globalThis.org.allbinary.game.layer.building.event.BuildingEventListenerInterface;
+//not GWT import - same folder const BuildingEventListenerInterface
 export class LocalPlayerBuildingEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

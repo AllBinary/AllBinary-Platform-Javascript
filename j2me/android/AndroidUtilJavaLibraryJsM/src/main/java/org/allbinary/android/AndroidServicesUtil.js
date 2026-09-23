@@ -12,9 +12,9 @@
         *  Created By: Travis Berthelot
 */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const ComponentName = globalThis.android.content.ComponentName;
+//not GWT import const ComponentName
 import { Context } from '../../../android/content/Context.js';
-//not GWT import const Context = globalThis.android.content.Context;
+//not GWT import const Context
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //not plain js import { LogUtil } 

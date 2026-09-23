@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const Resources = globalThis.android.content.res.Resources;
+//not GWT import const Resources
 import { DebugFactory } from '../../../../org/allbinary/debug/DebugFactory.js';
-//not GWT import const DebugFactory = globalThis.org.allbinary.debug.DebugFactory;
+//not GWT import const DebugFactory
 import { NoDebug } from '../../../../org/allbinary/debug/NoDebug.js';
-//not GWT import const NoDebug = globalThis.org.allbinary.debug.NoDebug;
+//not GWT import const NoDebug
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { StdUtil } 

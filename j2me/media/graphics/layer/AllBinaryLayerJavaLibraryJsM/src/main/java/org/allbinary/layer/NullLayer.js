@@ -11,12 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Layer } from './Layer.js';
-//not GWT import - same folder const Layer = globalThis.org.allbinary.layer.Layer;
+//not GWT import - same folder const Layer
 export class NullLayer extends Layer {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

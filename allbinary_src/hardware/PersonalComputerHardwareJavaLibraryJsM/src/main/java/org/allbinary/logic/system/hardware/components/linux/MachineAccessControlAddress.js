@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../../java/lang/Object.js';
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const MachineAccessControlAddressInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.MachineAccessControlAddressInterface;
+//not GWT import const MachineAccessControlAddressInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MachineAccessControlAddress extends Object {
     constructor() {

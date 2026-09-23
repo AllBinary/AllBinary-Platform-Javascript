@@ -14,12 +14,12 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLConfiguration } from './OpenGLConfiguration.js';
-//not GWT import - same folder const OpenGLConfiguration = globalThis.org.allbinary.graphics.opengles.OpenGLConfiguration;
+//not GWT import - same folder const OpenGLConfiguration
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeatureFactory = globalThis.org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+//not GWT import - same folder const OpenGLFeatureFactory
 export class OpenGLFeatureUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

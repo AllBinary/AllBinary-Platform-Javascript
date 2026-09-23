@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import const PathFindingLayerInterface = globalThis.org.allbinary.game.layer.PathFindingLayerInterface;
+//not GWT import const PathFindingLayerInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class WaypointRunnableLogHelper extends Object {
     static getInstance() {

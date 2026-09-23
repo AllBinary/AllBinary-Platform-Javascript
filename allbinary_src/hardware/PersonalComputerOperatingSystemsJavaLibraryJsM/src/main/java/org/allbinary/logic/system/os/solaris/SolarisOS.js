@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { GenericOperatingSystem } from '../../../../../../org/allbinary/logic/system/os/GenericOperatingSystem.js';
-//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
+//not GWT import const GenericOperatingSystem
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SolarisOS extends GenericOperatingSystem {
     constructor() {

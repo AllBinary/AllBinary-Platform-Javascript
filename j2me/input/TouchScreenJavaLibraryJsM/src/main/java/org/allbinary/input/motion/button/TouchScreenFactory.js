@@ -23,7 +23,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchScreenTypesFactory } from './TouchScreenTypesFactory.js';
-//not GWT import - same folder const TouchScreenType = globalThis.org.allbinary.input.motion.button.TouchScreenType;
+//not GWT import - same folder const TouchScreenType
 export class TouchScreenFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

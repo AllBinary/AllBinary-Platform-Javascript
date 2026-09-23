@@ -11,18 +11,18 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Animation = globalThis.org.allbinary.animation.Animation;
+//not GWT import const Animation
 import { WeaponProperties } from '../../../../../org/allbinary/game/combat/weapon/WeaponProperties.js';
-//not GWT import const WeaponLayerCircularPool = globalThis.org.allbinary.game.layer.weapon.WeaponLayerCircularPool;
+//not GWT import const WeaponLayerCircularPool
 import { NoScoreable } from '../../../../../org/allbinary/game/score/NoScoreable.js';
-//not GWT import const ScoreableInterface = globalThis.org.allbinary.game.score.ScoreableInterface;
+//not GWT import const ScoreableInterface
 import { RelativeRelationship } from '../../../../../org/allbinary/graphics/RelativeRelationship.js';
-//not GWT import const RelativeRelationship = globalThis.org.allbinary.graphics.RelativeRelationship;
+//not GWT import const RelativeRelationship
 import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const AllBinaryLayerManager = globalThis.org.allbinary.layer.AllBinaryLayerManager;
+//not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicWeaponPart } from './BasicWeaponPart.js';
-//not GWT import - same folder const BasicWeaponPart = globalThis.org.allbinary.game.part.weapon.BasicWeaponPart;
+//not GWT import - same folder const BasicWeaponPart
 export class BasicProjectileWeaponPart extends BasicWeaponPart {
     static createBasicProjectileWeaponPart(animationInterface, weaponLayerCircularStaticPool) {
         //if statement needs to be on the same line and ternary does not work the same way.

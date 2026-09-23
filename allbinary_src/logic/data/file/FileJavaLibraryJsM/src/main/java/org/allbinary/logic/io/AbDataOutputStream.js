@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
-//not GWT import const OutputStream = globalThis.java.io.OutputStream;
+//not GWT import const OutputStream
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbDataOutputStream extends DataOutputStream {
     constructor(out) {

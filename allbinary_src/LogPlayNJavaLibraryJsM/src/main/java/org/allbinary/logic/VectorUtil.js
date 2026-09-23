@@ -13,19 +13,23 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import const Vector = globalThis.java.util.Vector;
+//not GWT import const Vector
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class VectorUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return instance;
+        return VectorUtil.instance;
     }
-    getSize(vector = {}) {
+    getSize(anyType = {}) {
+        var vector = anyType;
+        ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return vector.size();
+        return vector.length;
         ;
     }
-    elementAt(vector = {}, index) {
+    elementAt(anyType = {}, index) {
+        var vector = anyType;
+        ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return vector.elementAt(index);
         ;

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Visitor } from '../../../../org/allbinary/logic/util/visitor/Visitor.js';
-//not GWT import const Visitor = globalThis.org.allbinary.logic.util.visitor.Visitor;
+//not GWT import const Visitor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SelectRTSLayerVisitor extends Visitor {
     constructor() {

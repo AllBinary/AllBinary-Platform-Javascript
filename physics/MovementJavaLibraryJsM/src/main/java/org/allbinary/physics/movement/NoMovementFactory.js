@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Movement } from './Movement.js';
-//not GWT import - same folder const Movement = globalThis.org.allbinary.physics.movement.Movement;
+//not GWT import - same folder const Movement
 export class NoMovementFactory extends Object {
     constructor() {
         super(...arguments);

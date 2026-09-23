@@ -11,19 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not plain js import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
+//not GWT import const Image
 import { NullImage } from '../../../../../../javax/microedition/lcdui/NullImage.js';
-//not GWT import const NullImage = globalThis.javax.microedition.lcdui.NullImage;
+//not GWT import const NullImage
 import { Anchor } from '../../../../../../org/allbinary/graphics/Anchor.js';
-//not GWT import const Anchor = globalThis.org.allbinary.graphics.Anchor;
+//not GWT import const Anchor
 import { PaintableToImageUtil } from '../../../../../../org/allbinary/image/PaintableToImageUtil.js';
-//not GWT import const ViewPositionBase = globalThis.org.allbinary.view.ViewPositionBase;
+//not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MiniMapLayer } from './MiniMapLayer.js';
-//not GWT import - same folder const MiniMapLayer = globalThis.org.allbinary.game.layer.geographic.map.MiniMapLayer;
+//not GWT import - same folder const MiniMapLayer
 export class ImageMiniMapLayer extends MiniMapLayer {
     constructor(geographicMapInterface, viewPosition) {
         super(geographicMapInterface, viewPosition);

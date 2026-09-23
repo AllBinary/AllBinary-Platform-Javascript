@@ -15,17 +15,17 @@
 import { Object } from '../../../../java/lang/Object.js';
 import { Integer } from '../../../../java/lang/Integer.js';
 import { GL10 } from '../../../../javax/microedition/khronos/opengles/GL10.js';
-//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not GWT import const GL10
 import { GL11 } from '../../../../javax/microedition/khronos/opengles/GL11.js';
-//not GWT import const GL11 = globalThis.javax.microedition.khronos.opengles.GL11;
+//not GWT import const GL11
 import { AndroidUtil } from '../../../../org/allbinary/AndroidUtil.js';
-//not GWT import const AndroidUtil = globalThis.org.allbinary.AndroidUtil;
+//not GWT import const AndroidUtil
 import { OpenGLESGL10ImageFactory } from '../../../../org/allbinary/image/opengles/OpenGLESGL10ImageFactory.js';
-//not GWT import const OpenGLESGL10ImageFactory = globalThis.org.allbinary.image.opengles.OpenGLESGL10ImageFactory;
+//not GWT import const OpenGLESGL10ImageFactory
 import { OpenGLESGL11VBOImageFactory } from '../../../../org/allbinary/image/opengles/OpenGLESGL11VBOImageFactory.js';
-//not GWT import const OpenGLESGL11VBOImageFactory = globalThis.org.allbinary.image.opengles.OpenGLESGL11VBOImageFactory;
+//not GWT import const OpenGLESGL11VBOImageFactory
 import { OpenGLImageSpecificFactory } from '../../../../org/allbinary/image/opengles/OpenGLImageSpecificFactory.js';
-//not GWT import const OpenGLImageSpecificFactory = globalThis.org.allbinary.image.opengles.OpenGLImageSpecificFactory;
+//not GWT import const OpenGLImageSpecificFactory
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
@@ -39,16 +39,16 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { Tokenizer } from '../../../../org/allbinary/logic/string/tokens/Tokenizer.js';
-//not GWT import const Tokenizer = globalThis.org.allbinary.logic.string.tokens.Tokenizer;
+//not GWT import const Tokenizer
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
-//not GWT import const Features = globalThis.org.allbinary.game.configuration.feature.Features;
+//not GWT import const Features
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeature = globalThis.org.allbinary.graphics.opengles.OpenGLFeature;
+//not GWT import - same folder const OpenGLFeature
 export class OpenGLCapabilities extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
-//not GWT import - same folder const DemoGameMidletState = globalThis.org.allbinary.game.midlet.DemoGameMidletState;
+//not GWT import - same folder const DemoGameMidletState
 export class DemoGameMidletEvent extends AllBinaryEventObject {
     constructor(anyType = {}, demoGameMidletState) {
         super(anyType);

@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseDropCellPositionGenerator } from './BaseDropCellPositionGenerator.js';
-//not GWT import - same folder const BaseDropCellPositionGenerator = globalThis.org.allbinary.media.graphics.geography.map.drop.BaseDropCellPositionGenerator;
+//not GWT import - same folder const BaseDropCellPositionGenerator
 export class NullDropCellPositionGenerator extends BaseDropCellPositionGenerator {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

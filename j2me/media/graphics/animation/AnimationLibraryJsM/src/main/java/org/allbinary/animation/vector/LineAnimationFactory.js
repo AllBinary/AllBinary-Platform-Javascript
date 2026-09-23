@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const ScaleProperties = globalThis.org.allbinary.media.ScaleProperties;
+//not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LineAnimation } from './LineAnimation.js';
-//not GWT import - same folder const LineAnimation = globalThis.org.allbinary.animation.vector.LineAnimation;
+//not GWT import - same folder const LineAnimation
 export class LineAnimationFactory extends Object {
     constructor(basicColor) {
         super();

@@ -1,11 +1,8 @@
 /* Generated Code Do Not Modify */
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const BaseGameStatistics = globalThis.org.allbinary.canvas.BaseGameStatistics;
+import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const BaseGameStatistics
 import { GameStatisticsFactory } from '../../../../../org/allbinary/canvas/GameStatisticsFactory.js';
-//not GWT import const GameStatisticsFactory = globalThis.org.allbinary.canvas.GameStatisticsFactory;
+//not GWT import const GameStatisticsFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //HTMLForJ2ME
 export class NullDisplayable extends Canvas {

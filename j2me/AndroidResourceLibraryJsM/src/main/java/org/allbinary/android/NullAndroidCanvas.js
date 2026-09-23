@@ -13,9 +13,9 @@
 */
 import { Object } from '../../../java/lang/Object.js';
 import { Canvas } from '../../../android/graphics/Canvas.js';
-//not GWT import const Canvas = globalThis.android.graphics.Canvas;
+//not GWT import const Canvas
 import { MediaPlayer } from '../../../android/media/MediaPlayer.js';
-//not GWT import const MediaPlayer = globalThis.android.media.MediaPlayer;
+//not GWT import const MediaPlayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class NullAndroidCanvas extends Object {
 }

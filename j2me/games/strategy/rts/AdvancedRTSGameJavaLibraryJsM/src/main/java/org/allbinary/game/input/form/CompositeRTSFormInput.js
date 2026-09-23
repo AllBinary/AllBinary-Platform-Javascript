@@ -11,24 +11,21 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const ABCustomItem = globalThis.org.allbinary.graphics.form.item.ABCustomItem;
+//not GWT import const ABCustomItem
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const AllBinaryGameLayerManager = globalThis.org.allbinary.game.layer.AllBinaryGameLayerManager;
+//not GWT import const AllBinaryGameLayerManager
 import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
-//not GWT import const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not GWT import const GeographicMapCompositeInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface;
+//not GWT import const GeographicMapCompositeInterface
 //not plain js import { CommonLabels } 
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import - same folder const RTSFormInput = globalThis.org.allbinary.game.input.form.RTSFormInput;
+//not GWT import - same folder const RTSFormInput
 import { WaypointRTSFormInput } from './WaypointRTSFormInput.js';
-//not GWT import - same folder const WaypointRTSFormInput = globalThis.org.allbinary.game.input.form.WaypointRTSFormInput;
+//not GWT import - same folder const WaypointRTSFormInput
 import { UnitRTSFormInput } from './UnitRTSFormInput.js';
-//not GWT import - same folder const UnitRTSFormInput = globalThis.org.allbinary.game.input.form.UnitRTSFormInput;
+//not GWT import - same folder const UnitRTSFormInput
 export class CompositeRTSFormInput extends RTSFormInput {
     constructor(groupInterface, isPrimaryWaypointCreator, itemIndex) {
         super(groupInterface);

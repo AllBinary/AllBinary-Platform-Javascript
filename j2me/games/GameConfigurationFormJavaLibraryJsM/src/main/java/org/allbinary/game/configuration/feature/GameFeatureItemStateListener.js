@@ -13,16 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { ChoiceGroup } 
-const ChoiceGroup = globalThis.javax.microedition.lcdui.ChoiceGroup;
-//not plain js import { Item } 
-const Item = globalThis.javax.microedition.lcdui.Item;
-//not plain js import { ItemStateListener } 
-const ItemStateListener = globalThis.javax.microedition.lcdui.ItemStateListener;
+import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup.js';
+//not GWT import const ItemStateListener
 import { GameConfigurationGauge } from '../../../../../org/allbinary/game/configuration/GameConfigurationGauge.js';
-//not GWT import const GameConfigurationGauge = globalThis.org.allbinary.game.configuration.GameConfigurationGauge;
+//not GWT import const GameConfigurationGauge
 import { GameConfigurationUtil } from '../../../../../org/allbinary/game/configuration/GameConfigurationUtil.js';
-//not GWT import const GameOptionsForm = globalThis.org.allbinary.game.configuration.GameOptionsForm;
+//not GWT import const GameOptionsForm
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
@@ -37,9 +33,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameFeatureFactory } from './GameFeatureFactory.js';
-//not GWT import - same folder const GameFeature = globalThis.org.allbinary.game.configuration.feature.GameFeature;
+//not GWT import - same folder const GameFeature
 import { GameFeatureUtil } from './GameFeatureUtil.js';
-//not GWT import - same folder const GameFeatureUtil = globalThis.org.allbinary.game.configuration.feature.GameFeatureUtil;
+//not GWT import - same folder const GameFeatureUtil
 export class GameFeatureItemStateListener extends Object {
     static add(gameFeature) {
         if (!GameFeatureItemStateListener.toggleList.contains(gameFeature)) {

@@ -13,12 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
+//not GWT import const CommandListener
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { LogUtil } 
@@ -31,7 +26,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const PlayN = globalThis.playn.core.PlayN;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AboutCommandProcessor } from './AboutCommandProcessor.js';
-//not GWT import - same folder const AboutCommandProcessor = globalThis.org.allbinary.graphics.displayable.screen.AboutCommandProcessor;
+//not GWT import - same folder const AboutCommandProcessor
 export class WebCommandProcessor extends Object {
     constructor() {
         super(...arguments);

@@ -11,18 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
-/* Generated Code Do Not Modify */
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
-//not GWT import const GameKey = globalThis.org.allbinary.game.input.GameKey;
+//not GWT import const GameKey
 import { GameKeyFactory } from '../../../../../org/allbinary/game/input/GameKeyFactory.js';
-//not GWT import const Input = globalThis.org.allbinary.game.input.Input;
+//not GWT import const Input
 import { PlatformInputMappingFactory } from '../../../../../org/allbinary/game/input/PlatformInputMappingFactory.js';
-//not GWT import const BasicColor = globalThis.org.allbinary.graphics.color.BasicColor;
+//not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import const BasicColorFactory = globalThis.org.allbinary.graphics.color.BasicColorFactory;
+//not GWT import const BasicColorFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
@@ -41,9 +36,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HelpPaintable } from './HelpPaintable.js';
-//not GWT import - same folder const HelpPaintable = globalThis.org.allbinary.game.paint.help.HelpPaintable;
+//not GWT import - same folder const HelpPaintable
 //import { UpdateMyFontProperties } from './UpdateMyFontProperties.js';
-//not GWT import - same folder const UpdateMyFontProperties = globalThis.org.allbinary.game.paint.help.UpdateMyFontProperties;
+//not GWT import - same folder const UpdateMyFontProperties
 export class InputMappingHelpPaintable extends HelpPaintable {
     constructor(gameInputMappingArray, backgroundBasicColor, basicColor) {
         super("Input Mapping", backgroundBasicColor, basicColor);

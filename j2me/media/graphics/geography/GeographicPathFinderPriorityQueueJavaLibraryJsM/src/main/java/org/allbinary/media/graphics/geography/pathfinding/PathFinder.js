@@ -13,9 +13,9 @@
 */
 import { RuntimeException } from '../../../../../../java/lang/RuntimeException.js';
 import { HashSet } from '../../../../../../java/util/HashSet.js';
-//not GWT import const HashSet = globalThis.java.util.HashSet;
+//not GWT import const HashSet
 import { PriorityQueue } from '../../../../../../java/util/PriorityQueue.js';
-//not GWT import const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
+//not GWT import const AllBinaryTiledLayer
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
@@ -24,7 +24,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import const RaceTrackGeographicMapCellType = globalThis.org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType;
+//not GWT import const RaceTrackGeographicMapCellType
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
@@ -33,11 +33,11 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicPathFinderBase } from './GeographicPathFinderBase.js';
-//not GWT import - same folder const GeographicPathFinderBase = globalThis.org.allbinary.media.graphics.geography.pathfinding.GeographicPathFinderBase;
+//not GWT import - same folder const GeographicPathFinderBase
 import { PathFindingNodeCost } from './PathFindingNodeCost.js';
-//not GWT import - same folder const PathFindingNodeCost = globalThis.org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCost;
+//not GWT import - same folder const PathFindingNodeCost
 import { PathFindingNodeCostInfo } from './PathFindingNodeCostInfo.js';
-//not GWT import - same folder const MultipassState = globalThis.org.allbinary.media.graphics.geography.pathfinding.MultipassState;
+//not GWT import - same folder const MultipassState
 export class PathFinder extends GeographicPathFinderBase {
     constructor() {
         super(...arguments);

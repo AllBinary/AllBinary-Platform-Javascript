@@ -14,23 +14,20 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { Exception } from '../../../../java/lang/Exception.js';
-//not GWT import const Enumeration = globalThis.java.util.Enumeration;
-//not plain js import { GPoint } 
-const GPoint = globalThis.org.allbinary.graphics.GPoint;
-//not plain js import { PointFactory } 
-const PointFactory = globalThis.org.allbinary.graphics.PointFactory;
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const GPoint
+import { PointFactory } from '../../../../org/allbinary/graphics/PointFactory.js';
+//not GWT import const AllBinaryLayer
 import { LayerInterfaceFactory } from '../../../../org/allbinary/layer/LayerInterfaceFactory.js';
-//not GWT import const LayerInterfaceVisitor = globalThis.org.allbinary.layer.LayerInterfaceVisitor;
+//not GWT import const LayerInterfaceVisitor
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
-//not GWT import - same folder const LayerPlacementType = globalThis.org.allbinary.game.layer.LayerPlacementType;
+//not GWT import - same folder const LayerPlacementType
 import { LayerPlacementTypeFactory } from './LayerPlacementTypeFactory.js';
-//not GWT import - same folder const LayerPlacementTypeFactory = globalThis.org.allbinary.game.layer.LayerPlacementTypeFactory;
+//not GWT import - same folder const LayerPlacementTypeFactory
 export class LayerPlacer extends Object {
     constructor(layerInterfaceVisitor, dimension) {
         super();

@@ -13,15 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import const AllBinaryTiledLayer = globalThis.org.allbinary.game.layer.AllBinaryTiledLayer;
+//not GWT import const AllBinaryTiledLayer
 //not plain js import { MyRandomFactory } 
 const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
-//not GWT import const GeographicMapCellPositionFactoryInterface = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPositionFactoryInterface;
+//not GWT import const GeographicMapCellPositionFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeologicalGeographicMapCellPosition } from './GeologicalGeographicMapCellPosition.js';
-//not GWT import - same folder const GeologicalGeographicMapCellPosition = globalThis.org.allbinary.game.layer.geological.resources.GeologicalGeographicMapCellPosition;
+//not GWT import - same folder const GeologicalGeographicMapCellPosition
 import { GeologicalResource } from './GeologicalResource.js';
-//not GWT import - same folder const GeologicalResource = globalThis.org.allbinary.game.layer.geological.resources.GeologicalResource;
+//not GWT import - same folder const GeologicalResource
 export class GeologicalGeographicMapCellPositionFactory extends Object {
     constructor(resourcePerMapCellType) {
         super();

@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const HighScoresCanvasInputProcessorFactoryInterface = globalThis.org.allbinary.game.score.HighScoresCanvasInputProcessorFactoryInterface;
+//not GWT import - same folder const HighScoresCanvasInputProcessorFactoryInterface
 import { HighScoresCanvasLevelChangeInputProcessor } from './HighScoresCanvasLevelChangeInputProcessor.js';
-//not GWT import - same folder const HighScoresCanvasInputProcessor = globalThis.org.allbinary.game.score.HighScoresCanvasInputProcessor;
+//not GWT import - same folder const HighScoresCanvasInputProcessor
 export class HighScoresCanvasChangeLevelInputProcessorFactory extends Object {
     getInstance(highScoresCanvas) {
         //if statement needs to be on the same line and ternary does not work the same way.

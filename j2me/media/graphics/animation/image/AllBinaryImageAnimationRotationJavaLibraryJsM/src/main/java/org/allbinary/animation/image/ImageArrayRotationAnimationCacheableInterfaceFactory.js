@@ -14,10 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { AnimationBehavior } from '../../../../org/allbinary/animation/AnimationBehavior.js';
-//not GWT import const CacheableInterfaceFactoryInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterfaceFactoryInterface;
+//not GWT import const CacheableInterfaceFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayRotationAnimationCacheable } from './ImageArrayRotationAnimationCacheable.js';
-//not GWT import - same folder const ImageArrayRotationAnimationCacheable = globalThis.org.allbinary.animation.image.ImageArrayRotationAnimationCacheable;
+//not GWT import - same folder const ImageArrayRotationAnimationCacheable
 export class ImageArrayRotationAnimationCacheableInterfaceFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(key = {}) {

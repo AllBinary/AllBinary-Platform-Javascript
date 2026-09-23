@@ -14,17 +14,17 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { ByteArrayOutputStream } from '../../../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const InputStream = globalThis.java.io.InputStream;
+//not GWT import const InputStream
 import { StringBufferInputStream } from '../../../../../../java/io/StringBufferInputStream.js';
-//not GWT import const DocumentBuilder = globalThis.javax.xml.parsers.DocumentBuilder;
+//not GWT import const DocumentBuilder
 import { DocumentBuilderFactory } from '../../../../../../javax/xml/parsers/DocumentBuilderFactory.js';
-//not GWT import const Transformer = globalThis.javax.xml.transform.Transformer;
+//not GWT import const Transformer
 import { TransformerFactory } from '../../../../../../javax/xml/transform/TransformerFactory.js';
-//not GWT import const TransformerFactory = globalThis.javax.xml.transform.TransformerFactory;
+//not GWT import const TransformerFactory
 import { DOMSource } from '../../../../../../javax/xml/transform/dom/DOMSource.js';
-//not GWT import const DOMSource = globalThis.javax.xml.transform.dom.DOMSource;
+//not GWT import const DOMSource
 import { StreamResult } from '../../../../../../javax/xml/transform/stream/StreamResult.js';
-//not GWT import const Document = globalThis.org.w3c.dom.Document;
+//not GWT import const Document
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DomDocumentHelper extends Object {
     static create() {

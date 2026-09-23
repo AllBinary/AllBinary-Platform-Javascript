@@ -18,11 +18,7 @@ import { RuntimeException } from '../../../java/lang/RuntimeException.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullImage } from './NullImage.js';
-//not GWT import - same folder const NullImage = globalThis.javax.microedition.lcdui.NullImage;
-//not plain js - same folder import { Image } 
-const Image = globalThis.javax.microedition.lcdui.Image;
-//not plain js - same folder import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+//not GWT import - same folder const Graphics
 //PlatformNullImageJavaLibrary
 export class PlatformImage extends Object {
     getImage(graphicsSurface2 = {}) {

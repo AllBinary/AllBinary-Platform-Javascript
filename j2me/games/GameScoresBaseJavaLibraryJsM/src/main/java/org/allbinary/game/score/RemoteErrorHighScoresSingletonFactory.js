@@ -17,11 +17,11 @@ import { Object } from '../../../../java/lang/Object.js';
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScores } from './HighScores.js';
-//not GWT import - same folder const HighScores = globalThis.org.allbinary.game.score.HighScores;
+//not GWT import - same folder const HighScores
 export class RemoteErrorHighScoresSingletonFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return RemoteErrorHighScoresSingletonFactory.SINGLETON;
     }
 }
-RemoteErrorHighScoresSingletonFactory.SINGLETON = new HighScores("Loading", "Remote High Scores Did Not Load", CommonStrings.getInstance().PERIODS);
+RemoteErrorHighScoresSingletonFactory.SINGLETON = new HighScores(CommonStrings.getInstance().LOADING, "Remote High Scores Did Not Load", CommonStrings.getInstance().PERIODS);

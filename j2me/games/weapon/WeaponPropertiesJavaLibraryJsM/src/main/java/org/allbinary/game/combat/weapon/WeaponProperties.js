@@ -14,8 +14,8 @@
 /* Generated Code Do Not Modify */
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
-//not plain js import { BasicDecimal } 
-const BasicDecimal = globalThis.org.allbinary.logic.math.BasicDecimal;
+import { BasicDecimal } from '../../../../../org/allbinary/logic/math/BasicDecimal.js';
+//not GWT import const BasicDecimal
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 
@@ -24,7 +24,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleWeaponProperties } from './SimpleWeaponProperties.js';
-//not GWT import - same folder const SimpleWeaponProperties = globalThis.org.allbinary.game.combat.weapon.SimpleWeaponProperties;
+//not GWT import - same folder const SimpleWeaponProperties
 export class WeaponProperties extends SimpleWeaponProperties {
     constructor(reloadTime, targetingTime, speed, damage, dissipation) {
         super();

@@ -17,7 +17,7 @@ import { Exception } from '../../../../../java/lang/Exception.js';
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseBasicArrayListCache } from './BaseBasicArrayListCache.js';
-//not GWT import - same folder const CacheableInterface = globalThis.org.allbinary.logic.util.cache.CacheableInterface;
+//not GWT import - same folder const CacheableInterface
 export class IndexedBasicArrayListCache extends BaseBasicArrayListCache {
     //@Throws(Exception.constructor)
     static createCache(size) {

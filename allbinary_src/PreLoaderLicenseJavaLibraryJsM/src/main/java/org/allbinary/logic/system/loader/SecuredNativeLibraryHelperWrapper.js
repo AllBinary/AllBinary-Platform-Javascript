@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { AbKeys } from '../../../../../org/allbinary/logic/system/security/AbKeys.js';
-//not GWT import const LicensingException = globalThis.org.allbinary.logic.system.security.licensing.LicensingException;
+//not GWT import const LicensingException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NativeLibraryHelperWrapper } from './NativeLibraryHelperWrapper.js';
-//not GWT import - same folder const SecuredNativeLibraryInterface = globalThis.org.allbinary.logic.system.loader.SecuredNativeLibraryInterface;
+//not GWT import - same folder const SecuredNativeLibraryInterface
 export class SecuredNativeLibraryHelperWrapper extends NativeLibraryHelperWrapper {
     constructor(securedNativeLibraryInterface) {
         super(securedNativeLibraryInterface.getLibraryName());

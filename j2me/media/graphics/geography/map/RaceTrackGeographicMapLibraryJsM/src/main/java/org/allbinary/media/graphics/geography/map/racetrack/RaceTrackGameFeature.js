@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { GameFeature } from '../../../../../../../org/allbinary/game/configuration/feature/GameFeature.js';
-//not GWT import const GameFeature = globalThis.org.allbinary.game.configuration.feature.GameFeature;
+//not GWT import const GameFeature
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RaceTrackGameFeature extends GameFeature {
     constructor(name) {

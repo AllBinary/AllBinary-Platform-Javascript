@@ -11,11 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const RotationAnimationInterfaceCompositeInterface = globalThis.org.allbinary.animation.RotationAnimationInterfaceCompositeInterface;
+//not GWT import const RotationAnimationInterfaceCompositeInterface
 import { LurchAI } from '../../../../../org/allbinary/game/ag/ai/tactical/LurchAI.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
-//not plain js import { AngleIncrementInfo } 
-const AngleIncrementInfo = globalThis.org.allbinary.math.AngleIncrementInfo;
+//not GWT import const AngleIncrementInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LurchRotationAI extends LurchAI {
     constructor(ownerLayerInterface, gameInput) {

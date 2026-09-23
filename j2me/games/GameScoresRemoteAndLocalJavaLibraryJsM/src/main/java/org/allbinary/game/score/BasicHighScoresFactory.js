@@ -14,28 +14,28 @@
 //not plain js import { ARunnable } 
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 import { BasicHighScoresGameInfoFactory } from '../../../../org/allbinary/game/BasicHighScoresGameInfoFactory.js';
-//not GWT import const GameType = globalThis.org.allbinary.game.GameType;
+//not GWT import const GameType
 import { GameTypeFactory } from '../../../../org/allbinary/game/GameTypeFactory.js';
-//not GWT import const GameTypeFactory = globalThis.org.allbinary.game.GameTypeFactory;
+//not GWT import const GameTypeFactory
 import { RemoteHighScores } from '../../../../org/allbinary/game/score/remote/RemoteHighScores.js';
-//not GWT import const RemoteHighScores = globalThis.org.allbinary.game.score.remote.RemoteHighScores;
+//not GWT import const RemoteHighScores
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { BooleanFactory } from '../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
-//not GWT import const AbeClientInformationInterface = globalThis.org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+//not GWT import const AbeClientInformationInterface
 import { SecondaryThreadPool } from '../../../../org/allbinary/thread/SecondaryThreadPool.js';
-//not GWT import const SecondaryThreadPool = globalThis.org.allbinary.thread.SecondaryThreadPool;
+//not GWT import const SecondaryThreadPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresBase } from './HighScoresBase.js';
-//not GWT import - same folder const HighScoresResultsListener = globalThis.org.allbinary.game.score.HighScoresResultsListener;
+//not GWT import - same folder const HighScoresResultsListener
 import { RecordStoreHighScores } from './RecordStoreHighScores.js';
-//not GWT import - same folder const RecordStoreHighScores = globalThis.org.allbinary.game.score.RecordStoreHighScores;
+//not GWT import - same folder const RecordStoreHighScores
 import { ScoreComparator } from './ScoreComparator.js';
-//not GWT import - same folder const ScoreComparator = globalThis.org.allbinary.game.score.ScoreComparator;
+//not GWT import - same folder const ScoreComparator
 import { LastFetchHighScoresFactory } from './LastFetchHighScoresFactory.js';
-//not GWT import - same folder const LastFetchHighScoresFactory = globalThis.org.allbinary.game.score.LastFetchHighScoresFactory;
+//not GWT import - same folder const LastFetchHighScoresFactory
 import { HighScoresHelper2 } from './HighScoresHelper2.js';
-//not GWT import - same folder const HighScoresHelperBaseInterface = globalThis.org.allbinary.game.score.HighScoresHelperBaseInterface;
+//not GWT import - same folder const HighScoresHelperBaseInterface
 export class BasicHighScoresFactory extends HighScoresBase {
     static loaded(index2) {
         if (index2 >= 0) {

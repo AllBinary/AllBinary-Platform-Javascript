@@ -13,7 +13,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompositeSound } from './CompositeSound.js';
-//not GWT import - same folder const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import - same folder const Sound
 export class AttackSound extends CompositeSound {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

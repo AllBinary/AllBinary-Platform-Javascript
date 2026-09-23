@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPaintable } from './NullPaintable.js';
-//not GWT import - same folder const Paintable = globalThis.org.allbinary.graphics.paint.Paintable;
+//not GWT import - same folder const Paintable
 export class PaintableFactory extends Object {
     getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

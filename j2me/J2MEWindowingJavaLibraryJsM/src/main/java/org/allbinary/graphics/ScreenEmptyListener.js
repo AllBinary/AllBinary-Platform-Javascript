@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const ScreenListenerInterface = globalThis.org.allbinary.graphics.ScreenListenerInterface;
+//not GWT import - same folder const ScreenListenerInterface
 export class ScreenEmptyListener extends Object {
     onFullScreen(isFullScreen) {
     }

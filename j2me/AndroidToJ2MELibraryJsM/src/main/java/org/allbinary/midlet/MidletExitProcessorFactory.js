@@ -13,17 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { MIDlet } 
-const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
+//not GWT import const MIDlet
 import { AppletUtil } from '../../../org/allbinary/AppletUtil.js';
-//not GWT import const AppletUtil = globalThis.org.allbinary.AppletUtil;
+//not GWT import const AppletUtil
 import { J2MEUtil } from '../../../org/allbinary/J2MEUtil.js';
-//not GWT import const J2MEUtil = globalThis.org.allbinary.J2MEUtil;
+//not GWT import const J2MEUtil
 import { Processor } from '../../../org/allbinary/canvas/Processor.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import const Processor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MidletExitProcessor } from './MidletExitProcessor.js';
-//not GWT import - same folder const MidletExitProcessor = globalThis.org.allbinary.midlet.MidletExitProcessor;
+//not GWT import - same folder const MidletExitProcessor
 export class MidletExitProcessorFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

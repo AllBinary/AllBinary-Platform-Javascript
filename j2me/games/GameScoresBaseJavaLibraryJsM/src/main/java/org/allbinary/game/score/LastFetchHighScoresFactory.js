@@ -17,7 +17,7 @@ import { Object } from '../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoHighScoresFactory } from './NoHighScoresFactory.js';
-//not GWT import - same folder const HighScores = globalThis.org.allbinary.game.score.HighScores;
+//not GWT import - same folder const HighScores
 export class LastFetchHighScoresFactory extends Object {
     constructor() {
         super(...arguments);

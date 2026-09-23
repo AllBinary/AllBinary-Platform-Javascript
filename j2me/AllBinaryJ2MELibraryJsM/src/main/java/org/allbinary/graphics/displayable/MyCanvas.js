@@ -11,37 +11,32 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Stack = globalThis.java.util.Stack;
-//not plain js import { Canvas } 
-const Canvas = globalThis.javax.microedition.lcdui.Canvas;
-//not plain js import { Command } 
-const Command = globalThis.javax.microedition.lcdui.Command;
-//not plain js import { CommandListener } 
-const CommandListener = globalThis.javax.microedition.lcdui.CommandListener;
-//not plain js import { Graphics } 
-const Graphics = globalThis.javax.microedition.lcdui.Graphics;
+import { Canvas } from '../../../../javax/microedition/lcdui/Canvas.js';
+//not GWT import const Graphics
 import { NullCommandListener } from '../../../../javax/microedition/lcdui/NullCommandListener.js';
-//not GWT import const MyCommandInterface = globalThis.org.allbinary.graphics.displayable.command.MyCommandInterface;
+//not GWT import const MyCommandInterface
 import { MyCommandsFactory } from '../../../../org/allbinary/graphics/displayable/command/MyCommandsFactory.js';
-//not GWT import const MyCommandsFactory = globalThis.org.allbinary.graphics.displayable.command.MyCommandsFactory;
+//not GWT import const MyCommandsFactory
 import { TouchJ2ME } from '../../../../org/allbinary/input/TouchJ2ME.js';
-//not GWT import const TouchJ2ME = globalThis.org.allbinary.input.TouchJ2ME;
+//not GWT import const TouchJ2ME
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import const Sound = globalThis.org.allbinary.media.audio.Sound;
+//not GWT import const Sound
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
-//not GWT import - same folder const DisplayableInterface = globalThis.org.allbinary.graphics.displayable.DisplayableInterface;
+//not plain js import { ABStack } 
+const ABStack = globalThis.org.allbinary.util.ABStack;
+//not GWT import - same folder const DisplayableInterface
 import { CanvasStrings } from './CanvasStrings.js';
-//not GWT import - same folder const CanvasStrings = globalThis.org.allbinary.graphics.displayable.CanvasStrings;
+//not GWT import - same folder const CanvasStrings
 import { DisplayInfoSingleton } from './DisplayInfoSingleton.js';
-//not GWT import - same folder const DisplayInfoSingleton = globalThis.org.allbinary.graphics.displayable.DisplayInfoSingleton;
+//not GWT import - same folder const DisplayInfoSingleton
 export class MyCanvas extends Canvas {
     constructor(name, childNameList) {
         super();
@@ -90,7 +85,7 @@ export class MyCanvas extends Canvas {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     removeAllCommands() {
-        var size = this.commandStack.length;
+        var size = this.commandStack.size();
         ;
         for (var index = 0; index < size; index++) {
             super.removeCommand(this.commandStack.pop());

@@ -19,7 +19,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import const LayerInterfaceFactoryInterface = globalThis.org.allbinary.layer.LayerInterfaceFactoryInterface;
+//not GWT import const LayerInterfaceFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RaceTrackAdjacentDropLayerFactory extends Object {
     static getInstance() {

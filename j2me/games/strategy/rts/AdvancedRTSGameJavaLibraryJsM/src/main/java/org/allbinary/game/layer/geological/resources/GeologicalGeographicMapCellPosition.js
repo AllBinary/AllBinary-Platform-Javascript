@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { GeographicMapCellPosition } from '../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellPosition.js';
-//not GWT import - same folder const GeologicalResource = globalThis.org.allbinary.game.layer.geological.resources.GeologicalResource;
+//not GWT import - same folder const GeologicalResource
 export class GeologicalGeographicMapCellPosition extends GeographicMapCellPosition {
     constructor(column, row, columns, rows, width, height, geologicalResource) {
         super(column, row, columns, rows, width, height);

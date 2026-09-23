@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../java/lang/Object.js';
-//not GWT import const HardwareComponentInterface = globalThis.org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface;
+//not GWT import const HardwareComponentInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import org.allbinary.logic.system.hardware.components.interfaces.MediaInterface;
 export class Unknown extends Object {

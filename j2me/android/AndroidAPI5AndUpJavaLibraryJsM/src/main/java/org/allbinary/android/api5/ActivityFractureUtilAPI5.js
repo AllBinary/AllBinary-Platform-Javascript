@@ -11,17 +11,17 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Activity = globalThis.android.app.Activity;
+//not GWT import const Activity
 import { TouchScreenTypeFactory } from '../../../../org/allbinary/input/motion/button/TouchScreenTypeFactory.js';
-//not GWT import const TouchScreenTypeFactory = globalThis.org.allbinary.input.motion.button.TouchScreenTypeFactory;
+//not GWT import const TouchScreenTypeFactory
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 import { ActivityFractureUtilAPI1 } from '../../../../org/allbinary/android/api1/ActivityFractureUtilAPI1.js';
-//not GWT import const ActivityFractureUtilAPI1 = globalThis.org.allbinary.android.api1.ActivityFractureUtilAPI1;
+//not GWT import const ActivityFractureUtilAPI1
 import { TouchScreenFactory } from '../../../../org/allbinary/input/motion/button/TouchScreenFactory.js';
-//not GWT import const TouchScreenFactory = globalThis.org.allbinary.input.motion.button.TouchScreenFactory;
+//not GWT import const TouchScreenFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ActivityFractureUtilAPI5 extends ActivityFractureUtilAPI1 {
     constructor() {

@@ -11,15 +11,15 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const CellPosition = globalThis.org.allbinary.graphics.CellPosition;
+//not GWT import const CellPosition
 import { CellPositionFactory } from '../../../../../../../org/allbinary/graphics/CellPositionFactory.js';
-//not GWT import const CellPositionFactory = globalThis.org.allbinary.graphics.CellPositionFactory;
+//not GWT import const CellPositionFactory
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AllBinaryEventObject } from '../../../../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
-//not GWT import const GeographicMapCellPosition = globalThis.org.allbinary.media.graphics.geography.map.GeographicMapCellPosition;
+//not GWT import const GeographicMapCellPosition
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GeographicMapCellPositionEvent extends AllBinaryEventObject {
     constructor(anyType = {}, geographicMapCellPosition) {

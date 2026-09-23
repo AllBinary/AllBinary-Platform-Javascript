@@ -12,12 +12,12 @@
         *  Created By: Travis Berthelot
 */
 import { CollidableBaseBehavior } from '../../../../../org/allbinary/game/collision/CollidableBaseBehavior.js';
-//not GWT import const CollidableInterfaceCompositeInterface = globalThis.org.allbinary.game.collision.CollidableInterfaceCompositeInterface;
+//not GWT import const CollidableInterfaceCompositeInterface
 import { DamageUtil } from '../../../../../org/allbinary/game/combat/damage/DamageUtil.js';
-//not GWT import const CollidableCompositeLayer = globalThis.org.allbinary.game.layer.CollidableCompositeLayer;
+//not GWT import const CollidableCompositeLayer
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not GWT import - same folder const CollidableDestroyableDamageableLayer = globalThis.org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer;
+//not GWT import - same folder const CollidableDestroyableDamageableLayer
 export class CollidableDestroyableDamageableBehavior extends CollidableBaseBehavior {
     constructor(collidable) {
         super(collidable);

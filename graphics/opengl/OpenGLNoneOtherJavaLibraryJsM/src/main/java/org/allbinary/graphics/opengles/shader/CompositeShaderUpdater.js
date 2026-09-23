@@ -11,7 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not GWT import const GL10
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { StringUtil } 
@@ -20,7 +20,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderUpdater } from './ShaderUpdater.js';
-//not GWT import - same folder const ShaderUpdater = globalThis.org.allbinary.graphics.opengles.shader.ShaderUpdater;
+//not GWT import - same folder const ShaderUpdater
 export class CompositeShaderUpdater extends ShaderUpdater {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

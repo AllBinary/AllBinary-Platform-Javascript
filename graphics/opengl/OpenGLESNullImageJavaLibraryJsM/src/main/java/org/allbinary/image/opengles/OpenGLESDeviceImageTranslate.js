@@ -11,12 +11,10 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const GL10 = globalThis.javax.microedition.khronos.opengles.GL10;
+//not GWT import const GL10
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLESImageTranslate } from './OpenGLESImageTranslate.js';
-//not GWT import - same folder const OpenGLESImageTranslate = globalThis.org.allbinary.image.opengles.OpenGLESImageTranslate;
-//not plain js - same folder import { OpenGLESImage } 
-const OpenGLESImage = globalThis.org.allbinary.image.opengles.OpenGLESImage;
+//not GWT import - same folder const OpenGLESImage
 export class OpenGLESDeviceImageTranslate extends OpenGLESImageTranslate {
     constructor() {
         super(...arguments);

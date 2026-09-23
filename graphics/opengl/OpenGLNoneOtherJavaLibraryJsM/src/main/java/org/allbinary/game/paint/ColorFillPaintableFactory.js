@@ -13,14 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import const GenericOperatingSystem = globalThis.org.allbinary.logic.system.os.GenericOperatingSystem;
+//not GWT import const GenericOperatingSystem
 import { OperatingSystemFactory } from '../../../../org/allbinary/logic/system/os/OperatingSystemFactory.js';
-//not GWT import const OperatingSystemFactory = globalThis.org.allbinary.logic.system.os.OperatingSystemFactory;
+//not GWT import const OperatingSystemFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ColorFillPaintable } from './ColorFillPaintable.js';
-//not GWT import - same folder const ColorFillPaintable = globalThis.org.allbinary.game.paint.ColorFillPaintable;
+//not GWT import - same folder const ColorFillPaintable
 import { OverScanColorFillPaintable } from './OverScanColorFillPaintable.js';
-//not GWT import - same folder const ColorFillBasePaintable = globalThis.org.allbinary.game.paint.ColorFillBasePaintable;
+//not GWT import - same folder const ColorFillBasePaintable
 export class ColorFillPaintableFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

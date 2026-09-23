@@ -11,12 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const RotationAnimation = globalThis.org.allbinary.animation.RotationAnimation;
+//not GWT import const RotationAnimation
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompoundAnimationInterfaceFactory } from './CompoundAnimationInterfaceFactory.js';
-//not GWT import - same folder const CompoundAnimationInterfaceFactory = globalThis.org.allbinary.animation.compound.CompoundAnimationInterfaceFactory;
+//not GWT import - same folder const CompoundAnimationInterfaceFactory
 import { AutoCompoundRotationAnimation } from './AutoCompoundRotationAnimation.js';
-//not GWT import - same folder const AutoCompoundRotationAnimation = globalThis.org.allbinary.animation.compound.AutoCompoundRotationAnimation;
+//not GWT import - same folder const AutoCompoundRotationAnimation
 export class AutoCompoundRotationAnimationInterfaceFactory extends CompoundAnimationInterfaceFactory {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {
         super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory);

@@ -14,8 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//not plain js - same folder import { ScaleFactorFactory } 
-const ScaleFactorFactory = globalThis.org.allbinary.logic.math.ScaleFactorFactory;
+import { ScaleFactorFactory } from './ScaleFactorFactory.js';
+//not GWT import - same folder const ScaleFactorFactory
 export class BasicDecimal extends Object {
     static createBigDecimal(bigDecimal) {
         //if statement needs to be on the same line and ternary does not work the same way.

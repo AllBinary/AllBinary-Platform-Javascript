@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInputProcessor } from './GameInputProcessor.js';
-//not GWT import - same folder const SelectedRTSLayersPlayerGameInput = globalThis.org.allbinary.game.input.SelectedRTSLayersPlayerGameInput;
+//not GWT import - same folder const SelectedRTSLayersPlayerGameInput
 export class SelectedRTSLayersPlayerGameInputProcessor extends GameInputProcessor {
     constructor(selectedRTSLayersPlayerGameInput) {
         super();

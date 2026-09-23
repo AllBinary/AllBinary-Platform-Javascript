@@ -1,6 +1,6 @@
 /* Generated Code Do Not Modify */
 import { OpenGLImageUtilBase } from '../../../org/allbinary/image/opengles/OpenGLImageUtilBase.js';
-//not GWT import const OpenGLImageUtilBase = globalThis.org.allbinary.image.opengles.OpenGLImageUtilBase;
+//not GWT import const OpenGLImageUtilBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLImageUtil extends OpenGLImageUtilBase {
     static getInstance() {

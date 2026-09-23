@@ -13,14 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
-//not GWT import const AllBinaryLayer = globalThis.org.allbinary.layer.AllBinaryLayer;
+//not GWT import const AllBinaryLayer
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
-//not GWT import const AllBinaryEventObject = globalThis.org.allbinary.logic.util.event.AllBinaryEventObject;
+//not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEventHandler } from './TrackingEventHandler.js';
-//not GWT import - same folder const TrackingEventHandler = globalThis.org.allbinary.game.tracking.TrackingEventHandler;
+//not GWT import - same folder const TrackingEventHandler
 export class TrackingEvent extends AllBinaryEventObject {
     constructor(allBinaryLayerInterface = {}) {
         super(allBinaryLayerInterface);

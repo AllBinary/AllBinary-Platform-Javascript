@@ -11,13 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
-//not plain js import { Displayable } 
-const Displayable = globalThis.javax.microedition.lcdui.Displayable;
+//not GWT import const Displayable
 import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
-//not GWT import const Processor = globalThis.org.allbinary.canvas.Processor;
+//not GWT import const Processor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScreenRepaintUtil } from './ScreenRepaintUtil.js';
-//not GWT import - same folder const ScreenRepaintUtil = globalThis.org.allbinary.graphics.displayable.screen.ScreenRepaintUtil;
+//not GWT import - same folder const ScreenRepaintUtil
 export class ScreenRepaintProcessor extends Processor {
     constructor(displayable) {
         super();

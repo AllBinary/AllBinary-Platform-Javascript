@@ -13,11 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not plain js import { MIDlet } 
-const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
+//not GWT import const MIDlet
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryMidlet } from './AllBinaryMidlet.js';
-//not GWT import - same folder const AllBinaryMidlet = globalThis.org.allbinary.midlet.AllBinaryMidlet;
+//not GWT import - same folder const AllBinaryMidlet
 export class MidletFactoryInterface extends Object {
     getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -14,13 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not plain js import { Font } 
-const Font = globalThis.javax.microedition.lcdui.Font;
-//not plain js import { MIDlet } 
-const MIDlet = globalThis.javax.microedition.midlet.MIDlet;
+//not GWT import const MIDlet
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GLHolder } from './GLHolder.js';
-//not GWT import - same folder const RatioProcessor = globalThis.org.allbinary.graphics.threed.RatioProcessor;
+//not GWT import - same folder const RatioProcessor
 //SWTWithoutJOGL
 export class SWTJOGLProcessor extends Object {
     constructor() {
