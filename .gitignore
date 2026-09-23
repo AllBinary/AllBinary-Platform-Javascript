@@ -1,4 +1,5 @@
 node_modules
+.github
 *.xml
 !pom.xml
 *.java
