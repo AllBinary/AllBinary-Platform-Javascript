@@ -78,6 +78,7 @@
         <module>../../games/WeaponLayerJavaLibraryJsM</module>
 
         <module>../../games/CombatGameJavaLibraryJsM</module>
+        <module>../../games/LifeJavaLibraryJsM</module>
 
         <module>../../games/CommonHeadsUpDisplayCombatGameLibraryJsM</module>
         <module>../../games/LifeOrDeathDataJavaLibraryJsM</module>
