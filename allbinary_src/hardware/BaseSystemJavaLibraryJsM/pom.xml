@@ -5,8 +5,8 @@
     <artifactId>BaseSystemJavaLibraryJs</artifactId>
     <packaging>jar</packaging>
     <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
 
     <name>BaseSystemJavaLibraryJs</name>
     <url>http://www.allbinary.com/</url>
@@ -162,7 +162,7 @@
                             <!-- Uses the path from tsconfig.json instead of -p path; ignore tsc errors so the build continues -->
                             <arguments>
                                 <argument>/c</argument>
-<!--                                <argument>npx tsc</argument>-->
+                                <!--                                <argument>npx tsc</argument>-->
                                 <argument>npx tsc || exit 0</argument>
                             </arguments>
                         </configuration>
