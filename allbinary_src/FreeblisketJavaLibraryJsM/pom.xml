@@ -127,7 +127,7 @@
             <optional>true</optional>
         </dependency>
         -->
-    
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>CustomLoaderFakeJavaLibraryJs</artifactId>
@@ -168,23 +168,13 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FileJ2SEJavaLibraryJs</artifactId>
 
             <!--
-            -->
-            <!--
-            -->
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>IdGeneratorUsingDbTablesJavaLibraryJs</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>FileGAEVFSJavaLibraryJs</artifactId>
-            
-            <!--
-            <artifactId>FileJ2SEJavaLibraryJs</artifactId>
-            <artifactId>FileGAEVFSJavaLibraryJs</artifactId>
+            <artifactId>FileJ2SEJavaLibrary</artifactId>
+            <artifactId>FileGAEVFSJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
@@ -192,6 +182,11 @@
 
             <optional>true</optional>
         </dependency>
+
+            <!--
+            -->
+            <!--
+            -->
         <!--
         <dependency>
             <groupId>com.vobject.appengine</groupId>
@@ -223,7 +218,7 @@
         -->
 <!--            <version>1.6.0</version>-->
 
-    </dependencies>
+</dependencies>
 
     <build>
         <plugins>

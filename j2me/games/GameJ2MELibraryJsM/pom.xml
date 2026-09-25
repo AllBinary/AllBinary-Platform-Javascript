@@ -38,10 +38,19 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>LoggingJ2MEAllJs</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2MEJavaLibraryJs</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -67,7 +76,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId> 
             <artifactId>GameLicensingNullJavaLibraryJs</artifactId>            
@@ -81,7 +90,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEForJ2MEJavaLibraryJs</artifactId>
@@ -91,7 +100,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>OpenGLNoneJavaLibraryJs</artifactId>
@@ -140,7 +149,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ProgressJ2MEJavaLibraryJs</artifactId>
@@ -200,7 +209,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>GameNotificationJavaLibraryJs</artifactId>
@@ -557,7 +566,7 @@
             <optional>true</optional>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
 

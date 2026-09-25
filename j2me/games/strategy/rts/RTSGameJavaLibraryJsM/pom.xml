@@ -31,6 +31,15 @@
             <!-- AllBinary Platform Version End -->
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2MEJavaLibraryJs</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -77,7 +86,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>NullCustomUIJavaLibraryJs</artifactId>
@@ -203,8 +212,8 @@
             <version>2.0.4</version>
             <optional>true</optional>
         </dependency>
-        
-    </dependencies>
+
+</dependencies>
 
     <build>
         <plugins>

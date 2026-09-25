@@ -36,7 +36,7 @@ export class PtsDamageFloaters extends DamageFloaters {
         super();
         this.basicSetColorUtil = BasicColorSetUtil.getInstance();
         this.lastDamage = new Array(5);
-        this.lastDamageString = new Array(5).fill(null).map(() => new Array(0).fill(0));
+        this.lastDamageString = new Array(5).fill(null).map(() => new Array(0).fill(null));
         this.lastDamageStringSizeArray = new Array(5);
         this.circularIndexUtil = CircularIndexUtil.createInstance(5);
         this.myRandomFactory = MyRandomFactory.getInstance();

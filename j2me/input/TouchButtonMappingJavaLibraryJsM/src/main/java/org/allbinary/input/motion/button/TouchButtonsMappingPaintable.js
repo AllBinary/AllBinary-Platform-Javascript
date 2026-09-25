@@ -35,7 +35,7 @@ export class TouchButtonsMappingPaintable extends Paintable {
     constructor(basicColor) {
         super();
         this.logUtil = LogUtil.getInstance();
-        this.paintableTable = new Array(0).fill(null).map(() => new Array(0).fill(0));
+        this.paintableTable = new Array(0).fill(null).map(() => new Array(0).fill(null));
         this.touchButtonLocationHelper = new TouchButtonLocationHelper();
         this.foregroundColor = basicColor.intValue();
         this.init();
@@ -57,7 +57,7 @@ export class TouchButtonsMappingPaintable extends Paintable {
         ;
         var totalRows = this.touchButtonLocationHelper.getTotalRows();
         ;
-        var paintableTable = new Array(totalColumns).fill(null).map(() => new Array(totalRows).fill(0));
+        var paintableTable = new Array(totalColumns).fill(null).map(() => new Array(totalRows).fill(null));
         ;
         var cellPositionFactory = CellPositionFactory.getInstance();
         ;

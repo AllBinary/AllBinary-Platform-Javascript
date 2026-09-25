@@ -42,6 +42,13 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>CombatGameJavaLibraryJs</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -58,7 +65,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>NotDeviceSpecificMIDP2JavaLibraryJs</artifactId>
@@ -69,7 +76,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-                
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>NoGyroSensorJavaLibraryJs</artifactId>
@@ -177,7 +184,7 @@
             <!-- AllBinary Platform Version End -->
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
 

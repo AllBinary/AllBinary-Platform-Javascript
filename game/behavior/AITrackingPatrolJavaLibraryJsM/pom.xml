@@ -41,6 +41,12 @@
             <version>${project.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2MEJavaLibraryJs</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -101,7 +107,7 @@
         </dependency>
         -->
 
-    </dependencies>
+</dependencies>
 
     <build>
         <plugins>

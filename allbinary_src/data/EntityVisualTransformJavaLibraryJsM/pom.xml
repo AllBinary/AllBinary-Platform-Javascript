@@ -45,6 +45,15 @@
 
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2SEJavaLibraryJs</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -140,7 +149,7 @@
 
             <optional>true</optional>
         </dependency>
-        
+
         <!--
         <dependency>
             <groupId>com.vobject.appengine</groupId>
@@ -148,7 +157,7 @@
             <version>0.3-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-vfs2Js</artifactId>
@@ -186,7 +195,7 @@
             <version>10.0.26</version><!--            <version>9.4.58.v20250814</version>-->
             <scope>provided</scope>
         </dependency>
-                
+
         <!-- java 11-20 -->
         <!--
         <dependency>
@@ -203,7 +212,7 @@
         </dependency>
         -->
 
-    </dependencies>
+</dependencies>
 
     <build>
         <plugins>

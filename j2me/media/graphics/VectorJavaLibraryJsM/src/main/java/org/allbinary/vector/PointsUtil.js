@@ -27,7 +27,7 @@ export class PointsUtil extends Object {
         for (var index = 0; index < size; index++) {
             var size2 = points[index].length;
             ;
-            newPoints[index] = new Array(size2).fill(null).map(() => new Array(2).fill(0));
+            newPoints[index] = new Array(size2).fill(null).map(() => new Array(2).fill(null));
             for (var index2 = 0; index2 < size2; index2++) {
                 if (points[index][index2][0] != 1000) {
                     newPoints[index][index2][0] = points[index][index2][0] + x;
@@ -48,7 +48,7 @@ export class PointsUtil extends Object {
         ;
     }
     adjust(points, x, y) {
-        var newPoints = new Array(points.length).fill(null).map(() => new Array(2).fill(0));
+        var newPoints = new Array(points.length).fill(null).map(() => new Array(2).fill(null));
         ;
         for (var index2 = 0; index2 < points.length; index2++) {
             if (points[index2][0] != 1000) {

@@ -37,6 +37,14 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ClientInfoBaseJavaLibraryJs</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+        </dependency>
 
         <dependency>
             <groupId>org.microemu</groupId>
@@ -44,8 +52,8 @@
             <version>2.0.4</version>
             <optional>true</optional>
         </dependency>
-        
-    </dependencies>
+
+</dependencies>
 
     <build>
 

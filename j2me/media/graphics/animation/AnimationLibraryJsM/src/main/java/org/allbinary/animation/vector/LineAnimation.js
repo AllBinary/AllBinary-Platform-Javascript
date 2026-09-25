@@ -20,9 +20,9 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 export class LineAnimation extends Animation {
     constructor(basicColor) {
         super();
-        this.newLine = new Array(2).fill(null).map(() => new Array(2).fill(0));
+        this.newLine = new Array(2).fill(null).map(() => new Array(2).fill(null));
         this.tempLine = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
-        this.line = new Array(2).fill(null).map(() => new Array(2).fill(0));
+        this.line = new Array(2).fill(null).map(() => new Array(2).fill(null));
         this.setBasicColorP(basicColor);
     }
     init(x, y) {

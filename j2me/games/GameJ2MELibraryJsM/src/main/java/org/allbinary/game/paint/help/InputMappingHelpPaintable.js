@@ -51,7 +51,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         this.EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
         this.keyMappingArray = [];
         this.actionBasicColor = [];
-        this.inputBasicColorArray = new Array(0).fill(null).map(() => new Array(0).fill(0));
+        this.inputBasicColorArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
         //inner= member=true isStatic=
         this.UpdateMyFontProperties = class extends Object {
             constructor() {
@@ -61,7 +61,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
                 this.keymappingBeginWidthArray = NullUtil.getInstance().NULL_INT_ARRAY;
                 this.actionStringDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY;
                 this.inputDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
-                this.sepArray = new Array(0).fill(null).map(() => new Array(0).fill(0));
+                this.sepArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
                 this.sepWidthArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
                 this.charHeight = 0;
             }
@@ -92,9 +92,9 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         updateMyFontProperties.actionStringArray = new Array(size);
         updateMyFontProperties.keymappingBeginWidthArray = new Array(size);
         updateMyFontProperties.actionStringDeltaXArray = new Array(size);
-        updateMyFontProperties.inputDeltaXArray = new Array(size).fill(null).map(() => new Array(0).fill(0));
-        updateMyFontProperties.sepArray = new Array(size).fill(null).map(() => new Array(0).fill(0));
-        updateMyFontProperties.sepWidthArray = new Array(size).fill(null).map(() => new Array(0).fill(0));
+        updateMyFontProperties.inputDeltaXArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
+        updateMyFontProperties.sepArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
+        updateMyFontProperties.sepWidthArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
         var list;
         ;
         var keyMappings;

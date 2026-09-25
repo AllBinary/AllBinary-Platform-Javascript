@@ -37,7 +37,7 @@ export class GameKeyEventFactory extends Object {
         this.TOUCH_BUTTON_SOURCE_ID = 2;
         this.MOTION_GESTURE_SOURCE_ID = 3;
         this.MAX_SOURCES = 4;
-        this.ARRAY = new Array(this.MAX_SOURCES).fill(null).map(() => new Array(InputFactory.getInstance().MAX).fill(0));
+        this.ARRAY = new Array(this.MAX_SOURCES).fill(null).map(() => new Array(InputFactory.getInstance().MAX).fill(null));
     }
     init() {
         var nullUtil = NullUtil.getInstance();

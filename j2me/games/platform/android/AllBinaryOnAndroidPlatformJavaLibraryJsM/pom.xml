@@ -30,7 +30,7 @@
     </properties>
 
     <dependencies>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AllBinaryOnAndroidBasePlatformJavaLibraryJs</artifactId>
@@ -60,7 +60,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-                
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AndroidTransitionAnimationJavaLibraryJs</artifactId>
@@ -148,6 +148,13 @@
             <!--        
             GameJ2MELibrary
             -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLAndroidJavaLibraryJs</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -267,7 +274,7 @@ input\android\MotionInputThroughAPI4AndroidJavaLibrary
             <version>3.0.0-SNAPSHOT</version>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
         

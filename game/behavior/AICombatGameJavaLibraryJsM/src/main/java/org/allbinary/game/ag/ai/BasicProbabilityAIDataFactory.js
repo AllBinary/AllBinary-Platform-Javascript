@@ -26,7 +26,7 @@ import { InputProbability } from './InputProbability.js';
 //not GWT import - same folder const InputProbability
 export class BasicProbabilityAIDataFactory extends Object {
     getInstance() {
-        var likelyhoodIntegerArray = new Array(Canvas.KEY_NUM9 + 1).fill(null).map(() => new Array(2).fill(0));
+        var likelyhoodIntegerArray = new Array(Canvas.KEY_NUM9 + 1).fill(null).map(() => new Array(2).fill(null));
         ;
         var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;

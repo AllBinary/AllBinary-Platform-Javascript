@@ -23,9 +23,9 @@ import { Object } from '../../../java/lang/Object.js';
         /*actual*/ this.NULL_OBJECT_ARRAY = [];
         /*actual*/ this.NULL_CHAR_ARRAY = new Array(0);
         /*actual*/ this.NULL_BYTE_ARRAY = [];
-        /*actual*/ this.NULL_SHORT_ARRAY_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(0));
+        /*actual*/ this.NULL_SHORT_ARRAY_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(null));
         /*actual*/ this.NULL_INT_ARRAY = [];
-        /*actual*/ this.NULL_INT_ARRAY_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(0));
+        /*actual*/ this.NULL_INT_ARRAY_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(null));
         /*actual*/ this.NULL_INT_ARRAY_ARRAY_ARRAY = Array.from({ length: 0 }, () => Array.from({ length: 0 }, () => new Array(0).fill(0)));
         /*actual*/ this.NULL_FLOAT_ARRAY = [];
     }

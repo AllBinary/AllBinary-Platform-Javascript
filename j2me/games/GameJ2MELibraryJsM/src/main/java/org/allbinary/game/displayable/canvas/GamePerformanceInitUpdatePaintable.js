@@ -31,7 +31,7 @@ export class GamePerformanceInitUpdatePaintable extends InitUpdatePaintable {
         this.halfHeight = DisplayInfoSingleton.getInstance().getLastHalfHeight();
         this.yArray = [this.halfHeight + 30, this.halfHeight + 30, this.halfHeight + 30 + 15, this.halfHeight + 30 + 15, this.halfHeight + 30 + 30, this.halfHeight + 30 + 30, this.halfHeight + 30 + 45, this.halfHeight + 30 + 45];
         this.myFontProcessor = new UpdateMyFontProcessor(this);
-        this.baseRefreshHelperCharArray = new Array(0).fill(null).map(() => new Array(0).fill(0));
+        this.baseRefreshHelperCharArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
         this.defaultStringWidth = 0;
         this.RED = BasicColorFactory.getInstance().RED.intValue();
     }

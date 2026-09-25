@@ -47,7 +47,8 @@
         <module>../../../replace_these_stub_projects/security/YourSecurityJavaLibraryJsM</module>
         <module>../../../replace_these_stub_projects/communication/YourXmlRpcJavaLibraryJsM</module>
         <module>../../../replace_these_stub_projects/allbinary_src/J2MEOnlyJavaLibraryJsM</module>
-<!--        <module>../../../replace_these_stub_projects/allbinary_src/J2MECompatibilityJavaLibraryJsM</module>-->
+        <module>../../../replace_these_stub_projects/allbinary_src/J2MECompatibilityJavaLibraryJsM</module>
+        <module>../../../replace_these_stub_projects/allbinary_src/J2MEJsInteropCompatibilityJavaLibraryJsM</module>
 
         <module>../../DebugJavaLibraryJsM</module>             
         <module>../../ResourceLibraryJsM</module>

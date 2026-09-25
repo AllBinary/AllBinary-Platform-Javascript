@@ -31,7 +31,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 export class BasicArrayListUtil extends Object {
     constructor() {
         super(...arguments);
-        this.NULL_ARRAY_OF_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(0));
+        this.NULL_ARRAY_OF_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(null));
         this.myRandomFactory = MyRandomFactory.getInstance();
         this.immutableInstance = new ImmutableBasicArrayList("Immutable", 0);
     }
