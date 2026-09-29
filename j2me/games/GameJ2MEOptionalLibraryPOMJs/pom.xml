@@ -30,7 +30,7 @@
 
     <modules>
         
-<!--        <module>../../ProgressLazyJ2MEJavaLibraryJsM</module>-->
+        <module>../../ProgressLazyJ2MEJavaLibraryJsM</module>
         <!--
                 <module>../../games/GameScoresBaseHTMLLibraryJsM</module>
                 <module>../../games/GameScoresJ2MEJavaLibraryJsM</module>
@@ -39,7 +39,7 @@
                 <module>../../games/GameScoresRemoteAndLocalLibraryJsM</module>
         -->
 <!--        <module>../../media/graphics/ImageCacheJ2MEJavaLibraryJsM</module>
-        <module>../../media/graphics/ImageCacheLazyJ2MEJavaLibraryJsM</module>-->
+-->        <module>../../media/graphics/ImageCacheLazyJ2MEJavaLibraryJsM</module>
         <!--        <module>../../media/graphics/ImageCacheOpenGLESJavaLibraryJsM</module>-->
         <module>../../media/graphics/LazyGameResourceNoneJavaLibraryJsM</module>
 

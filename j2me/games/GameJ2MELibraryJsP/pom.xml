@@ -52,7 +52,7 @@
 
         <module>../../DebugJavaLibraryJsM</module>             
         <module>../../ResourceLibraryJsM</module>
-<!--        <module>../../ResourceJ2MEJavaLibraryJsM</module>-->
+        <module>../../ResourceJ2MEJavaLibraryJsM</module>
         <module>../../AndroidResourceLibraryJsM</module>
         <module>../../../allbinary_src/hardware/AndroidSystemJavaLibraryJsM</module>
 
