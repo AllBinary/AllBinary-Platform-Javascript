@@ -54,7 +54,7 @@ export class PathFinder extends GeographicPathFinderBase {
         this.geographicMapInterface = geographicMapInterface;
         var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        this.costArray = new Array(tiledLayer.getColumns()).fill(null).map(() => new Array(tiledLayer.getRows()).fill(0));
+        this.costArray = new Array(tiledLayer.getColumns()).fill(null).map(() => new Array(tiledLayer.getRows()).fill(null));
         var basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
         ;
         var node;

@@ -71,4 +71,4 @@ export class PathFindingNodeCost extends PathFindingNode {
         ;
     }
 }
-PathFindingNodeCost.NULL_PATH_FINDING_NODE_COST_ARRAY_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(0));
+PathFindingNodeCost.NULL_PATH_FINDING_NODE_COST_ARRAY_ARRAY = new Array(0).fill(null).map(() => new Array(0).fill(null));

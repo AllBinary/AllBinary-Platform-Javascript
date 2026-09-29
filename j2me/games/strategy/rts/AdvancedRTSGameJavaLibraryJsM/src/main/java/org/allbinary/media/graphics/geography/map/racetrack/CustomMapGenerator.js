@@ -33,7 +33,7 @@ export class CustomMapGenerator extends CustomMapGeneratorBase {
         ;
         var size2 = mapArray[0].length;
         ;
-        this.customMapArray = new Array(mapArray.length).fill(null).map(() => new Array(size2).fill(0));
+        this.customMapArray = new Array(mapArray.length).fill(null).map(() => new Array(size2).fill(null));
         if (mapArray.length != this.customMapArray.length || mapArray[0].length != this.customMapArray[0].length) {
             throw new Exception("Array Incorrect");
         }

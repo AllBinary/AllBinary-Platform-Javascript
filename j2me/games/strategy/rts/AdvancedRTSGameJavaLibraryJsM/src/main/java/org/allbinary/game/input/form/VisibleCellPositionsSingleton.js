@@ -54,9 +54,9 @@ export class VisibleCellPositionsSingleton extends Object {
         ;
         var columns = simpleTiledLayer.getColumns();
         ;
-        this.stationaryVisibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(0));
-        this.visibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(0));
-        this.currentlyVisibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(0));
+        this.stationaryVisibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(null));
+        this.visibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(null));
+        this.currentlyVisibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(null));
         this.setSimpleTiledLayer(simpleTiledLayer);
     }
     onEvent(eventObject) {

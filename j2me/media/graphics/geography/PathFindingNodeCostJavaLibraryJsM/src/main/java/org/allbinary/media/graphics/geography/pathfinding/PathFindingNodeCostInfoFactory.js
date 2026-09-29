@@ -20,7 +20,7 @@ import { PathFindingNodeCostInfo } from './PathFindingNodeCostInfo.js';
 export class PathFindingNodeCostInfoFactory extends PathFindingNodeCostInfoFactoryBase {
     constructor(max) {
         super();
-        this.pathFindingNodeCostInfoAdjacencyList = new Array(max).fill(null).map(() => new Array(max).fill(0));
+        this.pathFindingNodeCostInfoAdjacencyList = new Array(max).fill(null).map(() => new Array(max).fill(null));
     }
     //@Throws(Exception.constructor)
     create(geographicMapInterface, goingToGeographicMapCellPosition, geographicMapCellPosition, costFromStart, costToEnd) {

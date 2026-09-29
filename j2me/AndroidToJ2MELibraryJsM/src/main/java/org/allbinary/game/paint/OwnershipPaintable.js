@@ -67,6 +67,6 @@ export class OwnershipPaintable extends Paintable {
         ;
         var height = this.displayInfo.getLastHeight();
         ;
-        graphics.drawString(this.COPYRIGHT, halfWidth - this.beginWidth, height - COPYRIGHT_Y, this.anchor);
+        graphics.drawString(this.COPYRIGHT, halfWidth - this.beginWidth, height - this.COPYRIGHT_Y, this.anchor);
     }
 }
