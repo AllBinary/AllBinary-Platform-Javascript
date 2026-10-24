@@ -11,6 +11,8 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const GeographicMapCellType
+import { SimpleGeographicMapCellPositionFactory } from '../../../../../org/allbinary/media/graphics/geography/map/SimpleGeographicMapCellPositionFactory.js';
 //not GWT import const BasicTopViewGeographicMapCellTypeFactory
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
@@ -25,17 +27,17 @@ export class GeographicMapTopViewLayerBehavior extends TopViewGameLayerBehavior 
     //@Throws(Exception.constructor)
     getGeographicMapCellPositionIfNotSolidBlockOrOffMapLocation(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer, x, y) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return null;
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
     }
     //@Throws(Exception.constructor)
     getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition, velocityProperties, layer) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return null;
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
     }
     //@Throws(Exception.constructor)
     getGeographicMapCellPositionFromListIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPositionList, velocityProperties, layer) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return null;
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
     }
     //@Throws(Exception.constructor)
     gravity(velocityProperties, geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition) {

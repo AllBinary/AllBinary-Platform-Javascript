@@ -26,8 +26,6 @@ import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const AngleInfo
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not plain js import { CommonStrings } 
-const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { ScaleProperties } from '../../../../org/allbinary/media/ScaleProperties.js';
@@ -39,7 +37,6 @@ export class LazyImageRotationAnimation extends RotationAnimation {
     constructor(layoutIndex, instanceId, scaleProperties, animationInterfaceFactoryInterface, animationBehavior) {
         super(AngleInfo.getInstance(AngleFactory.getInstance().QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior);
         this.logUtil = LogUtil.getInstance();
-        this.commonStrings = CommonStrings.getInstance();
         this.scaleProperties = ScaleProperties.instance;
         //For kotlin this is before the body of the constructor.
         this.layoutIndex = layoutIndex;
@@ -50,10 +47,13 @@ export class LazyImageRotationAnimation extends RotationAnimation {
         imageCache.add(this);
         this.scaleProperties = scaleProperties;
         this.NULL_INDEX_ANIMATION = NullRotationAnimationFactory.getFactoryInstance().getInstance(0);
-        this.animation = new class extends RotationAnimation {
-            constructor() {
-                super(...arguments);
+        //inner=true member= isStatic=
+        class ActualRotationAnimation extends RotationAnimation {
+            constructor(lazyImageRotationAnimation) {
+                super(AngleInfo.getInstance(AngleFactory.getInstance().QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior);
                 this.index = 0;
+                //For kotlin this is before the body of the constructor.
+                this.lazyImageRotationAnimation = lazyImageRotationAnimation;
             }
             setFrame(index) {
                 this.index = index;
@@ -65,7 +65,7 @@ export class LazyImageRotationAnimation extends RotationAnimation {
             paintXY(graphics, x, y) {
                 try {
                     ImageCacheFactory.getInstance().insertFirst(LazyImageRotationAnimation.prototype);
-                    animation = NULL_INDEX_ANIMATION;
+                    this.lazyImageRotationAnimation.animation = this.lazyImageRotationAnimation.NULL_INDEX_ANIMATION;
                     //: 
                 }
                 catch (e) {
@@ -77,7 +77,7 @@ export class LazyImageRotationAnimation extends RotationAnimation {
             paintThreedXYZ(graphics, x, y, z) {
                 try {
                     ImageCacheFactory.getInstance().insertFirst(LazyImageRotationAnimation.prototype);
-                    animation = NULL_INDEX_ANIMATION;
+                    this.lazyImageRotationAnimation.animation = this.lazyImageRotationAnimation.NULL_INDEX_ANIMATION;
                     //: 
                 }
                 catch (e) {
@@ -86,7 +86,9 @@ export class LazyImageRotationAnimation extends RotationAnimation {
                     logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
                 }
             }
-        };
+        }
+        //Otherwise - statement - EmptyStmt
+        this.animation = new ActualRotationAnimation(this);
     }
     setRealAnimation() {
         try {
@@ -98,7 +100,7 @@ export class LazyImageRotationAnimation extends RotationAnimation {
             //: 
         }
         catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, SET_REAL_ANIMATION, e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, LazyImageRotationAnimation.SET_REAL_ANIMATION, e);
         }
     }
     setScale(scaleX, scaleY) {
@@ -126,34 +128,34 @@ export class LazyImageRotationAnimation extends RotationAnimation {
         this.animation.setMaxScale(maxScaleX, maxScaleY);
     }
     nextRotation() {
-        animation = this.animationanimation;
-        animation.
-            nextRotation();
+        var rotationAnimation = this.animation;
+        ;
+        rotationAnimation.nextRotation();
     }
     previousRotation() {
-        animation = this.animationanimation;
-        animation.
-            previousRotation();
+        var rotationAnimation = this.animation;
+        ;
+        rotationAnimation.previousRotation();
     }
     nextRotationX() {
-        animation = this.animationanimation;
-        animation.
-            nextRotationX();
+        var rotationAnimation = this.animation;
+        ;
+        rotationAnimation.nextRotationX();
     }
     previousRotationX() {
-        animation = this.animationanimation;
-        animation.
-            previousRotationX();
+        var rotationAnimation = this.animation;
+        ;
+        rotationAnimation.previousRotationX();
     }
     nextRotationZ() {
-        animation = this.animationanimation;
-        animation.
-            nextRotationZ();
+        var rotationAnimation = this.animation;
+        ;
+        rotationAnimation.nextRotationZ();
     }
     previousRotationZ() {
-        animation = this.animationanimation;
-        animation.
-            previousRotationZ();
+        var rotationAnimation = this.animation;
+        ;
+        rotationAnimation.previousRotationZ();
     }
     changeBasicColor(basicColor) {
         this.animation.changeBasicColor(basicColor);
@@ -246,7 +248,7 @@ export class LazyImageRotationAnimation extends RotationAnimation {
             //: 
         }
         catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
         }
     }
     paintThreedXYZ(graphics, x, y, z) {
@@ -255,7 +257,7 @@ export class LazyImageRotationAnimation extends RotationAnimation {
             //: 
         }
         catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
         }
     }
     toString() {

@@ -23,6 +23,7 @@ export class OpenGLCapabilities extends Object {
     }
     constructor() {
         super();
+        this.CUSTOM_GL_SURFACE_VIEW = true;
         this.VERSION_1_0 = "1.0";
         this.VERSION_1_1 = "1.1";
         this.VERSION_2_0 = "2.0";
@@ -34,6 +35,10 @@ export class OpenGLCapabilities extends Object {
         this.shaderVersion = 0;
         this.glInstanceVersion = StringUtil.getInstance().EMPTY_STRING;
         this.maxTextureSize = 64;
+    }
+    isInitialized() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return true;
     }
     initCapabilities(gl = {}) {
     }

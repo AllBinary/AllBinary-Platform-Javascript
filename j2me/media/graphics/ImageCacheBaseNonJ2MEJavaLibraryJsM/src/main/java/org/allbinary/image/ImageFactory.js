@@ -42,5 +42,11 @@ export class ImageFactory extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return image;
     }
+    //@Throws(Exception.constructor)
+    createImageFromInputStream(inputStream) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return Image.createImageFromInputStream(inputStream);
+        ;
+    }
 }
 ImageFactory.instance = new ImageFactory();

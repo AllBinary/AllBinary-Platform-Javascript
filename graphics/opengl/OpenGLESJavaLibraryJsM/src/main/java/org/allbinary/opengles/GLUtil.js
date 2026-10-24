@@ -24,6 +24,7 @@ export class GLUtil extends Object {
     constructor() {
         super(...arguments);
         this.BYTES_PER_FLOAT = 4;
+        this.NULL_FLOAT_BUFFER = ByteBuffer.allocateDirect(0).asFloatBuffer();
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,7 +68,7 @@ export class GLUtil extends Object {
         var v = 0.0;
         ;
         while (byteBuffer.hasRemaining()) {
-            unsigned = byteBuffer.get() & 0xFF;
+            unsigned = (Math.round(byteBuffer.get())) & 0xFF;
             v = (unsigned) / 255;
             buffer.put(v);
         }

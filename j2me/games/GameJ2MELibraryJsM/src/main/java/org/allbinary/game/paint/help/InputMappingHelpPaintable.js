@@ -18,6 +18,8 @@ import { PlatformInputMappingFactory } from '../../../../../org/allbinary/game/i
 //not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory
+import { BasicColorUtil } from '../../../../../org/allbinary/graphics/color/BasicColorUtil.js';
+//not GWT import const BasicColorUtil
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
@@ -50,7 +52,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         this.NONE = GameKeyFactory.getInstance().NONE;
         this.EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
         this.keyMappingArray = [];
-        this.actionBasicColor = [];
+        this.actionBasicColor = BasicColorUtil.getInstance().ZERO_ARRAY;
         this.inputBasicColorArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
         //inner= member=true isStatic=
         this.UpdateMyFontProperties = class extends Object {

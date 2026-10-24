@@ -70,7 +70,11 @@ const Log = globalThis.org.allbinary.logic.communication.log.Log;
         ;
         if (anyType.constructor.name.toString() !=
             null) {
-            className = new StringMaker().append(anyType.constructor.name.toString()).append(CommonSeps.getInstance().COLON).append(Integer.toHexString(TsUtil.getInstance().hashCode(anyType))).toString();
+            var hashCodeValue = TsUtil.getInstance().hashCode(anyType);
+            ;
+            var hexString = Integer.toHexString(hashCodeValue);
+            ;
+            className = new StringMaker().append(anyType.constructor.name.toString()).append(CommonSeps.getInstance().COLON).append(hexString).toString();
         }
         var message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
         ;

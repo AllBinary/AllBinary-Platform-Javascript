@@ -22,8 +22,6 @@ import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/U
 //not GWT import const UpdateMyFontProcessor
 import { SWTJOGLProcessor } from '../../../../org/allbinary/graphics/threed/SWTJOGLProcessor.js';
 //not GWT import const SWTJOGLProcessor
-//not plain js import { LogUtil } 
-const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
@@ -38,7 +36,6 @@ import { TextChangeListener } from './TextChangeListener.js';
 export class TextAnimation extends IndexedAnimation {
     constructor(text, animationBehavior) {
         super(animationBehavior);
-        this.logUtil = LogUtil.getInstance();
         this.updateMyFontProcessor = new UpdateMyFontProcessor(this);
         this.myFontProcessor = this.updateMyFontProcessor;
         this.textArrayP = StringUtil.getInstance().ONE_EMPTY_STRING_ARRAY;

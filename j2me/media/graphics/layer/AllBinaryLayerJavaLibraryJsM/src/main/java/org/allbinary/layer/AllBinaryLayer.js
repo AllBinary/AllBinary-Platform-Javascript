@@ -31,7 +31,6 @@ const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import const ViewPosition
 import { ViewPositionBase } from '../../../org/allbinary/view/ViewPositionBase.js';
 //not GWT import const ViewPositionBase
 import { ViewPositionEvent } from '../../../org/allbinary/view/event/ViewPositionEvent.js';

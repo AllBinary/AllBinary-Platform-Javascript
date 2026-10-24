@@ -142,9 +142,7 @@ export class OpenGLUtil extends Object {
         ;
         for (var index2 = 0; index2 < size; index2++) {
             image = this.list.get(index2);
-            image = imageimage;
-            image.
-                set(gl);
+            image.set(gl);
         }
     }
 }

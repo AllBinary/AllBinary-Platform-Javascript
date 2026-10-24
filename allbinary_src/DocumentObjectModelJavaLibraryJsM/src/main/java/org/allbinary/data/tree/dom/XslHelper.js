@@ -23,7 +23,7 @@ import { StreamResult } from '../../../../../javax/xml/transform/stream/StreamRe
 //not GWT import const StreamResult
 import { StreamSource } from '../../../../../javax/xml/transform/stream/StreamSource.js';
 //not GWT import const StreamSource
-import { DomDocumentHelper } from '../../../../../org/allbinary/data/tree/dom/document/DomDocumentHelper.js';
+import { XmlDocumentHelper } from '../../../../../org/allbinary/data/tree/dom/document/XmlDocumentHelper.js';
 //not GWT import const Document
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import org.allbinary.data.tree.dom.document.DomDocumentHelper;
@@ -71,12 +71,29 @@ export class XslHelper extends Object {
         }
     }
     //@Throws(Exception.constructor)
+    translateTemplate(templates, xmlStreamSource) {
+        try {
+            var outputStream = new ByteArrayOutputStream();
+            ;
+            var streamResult = new StreamResult(outputStream);
+            ;
+            templates.newTransformer().transform(xmlStreamSource, streamResult);
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return streamResult.getOutputStream().toString();
+            ;
+            //: 
+        }
+        catch (e) {
+            throw e;
+        }
+    }
+    //@Throws(Exception.constructor)
     translate(xsltStreamSource, xmlDocument) {
         try {
             var outputStream = new ByteArrayOutputStream();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
-            return this.translate(xsltStreamSource, new StreamSource(new StringBufferInputStream(DomDocumentHelper.toString(xmlDocument))), new StreamResult(outputStream)).toString();
+            return this.translate(xsltStreamSource, new StreamSource(new StringBufferInputStream(XmlDocumentHelper.toString(xmlDocument))), new StreamResult(outputStream)).toString();
             ;
             //: 
         }
@@ -116,7 +133,7 @@ export class XslHelper extends Object {
     export(outputFile, xsltFilePath, xmlDocument) {
         try {
             outputFile.createNewFile();
-            this.translate(new StreamSource(xsltFilePath), new StreamSource(new StringBufferInputStream(DomDocumentHelper.toString(xmlDocument))), new StreamResult(outputFile));
+            this.translate(new StreamSource(xsltFilePath), new StreamSource(new StringBufferInputStream(XmlDocumentHelper.toString(xmlDocument))), new StreamResult(outputFile));
             //: 
         }
         catch (e) {

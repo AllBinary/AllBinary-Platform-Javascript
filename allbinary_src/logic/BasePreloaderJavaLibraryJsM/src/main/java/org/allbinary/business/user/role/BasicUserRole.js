@@ -13,35 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-import { Exception } from '../../../../../java/lang/Exception.js';
 //not GWT import const Serializable
-//not plain js import { BasicArrayList } 
-const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not plain js import { BasicArrayListD } 
-const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+import { BasicUserRoles } from './BasicUserRoles.js';
+//not GWT import - same folder const BasicUserRoles
 export class BasicUserRole extends Object {
-    //@Throws(Exception.constructor)
-    //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
-    static getRole(role) {
-        var roleVector = BasicUserRole.getAll();
-        ;
-        var size = roleVector.size();
-        ;
-        for (var index = 0; index < size; index++) {
-            var userRole = roleVector.get(index);
-            ;
-            if (role.compareTo(userRole.toString()) == 0) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return userRole;
-            }
-        }
-        throw new Exception("Unable to get role - Unknown Role");
-    }
-    static getAll() {
-        //if statement needs to be on the same line and ternary does not work the same way.
-        return BasicUserRole.roleVector;
-    }
     constructor(aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout) {
         this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout);
         //For kotlin this is before the body of the constructor.
@@ -53,7 +29,7 @@ export class BasicUserRole extends Object {
         this.displayValue = aDisplayValue;
         this.sessionTimeout = aSessionTimeout;
         this.sessionInactivityTimeout = aSessionInactivityTimeout;
-        BasicUserRole.roleVector.add(this);
+        BasicUserRoles.getInstance().roleVector.add(this);
     }
     getRoleId() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -85,4 +61,3 @@ export class BasicUserRole extends Object {
         ;
     }
 }
-BasicUserRole.roleVector = new BasicArrayListD();

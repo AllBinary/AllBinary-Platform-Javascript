@@ -23,22 +23,28 @@ import { BaseImageLoadingProcessor } from './BaseImageLoadingProcessor.js';
 //not GWT import - same folder const BaseImageLoadingProcessor
 import { ABRunnable } from './ABRunnable.js';
 //not GWT import - same folder const ABRunnable
+//import { ImageCacheRunnable } from './ImageCacheRunnable.js';
+//not GWT import - same folder const ImageCacheRunnable
 import { ImageThreadPool } from './ImageThreadPool.js';
 //not GWT import - same folder const ImageThreadPool
 export class ConcurrentImageLoadingProcessor extends BaseImageLoadingProcessor {
     constructor(imageCache) {
         super();
         this.logUtil = LogUtil.getInstance();
-        this.commonStrings = CommonStrings.getInstance();
-        this.runnable = new class extends ABRunnable {
+        //inner= member=true isStatic=
+        this.ImageCacheRunnable = class extends ABRunnable {
+            constructor(imageCache) {
+                super();
+                this.imageCache = imageCache;
+            }
             run() {
                 var logUtil = LogUtil.getInstance();
                 ;
                 try {
                     this.setRunning(true);
-                    imageCache.waitForLoadNow();
-                    imageCache.loadImages();
-                    imageCache.loadRemainingAnimations();
+                    this.imageCache.waitForLoadNow();
+                    this.imageCache.loadImages();
+                    this.imageCache.loadRemainingAnimations();
                     this.setRunning(false);
                     var progressCanvas = ProgressCanvasFactory.getInstance();
                     ;
@@ -49,11 +55,13 @@ export class ConcurrentImageLoadingProcessor extends BaseImageLoadingProcessor {
                 }
                 catch (e) {
                     this.setRunning(false);
+                    var commonStrings = CommonStrings.getInstance();
+                    ;
                     logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
                 }
             }
         };
-        this.imageCache = imageCache;
+        this.runnable = new this.ImageCacheRunnable(imageCache);
     }
     runTask() {
         if (!this.runnable.isRunning()) {

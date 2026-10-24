@@ -20,6 +20,16 @@ export class TsUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TsUtil.instance;
     }
+    longBitsToDouble(bits) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return java.lang.Double.longBitsToDouble(bits);
+        ;
+    }
+    intBitsToFloat(bits) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return java.lang.Float.intBitsToFloat(bits);
+        ;
+    }
     hashCode(anyType = {}) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return anyType.hashCode();
@@ -30,6 +40,11 @@ export class TsUtil extends Object {
         var anyType = any;
         ;
         anyType.wait(timeoutMillis);
+    }
+    compareTo(a, b) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return a.compareTo(b);
+        ;
     }
 }
 TsUtil.instance = new TsUtil();

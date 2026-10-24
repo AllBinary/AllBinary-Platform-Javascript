@@ -18,6 +18,8 @@ import { GravityUtil } from '../../../../../org/allbinary/game/physics/accelerat
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const GeographicMapCellType
+import { SimpleGeographicMapCellPositionFactory } from '../../../../../org/allbinary/media/graphics/geography/map/SimpleGeographicMapCellPositionFactory.js';
+//not GWT import const SimpleGeographicMapCellPositionFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapTopViewLayerBehavior } from './GeographicMapTopViewLayerBehavior.js';
 //not GWT import - same folder const TopViewCharacterInterface
@@ -27,14 +29,14 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
         this.logUtil = LogUtil.getInstance();
         this.gravityUtil = GravityUtil.getInstance();
         this.geographicMapBehavior = new MultiGeographicMapBehavior();
+        this.previousGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
         //For kotlin this is before the body of the constructor.
         this.autoStepBlocks = autoStepBlocks;
         this.offsetY = offsetY;
     }
     //@Throws(Exception.constructor)
     gravity(velocityProperties, geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition) {
-        if (geographicMapCellPosition !=
-            null) {
+        if (geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION) {
             this.geographicMapBehavior.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition);
             var hasSolidBlock = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray);
             ;
@@ -81,8 +83,7 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
     getGeographicMapCellPositionIfNotSolidBlockOrOffMapLocation(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer, x, y) {
         var geographicMapCellPosition = this.getPosition(geographicMapInterfaceArray, layer, x, y);
         ;
-        if (this.previousGeographicMapCellPosition != geographicMapCellPosition && geographicMapCellPosition !=
-            null) {
+        if (this.previousGeographicMapCellPosition != geographicMapCellPosition && geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION) {
             var possibleStepGeographicMapCellPosition = geographicMapCellPosition;
             ;
             var tiledLayer = geographicMapInterfaceArray[0].getAllBinaryTiledLayer();
@@ -93,10 +94,9 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
                 ;
                 if (hasSolidBlock) {
                     velocityProperties.getVelocityXBasicDecimalP().setint(0);
-                    this.previousGeographicMapCellPosition =
-                        null;
+                    this.previousGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
                     //if statement needs to be on the same line and ternary does not work the same way.
-                    return null;
+                    return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
                 }
                 else {
                     this.previousGeographicMapCellPosition = possibleStepGeographicMapCellPosition;
@@ -105,18 +105,16 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
                 }
             }
         }
-        this.previousGeographicMapCellPosition =
-            null;
+        this.previousGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return null;
+        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
     }
     //@Throws(Exception.constructor)
     moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition, velocityProperties, layer, x, y) {
-        if (geographicMapCellPosition !=
-            null) {
-            layer = layerlayer;
-            layer.
-                terrainMove(geographicMapInterfaceArray, geographicMapCellTypeArray, x, y);
+        if (geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION) {
+            var topViewCharacterInterface = layer;
+            ;
+            topViewCharacterInterface.terrainMove(geographicMapInterfaceArray, geographicMapCellTypeArray, x, y);
         }
         else {
         }
@@ -126,8 +124,7 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
         var geographicMapCellPosition = this.getGeographicMapCellPositionIfNotSolidBlockOrOffMapLocation(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer, x, y);
         ;
         this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition, velocityProperties, layer, x, y);
-        if (geographicMapCellPosition ==
-            null) {
+        if (geographicMapCellPosition == SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
@@ -140,8 +137,7 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
     left(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer) {
         var geographicMapCellPosition = this.getLeftPosition(geographicMapInterfaceArray, layer);
         ;
-        if (geographicMapCellPosition !=
-            null) {
+        if (geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION) {
             var possibleStepGeographicMapCellPosition = geographicMapInterfaceArray[0].getGeographicMapCellPositionFactory().getAt(geographicMapCellPosition.getColumn(), geographicMapCellPosition.getRow() - 1);
             ;
             this.geographicMapBehavior.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition);
@@ -149,18 +145,18 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
             ;
             if (hasSolidBlock) {
                 if (this.autoStepBlocks) {
-                    layer = layerlayer;
-                    layer.
-                        leftp();
+                    var topViewCharacterInterface = layer;
+                    ;
+                    topViewCharacterInterface.leftp();
                 }
                 else {
                     velocityProperties.getVelocityXBasicDecimalP().setint(0);
                 }
             }
             else {
-                layer = layerlayer;
-                layer.
-                    leftp();
+                var topViewCharacterInterface = layer;
+                ;
+                topViewCharacterInterface.leftp();
             }
         }
     }
@@ -168,8 +164,7 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
     right(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer) {
         var geographicMapCellPosition = this.getRightPosition(geographicMapInterfaceArray, layer);
         ;
-        if (geographicMapCellPosition !=
-            null) {
+        if (geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION) {
             var possibleStepGeographicMapCellPosition = geographicMapInterfaceArray[0].getGeographicMapCellPositionFactory().getAt(geographicMapCellPosition.getColumn(), geographicMapCellPosition.getRow() - 1);
             ;
             this.geographicMapBehavior.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition);
@@ -177,18 +172,18 @@ export class GeographicMapTopViewGameLayerBehavior1 extends GeographicMapTopView
             ;
             if (hasSolidBlock) {
                 if (this.autoStepBlocks) {
-                    layer = layerlayer;
-                    layer.
-                        rightp();
+                    var topViewCharacterInterface = layer;
+                    ;
+                    topViewCharacterInterface.rightp();
                 }
                 else {
                     velocityProperties.getVelocityXBasicDecimalP().setint(0);
                 }
             }
             else {
-                layer = layerlayer;
-                layer.
-                    rightp();
+                var topViewCharacterInterface = layer;
+                ;
+                topViewCharacterInterface.rightp();
             }
         }
     }

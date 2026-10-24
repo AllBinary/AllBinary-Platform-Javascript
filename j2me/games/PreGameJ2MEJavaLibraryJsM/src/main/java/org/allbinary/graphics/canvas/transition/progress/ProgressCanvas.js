@@ -49,6 +49,8 @@ import { PathFindingThreadPool } from '../../../../../../org/allbinary/thread/Pa
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import { ProgressPaintable } from './ProgressPaintable.js';
 //not GWT import - same folder const ProgressPaintable
+import { ProgressEndListener } from './ProgressEndListener.js';
+//not GWT import - same folder const ProgressEndListener
 export class ProgressCanvas extends RunnableCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, false);
@@ -85,6 +87,7 @@ export class ProgressCanvas extends RunnableCanvas {
             }
         };
         this.inGameProcessor = Processor.getInstance();
+        this.progressEndListener = ProgressEndListener.instance;
         this.backgroundLabel = "Background AI Game Loading...";
         this.START_BACKGROUND = "startBackground";
         this.ADD_PORTION = "addPortion";
@@ -138,6 +141,7 @@ export class ProgressCanvas extends RunnableCanvas {
         this.inGame();
     }
     inGame() {
+        this.progressEndListener.onEndEvent();
         this.inGameProcessor = this.IN_GAME_PROCESSOR;
     }
     end() {
@@ -147,8 +151,17 @@ export class ProgressCanvas extends RunnableCanvas {
         this.paintable = NullPaintable.getInstance();
     }
     endFromInitialLazyLoadingComplete() {
+        this.progressEndListener.onEndEvent();
         this.gauge.setValue(this.getMaxValue());
         this.inGameProcessor = this.IN_GAME_PROCESSOR;
+    }
+    isInGame() {
+        if (this.inGameProcessor == this.IN_GAME_PROCESSOR) {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return true;
+        }
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return false;
     }
     endIfPaintedSinceStart() {
     }

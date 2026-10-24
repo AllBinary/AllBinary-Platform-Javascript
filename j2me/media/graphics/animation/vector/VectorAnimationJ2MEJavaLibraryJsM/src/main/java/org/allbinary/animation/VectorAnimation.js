@@ -14,8 +14,6 @@
 //not GWT import const BasicColor
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } 
-const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
 //not GWT import const PrimitiveIntUtil
 //not plain js import { CircularIndexUtil } 
@@ -38,7 +36,6 @@ export class VectorAnimation extends IndexedAnimation {
     }
     constructor(currentPoints, basicColor, animationBehavior) {
         super(animationBehavior);
-        this.logUtil = LogUtil.getInstance();
         this.currentPoints = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY_ARRAY;
         this.circularIndexUtil = CircularIndexUtil.createInstance(0);
         //For kotlin this is before the body of the constructor.

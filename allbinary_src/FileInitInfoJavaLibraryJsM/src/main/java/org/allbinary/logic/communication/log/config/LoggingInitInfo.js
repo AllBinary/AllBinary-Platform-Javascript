@@ -18,6 +18,8 @@ import { DomSearchHelper } from '../../../../../../org/allbinary/data/tree/dom/D
 //not GWT import const DomSearchHelper
 import { DomDocumentHelper } from '../../../../../../org/allbinary/data/tree/dom/document/DomDocumentHelper.js';
 //not GWT import const DomDocumentHelper
+import { XmlDocumentHelper } from '../../../../../../org/allbinary/data/tree/dom/document/XmlDocumentHelper.js';
+//not GWT import const XmlDocumentHelper
 import { PATH_GLOBALS } from '../../../../../../org/allbinary/globals/PATH_GLOBALS.js';
 //not GWT import const PATH_GLOBALS
 import { URLGLOBALS } from '../../../../../../org/allbinary/globals/URLGLOBALS.js';
@@ -183,7 +185,7 @@ export class LoggingInitInfo extends Object {
             var document = LoggingInitInfo.getDoc();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
-            return DomDocumentHelper.toString(document);
+            return XmlDocumentHelper.toString(document);
             ;
             //: 
         }

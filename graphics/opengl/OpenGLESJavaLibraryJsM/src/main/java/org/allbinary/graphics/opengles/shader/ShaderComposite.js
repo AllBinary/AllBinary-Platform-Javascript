@@ -21,7 +21,7 @@ import { NullOpenGLTextureProcessor } from './NullOpenGLTextureProcessor.js';
 export class ShaderComposite extends Object {
     constructor(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor) {
         super();
-        this.useProgramShaderOpenGLProcessor = null;
+        this.useProgramShaderOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
         this.shaderMatrixOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
         this.colorEnableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
         this.normalEnableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();

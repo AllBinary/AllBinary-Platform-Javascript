@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const IndexedAnimationInterface
+//not GWT import - same folder const IndexedAnimation
 import { NullIndexedAnimation } from './NullIndexedAnimation.js';
 //not GWT import - same folder const NullIndexedAnimation
 import { IndexedAnimationBehavior } from './IndexedAnimationBehavior.js';

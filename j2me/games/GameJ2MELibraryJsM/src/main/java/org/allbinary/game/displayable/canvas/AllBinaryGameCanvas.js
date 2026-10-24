@@ -579,6 +579,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     //@Throws(Exception.constructor)
     processorInit() {
         this.setMainStateProcessor(Processor.getInstance());
+        this.setProcessGameProcessorInit();
+    }
+    setProcessGameProcessorInit() {
         this.setProcessGameProcessor(new GameProcessor(this));
     }
     initSpecialPaint() {

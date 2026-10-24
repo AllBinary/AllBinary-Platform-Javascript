@@ -35,7 +35,20 @@ export class OpenGLESGL11VBOImage extends OpenGLESImage {
         super(image, bitmapFactory, textureFactory);
         this.glUtil = GLUtil.getInstance();
         this.textureVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder()).asFloatBuffer();
-        this.regionRectangleFloatArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        this.regionRectangleFloatArray = [
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        //Otherwise - values - DoubleLiteralExpr
+        ];
         this.regionRectangleVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 3).order(ByteOrder.nativeOrder()).asFloatBuffer();
         this.regionTextureRectangleFloatArray = new Array(8);
         this.regionTextureVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder()).asFloatBuffer();
@@ -74,8 +87,8 @@ export class OpenGLESGL11VBOImage extends OpenGLESImage {
         this.regionRectangleFloatArray[9] = this.regionRectangleFloatArray[3];
         this.regionRectangleFloatArray[10] = this.regionRectangleFloatArray[7];
         this.regionTextureRectangleFloatArray[0] = x_src / this.getWidth();
-        this.regionTextureRectangleFloatArray[1] = () / this.getHeight();
-        this.regionTextureRectangleFloatArray[2] = () / this.getWidth();
+        this.regionTextureRectangleFloatArray[1] = (y_src + height) / this.getHeight();
+        this.regionTextureRectangleFloatArray[2] = (x_src + width) / this.getWidth();
         this.regionTextureRectangleFloatArray[3] = this.regionTextureRectangleFloatArray[1];
         this.regionTextureRectangleFloatArray[4] = this.regionTextureRectangleFloatArray[0];
         this.regionTextureRectangleFloatArray[5] = y_src / this.getHeight();
@@ -96,9 +109,9 @@ export class OpenGLESGL11VBOImage extends OpenGLESImage {
     }
     draw(gl, x, y, z) {
         this.regionRectangleFloatArray[0] = x;
-        this.regionRectangleFloatArray[7] = DisplayInfoSingleton.getInstance().getLastHeight() - y;
+        this.regionRectangleFloatArray[7] = (DisplayInfoSingleton.getInstance().getLastHeight() - y);
         this.regionRectangleFloatArray[1] = this.regionRectangleFloatArray[7] - this.getHeight();
-        this.regionRectangleFloatArray[3] = x + this.getWidth();
+        this.regionRectangleFloatArray[3] = (x + this.getWidth());
         this.regionRectangleFloatArray[4] = this.regionRectangleFloatArray[1];
         this.regionRectangleFloatArray[6] = x;
         this.regionRectangleFloatArray[9] = this.regionRectangleFloatArray[3];

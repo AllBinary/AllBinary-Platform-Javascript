@@ -23,6 +23,8 @@ export class GraphicsStrings extends Object {
         this.ROTATION = "rotation";
         this.OPACITY = "opacity";
         this.HTML = "HTML";
+        this.WIDTH = "width";
+        this.HEIGHT = "height";
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

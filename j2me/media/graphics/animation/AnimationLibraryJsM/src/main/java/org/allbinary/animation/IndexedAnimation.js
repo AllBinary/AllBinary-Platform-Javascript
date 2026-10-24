@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../java/lang/Exception.js';
+//not plain js import { LogUtil } 
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
 //not GWT import const PrimitiveIntUtil
 //not plain js import { CommonStrings } 
@@ -23,6 +25,7 @@ import { Animation } from './Animation.js';
 export class IndexedAnimation extends Animation {
     constructor(animationBehavior) {
         super();
+        this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.animationBehaviorP = animationBehavior;
     }

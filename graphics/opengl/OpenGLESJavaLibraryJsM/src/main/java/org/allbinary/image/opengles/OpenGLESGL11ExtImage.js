@@ -33,7 +33,7 @@ export class OpenGLESGL11ExtImage extends OpenGLESImage {
         this.logUtil = LogUtil.getInstance();
         this.a = 0;
         //For kotlin this is before the body of the constructor.
-        this.onDisplayChangeEvent(null);
+        this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance().displayChangeEvent);
         this.rectangle = [0, this.getHeight(), this.getWidth(), -this.getHeight(),];
     }
     onDisplayChangeEvent(displayChangeEvent) {
@@ -47,7 +47,7 @@ export class OpenGLESGL11ExtImage extends OpenGLESImage {
         }
     }
     set(gl) {
-        this.onDisplayChangeEvent(null);
+        this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance().displayChangeEvent);
         var gl11 = gl;
         ;
         if (super.initTexture(gl11)) {
@@ -60,9 +60,9 @@ export class OpenGLESGL11ExtImage extends OpenGLESImage {
     draw(gl, x, y, z) {
         gl.glEnable(GL10.GL_TEXTURE_2D);
         gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties.textureID);
-        gl = glgl;
-        gl.
-            glDrawTexfOES(x, this.a - y, z, this.getWidth(), this.getHeight());
+        var gl11Ext = gl;
+        ;
+        gl11Ext.glDrawTexfOES(x, (this.a - y), z, this.getWidth(), this.getHeight());
         gl.glDisable(GL10.GL_TEXTURE_2D);
     }
 }

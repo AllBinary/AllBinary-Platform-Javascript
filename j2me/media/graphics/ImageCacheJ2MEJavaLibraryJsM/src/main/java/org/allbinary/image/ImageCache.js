@@ -41,7 +41,6 @@ export class ImageCache extends ImageCacheBase {
     constructor() {
         super();
         this.commonStrings = CommonStrings.getInstance();
-        this.systemWrapper = ABSystemWrapper.getInstance();
         this.tsUtil = TsUtil.getInstance();
     }
     addListener(renderer = {}) {

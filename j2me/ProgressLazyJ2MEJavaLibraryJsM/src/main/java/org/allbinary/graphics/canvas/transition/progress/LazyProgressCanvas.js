@@ -17,15 +17,12 @@ import { NullPaintable } from '../../../../../../org/allbinary/graphics/paint/Nu
 //not GWT import const NullPaintable
 import { ImageCacheFactory } from '../../../../../../org/allbinary/image/ImageCacheFactory.js';
 //not GWT import const ImageCacheFactory
-//not plain js import { LogUtil } 
-const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressCanvas } from './ProgressCanvas.js';
 //not GWT import - same folder const ProgressCanvas
 export class LazyProgressCanvas extends ProgressCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(title, backgroundBasicColor, foregroundBasicColor);
-        this.logUtil = LogUtil.getInstance();
         //For kotlin this is before the body of the constructor.
     }
     start() {
@@ -36,7 +33,7 @@ export class LazyProgressCanvas extends ProgressCanvas {
         try {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.END_METHOD_NAME);
             this.endActual();
-            this.paintable = GAUGE_PAINTABLE;
+            this.paintable = this.GAUGE_PAINTABLE;
             ImageCacheFactory.getInstance().runTask();
             ImageCacheFactory.getInstance().progressEnded();
             //: 
@@ -46,14 +43,14 @@ export class LazyProgressCanvas extends ProgressCanvas {
         }
     }
     inGame() {
-        inGameProcessor = Processor.getInstance();
+        this.inGameProcessor = Processor.getInstance();
     }
     endFromInitialLazyLoadingComplete() {
         super.endFromInitialLazyLoadingComplete();
         this.paintable = NullPaintable.getInstance();
     }
     endIfPaintedSinceStart() {
-        if (this.paintable == GAUGE_PAINTABLE && this.hasPainted) {
+        if (this.paintable == this.GAUGE_PAINTABLE && this.hasPainted) {
             this.endFromInitialLazyLoadingComplete();
         }
     }

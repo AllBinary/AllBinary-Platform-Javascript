@@ -61,7 +61,7 @@ export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
                         }
                     }
                     else if (mapArray[index][index2] == 17) {
-                        var randomInt = randomFactory.getAbsoluteNextIntAllowZero(3);
+                        var randomInt = this.randomFactory.getAbsoluteNextIntAllowZero(3);
                         ;
                         if (randomInt == 0) {
                             mapData[index][index2] = 17;

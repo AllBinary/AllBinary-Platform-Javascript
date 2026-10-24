@@ -21,3 +21,4 @@ import { PointFactory } from './PointFactory.js';
 export class RectangleFactory extends Object {
 }
 RectangleFactory.SINGLETON = new Rectangle(PointFactory.getInstance().ZERO_ZERO, 0, 0);
+RectangleFactory.ARRAY_OF_ARRAYS = new Array(0).fill(null).map(() => new Array(0).fill(null));

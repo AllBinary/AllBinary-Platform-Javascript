@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+import { ByteArrayOutputStream } from '../../../../../../java/io/ByteArrayOutputStream.js';
+//not GWT import const ByteArrayOutputStream
 import { StringReader } from '../../../../../../java/io/StringReader.js';
 //not GWT import const StringReader
 import { StringWriter } from '../../../../../../java/io/StringWriter.js';
@@ -43,6 +45,29 @@ export class XmlDocumentHelper extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return XmlDocumentHelper.instance;
+    }
+    //@Throws(Exception.constructor)
+    static toString(document) {
+        try {
+            var domSource = new DOMSource(document);
+            ;
+            var byteArrayOutputStream = new ByteArrayOutputStream();
+            ;
+            var streamResult = new StreamResult(byteArrayOutputStream);
+            ;
+            var copyTransformerFactory = TransformerFactory.newInstance();
+            ;
+            var copyTransformer = copyTransformerFactory.newTransformer();
+            ;
+            copyTransformer.transform(domSource, streamResult);
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return byteArrayOutputStream.toString();
+            ;
+            //: 
+        }
+        catch (e) {
+            throw e;
+        }
     }
     constructor() {
         super();

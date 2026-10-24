@@ -27,6 +27,14 @@ export class StringMaker extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this;
     }
+    appendCharArray(charArray, start, end) {
+        this.ensureCapacity(this.currentLength + (end - start));
+        for (var index = start; index < end; index++) {
+            this.charArray[this.currentLength++] = charArray[index];
+        }
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return this;
+    }
     appendbyte(b) {
         this.append(b.toString());
         //if statement needs to be on the same line and ternary does not work the same way.

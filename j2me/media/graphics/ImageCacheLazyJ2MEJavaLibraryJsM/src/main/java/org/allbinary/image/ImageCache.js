@@ -69,11 +69,11 @@ import { ImageCacheBase } from './ImageCacheBase.js';
 //not GWT import - same folder const NotHTMLProcessor
 //import { HTMLEndProcessor } from './HTMLEndProcessor.js';
 //not GWT import - same folder const HTMLEndProcessor
+import { ImageFactory } from './ImageFactory.js';
+//not GWT import - same folder const ImageFactory
 export class ImageCache extends ImageCacheBase {
     constructor() {
         super();
-        this.logUtil = LogUtil.getInstance();
-        this.systemWrapper = ABSystemWrapper.getInstance();
         this.tsUtil = TsUtil.getInstance();
         this.concurrentImageLoadingProcessor = new ConcurrentImageLoadingProcessor(this);
         this.commonStrings = CommonStrings.getInstance();
@@ -150,7 +150,7 @@ export class ImageCache extends ImageCacheBase {
             this.processor = new this.NotHTMLProcessor();
             this.endProcessor = new this.NotHTMLEndProcessor();
             try {
-                runTask();
+                this.runTask();
                 //: 
             }
             catch (e) {
@@ -310,9 +310,11 @@ export class ImageCache extends ImageCacheBase {
             if (image.getImage() !=
                 null) {
                 if (image.setReady()) {
-                    this.totalLoaded++;
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return true;
+                    if (image.isReady()) {
+                        this.totalLoaded++;
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true;
+                    }
                 }
             }
             else {
@@ -339,9 +341,9 @@ export class ImageCache extends ImageCacheBase {
     }
     //@Throws(Exception.constructor)
     creatImage(key) {
-        var inputStream = resourceUtil.getResourceAsStream(key);
+        var inputStream = this.resourceUtil.getResourceAsStream(key);
         ;
-        var image = Image.createImage(inputStream);
+        var image = ImageFactory.getInstance().createImageFromInputStream(inputStream);
         ;
         image.setName(key);
         //if statement needs to be on the same line and ternary does not work the same way.

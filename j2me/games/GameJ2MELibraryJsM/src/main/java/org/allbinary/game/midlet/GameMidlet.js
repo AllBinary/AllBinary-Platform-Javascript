@@ -637,7 +637,7 @@ export class GameMidlet extends ProgressMidlet {
             //: 
         }
         catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION_LABEL + command.getLabel(), this, this.midletStrings.COMMAND_ACTION, e);
+            this.logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(command.getLabel()).toString(), this, this.midletStrings.COMMAND_ACTION, e);
             if (command != GameCommandsFactory.getInstance().EXIT_COMMAND) {
                 this.exitProgress(false);
             }

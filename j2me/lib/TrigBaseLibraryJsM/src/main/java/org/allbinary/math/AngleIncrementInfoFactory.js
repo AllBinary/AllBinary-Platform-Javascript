@@ -30,15 +30,22 @@ export class AngleIncrementInfoFactory extends Object {
     getAt(angleIncrement) {
         var halfAngleIncrement = (Math.round(angleIncrement) >> 1);
         ;
+        var angleIncrementInfo;
+        ;
         var angleIncrementInfoCanBeNull = this.angleIncrementInfo[halfAngleIncrement];
         ;
         if (angleIncrementInfoCanBeNull ==
             null) {
-            angleIncrementInfoCanBeNull = new AngleIncrementInfo(angleIncrement);
-            this.angleIncrementInfo[halfAngleIncrement] = angleIncrementInfoCanBeNull;
+            angleIncrementInfo = new AngleIncrementInfo(angleIncrement);
+            this.angleIncrementInfo[halfAngleIncrement] = angleIncrementInfo;
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return angleIncrementInfo;
+        }
+        else {
+            angleIncrementInfo = angleIncrementInfoCanBeNull;
         }
         //if statement needs to be on the same line and ternary does not work the same way.
-        return angleIncrementInfoCanBeNull;
+        return angleIncrementInfo;
     }
 }
 AngleIncrementInfoFactory.instance = new AngleIncrementInfoFactory();

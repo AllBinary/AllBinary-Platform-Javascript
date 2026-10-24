@@ -27,6 +27,7 @@ export class TrackedStrings extends Object {
         this.LIST_FILES_COMMAND = "ls-files";
         this.ERROR_UNMATCH_OPTION = "--error-unmatch";
         this.PATHSPEC_SEPARATOR = "--";
+        this.SEP_BY_NULL_CHAR_INSTEAD_OF_NEW_LINE = "-z";
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

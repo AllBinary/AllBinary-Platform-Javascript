@@ -41,7 +41,20 @@ export class OpenGLESGL10Image extends OpenGLESImage {
                 this.textureVertexFloatBuffer = OpenGLESGL10Image.prototype.textureVertexFloatBuffer;
                 this.regionTextureRectangleFloatArray = new Array(8);
                 this.regionTextureVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder()).asFloatBuffer();
-                this.regionRectangleFloatArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                this.regionRectangleFloatArray = [
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                //Otherwise - values - DoubleLiteralExpr
+                ];
                 this.regionRectangleVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 3).order(ByteOrder.nativeOrder()).asFloatBuffer();
                 this.openGLESImageProperties = OpenGLESGL10Image.prototype.openGLESImageProperties;
             }
@@ -57,8 +70,8 @@ export class OpenGLESGL10Image extends OpenGLESImage {
                 this.regionRectangleFloatArray[9] = this.regionRectangleFloatArray[3];
                 this.regionRectangleFloatArray[10] = this.regionRectangleFloatArray[7];
                 this.regionTextureRectangleFloatArray[0] = x_src / imageWidth;
-                this.regionTextureRectangleFloatArray[1] = () / imageHeight;
-                this.regionTextureRectangleFloatArray[2] = () / imageWidth;
+                this.regionTextureRectangleFloatArray[1] = (y_src + height) / imageHeight;
+                this.regionTextureRectangleFloatArray[2] = (x_src + width) / imageWidth;
                 this.regionTextureRectangleFloatArray[3] = this.regionTextureRectangleFloatArray[1];
                 this.regionTextureRectangleFloatArray[4] = this.regionTextureRectangleFloatArray[0];
                 this.regionTextureRectangleFloatArray[5] = y_src / imageHeight;

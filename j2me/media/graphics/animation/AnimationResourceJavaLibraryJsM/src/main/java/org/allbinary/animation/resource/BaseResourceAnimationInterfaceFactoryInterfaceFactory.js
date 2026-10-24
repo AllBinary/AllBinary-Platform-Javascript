@@ -94,8 +94,19 @@ export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Objec
     }
     //@Throws(Exception.constructor)
     getRectangleArrayOfArrays(resource) {
-        //if statement needs to be on the same line and ternary does not work the same way.
-        return this.rectangleArrayOfArraysHashtable.get(resource);
+        var valueCanBeNull = this.rectangleArrayOfArraysHashtable.get(resource);
+        ;
+        if (valueCanBeNull !=
+            null) {
+            var rectangleArrayOfArrays = valueCanBeNull;
+            ;
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return rectangleArrayOfArrays;
+        }
+        else {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return RectangleFactory.ARRAY_OF_ARRAYS;
+        }
     }
     //@Throws(Exception.constructor)
     addRectangleArrayOfArrays(resource, rectangleArrayOfArrays) {

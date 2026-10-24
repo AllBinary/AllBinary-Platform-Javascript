@@ -70,6 +70,7 @@ export class CommonStrings extends Object {
         this.TOSTRING = "toString";
         this.ADD_LISTENER = "addListener";
         this.REMOVE_LISTENER = "removeListener";
+        this.SIZE = "size";
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

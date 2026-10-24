@@ -13,9 +13,18 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
+//not GWT import const BaseImageAnimationFactory
+//not plain js import { LogUtil } 
+const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } 
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not GWT import const ScaleProperties
 import { ImageJ2MEScaleUtil } from '../../../org/allbinary/media/image/ImageJ2MEScaleUtil.js';
 //not GWT import const ImageJ2MEScaleUtil
+//not plain js import { CommonLabels } 
+const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
+//not plain js import { CommonStrings } 
+const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AnimationFactoryImageScaleUtil extends Object {
     constructor() {
@@ -39,7 +48,11 @@ export class AnimationFactoryImageScaleUtil extends Object {
                 scaledImage = image;
             }
             else {
-                scaledImage = this.imageScaleUtil.scale(image, Math.round((scaleX * width)), Math.round((scaleY * height)));
+                var scaledWidth = Math.round((scaleX * width));
+                ;
+                var scaledHeight = Math.round((scaleY * height));
+                ;
+                scaledImage = this.imageScaleUtil.scale(image, scaledWidth, scaledHeight);
             }
         }
         else {

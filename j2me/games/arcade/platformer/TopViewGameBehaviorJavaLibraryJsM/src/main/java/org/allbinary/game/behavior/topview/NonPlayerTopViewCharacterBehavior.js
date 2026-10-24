@@ -23,6 +23,8 @@ import { TerrainEventHandler } from '../../../../../org/allbinary/game/terrain/T
 //not GWT import const AllBinaryLayer
 import { AngleFactory } from '../../../../../org/allbinary/math/AngleFactory.js';
 //not GWT import const GeographicMapCellType
+import { SimpleGeographicMapCellPositionFactory } from '../../../../../org/allbinary/media/graphics/geography/map/SimpleGeographicMapCellPositionFactory.js';
+//not GWT import const SimpleGeographicMapCellPositionFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TopViewCharacterBehavior } from './TopViewCharacterBehavior.js';
 //not GWT import - same folder const TopViewCharacterBehavior
@@ -37,7 +39,7 @@ export class NonPlayerTopViewCharacterBehavior extends TopViewCharacterBehavior 
         var maxColumns = geographicMapInterfaceArray[0].getAllBinaryTiledLayer().getColumns();
         ;
         if (geographicMapCellPosition.getColumn() > 0 && geographicMapCellPosition.getColumn() < maxColumns) {
-            var nextTerrainGeographicMapCellPosition = null;
+            var nextTerrainGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
             ;
             var geographicMapCellPositionFactory = geographicMapInterfaceArray[0].getGeographicMapCellPositionFactory();
             ;

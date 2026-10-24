@@ -15,6 +15,8 @@
 import { Object } from '../../../java/lang/Object.js';
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+//not plain js import { StringMaker } 
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
@@ -24,7 +26,7 @@ export class PropertyInitUtil extends Object {
         ;
         var logUtil = LogUtil.getInstance();
         ;
-        logUtil.putF("PropertyInitUtil: " + value, logUtil, commonStrings.CONSTRUCTOR);
+        logUtil.putF(new StringMaker().append("PropertyInitUtil: ").appendint(value).toString(), logUtil, commonStrings.CONSTRUCTOR);
         //if statement needs to be on the same line and ternary does not work the same way.
         return PropertyInitUtil.instance;
     }

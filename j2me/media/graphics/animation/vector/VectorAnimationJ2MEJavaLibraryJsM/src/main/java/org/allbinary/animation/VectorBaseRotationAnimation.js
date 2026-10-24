@@ -14,8 +14,6 @@
 //not GWT import const BasicColor
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not plain js import { LogUtil } 
-const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveIntUtil.js';
 //not GWT import const AngleInfo
 //not plain js import { CircularIndexUtil } 
@@ -26,7 +24,6 @@ import { RotationAnimation } from './RotationAnimation.js';
 export class VectorBaseRotationAnimation extends RotationAnimation {
     constructor(angleInfo, currentPoints, basicColor, animationBehavior) {
         super(angleInfo, CircularIndexUtil.createInstance(360 / angleInfo.getAngleIncrementInfo().getAngleIncrement()), animationBehavior);
-        this.logUtil = LogUtil.getInstance();
         this.currentPoints = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY_ARRAY;
         //For kotlin this is before the body of the constructor.
         this.setPoints(currentPoints);

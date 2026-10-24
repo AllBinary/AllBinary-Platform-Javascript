@@ -18,10 +18,18 @@ import { Image } from '../../../../javax/microedition/lcdui/Image.js';
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const PlaynMutableImage
+//not plain js import { Canvas } 
+const Canvas = globalThis.playn.core.Canvas;
 //not plain js import { CoreImage } 
 const CoreImage = globalThis.playn.core.CoreImage;
 //not plain js import { ImageImpl } 
 const ImageImpl = globalThis.playn.core.ImageImpl;
+//not plain js import { PlayN } 
+const PlayN = globalThis.playn.core.PlayN;
+//not plain js import { HtmlGraphics } 
+const HtmlGraphics = globalThis.playn.html.HtmlGraphics;
+//not plain js import { HtmlImage } 
+const HtmlImage = globalThis.playn.html.HtmlImage;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageJ2MEScaleUtil extends Object {
     static getInstance() {
@@ -60,9 +68,13 @@ export class ImageJ2MEScaleUtil extends Object {
         ;
         var htmlImage = scaledImage;
         ;
-        var canvasImage = htmlImage.getImage();
+        var scaledPlayNImage = htmlImage.getImage();
         ;
-        canvasImage.draw(originalPlayNImage, 0, 0, scaledImage.getWidth(), scaledImage.getHeight(), 0, 0, image.getWidth(), image.getHeight());
+        var canvas = graphics.get(scaledPlayNImage);
+        ;
+        originalPlayNImage = originalPlayNImageoriginalPlayNImage;
+        originalPlayNImage.
+            draw(canvas.gc(), 0, 0, scaledImage.getWidth(), scaledImage.getHeight(), 0, 0, image.getWidth(), image.getHeight());
         //if statement needs to be on the same line and ternary does not work the same way.
         return scaledImage;
     }
