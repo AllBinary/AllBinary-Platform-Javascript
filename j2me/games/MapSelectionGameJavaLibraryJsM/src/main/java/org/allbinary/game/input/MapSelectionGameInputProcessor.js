@@ -51,12 +51,12 @@ export class MapSelectionGameInputProcessor extends Processor {
                 try {
                     this.setRunning(true);
                     SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
-                    var track = preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
+                    var track = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
                     ;
-                    var wave = raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
+                    var wave = this.raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
                     ;
-                    gameCanvas.getLayerManager().getGameInfo().setCurrentLevel(wave);
-                    gameCanvas.buildGameInit(false);
+                    this.gameCanvas.getLayerManager().getGameInfo().setCurrentLevel(wave);
+                    this.gameCanvas.buildGameInit(false);
                     GameKeyEventHandler.getInstance().removeListener(getPlayerGameInput());
                     this.setRunning(false);
                     //: 
@@ -101,8 +101,8 @@ export class MapSelectionGameInputProcessor extends Processor {
                 var selectedIndex = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex();
                 ;
                 if (selectedIndex < this.lockedIndex || !LockedUtil.getInstance().isLocked()) {
-                    if (!abRunnable.isRunning()) {
-                        abRunnable.setRunning(true);
+                    if (!this.abRunnable.isRunning()) {
+                        this.abRunnable.setRunning(true);
                         ThreadObjectUtil.getInstance().processThread(abRunnable);
                     }
                     break;

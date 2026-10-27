@@ -56,7 +56,7 @@ export class BasicPlatormGeographicMapCellType extends Object {
         ;
     }
     hasType(type) {
-        var size = types.length;
+        var size = this.types.length;
         ;
         for (var index = 0; index < size; index++) {
             if (this.types[index] == type) {

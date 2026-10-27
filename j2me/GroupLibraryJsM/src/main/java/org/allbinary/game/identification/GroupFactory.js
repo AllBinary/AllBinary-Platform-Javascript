@@ -63,9 +63,10 @@ export class GroupFactory extends Object {
         this.index = 0;
         var size = this.list.size();
         ;
+        var name;
+        ;
         while (size < groups) {
-            var name = stringUtil.EMPTY_STRING;
-            ;
+            name = stringUtil.EMPTY_STRING;
             if (size < nameArray.length) {
                 name = nameArray[size];
             }

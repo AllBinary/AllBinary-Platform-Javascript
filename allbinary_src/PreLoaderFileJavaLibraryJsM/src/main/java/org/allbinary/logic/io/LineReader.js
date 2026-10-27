@@ -58,7 +58,7 @@ export class LineReader extends Object {
             //: 
         }
         catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, "hasNext", e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "hasNext", e);
             {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,7 +81,7 @@ export class LineReader extends Object {
             //: 
         }
         catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, "next", e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "next", e);
             {
             }
             throw e;

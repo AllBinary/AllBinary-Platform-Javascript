@@ -51,7 +51,7 @@ export class PreGameSelectionGameInputProcessor extends Processor {
                 try {
                     this.setRunning(true);
                     SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
-                    gameCanvas.setGameState(nextGameState);
+                    this.gameCanvas.setGameState(nextGameState);
                     GameKeyEventHandler.getInstance().removeListener(getPlayerGameInput());
                     this.setRunning(false);
                     //: 
@@ -96,8 +96,8 @@ export class PreGameSelectionGameInputProcessor extends Processor {
                 var selectedIndex = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex();
                 ;
                 if (selectedIndex < this.lockedIndex || !LockedUtil.getInstance().isLocked()) {
-                    if (!abRunnable.isRunning()) {
-                        abRunnable.setRunning(true);
+                    if (!this.abRunnable.isRunning()) {
+                        this.abRunnable.setRunning(true);
                         ThreadObjectUtil.getInstance().processThread(abRunnable);
                     }
                     break;

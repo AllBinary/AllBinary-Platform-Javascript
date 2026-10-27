@@ -149,7 +149,7 @@ export class InitSql extends Object {
             var resultSetMetaData = rset.getMetaData();
             ;
             while (rset.next()) {
-                result = stdUtil.createHashMap();
+                result = this.stdUtil.createHashMap();
                 var columnCount = resultSetMetaData.getColumnCount();
                 ;
                 for (var index = 1; index <= columnCount; index++) {

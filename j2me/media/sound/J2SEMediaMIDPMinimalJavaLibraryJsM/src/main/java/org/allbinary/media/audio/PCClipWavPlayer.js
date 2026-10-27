@@ -159,7 +159,7 @@ export class PCClipWavPlayer extends BasicPlayer {
         this.setVolumeF((leftVolume) / 100.0);
     }
     getVolume() {
-        var masterGainFloatControl = clip.getControl(FloatControl.Type.MASTER_GAIN);
+        var masterGainFloatControl = this.clip.getControl(FloatControl.Type.MASTER_GAIN);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return Math.pow(10, masterGainFloatControl.getValue() / 20);

@@ -81,7 +81,7 @@ export class AllBinaryNoFlickerAndroidImageRotationAnimation extends ImageBaseRo
         this.updateImage();
     }
     updateImage() {
-        this.androidImageUtil.rotate(this.twoImages[this.bufferedImageIndex], originalImage, matrix, imageModifierUtil.paint);
+        this.androidImageUtil.rotate(this.twoImages[this.bufferedImageIndex], originalImage, matrix, this.imageModifierUtil.paint);
         this.swap();
     }
     setFrame(index) {
