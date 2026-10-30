@@ -42,9 +42,9 @@ export class ImageJ2MEScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     scaleArray(images, width, height) {
-        var scaledImages = new Array(images.length);
+        let scaledImages = new Array(images.length);
         ;
-        for (var index = images.length; --index >= 0;) {
+        for (let index = images.length; --index >= 0;) {
             scaledImages[index] = this.scale(images[index], width, height);
         }
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,25 +52,25 @@ export class ImageJ2MEScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     scale(image, width, height) {
-        var originalPlayNImage = null;
+        let originalPlayNImage = null;
         ;
         if (image.isMutable()) {
-            var originalHTMLImage = image;
+            let originalHTMLImage = image;
             ;
             originalPlayNImage = originalHTMLImage.getImage();
         }
         else {
-            var originalHTMLImage = image;
+            let originalHTMLImage = image;
             ;
             originalPlayNImage = originalHTMLImage.getImage();
         }
-        var scaledImage = Image.createImageWH(width, height);
+        let scaledImage = Image.createImageWH(width, height);
         ;
-        var htmlImage = scaledImage;
+        let htmlImage = scaledImage;
         ;
-        var scaledPlayNImage = htmlImage.getImage();
+        let scaledPlayNImage = htmlImage.getImage();
         ;
-        var canvas = graphics.get(scaledPlayNImage);
+        let canvas = graphics.get(scaledPlayNImage);
         ;
         originalPlayNImage = originalPlayNImageoriginalPlayNImage;
         originalPlayNImage.

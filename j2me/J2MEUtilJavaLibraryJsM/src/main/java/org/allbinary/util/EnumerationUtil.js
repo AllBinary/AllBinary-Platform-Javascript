@@ -36,7 +36,7 @@ export class EnumerationUtil extends Object {
         ;
     }
     getAsArray(enumeration) {
-        var basicArrayList = new BasicArrayListD();
+        let basicArrayList = new BasicArrayListD();
         ;
         while (this.hasMoreElements(enumeration)) {
             basicArrayList.add(this.nextElement(enumeration));

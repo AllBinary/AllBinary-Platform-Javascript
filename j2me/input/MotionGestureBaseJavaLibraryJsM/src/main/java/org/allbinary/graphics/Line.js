@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const GPoint
+//sameFolderImports - not GWT import - same folder const GPoint
 import { PointFactory } from './PointFactory.js';
-//not GWT import - same folder const PointFactory
+//sameFolderImports - not GWT import - same folder const PointFactory
 export class Line extends Object {
     constructor(p1, p2) {
         super();

@@ -30,7 +30,7 @@ import { BooleanUtil } from '../../../../org/allbinary/logic/java/bool/BooleanUt
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitInfoEntity } from './InitInfoEntity.js';
-//not GWT import - same folder const InitInfoEntity
+//sameFolderImports - not GWT import - same folder const InitInfoEntity
 export class InitInfo extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,11 +46,18 @@ export class InitInfo extends Object {
         this.testHtmlPath = null;
         this.hasRead = false;
     }
+    set(...args) {
+        if (args.length === 0)
+            return this.set$overload1();
+        if (args.length === 1)
+            return this.set$overload2(args[0]);
+        throw new TypeError('No matching overload: set');
+    }
     //@Throws(InitException.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
-    set() {
+    set$overload1() {
         try {
-            var initInfoEntity = new InitInfoEntity();
+            let initInfoEntity = new InitInfoEntity();
             ;
             if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADER)) {
                 PreLogUtil.put("created entity", "InitInfo", "set()");
@@ -68,25 +75,29 @@ export class InitInfo extends Object {
                 initInfoEntity.update();
             }
             this.hasRead = false;
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE("error", "InitInfo", "set()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE("error", "InitInfo", "set()", e);
+                }
             }
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
-    set(hashMap) {
+    set$overload2(hashMap) {
         try {
             this.testing = hashMap.get(this.TESTING);
             this.mainPath = new AbPath(hashMap.get(this.MAINPATH), StringUtil.getInstance().EMPTY_STRING);
             this.testHtmlPath = new AbPath(hashMap.get(this.TESTHTMLPATH), StringUtil.getInstance().EMPTY_STRING);
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE("error", "InitInfo", "set()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE("error", "InitInfo", "set()", e);
+                }
             }
         }
     }
@@ -99,17 +110,19 @@ export class InitInfo extends Object {
                 null;
             this.testHtmlPath =
                 null;
-            var initInfoEntity = new InitInfoEntity();
+            let initInfoEntity = new InitInfoEntity();
             ;
             initInfoEntity.get();
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE("error", "InitInfo", "set()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE("error", "InitInfo", "set()", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return;
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
@@ -123,14 +136,16 @@ export class InitInfo extends Object {
                 this.hasRead = true;
                 this.get();
             }
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE("error", "InitInfo", "updateIfNeeded()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE("error", "InitInfo", "updateIfNeeded()", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return;
         }
     }
     isTesting() {
@@ -139,14 +154,16 @@ export class InitInfo extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return BooleanUtil.getInstance().getFromString(this.testing);
             ;
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE("error", "InitInfo", "updateIfNeeded()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE("error", "InitInfo", "updateIfNeeded()", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     getTesting() {
@@ -204,7 +221,7 @@ export class InitInfo extends Object {
         ;
     }
     toHashMap() {
-        var hashMap = StdUtil.getInstance().createHashMap();
+        let hashMap = StdUtil.getInstance().createHashMap();
         ;
         hashMap.put(this.TESTING, this.getTesting());
         hashMap.put(this.MAINPATH, this.getMainPath());

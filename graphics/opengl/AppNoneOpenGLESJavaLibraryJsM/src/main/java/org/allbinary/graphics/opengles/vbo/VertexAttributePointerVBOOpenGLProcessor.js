@@ -25,7 +25,7 @@ export class VertexAttributePointerVBOOpenGLProcessor extends ObjectThreedOpenGL
     constructor() {
         super();
     }
-    process(gl, anyType = {}) {
+    process(gl, anyType) {
         throw new RuntimeException();
     }
 }

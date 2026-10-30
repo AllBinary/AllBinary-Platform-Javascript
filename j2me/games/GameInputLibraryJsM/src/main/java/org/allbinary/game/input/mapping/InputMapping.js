@@ -35,7 +35,7 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputToGameKeyMapping } from './InputToGameKeyMapping.js';
-//not GWT import - same folder const InputToGameKeyMapping
+//sameFolderImports - not GWT import - same folder const InputToGameKeyMapping
 export class InputMapping extends Object {
     constructor() {
         super();
@@ -63,16 +63,16 @@ export class InputMapping extends Object {
         this.mappedList.clear();
     }
     remove(input, mappedToInput) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         stringBuffer.append(CommonLabels.getInstance().START_LABEL);
         stringBuffer.append(stringUtil.toString(input));
         stringBuffer.append(" == ");
         stringBuffer.append(stringUtil.toString(mappedToInput));
         this.logUtil.putF(stringBuffer.toString(), this, "InputMapping::remove");
-        var list = this.getMappedInput(input);
+        let list = this.getMappedInput(input);
         ;
         if (list.contains(mappedToInput)) {
             list.remove(mappedToInput);
@@ -98,7 +98,7 @@ export class InputMapping extends Object {
         throw new Exception(this.commonStrings.NOT_IMPLEMENTED);
     }
     add(input, mappedToInput) {
-        var list = this.getMappedInput(input);
+        let list = this.getMappedInput(input);
         ;
         if (!list.contains(mappedToInput)) {
             list.add(mappedToInput);
@@ -111,11 +111,11 @@ export class InputMapping extends Object {
         ;
     }
     getMappedInput(id) {
-        var mappingInputCanBeNullList = this.hashtable.get(id);
+        let mappingInputCanBeNullList = this.hashtable.get(id);
         ;
         if (mappingInputCanBeNullList ==
             null) {
-            var list = new BasicArrayListD();
+            let list = new BasicArrayListD();
             ;
             this.hashtable.put(id, list);
             //if statement needs to be on the same line and ternary does not work the same way.

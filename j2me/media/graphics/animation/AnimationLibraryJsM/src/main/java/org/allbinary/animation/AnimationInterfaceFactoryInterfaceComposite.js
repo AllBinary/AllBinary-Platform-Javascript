@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const AnimationInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const AnimationInterfaceFactoryInterface
 import { NullAnimationFactory } from './NullAnimationFactory.js';
-//not GWT import - same folder const Animation
+//sameFolderImports - not GWT import - same folder const Animation
 export class AnimationInterfaceFactoryInterfaceComposite extends Object {
     constructor(basicAnimationInterfaceFactoryInterfaceArray) {
         super();

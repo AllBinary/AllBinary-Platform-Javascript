@@ -21,7 +21,7 @@ import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const CryptInterface
+//sameFolderImports - not GWT import - same folder const CryptInterface
 export class BasicCryptUtil extends Object {
     constructor() {
         super(...arguments);
@@ -35,9 +35,9 @@ export class BasicCryptUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getDecryptedInputStream(inputStream, cryptInterface) {
-        var buffer = new ByteArrayOutputStream();
+        let buffer = new ByteArrayOutputStream();
         ;
-        var ch = 0;
+        let ch = 0;
         ;
         while (true) {
             ch = inputStream.read();
@@ -46,11 +46,11 @@ export class BasicCryptUtil extends Object {
             }
             buffer.write(ch);
         }
-        var decrypted = cryptInterface.decrypt(buffer.toByteArray());
+        let decrypted = cryptInterface.decrypt(buffer.toByteArray());
         ;
-        var decryptedString = String.fromCharCode(...decrypted);
+        let decryptedString = String.fromCharCode(...decrypted);
         ;
-        var index = decryptedString.indexOf(this.XML_START);
+        let index = decryptedString.indexOf(this.XML_START);
         ;
         if (index > 0) {
             decryptedString = decryptedString.substring(index);

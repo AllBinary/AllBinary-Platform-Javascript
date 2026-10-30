@@ -14,12 +14,12 @@
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayRotationAnimation } from './ImageArrayRotationAnimation.js';
-//not GWT import - same folder const ImageArrayRotationAnimationInfo
+//sameFolderImports - not GWT import - same folder const ImageArrayRotationAnimationInfo
 //TWB - Adjustments should be done in the resource creation and not at the animation level
 export class AdjustedImageArrayRotationAnimation extends ImageArrayRotationAnimation {
     //@Throws(Exception.constructor)
-    static createAdjustedImageArrayRotationAnimationInfo(anyType = {}, animationBehavior) {
-        var imageRotationAnimationInfo = anyType;
+    static createAdjustedImageArrayRotationAnimationInfo(anyType, animationBehavior) {
+        let imageRotationAnimationInfo = anyType;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new AdjustedImageArrayRotationAnimation(imageRotationAnimationInfo.getImageArray(), imageRotationAnimationInfo.getAngleInfoP(), imageRotationAnimationInfo.getTotalAngle(), imageRotationAnimationInfo.getDx(), imageRotationAnimationInfo.getDy(), animationBehavior);

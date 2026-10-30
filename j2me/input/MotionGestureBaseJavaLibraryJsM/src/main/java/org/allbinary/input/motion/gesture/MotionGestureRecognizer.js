@@ -39,7 +39,7 @@ import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchMotionGestureFactory } from './TouchMotionGestureFactory.js';
-//not GWT import - same folder const MotionGestureInput
+//sameFolderImports - not GWT import - same folder const MotionGestureInput
 export class MotionGestureRecognizer extends Object {
     constructor(id) {
         super();
@@ -50,22 +50,24 @@ export class MotionGestureRecognizer extends Object {
         this.intermediate = this.origin;
         this.line = new Line(this.origin, this.origin);
         this.motionEventCircularPool = MotionEventCircularPool.createPool(id);
-        var motionGesturesHandler = new BasicEventHandler();
+        let motionGesturesHandler = new BasicEventHandler();
         ;
-        var movedMotionGesturesHandler = motionGesturesHandler;
+        let movedMotionGesturesHandler = motionGesturesHandler;
         ;
-        var scrolledMotionGesturesHandler = motionGesturesHandler;
+        let scrolledMotionGesturesHandler = motionGesturesHandler;
         ;
         try {
             motionGesturesHandler = BasicMotionGesturesHandler.getInstance();
             movedMotionGesturesHandler = MovedMotionGesturesHandler.getInstance();
             scrolledMotionGesturesHandler = ScrolledMotionGesturesHandler.getInstance();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
         this.motionGesturesHandler = motionGesturesHandler;
         this.movedMotionGesturesHandler = movedMotionGesturesHandler;
@@ -75,7 +77,7 @@ export class MotionGestureRecognizer extends Object {
     processPressedMotionEvent(current, deviceId, button) {
         this.intermediate = this.origin;
         this.previous = this.origin;
-        var event = this.motionEventCircularPool.getInstance(TouchMotionGestureFactory.getInstance().PRESSED);
+        let event = this.motionEventCircularPool.getInstance(TouchMotionGestureFactory.getInstance().PRESSED);
         ;
         event.setPreviousPoint(this.previous);
         event.setCurrentPoint(current);
@@ -85,7 +87,7 @@ export class MotionGestureRecognizer extends Object {
     }
     //@Throws(Exception.constructor)
     processReleasedMotionEvent(current, deviceId, button) {
-        var event = this.motionEventCircularPool.getInstance(TouchMotionGestureFactory.getInstance().RELEASED);
+        let event = this.motionEventCircularPool.getInstance(TouchMotionGestureFactory.getInstance().RELEASED);
         ;
         event.setPreviousPoint(this.previous);
         event.setCurrentPoint(current);
@@ -103,26 +105,26 @@ export class MotionGestureRecognizer extends Object {
         }
         this.line.setP1(this.previous);
         this.line.setP2(current);
-        var minimumMotionGesture = MotionGestureConfigurationFactory.getInstance().getMinimumMotionGesture();
+        let minimumMotionGesture = MotionGestureConfigurationFactory.getInstance().getMinimumMotionGesture();
         ;
         if (this.j2seMath.abs(this.line.getDeltaX()) < minimumMotionGesture && this.j2seMath.abs(this.line.getDeltaY()) < minimumMotionGesture) {
             this.intermediate = current;
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var gradient = this.line.getGradient();
+        let gradient = this.line.getGradient();
         ;
-        var absGradient = this.j2seMath.abs(gradient);
+        let absGradient = this.j2seMath.abs(gradient);
         ;
-        var conf = MotionGestureConfigurationFactory.getInstance();
+        let conf = MotionGestureConfigurationFactory.getInstance();
         ;
-        var touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
+        let touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
         ;
-        var newMotionGesture = touchMotionGestureFactory.NO_MOTION;
+        let newMotionGesture = touchMotionGestureFactory.NO_MOTION;
         ;
-        var diagonalToleranceHigher = 12.0;
+        let diagonalToleranceHigher = 12.0;
         ;
-        var diagonalToleranceLower = 12.0;
+        let diagonalToleranceLower = 12.0;
         ;
         if (conf.isDiagonalMotionGestureAllowed()) {
             diagonalToleranceHigher = (90 - conf.getDiagonalTolerance());
@@ -166,7 +168,7 @@ export class MotionGestureRecognizer extends Object {
         }
         this.previous = current;
         this.intermediate = current;
-        var event = this.motionEventCircularPool.getInstance(newMotionGesture);
+        let event = this.motionEventCircularPool.getInstance(newMotionGesture);
         ;
         event.setPreviousPoint(this.previous);
         event.setCurrentPoint(current);
@@ -176,7 +178,7 @@ export class MotionGestureRecognizer extends Object {
     }
     //@Throws(Exception.constructor)
     processMovedMotionEvent(current, deviceId, button) {
-        var event = this.motionEventCircularPool.getInstance(TouchMotionGestureFactory.getInstance().NO_MOTION);
+        let event = this.motionEventCircularPool.getInstance(TouchMotionGestureFactory.getInstance().NO_MOTION);
         ;
         event.setPreviousPoint(this.previous);
         event.setCurrentPoint(current);
@@ -186,9 +188,9 @@ export class MotionGestureRecognizer extends Object {
     }
     //@Throws(Exception.constructor)
     processScrolledMotionEvent(current, deviceId, button) {
-        var touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
+        let touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
         ;
-        var newMotionGesture = touchMotionGestureFactory.NO_MOTION;
+        let newMotionGesture = touchMotionGestureFactory.NO_MOTION;
         ;
         if (button > 0) {
             newMotionGesture = touchMotionGestureFactory.SCROLL_UP;
@@ -196,7 +198,7 @@ export class MotionGestureRecognizer extends Object {
         else if (button < 0) {
             newMotionGesture = touchMotionGestureFactory.SCROLL_DOWN;
         }
-        var event = this.motionEventCircularPool.getInstance(newMotionGesture);
+        let event = this.motionEventCircularPool.getInstance(newMotionGesture);
         ;
         event.setPreviousPoint(this.previous);
         event.setCurrentPoint(current);

@@ -6,7 +6,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnalogLocationInput } from './AnalogLocationInput.js';
-//not GWT import - same folder const AnalogLocationInput
+//sameFolderImports - not GWT import - same folder const AnalogLocationInput
 export class AnalogLocationInputFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -17,7 +17,7 @@ export class AnalogLocationInputFactory extends Object {
         this.list = new BasicArrayListD();
     }
     addPlayer(playerInputId) {
-        var analogLocationInput = AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT;
+        let analogLocationInput = AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT;
         ;
         if (playerInputId < this.list.size()) {
             analogLocationInput = this.list.get(playerInputId);

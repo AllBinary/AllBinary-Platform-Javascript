@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const BasicColor
 import { BasicColorFactory } from '../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import - same folder const BasicGeographicMap
+//sameFolderImports - not GWT import - same folder const BasicGeographicMap
 export class ColorFromEventUtil extends Object {
     constructor() {
         super(...arguments);
@@ -27,15 +27,15 @@ export class ColorFromEventUtil extends Object {
         return ColorFromEventUtil.instance;
     }
     getForegroundColor(gameCanvasInterface) {
-        var color = this.YELLOW;
+        let color = this.YELLOW;
         ;
-        var geographicMapCompositeInterface = gameCanvasInterface.getLayerManager();
+        let geographicMapCompositeInterface = gameCanvasInterface.getLayerManager();
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
         if (geographicMapInterface !=
             null) {
-            var foregroundBasicColor = geographicMapInterface.getForegroundBasicColor();
+            let foregroundBasicColor = geographicMapInterface.getForegroundBasicColor();
             ;
             color = foregroundBasicColor;
         }

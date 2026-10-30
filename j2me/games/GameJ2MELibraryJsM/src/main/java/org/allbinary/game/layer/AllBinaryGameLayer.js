@@ -38,30 +38,26 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const ViewPositionEventListenerInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SWTUtil } from './SWTUtil.js';
-//not GWT import - same folder const SWTUtil
+//sameFolderImports - not GWT import - same folder const SWTUtil
 import { GameLayerUtil } from './GameLayerUtil.js';
-//not GWT import - same folder const GameLayerUtil
+//sameFolderImports - not GWT import - same folder const GameLayerUtil
 export class AllBinaryGameLayer extends AllBinaryLayer {
-    ;
     constructor(name, layerInfo, viewPosition) {
         super(name, layerInfo, viewPosition);
         this.commonStrings = CommonStrings.getInstance();
         this.basicSetColorUtil = BasicColorSetUtil.getInstance();
         this.RED = BasicColorFactory.getInstance().RED;
-        this.paintable = SWTUtil.isSWT
-            ?
-                new class extends Paintable {
-                    constructor() {
-                        super(...arguments);
-                        this.basicSetColorUtil = BasicColorSetUtil.getInstance();
-                        this.BLACK = BasicColorFactory.getInstance().BLACK;
-                    }
-                    paint(graphics) {
-                        this.basicSetColorUtil.setBasicColorP(graphics, this.BLACK);
-                    }
-                }
-            :
-                NullPaintable.getInstance();
+        this.paintable = (SWTUtil.isSWT ? new class extends Paintable {
+            constructor() {
+                super(...arguments);
+                this.basicSetColorUtil = BasicColorSetUtil.getInstance();
+                this.BLACK = BasicColorFactory.getInstance().BLACK;
+            }
+            paint(graphics) {
+                this.basicSetColorUtil.setBasicColorP(graphics, this.BLACK);
+            }
+        }
+            : NullPaintable.getInstance());
         this.gameKeyEventList = new BasicArrayListD();
         //For kotlin this is before the body of the constructor.
     }
@@ -103,11 +99,11 @@ export class AllBinaryGameLayer extends AllBinaryLayer {
         this.paintable.paint(graphics);
     }
     paintDebug(graphics) {
-        var viewPosition = this.getViewPosition();
+        let viewPosition = this.getViewPosition();
         ;
-        var viewX = viewPosition.getX();
+        let viewX = viewPosition.getX();
         ;
-        var viewY = viewPosition.getY();
+        let viewY = viewPosition.getY();
         ;
         this.basicSetColorUtil.setBasicColorP(graphics, this.RED);
         graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight());

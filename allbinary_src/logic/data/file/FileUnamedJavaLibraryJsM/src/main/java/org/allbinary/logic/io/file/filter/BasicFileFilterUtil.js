@@ -22,13 +22,13 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VisitorFileFilter } from './VisitorFileFilter.js';
-//not GWT import - same folder const VisitorFileFilter
+//sameFolderImports - not GWT import - same folder const VisitorFileFilter
 export class BasicFileFilterUtil extends Object {
     static getInstance(extension) {
-        var vector = new BasicArrayListD();
+        let vector = new BasicArrayListD();
         ;
         vector.add(extension);
-        var includeFileExtensionsBooleanFileVisitor = new IncludeFileExtensionsBooleanFileVisitor(vector);
+        let includeFileExtensionsBooleanFileVisitor = new IncludeFileExtensionsBooleanFileVisitor(vector);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new VisitorFileFilter(includeFileExtensionsBooleanFileVisitor);

@@ -26,7 +26,7 @@ export class BaseBasicArrayListCache extends Object {
         this.list = new BasicArrayListD();
     }
     log() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("S: ");
         stringBuffer.appendint(this.list.size());

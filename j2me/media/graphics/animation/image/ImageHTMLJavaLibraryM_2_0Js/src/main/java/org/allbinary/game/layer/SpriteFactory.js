@@ -24,7 +24,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const SpriteFactoryInterface
+//sameFolderImports - not GWT import - same folder const SpriteFactoryInterface
 export class SpriteFactory extends Object {
     constructor() {
         super(...arguments);

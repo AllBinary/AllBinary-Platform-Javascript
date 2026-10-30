@@ -25,7 +25,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleFileUtil } from './SimpleFileUtil.js';
-//not GWT import - same folder const AbFile
+//sameFolderImports - not GWT import - same folder const AbFile
 export class FileUtil2 extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -38,14 +38,16 @@ export class FileUtil2 extends Object {
         this.streamUtil = StreamUtil.getInstance();
     }
     loadFileAsList(file, max, byteArray1) {
-        var inputStream = null;
+        let inputStream = null;
         ;
         try {
             inputStream = new AbFileInputStream(file);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.ADD, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.ADD, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return SimpleFileUtil.getInstance().loadFileAsList(inputStream, max, byteArray1);

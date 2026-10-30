@@ -16,9 +16,9 @@ import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleGeographicMapCellPositionFactory } from './SimpleGeographicMapCellPositionFactory.js';
-//not GWT import - same folder const GeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPosition
 import { GeographicMapCellType } from './GeographicMapCellType.js';
-//not GWT import - same folder const GeographicMapCompositeInterface
+//sameFolderImports - not GWT import - same folder const GeographicMapCompositeInterface
 export class GeographicMapCellPositionTracking extends Object {
     constructor() {
         super();
@@ -29,7 +29,7 @@ export class GeographicMapCellPositionTracking extends Object {
     }
     //@Throws(Exception.constructor)
     getCurrentOverCellType(geographicMap) {
-        var geographicMapCellPosition = this.currentGeographicMapCellPosition;
+        let geographicMapCellPosition = this.currentGeographicMapCellPosition;
         ;
         if (geographicMapCellPosition != this.previousGeographicMapCellPosition) {
             this.currentCellType = geographicMap.getCellTypeAt(geographicMapCellPosition);
@@ -40,9 +40,9 @@ export class GeographicMapCellPositionTracking extends Object {
     //@Throws(Exception.constructor)
     updateStart(gameCanvasInterface, layer) {
         if (gameCanvasInterface != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION) {
-            var geographicMapCompositeInterface = gameCanvasInterface.getLayerManager();
+            let geographicMapCompositeInterface = gameCanvasInterface.getLayerManager();
             ;
-            var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+            let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
             ;
             this.newGeographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(layer.getXP() + layer.getHalfWidth(), layer.getYP() + layer.getHalfHeight());
             if (this.newGeographicMapCellPosition != this.currentGeographicMapCellPosition) {

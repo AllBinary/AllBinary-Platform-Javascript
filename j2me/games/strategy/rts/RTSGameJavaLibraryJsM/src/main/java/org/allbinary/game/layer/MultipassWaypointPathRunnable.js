@@ -31,49 +31,56 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointPathRunnableBase } from './WaypointPathRunnableBase.js';
-//not GWT import - same folder const WaypointBehaviorBase
 export class MultipassWaypointPathRunnable extends WaypointPathRunnableBase {
     constructor() {
         super();
+        //inner= member=true isStatic=
+        this.FirstRunnable = (() => {
+            const outer$MultipassWaypointPathRunnable = this;
+            return class extends ARunnable {
+                constructor(multipassWaypointPathRunnable) {
+                    super();
+                    this.multipassWaypointPathRunnable = multipassWaypointPathRunnable;
+                }
+                run() {
+                    this.multipassWaypointPathRunnable.processFirstRunnable();
+                }
+            };
+        })(); //    private boolean first = true;
+        //inner= member=true isStatic=
+        this.SecondRunnable = (() => {
+            const outer$MultipassWaypointPathRunnable = this;
+            return class extends ARunnable {
+                constructor(multipassWaypointPathRunnable) {
+                    super();
+                    this.multipassWaypointPathRunnable = multipassWaypointPathRunnable;
+                }
+                run() {
+                    this.multipassWaypointPathRunnable.processSecondRunnable();
+                }
+            };
+        })();
+        //inner= member=true isStatic=
+        this.EndRunnable = (() => {
+            const outer$MultipassWaypointPathRunnable = this;
+            return class extends ARunnable {
+                constructor(multipassWaypointPathRunnable) {
+                    super();
+                    this.multipassWaypointPathRunnable = multipassWaypointPathRunnable;
+                }
+                run() {
+                    this.multipassWaypointPathRunnable.processEndRunnable();
+                }
+            };
+        })();
         this.logUtil = LogUtil.getInstance();
         this.basicArrayListUtil = BasicArrayListUtil.getInstance();
         this.multipassState = new MultipassState();
         this.done = false;
         this.list = this.basicArrayListUtil.getImmutableInstance();
         this.pathFindingInfo = NullUtil.getInstance().NULL_OBJECT;
-        //inner= member=true isStatic=
-        this.FirstRunnable = class extends ARunnable {
-            constructor(multipassWaypointPathRunnable) {
-                super();
-                this.multipassWaypointPathRunnable = multipassWaypointPathRunnable;
-            }
-            run() {
-                this.multipassWaypointPathRunnable.processFirstRunnable();
-            }
-        };
         this.FIRST_RUNNABLE = new this.FirstRunnable(this);
-        //    private boolean first = true;
-        //inner= member=true isStatic=
-        this.SecondRunnable = class extends ARunnable {
-            constructor(multipassWaypointPathRunnable) {
-                super();
-                this.multipassWaypointPathRunnable = multipassWaypointPathRunnable;
-            }
-            run() {
-                this.multipassWaypointPathRunnable.processSecondRunnable();
-            }
-        };
         this.SECOND_RUNNABLE = new this.SecondRunnable(this);
-        //inner= member=true isStatic=
-        this.EndRunnable = class extends ARunnable {
-            constructor(multipassWaypointPathRunnable) {
-                super();
-                this.multipassWaypointPathRunnable = multipassWaypointPathRunnable;
-            }
-            run() {
-                this.multipassWaypointPathRunnable.processEndRunnable();
-            }
-        };
         this.END_RUNNABLE = new this.EndRunnable(this);
         this.ALREADY_ENDED_RUNNABLE = new class extends ARunnable {
             run() {
@@ -90,17 +97,19 @@ export class MultipassWaypointPathRunnable extends WaypointPathRunnableBase {
         }
     }
     run() {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
         try {
             this.currentPassRunnable.run();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-            this.setRunning(false);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                this.setRunning(false);
+            }
         }
     }
     reset2() {
@@ -127,14 +136,14 @@ export class MultipassWaypointPathRunnable extends WaypointPathRunnableBase {
         try {
             this.pathFindingLayer.getWaypointRunnableLogHelper().start(this.pathFindingLayer);
             this.reset2();
-            var geographicMapCellPosition = this.pathFindingLayer.getCurrentGeographicMapCellPosition();
+            let geographicMapCellPosition = this.pathFindingLayer.getCurrentGeographicMapCellPosition();
             ;
             if (geographicMapCellPosition ==
                 null) {
                 throw new Exception("Should never be running here");
             }
             this.pathFindingInfo = this.targetPathFindingLayer.getWaypointBehavior().getWaypoint().getPathFindingInfo(geographicMapCellPosition);
-            var localPathFindingInfo = this.pathFindingInfo;
+            let localPathFindingInfo = this.pathFindingInfo;
             ;
             this.list = this.targetPathFindingLayer.getWaypointBehavior().getWaypoint().getPathsList(geographicMapCellPosition, localPathFindingInfo, this.multipassState);
             if (this.list != this.basicArrayListUtil.getImmutableInstance()) {
@@ -143,49 +152,55 @@ export class MultipassWaypointPathRunnable extends WaypointPathRunnableBase {
             else {
                 this.currentPassRunnable = this.SECOND_RUNNABLE;
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-            this.setRunning(false);
-            this.finish();
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                this.setRunning(false);
+                this.finish();
+            }
         }
     }
     processSecondRunnable() {
         try {
-            var geographicMapCellPosition = this.pathFindingLayer.getCurrentGeographicMapCellPosition();
+            let geographicMapCellPosition = this.pathFindingLayer.getCurrentGeographicMapCellPosition();
             ;
-            var localPathFindingInfo = this.pathFindingInfo;
+            let localPathFindingInfo = this.pathFindingInfo;
             ;
             this.list = this.targetPathFindingLayer.getWaypointBehavior().getWaypoint().getPathsList(geographicMapCellPosition, localPathFindingInfo, this.multipassState);
             if (this.list != this.basicArrayListUtil.getImmutableInstance()) {
                 this.END_RUNNABLE.run();
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-            this.setRunning(false);
-            this.finish();
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                this.setRunning(false);
+                this.finish();
+            }
         }
     }
     processEndRunnable() {
         try {
-            var waypointBehavior = this.pathFindingLayer.getWaypointBehavior();
+            let waypointBehavior = this.pathFindingLayer.getWaypointBehavior();
             ;
             waypointBehavior.setWaypointPathsList(this.list);
             this.pathFindingLayer.getWaypointRunnableLogHelper().end(this.pathFindingLayer);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-            this.setRunning(false);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                this.setRunning(false);
+            }
         }
         this.finish();
     }

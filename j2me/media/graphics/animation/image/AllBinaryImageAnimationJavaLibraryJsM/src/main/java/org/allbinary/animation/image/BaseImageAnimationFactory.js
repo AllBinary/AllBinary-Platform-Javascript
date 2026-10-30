@@ -30,7 +30,7 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnimationFactoryInitializationVisitor } from './AnimationFactoryInitializationVisitor.js';
-//not GWT import - same folder const AnimationFactoryInitializationVisitor
+//sameFolderImports - not GWT import - same folder const AnimationFactoryInitializationVisitor
 export class BaseImageAnimationFactory extends Object {
     //@Throws(Exception.constructor)
     static createFactoryBase(image, sequenceArray, width, height, animationBehaviorFactory) {
@@ -67,8 +67,8 @@ export class BaseImageAnimationFactory extends Object {
     setInitialScale(scaleProperties) {
         this.scaleProperties = scaleProperties;
         if (this.scaleProperties.shouldScale) {
-            this.scaleProperties.scaleWidth = Math.round((this.animationFactoryInitializationVisitor.width * this.scaleProperties.scaleX));
-            this.scaleProperties.scaleHeight = Math.round((this.animationFactoryInitializationVisitor.height * this.scaleProperties.scaleY));
+            this.scaleProperties.scaleWidth = globalThis.Math.trunc((this.animationFactoryInitializationVisitor.width * this.scaleProperties.scaleX));
+            this.scaleProperties.scaleHeight = globalThis.Math.trunc((this.animationFactoryInitializationVisitor.height * this.scaleProperties.scaleY));
         }
         else {
         }
@@ -82,11 +82,11 @@ export class BaseImageAnimationFactory extends Object {
         return this.scaleProperties;
     }
     toString() {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var commonLabels = CommonLabels.getInstance();
+        let commonLabels = CommonLabels.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(super.toString());
         stringBuffer.append(commonLabels.HEIGHT_LABEL);

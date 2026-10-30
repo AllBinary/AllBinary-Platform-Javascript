@@ -13,7 +13,7 @@
 */
 //not GWT import const Screen
 import { ABCustomItem } from '../../../../org/allbinary/graphics/form/item/ABCustomItem.js';
-//not GWT import - same folder const AllBinaryTiledLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryTiledLayer
 export class TileLayerItem extends ABCustomItem {
     constructor(label, tiledLayer, layout, altText, backgroundBasicColor, foregroundBasicColor) {
         super(label, backgroundBasicColor, foregroundBasicColor);

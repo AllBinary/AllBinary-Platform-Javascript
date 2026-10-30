@@ -20,17 +20,17 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //1.4.2
 export class PathFinderGraphVisitorBase extends Object {
     //@Throws(Exception.constructor)
-    visit(graph = {}, startPathFindingNodeList, endPathFindingNodeList) {
+    visit(graph, startPathFindingNodeList, endPathFindingNodeList) {
         throw new RuntimeException();
     }
     //@Throws(Exception.constructor)
     fixPath(startPathFindingNodeList, endPathFindingNodeList, pathList) {
         throw new RuntimeException();
     }
-    isValid(graphPath = {}) {
+    isValid(graphPath) {
         throw new RuntimeException();
     }
-    getInvalidReason(graphPath = {}) {
+    getInvalidReason(graphPath) {
         throw new RuntimeException();
     }
 }

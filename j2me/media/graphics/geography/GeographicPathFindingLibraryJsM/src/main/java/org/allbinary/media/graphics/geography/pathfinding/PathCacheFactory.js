@@ -53,7 +53,7 @@ export class PathCacheFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getOrCreate(pathIdInteger) {
-        var listCanBeNull = this.hashtable.get(pathIdInteger);
+        let listCanBeNull = this.hashtable.get(pathIdInteger);
         ;
         if (listCanBeNull ==
             null) {

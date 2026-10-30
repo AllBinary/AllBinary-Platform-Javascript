@@ -42,7 +42,7 @@ export class NumberStringHud extends BasicHud {
         }
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.offset = font.stringWidth(this.prependString) + MyFontProcessor.defaultCharWidth(font);
         super.updateMeasurement(graphics);
@@ -70,13 +70,13 @@ export class NumberStringHud extends BasicHud {
     }
     paintXY(graphics, x, y) {
         this.myFontProcessor.process(graphics);
-        var charArray = this.PREPEND_STRING;
+        let charArray = this.PREPEND_STRING;
         ;
-        var len = this.PREPEND_STRING.length;
+        let len = this.PREPEND_STRING.length;
         ;
-        var charArray2 = this.valueString;
+        let charArray2 = this.valueString;
         ;
-        var len2 = this.valueTotalDigits;
+        let len2 = this.valueTotalDigits;
         ;
         this.basicSetColorUtil.setBasicColorP(graphics, this.getBasicColorP());
         graphics.drawChars(charArray, 0, len, x, y, 0);

@@ -15,16 +15,18 @@
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
-//not GWT import - same folder const LifeInterface
+//sameFolderImports - not GWT import - same folder const LifeInterface
 export class Life extends Object {
     static createLife() {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return new Life(0, 0);
-            //: 
         }
-        catch (e) {
-            throw new RuntimeException();
+        catch (caught) {
+            {
+                const e = caught;
+                throw new RuntimeException();
+            }
         }
     }
     constructor(lives, maxlives) {

@@ -23,7 +23,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileInputStream } from './AbFileInputStream.js';
-//not GWT import - same folder const AbFileInputStream
+//sameFolderImports - not GWT import - same folder const AbFileInputStream
 export class LineReader extends Object {
     constructor(fileName) {
         super();
@@ -31,23 +31,25 @@ export class LineReader extends Object {
         this.commonStrings = CommonStrings.getInstance();
         this.index = 0;
         try {
-            var bytes = new Array(100000);
+            let bytes = new Array(100000);
             ;
             this.fileName = fileName;
             this.idFile = new AbFileInputStream(fileName);
             this.idFile.read(bytes);
             this.string = String.fromCharCode(...bytes);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("File: " + fileName, this, "LineReader", e);
+        catch (caught) {
             {
+                const e = caught;
+                this.logUtil.put("File: " + fileName, this, "LineReader", e);
+                {
+                }
             }
         }
     }
     hasNext() {
         try {
-            var nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, index);
+            let nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, index);
             ;
             if (nextIndex == -1) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,36 +57,40 @@ export class LineReader extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "hasNext", e);
+        catch (caught) {
             {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "hasNext", e);
+                {
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     //@Throws(Exception.constructor)
     next() {
         try {
-            var nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, index);
+            let nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, index);
             ;
             if (nextIndex == -1) {
                 throw new Exception("next() should have been called first");
             }
-            var temp = this.string.substring(index, nextIndex);
+            let temp = this.string.substring(index, nextIndex);
             ;
             index = nextIndex + 1;
             //if statement needs to be on the same line and ternary does not work the same way.
             return temp;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "next", e);
+        catch (caught) {
             {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "next", e);
+                {
+                }
+                throw e;
             }
-            throw e;
         }
     }
 }

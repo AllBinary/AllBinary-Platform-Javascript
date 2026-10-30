@@ -29,13 +29,13 @@ export class TextItemUserIdentifierVisitor extends Visitor {
         super();
         this.logUtil = LogUtil.getInstance();
     }
-    visit(anyType = {}) {
-        var value = anyType;
+    visit(anyType) {
+        let value = anyType;
         ;
         if (value.length < 2) {
-            var charValue = value[0];
+            let charValue = value[0];
             ;
-            var stringValidationUtil = StringValidationUtil.getInstance();
+            let stringValidationUtil = StringValidationUtil.getInstance();
             ;
             if (stringValidationUtil.isNumber(value)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,12 +48,14 @@ export class TextItemUserIdentifierVisitor extends Visitor {
             else {
                 try {
                     TextNotificationUtil.getInstance().fireError("Only Letters & Numbers Allowed");
-                    //: 
                 }
-                catch (e) {
-                    var commonStrings = CommonStrings.getInstance();
-                    ;
-                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.VISIT, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        let commonStrings = CommonStrings.getInstance();
+                        ;
+                        this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.VISIT, e);
+                    }
                 }
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return BooleanFactory.getInstance().FALSE;
@@ -65,7 +67,7 @@ export class TextItemUserIdentifierVisitor extends Visitor {
         }
     }
     isLetter(charValue) {
-        var value = Math.round(charValue);
+        let value = globalThis.Math.trunc(charValue.charCodeAt(0));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return (value > 64 && value < 91) || (value > 96 && value < 123);

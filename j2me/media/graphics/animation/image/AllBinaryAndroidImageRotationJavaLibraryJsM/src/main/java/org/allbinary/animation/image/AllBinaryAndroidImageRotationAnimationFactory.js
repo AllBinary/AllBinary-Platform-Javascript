@@ -28,11 +28,11 @@ import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { AllBinaryFlickerAndroidImageRotationAnimation } from './AllBinaryFlickerAndroidImageRotationAnimation.js';
-//not GWT import - same folder const AllBinaryFlickerAndroidImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryFlickerAndroidImageRotationAnimation
 import { AllBinaryAdjustedAndroidImageRotationAnimation } from './AllBinaryAdjustedAndroidImageRotationAnimation.js';
-//not GWT import - same folder const AllBinaryAdjustedAndroidImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryAdjustedAndroidImageRotationAnimation
 export class AllBinaryAndroidImageRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createFactory(image, width, height, animationBehaviorFactory) {
@@ -46,7 +46,7 @@ export class AllBinaryAndroidImageRotationAnimationFactory extends BaseImageAnim
     }
     //@Throws(Exception.constructor)
     static createFactoryU(image, animationBehaviorFactory) {
-        var androidImageRotationAnimationFactory = new AllBinaryAndroidImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), (AngleFactory.getInstance().TOTAL_ANGLE / GameConfigurationCentral.getInstance().getGameControlFidelity()), animationBehaviorFactory, false);
+        let androidImageRotationAnimationFactory = new AllBinaryAndroidImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), (AngleFactory.getInstance().TOTAL_ANGLE / GameConfigurationCentral.getInstance().getGameControlFidelity()), animationBehaviorFactory, false);
         ;
         androidImageRotationAnimationFactory.init(-(image.getWidth() >> 2), -(image.getHeight() >> 2));
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,7 +54,7 @@ export class AllBinaryAndroidImageRotationAnimationFactory extends BaseImageAnim
     }
     //@Throws(Exception.constructor)
     static createFactoryDXYU(image, dx, dy, animationBehaviorFactory) {
-        var androidImageRotationAnimationFactory = new AllBinaryAndroidImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), (AngleFactory.getInstance().TOTAL_ANGLE / GameConfigurationCentral.getInstance().getGameControlFidelity()), animationBehaviorFactory, false);
+        let androidImageRotationAnimationFactory = new AllBinaryAndroidImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), (AngleFactory.getInstance().TOTAL_ANGLE / GameConfigurationCentral.getInstance().getGameControlFidelity()), animationBehaviorFactory, false);
         ;
         androidImageRotationAnimationFactory.init(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,7 +62,7 @@ export class AllBinaryAndroidImageRotationAnimationFactory extends BaseImageAnim
     }
     //@Throws(Exception.constructor)
     static createFactoryADXY(image, width, height, dx, dy, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation) {
-        var androidImageRotationAnimationFactory = new AllBinaryAndroidImageRotationAnimationFactory(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation);
+        let androidImageRotationAnimationFactory = new AllBinaryAndroidImageRotationAnimationFactory(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation);
         ;
         androidImageRotationAnimationFactory.init(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +82,7 @@ export class AllBinaryAndroidImageRotationAnimationFactory extends BaseImageAnim
     }
     //@Throws(Exception.constructor)
     getCanvasImage() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (this.resizeCanvasForRotation && !features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL)) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,11 +97,11 @@ export class AllBinaryAndroidImageRotationAnimationFactory extends BaseImageAnim
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var canvasImage = this.getCanvasImage();
+        let canvasImage = this.getCanvasImage();
         ;
-        var scaledImage = this.animationFactoryImageScaleUtil.createImage(canvasImage, this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let scaledImage = this.animationFactoryImageScaleUtil.createImage(canvasImage, this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
-        var copyOfScaledImage = ImageCopyUtil.getInstance().createImage(scaledImage);
+        let copyOfScaledImage = ImageCopyUtil.getInstance().createImage(scaledImage);
         ;
         if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
             this.animationFactoryImageScaleUtil.processAdjust(this);

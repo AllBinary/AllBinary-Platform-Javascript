@@ -25,7 +25,7 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BuildingPropertiesFactory } from './BuildingPropertiesFactory.js';
-//not GWT import - same folder const BuildingLayer
+//sameFolderImports - not GWT import - same folder const BuildingLayer
 export class SimulatedBuildingPropertiesFactory extends BuildingPropertiesFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,7 +36,7 @@ export class SimulatedBuildingPropertiesFactory extends BuildingPropertiesFactor
         return 0;
     }
     getDamageFloaters(buildingLayer) {
-        var damageFloaters = DamageFloaters.getInstance();
+        let damageFloaters = DamageFloaters.getInstance();
         ;
         this.damageFloatersPaintableInterface = damageFloaters;
         //if statement needs to be on the same line and ternary does not work the same way.

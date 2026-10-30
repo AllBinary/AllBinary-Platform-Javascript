@@ -30,13 +30,13 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameTypeFactory } from './GameTypeFactory.js';
-//not GWT import - same folder const GameTypeFactory
+//sameFolderImports - not GWT import - same folder const GameTypeFactory
 import { GameMode } from './GameMode.js';
-//not GWT import - same folder const GameMode
+//sameFolderImports - not GWT import - same folder const GameMode
 import { PlayerTypesFactory } from './PlayerTypesFactory.js';
-//not GWT import - same folder const PlayerTypesFactory
+//sameFolderImports - not GWT import - same folder const PlayerTypesFactory
 import { GameInfoData } from './GameInfoData.js';
-//not GWT import - same folder const PlayerType
+//sameFolderImports - not GWT import - same folder const PlayerType
 export class GameInfo extends Object {
     constructor(gameType, gameMode, playerType, highestLevel, currentLevel) {
         super();
@@ -100,7 +100,7 @@ export class GameInfo extends Object {
         }
     }
     toHashtable() {
-        var hashtable = StdUtil.getInstance().createHashtable();
+        let hashtable = StdUtil.getInstance().createHashtable();
         ;
         hashtable.put(this.gameInfoData.GAME_TYPE, this.getGameType().toString());
         hashtable.put(this.gameInfoData.GAME_MODE, this.gameMode.toString());
@@ -111,9 +111,9 @@ export class GameInfo extends Object {
         return hashtable;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         stringBuffer.append(this.gameInfoData.GAME_TYPE);
         stringBuffer.append(commonSeps.EQUALS);

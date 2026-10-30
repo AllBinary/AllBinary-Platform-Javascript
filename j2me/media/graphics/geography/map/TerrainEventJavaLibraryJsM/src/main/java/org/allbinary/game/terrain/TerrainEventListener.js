@@ -9,7 +9,7 @@ import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventSt
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const TerrainEvent
+//sameFolderImports - not GWT import - same folder const TerrainEvent
 export class TerrainEventListener extends Object {
     constructor() {
         super(...arguments);

@@ -29,11 +29,11 @@ export class TextItemNumberVisitor extends Visitor {
         super();
         this.logUtil = LogUtil.getInstance();
     }
-    visit(anyType = {}) {
-        var value = anyType;
+    visit(anyType) {
+        let value = anyType;
         ;
         if (value.length < 2) {
-            var stringValidationUtil = StringValidationUtil.getInstance();
+            let stringValidationUtil = StringValidationUtil.getInstance();
             ;
             if (stringValidationUtil.isNumber(value)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,12 +42,14 @@ export class TextItemNumberVisitor extends Visitor {
             else {
                 try {
                     TextNotificationUtil.getInstance().fireError("Numbers Only");
-                    //: 
                 }
-                catch (e) {
-                    var commonStrings = CommonStrings.getInstance();
-                    ;
-                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.VISIT, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        let commonStrings = CommonStrings.getInstance();
+                        ;
+                        this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.VISIT, e);
+                    }
                 }
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return BooleanFactory.getInstance().FALSE;

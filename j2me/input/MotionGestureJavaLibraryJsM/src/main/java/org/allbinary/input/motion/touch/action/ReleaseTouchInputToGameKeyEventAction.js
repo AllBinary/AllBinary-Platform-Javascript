@@ -42,12 +42,14 @@ export class ReleaseTouchInputToGameKeyEventAction extends GameKeyCompleteMotion
         try {
             this.setGameKey(this.NONE);
             this.setGameKeyEvent(GameKeyEventFactory.getInstance().getInstanceForInput(this, this.NONE));
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     update() {

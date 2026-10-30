@@ -14,7 +14,7 @@
 //not GWT import const AnimationBehavior
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayAnimation } from './ImageArrayAnimation.js';
-//not GWT import - same folder const ImageArrayAnimation
+//sameFolderImports - not GWT import - same folder const ImageArrayAnimation
 export class AdjustedImageArrayAnimation extends ImageArrayAnimation {
     constructor(imageArray, dx, dy, animationBehavior) {
         super(imageArray, animationBehavior);

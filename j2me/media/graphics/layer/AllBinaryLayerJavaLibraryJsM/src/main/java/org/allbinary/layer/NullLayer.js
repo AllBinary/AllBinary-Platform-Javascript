@@ -14,7 +14,7 @@
 //not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Layer } from './Layer.js';
-//not GWT import - same folder const Layer
+//sameFolderImports - not GWT import - same folder const Layer
 export class NullLayer extends Layer {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

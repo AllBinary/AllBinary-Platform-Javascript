@@ -37,9 +37,9 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameCommandCanvas } from './GameCommandCanvas.js';
-//not GWT import - same folder const GameCommandCanvas
+//sameFolderImports - not GWT import - same folder const GameCommandCanvas
 import { GameInputMappingInstructionsCanvas } from './GameInputMappingInstructionsCanvas.js';
-//not GWT import - same folder const GameInputMappingInstructionsCanvas
+//sameFolderImports - not GWT import - same folder const GameInputMappingInstructionsCanvas
 export class GameInputMappingCanvas extends GameCommandCanvas {
     constructor(abeClientInformation, commandListener, allBinaryGameLayerManager, helpPaintable) {
         super(commandListener, GameInputMappingCanvas.NAME, allBinaryGameLayerManager.getBackgroundBasicColor(), allBinaryGameLayerManager.getForegroundBasicColor());
@@ -89,20 +89,22 @@ export class GameInputMappingCanvas extends GameCommandCanvas {
     addGameKey(keyCode, repeated) {
         try {
             this.logUtil.putF(new StringMaker().append("Raw Device Key Code: ").append(Integer.toHexString(keyCode)).toString(), this, this.gameInputStrings.ADD_KEY_EVENT);
-            var gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
+            let gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
             ;
-            var input = this.inputFactory.getInstanceById(keyCode);
+            let input = this.inputFactory.getInstanceById(keyCode);
             ;
             this.processInputMapping(gameKey, input);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     processInputMapping(gameKey, input) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Start Passed GameKey: ");
         stringBuffer.append(this.stringUtil.toString(gameKey));
@@ -125,7 +127,7 @@ export class GameInputMappingCanvas extends GameCommandCanvas {
     }
     //@Throws(Exception.constructor)
     gameActionCrud(gameKey, input) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Start GameKey: ");
         stringBuffer.append(this.stringUtil.toString(this.selectedGameKey));
@@ -133,9 +135,9 @@ export class GameInputMappingCanvas extends GameCommandCanvas {
         stringBuffer.append(this.stringUtil.toString(this.selectedInput));
         this.logUtil.putF(stringBuffer.toString(), this, "gameActionCrud");
         if (this.selectedInput == this.NONE) {
-            var list = this.inputMapping.getInputMapping().getMappedInput(this.selectedGameKey);
+            let list = this.inputMapping.getInputMapping().getMappedInput(this.selectedGameKey);
             ;
-            var isInputAlreadyMappedToSelectedAction = list.contains(input);
+            let isInputAlreadyMappedToSelectedAction = list.contains(input);
             ;
             if (isInputAlreadyMappedToSelectedAction) {
                 this.logUtil.putF(new StringMaker().append("Already Mapped Input: ").append(this.stringUtil.toString(input)).toString(), this, "gameActionCrud");
@@ -156,13 +158,13 @@ export class GameInputMappingCanvas extends GameCommandCanvas {
     }
     //@Throws(Exception.constructor)
     addNewMapping(gameKey, input) {
-        var METHOD_NAME = "addNewMapping";
+        let METHOD_NAME = "addNewMapping";
         ;
         this.logUtil.putF(this.commonStrings.START, this, METHOD_NAME);
-        var isInputAlreadyMapped = this.inputMapping.getInputMapping().isMapped(input);
+        let isInputAlreadyMapped = this.inputMapping.getInputMapping().isMapped(input);
         ;
         if (!isInputAlreadyMapped && !this.inputMapping.isSystemInput(input)) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append("Add Key Mapping : GameKey: ");
             stringBuffer.append(this.stringUtil.toString(this.selectedGameKey));
@@ -180,12 +182,12 @@ export class GameInputMappingCanvas extends GameCommandCanvas {
     }
     //@Throws(Exception.constructor)
     deleteCurrentMapping() {
-        var METHOD_NAME = "deleteCurrentMapping";
+        let METHOD_NAME = "deleteCurrentMapping";
         ;
-        var list = this.inputMapping.getInputMapping().getMappedInput(this.selectedGameKey);
+        let list = this.inputMapping.getInputMapping().getMappedInput(this.selectedGameKey);
         ;
         if (list.size() > 1) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append("Start GameKey: ");
             stringBuffer.append("Remove Key Mapping: GameKey: ");

@@ -31,9 +31,9 @@ import { Calendar } from '../../../java/util/Calendar.js';
         this.simpleDataFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
     }
     /*actual*/ getAsString() {
-        var calendar = Calendar.getInstance();
+        let calendar = Calendar.getInstance();
         ;
-        var date = calendar.getTime();
+        let date = calendar.getTime();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.simpleDataFormat.format(date);

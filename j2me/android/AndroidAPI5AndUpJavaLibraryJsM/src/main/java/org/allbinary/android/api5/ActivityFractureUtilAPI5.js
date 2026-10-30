@@ -35,15 +35,15 @@ export class ActivityFractureUtilAPI5 extends ActivityFractureUtilAPI1 {
         return ActivityFractureUtilAPI5.instance5;
     }
     process(activity) {
-        var touchScreenFactory = TouchScreenFactory.getInstance();
+        let touchScreenFactory = TouchScreenFactory.getInstance();
         ;
-        var touchScreenTypeFactory = TouchScreenTypeFactory.getInstance();
+        let touchScreenTypeFactory = TouchScreenTypeFactory.getInstance();
         ;
         touchScreenFactory.setTouch(this.isTouch(activity));
         touchScreenFactory.setMultiTouch(this.isMultiTouch(activity));
         touchScreenFactory.setMultiTouchDistinct(this.isMultiTouchDistinct(activity));
         touchScreenTypeFactory.update(activity);
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         PreLogUtil.put(touchScreenFactory.toString(), this, commonStrings.PROCESS);
     }

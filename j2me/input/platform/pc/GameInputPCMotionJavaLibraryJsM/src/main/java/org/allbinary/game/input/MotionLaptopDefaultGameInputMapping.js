@@ -22,22 +22,22 @@ import { TouchMotionGestureFactory } from '../../../../org/allbinary/input/motio
 //not GWT import const TouchMotionGestureFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCKeyFactory } from './PCKeyFactory.js';
-//not GWT import - same folder const PCKeyFactory
+//sameFolderImports - not GWT import - same folder const PCKeyFactory
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import - same folder const GameKeyFactory
+//sameFolderImports - not GWT import - same folder const GameKeyFactory
 export class MotionLaptopDefaultGameInputMapping extends PersistentInputMapping {
     constructor() {
         super(GamePersistanceStrings.getInstance().DEFAULT_INPUT_MAPPING_RECORD_ID);
         //For kotlin this is before the body of the constructor.
-        var pcKeyFactory = PCKeyFactory.getInstance();
+        let pcKeyFactory = PCKeyFactory.getInstance();
         ;
-        var inputToGameKeyMapping = this.getInputMapping();
+        let inputToGameKeyMapping = this.getInputMapping();
         ;
-        var gameKeyFactory = GameKeyFactory.getInstance();
+        let gameKeyFactory = GameKeyFactory.getInstance();
         ;
-        var touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
+        let touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
         ;
-        var basicTouchInputFactory = BasicTouchInputFactory.getInstance();
+        let basicTouchInputFactory = BasicTouchInputFactory.getInstance();
         ;
         inputToGameKeyMapping.add(gameKeyFactory.FIRE, pcKeyFactory.ENTER);
         inputToGameKeyMapping.add(gameKeyFactory.KEY_NUM1, pcKeyFactory.FOUR);

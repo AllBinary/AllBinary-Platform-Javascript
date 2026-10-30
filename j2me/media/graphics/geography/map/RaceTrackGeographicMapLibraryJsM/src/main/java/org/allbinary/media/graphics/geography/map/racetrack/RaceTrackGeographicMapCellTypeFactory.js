@@ -15,9 +15,9 @@
 import { GeographicMapCellType } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellType.js';
 //not GWT import const GeographicMapCellType
 import { GeographicMapCellTypeFactory } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellTypeFactory.js';
-//not GWT import - same folder const RaceTrackGeographicMapCellType
+//sameFolderImports - not GWT import - same folder const RaceTrackGeographicMapCellType
 import { RaceTrackGeographicMapCellTypes } from './RaceTrackGeographicMapCellTypes.js';
-//not GWT import - same folder const RaceTrackGeographicMapCellTypes
+//sameFolderImports - not GWT import - same folder const RaceTrackGeographicMapCellTypes
 export class RaceTrackGeographicMapCellTypeFactory extends GeographicMapCellTypeFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -28,7 +28,7 @@ export class RaceTrackGeographicMapCellTypeFactory extends GeographicMapCellType
         this.EMPTY_CELL_TYPE = new GeographicMapCellType(0, -1);
         this.EASY_CELL_TYPE = this.EMPTY_CELL_TYPE;
         this.FINISH_LINE_ROAD_CELL_TYPE = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE;
-        var raceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes.getInstance();
+        let raceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes.getInstance();
         ;
         this.BOTTOM_LEFT_TURN_ROAD_CELL_TYPE = raceTrackGeographicMapCellTypes.BOTTOM_LEFT_TURN_ROAD_CELL_TYPE;
         this.BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE = raceTrackGeographicMapCellTypes.BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE;

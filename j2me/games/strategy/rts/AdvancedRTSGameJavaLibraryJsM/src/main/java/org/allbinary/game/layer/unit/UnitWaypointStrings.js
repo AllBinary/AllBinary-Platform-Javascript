@@ -19,6 +19,7 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 export class UnitWaypointStrings extends Object {
     constructor() {
         super(...arguments);
+        this.PATHING = "Pathing";
         this.WANDERING = "Order?";
         this.THINKING = "Thinking";
         this.THINKING_ABOUT_TARGET = "Hmmm";
@@ -32,6 +33,10 @@ export class UnitWaypointStrings extends Object {
         this.ALREADY_THERE_SHORT = "Again?";
         this.ALREADY_THERE = "Already There";
         this.NEXT_PATH_NODE = CommonLabels.getInstance().NEXT + " Path Node";
+        this._ALL_VISITED_SHORT = " Arrived";
+        this._ALREADY_THERE_SHORT = " Again?";
+        this.VISITED_MOST_OF_THE_PATH = " visited most of the path";
+        this.RETURNING_AS_WAYPOINT_PATH_LIST = " returning as waypointPathsList was runningWaypointPathList";
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

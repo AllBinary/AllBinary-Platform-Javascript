@@ -38,7 +38,7 @@ export class AllBinaryTiledLayer extends Layer {
         this.halfCellHeight = (cellHeight >> 1);
     }
     setCells(mapTwoDArray) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Start: r: ");
         stringBuffer.appendint(mapTwoDArray.length);
@@ -49,23 +49,23 @@ export class AllBinaryTiledLayer extends Layer {
         stringBuffer.append(" columns: ");
         stringBuffer.appendint(this.getColumns());
         this.logUtil.putF(stringBuffer.toString(), this, "setCells");
-        var rows = this.getRows();
+        let rows = this.getRows();
         ;
-        var columns = this.getColumns();
+        let columns = this.getColumns();
         ;
-        for (var col = 0; col < columns; col++) {
-            for (var row = 0; row < rows; row++) {
+        for (let col = 0; col < columns; col++) {
+            for (let row = 0; row < rows; row++) {
                 this.setCell(col, row, mapTwoDArray[row][col]);
             }
         }
     }
     updateCells(mapTwoDArray, fromTileId, toTileId) {
-        var rows = this.getRows();
+        let rows = this.getRows();
         ;
-        var columns = this.getColumns();
+        let columns = this.getColumns();
         ;
-        for (var col = 0; col < columns; col++) {
-            for (var row = 0; row < rows; row++) {
+        for (let col = 0; col < columns; col++) {
+            for (let row = 0; row < rows; row++) {
                 if (fromTileId == mapTwoDArray[row][col]) {
                     mapTwoDArray[row][col] = toTileId;
                     this.setCell(col, row, mapTwoDArray[row][col]);
@@ -92,7 +92,7 @@ export class AllBinaryTiledLayer extends Layer {
     }
     getZ2() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round((this.z + this.getDepth()));
+        return globalThis.Math.trunc((this.z + this.getDepth()));
     }
     getCellWidth() {
         //if statement needs to be on the same line and ternary does not work the same way.

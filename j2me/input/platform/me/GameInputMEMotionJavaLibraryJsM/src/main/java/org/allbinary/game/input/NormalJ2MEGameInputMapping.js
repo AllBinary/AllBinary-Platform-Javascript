@@ -14,9 +14,9 @@
 //not GWT import const InputToGameKeyMapping
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { J2MEGameInputMapping } from './J2MEGameInputMapping.js';
-//not GWT import - same folder const J2MEGameInputMapping
+//sameFolderImports - not GWT import - same folder const J2MEGameInputMapping
 import { NormalJ2MEDefaultGameInputMapping } from './NormalJ2MEDefaultGameInputMapping.js';
-//not GWT import - same folder const NormalJ2MEDefaultGameInputMapping
+//sameFolderImports - not GWT import - same folder const NormalJ2MEDefaultGameInputMapping
 export class NormalJ2MEGameInputMapping extends J2MEGameInputMapping {
     getDefault() {
         //if statement needs to be on the same line and ternary does not work the same way.

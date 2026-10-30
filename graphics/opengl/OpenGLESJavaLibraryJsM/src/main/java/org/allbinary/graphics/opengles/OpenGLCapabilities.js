@@ -48,7 +48,7 @@ import { Features } from '../../../../org/allbinary/game/configuration/feature/F
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeature
+//sameFolderImports - not GWT import - same folder const OpenGLFeature
 export class OpenGLCapabilities extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,19 +94,19 @@ export class OpenGLCapabilities extends Object {
     requireInitialization() {
     }
     initCapabilities(gl) {
-        var METHOD_NAME = "initGLCapabilities";
+        let METHOD_NAME = "initGLCapabilities";
         ;
         try {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
-            var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+            let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
             ;
-            var openGLImageSpecificFactory = OpenGLImageSpecificFactory.getInstance();
+            let openGLImageSpecificFactory = OpenGLImageSpecificFactory.getInstance();
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             this.glVersionString = gl.glGetString(GL10.GL_VERSION);
-            var GL_SHADING_LANGUAGE_VERSION = 0x8b8c;
+            let GL_SHADING_LANGUAGE_VERSION = 0x8b8c;
             ;
             this.glShaderVersionString = gl.glGetString(GL_SHADING_LANGUAGE_VERSION);
             if (this.glShaderVersionString ==
@@ -117,19 +117,21 @@ export class OpenGLCapabilities extends Object {
                 if (this.glShaderVersionString !=
                     null
                     && this.glShaderVersionString.indexOf('.') >= 0) {
-                    var startIndex = this.glShaderVersionString.lastIndexOf(' ');
+                    let startIndex = this.glShaderVersionString.lastIndexOf(' ');
                     ;
                     if (startIndex >= 0) {
                         this.glShaderVersionString = this.glShaderVersionString.substring(startIndex + 1);
                     }
                     this.shaderVersion = Integer.parseInt(this.glShaderVersionString.replace(CommonSeps.getInstance().PERIOD, StringUtil.getInstance().EMPTY_STRING));
                 }
-                //: 
             }
-            catch (e) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, METHOD_NAME, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, METHOD_NAME, e);
+                }
             }
             this.glRenderer = gl.glGetString(GL10.GL_RENDERER);
             this.glVendor = gl.glGetString(GL10.GL_VENDOR);
@@ -199,7 +201,7 @@ export class OpenGLCapabilities extends Object {
                     }
                 }
             }
-            var stringUtil = StringUtil.getInstance();
+            let stringUtil = StringUtil.getInstance();
             ;
             if (features.isDefault(openGLFeatureFactory.OPENGL_AUTO_SELECT)) {
                 if (this.vertexBufferObjectSupport) {
@@ -219,21 +221,23 @@ export class OpenGLCapabilities extends Object {
                 PreLogUtil.put(stringBuffer.toString(), this, METHOD_NAME);
                 openGLImageSpecificFactory.setImageFactory(new OpenGLESGL10ImageFactory());
             }
-            var maxTextureSizeArray = new Array(1);
+            let maxTextureSizeArray = new Array(1);
             ;
             gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSizeArray, 0);
             this.maxTextureSize = maxTextureSizeArray[0];
             this.initialized = true;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, METHOD_NAME, e);
+            }
         }
     }
     isExtension(gameFeature) {
-        var index = this.glExtensions.indexOf(gameFeature.getName());
+        let index = this.glExtensions.indexOf(gameFeature.getName());
         ;
         if (index >= 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -298,9 +302,9 @@ export class OpenGLCapabilities extends Object {
         return false;
     }
     toString() {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("GL_VERSION: ");
         stringBuffer.append(this.glVersionString);
@@ -322,22 +326,24 @@ export class OpenGLCapabilities extends Object {
         stringBuffer.append(commonSeps.NEW_LINE);
         stringBuffer.append(" GL_EXTENSIONS: ");
         try {
-            var tokenizer = new Tokenizer(commonSeps.SPACE);
+            let tokenizer = new Tokenizer(commonSeps.SPACE);
             ;
-            var list = tokenizer.getTokensFromString(this.glExtensions, new BasicArrayListD());
+            let list = tokenizer.getTokensFromString(this.glExtensions, new BasicArrayListD());
             ;
-            var size = list.size();
+            let size = list.size();
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 stringBuffer.append(commonSeps.NEW_LINE);
                 stringBuffer.append(this.stringUtil.toString(list.objectArray[index]));
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.TOSTRING, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.TOSTRING, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return stringBuffer.toString();

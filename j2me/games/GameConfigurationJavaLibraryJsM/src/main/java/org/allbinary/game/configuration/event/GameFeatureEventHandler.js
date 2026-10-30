@@ -13,7 +13,7 @@
 */
 //not GWT import const EventListenerInterface
 import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import - same folder const GameFeatureEvent
+//sameFolderImports - not GWT import - same folder const GameFeatureEvent
 export class GameFeatureEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -24,7 +24,7 @@ export class GameFeatureEventHandler extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var gameFeatureListenerInterface = eventListenerInterface;
+        let gameFeatureListenerInterface = eventListenerInterface;
         ;
         gameFeatureListenerInterface.onGameFeatureChange(eventObject);
     }

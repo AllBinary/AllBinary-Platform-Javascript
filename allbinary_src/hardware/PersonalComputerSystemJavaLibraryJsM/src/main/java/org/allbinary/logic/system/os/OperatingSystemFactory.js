@@ -38,9 +38,9 @@ import { WindowsOperatingSystemFactory } from '../../../../../org/allbinary/logi
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoOperatingSystem } from './NoOperatingSystem.js';
-//not GWT import - same folder const GenericOperatingSystem
+//sameFolderImports - not GWT import - same folder const GenericOperatingSystem
 import { OperatingSystems } from './OperatingSystems.js';
-//not GWT import - same folder const OperatingSystems
+//sameFolderImports - not GWT import - same folder const OperatingSystems
 //not plain js - same folder import { SystemProperties } 
 const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
 export class OperatingSystemFactory extends Object {
@@ -58,15 +58,15 @@ export class OperatingSystemFactory extends Object {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getOperatingSystemInstance() {
         try {
-            var operatingSystems = OperatingSystems.getInstance();
+            let operatingSystems = OperatingSystems.getInstance();
             ;
-            var systemProperties = SystemProperties.getInstance();
+            let systemProperties = SystemProperties.getInstance();
             ;
-            var osName = systemProperties.getName();
+            let osName = systemProperties.getName();
             ;
-            var osArch = systemProperties.getArch();
+            let osArch = systemProperties.getArch();
             ;
-            var osVersion = systemProperties.getVersion();
+            let osVersion = systemProperties.getVersion();
             ;
             if (!this.hasDetected) {
                 this.logUtil.putF("osName: " + osName, this, this.commonStrings.GET_INSTANCE);
@@ -92,21 +92,23 @@ export class OperatingSystemFactory extends Object {
                 else {
                     throw new Exception(new StringMaker().append("OS Not Supported: ").append(osName).toString());
                 }
-                var log = LogFactory.getInstanceF(new StringMaker().append("OperatingSystem Info: ").append(StringUtil.getInstance().toString(this.genericOperatingSystem)).toString(), this, this.commonStrings.GET_INSTANCE);
+                let log = LogFactory.getInstanceF(new StringMaker().append("OperatingSystem Info: ").append(StringUtil.getInstance().toString(this.genericOperatingSystem)).toString(), this, this.commonStrings.GET_INSTANCE);
                 ;
                 console.log(log.toString());
                 this.logUtil.putL(log);
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.genericOperatingSystem;
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().FACTORYERROR)) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().FACTORYERROR)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET_INSTANCE, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NoOperatingSystem.NO_OPERATING_SYSTEM;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NoOperatingSystem.NO_OPERATING_SYSTEM;
         }
     }
 }

@@ -18,7 +18,7 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 //not GWT import const DisplayInfoSingleton
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameAdStateFactory } from './GameAdStateFactory.js';
-//not GWT import - same folder const GameAdStateFactory
+//sameFolderImports - not GWT import - same folder const GameAdStateFactory
 export class BottomLimiter extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,9 +36,9 @@ export class BottomLimiter extends Object {
         this.higher = higher;
     }
     update() {
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var gameAdState = GameAdStateFactory.getInstance().getCurrentInstance();
+        let gameAdState = GameAdStateFactory.getInstance().getCurrentInstance();
         ;
         if (gameAdState.isShowingAt()) {
             this.deltaY = this.higher;

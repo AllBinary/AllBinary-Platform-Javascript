@@ -25,14 +25,14 @@ import { Memory } from '../../../org/allbinary/system/Memory.js';
 //not GWT import const Memory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameStatisticsFactory } from './GameStatisticsFactory.js';
-//not GWT import - same folder const GameStatisticsFactory
+//sameFolderImports - not GWT import - same folder const GameStatisticsFactory
 export class SpecialMessageUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return SpecialMessageUtil.SINGLETON;
     }
     get() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(Memory.getInfo());
         stringBuffer.append(CommonSeps.getInstance().SPACE);

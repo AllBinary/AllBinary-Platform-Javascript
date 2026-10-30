@@ -25,7 +25,7 @@ import { AllBinaryVibration } from '../../../../org/allbinary/media/AllBinaryVib
 //not GWT import const AllBinaryVibrationME
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointBehaviorBase } from './WaypointBehaviorBase.js';
-//not GWT import - same folder const WaypointBehaviorBase
+//sameFolderImports - not GWT import - same folder const WaypointBehaviorBase
 export class AdvancedRTSProperties extends Object {
     static createPropertiesSimulated() {
         //if statement needs to be on the same line and ternary does not work the same way.

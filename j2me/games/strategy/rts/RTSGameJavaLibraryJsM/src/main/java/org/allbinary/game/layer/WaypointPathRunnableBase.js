@@ -19,7 +19,7 @@ import { LayerDistanceUtil } from '../../../../org/allbinary/math/LayerDistanceU
 //not GWT import const RunnableInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPathFindingLayer } from './NullPathFindingLayer.js';
-//not GWT import - same folder const PathFindingLayerInterface
+//sameFolderImports - not GWT import - same folder const PathFindingLayerInterface
 export class WaypointPathRunnableBase extends Object {
     constructor() {
         super(...arguments);
@@ -44,15 +44,15 @@ export class WaypointPathRunnableBase extends Object {
         this.setPriority();
     }
     setPriority() {
-        var pathFindingLayer = this.pathFindingLayer;
+        let pathFindingLayer = this.pathFindingLayer;
         ;
-        var targetLayer = this.targetPathFindingLayer;
+        let targetLayer = this.targetPathFindingLayer;
         ;
         if (targetLayer !=
             null) {
-            var distance = this.layerDistanceUtil.getDistance(targetLayer, pathFindingLayer);
+            let distance = this.layerDistanceUtil.getDistance(targetLayer, pathFindingLayer);
             ;
-            var distanceCategory = distance / 70;
+            let distanceCategory = globalThis.Math.trunc(distance / 70);
             ;
             this.priorityP = distanceCategory;
         }

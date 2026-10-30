@@ -18,7 +18,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RandomPatrolAI } from './RandomPatrolAI.js';
-//not GWT import - same folder const RandomPatrolAI
+//sameFolderImports - not GWT import - same folder const RandomPatrolAI
 export class RandomPatrolAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

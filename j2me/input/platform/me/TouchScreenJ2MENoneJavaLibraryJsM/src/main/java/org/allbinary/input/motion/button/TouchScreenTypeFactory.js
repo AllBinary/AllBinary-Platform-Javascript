@@ -15,14 +15,14 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchScreenFactory } from './TouchScreenFactory.js';
-//not GWT import - same folder const TouchScreenFactory
+//sameFolderImports - not GWT import - same folder const TouchScreenFactory
 export class TouchScreenTypeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TouchScreenTypeFactory.instance;
     }
     TouchScreenTypeFactory() {
-        var touchScreenFactory = TouchScreenFactory.getInstance();
+        let touchScreenFactory = TouchScreenFactory.getInstance();
         ;
         touchScreenFactory.setTouch(false);
     }

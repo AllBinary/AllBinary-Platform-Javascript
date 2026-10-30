@@ -25,7 +25,7 @@ export class WithNormalAttributePointerOpenGLProcessor extends ObjectThreedOpenG
     constructor() {
         super();
     }
-    process(gl, aObject3d = {}) {
+    process(gl, aObject3d) {
         throw new RuntimeException();
     }
 }

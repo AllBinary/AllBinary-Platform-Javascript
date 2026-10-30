@@ -16,14 +16,14 @@ import { LocalPlayerInputIdFactory } from '../../../../../org/allbinary/game/inp
 //not GWT import const EventListenerInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UpGameKeyEventHandlerBase } from './UpGameKeyEventHandlerBase.js';
-//not GWT import - same folder const UpGameKeyEventHandlerBase
+//sameFolderImports - not GWT import - same folder const UpGameKeyEventHandlerBase
 export class UpGameKeyEventHandler extends UpGameKeyEventHandlerBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return UpGameKeyEventHandler.instance;
     }
     getInstanceForDevice(deviceId) {
-        var playerInputId = this.playerInputIdFactory.getPlayerForDevice(deviceId);
+        let playerInputId = this.playerInputIdFactory.getPlayerForDevice(deviceId);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return UpGameKeyEventHandler.instanceArray[playerInputId];
@@ -38,19 +38,19 @@ export class UpGameKeyEventHandler extends UpGameKeyEventHandlerBase {
     }
     removeAllListeners() {
         super.removeAllListeners();
-        for (var index = UpGameKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = UpGameKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             UpGameKeyEventHandler.instanceArray[index].removeAllListeners();
         }
     }
     removeListenerSingleThreaded(eventListenerInterface) {
         super.removeListenerSingleThreaded(eventListenerInterface);
-        for (var index = UpGameKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = UpGameKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             UpGameKeyEventHandler.instanceArray[index].removeListenerSingleThreaded(eventListenerInterface);
         }
     }
     removeListener(eventListenerInterface) {
         super.removeListener(eventListenerInterface);
-        for (var index = UpGameKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = UpGameKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             UpGameKeyEventHandler.instanceArray[index].removeListener(eventListenerInterface);
         }
     }

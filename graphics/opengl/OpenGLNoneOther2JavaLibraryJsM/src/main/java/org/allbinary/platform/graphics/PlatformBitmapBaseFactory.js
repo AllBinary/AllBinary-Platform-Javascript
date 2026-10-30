@@ -16,7 +16,7 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const Image
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlatformBitmapBase } from './PlatformBitmapBase.js';
-//not GWT import - same folder const PlatformBitmapBase
+//sameFolderImports - not GWT import - same folder const PlatformBitmapBase
 export class PlatformBitmapBaseFactory extends Object {
     createBitmap(image) {
         //if statement needs to be on the same line and ternary does not work the same way.

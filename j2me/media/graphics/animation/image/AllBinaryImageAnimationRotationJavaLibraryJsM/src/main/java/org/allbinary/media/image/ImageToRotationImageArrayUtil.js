@@ -16,7 +16,7 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const Image
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageRotationUtil } from './ImageRotationUtil.js';
-//not GWT import - same folder const ImageRotationUtil
+//sameFolderImports - not GWT import - same folder const ImageRotationUtil
 export class ImageToRotationImageArrayUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -27,14 +27,14 @@ export class ImageToRotationImageArrayUtil extends Object {
     }
     //@Throws(Exception.constructor)
     generate(image, angleIncrement, totalAngle) {
-        var imageRotationUtil = ImageRotationUtil.getInstance();
+        let imageRotationUtil = ImageRotationUtil.getInstance();
         ;
-        var totalFrames = totalAngle / angleIncrement;
+        let totalFrames = globalThis.Math.trunc(totalAngle / angleIncrement);
         ;
-        var imageArray = new Array(totalFrames);
+        let imageArray = new Array(totalFrames);
         ;
         imageArray[0] = image;
-        for (var index = 1; index < totalFrames; index++) {
+        for (let index = 1; index < totalFrames; index++) {
             imageArray[index] = imageRotationUtil.createRotatedImage(image, index * angleIncrement);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

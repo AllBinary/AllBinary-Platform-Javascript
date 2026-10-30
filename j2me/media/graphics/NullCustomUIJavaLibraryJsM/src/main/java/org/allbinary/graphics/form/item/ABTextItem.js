@@ -2,9 +2,9 @@
 //not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomCustomItem } from './CustomCustomItem.js';
-//not GWT import - same folder const ABCustomItemInterface
+//sameFolderImports - not GWT import - same folder const ABCustomItemInterface
 import { ABStringComponent } from './ABStringComponent.js';
-//not GWT import - same folder const ABStringComponent
+//sameFolderImports - not GWT import - same folder const ABStringComponent
 export class ABTextItem extends CustomCustomItem {
     constructor(label, layout, altText, backgroundBasicColor, foregroundBasicColor) {
         super(label, backgroundBasicColor, foregroundBasicColor);

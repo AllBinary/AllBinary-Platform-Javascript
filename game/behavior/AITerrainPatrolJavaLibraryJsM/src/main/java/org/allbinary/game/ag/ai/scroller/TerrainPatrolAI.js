@@ -28,7 +28,7 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PacePatrolAI } from './PacePatrolAI.js';
-//not GWT import - same folder const PacePatrolAI
+//sameFolderImports - not GWT import - same folder const PacePatrolAI
 export class TerrainPatrolAI extends PacePatrolAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(hashtable, ownerLayerInterface, gameInput);
@@ -44,16 +44,16 @@ export class TerrainPatrolAI extends PacePatrolAI {
         this.changeDirectionIfCliffReached();
     }
     changeDirectionIfCliffReached() {
-        var list = this.terrainEventListener.getList();
+        let list = this.terrainEventListener.getList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var terrainEvent = list.removeAt(index);
+        for (let index = 0; index < size; index++) {
+            let terrainEvent = list.removeAt(index);
             ;
-            var basicTerrainInfo = terrainEvent.getBasicTerrainInfo();
+            let basicTerrainInfo = terrainEvent.getBasicTerrainInfo();
             ;
-            var angle = basicTerrainInfo.getAngle();
+            let angle = basicTerrainInfo.getAngle();
             ;
             if (angle == this.DOWN) {
                 this.nextDirection();

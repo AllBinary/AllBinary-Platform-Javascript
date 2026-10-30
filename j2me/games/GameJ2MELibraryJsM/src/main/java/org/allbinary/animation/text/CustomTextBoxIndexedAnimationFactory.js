@@ -29,9 +29,9 @@ import { ScaleProperties } from '../../../../org/allbinary/media/ScaleProperties
 //not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomTextBox2 } from './CustomTextBox2.js';
-//not GWT import - same folder const CustomTextBox2
+//sameFolderImports - not GWT import - same folder const CustomTextBox2
 import { CustomTextBoxIndexedAnimation } from './CustomTextBoxIndexedAnimation.js';
-//not GWT import - same folder const CustomTextBoxIndexedAnimation
+//sameFolderImports - not GWT import - same folder const CustomTextBoxIndexedAnimation
 export class CustomTextBoxIndexedAnimationFactory extends Object {
     constructor(fontSize, maxLength) {
         super();
@@ -42,19 +42,19 @@ export class CustomTextBoxIndexedAnimationFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var abToGBUtil = ABToGBUtil.getInstance();
+        let abToGBUtil = ABToGBUtil.getInstance();
         ;
-        var abCanvas = abToGBUtil.abCanvas;
+        let abCanvas = abToGBUtil.abCanvas;
         ;
-        var font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.scaleProperties.scaleHeight);
+        let font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.scaleProperties.scaleHeight);
         ;
-        var customTextBox = new CustomTextBox2(abCanvas.getCustomCommandListener(), StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING, this.maxLength, TextField.ANY, font, abCanvas.getLayerManager().getBackgroundBasicColor(), abCanvas.getLayerManager().getForegroundBasicColor());
+        let customTextBox = new CustomTextBox2(abCanvas.getCustomCommandListener(), StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING, this.maxLength, TextField.ANY, font, abCanvas.getLayerManager().getBackgroundBasicColor(), abCanvas.getLayerManager().getForegroundBasicColor());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new CustomTextBoxIndexedAnimation(customTextBox);
     }
     setInitialScale(scaleProperties) {
-        var fontSize = this.scaleProperties.scaleHeight;
+        let fontSize = this.scaleProperties.scaleHeight;
         ;
         this.scaleProperties = scaleProperties;
         if (this.scaleProperties.scaleHeight < 6) {

@@ -23,7 +23,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput
+//sameFolderImports - not GWT import - same folder const BaseTouchInput
 export class BasicTouchButtonsBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);
@@ -36,17 +36,19 @@ export class BasicTouchButtonsBuilder extends BaseTouchInput {
     getList() {
         try {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.GET_LIST);
-            var list = new BasicArrayListD();
+            let list = new BasicArrayListD();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return list;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET_LIST, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return BasicArrayListUtil.getInstance().getImmutableInstance();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET_LIST, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return BasicArrayListUtil.getInstance().getImmutableInstance();
+                ;
+            }
         }
     }
 }

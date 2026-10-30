@@ -46,7 +46,7 @@ export class OwnershipPaintable extends Paintable {
         this.beginWidth = 0;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.COPYRIGHT_Y = 2 * font.getHeight();
         this.beginWidth = (font.stringWidth(this.COPYRIGHT) >> 1);
@@ -63,9 +63,9 @@ export class OwnershipPaintable extends Paintable {
     paint(graphics) {
         this.myFontProcessor.process(graphics);
         graphics.setColor(this.color);
-        var halfWidth = this.displayInfo.getLastHalfWidth();
+        let halfWidth = this.displayInfo.getLastHalfWidth();
         ;
-        var height = this.displayInfo.getLastHeight();
+        let height = this.displayInfo.getLastHeight();
         ;
         graphics.drawString(this.COPYRIGHT, halfWidth - this.beginWidth, height - this.COPYRIGHT_Y, this.anchor);
     }

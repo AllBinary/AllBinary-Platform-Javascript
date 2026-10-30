@@ -35,7 +35,7 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 //not GWT import const TimeDelayHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonsMappingPaintable } from './TouchButtonsMappingPaintable.js';
-//not GWT import - same folder const TouchButtonsMappingPaintable
+//sameFolderImports - not GWT import - same folder const TouchButtonsMappingPaintable
 export class TouchButtonsPaintableComposite extends ProcessPaintable {
     constructor(inputMappingInterface, basicColor) {
         super();
@@ -57,13 +57,13 @@ export class TouchButtonsPaintableComposite extends ProcessPaintable {
     onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent) {
         try {
             this.logUtil.putF(this.commonStrings.START, this, "onCompleteMotionGestureInputEvent");
-            var touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
+            let touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
             ;
-            var gameKeyCompleteMotionGestureInputEvent = completeMotionGestureInputEvent;
+            let gameKeyCompleteMotionGestureInputEvent = completeMotionGestureInputEvent;
             ;
-            var gameKey = gameKeyCompleteMotionGestureInputEvent.getGameKey();
+            let gameKey = gameKeyCompleteMotionGestureInputEvent.getGameKey();
             ;
-            var motionGestureInput = completeMotionGestureInputEvent.getMotionGestureInput();
+            let motionGestureInput = completeMotionGestureInputEvent.getMotionGestureInput();
             ;
             if (motionGestureInput == touchMotionGestureFactory.RELEASED) {
                 this.logUtil.putF(this.RELEASE, this, this.METHOD_NAME);
@@ -84,10 +84,12 @@ export class TouchButtonsPaintableComposite extends ProcessPaintable {
             this.released = false;
             this.logUtil.putF(new StringMaker().append("GameKey: ").append(StringUtil.getInstance().toString(gameKey)).append(" MotionGestureInput: ").append(StringUtil.getInstance().toString(motionGestureInput)).toString(), this, this.METHOD_NAME);
             this.inputMappingInterface.processInputMapping(gameKey, motionGestureInput);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.METHOD_NAME, e);
+            }
         }
     }
     process() {

@@ -18,9 +18,9 @@ import { Object } from '../../../../java/lang/Object.js';
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const SoundInterface
+//sameFolderImports - not GWT import - same folder const SoundInterface
 import { NoPlayer } from './NoPlayer.js';
-//not GWT import - same folder const NoPlayer
+//sameFolderImports - not GWT import - same folder const NoPlayer
 export class Sound extends Object {
     constructor(resource) {
         super();
@@ -48,12 +48,14 @@ export class Sound extends Object {
     run() {
         try {
             this.player.start();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN);
+            }
         }
     }
 }

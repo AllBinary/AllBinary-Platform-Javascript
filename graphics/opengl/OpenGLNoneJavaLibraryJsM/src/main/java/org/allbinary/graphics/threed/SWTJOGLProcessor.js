@@ -14,20 +14,20 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import - same folder const RatioProcessor
+//sameFolderImports - not GWT import - same folder const RatioProcessor
 //OpenGLNone
 export class SWTJOGLProcessor extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return SWTJOGLProcessor.instance;
     }
-    init(display = {}, comp = {}) {
+    init(display, comp) {
     }
     isHolderCreated() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return true;
     }
-    setRenderer(renderer = {}) {
+    setRenderer(renderer) {
     }
     isJOGL() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -37,7 +37,7 @@ export class SWTJOGLProcessor extends Object {
     }
     onSurfaceCreated() {
     }
-    onSurfaceChangedForEvent(event = {}) {
+    onSurfaceChangedForEvent(event) {
     }
     onSurfaceChanged() {
     }

@@ -19,7 +19,7 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { FormType } from './FormType.js';
-//not GWT import - same folder const FormType
+//sameFolderImports - not GWT import - same folder const FormType
 export class FormTypeFactory extends Object {
     constructor() {
         super(...arguments);
@@ -34,9 +34,9 @@ export class FormTypeFactory extends Object {
         return FormTypeFactory.instance;
     }
     getFormType() {
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var formType;
+        let formType;
         ;
         if (displayInfo.isPortrait()) {
             formType = this.VERTICAL_CENTER_FORM;

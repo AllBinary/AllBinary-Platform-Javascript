@@ -26,13 +26,13 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { ViewPosition } from '../../../../org/allbinary/view/ViewPosition.js';
-//not GWT import - same folder const GameInputInterface
+//sameFolderImports - not GWT import - same folder const GameInputInterface
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const InputFactory
+//sameFolderImports - not GWT import - same folder const InputFactory
 import { GameInputProcessor } from './GameInputProcessor.js';
-//not GWT import - same folder const GameInputProcessor
+//sameFolderImports - not GWT import - same folder const GameInputProcessor
 import { GameInputProcessorUtil } from './GameInputProcessorUtil.js';
-//not GWT import - same folder const TestInputInterface
+//sameFolderImports - not GWT import - same folder const TestInputInterface
 export class TestingInputSingleton extends AllBinaryGameLayer {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +48,7 @@ export class TestingInputSingleton extends AllBinaryGameLayer {
     initInputProcessors() {
     }
     initInputProcessorsForTestInput(aTestInputInterface) {
-        var testInputInterface = aTestInputInterface;
+        let testInputInterface = aTestInputInterface;
         ;
         this.paintable = testInputInterface;
         this.inputProcessorArray[Canvas.UP] = new class extends GameInputProcessor {
@@ -92,13 +92,13 @@ export class TestingInputSingleton extends AllBinaryGameLayer {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     processInputList(allbinaryLayerManager, list) {
-        var key = 0;
+        let key = 0;
         ;
-        var gameKeyEvent;
+        let gameKeyEvent;
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             gameKeyEvent = list.objectArray[index];
             key = gameKeyEvent.getKey();
             this.inputProcessorArray[key].processEvent(allbinaryLayerManager, GameKeyEvent.NONE);

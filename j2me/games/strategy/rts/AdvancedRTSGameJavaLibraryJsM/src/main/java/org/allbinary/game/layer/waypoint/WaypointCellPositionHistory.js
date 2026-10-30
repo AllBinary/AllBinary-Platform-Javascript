@@ -36,12 +36,12 @@ export class WaypointCellPositionHistory extends Object {
         this.layerList.add(layerInterface);
     }
     addList(list, layerInterface) {
-        for (var index = list.size() - 1; index >= 0; index--) {
+        for (let index = list.size() - 1; index >= 0; index--) {
             this.add(list.get(index), layerInterface);
         }
     }
     remove(cellPosition) {
-        var index = this.positionList.indexOf(cellPosition);
+        let index = this.positionList.indexOf(cellPosition);
         ;
         if (index >= 0) {
             this.positionList.removeAt(index);
@@ -49,7 +49,7 @@ export class WaypointCellPositionHistory extends Object {
         }
     }
     removeLayer(layerInterface) {
-        var index = 0;
+        let index = 0;
         ;
         while (index != -1) {
             index = this.layerList.indexOf(layerInterface);
@@ -69,7 +69,7 @@ export class WaypointCellPositionHistory extends Object {
         ;
     }
     anyCellPositionWithDrop(list) {
-        for (var index = list.size() - 1; index >= 0; index--) {
+        for (let index = list.size() - 1; index >= 0; index--) {
             if (this.isCellPositionWithDrop(list.get(index))) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
@@ -79,7 +79,7 @@ export class WaypointCellPositionHistory extends Object {
         return false;
     }
     getLayerInterface(cellPosition) {
-        var index = this.positionList.indexOf(cellPosition);
+        let index = this.positionList.indexOf(cellPosition);
         ;
         if (index >= 0) {
             //if statement needs to be on the same line and ternary does not work the same way.

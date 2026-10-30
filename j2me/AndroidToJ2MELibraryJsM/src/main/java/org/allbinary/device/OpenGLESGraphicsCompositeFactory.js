@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLESGraphicsFactory } from './OpenGLESGraphicsFactory.js';
-//not GWT import - same folder const OpenGLESGraphicsFactory
+//sameFolderImports - not GWT import - same folder const OpenGLESGraphicsFactory
 export class OpenGLESGraphicsCompositeFactory extends Object {
     constructor() {
         super(...arguments);

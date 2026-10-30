@@ -19,27 +19,32 @@ import { AndroidUtil } from '../../../../../../org/allbinary/AndroidUtil.js';
 //not GWT import const AndroidUtil
 import { GraphicsFeatureFactory } from '../../../../../../org/allbinary/game/configuration/feature/GraphicsFeatureFactory.js';
 //not GWT import const GraphicsFeatureFactory
+//not plain js import { NullUtil } 
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GeologicalGameResources extends BasicGameResources {
     static getInstance() {
+        if (GeologicalGameResources.instance == NullUtil.getInstance().NULL_OBJECT) {
+            GeologicalGameResources.instance = new GeologicalGameResources();
+        }
         //if statement needs to be on the same line and ternary does not work the same way.
         return GeologicalGameResources.instance;
     }
     constructor() {
         super();
-        var ROOT = "/resource";
+        let ROOT = "/resource";
         ;
-        var SMALL = "_20_by_20.png";
+        let SMALL = "_20_by_20.png";
         ;
-        var MEDIUM = SMALL;
+        let MEDIUM = SMALL;
         ;
-        var SIZE_FOUR = SMALL;
+        let SIZE_FOUR = SMALL;
         ;
-        var SIZE_FIVE = SMALL;
+        let SIZE_FIVE = SMALL;
         ;
-        var SIZE_SIX = SMALL;
+        let SIZE_SIX = SMALL;
         ;
-        var SIZE = [
+        let SIZE = [
             SMALL, MEDIUM, SIZE_FOUR, SIZE_FIVE, SIZE_SIX
         ];
         ;
@@ -63,4 +68,4 @@ export class GeologicalGameResources extends BasicGameResources {
         }
     }
 }
-GeologicalGameResources.instance = new GeologicalGameResources();
+GeologicalGameResources.instance = NullUtil.getInstance().NULL_OBJECT;

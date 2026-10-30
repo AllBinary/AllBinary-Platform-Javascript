@@ -44,7 +44,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CpuInfo } from './CpuInfo.js';
-//not GWT import - same folder const CpuInfo
+//sameFolderImports - not GWT import - same folder const CpuInfo
 export class Cpu extends Object {
     constructor(filePath) {
         super();
@@ -60,57 +60,66 @@ export class Cpu extends Object {
         this.CPUFILE = "/proc/cpuinfo";
         this.init(this.CPUFILE);
     }
+    init(...args) {
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.init$overload1(args[0]);
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.init$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: init');
+    }
     //@Throws(Exception.constructor)
-    init(filePath) {
-        var lineNumberReader = null;
+    init$overload1(filePath) {
+        let lineNumberReader = null;
         ;
         try {
             this.init(lineNumberReader, filePath);
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
-                this.logUtil.put(new StringMaker().append("Cpu Data: ").append(this.toString()).toString(), this, this.commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
+                    this.logUtil.put(new StringMaker().append("Cpu Data: ").append(this.toString()).toString(), this, this.commonStrings.CONSTRUCTOR, e);
+                }
+                throw e;
             }
-            throw e;
         }
     }
     //@Throws(Exception.constructor)
-    init(lineNumberReader, filePath) {
+    init$overload2(lineNumberReader, filePath) {
         try {
-            var fileReader = new FileReader(filePath);
+            let fileReader = new FileReader(filePath);
             ;
             lineNumberReader = new LineNumberReader(fileReader);
             this.cpuHashMap = StdUtil.getInstance().createHashMap();
             if (lineNumberReader ==
                 null) {
-                var fileVector = SubDirectory.getInstance().search(filePath, AbFile.createAbFile(FilePathData.getInstance().PATH_START));
+                let fileVector = SubDirectory.getInstance().search(filePath, AbFile.createAbFile(FilePathData.getInstance().PATH_START));
                 ;
                 if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
                     this.logUtil.putF(new StringMaker().append("Cpu File BasicArrayList Size: ").appendint(fileVector.size()).toString(), this, this.commonStrings.CONSTRUCTOR);
                 }
                 if (!fileVector.isEmpty()) {
-                    var file = fileVector.get(0);
+                    let file = fileVector.get(0);
                     ;
                     lineNumberReader = new LineNumberReader(new FileReader(file.getPath()));
                 }
             }
             if (lineNumberReader !=
                 null) {
-                var nextLine = lineNumberReader.readLine();
+                let nextLine = lineNumberReader.readLine();
                 ;
                 while (lineNumberReader !=
                     null
                     && nextLine !=
                         null) {
-                    var index = nextLine.indexOf(':');
+                    let index = nextLine.indexOf(':');
                     ;
                     if (index >= 0) {
-                        var key = nextLine.substring(0, index);
+                        let key = nextLine.substring(0, index);
                         ;
-                        var valueIndex = index + 1;
+                        let valueIndex = index + 1;
                         ;
-                        var value = nextLine.substring(valueIndex, nextLine.length);
+                        let value = nextLine.substring(valueIndex, nextLine.length);
                         ;
                         if (key.indexOf(CpuInfo.PROCESSOR.toString()) >= 0)
                             this.cpuHashMap.put(CpuInfo.PROCESSOR, value);
@@ -132,15 +141,11 @@ export class Cpu extends Object {
                     nextLine = lineNumberReader.readLine();
                 }
             }
-            try {
-            }
-            finally {
-                if (lineNumberReader !=
-                    null)
-                    lineNumberReader.close();
-            }
         }
         finally {
+            if (lineNumberReader !=
+                null)
+                lineNumberReader.close();
         }
     }
     getProcessor() {
@@ -175,20 +180,27 @@ export class Cpu extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.cpuHashMap.get(CpuInfo.CACHESIZE);
     }
-    compareTo(cpuInterface) {
+    compareTo(...args) {
+        if (args.length === 1)
+            return this.compareTo$overload1(args[0]);
+        if (args.length === 1)
+            return this.compareTo$overload2(args[0]);
+        throw new TypeError('No matching overload: compareTo');
+    }
+    compareTo$overload1(cpuInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return true;
     }
-    compareTo(componentInterface) {
+    compareTo$overload2(componentInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return true;
     }
     toString() {
-        var commonLabels = CommonLabels.getInstance();
+        let commonLabels = CommonLabels.getInstance();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         stringMaker.append(CpuInfo.PROCESSOR.toString()).append(commonLabels.COLON_SEP).append(this.getProcessor());
         stringMaker.append(commonSeps.NEW_LINE);

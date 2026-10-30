@@ -44,26 +44,33 @@ export class BufferedWriterUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return BufferedWriterUtil.instance;
     }
+    overwrite(...args) {
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
+            return this.overwrite$overload1(args[0], args[1]);
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.overwrite$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: overwrite');
+    }
     //@Throws(Exception.constructor)
-    overwrite(path, data) {
-        var abFile = AbFile.createAbFile(path);
+    overwrite$overload1(path, data) {
+        let abFile = AbFile.createAbFile(path);
         ;
         if (abFile.exists()) {
             this.logUtil.putF(this.REMOVING_OLD + path, this, this.commonStrings.CREATE);
             abFile.delete();
         }
         else {
-            var name = AbPathData.getInstance().removeNameFromPath(path);
+            let name = AbPathData.getInstance().removeNameFromPath(path);
             ;
-            var abFileDirectory = AbFile.createAbFile(name);
+            let abFileDirectory = AbFile.createAbFile(name);
             ;
             if (abFileDirectory.exists()) {
             }
             else {
-                var stringBuilder = new StringMaker();
+                let stringBuilder = new StringMaker();
                 ;
                 this.logUtil.putF(stringBuilder.append(this.commonStrings.CREATE).append(this.commonLabels.COLON_SEP).append(name).toString(), this, this.commonStrings.CREATE);
-                var result = abFileDirectory.mkdirs();
+                let result = abFileDirectory.mkdirs();
                 ;
                 stringBuilder.delete(0, stringBuilder.length());
                 this.logUtil.putF(stringBuilder.append(this.commonLabels.RESULT_).appendboolean(result).toString(), this, this.commonStrings.CREATE);
@@ -72,23 +79,23 @@ export class BufferedWriterUtil extends Object {
         this.write(abFile, data);
     }
     //@Throws(Exception.constructor)
-    overwrite(abFile, data) {
+    overwrite$overload2(abFile, data) {
         if (abFile.exists()) {
             this.logUtil.putF(this.REMOVING_OLD + abFile.getPath(), this, this.commonStrings.CREATE);
             abFile.delete();
         }
         else {
-            var name = AbPathData.getInstance().removeNameFromPath(abFile.getAbsolutePath());
+            let name = AbPathData.getInstance().removeNameFromPath(abFile.getAbsolutePath());
             ;
-            var abFileDirectory = AbFile.createAbFile(name);
+            let abFileDirectory = AbFile.createAbFile(name);
             ;
             if (abFileDirectory.exists()) {
             }
             else {
-                var stringBuilder = new StringMaker();
+                let stringBuilder = new StringMaker();
                 ;
                 this.logUtil.putF(stringBuilder.append(this.commonStrings.CREATE).append(this.commonLabels.COLON_SEP).append(name).toString(), this, this.commonStrings.CREATE);
-                var result = abFileDirectory.mkdirs();
+                let result = abFileDirectory.mkdirs();
                 ;
                 stringBuilder.delete(0, stringBuilder.length());
                 this.logUtil.putF(stringBuilder.append(this.commonLabels.RESULT_).appendboolean(result).toString(), this, this.commonStrings.CREATE);
@@ -98,7 +105,7 @@ export class BufferedWriterUtil extends Object {
     }
     //@Throws(Exception.constructor)
     write(abFile, data) {
-        var fileOut = new BufferedWriter(new FileWriter(AbFileNativeUtil.get(abFile)));
+        let fileOut = new BufferedWriter(new FileWriter(AbFileNativeUtil.get(abFile)));
         ;
         fileOut.write(data, 0, data.length);
         fileOut.newLine();

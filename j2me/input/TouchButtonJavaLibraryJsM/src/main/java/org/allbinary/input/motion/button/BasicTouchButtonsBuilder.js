@@ -21,25 +21,25 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput
+//sameFolderImports - not GWT import - same folder const BaseTouchInput
 import { CommonButtons } from './CommonButtons.js';
-//not GWT import - same folder const CommonButtons
+//sameFolderImports - not GWT import - same folder const CommonButtons
 import { TouchButtonLocationHelper } from './TouchButtonLocationHelper.js';
-//not GWT import - same folder const TouchButtonLocationHelper
+//sameFolderImports - not GWT import - same folder const TouchButtonLocationHelper
 import { BasicTouchButtonCellPositionFactory } from './BasicTouchButtonCellPositionFactory.js';
-//not GWT import - same folder const BasicTouchButtonCellPositionFactory
+//sameFolderImports - not GWT import - same folder const BasicTouchButtonCellPositionFactory
 import { TouchButton } from './TouchButton.js';
-//not GWT import - same folder const TouchButton
+//sameFolderImports - not GWT import - same folder const TouchButton
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
-//not GWT import - same folder const BasicTouchInputFactory
+//sameFolderImports - not GWT import - same folder const BasicTouchInputFactory
 import { TouchButtonUpResource } from './TouchButtonUpResource.js';
-//not GWT import - same folder const TouchButtonUpResource
+//sameFolderImports - not GWT import - same folder const TouchButtonUpResource
 import { TouchButtonDownResource } from './TouchButtonDownResource.js';
-//not GWT import - same folder const TouchButtonDownResource
+//sameFolderImports - not GWT import - same folder const TouchButtonDownResource
 import { TouchButtonTurnLeftResource } from './TouchButtonTurnLeftResource.js';
-//not GWT import - same folder const TouchButtonTurnLeftResource
+//sameFolderImports - not GWT import - same folder const TouchButtonTurnLeftResource
 import { TouchButtonTurnRightResource } from './TouchButtonTurnRightResource.js';
-//not GWT import - same folder const TouchButtonTurnRightResource
+//sameFolderImports - not GWT import - same folder const TouchButtonTurnRightResource
 export class BasicTouchButtonsBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);
@@ -48,21 +48,21 @@ export class BasicTouchButtonsBuilder extends BaseTouchInput {
     getList() {
         try {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
-            var list = new BasicArrayListD();
+            let list = new BasicArrayListD();
             ;
-            var commonButtons = CommonButtons.getInstance();
+            let commonButtons = CommonButtons.getInstance();
             ;
-            var touchButtonLocationHelper = new TouchButtonLocationHelper();
+            let touchButtonLocationHelper = new TouchButtonLocationHelper();
             ;
-            var basicTouchButtonCellPositionFactory = new BasicTouchButtonCellPositionFactory();
+            let basicTouchButtonCellPositionFactory = new BasicTouchButtonCellPositionFactory();
             ;
-            var UP = TouchButton.createButton(BasicTouchInputFactory.getInstance().UP, TouchButtonUpResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.SECOND_FROM_BOTTOM_LEFT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
+            let UP = TouchButton.createButton(BasicTouchInputFactory.getInstance().UP, TouchButtonUpResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.SECOND_FROM_BOTTOM_LEFT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
             ;
-            var DOWN = TouchButton.createButton(BasicTouchInputFactory.getInstance().DOWN, TouchButtonDownResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.BOTTOM_LEFT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
+            let DOWN = TouchButton.createButton(BasicTouchInputFactory.getInstance().DOWN, TouchButtonDownResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.BOTTOM_LEFT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
             ;
-            var LEFT = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_FOUR, TouchButtonTurnLeftResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.BOTTOM_SECOND_FROM_RIGHT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
+            let LEFT = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_FOUR, TouchButtonTurnLeftResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.BOTTOM_SECOND_FROM_RIGHT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
             ;
-            var RIGHT = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_THREE, TouchButtonTurnRightResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.BOTTOM_RIGHT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
+            let RIGHT = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_THREE, TouchButtonTurnRightResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.BOTTOM_RIGHT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
             ;
             list.add(UP);
             list.add(LEFT);
@@ -70,13 +70,15 @@ export class BasicTouchButtonsBuilder extends BaseTouchInput {
             list.add(DOWN);
             //if statement needs to be on the same line and ternary does not work the same way.
             return list;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET_LIST, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return BasicArrayListUtil.getInstance().getImmutableInstance();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET_LIST, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return BasicArrayListUtil.getInstance().getImmutableInstance();
+                ;
+            }
         }
     }
 }

@@ -46,7 +46,7 @@ export class ResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStream(resource) {
-        var inputStream = this.getResourceAsStreamAtStart(resource, 2);
+        let inputStream = this.getResourceAsStreamAtStart(resource, 2);
         ;
         if (inputStream ==
             null) {
@@ -61,20 +61,20 @@ export class ResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStreamAtStart(resource, startIndex) {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var index = resource.indexOf(commonSeps.COLON);
+        let index = resource.indexOf(commonSeps.COLON);
         ;
-        var resourcePath = resource.substring(index + startIndex);
+        let resourcePath = resource.substring(index + startIndex);
         ;
-        var inputStream = resource..javaClass.getResourceAsStream(resourcePath);
+        let inputStream = resource..javaClass.getResourceAsStream(resourcePath);
         ;
         if (inputStream !=
             null) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return inputStream;
         }
-        var classLoader = ResourceUtil.classLoader;
+        let classLoader = ResourceUtil.classLoader;
         ;
         inputStream = classLoader.getResourceAsStream(resourcePath);
         if (inputStream !=

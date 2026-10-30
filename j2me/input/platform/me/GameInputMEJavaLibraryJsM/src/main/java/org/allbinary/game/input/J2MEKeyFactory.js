@@ -15,9 +15,9 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import - same folder const GameKey
+//sameFolderImports - not GWT import - same folder const GameKey
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 export class J2MEKeyFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -28,13 +28,13 @@ export class J2MEKeyFactory extends Object {
         this.gameKeyFactory = GameKeyFactory.getInstance();
     }
     init() {
-        var gameKeyArray = [
+        let gameKeyArray = [
             this.gameKeyFactory.DOWN, this.gameKeyFactory.FIRE, this.gameKeyFactory.GAME_A, this.gameKeyFactory.GAME_B, this.gameKeyFactory.GAME_C, this.gameKeyFactory.GAME_D, this.gameKeyFactory.KEY_NUM0, this.gameKeyFactory.KEY_NUM1, this.gameKeyFactory.KEY_NUM2, this.gameKeyFactory.KEY_NUM3, this.gameKeyFactory.KEY_NUM4, this.gameKeyFactory.KEY_NUM5, this.gameKeyFactory.KEY_NUM6, this.gameKeyFactory.KEY_NUM7, this.gameKeyFactory.KEY_NUM8, this.gameKeyFactory.KEY_NUM9, this.gameKeyFactory.KEY_POUND, this.gameKeyFactory.KEY_STAR, this.gameKeyFactory.LEFT, this.gameKeyFactory.LEVEL_DOWN, this.gameKeyFactory.LEVEL_UP, this.gameKeyFactory.NONE, this.gameKeyFactory.RIGHT, this.gameKeyFactory.UP
         ];
         ;
-        var inputFactory = InputFactory.getInstance();
+        let inputFactory = InputFactory.getInstance();
         ;
-        for (var index = gameKeyArray.length; --index >= 0;) {
+        for (let index = gameKeyArray.length; --index >= 0;) {
             inputFactory.add(gameKeyArray[index].getId(), gameKeyArray[index]);
         }
     }

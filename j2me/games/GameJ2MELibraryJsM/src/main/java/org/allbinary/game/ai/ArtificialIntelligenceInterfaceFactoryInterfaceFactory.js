@@ -23,7 +23,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicAI } from './BasicAI.js';
-//not GWT import - same folder const ArtificialIntelligenceInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const ArtificialIntelligenceInterfaceFactoryInterface
 export class ArtificialIntelligenceInterfaceFactoryInterfaceFactory extends Object {
     constructor() {
         super(...arguments);
@@ -37,11 +37,11 @@ export class ArtificialIntelligenceInterfaceFactoryInterfaceFactory extends Obje
         this.list = new BasicArrayListD();
     }
     getInstanceFromCollection(hashtable) {
-        var typeInteger = hashtable.get(BasicAI.ID);
+        let typeInteger = hashtable.get(BasicAI.ID);
         ;
-        var type = typeInteger.intValue();
+        let type = typeInteger.intValue();
         ;
-        var artificialIntelligenceInterfaceFactoryInterface = this.list.objectArray[type - 1];
+        let artificialIntelligenceInterfaceFactoryInterface = this.list.objectArray[type - 1];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return artificialIntelligenceInterfaceFactoryInterface;

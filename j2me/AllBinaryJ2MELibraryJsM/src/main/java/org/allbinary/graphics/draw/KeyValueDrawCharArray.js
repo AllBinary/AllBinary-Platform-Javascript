@@ -32,7 +32,7 @@ export class KeyValueDrawCharArray extends Object {
         this.labelX = x;
     }
     updateMeasurement(graphics) {
-        var labelWidth = graphics.getFont().stringWidth(this.LABEL) - this.LABEL.length;
+        let labelWidth = graphics.getFont().stringWidth(this.LABEL) - this.LABEL.length;
         ;
         this.valueX = labelWidth + this.labelX;
         this.myFontProcessor = MyFontProcessor.getInstance();

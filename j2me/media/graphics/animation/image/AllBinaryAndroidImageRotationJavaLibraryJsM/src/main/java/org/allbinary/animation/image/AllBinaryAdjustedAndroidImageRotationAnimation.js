@@ -14,7 +14,7 @@
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryFlickerAndroidImageRotationAnimation } from './AllBinaryFlickerAndroidImageRotationAnimation.js';
-//not GWT import - same folder const AllBinaryFlickerAndroidImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryFlickerAndroidImageRotationAnimation
 export class AllBinaryAdjustedAndroidImageRotationAnimation extends AllBinaryFlickerAndroidImageRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, dx, dy, animationBehavior) {
         super(originalImage, image, angleInfo, totalAngle, animationBehavior);

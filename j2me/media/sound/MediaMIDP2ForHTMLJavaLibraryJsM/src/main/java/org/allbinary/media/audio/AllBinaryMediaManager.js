@@ -29,9 +29,9 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Sounds } from './Sounds.js';
-//not GWT import - same folder const SoundsFactoryInterface
+//sameFolderImports - not GWT import - same folder const SoundsFactoryInterface
 import { NoPlayer } from './NoPlayer.js';
-//not GWT import - same folder const NoPlayer
+//sameFolderImports - not GWT import - same folder const NoPlayer
 //MediaMIDP2ForHTMLJavaLibrary
 export class AllBinaryMediaManager extends Object {
     static isMuted() {
@@ -46,9 +46,9 @@ export class AllBinaryMediaManager extends Object {
     }
     //@Throws(Exception.constructor)
     static init(soundsFactoryInterface) {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
-        var commonString = CommonStrings.getInstance();
+        let commonString = CommonStrings.getInstance();
         ;
         logUtil.putF(commonString.START, AllBinaryMediaManager.THIS, commonString.INIT);
         ProgressCanvasFactory.getInstance().addNormalPortion(50, "Media Manager");

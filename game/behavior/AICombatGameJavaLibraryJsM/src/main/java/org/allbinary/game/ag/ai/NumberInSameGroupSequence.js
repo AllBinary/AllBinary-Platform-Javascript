@@ -23,7 +23,7 @@ export class NumberInSameGroupSequence extends Object {
     }
     constructor() {
         super();
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
         this.NUMBER_ON_SAME_TEAM_SEQUENCE_ZERO = smallIntegerSingletonFactory.getAt(100);
         this.NUMBER_ON_SAME_TEAM_SEQUENCE_ONE = smallIntegerSingletonFactory.getAt(101);

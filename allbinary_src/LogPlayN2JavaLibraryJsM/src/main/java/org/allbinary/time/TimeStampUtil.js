@@ -28,9 +28,9 @@ import { DateTimeFormat } from '../../../com/google/gwt/i18n/client/DateTimeForm
         super();
     }
     getAsString() {
-        var simpleDataFormat = DateTimeFormat.getFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        let simpleDataFormat = DateTimeFormat.getFormat("yyyy-MM-dd HH:mm:ss.SSS");
         ;
-        var date = new Date();
+        let date = new Date();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return simpleDataFormat.format(date);

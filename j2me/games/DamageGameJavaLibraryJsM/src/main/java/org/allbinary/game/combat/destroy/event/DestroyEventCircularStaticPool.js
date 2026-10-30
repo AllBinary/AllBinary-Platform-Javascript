@@ -18,7 +18,7 @@ import { AllBinaryEventCircularPool } from '../../../../../../org/allbinary/logi
 //not GWT import const AllBinaryEventCircularPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyEventFactory } from './DestroyEventFactory.js';
-//not GWT import - same folder const DestroyedEvent
+//sameFolderImports - not GWT import - same folder const DestroyedEvent
 export class DestroyEventCircularStaticPool extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -33,7 +33,7 @@ export class DestroyEventCircularStaticPool extends Object {
     }
     //@Throws(Exception.constructor)
     getInstanceForLayer(layerInterface) {
-        var destroyedEvent = this.EVENT_POOL.getNextInstance();
+        let destroyedEvent = this.EVENT_POOL.getNextInstance();
         ;
         destroyedEvent.setLayerInterfaceForCircularStaticPool(layerInterface);
         //if statement needs to be on the same line and ternary does not work the same way.

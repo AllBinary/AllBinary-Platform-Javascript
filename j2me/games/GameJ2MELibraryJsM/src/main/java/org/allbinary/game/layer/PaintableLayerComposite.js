@@ -21,14 +21,14 @@ export class PaintableLayerComposite extends Paintable {
         this.paintableArray = paintableArray;
     }
     paint(graphics) {
-        for (var index = this.paintableArray.length; --index >= 0;) {
+        for (let index = this.paintableArray.length; --index >= 0;) {
             this.paintableArray[index].paint(graphics);
         }
     }
     paintThreed(graphics) {
-        var paintableInterface;
+        let paintableInterface;
         ;
-        for (var index = this.paintableArray.length; --index >= 0;) {
+        for (let index = this.paintableArray.length; --index >= 0;) {
             paintableInterface = this.paintableArray[index];
             paintableInterface.paintThreed(graphics);
         }

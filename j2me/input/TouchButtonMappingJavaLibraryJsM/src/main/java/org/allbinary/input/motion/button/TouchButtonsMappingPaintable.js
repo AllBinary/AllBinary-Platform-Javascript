@@ -22,15 +22,15 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonLocationHelper } from './TouchButtonLocationHelper.js';
-//not GWT import - same folder const TouchButtonLocationHelper
+//sameFolderImports - not GWT import - same folder const TouchButtonLocationHelper
 import { CommonButtons } from './CommonButtons.js';
-//not GWT import - same folder const CommonButtons
+//sameFolderImports - not GWT import - same folder const CommonButtons
 import { TouchButton } from './TouchButton.js';
-//not GWT import - same folder const TouchButton
+//sameFolderImports - not GWT import - same folder const TouchButton
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
-//not GWT import - same folder const BasicTouchInputFactory
+//sameFolderImports - not GWT import - same folder const BasicTouchInputFactory
 import { TouchButtonBlankResource } from './TouchButtonBlankResource.js';
-//not GWT import - same folder const TouchButtonBlankResource
+//sameFolderImports - not GWT import - same folder const TouchButtonBlankResource
 export class TouchButtonsMappingPaintable extends Paintable {
     constructor(basicColor) {
         super();
@@ -43,28 +43,30 @@ export class TouchButtonsMappingPaintable extends Paintable {
     init() {
         try {
             this.paintableTable = this.createPaintableTable();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "updateRectangle", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "updateRectangle", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     createPaintableTable() {
-        var totalColumns = this.touchButtonLocationHelper.getTotalColumns();
+        let totalColumns = this.touchButtonLocationHelper.getTotalColumns();
         ;
-        var totalRows = this.touchButtonLocationHelper.getTotalRows();
+        let totalRows = this.touchButtonLocationHelper.getTotalRows();
         ;
-        var paintableTable = new Array(totalColumns).fill(null).map(() => new Array(totalRows).fill(null));
+        let paintableTable = new Array(totalColumns).fill(null).map(() => new Array(totalRows).fill(null));
         ;
-        var cellPositionFactory = CellPositionFactory.getInstance();
+        let cellPositionFactory = CellPositionFactory.getInstance();
         ;
-        var commonButtons = CommonButtons.getInstance();
+        let commonButtons = CommonButtons.getInstance();
         ;
-        for (var index = totalColumns - 1; index >= 0; index--) {
-            for (var rowIndex = totalRows - 1; rowIndex >= 0; rowIndex--) {
+        for (let index = totalColumns - 1; index >= 0; index--) {
+            for (let rowIndex = totalRows - 1; rowIndex >= 0; rowIndex--) {
                 this.paintableTable[index][rowIndex] = TouchButton.createButton(BasicTouchInputFactory.getInstance().NONE, TouchButtonBlankResource.getInstance(), commonButtons.NORMAL_BUTTON, cellPositionFactory.getInstanceColRow(index, rowIndex), this.touchButtonLocationHelper.getColumnsRemainderHalf(), this.touchButtonLocationHelper.getRowsRemainderHalf());
             }
         }
@@ -72,12 +74,12 @@ export class TouchButtonsMappingPaintable extends Paintable {
         return paintableTable;
     }
     paint(graphics) {
-        var totalColumns = this.touchButtonLocationHelper.getTotalColumns();
+        let totalColumns = this.touchButtonLocationHelper.getTotalColumns();
         ;
-        var totalRows = this.touchButtonLocationHelper.getTotalRows();
+        let totalRows = this.touchButtonLocationHelper.getTotalRows();
         ;
-        for (var index = totalColumns - 1; index >= 0; index--) {
-            for (var rowIndex = totalRows - 1; rowIndex >= 0; rowIndex--) {
+        for (let index = totalColumns - 1; index >= 0; index--) {
+            for (let rowIndex = totalRows - 1; rowIndex >= 0; rowIndex--) {
                 this.paintableTable[index][rowIndex].paint(graphics);
             }
         }

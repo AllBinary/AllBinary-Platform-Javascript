@@ -21,11 +21,11 @@ const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput
+//sameFolderImports - not GWT import - same folder const BaseTouchInput
 import { BasicTouchButtonsBuilder } from './BasicTouchButtonsBuilder.js';
-//not GWT import - same folder const BasicTouchButtonsBuilder
+//sameFolderImports - not GWT import - same folder const BasicTouchButtonsBuilder
 import { BuildingScrollTouchButtonsBuilder } from './BuildingScrollTouchButtonsBuilder.js';
-//not GWT import - same folder const BuildingScrollTouchButtonsBuilder
+//sameFolderImports - not GWT import - same folder const BuildingScrollTouchButtonsBuilder
 export class NoBuildingSelectedTouchButtonsBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);
@@ -34,19 +34,21 @@ export class NoBuildingSelectedTouchButtonsBuilder extends BaseTouchInput {
     getList() {
         try {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
-            var list = new BasicArrayListD();
+            let list = new BasicArrayListD();
             ;
             list.addAllList(new BasicTouchButtonsBuilder().getList());
             list.addAllList(new BuildingScrollTouchButtonsBuilder().getList());
             //if statement needs to be on the same line and ternary does not work the same way.
             return list;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return BasicArrayListUtil.getInstance().getImmutableInstance();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return BasicArrayListUtil.getInstance().getImmutableInstance();
+                ;
+            }
         }
     }
 }

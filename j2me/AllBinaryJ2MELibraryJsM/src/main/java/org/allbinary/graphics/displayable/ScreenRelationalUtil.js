@@ -3,7 +3,7 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const Image
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DisplayInfoSingleton } from './DisplayInfoSingleton.js';
-//not GWT import - same folder const DisplayInfoSingleton
+//sameFolderImports - not GWT import - same folder const DisplayInfoSingleton
 export class ScreenRelationalUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -20,31 +20,31 @@ export class ScreenRelationalUtil extends Object {
         ;
     }
     getScaleWHA(aWidth, aHeight, add) {
-        var displayInfoSingleton = DisplayInfoSingleton.getInstance();
+        let displayInfoSingleton = DisplayInfoSingleton.getInstance();
         ;
-        var last = displayInfoSingleton.getLast();
+        let last = displayInfoSingleton.getLast();
         ;
-        var width = last[displayInfoSingleton.WIDTH];
+        let width = last[displayInfoSingleton.WIDTH];
         ;
-        var height = last[displayInfoSingleton.HEIGHT];
+        let height = last[displayInfoSingleton.HEIGHT];
         ;
-        var largestSize = width;
+        let largestSize = width;
         ;
         if (largestSize < height) {
             largestSize = height;
         }
-        var scale = (largestSize) / aWidth;
+        let scale = (largestSize) / aWidth;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return scale;
     }
     getScaledHeight(aWidth, aHeight) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round((this.getScaleWH(aWidth, aHeight) * aHeight));
+        return globalThis.Math.trunc((this.getScaleWH(aWidth, aHeight) * aHeight));
     }
     getScaledHeightAdd(aWidth, aHeight, add) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round((this.getScaleWHA(aWidth, aHeight, add) * aHeight));
+        return globalThis.Math.trunc((this.getScaleWHA(aWidth, aHeight, add) * aHeight));
     }
 }
 ScreenRelationalUtil.instance = new ScreenRelationalUtil();

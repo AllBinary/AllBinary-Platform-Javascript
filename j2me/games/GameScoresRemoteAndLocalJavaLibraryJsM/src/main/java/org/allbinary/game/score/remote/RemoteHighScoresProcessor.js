@@ -34,11 +34,11 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { HashtableUtil } 
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
-//not GWT import - same folder const RemoteHighScoresProcessorInterface
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresProcessorInterface
 import { RemoteHighScoresData } from './RemoteHighScoresData.js';
-//not GWT import - same folder const RemoteHighScoresData
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresData
 import { XmlRpcRemoteHighScoresClient } from './XmlRpcRemoteHighScoresClient.js';
-//not GWT import - same folder const RemoteHighScores
+//sameFolderImports - not GWT import - same folder const RemoteHighScores
 export class RemoteHighScoresProcessor extends Object {
     constructor() {
         super();
@@ -50,19 +50,19 @@ export class RemoteHighScoresProcessor extends Object {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     process(remoteHighScores, abeClientInformation, gameInfo) {
         this.logUtil.putF("Begin Remote HighScores Retrieval", this, this.commonStrings.PROCESS);
-        var gameInfoData = GameInfoData.getInstance();
+        let gameInfoData = GameInfoData.getInstance();
         ;
-        var hashtable = abeClientInformation.toHashtable();
+        let hashtable = abeClientInformation.toHashtable();
         ;
         HashtableUtil.getInstance().putAll(gameInfo.toHashtable(), hashtable);
         hashtable.put(gameInfoData.SOFTWARE_INFORMATION, remoteHighScores.getSoftwareInformation().toString());
         hashtable.put(remoteHighScores.ASCENDING, remoteHighScores.getAscending().toString());
-        var displayInfoSingleton = DisplayInfoSingleton.getInstance();
+        let displayInfoSingleton = DisplayInfoSingleton.getInstance();
         ;
         hashtable.put(displayInfoSingleton.ORIENTATION, BooleanFactory.getInstance().toStringb(displayInfoSingleton.isPortrait()));
         hashtable.put(RemoteHighScoresData.getInstance().GAME_CONFIGURATION, GameConfigurationCentral.getInstance().toString());
         if (XmlRpcAbeClient.isOnline) {
-            var resultHashtable = new XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresservicessl.php", "HighScoresService.process").get(hashtable, this.noCrypt);
+            let resultHashtable = new XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresservicessl.php", "HighScoresService.process").get(hashtable, this.noCrypt);
             ;
             remoteHighScores.update(resultHashtable);
         }

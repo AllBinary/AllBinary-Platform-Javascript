@@ -23,7 +23,7 @@ import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const DownKeyEventListenerInterface
+//sameFolderImports - not GWT import - same folder const DownKeyEventListenerInterface
 export class DownKeyEventHandlerBase extends BasicEventHandler {
     constructor() {
         super();
@@ -49,93 +49,103 @@ export class DownKeyEventHandlerBase extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEventI(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var playerGameInput = this.list.objectArray[index];
+                let playerGameInput = this.list.objectArray[index];
                 ;
                 playerGameInput.onDownKey(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
-        var index = 0;
+        let index = 0;
         ;
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
         while (index < this.eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = this.eventListenerInterfaceList.get(index);
                 this.processI(eventObject, eventListenerInterface);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
             index++;
         }
     }
     //@Throws(Exception.constructor)
     fireEventForGameKeyEvent(eventObject) {
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = size; --index >= 0;) {
+        for (let index = size; --index >= 0;) {
             try {
-                var playerGameInput = this.list.objectArray[index];
+                let playerGameInput = this.list.objectArray[index];
                 ;
                 playerGameInput.onDownKeyEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
-        var index = 0;
+        let index = 0;
         ;
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
         while (index < this.eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = this.eventListenerInterfaceList.get(index);
                 this.processEvent(eventObject, eventListenerInterface);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
             index++;
         }
     }
     //@Throws(Exception.constructor)
     processI(eventObject, eventListenerInterface) {
-        var downKeyEventListenerInterface = eventListenerInterface;
+        let downKeyEventListenerInterface = eventListenerInterface;
         ;
         downKeyEventListenerInterface.onDownKey(eventObject);
     }
     //@Throws(Exception.constructor)
     processEvent(eventObject, eventListenerInterface) {
-        var downKeyEventListenerInterface = eventListenerInterface;
+        let downKeyEventListenerInterface = eventListenerInterface;
         ;
         downKeyEventListenerInterface.onDownKeyEvent(eventObject);
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(super.toString());
         stringBuffer.append(DownKeyEventHandlerBase.TOTAL_LISTENERS);
         stringBuffer.appendint(this.list.size());
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        for (var index = 0; index < this.list.size(); index++) {
+        for (let index = 0; index < this.list.size(); index++) {
             try {
                 eventListenerInterface = this.list.get(index);
                 stringBuffer.append(DownKeyEventHandlerBase.LISTENER_LABEL);
                 stringBuffer.append(eventListenerInterface.toString());
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+                }
             }
         }
         //if statement needs to be on the same line and ternary does not work the same way.

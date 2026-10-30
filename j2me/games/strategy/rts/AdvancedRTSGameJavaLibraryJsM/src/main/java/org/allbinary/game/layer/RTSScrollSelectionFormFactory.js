@@ -34,17 +34,17 @@ import { TouchButtonLocationHelper } from '../../../../org/allbinary/input/motio
 export class RTSScrollSelectionFormFactory extends Object {
     //@Throws(Exception.constructor)
     static getInstance(formLabel, items) {
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
-        var touchButtonLocationHelper = new TouchButtonLocationHelper();
+        let touchButtonLocationHelper = new TouchButtonLocationHelper();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var menuX = CommonButtons.getInstance().STANDARD_BUTTON_SIZE + touchButtonLocationHelper.getColumnsRemainderHalf();
+        let menuX = CommonButtons.getInstance().STANDARD_BUTTON_SIZE + touchButtonLocationHelper.getColumnsRemainderHalf();
         ;
-        var width = displayInfo.getLastWidth() - (menuX * 2);
+        let width = displayInfo.getLastWidth() - (menuX * 2);
         ;
-        var menuRectangle = new Rectangle(PointFactory.getInstance().createXY(menuX, 16), width, CommonButtons.getInstance().STANDARD_BUTTON_SIZE);
+        let menuRectangle = new Rectangle(PointFactory.getInstance().createXY(menuX, 16), width, CommonButtons.getInstance().STANDARD_BUTTON_SIZE);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return MultipleScrollSelectionHorizontalForm.createForm(formLabel, items, menuRectangle, FormTypeFactory.getInstance().HORIZONTAL_FORM, 0, basicColorFactory.BLACK, basicColorFactory.WHITE);

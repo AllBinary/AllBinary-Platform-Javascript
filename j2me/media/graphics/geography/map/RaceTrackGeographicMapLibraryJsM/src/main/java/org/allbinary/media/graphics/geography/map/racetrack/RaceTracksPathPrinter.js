@@ -24,18 +24,18 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class RaceTracksPathPrinter extends Object {
     printPath(list) {
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var anyType = list.get(index);
+        for (let index = 0; index < size; index++) {
+            let anyType = list.get(index);
             ;
             PreLogUtil.put(new StringMaker().append("pathList.add(cellPositionFactory.getInstance").append(anyType.toString()).append(");").toString(), this, "printPath");
         }
     }
     printPaths(list) {
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             console.log(new StringMaker().append(" Path ").appendint(index).append(CommonLabels.getInstance().COLON_SEP).toString());
             this.printPath(list.get(index));
         }

@@ -30,7 +30,7 @@ import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/U
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresCanvasInputProcessor } from './HighScoresCanvasInputProcessor.js';
-//not GWT import - same folder const HighScoresCanvasInputProcessor
+//sameFolderImports - not GWT import - same folder const HighScoresCanvasInputProcessor
 export class HighScoresCanvasLevelChangeInputProcessor extends HighScoresCanvasInputProcessor {
     constructor(highScoresCanvas) {
         super(highScoresCanvas);
@@ -42,7 +42,7 @@ export class HighScoresCanvasLevelChangeInputProcessor extends HighScoresCanvasI
         //For kotlin this is before the body of the constructor.
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -55,14 +55,14 @@ export class HighScoresCanvasLevelChangeInputProcessor extends HighScoresCanvasI
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     update() {
-        var list = this.getGameKeyEventList();
+        let list = this.getGameKeyEventList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var anyType = list.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let anyType = list.objectArray[index];
             ;
-            var key = GameKeyEventUtil.getKey(anyType);
+            let key = GameKeyEventUtil.getKey(anyType);
             ;
             if (key == Canvas.RIGHT) {
                 this.getHighScoresCanvas().getGameInfo().nextGameLevel();
@@ -76,9 +76,9 @@ export class HighScoresCanvasLevelChangeInputProcessor extends HighScoresCanvasI
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var width = this.displayInfoSingleton.getLastWidth();
+        let width = this.displayInfoSingleton.getLastWidth();
         ;
-        var topScoresWidth = (graphics.getFont().stringWidth(this.INSTRUCTIONS) >> 1);
+        let topScoresWidth = (graphics.getFont().stringWidth(this.INSTRUCTIONS) >> 1);
         ;
         graphics.drawString(this.INSTRUCTIONS, (width >> 1) - topScoresWidth, this.fontHeight * 2, this.anchor);
     }

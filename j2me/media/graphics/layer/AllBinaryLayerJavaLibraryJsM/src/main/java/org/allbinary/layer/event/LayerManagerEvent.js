@@ -34,7 +34,7 @@ export class LayerManagerEvent extends AllBinaryEventObject {
         this.layerInterface = layerInterface;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("LayerManagerEvent: \n");
         stringBuffer.append("LayerInterface: ");

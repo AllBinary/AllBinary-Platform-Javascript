@@ -16,6 +16,8 @@ import { Object } from '../../../../java/lang/Object.js';
 import { Class } from '../../../../java/lang/Class.js';
 //not GWT import const Connection
 import { DriverManager } from '../../../../java/sql/DriverManager.js';
+//not GWT import const ResultSetMetaData
+import { SQLException } from '../../../../java/sql/SQLException.js';
 //not GWT import const Set
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
@@ -76,7 +78,7 @@ export class InitSql extends Object {
     }
     createTable(tableData) {
         try {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append("Creating Table: ");
             stringBuffer.append(tableData);
@@ -84,52 +86,56 @@ export class InitSql extends Object {
             this.executeSQLStatement(tableData);
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "createTable()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "createTable()", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     dropTable() {
-        var sqlStatement = this.sqlStrings.DROP_TABLE + this.tableName;
+        let sqlStatement = this.sqlStrings.DROP_TABLE + this.tableName;
         ;
         try {
             this.executeSQLStatement(sqlStatement);
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "dropTables()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "dropTables()", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     getRow(keysAndValues) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.sqlStrings.SELECT_ALL_FROM);
         stringBuffer.append(this.tableName);
         stringBuffer.append(this.sqlStrings.WHERE);
         try {
-            var result = null;
+            let result = null;
             ;
-            var set = keysAndValues.keySet();
+            let set = keysAndValues.keySet();
             ;
-            var keyArray = set.toArray();
+            let keyArray = set.toArray();
             ;
-            var size = keyArray.length;
+            let size = keyArray.length;
             ;
-            for (var i = 0; i < size; i++) {
-                var key = keyArray[i];
+            for (let i = 0; i < size; i++) {
+                let key = keyArray[i];
                 ;
-                var value = .toCharArray();
+                let value = .toCharArray();
                 ;
                 stringBuffer.append(key);
                 stringBuffer.append(this.sqlStrings.EQUAL_QUOTE);
@@ -139,23 +145,23 @@ export class InitSql extends Object {
                     stringBuffer.append(this.sqlStrings.AND);
                 }
             }
-            var sqlStatement = stringBuffer.toString();
+            let sqlStatement = stringBuffer.toString();
             ;
             if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGING)) {
                 PreLogUtil.put(this.sqlStrings.SQL_STATEMENT_LABEL + sqlStatement, this.INIT_SQL, this.METHOD_GET_ROW);
             }
-            var rset = this.executeSQLStatement(sqlStatement);
+            let rset = this.executeSQLStatement(sqlStatement);
             ;
-            var resultSetMetaData = rset.getMetaData();
+            let resultSetMetaData = rset.getMetaData();
             ;
             while (rset.next()) {
                 result = this.stdUtil.createHashMap();
-                var columnCount = resultSetMetaData.getColumnCount();
+                let columnCount = resultSetMetaData.getColumnCount();
                 ;
-                for (var index = 1; index <= columnCount; index++) {
-                    var columnName = resultSetMetaData.getColumnName(index);
+                for (let index = 1; index <= columnCount; index++) {
+                    let columnName = resultSetMetaData.getColumnName(index);
                     ;
-                    var field = rset.getString(columnName);
+                    let field = rset.getString(columnName);
                     ;
                     result.put(columnName, field);
                 }
@@ -170,35 +176,37 @@ export class InitSql extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return null;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                PreLogUtil.putOE(this.FAILED_SQL_STATEMENT + stringBuffer, this.INIT_SQL, this.METHOD_GET_ROW, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.FAILED_SQL_STATEMENT + stringBuffer, this.INIT_SQL, this.METHOD_GET_ROW, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     updateWhere(key, value, updatedKeyValuePairs) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.sqlStrings.UPDATE);
         stringBuffer.append(this.tableName);
         stringBuffer.append(this.sqlStrings.SET);
         try {
-            var columnArray = updatedKeyValuePairs.keySet().();
+            let columnArray = updatedKeyValuePairs.keySet().();
             ;
-            var size = columnArray.length;
+            let size = columnArray.length;
             ;
-            for (var i = 0; i < size; i++) {
-                var columnName = columnArray[i].toString();
+            for (let i = 0; i < size; i++) {
+                let columnName = columnArray[i].toString();
                 ;
                 stringBuffer.append(this.commonSeps.SPACE);
                 stringBuffer.append(columnName);
                 stringBuffer.append(this.EQUAL_QUOTE);
-                var columnValue = updatedKeyValuePairs.get(columnName);
+                let columnValue = updatedKeyValuePairs.get(columnName);
                 ;
                 if (columnValue ==
                     null) {
@@ -217,50 +225,54 @@ export class InitSql extends Object {
             stringBuffer.append(this.sqlStrings.EQUAL_QUOTE);
             stringBuffer.append(this.getValue(value));
             stringBuffer.append(this.sqlStrings.CLOSE_QUOTE);
-            var sqlStatement = stringBuffer.toString();
+            let sqlStatement = stringBuffer.toString();
             ;
             this.executeSQLStatement(sqlStatement);
             if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGING)) {
                 PreLogUtil.put(this.SUCCESS_SQL_STATEMENT + sqlStatement, this.INIT_SQL, METHOD_UPDATE_WHERE);
             }
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                PreLogUtil.putOE(this.FAILED_SQL_STATEMENT + stringBuffer, this.INIT_SQL, METHOD_UPDATE_WHERE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.FAILED_SQL_STATEMENT + stringBuffer, this.INIT_SQL, METHOD_UPDATE_WHERE, e);
+                }
             }
         }
     }
     insert(values) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.sqlStrings.INSERT_INTO);
         stringBuffer.append(this.tableName);
         stringBuffer.append(this.sqlStrings.VALUES);
         try {
-            var size = values.size();
+            let size = values.size();
             ;
-            for (var i = 0; i < size - 1; i++) {
-                var value = this.getValue(values.get(i));
+            for (let i = 0; i < size - 1; i++) {
+                let value = this.getValue(values.get(i));
                 ;
                 stringBuffer.append(value);
                 stringBuffer.append(this.sqlStrings.SINGLE_QUOTE_COMMA_SEP);
             }
-            var value = this.getValue(values.get(values.size() - 1));
+            let value = this.getValue(values.get(values.size() - 1));
             ;
             stringBuffer.append(value);
             stringBuffer.append(this.INSERT_END);
-            var sqlStatement = stringBuffer.toString();
+            let sqlStatement = stringBuffer.toString();
             ;
             this.executeSQLStatement(sqlStatement);
             if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGING)) {
                 PreLogUtil.put(this.SUCCESS_SQL_STATEMENT + sqlStatement, this.INIT_SQL, INSERT);
             }
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                PreLogUtil.putOE(this.FAILED_SQL_STATEMENT + stringBuffer.toString(), this.INIT_SQL, INSERT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.FAILED_SQL_STATEMENT + stringBuffer.toString(), this.INIT_SQL, INSERT, e);
+                }
             }
         }
     }
@@ -282,41 +294,31 @@ export class InitSql extends Object {
                 null) {
                 this.initialize();
             }
-            var stmt = this.conn.createStatement();
+            let stmt = this.conn.createStatement();
             ;
             stmt.execute(statement);
-            var rset = stmt.getResultSet();
+            let rset = stmt.getResultSet();
             ;
             stmt.close();
             //if statement needs to be on the same line and ternary does not work the same way.
             return rset;
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "executeSQLStatement()", e);
+        catch (caught) {
+            if (caught instanceof SQLException) {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "executeSQLStatement()", e);
+                }
+                throw e;
             }
-            throw e;
+            else {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "executeSQLStatement()", e);
+                }
+                throw e;
+            }
         }
-        //: 
-        /* catch(e)
-                    {
-        
-                                if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!.SQLLOGGINGERROR))
-                                
-                                            {
-                                            PreLogUtil.putOE(this.commonStrings!.EXCEPTION, INIT_SQL, "executeSQLStatement()", e);
-            
-        
-                                            }
-                                        
-        
-        
-        
-                                    throw e;
-                            
-        }
-        */
     }
     //@Throws(SQLException.constructor)
     createConnection() {
@@ -327,28 +329,35 @@ export class InitSql extends Object {
             else {
                 this.conn = DriverManager.getConnection(this.databaseConnectionInfoInterface.getUrl());
             }
-            //: 
         }
-        catch (se) {
-            PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "createConnection()", se);
-            throw se;
+        catch (caught) {
+            if (caught instanceof SQLException) {
+                const se = caught;
+                PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "createConnection()", se);
+                throw se;
+            }
+            else {
+                throw caught;
+            }
         }
     }
     //@Throws(Exception.constructor)
     initialize() {
         try {
             try {
-                var jdbcDriver = this.databaseConnectionInfoInterface.getJdbcDriver();
+                let jdbcDriver = this.databaseConnectionInfoInterface.getJdbcDriver();
                 ;
                 PreLogUtil.put(new StringMaker().append("Loading DbConnnectionInfo: ").append(this.databaseConnectionInfoInterface.constructor.name.toString()).append(" Driver: ").append(jdbcDriver).toString(), this.INIT_SQL, "initialize()");
                 Class.forName(jdbcDriver).newInstance();
-                //: 
             }
-            catch (e) {
-                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                    PreLogUtil.putOE("LoadDriver Failed: " + this.databaseConnectionInfoInterface.getJdbcDriver(), this.INIT_SQL, "initialize()", e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                        PreLogUtil.putOE("LoadDriver Failed: " + this.databaseConnectionInfoInterface.getJdbcDriver(), this.INIT_SQL, "initialize()", e);
+                    }
+                    throw e;
                 }
-                throw e;
             }
             if (this.userid ==
                 null
@@ -357,13 +366,15 @@ export class InitSql extends Object {
                 this.useridAndPassword = true;
             }
             this.createConnection();
-            //: 
         }
-        catch (se) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "initialize()", se);
+        catch (caught) {
+            {
+                const se = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().SQLLOGGINGERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, INIT_SQL, "initialize()", se);
+                }
+                throw se;
             }
-            throw se;
         }
     }
     getDatabaseConnectionInfoInterface() {

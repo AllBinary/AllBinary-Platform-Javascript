@@ -33,9 +33,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameFeatureFactory } from './GameFeatureFactory.js';
-//not GWT import - same folder const GameFeature
+//sameFolderImports - not GWT import - same folder const GameFeature
 import { GameFeatureUtil } from './GameFeatureUtil.js';
-//not GWT import - same folder const GameFeatureUtil
+//sameFolderImports - not GWT import - same folder const GameFeatureUtil
 export class GameFeatureItemStateListener extends Object {
     static add(gameFeature) {
         if (!GameFeatureItemStateListener.toggleList.contains(gameFeature)) {
@@ -46,7 +46,7 @@ export class GameFeatureItemStateListener extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.gameOptionsForm = gameOptionsForm;
-        var gameFeatureFactory = GameFeatureFactory.getInstance();
+        let gameFeatureFactory = GameFeatureFactory.getInstance();
         ;
         GameFeatureItemStateListener.add(gameFeatureFactory.ARTIFICIAL_INTELLEGENCE_PROCESSOR);
         GameFeatureItemStateListener.add(gameFeatureFactory.COLLIDABLE_INTERFACE_LAYER_PROCESSOR);
@@ -59,14 +59,14 @@ export class GameFeatureItemStateListener extends Object {
     }
     itemStateChanged(item) {
         try {
-            var itemLabel = item.getLabel();
+            let itemLabel = item.getLabel();
             ;
             this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().ITEM_LABEL).append(itemLabel).toString(), this, "itemStateChanged");
             if (item instanceof GameConfigurationGauge) {
                 GameConfigurationUtil.getInstance().change(this.gameOptionsForm, item);
             }
             else if (item instanceof ChoiceGroup) {
-                var gameFeatureUtil = GameFeatureUtil.getInstance();
+                let gameFeatureUtil = GameFeatureUtil.getInstance();
                 ;
                 if (gameFeatureUtil.isExclusive(itemLabel)) {
                     gameFeatureUtil.updateExclusiveForChoiceGroup(item);
@@ -75,12 +75,14 @@ export class GameFeatureItemStateListener extends Object {
                     gameFeatureUtil.updateMultiple(item);
                 }
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "itemStateChanged", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "itemStateChanged", e);
+            }
         }
     }
 }

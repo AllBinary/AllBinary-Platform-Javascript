@@ -21,9 +21,9 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKey } from './GameKey.js';
-//not GWT import - same folder const GameKey
+//sameFolderImports - not GWT import - same folder const GameKey
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const InputFactory
+//sameFolderImports - not GWT import - same folder const InputFactory
 export class GameKeyFactory extends Object {
     constructor() {
         super(...arguments);

@@ -34,17 +34,17 @@ export class SmallDelete extends Object {
     }
     deleteAtStart(start, end) {
         try {
-            var beginIndex = 0;
-            var endIndex = 0;
+            let beginIndex = 0;
+            let endIndex = 0;
             ;
             beginIndex = this.string.indexOf(start);
             endIndex = this.string.indexOf(end);
             if (endIndex > beginIndex && beginIndex >= 0 && endIndex >= 0 && beginIndex < 10 && endIndex < 525) {
-                var text = this.string.substring(endIndex, this.string.length);
+                let text = this.string.substring(endIndex, this.string.length);
                 ;
-                var idFile = new FileOutputStream(this.fileName);
+                let idFile = new FileOutputStream(this.fileName);
                 ;
-                var idOutData = new DataOutputStream(idFile);
+                let idOutData = new DataOutputStream(idFile);
                 ;
                 idOutData.writeBytes(text);
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,31 +52,33 @@ export class SmallDelete extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, "deleteAtStart", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, "deleteAtStart", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     deleteBetween(start, end, newText) {
         try {
-            var beginIndex = 0;
-            var endIndex = 0;
+            let beginIndex = 0;
+            let endIndex = 0;
             ;
             beginIndex = this.string.indexOf(start);
             endIndex = this.string.indexOf(end);
             if (endIndex > beginIndex && beginIndex >= 0 && endIndex >= 0 && beginIndex < 50 && endIndex < 425) {
-                var newStart = this.string.substring(0, beginIndex);
+                let newStart = this.string.substring(0, beginIndex);
                 ;
-                var text = this.string.substring(endIndex + end.length, this.string.length);
+                let text = this.string.substring(endIndex + end.length, this.string.length);
                 ;
-                var idFile = new FileOutputStream(this.fileName);
+                let idFile = new FileOutputStream(this.fileName);
                 ;
-                var idOutData = new DataOutputStream(idFile);
+                let idOutData = new DataOutputStream(idFile);
                 ;
                 idOutData.writeBytes(newStart + newText + text);
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,14 +86,16 @@ export class SmallDelete extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, "deleteAtStart", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, "deleteAtStart", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
 }

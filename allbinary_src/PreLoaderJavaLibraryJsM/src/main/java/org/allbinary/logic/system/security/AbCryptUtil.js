@@ -33,24 +33,20 @@ export class AbCryptUtil extends Object {
     }
     //@Throws(Exception.constructor)
     decrypt(inputStream, key) {
-        var outputStream = null;
+        let outputStream = null;
         ;
         try {
             outputStream = this.streamUtil.get(inputStream, new ByteArrayOutputStream(), new Array(16384));
-            var abCrypt = new AbCrypt(KeySpecFactory.getInstance().DESEDE);
+            let abCrypt = new AbCrypt(KeySpecFactory.getInstance().DESEDE);
             ;
             abCrypt.init(key);
             //if statement needs to be on the same line and ternary does not work the same way.
             return abCrypt.decrypt(outputStream.toByteArray());
             ;
-            try {
-            }
-            finally {
-                this.streamUtil.close(outputStream);
-                this.streamUtil.close(inputStream);
-            }
         }
         finally {
+            this.streamUtil.close(outputStream);
+            this.streamUtil.close(inputStream);
         }
     }
 }

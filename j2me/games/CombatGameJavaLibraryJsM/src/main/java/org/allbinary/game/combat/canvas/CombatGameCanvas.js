@@ -48,9 +48,9 @@ export class CombatGameCanvas extends AllBinaryGameCanvas {
     initConfigurablePortion(portion) {
         DestroyedLayerProcessor.init();
         ProgressCanvasFactory.getInstance().addNormalPortion(portion, "Basic Processors");
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var gameFeatureFactory = GameFeatureFactory.getInstance();
+        let gameFeatureFactory = GameFeatureFactory.getInstance();
         ;
         if (features.isFeature(gameFeatureFactory.DROPPED_ITEMS) && features.isFeature(gameFeatureFactory.DROPPED_ITEMS_FROM_DEATH)) {
             CombatGameCanvas.basicLayerProcessor = new Array(2);
@@ -65,14 +65,14 @@ export class CombatGameCanvas extends AllBinaryGameCanvas {
     //@Throws(Exception.constructor)
     processPlayingGame() {
         super.processPlayingGame();
-        for (var index = CombatGameCanvas.basicLayerProcessor.length; --index >= 0;) {
+        for (let index = CombatGameCanvas.basicLayerProcessor.length; --index >= 0;) {
             CombatGameCanvas.basicLayerProcessor[index].process(this.gameLayerManager);
         }
     }
     //@Throws(Exception.constructor)
     cleanupGame() {
         super.cleanupGame();
-        for (var index = CombatGameCanvas.basicLayerProcessor.length; --index >= 0;) {
+        for (let index = CombatGameCanvas.basicLayerProcessor.length; --index >= 0;) {
             CombatGameCanvas.basicLayerProcessor[index].getList().clear();
         }
         GroupLayerManagerListener.getInstance().clear();

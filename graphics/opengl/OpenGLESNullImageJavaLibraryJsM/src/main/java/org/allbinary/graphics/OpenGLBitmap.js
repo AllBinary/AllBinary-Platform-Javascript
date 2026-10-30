@@ -3,7 +3,7 @@ import { PlatformBitmapBase } from '../../../org/allbinary/platform/graphics/Pla
 //not GWT import const PlatformBitmapBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLBitmap extends PlatformBitmapBase {
-    constructor(bitmap = {}) {
+    constructor(bitmap) {
         super();
         this.bitmap = bitmap;
     }

@@ -17,7 +17,7 @@ import { ByteUtil } from '../../../../../../../org/allbinary/logic/java/byteutil
 //not GWT import const ByteUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseSecretComposite } from './BaseSecretComposite.js';
-//not GWT import - same folder const BaseSecretComposite
+//sameFolderImports - not GWT import - same folder const BaseSecretComposite
 export class SecretComposite extends BaseSecretComposite {
     constructor(secretKey, cipher, key) {
         super();
@@ -42,11 +42,11 @@ export class SecretComposite extends BaseSecretComposite {
         ;
     }
     mutilate(array) {
-        for (var index = 0; index < this.key.length; index++) {
-            var value = this.key[index];
+        for (let index = 0; index < this.key.length; index++) {
+            let value = this.key[index];
             ;
             if (value < 8 && value > 0) {
-                array = this.byteUtil.xorByte(array, Math.round(value));
+                array = this.byteUtil.xorByte(array, globalThis.Math.trunc(value));
             }
         }
         //if statement needs to be on the same line and ternary does not work the same way.

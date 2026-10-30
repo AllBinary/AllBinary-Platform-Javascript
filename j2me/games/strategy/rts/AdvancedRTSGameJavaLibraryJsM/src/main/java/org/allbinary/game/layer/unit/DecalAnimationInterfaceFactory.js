@@ -28,7 +28,7 @@ export class DecalAnimationInterfaceFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getAnimationFactory(basicGameResources, basicColor) {
-        var animationInterfaceFactoryInterface;
+        let animationInterfaceFactoryInterface;
         ;
         if (basicColor == BasicColorFactory.getInstance().RED) {
             animationInterfaceFactoryInterface = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().get(basicGameResources.RESOURCE);

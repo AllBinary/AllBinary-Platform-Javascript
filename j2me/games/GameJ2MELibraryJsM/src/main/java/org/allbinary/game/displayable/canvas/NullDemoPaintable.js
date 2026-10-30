@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const DemoPaintableInterface
+//sameFolderImports - not GWT import - same folder const DemoPaintableInterface
 export class NullDemoPaintable extends Object {
     showGamePaintable() {
     }

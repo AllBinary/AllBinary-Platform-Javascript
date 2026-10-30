@@ -42,7 +42,7 @@ export class LicenseServerInitFileUtil extends Object {
     }
     init() {
         try {
-            var filePath = LicenseInitInfoUtil.getInstance().INITFILENAME;
+            let filePath = LicenseInitInfoUtil.getInstance().INITFILENAME;
             ;
             LicenseInitInfoUtil.getInstance().setFilePath(StringUtil.getInstance().EMPTY_STRING);
             if (FileFactory.getInstance().isFile(filePath)) {
@@ -51,29 +51,31 @@ export class LicenseServerInitFileUtil extends Object {
             else {
                 this.write();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+            }
         }
     }
     write() {
-        var fileOutputStream = this.NULL_OUTPUT_STREAM;
+        let fileOutputStream = this.NULL_OUTPUT_STREAM;
         ;
         try {
-            var resourceUtil = ResourceUtil.getInstance();
+            let resourceUtil = ResourceUtil.getInstance();
             ;
-            var filePath = LicenseInitInfoUtil.getInstance().INITFILENAME;
+            let filePath = LicenseInitInfoUtil.getInstance().INITFILENAME;
             ;
-            var inputStream = resourceUtil.getResourceAsStream(filePath);
+            let inputStream = resourceUtil.getResourceAsStream(filePath);
             ;
             this.logUtil.putF("Writing Default License File", this, this.commonStrings.INIT);
-            var fileStreamFactory = FileStreamFactory.getInstance();
+            let fileStreamFactory = FileStreamFactory.getInstance();
             ;
             fileOutputStream = fileStreamFactory.getFileOutputStreamInstance(StringUtil.getInstance().EMPTY_STRING, filePath);
-            var b = 0;
+            let b = 0;
             ;
-            var index = 0;
+            let index = 0;
             ;
             while (true) {
                 b = inputStream.read();
@@ -85,10 +87,12 @@ export class LicenseServerInitFileUtil extends Object {
             }
             this.logUtil.putF("Wrote Bytes: " + index, this, this.commonStrings.INIT);
             fileOutputStream.flush();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+            }
         }
         finally {
             StreamUtil.getInstance().close(fileOutputStream);

@@ -22,7 +22,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseGameStatistics } from './BaseGameStatistics.js';
-//not GWT import - same folder const BaseGameStatistics
+//sameFolderImports - not GWT import - same folder const BaseGameStatistics
 export class AndroidGameStatistics extends BaseGameStatistics {
     constructor() {
         super();
@@ -31,9 +31,9 @@ export class AndroidGameStatistics extends BaseGameStatistics {
         this.ANDROID_STRING_ARRAY = new Array(14);
         this.TOTAL_ONDRAWS = " Total onDraws: ";
         this.ONDRAWS_RATE = " onDraws(/10) Sec: ";
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
-        for (var index = 0; index < this.ANDROID_STRING_ARRAY.length; index++) {
+        for (let index = 0; index < this.ANDROID_STRING_ARRAY.length; index++) {
             this.ANDROID_STRING_ARRAY[index] = stringUtil.EMPTY_STRING;
         }
     }
@@ -49,34 +49,34 @@ export class AndroidGameStatistics extends BaseGameStatistics {
         this.totalOnDraws++;
     }
     toStringArray() {
-        var stringArray = super.toStringArray();
+        let stringArray = super.toStringArray();
         ;
-        for (var index = 0; index < stringArray.length; index++) {
+        for (let index = 0; index < stringArray.length; index++) {
             this.ANDROID_STRING_ARRAY[index] = stringArray[index];
         }
-        var totalTime = this.getTimeDelayHelper().getElapsed(this.gameTickTimeDelayHelper.startTime);
+        let totalTime = this.getTimeDelayHelper().getElapsed(this.gameTickTimeDelayHelper.startTime);
         ;
-        totalTime = (totalTime / 10000);
+        totalTime = (globalThis.Math.trunc(totalTime / 10000));
         this.ANDROID_STRING_ARRAY[10] = this.TOTAL_ONDRAWS;
         this.ANDROID_STRING_ARRAY[11] = (this.totalOnDraws).toString();
         this.ANDROID_STRING_ARRAY[12] = this.ONDRAWS_RATE;
-        this.ANDROID_STRING_ARRAY[13] = (this.totalOnDraws / totalTime).toString();
+        this.ANDROID_STRING_ARRAY[13] = (globalThis.Math.trunc(this.totalOnDraws / totalTime)).toString();
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.ANDROID_STRING_ARRAY;
     }
     toString() {
-        var totalTime = this.getTimeDelayHelper().getElapsed(this.gameTickTimeDelayHelper.startTime);
+        let totalTime = this.getTimeDelayHelper().getElapsed(this.gameTickTimeDelayHelper.startTime);
         ;
-        totalTime = (totalTime / 1000);
+        totalTime = (globalThis.Math.trunc(totalTime / 1000));
         if (totalTime > 0) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(super.toStringAt(totalTime));
             if (this.totalOnDraws > 0) {
                 stringBuffer.append(this.TOTAL_ONDRAWS);
                 stringBuffer.append(this.totalOnDraws.toString());
                 stringBuffer.append(this.ONDRAWS_RATE);
-                var drawsOverTime = (this.totalOnDraws / totalTime).toString();
+                let drawsOverTime = (globalThis.Math.trunc(this.totalOnDraws / totalTime)).toString();
                 ;
                 stringBuffer.append(drawsOverTime);
             }

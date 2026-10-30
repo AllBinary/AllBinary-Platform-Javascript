@@ -25,9 +25,9 @@ import { SimpleGeographicMapCellPositionFactory } from '../../../../org/allbinar
 //not GWT import const SimpleGeographicMapCellPositionFactory
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const PathFindingLayerInterface
+//sameFolderImports - not GWT import - same folder const PathFindingLayerInterface
 import { AllBinaryGameLayerManager } from './AllBinaryGameLayerManager.js';
-//not GWT import - same folder const AllBinaryTiledLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryTiledLayer
 export class PathAnimation extends Animation {
     constructor(pathFindingLayer, linePathAnimation) {
         super();
@@ -48,32 +48,32 @@ export class PathAnimation extends Animation {
     }
     paintXY(graphics, x, y) {
         try {
-            var waypointBehaviorBase = this.pathFindingLayer.getWaypointBehavior();
+            let waypointBehaviorBase = this.pathFindingLayer.getWaypointBehavior();
             ;
             if (waypointBehaviorBase !=
                 null) {
-                var geographicMapCellHistory = waypointBehaviorBase.getCurrentGeographicMapCellHistory();
+                let geographicMapCellHistory = waypointBehaviorBase.getCurrentGeographicMapCellHistory();
                 ;
-                var list = geographicMapCellHistory.getTracked();
+                let list = geographicMapCellHistory.getTracked();
                 ;
-                var size = list.size();
+                let size = list.size();
                 ;
                 if (size > 0) {
-                    var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+                    let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
                     ;
-                    var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+                    let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
                     ;
-                    var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+                    let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
                     ;
-                    var geographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
+                    let geographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
                     ;
-                    var nextPoint;
+                    let nextPoint;
                     ;
-                    var point;
+                    let point;
                     ;
-                    var start = size - 2;
+                    let start = size - 2;
                     ;
-                    for (var index = 0; index < size - 1; index++) {
+                    for (let index = 0; index < size - 1; index++) {
                         if (index == start) {
                             this.setBasicColorP(this.startColor);
                             this.basicSetColorUtil.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor());
@@ -94,10 +94,12 @@ export class PathAnimation extends Animation {
                     }
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.putF("Cleared Target", this, CanvasStrings.getInstance().PAINT);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.putF("Cleared Target", this, CanvasStrings.getInstance().PAINT);
+            }
         }
     }
 }

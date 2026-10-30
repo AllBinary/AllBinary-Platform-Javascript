@@ -16,7 +16,7 @@ import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScrollMapEvent extends AllBinaryEventObject {
-    constructor(anyType = {}) {
+    constructor(anyType) {
         super(anyType);
         this.dx = 0;
         this.dy = 0;

@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/math/SmallIntegerSingletonFactory.js';
-//not GWT import - same folder const ScoreableInterface
+//sameFolderImports - not GWT import - same folder const ScoreableInterface
 export class Scoreable extends Object {
     constructor(points) {
         super();

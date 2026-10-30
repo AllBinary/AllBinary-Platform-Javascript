@@ -20,14 +20,14 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InterfaceUtil extends Object {
     static viewAll(myClass, lineBreak) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var interfaces = myClass.getInterfaces();
+        let interfaces = myClass.getInterfaces();
         ;
         stringBuffer.append(lineBreak);
         stringBuffer.append("Interfaces: ");
         stringBuffer.append(lineBreak);
-        for (var index = 0; index < interfaces.length; index++) {
+        for (let index = 0; index < interfaces.length; index++) {
             stringBuffer.append("Interface: ");
             stringBuffer.append(interfaces[index].getName());
             stringBuffer.append(lineBreak);
@@ -42,7 +42,7 @@ export class InterfaceUtil extends Object {
             && interfaces !=
                 null
             && interfaces.length > 0) {
-            for (var index = 0; index < interfaces.length; index++) {
+            for (let index = 0; index < interfaces.length; index++) {
                 if (interfaces[index].getName().indexOf(interfaceName) >= 0) {
                     //if statement needs to be on the same line and ternary does not work the same way.
                     return interfaces[index];
@@ -52,10 +52,17 @@ export class InterfaceUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return null;
     }
-    static isImplemented(clazz, anyType = {}) {
-        var classes = anyType.constructor.name.getInterfaces();
+    static isImplemented(...args) {
+        if (args.length === 2)
+            return this.isImplemented$overload1(args[0], args[1]);
+        if (args.length === 2 && typeof args[0] === 'string')
+            return this.isImplemented$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: isImplemented');
+    }
+    static isImplemented$overload1(clazz, anyType) {
+        let classes = anyType.constructor.name.getInterfaces();
         ;
-        for (var index = 0; index < classes.length; index++) {
+        for (let index = 0; index < classes.length; index++) {
             if (clazz.toString().compareTo(classes[index].getName()) == 0)
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
@@ -63,10 +70,10 @@ export class InterfaceUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return false;
     }
-    static isImplemented(className, anyType = {}) {
-        var classes = anyType.constructor.name.getInterfaces();
+    static isImplemented$overload2(className, anyType) {
+        let classes = anyType.constructor.name.getInterfaces();
         ;
-        for (var index = 0; index < classes.length; index++) {
+        for (let index = 0; index < classes.length; index++) {
             if (classes[index].getName().indexOf(className) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
@@ -75,13 +82,13 @@ export class InterfaceUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return false;
     }
-    static isImplementedView(clazz, anyType = {}) {
-        var stringBuffer = new StringMaker();
+    static isImplementedView(clazz, anyType) {
+        let stringBuffer = new StringMaker();
         ;
-        var classes = anyType.constructor.name.getInterfaces();
+        let classes = anyType.constructor.name.getInterfaces();
         ;
         stringBuffer.append("isImplementedView: \n");
-        for (var index = 0; index < classes.length; index++) {
+        for (let index = 0; index < classes.length; index++) {
             stringBuffer.append(clazz.toString());
             stringBuffer.append(" should be = ");
             stringBuffer.append(classes[index].getName());

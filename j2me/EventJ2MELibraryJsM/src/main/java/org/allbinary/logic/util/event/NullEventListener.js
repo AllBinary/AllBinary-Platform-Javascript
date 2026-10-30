@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const AllBinaryEventObject
+//sameFolderImports - not GWT import - same folder const AllBinaryEventObject
 export class NullEventListener extends Object {
     onEvent(eventObject) {
     }

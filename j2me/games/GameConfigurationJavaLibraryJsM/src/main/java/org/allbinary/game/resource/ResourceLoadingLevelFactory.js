@@ -16,7 +16,7 @@ import { Object } from '../../../../java/lang/Object.js';
 import { Integer } from '../../../../java/lang/Integer.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ResourceLoadingLevel } from './ResourceLoadingLevel.js';
-//not GWT import - same folder const ResourceLoadingLevel
+//sameFolderImports - not GWT import - same folder const ResourceLoadingLevel
 export class ResourceLoadingLevelFactory extends Object {
     constructor() {
         super(...arguments);
@@ -35,7 +35,7 @@ export class ResourceLoadingLevelFactory extends Object {
         return ResourceLoadingLevelFactory.instance;
     }
     getLevelString(level) {
-        for (var index = 0; index < this.RESOURCE_LOADING_LEVEL_ARRAY.length; index++) {
+        for (let index = 0; index < this.RESOURCE_LOADING_LEVEL_ARRAY.length; index++) {
             if (level == this.RESOURCE_LOADING_LEVEL_ARRAY[index].getLevel()) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.RESOURCE_LOADING_LEVEL_ARRAY[index].getName();

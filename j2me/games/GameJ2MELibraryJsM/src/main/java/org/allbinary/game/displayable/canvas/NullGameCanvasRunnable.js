@@ -22,7 +22,7 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const GameCanvasRunnableInterface
+//sameFolderImports - not GWT import - same folder const GameCanvasRunnableInterface
 export class NullGameCanvasRunnable extends Object {
     constructor() {
         super(...arguments);

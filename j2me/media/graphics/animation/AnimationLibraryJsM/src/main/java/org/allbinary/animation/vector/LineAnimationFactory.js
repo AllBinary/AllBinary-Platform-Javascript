@@ -16,7 +16,7 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LineAnimation } from './LineAnimation.js';
-//not GWT import - same folder const LineAnimation
+//sameFolderImports - not GWT import - same folder const LineAnimation
 export class LineAnimationFactory extends Object {
     constructor(basicColor) {
         super();

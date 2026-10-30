@@ -37,15 +37,14 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PaintableForm } from './PaintableForm.js';
-//not GWT import - same folder const PaintableForm
+//sameFolderImports - not GWT import - same folder const PaintableForm
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
-//not GWT import - same folder const ItemPaintableFactory
+//sameFolderImports - not GWT import - same folder const ItemPaintableFactory
 import { ItemIndexPaintable } from './ItemIndexPaintable.js';
-//not GWT import - same folder const ItemIndexPaintable
+//sameFolderImports - not GWT import - same folder const ItemIndexPaintable
 import { ItemIndexDx } from './ItemIndexDx.js';
-//not GWT import - same folder const ItemPaintable
+//sameFolderImports - not GWT import - same folder const ItemPaintable
 import { FormTypeFactory } from './FormTypeFactory.js';
-//not GWT import - same folder const FormType
 export class ScrollSelectionForm extends PaintableForm {
     static createForm(title, items, formPaintableFactory, border, backgroundBasicColor, foregroundBasicColor) {
         try {
@@ -54,26 +53,28 @@ export class ScrollSelectionForm extends PaintableForm {
                 return new ScrollSelectionForm(title, items, formPaintableFactory, border, -3, backgroundBasicColor, foregroundBasicColor);
             }
             else {
-                var commonStrings = CommonStrings.getInstance();
+                let commonStrings = CommonStrings.getInstance();
                 ;
-                var logUtil = LogUtil.getInstance();
+                let logUtil = LogUtil.getInstance();
                 ;
                 logUtil.putF(commonStrings.EXCEPTION, logUtil, commonStrings.EXCEPTION);
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return PaintableForm.getNullPaintableForm();
                 ;
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            var logUtil = LogUtil.getInstance();
-            ;
-            logUtil.put(commonStrings.EXCEPTION, logUtil, commonStrings.EXCEPTION, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return PaintableForm.getNullPaintableForm();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                let logUtil = LogUtil.getInstance();
+                ;
+                logUtil.put(commonStrings.EXCEPTION, logUtil, commonStrings.EXCEPTION, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return PaintableForm.getNullPaintableForm();
+                ;
+            }
         }
     }
     static getNullScrollSelectionForm() {
@@ -93,83 +94,101 @@ export class ScrollSelectionForm extends PaintableForm {
     constructor(title, items, formPaintableFactory, border, adjustedExtraBorder, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, backgroundBasicColor, foregroundBasicColor);
         //inner= member=true isStatic=
-        this.ScrollSelectionFormHorizontalPaintable = class extends ItemIndexPaintable {
-            constructor(scrollSelectionForm) {
-                super();
-                this.scrollSelectionForm = scrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            paint(graphics, index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.scrollSelectionForm.paintItemHorizontal(graphics, index, item, dx, dy);
-                ;
-            }
-        };
+        this.ScrollSelectionFormHorizontalPaintable = (() => {
+            const outer$ScrollSelectionForm = this;
+            return class extends ItemIndexPaintable {
+                constructor(scrollSelectionForm) {
+                    super();
+                    this.scrollSelectionForm = scrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                paint(graphics, index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.scrollSelectionForm.paintItemHorizontal(graphics, index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         //inner= member=true isStatic=
-        this.ScrollSelectionFormVerticalPaintable = class extends ItemIndexPaintable {
-            constructor(scrollSelectionForm) {
-                super();
-                this.scrollSelectionForm = scrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            paint(graphics, index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.scrollSelectionForm.paintItemVertical(graphics, index, item, dx, dy);
-                ;
-            }
-        };
+        this.ScrollSelectionFormVerticalPaintable = (() => {
+            const outer$ScrollSelectionForm = this;
+            return class extends ItemIndexPaintable {
+                constructor(scrollSelectionForm) {
+                    super();
+                    this.scrollSelectionForm = scrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                paint(graphics, index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.scrollSelectionForm.paintItemVertical(graphics, index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         //inner= member=true isStatic=
-        this.ScrollSelectionFormTempHorizontalPaintable = class extends ItemIndexPaintable {
-            constructor(scrollSelectionForm) {
-                super();
-                this.scrollSelectionForm = scrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            paint(graphics, index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.scrollSelectionForm.paintItemTempHorizontal(graphics, index, item, dx, dy);
-                ;
-            }
-        };
+        this.ScrollSelectionFormTempHorizontalPaintable = (() => {
+            const outer$ScrollSelectionForm = this;
+            return class extends ItemIndexPaintable {
+                constructor(scrollSelectionForm) {
+                    super();
+                    this.scrollSelectionForm = scrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                paint(graphics, index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.scrollSelectionForm.paintItemTempHorizontal(graphics, index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         //inner= member=true isStatic=
-        this.ScrollSelectionFormHorizontalDx = class extends ItemIndexDx {
-            constructor(multipleScrollSelectionForm) {
-                super();
-                this.scrollSelectionForm = multipleScrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            getDx(index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.scrollSelectionForm.getSelectedIndexForPointHorizontalDx(index, item, dx, dy);
-                ;
-            }
-        };
+        this.ScrollSelectionFormHorizontalDx = (() => {
+            const outer$ScrollSelectionForm = this;
+            return class extends ItemIndexDx {
+                constructor(multipleScrollSelectionForm) {
+                    super();
+                    this.scrollSelectionForm = multipleScrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                getDx(index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.scrollSelectionForm.getSelectedIndexForPointHorizontalDx(index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         //inner= member=true isStatic=
-        this.ScrollSelectionFormVericalDx = class extends ItemIndexDx {
-            constructor(multipleScrollSelectionForm) {
-                super();
-                this.scrollSelectionForm = multipleScrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            getDx(index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.scrollSelectionForm.getSelectedIndexForPointVerticalDx(index, item, dx, dy);
-                ;
-            }
-        };
+        this.ScrollSelectionFormVericalDx = (() => {
+            const outer$ScrollSelectionForm = this;
+            return class extends ItemIndexDx {
+                constructor(multipleScrollSelectionForm) {
+                    super();
+                    this.scrollSelectionForm = multipleScrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                getDx(index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.scrollSelectionForm.getSelectedIndexForPointVerticalDx(index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         //inner= member=true isStatic=
-        this.ScrollSelectionFormTempHorizontalDx = class extends ItemIndexDx {
-            constructor(multipleScrollSelectionForm) {
-                super();
-                this.scrollSelectionForm = multipleScrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            getDx(index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.scrollSelectionForm.getSelectedIndexForPointTempHorizontalDx(index, item, dx, dy);
-                ;
-            }
-        };
+        this.ScrollSelectionFormTempHorizontalDx = (() => {
+            const outer$ScrollSelectionForm = this;
+            return class extends ItemIndexDx {
+                constructor(multipleScrollSelectionForm) {
+                    super();
+                    this.scrollSelectionForm = multipleScrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                getDx(index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.scrollSelectionForm.getSelectedIndexForPointTempHorizontalDx(index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         this.rectangleCollisionUtil = RectangleCollisionUtil.getInstance();
         this.scrollSelectionFormFormTypeItemIndexPaintable = ItemIndexPaintable.getInstance();
         this.formTypeItemIndexDx = ItemIndexDx.getInstance();
@@ -184,7 +203,7 @@ export class ScrollSelectionForm extends PaintableForm {
     //@Throws(Exception.constructor)
     init(rectangle, formType) {
         super.init(rectangle, formType);
-        var formTypeFactory = FormTypeFactory.getInstance();
+        let formTypeFactory = FormTypeFactory.getInstance();
         ;
         if (formType == formTypeFactory.HORIZONTAL_FORM) {
             this.scrollSelectionFormFormTypeItemIndexPaintable = new this.ScrollSelectionFormHorizontalPaintable(this);
@@ -205,13 +224,13 @@ export class ScrollSelectionForm extends PaintableForm {
         }
     }
     paintItemHorizontal(graphics, index, item, x, y) {
-        var width = item.getMinimumWidth();
+        let width = item.getMinimumWidth();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return x + width + this.border;
     }
     paintItemVertical(graphics, index, item, x, y) {
-        var height = item.getMinimumHeight();
+        let height = item.getMinimumHeight();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return y + height + this.border;
@@ -239,7 +258,7 @@ export class ScrollSelectionForm extends PaintableForm {
     }
     //@Throws(Exception.constructor)
     getSelectedItem(point) {
-        var index = this.getSelectedIndexForPoint(point);
+        let index = this.getSelectedIndexForPoint(point);
         ;
         if (index != -1) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -254,11 +273,11 @@ export class ScrollSelectionForm extends PaintableForm {
     }
     //@Throws(Exception.constructor)
     getItemIndex(item) {
-        var nextItem;
+        let nextItem;
         ;
-        var size = this.size();
+        let size = this.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             nextItem = this.get(index);
             if (nextItem == item) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -274,19 +293,19 @@ export class ScrollSelectionForm extends PaintableForm {
     }
     //@Throws(Exception.constructor)
     getSelectedIndexForPoint(point) {
-        var start = this.getStartIndex();
+        let start = this.getStartIndex();
         ;
-        var size = this.size();
+        let size = this.size();
         ;
-        var dx = this.getDx();
+        let dx = this.getDx();
         ;
-        var dy = this.getDy();
+        let dy = this.getDy();
         ;
-        var formTypeFactory = FormTypeFactory.getInstance();
+        let formTypeFactory = FormTypeFactory.getInstance();
         ;
-        var commonLabels = CommonLabels.getInstance();
+        let commonLabels = CommonLabels.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(commonLabels.START_LABEL);
         stringBuffer.appendint(start);
@@ -294,15 +313,15 @@ export class ScrollSelectionForm extends PaintableForm {
         stringBuffer.append(commonLabels.TOTAL_LABEL);
         stringBuffer.appendint(size);
         this.logUtil.putF(stringBuffer.toString(), this, ScrollSelectionForm.GET_SELECTED_INDEX);
-        var item;
+        let item;
         ;
-        var width = 0;
+        let width = 0;
         ;
-        var height = 0;
+        let height = 0;
         ;
-        var diffX = 0;
+        let diffX = 0;
         ;
-        for (var index = start; index < size; index++) {
+        for (let index = start; index < size; index++) {
             item = this.get(index);
             width = item.getMinimumWidth();
             height = item.getMinimumHeight();
@@ -341,13 +360,13 @@ export class ScrollSelectionForm extends PaintableForm {
     }
     //@Throws(Exception.constructor)
     processInputKey(gameKeyCode) {
-        var formTypeFactory = FormTypeFactory.getInstance();
+        let formTypeFactory = FormTypeFactory.getInstance();
         ;
         if (this.size() == 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return -1;
         }
-        var index = this.getSelectedIndex();
+        let index = this.getSelectedIndex();
         ;
         if (this.formType == formTypeFactory.HORIZONTAL_FORM || this.formType == formTypeFactory.TEMP_HORIZONTAL_FORM) {
             if (gameKeyCode == Canvas.RIGHT) {
@@ -370,7 +389,7 @@ export class ScrollSelectionForm extends PaintableForm {
         else {
             throw new Exception(formTypeFactory.UNK);
         }
-        var max = this.size() - 1;
+        let max = this.size() - 1;
         ;
         if (index < 0) {
             this.setSelectedIndex(0);
@@ -396,12 +415,12 @@ export class ScrollSelectionForm extends PaintableForm {
     //@Throws(Exception.constructor)
     paintItem(graphics, index, item, x, y) {
         item.paintXY(graphics, x, y);
-        var width = item.getMinimumWidth();
+        let width = item.getMinimumWidth();
         ;
-        var height = item.getMinimumHeight();
+        let height = item.getMinimumHeight();
         ;
         graphics.setColor(this.getButtonBasicColor().intValue());
-        var adjustedBorder = 3;
+        let adjustedBorder = 3;
         ;
         graphics.drawRect(x - this.halfBorder - adjustedBorder, y - this.halfBorder - adjustedBorder, width + this.border + this.adjustedExtraBorder, height + this.border + this.adjustedExtraBorder);
         //if statement needs to be on the same line and ternary does not work the same way.

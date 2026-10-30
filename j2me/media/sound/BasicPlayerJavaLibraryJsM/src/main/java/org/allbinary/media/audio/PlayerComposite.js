@@ -14,6 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
+//not GWT import const Player
+import { PlayerListenerI } from '../../../../javax/microedition/media/PlayerListener.js';
+const PlayerListener = PlayerListenerI;
 //not GWT import const PlayerListener
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
@@ -23,7 +26,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { GameTickTimeDelayHelperFactory } from '../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
 //not GWT import const GameTickTimeDelayHelperFactory
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import - same folder const Controllable2
+//sameFolderImports - not GWT import - same folder const Controllable2
 //BasicPlayer
 export class PlayerComposite extends Object {
     constructor(player, repeatTime) {
@@ -66,19 +69,23 @@ export class PlayerComposite extends Object {
     prefetch() {
         try {
             this.player.prefetch();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "prefetch", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "prefetch", e);
+            }
         }
     }
     realize() {
         try {
             this.player.realize();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "realize", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "realize", e);
+            }
         }
     }
     getState() {
@@ -94,12 +101,14 @@ export class PlayerComposite extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.player.setMediaTime(now);
             ;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "setMediaTime", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return -1;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "setMediaTime", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return -1;
+            }
         }
     }
     start() {
@@ -107,19 +116,23 @@ export class PlayerComposite extends Object {
             if (this.timeElapsedHelper.isTime(this.gameTickTimeDelayHelper.startTime)) {
                 this.player.start();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+            }
         }
     }
     stop() {
         try {
             this.player.stop();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "stop", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "stop", e);
+            }
         }
     }
     getControl(controlType) {
@@ -131,7 +144,7 @@ export class PlayerComposite extends Object {
         throw new RuntimeException();
     }
     setVolume(leftVolume, rightVolume) {
-        var controllable2 = this.player;
+        let controllable2 = this.player;
         ;
         controllable2.setVolume(leftVolume, rightVolume);
     }

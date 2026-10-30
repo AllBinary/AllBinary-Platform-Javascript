@@ -40,11 +40,11 @@ export class SoftwareInformation extends Object {
         return this.shortName;
     }
     toString() {
-        var NAME = "Name: ";
+        let NAME = "Name: ";
         ;
-        var VERSION = "Version: ";
+        let VERSION = "Version: ";
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(NAME);
         stringBuffer.append(this.getName());

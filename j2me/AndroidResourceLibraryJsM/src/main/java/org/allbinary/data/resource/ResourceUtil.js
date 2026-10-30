@@ -66,7 +66,7 @@ export class ResourceUtil extends Object {
         this.context = aContext;
     }
     getResourceId(resource) {
-        var value = this.hashMap.get(resource);
+        let value = this.hashMap.get(resource);
         ;
         if (DebugFactory.getInstance() != NoDebug.getInstance()) {
             PreLogUtil.put(new StringMaker().append(resource).append(CommonSeps.getInstance().COLON).append(value.toString()).toString(), this, "getResourceId");
@@ -84,10 +84,10 @@ export class ResourceUtil extends Object {
         this.hashMap.put(resource, value);
     }
     containsDuplicate(resource, value) {
-        var objectArray = HashtableUtil.getInstance().getKeysAsArray(this.hashMap);
+        let objectArray = HashtableUtil.getInstance().getKeysAsArray(this.hashMap);
         ;
-        for (var index = objectArray.length; --index >= 0;) {
-            var integer = this.hashMap.get(objectArray[index]);
+        for (let index = objectArray.length; --index >= 0;) {
+            let integer = this.hashMap.get(objectArray[index]);
             ;
             if (resource != objectArray[index]) {
                 if (value != integer) {
@@ -107,13 +107,13 @@ export class ResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStream(resource) {
-        var integer = this.hashMap.get(resource);
+        let integer = this.hashMap.get(resource);
         ;
-        var id = integer.intValue();
+        let id = integer.intValue();
         ;
-        var resources = this.resources;
+        let resources = this.resources;
         ;
-        var inputStream = resources.openRawResource(id);
+        let inputStream = resources.openRawResource(id);
         ;
         if (inputStream !=
             null) {

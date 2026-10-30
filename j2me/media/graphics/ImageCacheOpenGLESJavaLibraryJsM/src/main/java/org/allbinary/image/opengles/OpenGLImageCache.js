@@ -33,7 +33,7 @@ import { SynchObject } from '../../../../org/allbinary/thread/SynchObject.js';
 //not GWT import const SynchObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLESImage } from './OpenGLESImage.js';
-//not GWT import - same folder const OpenGLESImage
+//sameFolderImports - not GWT import - same folder const OpenGLESImage
 //ImageCacheOpenGLESJavaLibrary
 export class OpenGLImageCache extends ImageCache {
     constructor() {
@@ -45,7 +45,7 @@ export class OpenGLImageCache extends ImageCache {
         this.list = new BasicArrayListD();
         this.renderer = new AllBinaryRendererBase3();
     }
-    addListener(renderer = {}) {
+    addListener(renderer) {
         this.renderer = renderer;
     }
     //@Throws(Exception.constructor)
@@ -54,8 +54,8 @@ export class OpenGLImageCache extends ImageCache {
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lock) 
         //mutex.withLock
-        for (var index = this.list.size() - 1; index >= 0; index--) {
-            var openGLESImage = this.list.objectArray[index];
+        for (let index = this.list.size() - 1; index >= 0; index--) {
+            let openGLESImage = this.list.objectArray[index];
             ;
             if (openGLESImage != OpenGLESImage.NULL_OPENGL_IMAGE) {
                 openGLESImage.set(gl);
@@ -64,7 +64,7 @@ export class OpenGLImageCache extends ImageCache {
     }
     //@Throws(Exception.constructor)
     createImage(caller, width, height) {
-        var textureSize = width;
+        let textureSize = width;
         ;
         if (height > width) {
             textureSize = height;
@@ -74,9 +74,9 @@ export class OpenGLImageCache extends ImageCache {
         }
         width = textureSize;
         height = textureSize;
-        var image2 = this.imageCache.get(caller, width, height);
+        let image2 = this.imageCache.get(caller, width, height);
         ;
-        var image = this.preResourceImageUtil.encapsulate(image2);
+        let image = this.preResourceImageUtil.encapsulate(image2);
         ;
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lock) 
@@ -88,10 +88,10 @@ export class OpenGLImageCache extends ImageCache {
         return image;
     }
     //@Throws(Exception.constructor)
-    createImageFromInputStream(key = {}, inputStream) {
-        var cachedImage = this.imageCache.getWithKey(key);
+    createImageFromInputStream(key, inputStream) {
+        let cachedImage = this.imageCache.getWithKey(key);
         ;
-        var image = this.preResourceImageUtil.encapsulate(cachedImage);
+        let image = this.preResourceImageUtil.encapsulate(cachedImage);
         ;
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lock) 
@@ -116,10 +116,12 @@ export class OpenGLImageCache extends ImageCache {
             }
             this.list.add(image);
             this.renderer.add(image);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+            }
         }
     }
 }

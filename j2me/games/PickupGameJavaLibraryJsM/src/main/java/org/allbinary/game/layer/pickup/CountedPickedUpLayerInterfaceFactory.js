@@ -24,18 +24,18 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PickedUpLayerInterfaceFactory } from './PickedUpLayerInterfaceFactory.js';
-//not GWT import - same folder const CountedPickedUpLayerInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const CountedPickedUpLayerInterfaceFactoryInterface
 import { PickedUpLayerTypeFactory } from './PickedUpLayerTypeFactory.js';
-//not GWT import - same folder const PickedUpLayerTypeFactory
+//sameFolderImports - not GWT import - same folder const PickedUpLayerTypeFactory
 import { IconLayer } from './IconLayer.js';
-//not GWT import - same folder const IconLayer
+//sameFolderImports - not GWT import - same folder const IconLayer
 import { CountedPickedUpLayerInterfaceFactoryPool } from './CountedPickedUpLayerInterfaceFactoryPool.js';
-//not GWT import - same folder const PickedUpLayerType
+//sameFolderImports - not GWT import - same folder const PickedUpLayerType
 export class CountedPickedUpLayerInterfaceFactory extends PickedUpLayerInterfaceFactory {
     constructor(pickeUpLayerType, iconLayer, animationInterface) {
         super(pickeUpLayerType, iconLayer, animationInterface);
         //For kotlin this is before the body of the constructor.
-        var list = CountedPickedUpLayerInterfaceFactoryPool.getInstance().getList();
+        let list = CountedPickedUpLayerInterfaceFactoryPool.getInstance().getList();
         ;
         this.id = list.size();
         list.add(this);

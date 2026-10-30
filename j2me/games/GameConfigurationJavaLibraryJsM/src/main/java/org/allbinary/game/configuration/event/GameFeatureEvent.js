@@ -16,7 +16,7 @@ import { AllBinaryEventObject } from '../../../../../org/allbinary/logic/util/ev
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameFeatureEvent extends AllBinaryEventObject {
-    constructor(anyType = {}, whatChanged) {
+    constructor(anyType, whatChanged) {
         super(anyType);
         //For kotlin this is before the body of the constructor.
         this.whatChanged = whatChanged;

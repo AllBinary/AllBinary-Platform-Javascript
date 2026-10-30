@@ -12,7 +12,7 @@
         *  Created By: Travis Berthelot
 */
 import { AllBinaryLayerCircularPool } from '../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
-//not GWT import - same folder const PickedUpLayerInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const PickedUpLayerInterfaceFactoryInterface
 export class PickupLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -23,7 +23,7 @@ export class PickupLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     }
     //@Throws(Exception.constructor)
     getInstanceXYZ(pickedUpLayerInterfaceFactoryInterface, x, y, z) {
-        var pickupLayer = this.getNextInstance();
+        let pickupLayer = this.getNextInstance();
         ;
         pickupLayer.initXYZ(x, y, z);
         pickupLayer.init(pickedUpLayerInterfaceFactoryInterface, pickedUpLayerInterfaceFactoryInterface.getAnimationInterface());

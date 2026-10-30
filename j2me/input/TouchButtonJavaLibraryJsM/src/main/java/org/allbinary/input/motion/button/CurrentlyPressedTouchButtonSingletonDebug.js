@@ -22,7 +22,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CurrentlyPressedTouchButtonSingleton } from './CurrentlyPressedTouchButtonSingleton.js';
-//not GWT import - same folder const TouchButtonInput
+//sameFolderImports - not GWT import - same folder const TouchButtonInput
 export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedTouchButtonSingleton {
     constructor() {
         super(...arguments);
@@ -41,7 +41,7 @@ export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedT
         return CurrentlyPressedTouchButtonSingletonDebug.instanceC;
     }
     appendTouchButtonInput(append, touchButtonInput) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(touchButtonInput.toString());
         stringBuffer.append(CommonSeps.getInstance().SPACE);
@@ -76,7 +76,7 @@ export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedT
         this.appendTouchButtonInput(this.PRESSED_AND_NOT_FIRED, touchButtonInput);
     }
     removeAt(index) {
-        var touchButtonInput = super.removeAt(index);
+        let touchButtonInput = super.removeAt(index);
         ;
         this.listString = this.list.toString();
         this.string = new StringMaker().append(this.listString).append(this.append).toString();
@@ -84,7 +84,7 @@ export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedT
         return touchButtonInput;
     }
     remove(touchButtonInput) {
-        var isRemoved = super.remove(touchButtonInput);
+        let isRemoved = super.remove(touchButtonInput);
         ;
         this.listString = this.list.toString();
         this.string = new StringMaker().append(this.listString).append(this.append).toString();

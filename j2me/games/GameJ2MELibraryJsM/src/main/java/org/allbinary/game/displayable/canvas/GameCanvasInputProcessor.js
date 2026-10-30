@@ -32,7 +32,7 @@ import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic
 //not GWT import const SmallIntegerSingletonFactory
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class GameCanvasInputProcessor extends InputProcessor {
     constructor(allBinaryGameCanvas) {
         super();
@@ -49,10 +49,10 @@ export class GameCanvasInputProcessor extends InputProcessor {
     }
     keyPressedByDevice(keyCode, deviceId) {
         try {
-            var gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this.allBinaryGameCanvas, keyCode);
+            let gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this.allBinaryGameCanvas, keyCode);
             ;
             if (gameKey != this.NONE) {
-                var gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this.allBinaryGameCanvas, gameKey);
+                let gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this.allBinaryGameCanvas, gameKey);
                 ;
                 this.downGameKeyEventHandler.fireEvent(gameKeyEvent);
                 this.downGameKeyEventHandler.getInstanceForDevice(deviceId).fireEvent(gameKeyEvent);
@@ -60,14 +60,16 @@ export class GameCanvasInputProcessor extends InputProcessor {
             else {
                 this.logUtil.putF(new StringMaker().append(this.gameInputStrings.NO_KEY).appendint(keyCode).toString(), this, this.gameInputStrings.ADD_KEY_EVENT);
             }
-            var keyCodeAsInteger = this.smallIntegerSingletonFactory.getAtNoThrow(keyCode);
+            let keyCodeAsInteger = this.smallIntegerSingletonFactory.getAtNoThrow(keyCode);
             ;
             this.downKeyEventHandler.fireEventI(keyCodeAsInteger);
             this.downKeyEventHandler.getInstanceForDevice(deviceId).fireEventI(keyCodeAsInteger);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+            }
         }
     }
     keyReleasedByDevice(canvas, keyCode, deviceId) {
@@ -75,12 +77,12 @@ export class GameCanvasInputProcessor extends InputProcessor {
     }
     removeGameKeyEvent(canvas, keyCode, deviceId, repeated) {
         try {
-            var gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(canvas, keyCode);
+            let gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(canvas, keyCode);
             ;
             if (gameKey != this.NONE) {
-                var gameKeyEventSourceInterface = canvas;
+                let gameKeyEventSourceInterface = canvas;
                 ;
-                var gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(gameKeyEventSourceInterface, gameKey);
+                let gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(gameKeyEventSourceInterface, gameKey);
                 ;
                 this.upGameKeyEventHandler.fireEvent(gameKeyEvent);
                 this.upGameKeyEventHandler.getInstanceForDevice(deviceId).fireEvent(gameKeyEvent);
@@ -88,10 +90,12 @@ export class GameCanvasInputProcessor extends InputProcessor {
             else {
                 this.logUtil.putF(new StringMaker().append(this.gameInputStrings.NO_KEY).appendint(keyCode).toString(), this, this.gameInputStrings.REMOVE_KEY_EVENT);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Key Event Error", this, this.gameInputStrings.REMOVE_KEY_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Key Event Error", this, this.gameInputStrings.REMOVE_KEY_EVENT, e);
+            }
         }
     }
 }

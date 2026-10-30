@@ -24,25 +24,25 @@ import { ImageToRotationImageArrayUtil } from '../../../../org/allbinary/media/i
 //not GWT import const ImageToRotationImageArrayUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayRotationAnimationInfo } from './ImageArrayRotationAnimationInfo.js';
-//not GWT import - same folder const ImageArrayRotationAnimationInfo
+//sameFolderImports - not GWT import - same folder const ImageArrayRotationAnimationInfo
 import { AdjustedImageArrayRotationAnimation } from './AdjustedImageArrayRotationAnimation.js';
-//not GWT import - same folder const AdjustedImageArrayRotationAnimation
+//sameFolderImports - not GWT import - same folder const AdjustedImageArrayRotationAnimation
 //TWB - Adjustments should be done in the resource creation and not at the animation level
 export class PooledImageArrayRotationAnimationFactory extends Object {
     //@Throws(Exception.constructor)
     static createFactory(image, animationBehaviorFactory) {
-        var totalAngle = Math.round(AngleFactory.getInstance().TOTAL_ANGLE);
+        let totalAngle = globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE);
         ;
-        var angleIncrement = (totalAngle / GameConfigurationCentral.getInstance().getGameControlFidelity());
+        let angleIncrement = (totalAngle / GameConfigurationCentral.getInstance().getGameControlFidelity());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new PooledImageArrayRotationAnimationFactory(image, image.getWidth(), image.getHeight(), -(image.getWidth() >> 2), -(image.getHeight() >> 2), angleIncrement, animationBehaviorFactory);
     }
     //@Throws(Exception.constructor)
     static createDXY(image, dx, dy, animationBehaviorFactory) {
-        var totalAngle = Math.round(AngleFactory.getInstance().TOTAL_ANGLE);
+        let totalAngle = globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE);
         ;
-        var angleIncrement = (totalAngle / GameConfigurationCentral.getInstance().getGameControlFidelity());
+        let angleIncrement = (totalAngle / GameConfigurationCentral.getInstance().getGameControlFidelity());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new PooledImageArrayRotationAnimationFactory(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory);
@@ -51,9 +51,9 @@ export class PooledImageArrayRotationAnimationFactory extends Object {
         super();
         this.allBinaryImageRotationAnimationInfo = NullUtil.getInstance().NULL_OBJECT;
         this.animationBehaviorFactory = animationBehaviorFactory;
-        var totalAngle = Math.round(AngleFactory.getInstance().TOTAL_ANGLE);
+        let totalAngle = globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE);
         ;
-        var imageArray = ImageToRotationImageArrayUtil.getInstance().generate(image, angleIncrement, totalAngle);
+        let imageArray = ImageToRotationImageArrayUtil.getInstance().generate(image, angleIncrement, totalAngle);
         ;
         this.allBinaryImageRotationAnimationInfo = new ImageArrayRotationAnimationInfo(imageArray, angleIncrement, totalAngle, dx, dy);
     }

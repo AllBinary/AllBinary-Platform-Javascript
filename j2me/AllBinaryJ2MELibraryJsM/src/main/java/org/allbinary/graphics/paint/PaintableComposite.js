@@ -14,19 +14,19 @@
 //not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import - same folder const PaintableInterface
+//sameFolderImports - not GWT import - same folder const PaintableInterface
 export class PaintableComposite extends Paintable {
     constructor(paintableArray) {
         super();
         this.paintableArray = paintableArray;
     }
     paint(graphics) {
-        for (var index = this.paintableArray.length - 1; index >= 0; index--) {
+        for (let index = this.paintableArray.length - 1; index >= 0; index--) {
             this.paintableArray[index].paint(graphics);
         }
     }
     paintThreed(graphics) {
-        for (var index = this.paintableArray.length - 1; index >= 0; index--) {
+        for (let index = this.paintableArray.length - 1; index >= 0; index--) {
             this.paintableArray[index].paintThreed(graphics);
         }
     }

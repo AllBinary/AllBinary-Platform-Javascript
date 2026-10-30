@@ -23,9 +23,9 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameConfigurationTextInput extends Object {
     static update(textField) {
-        var anyType = textField.getLabel();
+        let anyType = textField.getLabel();
         ;
-        var gameConfigurationTextInput = GameConfigurationTextInput.hashtable.get(anyType);
+        let gameConfigurationTextInput = GameConfigurationTextInput.hashtable.get(anyType);
         ;
         gameConfigurationTextInput.setText(textField.getString());
     }

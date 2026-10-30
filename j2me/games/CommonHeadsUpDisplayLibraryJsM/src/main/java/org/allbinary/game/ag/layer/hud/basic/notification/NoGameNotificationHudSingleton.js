@@ -23,7 +23,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameNotificationHud } from './GameNotificationHud.js';
-//not GWT import - same folder const GameNotificationHud
+//sameFolderImports - not GWT import - same folder const GameNotificationHud
 export class NoGameNotificationHudSingleton extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -34,7 +34,7 @@ export class NoGameNotificationHudSingleton extends Object {
         this.logUtil = LogUtil.getInstance();
         this.gameNotificationHud = GameNotificationHud.NULL_GAME_NOTIFICATION;
         try {
-            var basicHudFactory = BasicHudFactory.getInstance();
+            let basicHudFactory = BasicHudFactory.getInstance();
             ;
             //inner=true member= isStatic=
             class NoGameGameNotificationHud extends GameNotificationHud {
@@ -47,12 +47,14 @@ export class NoGameNotificationHudSingleton extends Object {
             }
             //Otherwise - statement - EmptyStmt
             this.gameNotificationHud = new NoGameGameNotificationHud();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     getGameNotificationHud() {

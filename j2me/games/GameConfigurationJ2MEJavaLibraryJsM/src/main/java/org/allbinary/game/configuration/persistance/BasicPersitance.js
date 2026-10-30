@@ -32,9 +32,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PersistanceStrings } from './PersistanceStrings.js';
-//not GWT import - same folder const PersistanceStrings
+//sameFolderImports - not GWT import - same folder const PersistanceStrings
 import { NullRecordStore } from './NullRecordStore.js';
-//not GWT import - same folder const NullRecordStore
+//sameFolderImports - not GWT import - same folder const NullRecordStore
 export class BasicPersitance extends Object {
     constructor(recordId) {
         super();
@@ -52,10 +52,10 @@ export class BasicPersitance extends Object {
     }
     //@Throws(Exception.constructor)
     deleteAll(abeClientInformation) {
-        var size = this.idList.size();
+        let size = this.idList.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var integer = this.idList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let integer = this.idList.objectArray[index];
             ;
             this.delete(abeClientInformation, integer.intValue());
         }
@@ -63,16 +63,18 @@ export class BasicPersitance extends Object {
     }
     //@Throws(Exception.constructor)
     delete(abeClientInformation, deleteId) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
             this.logUtil.putF(new StringMaker().append(this.persistanceStrings.DELETING_WITH_ID).appendint(deleteId).toString(), this, this.commonStrings.delete);
             recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
             recordStore.deleteRecord(deleteId);
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             if (recordStore !=

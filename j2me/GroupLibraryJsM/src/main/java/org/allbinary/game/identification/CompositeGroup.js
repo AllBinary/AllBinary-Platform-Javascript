@@ -25,9 +25,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const Group
+//sameFolderImports - not GWT import - same folder const Group
 import { GroupCommonFactory } from './GroupCommonFactory.js';
-//not GWT import - same folder const GroupCommonFactory
+//sameFolderImports - not GWT import - same folder const GroupCommonFactory
 export class CompositeGroup extends Object {
     constructor(groupInterface) {
         super();
@@ -39,11 +39,11 @@ export class CompositeGroup extends Object {
         this.list.clear();
     }
     add(groupInterface) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var groupCommonFactory = GroupCommonFactory.getInstance();
+        let groupCommonFactory = GroupCommonFactory.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(groupCommonFactory.ADDING_LABEL);
         stringBuffer.append(groupInterface.toString());

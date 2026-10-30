@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const TestInputInterface
+//sameFolderImports - not GWT import - same folder const TestInputInterface
 export class TestInputExample extends Object {
     constructor() {
         super(...arguments);

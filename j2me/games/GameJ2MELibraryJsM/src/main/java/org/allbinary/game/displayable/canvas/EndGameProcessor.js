@@ -18,7 +18,7 @@ import { NullHighScoresSingletonFactory } from '../../../../../org/allbinary/gam
 import { GameStateFactory } from '../../../../../org/allbinary/game/state/GameStateFactory.js';
 //not GWT import const GameStateFactory
 import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class EndGameProcessor extends Processor {
     constructor(gameCanvas) {
         super();
@@ -31,9 +31,9 @@ export class EndGameProcessor extends Processor {
         if (this.gameCanvas.isHighScoreSubmitted()) {
             if (this.gameCanvas.getGameStateTimeHelper().isElapsedTNT(this.WAIT)) {
                 if (this.gameCanvas.getGameState() == this.gameStateFactory.SHOW_END_RESULT_GAME_STATE) {
-                    var highScoresBase = this.gameCanvas.highScoresHelper;
+                    let highScoresBase = this.gameCanvas.highScoresHelper;
                     ;
-                    var highScores = highScoresBase.getSelectedHighScores();
+                    let highScores = highScoresBase.getSelectedHighScores();
                     ;
                     if (highScores != NullHighScoresSingletonFactory.getInstance()) {
                         highScoresBase.selectHighScores();

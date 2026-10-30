@@ -80,25 +80,25 @@ export class HighScoresCanvas extends GameCommandCanvas {
                 this.highScoresCanvas = highScoresCanvas;
             }
             run() {
-                var commonStrings = CommonStrings.getInstance();
+                let commonStrings = CommonStrings.getInstance();
                 ;
-                var logUtil = LogUtil.getInstance();
+                let logUtil = LogUtil.getInstance();
                 ;
-                var highScoresCanvas = this.highScoresCanvas;
+                let highScoresCanvas = this.highScoresCanvas;
                 ;
                 try {
-                    var isHTML = J2MEUtil.isHTML();
+                    let isHTML = J2MEUtil.isHTML();
                     ;
                     if (!isHTML) {
                         while (!highScoresCanvas.hasPainted) {
                         }
                         highScoresCanvas.hasPainted = false;
                     }
-                    var stringMaker = new StringMaker();
+                    let stringMaker = new StringMaker();
                     ;
-                    var systemWrapper = ABSystemWrapper.getInstance();
+                    let systemWrapper = ABSystemWrapper.getInstance();
                     ;
-                    var currentTimeMillis = systemWrapper.currentTimeMillis();
+                    let currentTimeMillis = systemWrapper.currentTimeMillis();
                     ;
                     logUtil.putF(stringMaker.append("HighScoresCanvas - Request repaint to be sure: ").appendlong(currentTimeMillis).toString(), this, commonStrings.RUN);
                     highScoresCanvas.repaintBehavior.onChangeRepaint(highScoresCanvas);
@@ -109,10 +109,12 @@ export class HighScoresCanvas extends GameCommandCanvas {
                     stringMaker.delete(0, stringMaker.length());
                     logUtil.putF(stringMaker.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ").appendlong(currentTimeMillis).toString(), this, commonStrings.RUN);
                     highScoresCanvas.executeUpdate();
-                    //: 
                 }
-                catch (e) {
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                    }
                 }
             }
         }
@@ -144,10 +146,12 @@ export class HighScoresCanvas extends GameCommandCanvas {
     executeUpdate() {
         try {
             this.highScoresFactoryInterface.fetchHighScores(this.getGameInfo(), this);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+            }
         }
     }
     getHighScoresPaintable() {
@@ -166,23 +170,25 @@ export class HighScoresCanvas extends GameCommandCanvas {
             this.highScoresHelper.setHighScoresArray(highScoresArray);
             this.updateCommand(this.currentCommand);
             this.setPaintable(this.getHighScoresPaintable());
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     updateCommand(command) {
         this.logUtil.putF(new StringMaker().append(this.commonStrings.START).append(this.stringUtil.toString(command)).toString(), this, this.commonStrings.UPDATE);
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         if (this.highScoreCommandsFactory.isHighScoreCommand(command)) {
-            var index = this.highScoreCommandsFactory.getIndex(command);
+            let index = this.highScoreCommandsFactory.getIndex(command);
             ;
-            var nextIndex = index + 1;
+            let nextIndex = index + 1;
             ;
-            var highScoresArray = this.highScoresHelper.getHighScoresArray();
+            let highScoresArray = this.highScoresHelper.getHighScoresArray();
             ;
             if (nextIndex >= highScoresArray.length) {
                 nextIndex = 0;

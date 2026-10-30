@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionEventProcessor } from './MotionEventProcessor.js';
-//not GWT import - same folder const MotionEventProcessor
+//sameFolderImports - not GWT import - same folder const MotionEventProcessor
 export class NoMotionEventProcessor extends MotionEventProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

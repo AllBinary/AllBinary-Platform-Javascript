@@ -30,7 +30,7 @@ import { MyFontProcessor } from '../../../../../org/allbinary/graphics/font/MyFo
 //not GWT import const MyFontProcessor
 //not plain js import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
-//not GWT import - same folder const BuildingLayer
+//sameFolderImports - not GWT import - same folder const BuildingLayer
 export class BuildingInfoHudPaintable extends SelectionHudPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,28 +42,28 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
         this.HEALTH = "Health:";
         this.rtsLayer = NullPathFindingLayer.NULL_PATH_FINDING_LAYER;
         this.currentHealth = 0;
-        var numberStringHudFactory = NumberStringHudFactory.getInstance();
+        let numberStringHudFactory = NumberStringHudFactory.getInstance();
         ;
-        var productivityHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
+        let productivityHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
         ;
-        var efficiencyHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
+        let efficiencyHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
         ;
-        var healthHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
+        let healthHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
         ;
-        var maxHealthHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
+        let maxHealthHud = numberStringHudFactory.NULL_NUMBER_STRING_HUD;
         ;
         try {
-            var index = 0;
+            let index = 0;
             ;
-            var basicHudFactory = BasicHudFactory.getInstance();
+            let basicHudFactory = BasicHudFactory.getInstance();
             ;
-            var basicColor = this.getBasicColorP();
+            let basicColor = this.getBasicColorP();
             ;
-            var textX = this.textX;
+            let textX = this.textX;
             ;
-            var y = this.y;
+            let y = this.y;
             ;
-            var firstIndex = index;
+            let firstIndex = index;
             ;
             //inner=true member= isStatic=
             class ProductivityNumberStringHud extends NumberStringHud {
@@ -72,7 +72,7 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
                     //For kotlin this is before the body of the constructor.
                 }
                 updateMeasurement(graphics) {
-                    var font = graphics.getFont();
+                    let font = graphics.getFont();
                     ;
                     this.updateMaxWidth = textX;
                     this.updateMaxHeight = y + ((firstIndex + 1) * font.getHeight());
@@ -82,7 +82,7 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
             //Otherwise - statement - EmptyStmt
             productivityHud = new ProductivityNumberStringHud();
             index++;
-            var secondIndex = index;
+            let secondIndex = index;
             ;
             //inner=true member= isStatic=
             class EfficiencyNumberStringHud extends NumberStringHud {
@@ -92,7 +92,7 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
                 }
                 updateMeasurement(graphics) {
                     super.updateMeasurement(graphics);
-                    var font = graphics.getFont();
+                    let font = graphics.getFont();
                     ;
                     this.updateMaxWidth = textX;
                     this.updateMaxHeight = y + ((secondIndex + 1) * font.getHeight());
@@ -101,9 +101,9 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
             //Otherwise - statement - EmptyStmt
             efficiencyHud = new EfficiencyNumberStringHud();
             index++;
-            var HEALTH = this.HEALTH;
+            let HEALTH = this.HEALTH;
             ;
-            var thirdIndex = index;
+            let thirdIndex = index;
             ;
             //inner=true member= isStatic=
             class HealthNumberStringHud extends NumberStringHud {
@@ -112,7 +112,7 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
                     //For kotlin this is before the body of the constructor.
                 }
                 updateMeasurement(graphics) {
-                    var font = graphics.getFont();
+                    let font = graphics.getFont();
                     ;
                     this.updateMaxWidth = textX;
                     this.updateMaxHeight = y + ((thirdIndex + 1) * font.getHeight());
@@ -120,10 +120,10 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
                 }
             }
             //Otherwise - statement - EmptyStmt
-            var totalLength = HEALTH.length + 1;
+            let totalLength = HEALTH.length + 1;
             ;
             healthHud = new HealthNumberStringHud();
-            var fourthIndex = index;
+            let fourthIndex = index;
             ;
             //inner=true member= isStatic=
             class MaxHealthNumberStringHud extends NumberStringHud {
@@ -133,7 +133,7 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
                 }
                 updateMeasurement(graphics) {
                     super.updateMeasurement(graphics);
-                    var font = graphics.getFont();
+                    let font = graphics.getFont();
                     ;
                     this.updateMaxWidth = textX + (totalLength * font.getHeight());
                     this.updateMaxHeight = y + ((fourthIndex + 1) * font.getHeight());
@@ -141,12 +141,14 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
             }
             //Otherwise - statement - EmptyStmt
             maxHealthHud = new MaxHealthNumberStringHud();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
         this.productivityHud = productivityHud;
         this.efficiencyHud = efficiencyHud;
@@ -154,9 +156,9 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
         this.maxHealthHud = maxHealthHud;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
-        var totalLength = this.HEALTH.length + MathUtil.getInstance().getTotalDigits(this.currentHealth);
+        let totalLength = this.HEALTH.length + MathUtil.getInstance().getTotalDigits(this.currentHealth);
         ;
         this.maxHealthHud.setX(this.textX + MyFontProcessor.defaultStringWidth(font, totalLength));
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -178,7 +180,7 @@ export class BuildingInfoHudPaintable extends SelectionHudPaintable {
         this.getAnimationInterface().paintXY(graphics, this.imageX, this.y);
     }
     updateSelectionInfo() {
-        var buildingLayer = this.rtsLayer;
+        let buildingLayer = this.rtsLayer;
         ;
         this.setName(buildingLayer.getName());
         this.setAnimationInterface(buildingLayer.getVerticleBuildAnimationInterface());

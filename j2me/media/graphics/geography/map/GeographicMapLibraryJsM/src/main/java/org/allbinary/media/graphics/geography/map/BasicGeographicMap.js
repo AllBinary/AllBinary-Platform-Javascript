@@ -20,9 +20,9 @@ const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleGeographicMap } from './SimpleGeographicMap.js';
-//not GWT import - same folder const GeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPosition
 import { SimpleGeographicMapCellPositionFactory } from './SimpleGeographicMapCellPositionFactory.js';
-//not GWT import - same folder const GeographicMapCellType
+//sameFolderImports - not GWT import - same folder const GeographicMapCellType
 export class BasicGeographicMap extends SimpleGeographicMap {
     constructor(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor, geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory) {
         super(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor);
@@ -115,7 +115,7 @@ export class BasicGeographicMap extends SimpleGeographicMap {
     }
     //@Throws(Exception.constructor)
     isOfFourDirections(oldGeographicMapCellPosition, newGeographicMapCellPosition) {
-        for (var index = 0; index < 4; index++) {
+        for (let index = 0; index < 4; index++) {
             if (newGeographicMapCellPosition == this.getCellPositionNoThrow(index, oldGeographicMapCellPosition)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
@@ -126,33 +126,35 @@ export class BasicGeographicMap extends SimpleGeographicMap {
     }
     //@Throws(Exception.constructor)
     getCellPositionAtXY(x, y) {
-        var allBinaryTiledLayer = this.getAllBinaryTiledLayer();
+        let allBinaryTiledLayer = this.getAllBinaryTiledLayer();
         ;
-        var i_column = this.mathUtil.abs(x / allBinaryTiledLayer.getCellHeight());
+        let i_column = this.mathUtil.abs(x / allBinaryTiledLayer.getCellHeight());
         ;
-        var i_row = this.mathUtil.abs(y / allBinaryTiledLayer.getCellWidth());
+        let i_row = this.mathUtil.abs(y / allBinaryTiledLayer.getCellWidth());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.geographicMapCellPositionFactory.getAt(i_column, i_row);
         ;
     }
     getCellPositionAtXYNoThrow(x, y) {
-        var allBinaryTiledLayer = this.getAllBinaryTiledLayer();
+        let allBinaryTiledLayer = this.getAllBinaryTiledLayer();
         ;
-        var i_column = this.mathUtil.abs(x / allBinaryTiledLayer.getCellHeight());
+        let i_column = this.mathUtil.abs(x / allBinaryTiledLayer.getCellHeight());
         ;
-        var i_row = this.mathUtil.abs(y / allBinaryTiledLayer.getCellWidth());
+        let i_row = this.mathUtil.abs(y / allBinaryTiledLayer.getCellWidth());
         ;
         if (allBinaryTiledLayer.getColumns() > i_column && allBinaryTiledLayer.getRows() > i_row) {
             try {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.geographicMapCellPositionFactory.getAt(i_column, i_row);
                 ;
-                //: 
             }
-            catch (e) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
+            catch (caught) {
+                {
+                    const e = caught;
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
+                }
             }
         }
         else {
@@ -162,11 +164,11 @@ export class BasicGeographicMap extends SimpleGeographicMap {
     }
     //@Throws(Exception.constructor)
     isOnMap(geographicMapCellPosition) {
-        var allBinaryTiledLayer = this.getAllBinaryTiledLayer();
+        let allBinaryTiledLayer = this.getAllBinaryTiledLayer();
         ;
-        var i_column = geographicMapCellPosition.getColumn();
+        let i_column = geographicMapCellPosition.getColumn();
         ;
-        var i_row = geographicMapCellPosition.getRow();
+        let i_row = geographicMapCellPosition.getRow();
         ;
         if (allBinaryTiledLayer.getColumns() > i_column && allBinaryTiledLayer.getRows() > i_row) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,18 +182,18 @@ export class BasicGeographicMap extends SimpleGeographicMap {
     //@Throws(Exception.constructor)
     getCellPositionAtNoThrow(x, y, x2, y2, geographicMapCellPositionList) {
         geographicMapCellPositionList.clear();
-        var allBinaryTiledLayer = this.getAllBinaryTiledLayer();
+        let allBinaryTiledLayer = this.getAllBinaryTiledLayer();
         ;
-        var i_columnMin = this.mathUtil.abs(x / allBinaryTiledLayer.getCellHeight());
+        let i_columnMin = this.mathUtil.abs(x / allBinaryTiledLayer.getCellHeight());
         ;
-        var i_rowMin = this.mathUtil.abs(y / allBinaryTiledLayer.getCellWidth());
+        let i_rowMin = this.mathUtil.abs(y / allBinaryTiledLayer.getCellWidth());
         ;
-        var i_columnMax = this.mathUtil.abs(x2 / allBinaryTiledLayer.getCellHeight()) + 1;
+        let i_columnMax = this.mathUtil.abs(x2 / allBinaryTiledLayer.getCellHeight()) + 1;
         ;
-        var i_rowMax = this.mathUtil.abs(y2 / allBinaryTiledLayer.getCellWidth()) + 1;
+        let i_rowMax = this.mathUtil.abs(y2 / allBinaryTiledLayer.getCellWidth()) + 1;
         ;
-        for (var columnIndex = i_columnMin; columnIndex < i_columnMax; columnIndex++) {
-            for (var rowIndex = i_rowMin; rowIndex < i_rowMax; rowIndex++) {
+        for (let columnIndex = i_columnMin; columnIndex < i_columnMax; columnIndex++) {
+            for (let rowIndex = i_rowMin; rowIndex < i_rowMax; rowIndex++) {
                 if (allBinaryTiledLayer.getColumns() > columnIndex && allBinaryTiledLayer.getRows() > rowIndex) {
                     geographicMapCellPositionList.add(this.geographicMapCellPositionFactory.getAt(columnIndex, rowIndex));
                 }
@@ -202,21 +204,21 @@ export class BasicGeographicMap extends SimpleGeographicMap {
     }
     //@Throws(Exception.constructor)
     getCellPositionsAt(layer, currentCellPositionArray, cellPositionArray) {
-        var hasChanged = false;
+        let hasChanged = false;
         ;
-        var size = cellPositionArray.length;
+        let size = cellPositionArray.length;
         ;
-        var size2 = cellPositionArray[0].length;
+        let size2 = cellPositionArray[0].length;
         ;
-        var xPortion = layer.getXP() / (size - 1);
+        let xPortion = layer.getXP() / (size - 1);
         ;
-        var yPortion = layer.getYP() / (size - 1);
+        let yPortion = layer.getYP() / (size - 1);
         ;
-        for (var index = 0; index < size; index++) {
-            for (var index2 = 0; index2 < size2; index2++) {
-                var x = xPortion * index;
+        for (let index = 0; index < size; index++) {
+            for (let index2 = 0; index2 < size2; index2++) {
+                let x = xPortion * index;
                 ;
-                var y = yPortion * index;
+                let y = yPortion * index;
                 ;
                 cellPositionArray[index][index2] = this.getCellPositionAtXY(x, y);
                 if (currentCellPositionArray[index][index2] != cellPositionArray[index][index2]) {
@@ -229,7 +231,7 @@ export class BasicGeographicMap extends SimpleGeographicMap {
     }
     //@Throws(Exception.constructor)
     getCellTypeAtXY(x, y) {
-        var cellPosition = this.getCellPositionAtXY(x, y);
+        let cellPosition = this.getCellPositionAtXY(x, y);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getCellTypeAt(cellPosition);

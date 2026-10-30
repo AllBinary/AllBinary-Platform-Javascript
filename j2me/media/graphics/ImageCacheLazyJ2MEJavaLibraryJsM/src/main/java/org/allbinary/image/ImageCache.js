@@ -60,20 +60,74 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCacheBase } from './ImageCacheBase.js';
-//not GWT import - same folder const ImageCacheBase
+//sameFolderImports - not GWT import - same folder const ImageCacheBase
 //import { NotHTMLEndProcessor } from './NotHTMLEndProcessor.js';
-//not GWT import - same folder const NotHTMLEndProcessor
+//sameFolderImports - not GWT import - same folder const NotHTMLEndProcessor
 //import { FirstProcessor } from './FirstProcessor.js';
-//not GWT import - same folder const FirstProcessor
+//sameFolderImports - not GWT import - same folder const FirstProcessor
 //import { NotHTMLProcessor } from './NotHTMLProcessor.js';
-//not GWT import - same folder const NotHTMLProcessor
+//sameFolderImports - not GWT import - same folder const NotHTMLProcessor
 //import { HTMLEndProcessor } from './HTMLEndProcessor.js';
-//not GWT import - same folder const HTMLEndProcessor
+//sameFolderImports - not GWT import - same folder const HTMLEndProcessor
 import { ImageFactory } from './ImageFactory.js';
-//not GWT import - same folder const ImageFactory
 export class ImageCache extends ImageCacheBase {
     constructor() {
         super();
+        //inner= member=true isStatic=
+        this.NotHTMLProcessor = (() => {
+            const outer$ImageCache = this;
+            return class extends Processor {
+                /*Static stuff is not allowed for TypeScript inner classes*/ /**/
+                process() {
+                    this.concurrentImageLoadingProcessor.runTask();
+                }
+            };
+        })();
+        //inner= member=true isStatic=
+        this.NotHTMLEndProcessor = (() => {
+            const outer$ImageCache = this;
+            return class extends Processor {
+                /*Static stuff is not allowed for TypeScript inner classes*/ /**/
+                process() {
+                    let progressCanvas = ProgressCanvasFactory.getInstance();
+                    ;
+                    progressCanvas.endIfPaintedSinceStart();
+                }
+            };
+        })();
+        //inner= member=true isStatic=
+        this.HTMLEndProcessor = (() => {
+            const outer$ImageCache = this;
+            return class extends Processor {
+                /*Static stuff is not allowed for TypeScript inner classes*/ /**/
+                process() {
+                    let size = this.gdResources.currentLayoutRequiredTotal;
+                    ;
+                    //Otherwise - statement - EmptyStmt
+                    if (size == 0) {
+                        let progressCanvas = ProgressCanvasFactory.getInstance();
+                        ;
+                        progressCanvas.endIfPaintedSinceStart();
+                    }
+                    else if (totalLoaded > globalThis.Math.trunc(size / 12)) {
+                        let progressCanvas = ProgressCanvasFactory.getInstance();
+                        ;
+                        progressCanvas.endIfPaintedSinceStart();
+                        endProcessor = new outer$ImageCache.NotHTMLEndProcessor();
+                    }
+                }
+            };
+        })();
+        //inner= member=true isStatic=
+        this.FirstProcessor = (() => {
+            const outer$ImageCache = this;
+            return class extends Processor {
+                /*Static stuff is not allowed for TypeScript inner classes*/ /**/
+                process() {
+                    outer$ImageCache.firstProcess();
+                }
+            };
+        })();
         this.tsUtil = TsUtil.getInstance();
         this.concurrentImageLoadingProcessor = new ConcurrentImageLoadingProcessor(this);
         this.commonStrings = CommonStrings.getInstance();
@@ -90,57 +144,14 @@ export class ImageCache extends ImageCacheBase {
         this.totalLoaded = 0;
         this.progressEnded = false;
         this.hasAnyLazyAnimationFactories = false;
-        //inner= member=true isStatic=
-        this.NotHTMLProcessor = class extends Processor {
-            /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-            process() {
-                this.concurrentImageLoadingProcessor.runTask();
-            }
-        };
-        //inner= member=true isStatic=
-        this.NotHTMLEndProcessor = class extends Processor {
-            /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-            process() {
-                var progressCanvas = ProgressCanvasFactory.getInstance();
-                ;
-                progressCanvas.endIfPaintedSinceStart();
-            }
-        };
-        //inner= member=true isStatic=
-        this.HTMLEndProcessor = class extends Processor {
-            /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-            process() {
-                var size = this.gdResources.currentLayoutRequiredTotal;
-                ;
-                //Otherwise - statement - EmptyStmt
-                if (size == 0) {
-                    var progressCanvas = ProgressCanvasFactory.getInstance();
-                    ;
-                    progressCanvas.endIfPaintedSinceStart();
-                }
-                else if (totalLoaded > size / 12) {
-                    var progressCanvas = ProgressCanvasFactory.getInstance();
-                    ;
-                    progressCanvas.endIfPaintedSinceStart();
-                    endProcessor = new this.NotHTMLEndProcessor();
-                }
-            }
-        };
-        //inner= member=true isStatic=
-        this.FirstProcessor = class extends Processor {
-            /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-            process() {
-                ImageCache.prototype.firstProcess();
-            }
-        };
         this.processor = new this.FirstProcessor();
         this.endProcessor = Processor.getInstance();
         this.LOAD_IMAGE_FOR_ANIMATION = "Load Image Animation";
     }
     firstProcess() {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
-        var isHTML = J2MEUtil.isHTML();
+        let isHTML = J2MEUtil.isHTML();
         ;
         if (isHTML) {
             this.processor = Processor.getInstance();
@@ -151,21 +162,23 @@ export class ImageCache extends ImageCacheBase {
             this.endProcessor = new this.NotHTMLEndProcessor();
             try {
                 this.runTask();
-                //: 
             }
-            catch (e) {
-                logUtil.putF(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME);
+            catch (caught) {
+                {
+                    const e = caught;
+                    logUtil.putF(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME);
+                }
             }
         }
     }
-    addListener(renderer = {}) {
+    addListener(renderer) {
     }
     //@Throws(Exception.constructor)
     waitForLoadNow() {
         if (this.firstTime) {
-            var abToGBUtil = ABToGBUtil.getInstance();
+            let abToGBUtil = ABToGBUtil.getInstance();
             ;
-            var abCanvas = abToGBUtil.abCanvas;
+            let abCanvas = abToGBUtil.abCanvas;
             ;
             while (this.loadNowList.isEmpty() && (!abCanvas.isInitialized() || (abCanvas.isInitialized() && this.hasAnyLazyAnimationFactories)) && !this.progressEnded) {
                 Thread.sleep(120);
@@ -175,7 +188,7 @@ export class ImageCache extends ImageCacheBase {
     }
     //@Throws(Exception.constructor)
     loadImageForAnimation() {
-        var lazyImageRotationAnimation = null;
+        let lazyImageRotationAnimation = null;
         ;
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lock) 
@@ -217,20 +230,20 @@ export class ImageCache extends ImageCacheBase {
             //mutex.withLock
             this.loadNowList.remove(lazyImageRotationAnimation);
             if (lazyImageRotationAnimation.layoutIndex != 0) {
-                var list = this.getAssociated(lazyImageRotationAnimation);
+                let list = this.getAssociated(lazyImageRotationAnimation);
                 ;
                 //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
                 //synchronized(this.lock) 
                 //mutex.withLock
-                var size = list.size();
+                let size = list.size();
                 ;
                 if (size > 0) {
                     this.loadSoonList.addAllList(list);
                 }
             }
-            var progressCanvas = ProgressCanvasFactory.getInstance();
+            let progressCanvas = ProgressCanvasFactory.getInstance();
             ;
-            var isHTML = J2MEUtil.isHTML();
+            let isHTML = J2MEUtil.isHTML();
             ;
             if (this.loadNowList.isEmpty() && (!isHTML || this.firstTime)) {
                 progressCanvas.endFromInitialLazyLoadingComplete();
@@ -261,7 +274,7 @@ export class ImageCache extends ImageCacheBase {
             while (!this.loadNowList.isEmpty()) {
                 this.loadImageForAnimation();
             }
-            var lazyImageRotationAnimation = null;
+            let lazyImageRotationAnimation = null;
             ;
             //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
             //synchronized(this.lock) 
@@ -276,7 +289,7 @@ export class ImageCache extends ImageCacheBase {
     }
     //@Throws(Exception.constructor)
     loadImageForLazyAnimation(lazyImageRotationAnimation) {
-        var image = lazyImageRotationAnimation.animationInterfaceFactoryInterface.getImage();
+        let image = lazyImageRotationAnimation.animationInterfaceFactoryInterface.getImage();
         ;
         if (this.loadImage(image)) {
             lazyImageRotationAnimation.setRealAnimation();
@@ -288,7 +301,7 @@ export class ImageCache extends ImageCacheBase {
     }
     //@Throws(Exception.constructor)
     loadNextImage() {
-        var image = null;
+        let image = null;
         ;
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lock) 
@@ -318,9 +331,9 @@ export class ImageCache extends ImageCacheBase {
                 }
             }
             else {
-                var key = image.getName();
+                let key = image.getName();
                 ;
-                var image2 = this.creatImage(key);
+                let image2 = this.creatImage(key);
                 ;
                 if (image2.isReady()) {
                     this.init(image, image2);
@@ -341,9 +354,9 @@ export class ImageCache extends ImageCacheBase {
     }
     //@Throws(Exception.constructor)
     creatImage(key) {
-        var inputStream = this.resourceUtil.getResourceAsStream(key);
+        let inputStream = this.resourceUtil.getResourceAsStream(key);
         ;
-        var image = ImageFactory.getInstance().createImageFromInputStream(inputStream);
+        let image = ImageFactory.getInstance().createImageFromInputStream(inputStream);
         ;
         image.setName(key);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -351,9 +364,9 @@ export class ImageCache extends ImageCacheBase {
     }
     //@Throws(Exception.constructor)
     get(caller, width, height) {
-        var foundIndex = this.getIndexWH(width, height);
+        let foundIndex = this.getIndexWH(width, height);
         ;
-        var image = this.getFromAvailable(foundIndex, width, height);
+        let image = this.getFromAvailable(foundIndex, width, height);
         ;
         if (image == NullImage.NULL_IMAGE) {
             this.volume += width * height;
@@ -376,38 +389,40 @@ export class ImageCache extends ImageCacheBase {
         return image;
     }
     //@Throws(Exception.constructor)
-    getWithKey(key = {}) {
-        var image = this.getImage(key);
+    getWithKey(key) {
+        let image = this.getImage(key);
         ;
         if (image == NullImage.NULL_IMAGE) {
-            var inputStream = null;
+            let inputStream = null;
             ;
             try {
                 image = this.createImageFromInputStream(key, inputStream);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put("Exception: Trying Again After GC", this, this.commonStrings.GET, e);
-                this.logUtil.putF(new StringMaker().append("InputStream: ").append(StringUtil.getInstance().toString(inputStream)).toString(), this, this.commonStrings.GET);
-                this.tsUtil.gc();
-                this.tsUtil.gc();
-                this.logUtil.putF(Memory.getInfo(), this, this.commonStrings.GET);
-                Thread.sleep(100);
-                image = this.createImageFromInputStream(key, inputStream);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put("Exception: Trying Again After GC", this, this.commonStrings.GET, e);
+                    this.logUtil.putF(new StringMaker().append("InputStream: ").append(StringUtil.getInstance().toString(inputStream)).toString(), this, this.commonStrings.GET);
+                    this.tsUtil.gc();
+                    this.tsUtil.gc();
+                    this.logUtil.putF(Memory.getInfo(), this, this.commonStrings.GET);
+                    Thread.sleep(100);
+                    image = this.createImageFromInputStream(key, inputStream);
+                }
             }
             this.hashtable.put(key, image);
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return image;
     }
-    getIndex(key = {}) {
-        var gdResources = GDResources.getInstance();
+    getIndex(key) {
+        let gdResources = GDResources.getInstance();
         ;
-        var resourceStringArray = gdResources.resourceStringArray;
+        let resourceStringArray = gdResources.resourceStringArray;
         ;
-        var size = resourceStringArray.length;
+        let size = resourceStringArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (resourceStringArray[index] == key) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return index;
@@ -417,14 +432,14 @@ export class ImageCache extends ImageCacheBase {
         throw new RuntimeException();
     }
     //@Throws(Exception.constructor)
-    createImageFromInputStream(key = {}, inputStream) {
-        var gdLazyResources = GDLazyResources.getInstance();
+    createImageFromInputStream(key, inputStream) {
+        let gdLazyResources = GDLazyResources.getInstance();
         ;
-        var resourceStringArray = gdLazyResources.requiredResourcesBeforeLoadingArray;
+        let resourceStringArray = gdLazyResources.requiredResourcesBeforeLoadingArray;
         ;
-        var size = resourceStringArray.length;
+        let size = resourceStringArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (key == resourceStringArray[index]) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.creatImage(key);
@@ -432,13 +447,13 @@ export class ImageCache extends ImageCacheBase {
             }
         }
         this.runTask();
-        var index = this.getIndex(key);
+        let index = this.getIndex(key);
         ;
-        var width = gdLazyResources.imageResourceWidthArray[index];
+        let width = gdLazyResources.imageResourceWidthArray[index];
         ;
-        var height = gdLazyResources.imageResourceHeightArray[index];
+        let height = gdLazyResources.imageResourceHeightArray[index];
         ;
-        var image = this.createImageLater(key, width, height);
+        let image = this.createImageLater(key, width, height);
         ;
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lock) 
@@ -454,24 +469,24 @@ export class ImageCache extends ImageCacheBase {
         ;
     }
     getAssociated(lazyImageRotationAnimation) {
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lock) 
         //mutex.withLock
-        var lazyImageRotationAnimation2 = null;
+        let lazyImageRotationAnimation2 = null;
         ;
-        var size = this.loadAfterList.size();
+        let size = this.loadAfterList.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             lazyImageRotationAnimation2 = this.loadAfterList.get(index);
             if (lazyImageRotationAnimation2.instanceId == lazyImageRotationAnimation.instanceId) {
                 list.add(lazyImageRotationAnimation2);
             }
         }
-        var size2 = list.size();
+        let size2 = list.size();
         ;
-        for (var index = 0; index < size2; index++) {
+        for (let index = 0; index < size2; index++) {
             this.loadAfterList.remove(list.get(index));
         }
         //if statement needs to be on the same line and ternary does not work the same way.

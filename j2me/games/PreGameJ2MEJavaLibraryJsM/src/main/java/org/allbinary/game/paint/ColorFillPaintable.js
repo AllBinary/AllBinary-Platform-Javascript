@@ -16,7 +16,7 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 //not GWT import const DisplayInfoSingleton
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ColorFillBasePaintable } from './ColorFillBasePaintable.js';
-//not GWT import - same folder const ColorFillBasePaintable
+//sameFolderImports - not GWT import - same folder const ColorFillBasePaintable
 export class ColorFillPaintable extends ColorFillBasePaintable {
     constructor(basicColor) {
         super(basicColor);

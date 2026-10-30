@@ -23,13 +23,13 @@ const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DamageFloaters } from './DamageFloaters.js';
-//not GWT import - same folder const DamageFloaters
+//sameFolderImports - not GWT import - same folder const DamageFloaters
 export class AnimationDamageFloaters extends DamageFloaters {
     constructor(layerInterface, animationInterfaceArray, dx, dy) {
         super();
         this.logUtil = LogUtil.getInstance();
         this.animationInterfaceArray = animationInterfaceArray;
-        for (var index = this.animationInterfaceArray.length - 1; index >= 0; index--) {
+        for (let index = this.animationInterfaceArray.length - 1; index >= 0; index--) {
             this.animationInterfaceArray[index].setFrame(this.animationInterfaceArray[index].getSize() - 1);
         }
         this.layerInterface = layerInterface;
@@ -38,37 +38,39 @@ export class AnimationDamageFloaters extends DamageFloaters {
         this.dy = dy;
     }
     add(damage) {
-        var i = this.circularIndexUtil.getIndex();
+        let i = this.circularIndexUtil.getIndex();
         ;
         this.animationInterfaceArray[i].setFrame(0);
         this.circularIndexUtil.next();
     }
     paint(graphics) {
         try {
-            var viewPosition = this.layerInterface.getViewPosition();
+            let viewPosition = this.layerInterface.getViewPosition();
             ;
-            var x = viewPosition.getX();
+            let x = viewPosition.getX();
             ;
-            var y = viewPosition.getY();
+            let y = viewPosition.getY();
             ;
-            for (var index = 0; index < this.animationInterfaceArray.length; index++) {
-                var animationInterface = this.animationInterfaceArray[index];
+            for (let index = 0; index < this.animationInterfaceArray.length; index++) {
+                let animationInterface = this.animationInterfaceArray[index];
                 ;
                 if (animationInterface.getFrame() < animationInterface.getAnimationSize() - 1) {
-                    var delta = animationInterface.getFrame() * 20;
+                    let delta = animationInterface.getFrame() * 20;
                     ;
                     animationInterface.paintXY(graphics, x + this.dx, y - delta + this.dy);
                     animationInterface.nextFrame();
                 }
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            var canvasStrings = CanvasStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, canvasStrings.PAINT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                let canvasStrings = CanvasStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, canvasStrings.PAINT, e);
+            }
         }
     }
 }

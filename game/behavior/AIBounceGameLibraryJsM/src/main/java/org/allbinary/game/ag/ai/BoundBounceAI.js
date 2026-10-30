@@ -24,7 +24,7 @@ export class BoundBounceAI extends BasicAI {
         this.boundsVisitorInterface = boundsVisitorInterface;
     }
     paint(graphics) {
-        var rectange = this.layerBounds.getRectangleP();
+        let rectange = this.layerBounds.getRectangleP();
         ;
         graphics.drawRect(rectange.getPoint().getX(), rectange.getPoint().getY(), rectange.getWidth(), rectange.getHeight());
     }

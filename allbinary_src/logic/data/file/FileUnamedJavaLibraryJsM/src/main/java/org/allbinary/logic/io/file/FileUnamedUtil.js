@@ -26,7 +26,7 @@ export class FileUnamedUtil extends Object {
         return FileUnamedUtil.instance;
     }
     process(string) {
-        var simplifiedString = string.toLowerCase();
+        let simplifiedString = string.toLowerCase();
         ;
         simplifiedString = simplifiedString.replace(this.commonSeps.SPACE, this.commonSeps.UNDERSCORE);
         simplifiedString = simplifiedString.replace(this.commonSeps.DASH, this.commonSeps.UNDERSCORE);

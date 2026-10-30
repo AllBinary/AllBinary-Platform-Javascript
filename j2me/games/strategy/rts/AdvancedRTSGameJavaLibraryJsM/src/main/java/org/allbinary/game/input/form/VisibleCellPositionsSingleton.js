@@ -50,9 +50,9 @@ export class VisibleCellPositionsSingleton extends Object {
     init(simpleTiledLayer) {
         this.paintSimpleTiledLayer = this.ALL_VISIBLE_TILEDLAYER;
         this.currentIndex = 0;
-        var rows = simpleTiledLayer.getRows();
+        let rows = simpleTiledLayer.getRows();
         ;
-        var columns = simpleTiledLayer.getColumns();
+        let columns = simpleTiledLayer.getColumns();
         ;
         this.stationaryVisibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(null));
         this.visibleCellPositions = new Array(rows).fill(null).map(() => new Array(columns).fill(null));
@@ -71,27 +71,27 @@ export class VisibleCellPositionsSingleton extends Object {
         this.move(scrollMapEvent.getDx(), scrollMapEvent.getDy());
     }
     addStationaryCellPositions(list) {
-        for (var index = list.size() - 1; index >= 0; index--) {
-            var cellPosition = list.get(index);
+        for (let index = list.size() - 1; index >= 0; index--) {
+            let cellPosition = list.get(index);
             ;
             this.stationaryVisibleCellPositions[cellPosition.getRow()][cellPosition.getColumn()]++;
         }
     }
     removeStationaryCellPositions(list) {
-        for (var index = list.size() - 1; index >= 0; index--) {
-            var cellPosition = list.get(index);
+        for (let index = list.size() - 1; index >= 0; index--) {
+            let cellPosition = list.get(index);
             ;
             this.stationaryVisibleCellPositions[cellPosition.getRow()][cellPosition.getColumn()]--;
         }
     }
     update() {
         if (this.currentIndex == 0) {
-            var temp = this.currentlyVisibleCellPositions;
+            let temp = this.currentlyVisibleCellPositions;
             ;
             this.currentlyVisibleCellPositions = this.visibleCellPositions;
             this.visibleCellPositions = temp;
-            for (var index = this.visibleCellPositions.length - 1; index >= 0; index--) {
-                for (var index2 = this.visibleCellPositions[0].length - 1; index2 >= 0; index2--) {
+            for (let index = this.visibleCellPositions.length - 1; index >= 0; index--) {
+                for (let index2 = this.visibleCellPositions[0].length - 1; index2 >= 0; index2--) {
                     this.visibleCellPositions[index][index2] = this.stationaryVisibleCellPositions[index][index2];
                 }
             }
@@ -112,8 +112,8 @@ export class VisibleCellPositionsSingleton extends Object {
         }
     }
     addCellPositions(list) {
-        for (var index = list.size() - 1; index >= 0; index--) {
-            var cellPosition = list.get(index);
+        for (let index = list.size() - 1; index >= 0; index--) {
+            let cellPosition = list.get(index);
             ;
             this.visibleCellPositions[cellPosition.getRow()][cellPosition.getColumn()]++;
         }

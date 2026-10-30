@@ -20,7 +20,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MusicStrings } from './MusicStrings.js';
-//not GWT import - same folder const MusicStrings
+//sameFolderImports - not GWT import - same folder const MusicStrings
 export class BaseMusicService extends Service {
     constructor() {
         super(...arguments);
@@ -80,11 +80,11 @@ export class BaseMusicService extends Service {
     }
     onStartCommandIntent(intent) {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStateStrings.ON_START_COMMAND);
-        var musicStrings = MusicStrings.getInstance();
+        let musicStrings = MusicStrings.getInstance();
         ;
         if (intent !=
             null) {
-            var command = intent.getIntExtra(this.commonStateStrings.ON_START_COMMAND, -1);
+            let command = intent.getIntExtra(this.commonStateStrings.ON_START_COMMAND, -1);
             ;
             this.logUtil.putF(CommonLabels.getInstance().COMMAND_LABEL + command, this, this.commonStateStrings.ON_START_COMMAND);
             if (command == 1) {
@@ -109,7 +109,7 @@ export class BaseMusicService extends Service {
         if (this.songId != -1) {
             System.gc();
             if (this.player != NullAndroidCanvas.NULL_MEDIA_PLAYER && this.player.isPlaying()) {
-                var player = this.player;
+                let player = this.player;
                 ;
                 this.logUtil.putF(this.ALREADY_PLAYING, this, this.commonStateStrings.ON_START_COMMAND);
                 //inner=true member= isStatic=
@@ -119,11 +119,11 @@ export class BaseMusicService extends Service {
                         this.baseMusicService = baseMusicService;
                     }
                     run() {
-                        var logUtil = LogUtil.getInstance();
+                        let logUtil = LogUtil.getInstance();
                         ;
-                        var commonStrings = CommonStrings.getInstance();
+                        let commonStrings = CommonStrings.getInstance();
                         ;
-                        var commonStateStrings = CommonStateStrings.getInstance();
+                        let commonStateStrings = CommonStateStrings.getInstance();
                         ;
                         try {
                             while (this.player.isPlaying()) {
@@ -131,17 +131,19 @@ export class BaseMusicService extends Service {
                                 Thread.sleep(1200);
                             }
                             this.baseMusicService.onStartCommandIntent(intent);
-                            //: 
                         }
-                        catch (e) {
-                            logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.ON_START_COMMAND, e);
+                        catch (caught) {
+                            {
+                                const e = caught;
+                                logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.ON_START_COMMAND, e);
+                            }
                         }
                     }
                 }
                 //Otherwise - statement - EmptyStmt
-                var runnable = new MusicRunnable(this);
+                let runnable = new MusicRunnable(this);
                 ;
-                var thread = new Thread(runnable);
+                let thread = new Thread(runnable);
                 ;
                 thread.start();
                 //if statement needs to be on the same line and ternary does not work the same way.

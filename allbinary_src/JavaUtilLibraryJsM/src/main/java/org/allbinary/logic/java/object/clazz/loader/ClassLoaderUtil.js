@@ -17,8 +17,8 @@ import { Exception } from '../../../../../../../java/lang/Exception.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ClassLoaderUtil extends Object {
     //@Throws(Exception.constructor)
-    static getName(anyType = {}) {
-        var classLoader = anyType.constructor.namegetClassLoader();
+    static getName(anyType) {
+        let classLoader = anyType.constructor.namegetClassLoader();
         ;
         if (classLoader !=
             null) {

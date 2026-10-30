@@ -29,7 +29,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonInput } from './TouchButtonInput.js';
-//not GWT import - same folder const TouchButtonInput
+//sameFolderImports - not GWT import - same folder const TouchButtonInput
 export class BasicTouchInputFactory extends Object {
     static getInstance() {
         if (BasicTouchInputFactory.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -43,7 +43,7 @@ export class BasicTouchInputFactory extends Object {
         this.logUtil = LogUtil.getInstance();
         this.initialized = false;
         this.list = new BasicArrayListD();
-        var MAX = InputFactory.getInstance().MAX;
+        let MAX = InputFactory.getInstance().MAX;
         ;
         this.SPECIAL_BUTTON_SEVEN_TESTING_ONLY = new TouchButtonInput(MAX - 41, "Button 7 - Testing Only May Cross Over Key Values");
         this.SPECIAL_BUTTON_EIGHT_TESTING_ONLY = new TouchButtonInput(MAX - 42, "Button 8 - Testing Only May Cross Over Key Values");
@@ -84,9 +84,9 @@ export class BasicTouchInputFactory extends Object {
     }
     updateAllFromList(list, inputToGameKeyMapping) {
         this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().START_LABEL).appendint(list.size()).toString(), this, "updateAll");
-        var touchButtonInput;
+        let touchButtonInput;
         ;
-        for (var index = list.size() - 1; index >= 0; index--) {
+        for (let index = list.size() - 1; index >= 0; index--) {
             touchButtonInput = list.objectArray[index];
             touchButtonInput.update(inputToGameKeyMapping);
         }

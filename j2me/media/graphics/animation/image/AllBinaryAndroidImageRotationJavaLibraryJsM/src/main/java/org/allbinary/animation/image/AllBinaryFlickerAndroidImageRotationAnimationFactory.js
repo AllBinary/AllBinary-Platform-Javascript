@@ -26,7 +26,7 @@ import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryFlickerAndroidImageRotationAnimation } from './AllBinaryFlickerAndroidImageRotationAnimation.js';
-//not GWT import - same folder const AllBinaryFlickerAndroidImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryFlickerAndroidImageRotationAnimation
 export class AllBinaryFlickerAndroidImageRotationAnimationFactory extends Object {
     constructor(image, width, height, angleIncrement, animationBehaviorFactory) {
         super();
@@ -37,7 +37,7 @@ export class AllBinaryFlickerAndroidImageRotationAnimationFactory extends Object
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var image = ImageCopyUtil.getInstance().createImage(this.getImage());
+        let image = ImageCopyUtil.getInstance().createImage(this.getImage());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new AllBinaryFlickerAndroidImageRotationAnimation(this.getImage(), image, AngleInfo.getInstance(this.angleIncrement), AngleFactory.getInstance().TOTAL_ANGLE, this.animationBehaviorFactory.getOrCreateInstance());

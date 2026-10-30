@@ -23,25 +23,25 @@ export class StopAtEdgeAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var velocityInterfaceCompositeInterface = ownerLayerInterface;
+        let velocityInterfaceCompositeInterface = ownerLayerInterface;
         ;
-        var velocityProperties = velocityInterfaceCompositeInterface.getVelocityProperties();
+        let velocityProperties = velocityInterfaceCompositeInterface.getVelocityProperties();
         ;
-        var x = ownerLayerInterface.getXP();
+        let x = ownerLayerInterface.getXP();
         ;
-        var y = ownerLayerInterface.getYP();
+        let y = ownerLayerInterface.getYP();
         ;
-        var x2 = ownerLayerInterface.getX2();
+        let x2 = ownerLayerInterface.getX2();
         ;
-        var y2 = ownerLayerInterface.getY2();
+        let y2 = ownerLayerInterface.getY2();
         ;
-        var width = ownerLayerInterface.getWidth();
+        let width = ownerLayerInterface.getWidth();
         ;
-        var height = ownerLayerInterface.getHeight();
+        let height = ownerLayerInterface.getHeight();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         if (x2 + velocityProperties.getVelocityXBasicDecimalP().getScaled() > displayInfo.getLastWidth()) {
             ownerLayerInterface.setPosition(displayInfo.getLastWidth() - width, y, ownerLayerInterface.getZP());

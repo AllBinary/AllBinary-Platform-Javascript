@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GPoint } from './GPoint.js';
-//not GWT import - same folder const GPoint
+//sameFolderImports - not GWT import - same folder const GPoint
 export class CustomGPoint extends GPoint {
     static getInstance(point) {
         //if statement needs to be on the same line and ternary does not work the same way.

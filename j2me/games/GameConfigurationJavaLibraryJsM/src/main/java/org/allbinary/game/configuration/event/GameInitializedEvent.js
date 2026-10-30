@@ -18,7 +18,7 @@ import { AllBinaryEventObject } from '../../../../../org/allbinary/logic/util/ev
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameInitializedEvent extends AllBinaryEventObject {
-    constructor(anyType = {}) {
+    constructor(anyType) {
         super(anyType);
         this.resourceLoadingLevel = ResourceLoadingLevelFactory.getInstance().LEVEL;
         this.level = 0;

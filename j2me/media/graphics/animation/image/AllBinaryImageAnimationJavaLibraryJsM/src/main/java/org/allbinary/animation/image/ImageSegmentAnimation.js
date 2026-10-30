@@ -16,7 +16,7 @@
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageAnimation } from './ImageAnimation.js';
-//not GWT import - same folder const ImageAnimation
+//sameFolderImports - not GWT import - same folder const ImageAnimation
 export class ImageSegmentAnimation extends ImageAnimation {
     constructor(image, sequenceArray, animationBehavior) {
         super(image, animationBehavior);

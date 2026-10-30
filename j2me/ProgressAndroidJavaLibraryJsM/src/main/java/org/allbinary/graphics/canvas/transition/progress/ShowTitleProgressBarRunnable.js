@@ -20,7 +20,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const Activity
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressRunnable } from './ProgressRunnable.js';
-//not GWT import - same folder const ProgressCanvas
+//sameFolderImports - not GWT import - same folder const ProgressCanvas
 export class ShowTitleProgressBarRunnable extends ProgressRunnable {
     constructor(midletActivity, progressCanvas) {
         super(midletActivity, progressCanvas);
@@ -31,12 +31,14 @@ export class ShowTitleProgressBarRunnable extends ProgressRunnable {
     run() {
         try {
             this.midletActivity.onShowProgress(false, this.FADE_IN_HALF);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+            }
         }
     }
 }

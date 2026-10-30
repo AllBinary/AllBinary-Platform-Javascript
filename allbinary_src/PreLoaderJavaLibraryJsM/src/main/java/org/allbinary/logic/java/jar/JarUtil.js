@@ -14,8 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { System } from '../../../../../java/lang/System.js';
+import { IOException } from '../../../../../java/io/IOException.js';
 //not GWT import const IOException
-import { URL } from '../../../../../java/net/URL.js';
+//not plain js import { URL } 
+const URL = globalThis.java.net.URL;
 //not GWT import const JarEntry
 import { JarInputStream } from '../../../../../java/util/jar/JarInputStream.js';
 //not GWT import const JarInputStream
@@ -30,33 +32,33 @@ export class JarUtil extends Object {
         this.jarURL = jarURL;
     }
     show() {
-        var cache = new Array(1024);
+        let cache = new Array(1024);
         ;
         try {
-            var conn = this.jarURL.openConnection();
+            let conn = this.jarURL.openConnection();
             ;
-            var jis = new JarInputStream(conn.getInputStream());
+            let jis = new JarInputStream(conn.getInputStream());
             ;
             while (true) {
-                var entry = jis.getNextJarEntry();
+                let entry = jis.getNextJarEntry();
                 ;
                 if (entry !=
                     null) {
                     if (!entry.isDirectory()) {
-                        var offset = 0;
+                        let offset = 0;
                         ;
-                        var i = 0;
+                        let i = 0;
                         ;
                         while ((i = jis.read(cache, offset, cache.length - offset)) != -1) {
                             offset += i;
                             if (offset >= cache.length) {
-                                var newcache = new Array(cache.length + 1024);
+                                let newcache = new Array(cache.length + 1024);
                                 ;
                                 System.arraycopy(cache, 0, newcache, 0, cache.length);
                                 cache = newcache;
                             }
                         }
-                        var tmp = new Array(offset);
+                        let tmp = new Array(offset);
                         ;
                         System.arraycopy(cache, 0, tmp, 0, offset);
                         console.log(entry.getName());
@@ -66,11 +68,16 @@ export class JarUtil extends Object {
                     break;
                 }
             }
-            //: 
         }
-        catch (ex) {
-            System.err.println(ex);
-            ex.printStackTrace();
+        catch (caught) {
+            if (caught instanceof IOException) {
+                const ex = caught;
+                System.err.println(ex);
+                ex.printStackTrace();
+            }
+            else {
+                throw caught;
+            }
         }
     }
 }

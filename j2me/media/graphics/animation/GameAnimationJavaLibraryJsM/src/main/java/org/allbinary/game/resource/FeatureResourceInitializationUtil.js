@@ -19,9 +19,9 @@ import { FeaturedAnimationInterfaceFactoryInterfaceFactory } from '../../../../o
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const FeaturedResourceFactory
+//sameFolderImports - not GWT import - same folder const FeaturedResourceFactory
 import { FeaturedResourceRelativeRelationshipFactory } from './FeaturedResourceRelativeRelationshipFactory.js';
-//not GWT import - same folder const FeaturedResourceRelativeRelationshipFactory
+//sameFolderImports - not GWT import - same folder const FeaturedResourceRelativeRelationshipFactory
 export class FeatureResourceInitializationUtil extends Object {
     constructor() {
         super(...arguments);
@@ -33,10 +33,10 @@ export class FeatureResourceInitializationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     init(level) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(commonStrings.START, this, commonStrings.INIT);
-        var featuredResourceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance();
+        let featuredResourceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance();
         ;
         featuredResourceFactory.init(level);
         FeaturedResourceRelativeRelationshipFactory.getInstance().init(level);

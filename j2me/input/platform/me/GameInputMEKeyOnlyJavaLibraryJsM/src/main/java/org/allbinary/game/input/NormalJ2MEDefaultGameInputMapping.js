@@ -18,14 +18,14 @@ import { PersistentInputMapping } from '../../../../org/allbinary/game/input/map
 //not GWT import const PersistentInputMapping
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import - same folder const GameKeyFactory
+//sameFolderImports - not GWT import - same folder const GameKeyFactory
 export class NormalJ2MEDefaultGameInputMapping extends PersistentInputMapping {
     constructor() {
         super(GamePersistanceStrings.getInstance().DEFAULT_INPUT_MAPPING_RECORD_ID);
         //For kotlin this is before the body of the constructor.
-        var inputToGameKeyMapping = this.getInputMapping();
+        let inputToGameKeyMapping = this.getInputMapping();
         ;
-        var gameKeyFactory = GameKeyFactory.getInstance();
+        let gameKeyFactory = GameKeyFactory.getInstance();
         ;
         inputToGameKeyMapping.add(gameKeyFactory.UP, gameKeyFactory.KEY_NUM2);
         inputToGameKeyMapping.add(gameKeyFactory.LEFT, gameKeyFactory.KEY_NUM4);

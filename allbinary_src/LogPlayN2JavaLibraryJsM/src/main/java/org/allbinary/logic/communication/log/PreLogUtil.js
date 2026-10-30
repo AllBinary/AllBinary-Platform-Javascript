@@ -28,45 +28,46 @@ const PlayN = globalThis.playn.core.PlayN;
 const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
 //ActualPlatform
 /*actual*/ export class PreLogUtil extends Object {
-    /*actual*/ static put(specialMessage, anyType = {}, functionName) {
-        var className = PreLogUtil.getClassName(anyType);
+    /*actual*/ static put(specialMessage, anyType, functionName) {
+        let className = PreLogUtil.getClassName(anyType);
         ;
         if (className ==
             null) {
             className = CommonStrings.getInstance().EMPTY;
         }
         className = new StringMaker().append(className).append(CommonSeps.getInstance().FORWARD_SLASH).append(StringUtil.getInstance().toString(anyType)).toString();
-        var message = LogFormatUtil.getInstance().getS(className, functionName, specialMessage);
+        let message = LogFormatUtil.getInstance().getS(className, functionName, specialMessage);
         ;
         PlayN.getInstance().log().debug(PreLogUtil.LOG_SUCCESS + message);
     }
-    /*actual*/ static putOE(specialMessage, anyType = {}, functionName, exception = {}) {
-        var className = PreLogUtil.getClassName(anyType);
+    /*actual*/ static putOE(specialMessage, anyType, functionName, exception) {
+        let className = PreLogUtil.getClassName(anyType);
         ;
         if (className ==
             null) {
             className = CommonStrings.getInstance().EMPTY;
         }
         className = new StringMaker().append(className).append(CommonSeps.getInstance().FORWARD_SLASH).append(StringUtil.getInstance().toString(anyType)).toString();
-        var message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
+        let message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
         ;
         PlayN.getInstance().log().error(PreLogUtil.LOG_SUCCESS + message, exception);
     }
     /*actual*/ static putS(specialMessage, className, functionName) {
-        var message = LogFormatUtil.getInstance().getS(className, functionName, specialMessage);
+        let message = LogFormatUtil.getInstance().getS(className, functionName, specialMessage);
         ;
         PlayN.getInstance().log().debug(PreLogUtil.LOG_SUCCESS + message);
     }
-    /*actual*/ static putSE(specialMessage, className, functionName, exception = {}) {
-        var message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
+    /*actual*/ static putSE(specialMessage, className, functionName, exception) {
+        let message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
         ;
         PlayN.getInstance().log().error(PreLogUtil.LOG_SUCCESS + message, exception);
     }
-    /*actual*/ static getClassName(anyType = {}) {
-    }
-    //native - END
-    constructor() {
-        super();
-    }
 }
 PreLogUtil.LOG_SUCCESS = "org.allbinary: ";
+//native - START
+{
+}
+constructor();
+{
+    super();
+}

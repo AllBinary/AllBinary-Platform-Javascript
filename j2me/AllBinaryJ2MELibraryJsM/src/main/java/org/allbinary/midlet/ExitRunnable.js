@@ -19,7 +19,7 @@ import { NullCanvas } from '../../../javax/microedition/lcdui/NullCanvas.js';
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinaryMidlet
+//sameFolderImports - not GWT import - same folder const AllBinaryMidlet
 export class ExitRunnable extends Object {
     constructor(midlet, processor, isProgress) {
         super();
@@ -37,16 +37,20 @@ export class ExitRunnable extends Object {
             this.midlet.notifyDestroyed();
             this.logUtil.putF(this.commonStrings.END_RUNNABLE, this, this.commonStrings.RUN);
             this.processor.process();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
-            try {
-                this.processor.process();
-                //: 
-            }
-            catch (e2) {
+        catch (caught) {
+            {
+                const e = caught;
                 this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+                try {
+                    this.processor.process();
+                }
+                catch (caught) {
+                    {
+                        const e2 = caught;
+                        this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+                    }
+                }
             }
         }
     }

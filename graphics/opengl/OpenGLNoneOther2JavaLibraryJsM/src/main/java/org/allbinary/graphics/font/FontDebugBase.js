@@ -14,7 +14,7 @@ export class FontDebugBase extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return FontDebugBase.instanceBase;
     }
-    debugMetrics(currentFont, convertedTextSize, displayMetrics = {}, stringBuffer) {
+    debugMetrics(currentFont, convertedTextSize, displayMetrics, stringBuffer) {
     }
     debugDpi(densityDpi, stringBuffer) {
     }

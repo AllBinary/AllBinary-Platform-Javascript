@@ -17,7 +17,7 @@ import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPathFindingLayer } from './NullPathFindingLayer.js';
-//not GWT import - same folder const PathFindingLayerInterface
+//sameFolderImports - not GWT import - same folder const PathFindingLayerInterface
 export class RTSLayerEvent extends AllBinaryEventObject {
     constructor(rtsLayer) {
         super(rtsLayer);
@@ -25,7 +25,7 @@ export class RTSLayerEvent extends AllBinaryEventObject {
         //For kotlin this is before the body of the constructor.
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("RTSLayerEvent: \n");
         stringBuffer.append("RTSLayer: ");

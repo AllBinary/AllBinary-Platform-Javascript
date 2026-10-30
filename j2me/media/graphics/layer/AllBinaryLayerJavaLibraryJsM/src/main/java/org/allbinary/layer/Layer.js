@@ -85,9 +85,9 @@ export class Layer extends Object {
         return this.visible;
     }
     paint(graphics) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var canvasStrings = CanvasStrings.getInstance();
+        let canvasStrings = CanvasStrings.getInstance();
         ;
         this.logUtil.putF(commonStrings.NOT_IMPLEMENTED, this, canvasStrings.PAINT);
     }

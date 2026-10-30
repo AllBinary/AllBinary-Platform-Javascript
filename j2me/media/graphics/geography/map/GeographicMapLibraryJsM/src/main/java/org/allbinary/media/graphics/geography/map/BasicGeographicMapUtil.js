@@ -17,7 +17,7 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 //not GWT import const Layer
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const BasicGeographicMap
+//sameFolderImports - not GWT import - same folder const BasicGeographicMap
 export class BasicGeographicMapUtil extends Object {
     constructor() {
         super(...arguments);
@@ -29,7 +29,7 @@ export class BasicGeographicMapUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getBorderingRow(direction, oldGeographicMapCellPosition) {
-        var LOCATION_CHANGE = 1;
+        let LOCATION_CHANGE = 1;
         ;
         switch (direction) {
             case 0: {
@@ -57,7 +57,7 @@ export class BasicGeographicMapUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getBorderingColumn(direction, oldGeographicMapCellPosition) {
-        var LOCATION_CHANGE = 1;
+        let LOCATION_CHANGE = 1;
         ;
         switch (direction) {
             case 0: {
@@ -85,13 +85,13 @@ export class BasicGeographicMapUtil extends Object {
     }
     //@Throws(Exception.constructor)
     isSameCellPosition(fromGeographicMapCellPosition, toGeographicMapCellPosition) {
-        var fromColumn = fromGeographicMapCellPosition.getColumn();
+        let fromColumn = fromGeographicMapCellPosition.getColumn();
         ;
-        var fromRow = fromGeographicMapCellPosition.getRow();
+        let fromRow = fromGeographicMapCellPosition.getRow();
         ;
-        var goColumn = toGeographicMapCellPosition.getColumn();
+        let goColumn = toGeographicMapCellPosition.getColumn();
         ;
-        var goRow = toGeographicMapCellPosition.getRow();
+        let goRow = toGeographicMapCellPosition.getRow();
         ;
         if (fromColumn == goColumn && fromRow == goRow) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,20 +103,20 @@ export class BasicGeographicMapUtil extends Object {
         }
     }
     createAllBinaryTiledLayerArray(geographicMapInterfaceArray) {
-        var tiledLayerArray = new Array(geographicMapInterfaceArray.length);
+        let tiledLayerArray = new Array(geographicMapInterfaceArray.length);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getAllBinaryTiledLayerArray(geographicMapInterfaceArray, tiledLayerArray, 0);
         ;
     }
     getAllBinaryTiledLayerArray(geographicMapInterfaceArray, tiledLayerArray, startIndex) {
-        var geographicMapInterface;
+        let geographicMapInterface;
         ;
-        var size = geographicMapInterfaceArray.length;
+        let size = geographicMapInterfaceArray.length;
         ;
-        var count = 0;
+        let count = 0;
         ;
-        for (var index = size + startIndex; --index >= startIndex;) {
+        for (let index = size + startIndex; --index >= startIndex;) {
             geographicMapInterface = geographicMapInterfaceArray[index];
             tiledLayerArray[count++] = geographicMapInterface.getAllBinaryTiledLayer();
         }
@@ -124,21 +124,21 @@ export class BasicGeographicMapUtil extends Object {
         return tiledLayerArray;
     }
     move(geographicMapInterfaceArray, dx, dy) {
-        var geographicMapInterface;
+        let geographicMapInterface;
         ;
-        var size = geographicMapInterfaceArray.length;
+        let size = geographicMapInterfaceArray.length;
         ;
-        for (var index = size; --index >= 0;) {
+        for (let index = size; --index >= 0;) {
             geographicMapInterface = geographicMapInterfaceArray[index];
             geographicMapInterface.getAllBinaryTiledLayer().moveDXY(dx, dy);
         }
     }
     setPosition(geographicMapInterfaceArray, x, y) {
-        var geographicMapInterface;
+        let geographicMapInterface;
         ;
-        var size = geographicMapInterfaceArray.length;
+        let size = geographicMapInterfaceArray.length;
         ;
-        for (var index = size; --index >= 0;) {
+        for (let index = size; --index >= 0;) {
             geographicMapInterface = geographicMapInterfaceArray[index];
             geographicMapInterface.getAllBinaryTiledLayer().setPosition(x, y, geographicMapInterface.getAllBinaryTiledLayer().getZP());
         }

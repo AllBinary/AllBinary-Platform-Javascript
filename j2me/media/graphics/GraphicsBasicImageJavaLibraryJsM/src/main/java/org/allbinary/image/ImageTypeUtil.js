@@ -35,8 +35,8 @@ export class ImageTypeUtil extends Object {
     }
     isSupported(mediaFileType) {
         mediaFileType = mediaFileType.toLowerCase();
-        for (var index = this.list.size() - 1; index >= 0; index--) {
-            var name = this.list.get(index);
+        for (let index = this.list.size() - 1; index >= 0; index--) {
+            let name = this.list.get(index);
             ;
             if (mediaFileType.compareTo(name) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.

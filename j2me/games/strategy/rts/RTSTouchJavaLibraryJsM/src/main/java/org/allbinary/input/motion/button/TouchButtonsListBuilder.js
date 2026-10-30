@@ -18,18 +18,18 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput
+//sameFolderImports - not GWT import - same folder const BaseTouchInput
 export class TouchButtonsListBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);
         this.baseTouchInputList = new BasicArrayListD();
     }
     addList(list) {
-        var size = this.baseTouchInputList.size();
+        let size = this.baseTouchInputList.size();
         ;
-        var baseTouchInput;
+        let baseTouchInput;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             baseTouchInput = this.baseTouchInputList.get(index);
             list.addAllList(baseTouchInput.getList());
         }

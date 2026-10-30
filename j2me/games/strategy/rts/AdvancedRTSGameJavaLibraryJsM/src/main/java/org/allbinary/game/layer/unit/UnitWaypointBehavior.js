@@ -47,11 +47,14 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import - same folder const UnitLayer
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { UnitWaypointStrings } from './UnitWaypointStrings.js';
+//sameFolderImports - not GWT import - same folder const UnitLayer
 export class UnitWaypointBehavior extends WaypointBehaviorBase {
     constructor(associatedAdvancedRTSGameLayer, fakeWaypoint) {
         super();
         this.commonSeps = CommonSeps.getInstance();
+        this.unitWaypointStrings = UnitWaypointStrings.getInstance();
         this.longWeaponRange = 0;
         this.sensorAction = SensorActionFactory.getInstance().ATTACK;
         this.lastPathGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
@@ -72,14 +75,14 @@ export class UnitWaypointBehavior extends WaypointBehaviorBase {
         this.FAKE_WAYPOINT_LAYER = fakeWaypoint;
     }
     initRange(weaponRange) {
-        this.longWeaponRange = weaponRange / 2;
+        this.longWeaponRange = globalThis.Math.trunc(weaponRange / 2);
     }
     onEvent(eventObject) {
         ForcedLogUtil.log(EventStrings.getInstance().PERFORMANCE_MESSAGE, this);
     }
     //@Throws(Exception.constructor)
     onWaypointEvent(event) {
-        var advancedRTSGameLayer = event.getRtsLayer();
+        let advancedRTSGameLayer = event.getRtsLayer();
         ;
         this.associatedAdvancedRTSGameLayer.waypointLogHelperP.onWaypointEvent(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer);
         if (this.associatedAdvancedRTSGameLayer.isSelected()) {
@@ -135,11 +138,11 @@ export class UnitWaypointBehavior extends WaypointBehaviorBase {
     }
     //@Throws(Exception.constructor)
     setRandomGeographicMapCellHistory(pathsList) {
-        var size = pathsList.size();
+        let size = pathsList.size();
         ;
         this.associatedAdvancedRTSGameLayer.waypointLogHelperP.setRandomGeographicMapCellHistoryList(this.associatedAdvancedRTSGameLayer, pathsList);
         if (size > 0) {
-            var geographicMapCellPositionBasicArrayList = BasicArrayListUtil.getInstance().getRandom(pathsList);
+            let geographicMapCellPositionBasicArrayList = BasicArrayListUtil.getInstance().getRandom(pathsList);
             ;
             this.setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList);
         }
@@ -148,7 +151,7 @@ export class UnitWaypointBehavior extends WaypointBehaviorBase {
     setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList) {
         this.lastPathGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
         if (this.associatedAdvancedRTSGameLayer.showMoreCaptionStates) {
-            this.associatedAdvancedRTSGameLayer.getCaptionAnimationHelper().update(UnitWaypointBehavior.PATHING, BasicColorFactory.getInstance().GREEN);
+            this.associatedAdvancedRTSGameLayer.getCaptionAnimationHelper().update(this.unitWaypointStrings.PATHING, BasicColorFactory.getInstance().GREEN);
         }
         this.currentGeographicMapCellHistoryP.init();
         this.associatedAdvancedRTSGameLayer.init(this.currentGeographicMapCellHistoryP, geographicMapCellPositionBasicArrayList);
@@ -172,15 +175,15 @@ export class UnitWaypointBehavior extends WaypointBehaviorBase {
     }
     //@Throws(Exception.constructor)
     moveAwayFromBuilding(buildingLayer) {
-        var geographicMapCellPosition = this.associatedAdvancedRTSGameLayer.getCurrentGeographicMapCellPosition();
+        let geographicMapCellPosition = this.associatedAdvancedRTSGameLayer.getCurrentGeographicMapCellPosition();
         ;
-        var list = buildingLayer.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
+        let list = buildingLayer.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
         ;
         if (list.contains(geographicMapCellPosition)) {
             if (this.insertWaypoint(0, this.FAKE_WAYPOINT_LAYER)) {
                 this.associatedAdvancedRTSGameLayer.waypointLogHelperP.moveAwayFromBuilding(this.associatedAdvancedRTSGameLayer);
                 this.setCurrentTargetLayerInterface(this.FAKE_WAYPOINT_LAYER);
-                var pathsList = buildingLayer.getMoveOutOfBuildAreaPath(geographicMapCellPosition);
+                let pathsList = buildingLayer.getMoveOutOfBuildAreaPath(geographicMapCellPosition);
                 ;
                 this.associatedAdvancedRTSGameLayer.setClosestGeographicMapCellHistory(pathsList);
             }
@@ -194,7 +197,7 @@ export class UnitWaypointBehavior extends WaypointBehaviorBase {
             return true;
         }
         if (this.repeatedToLong.isTimeTNT()) {
-            var message = "Repeating too long: " + this.getMovementLogicAsString();
+            let message = "Repeating too long: " + this.getMovementLogicAsString();
             ;
             ForcedLogUtil.log(message, this.associatedAdvancedRTSGameLayer);
         }
@@ -202,7 +205,7 @@ export class UnitWaypointBehavior extends WaypointBehaviorBase {
         return false;
     }
     getMovementLogicAsString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("isTrackingWaypoint: ");
         stringBuffer.appendboolean(this.isTrackingWaypoint());
@@ -296,4 +299,3 @@ export class UnitWaypointBehavior extends WaypointBehaviorBase {
         this.trackingWaypoint = trackingWaypoint;
     }
 }
-UnitWaypointBehavior.PATHING = "Pathing";

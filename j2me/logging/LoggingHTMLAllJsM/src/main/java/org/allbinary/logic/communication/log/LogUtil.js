@@ -36,40 +36,40 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
         this.logFormatUtil = LogFormatUtil.getInstance();
     }
     /*actual*/ putL(log) {
-        var specialMessage = log.getSpecialMessage();
+        let specialMessage = log.getSpecialMessage();
         ;
-        var anyType = log.getObject();
+        let anyType = log.getObject();
         ;
-        var functionName = log.getFunctionName();
+        let functionName = log.getFunctionName();
         ;
-        var exception = log.getThrowable();
+        let exception = log.getThrowable();
         ;
         this.put(specialMessage, anyType, functionName, exception);
     }
-    /*actual*/ putF(specialMessage, anyType = {}, functionName) {
-        var className = PreLogUtil.getClassName(anyType);
+    /*actual*/ putF(specialMessage, anyType, functionName) {
+        let className = PreLogUtil.getClassName(anyType);
         ;
         if (className ==
             null) {
             className = CommonStrings.getInstance().EMPTY;
         }
-        var message = this.logFormatUtil.getS(className, functionName, specialMessage);
+        let message = this.logFormatUtil.getS(className, functionName, specialMessage);
         ;
         PlayN.log().debug(this.LOG_SUCCESS + message);
     }
     /*actual*/ putFS(specialMessage, className, functionName) {
-        var message = this.logFormatUtil.getS(className, functionName, specialMessage);
+        let message = this.logFormatUtil.getS(className, functionName, specialMessage);
         ;
         PlayN.log().debug(this.LOG_SUCCESS + message);
     }
-    /*actual*/ put(specialMessage, anyType = {}, functionName, exception = {}) {
-        var className = PreLogUtil.getClassName(anyType);
+    /*actual*/ put(specialMessage, anyType, functionName, exception) {
+        let className = PreLogUtil.getClassName(anyType);
         ;
         if (className ==
             null) {
             className = CommonStrings.getInstance().EMPTY;
         }
-        var message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
+        let message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
         ;
         if (exception !=
             null) {

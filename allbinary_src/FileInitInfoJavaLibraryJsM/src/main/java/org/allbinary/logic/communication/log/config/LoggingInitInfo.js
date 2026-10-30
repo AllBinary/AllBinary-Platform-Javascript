@@ -37,22 +37,22 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigsData } from './LogConfigsData.js';
-//not GWT import - same folder const LogConfigsData
+//sameFolderImports - not GWT import - same folder const LogConfigsData
 import { LogConfigData } from './LogConfigData.js';
-//not GWT import - same folder const LogConfigData
+//sameFolderImports - not GWT import - same folder const LogConfigData
 import { LogConfig } from './LogConfig.js';
-//not GWT import - same folder const LogConfig
+//sameFolderImports - not GWT import - same folder const LogConfig
 export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getDoc() {
-        var path = URLGLOBALS.getWebappPath() + LoggingInitInfo.PACKAGE;
+        let path = URLGLOBALS.getWebappPath() + LoggingInitInfo.PACKAGE;
         ;
-        var FILEABPATH = new AbPath(path, INITFILENAME);
+        let FILEABPATH = new AbPath(path, INITFILENAME);
         ;
-        var file = AbFile.createAbFileFromAbPath(FILEABPATH);
+        let file = AbFile.createAbFileFromAbPath(FILEABPATH);
         ;
-        var document = DomDocumentHelper.create(new AbFileLocalInputStream(file));
+        let document = DomDocumentHelper.create(new AbFileLocalInputStream(file));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return document;
@@ -62,38 +62,42 @@ export class LoggingInitInfo extends Object {
     static write() {
         try {
             LoggingInitInfo.hasRead = false;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static read() {
         try {
-            var document = LoggingInitInfo.getDoc();
+            let document = LoggingInitInfo.getDoc();
             ;
-            var logConfigsNodeList = document.getElementsByTagName(LogConfigsData.getInstance().NAME);
+            let logConfigsNodeList = document.getElementsByTagName(LogConfigsData.getInstance().NAME);
             ;
-            var logConfigsNode = logConfigsNodeList.item(0);
+            let logConfigsNode = logConfigsNodeList.item(0);
             ;
-            var logConfigNodeVector = DomSearchHelper.getAllNodes(LogConfigData.getInstance().NAME, logConfigsNode.getChildNodes());
+            let logConfigNodeVector = DomSearchHelper.getAllNodes(LogConfigData.getInstance().NAME, logConfigsNode.getChildNodes());
             ;
             LoggingInitInfo.logConfigInfoList = new BasicArrayListD();
-            var size = logConfigNodeVector.size();
+            let size = logConfigNodeVector.size();
             ;
-            for (var i = 0; i < size; i++) {
-                var node = logConfigNodeVector.get(i);
+            for (let i = 0; i < size; i++) {
+                let node = logConfigNodeVector.get(i);
                 ;
-                var logConfigInfo = new LogConfig(node);
+                let logConfigInfo = new LogConfig(node);
                 ;
                 LoggingInitInfo.logConfigInfoList.add(logConfigInfo);
             }
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
@@ -125,14 +129,14 @@ export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     static getTypeNameList() {
         LoggingInitInfo.updateIfNeeded();
-        var allLogTypeVector = new BasicArrayListD();
+        let allLogTypeVector = new BasicArrayListD();
         ;
-        var size = LoggingInitInfo.logConfigInfoList.size();
+        let size = LoggingInitInfo.logConfigInfoList.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var logConfigInfo = LoggingInitInfo.logConfigInfoList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let logConfigInfo = LoggingInitInfo.logConfigInfoList.objectArray[index];
             ;
-            var logTypeVector = logConfigInfo.getTypeVector();
+            let logTypeVector = logConfigInfo.getTypeVector();
             ;
             if (logConfigInfo.isEnabled()) {
                 allLogTypeVector.addAllList(logTypeVector);
@@ -144,14 +148,14 @@ export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     static getTypeList() {
         LoggingInitInfo.updateIfNeeded();
-        var allLogTypeVector = new BasicArrayListD();
+        let allLogTypeVector = new BasicArrayListD();
         ;
-        var size = LoggingInitInfo.logConfigInfoList.size();
+        let size = LoggingInitInfo.logConfigInfoList.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var logConfigInfo = LoggingInitInfo.logConfigInfoList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let logConfigInfo = LoggingInitInfo.logConfigInfoList.objectArray[index];
             ;
-            var logTypeVector = logConfigInfo.getTypeVector();
+            let logTypeVector = logConfigInfo.getTypeVector();
             ;
             if (logConfigInfo.isEnabled()) {
                 allLogTypeVector.addAllList(logTypeVector);
@@ -167,11 +171,13 @@ export class LoggingInitInfo extends Object {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -182,16 +188,18 @@ export class LoggingInitInfo extends Object {
     }
     toString() {
         try {
-            var document = LoggingInitInfo.getDoc();
+            let document = LoggingInitInfo.getDoc();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return XmlDocumentHelper.toString(document);
             ;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return "Error";
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return "Error";
+            }
         }
     }
 }

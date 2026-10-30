@@ -17,9 +17,9 @@ import { Object } from '../../../java/lang/Object.js';
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { ViewPosition } from '../../../org/allbinary/view/ViewPosition.js';
-//not GWT import - same folder const AllBinaryLayerFactoryInterface
+//sameFolderImports - not GWT import - same folder const AllBinaryLayerFactoryInterface
 import { AllBinaryLayer } from './AllBinaryLayer.js';
-//not GWT import - same folder const AllBinaryLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryLayer
 export class AllBinaryLayerFactory extends Object {
     constructor(rectangle) {
         super();

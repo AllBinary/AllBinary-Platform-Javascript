@@ -19,7 +19,7 @@ const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const DatabaseConnectionInfoInterface
+//sameFolderImports - not GWT import - same folder const DatabaseConnectionInfoInterface
 export class DbConnectionInfo extends Object {
     constructor() {
         super();
@@ -29,7 +29,7 @@ export class DbConnectionInfo extends Object {
     }
     updateUrl() {
         this.updateHost();
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.getHost());
         stringBuffer.append(this.getName());
@@ -60,7 +60,7 @@ export class DbConnectionInfo extends Object {
         return this.password;
     }
     updateHost() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.getSchema());
         stringBuffer.append(this.SCHEMA_SEP);

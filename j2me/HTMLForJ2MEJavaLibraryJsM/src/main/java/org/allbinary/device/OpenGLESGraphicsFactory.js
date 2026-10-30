@@ -1,6 +1,6 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const OpenGLESGraphics
+//sameFolderImports - not GWT import - same folder const OpenGLESGraphics
 export class OpenGLESGraphicsFactory extends Object {
     getOpenGLESGraphicsInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

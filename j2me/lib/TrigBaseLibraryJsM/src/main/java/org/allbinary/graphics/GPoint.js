@@ -26,9 +26,9 @@ export class GPoint extends Object {
         return new GPoint(point.getX(), point.getY(), point.getZ());
     }
     static toStringStatic(x, y, z) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var positionStrings = PositionStrings.getInstance();
+        let positionStrings = PositionStrings.getInstance();
         ;
         stringBuffer.append(GPoint.POINT_LABEL);
         stringBuffer.append(positionStrings.X_LABEL);

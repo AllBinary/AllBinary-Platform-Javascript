@@ -22,16 +22,16 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonLocationHelper } from './TouchButtonLocationHelper.js';
-//not GWT import - same folder const TouchButtonLocationHelper
+//sameFolderImports - not GWT import - same folder const TouchButtonLocationHelper
 export class BasicTouchButtonCellPositionFactory extends Object {
     constructor() {
         super();
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
-        var touchButtonLocationHelper = new TouchButtonLocationHelper();
+        let touchButtonLocationHelper = new TouchButtonLocationHelper();
         ;
-        var cellPositionFactory = CellPositionFactory.getInstance();
+        let cellPositionFactory = CellPositionFactory.getInstance();
         ;
         cellPositionFactory.init(touchButtonLocationHelper.getTotalColumns(), touchButtonLocationHelper.getTotalRows());
         this.TOP_LEFT = cellPositionFactory.getInstanceColRow(0, 0);

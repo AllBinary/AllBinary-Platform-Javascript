@@ -19,10 +19,10 @@ export class GLHolder extends Object {
         super();
         this.isCreated = true;
     }
-    runOnSurfaceCreated(renderer = {}) {
+    runOnSurfaceCreated(renderer) {
     }
-    runOnSurfaceChanged(renderer = {}, width, height) {
+    runOnSurfaceChanged(renderer, width, height) {
     }
-    run(renderer = {}) {
+    run(renderer) {
     }
 }

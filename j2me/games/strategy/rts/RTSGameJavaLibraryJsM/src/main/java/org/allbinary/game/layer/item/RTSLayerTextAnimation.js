@@ -28,7 +28,7 @@ export class RTSLayerTextAnimation extends Animation {
         this.image = image;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -36,7 +36,7 @@ export class RTSLayerTextAnimation extends Animation {
     paintXY(graphics, x, y) {
         this.myFontProcessor.process(graphics);
         super.paintXY(graphics, x, y);
-        var adjustedCostY = this.image.getHeight() - this.fontHeight;
+        let adjustedCostY = this.image.getHeight() - this.fontHeight;
         ;
         graphics.drawString(this.text, x, y + adjustedCostY, 0);
     }

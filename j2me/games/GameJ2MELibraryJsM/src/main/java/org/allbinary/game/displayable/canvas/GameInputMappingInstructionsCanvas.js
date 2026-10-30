@@ -23,7 +23,7 @@ import { DrawStringUtil } from '../../../../../org/allbinary/graphics/draw/DrawS
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameCommandCanvas } from './GameCommandCanvas.js';
-//not GWT import - same folder const GameCommandCanvas
+//sameFolderImports - not GWT import - same folder const GameCommandCanvas
 export class GameInputMappingInstructionsCanvas extends GameCommandCanvas {
     constructor(commandListener, allBinaryGameLayerManager) {
         super(commandListener, GameInputMappingInstructionsCanvas.NAME, allBinaryGameLayerManager.getBackgroundBasicColor(), allBinaryGameLayerManager.getForegroundBasicColor());
@@ -45,9 +45,9 @@ export class GameInputMappingInstructionsCanvas extends GameCommandCanvas {
     paint(graphics) {
         this.myFontProcessor.process(graphics);
         this.colorFillPaintable.paint(graphics);
-        var halfWidth = this.displayInfo.getLastHalfWidth();
+        let halfWidth = this.displayInfo.getLastHalfWidth();
         ;
-        var beginWidth = (graphics.getFont().stringWidth(this.TITLE) >> 1);
+        let beginWidth = (graphics.getFont().stringWidth(this.TITLE) >> 1);
         ;
         graphics.setColor(this.foregroundColor);
         graphics.drawString(this.TITLE, halfWidth - beginWidth, this.fontHeight, this.anchor);

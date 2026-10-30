@@ -48,46 +48,48 @@ export class InstallerInfo extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     write() {
-        var FILEABPATH = new AbPath(URLGLOBALS.getMainPath() + InstallerInfo.PACKAGE, InstallerInfo.INITFILENAME);
+        let FILEABPATH = new AbPath(URLGLOBALS.getMainPath() + InstallerInfo.PACKAGE, InstallerInfo.INITFILENAME);
         ;
         try {
-            var newFile = AbFile.createAbFileFromAbPath(FILEABPATH);
+            let newFile = AbFile.createAbFileFromAbPath(FILEABPATH);
             ;
             newFile.createNewFile();
-            var dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(newFile);
+            let dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(newFile);
             ;
-            var cryptedUserName = new WeakCrypt(1).encrypt(this.getUserName()).getBytes();
+            let cryptedUserName = Array.from(new TextEncoder().encode(new WeakCrypt(1).encrypt(this.getUserName())), byte => (byte << 24) >> 24);
             ;
-            var cryptedPassword = new WeakCrypt(2).encrypt(this.getPassword()).getBytes();
+            let cryptedPassword = Array.from(new TextEncoder().encode(new WeakCrypt(2).encrypt(this.getPassword())), byte => (byte << 24) >> 24);
             ;
             dataOutputStream.writeUTF(DatabaseEncoder.encode(cryptedUserName));
             dataOutputStream.writeUTF(DatabaseEncoder.encode(cryptedPassword));
             InstallerInfo.hasRead = false;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                this.logUtil.putF("Failed", this, "write");
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    this.logUtil.putF("Failed", this, "write");
+                }
+                throw e;
             }
-            throw e;
         }
     }
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     read() {
-        var FILEABPATH = new AbPath(URLGLOBALS.getMainPath() + InstallerInfo.PACKAGE, InstallerInfo.INITFILENAME);
+        let FILEABPATH = new AbPath(URLGLOBALS.getMainPath() + InstallerInfo.PACKAGE, InstallerInfo.INITFILENAME);
         ;
         try {
-            var file = AbFile.createAbFileFromAbPath(FILEABPATH);
+            let file = AbFile.createAbFileFromAbPath(FILEABPATH);
             ;
             if (file.isFile()) {
-                var iFile = new AbFileLocalInputStream(file);
+                let iFile = new AbFileLocalInputStream(file);
                 ;
-                var iData = new AbDataInputStream(iFile);
+                let iData = new AbDataInputStream(iFile);
                 ;
-                var decryptedUserName = decode.toCharArray();
+                let decryptedUserName = decode.toCharArray();
                 ;
-                var decryptedPassword = decode.toCharArray();
+                let decryptedPassword = decode.toCharArray();
                 ;
                 this.setUserName(new WeakCrypt(1).decrypt(decryptedUserName));
                 this.setPassword(new WeakCrypt(2).decrypt(decryptedPassword));
@@ -97,11 +99,13 @@ export class InstallerInfo extends Object {
                     this.logUtil.putF("Not a File - Failed Loading: " + FILEABPATH.toString(), this, "read");
                 }
             }
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                this.logUtil.putF("Failed", this, "read");
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    this.logUtil.putF("Failed", this, "read");
+                }
             }
         }
     }

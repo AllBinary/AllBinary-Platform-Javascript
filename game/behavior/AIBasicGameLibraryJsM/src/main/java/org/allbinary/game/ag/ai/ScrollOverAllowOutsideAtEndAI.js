@@ -23,17 +23,17 @@ export class ScrollOverAllowOutsideAtEndAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var x = ownerLayerInterface.getXP();
+        let x = ownerLayerInterface.getXP();
         ;
-        var y = ownerLayerInterface.getYP();
+        let y = ownerLayerInterface.getYP();
         ;
-        var width = ownerLayerInterface.getWidth();
+        let width = ownerLayerInterface.getWidth();
         ;
-        var height = ownerLayerInterface.getHeight();
+        let height = ownerLayerInterface.getHeight();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         if (x > displayInfo.getLastWidth()) {
             ownerLayerInterface.setPosition(-width, y, ownerLayerInterface.getZP());

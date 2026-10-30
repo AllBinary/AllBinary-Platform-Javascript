@@ -38,12 +38,26 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HelpPaintable } from './HelpPaintable.js';
-//not GWT import - same folder const HelpPaintable
-//import { UpdateMyFontProperties } from './UpdateMyFontProperties.js';
-//not GWT import - same folder const UpdateMyFontProperties
 export class InputMappingHelpPaintable extends HelpPaintable {
     constructor(gameInputMappingArray, backgroundBasicColor, basicColor) {
         super("Input Mapping", backgroundBasicColor, basicColor);
+        //inner= member=true isStatic=
+        this.UpdateMyFontProperties = (() => {
+            const outer$InputMappingHelpPaintable = this;
+            return class extends Object {
+                constructor() {
+                    /*Static stuff is not allowed for TypeScript inner classes*/ /**/
+                    super(...arguments);
+                    this.actionStringArray = StringUtil.getInstance().getArrayInstance();
+                    this.keymappingBeginWidthArray = NullUtil.getInstance().NULL_INT_ARRAY;
+                    this.actionStringDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY;
+                    this.inputDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
+                    this.sepArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
+                    this.sepWidthArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
+                    this.charHeight = 0;
+                }
+            };
+        })();
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.commonSeps = CommonSeps.getInstance();
@@ -54,20 +68,6 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         this.keyMappingArray = [];
         this.actionBasicColor = BasicColorUtil.getInstance().ZERO_ARRAY;
         this.inputBasicColorArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
-        //inner= member=true isStatic=
-        this.UpdateMyFontProperties = class extends Object {
-            constructor() {
-                /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-                super(...arguments);
-                this.actionStringArray = StringUtil.getInstance().getArrayInstance();
-                this.keymappingBeginWidthArray = NullUtil.getInstance().NULL_INT_ARRAY;
-                this.actionStringDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY;
-                this.inputDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
-                this.sepArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
-                this.sepWidthArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
-                this.charHeight = 0;
-            }
-        };
         this.updateMyFontProperties = new this.UpdateMyFontProperties();
         //For kotlin this is before the body of the constructor.
         this.gameInputMappingArray = gameInputMappingArray;
@@ -80,16 +80,16 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         }
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
-        var updateMyFontProperties = new this.UpdateMyFontProperties();
+        let updateMyFontProperties = new this.UpdateMyFontProperties();
         ;
         updateMyFontProperties.charHeight = font.getHeight();
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var inputInfo = this.inputInfo;
+        let inputInfo = this.inputInfo;
         ;
-        var size = inputInfo.length;
+        let size = inputInfo.length;
         ;
         updateMyFontProperties.actionStringArray = new Array(size);
         updateMyFontProperties.keymappingBeginWidthArray = new Array(size);
@@ -97,17 +97,17 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         updateMyFontProperties.inputDeltaXArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
         updateMyFontProperties.sepArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
         updateMyFontProperties.sepWidthArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
-        var list;
+        let list;
         ;
-        var keyMappings;
+        let keyMappings;
         ;
-        var actionString;
+        let actionString;
         ;
-        var input;
+        let input;
         ;
-        var size2 = 0;
+        let size2 = 0;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             list = this.keyMappingArray[index];
             keyMappings = this.get(list);
             stringMaker.delete(0, stringMaker.length());
@@ -120,7 +120,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
             updateMyFontProperties.inputDeltaXArray[index] = new Array(size2);
             updateMyFontProperties.sepArray[index] = new Array(size2);
             updateMyFontProperties.sepWidthArray[index] = new Array(size2);
-            for (var index2 = 0; index2 < size2; index2++) {
+            for (let index2 = 0; index2 < size2; index2++) {
                 input = list.objectArray[index2];
                 updateMyFontProperties.inputDeltaXArray[index][index2] = font.stringWidth(input.getName());
                 updateMyFontProperties.sepArray[index][index2] = EMPTY_STRING;
@@ -146,42 +146,42 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         super.updateMeasurement(graphics);
     }
     update(selectedGameKey, selectedInput) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         this.logUtil.putF(stringMaker.append(CommonLabels.getInstance().START_LABEL).append("selected GameKey: ").append(this.stringUtil.toString(selectedGameKey)).append(" Input: ").append(this.stringUtil.toString(selectedInput)).toString(), this, this.commonStrings.UPDATE);
-        var gameKeyMapping = PlatformInputMappingFactory.getInstance().getPersistentInputMappingInstance();
+        let gameKeyMapping = PlatformInputMappingFactory.getInstance().getPersistentInputMappingInstance();
         ;
-        var size = this.gameInputMappingArray.length;
+        let size = this.gameInputMappingArray.length;
         ;
-        var keyInfo = new Array(size);
+        let keyInfo = new Array(size);
         ;
-        var keyMappingArray = new Array(size);
+        let keyMappingArray = new Array(size);
         ;
-        var actionBasicColor = new Array(size);
+        let actionBasicColor = new Array(size);
         ;
-        var inputBasicColorArray = new Array(size);
+        let inputBasicColorArray = new Array(size);
         ;
-        var gameInputMapping;
+        let gameInputMapping;
         ;
-        var gameKey;
+        let gameKey;
         ;
-        var list;
+        let list;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             gameInputMapping = this.gameInputMappingArray[index];
             gameKey = gameInputMapping.getGameKey();
             list = gameKeyMapping.getInputMapping().getMappedInput(gameKey);
-            var size2 = list.size();
+            let size2 = list.size();
             ;
             inputBasicColorArray[index] = new Array(size2);
-            for (var index2 = 0; index2 < size2; index2++) {
+            for (let index2 = 0; index2 < size2; index2++) {
                 inputBasicColorArray[index][index2] = this.basicColor;
             }
             if (gameKey == selectedGameKey) {
                 stringMaker.delete(0, stringMaker.length());
                 this.logUtil.putF(stringMaker.append("Found: selected GameKey: ").append(this.stringUtil.toString(selectedGameKey)).toString(), this, this.commonStrings.UPDATE);
                 actionBasicColor[index] = this.selectedBasicColor;
-                var indexOfSelectedInput = list.indexOf(selectedInput);
+                let indexOfSelectedInput = list.indexOf(selectedInput);
                 ;
                 if (indexOfSelectedInput >= 0) {
                     stringMaker.delete(0, stringMaker.length());
@@ -202,13 +202,13 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         this.myFontProcessor = this.updateMyFontProcessor;
     }
     get(keyList) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var key;
+        let key;
         ;
-        var size = keyList.size();
+        let size = keyList.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             key = keyList.objectArray[index];
             stringBuffer.append(key.getName());
             if (index + 1 < keyList.size()) {
@@ -231,31 +231,31 @@ export class InputMappingHelpPaintable extends HelpPaintable {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var halfWidth = this.displayInfo.getLastHalfWidth();
+        let halfWidth = this.displayInfo.getLastHalfWidth();
         ;
         graphics.setColor(this.basicColor.intValue());
         graphics.drawString(this.title, halfWidth - this.titleBeginWidth, this.updateMyFontProperties.charHeight, this.anchor);
-        var inputInfo = this.inputInfo;
+        let inputInfo = this.inputInfo;
         ;
-        var size = inputInfo.length;
+        let size = inputInfo.length;
         ;
-        var y = 0;
+        let y = 0;
         ;
-        var deltaX = 0;
+        let deltaX = 0;
         ;
-        var size2 = 0;
+        let size2 = 0;
         ;
-        var actionString;
+        let actionString;
         ;
-        var input;
+        let input;
         ;
-        var list;
+        let list;
         ;
-        var sep;
+        let sep;
         ;
-        var beginWidth = 0;
+        let beginWidth = 0;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             y = (index + 3) * this.updateMyFontProperties.charHeight;
             deltaX = 0;
             list = this.keyMappingArray[index];
@@ -265,7 +265,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
             actionString = this.updateMyFontProperties.actionStringArray[index];
             graphics.drawString(actionString, halfWidth - beginWidth + deltaX, y, this.anchor);
             deltaX += this.updateMyFontProperties.actionStringDeltaXArray[index];
-            for (var index2 = 0; index2 < size2; index2++) {
+            for (let index2 = 0; index2 < size2; index2++) {
                 input = list.objectArray[index2];
                 graphics.setColor(this.inputBasicColorArray[index][index2].intValue());
                 graphics.drawString(input.getName(), halfWidth - beginWidth + deltaX, y, this.anchor);

@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Angle } from './Angle.js';
-//not GWT import - same folder const Angle
+//sameFolderImports - not GWT import - same folder const Angle
 export class NamedAngle extends Angle {
     constructor(angle, name) {
         super(angle);

@@ -30,9 +30,9 @@ export class Vertex extends Object {
         this.z = new BasicDecimal(0);
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var positionStrings = PositionStrings.getInstance();
+        let positionStrings = PositionStrings.getInstance();
         ;
         stringBuffer.append(positionStrings.X_LABEL);
         stringBuffer.append(this.x.toString());

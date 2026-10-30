@@ -14,6 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
 import { System } from '../../java/lang/System.js';
+//import { Double } from '../../java/lang/Double.js';
+const Double = globalThis.java.lang.Double;
 //not GWT import const Displayable
 import { Form } from '../../javax/microedition/lcdui/Form.js';
 //not GWT import const RecordStoreNotOpenException
@@ -36,22 +38,22 @@ export class TsUtil extends Object {
         return java.lang.Float.intBitsToFloat(bits);
         ;
     }
-    hashCode(anyType = {}) {
+    hashCode(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return anyType.hashCode();
         ;
     }
     //@Throws(InterruptedException.constructor)
-    waitFor(any = {}, timeoutMillis) {
-        var anyType = any;
+    waitFor(any, timeoutMillis) {
+        let anyType = any;
         ;
         anyType.wait(timeoutMillis);
     }
     //@Throws(RecordStoreNotOpenException.constructor, InvalidRecordIDException.constructor, RecordStoreException.constructor)
-    getRecord(anyType = {}, recordId) {
-        var recordStore = anyType;
+    getRecord(anyType, recordId) {
+        let recordStore = anyType;
         ;
-        var data;
+        let data;
         ;
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this) 
@@ -59,12 +61,7 @@ export class TsUtil extends Object {
         data = new Array(recordStore.getRecordSize(recordId));
         recordStore.getRecord(recordId, data, 0);
         //if statement needs to be on the same line and ternary does not work the same way.
-        return data.length < 1
-            ?
-                NullUtil.getInstance().NULL_BYTE_ARRAY
-            :
-                data;
-        ;
+        return (data.length < 1 ? NullUtil.getInstance().NULL_BYTE_ARRAY : data);
     }
     compareTo(a, b) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,19 +73,19 @@ export class TsUtil extends Object {
         return a.equalsIgnoreCase(b);
         ;
     }
-    equalsNotstring(anyType = {}, object2 = {}) {
+    equalsNotstring(anyType, object2) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return anyType === object2;
+        return (anyType === object2);
         ;
     }
-    getClassClassLoader(anyType = {}) {
+    getClassClassLoader(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return anyType.constructor.namegetClassLoader();
         ;
     }
     toNumberFromChar(value) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(value);
+        return globalThis.Math.trunc(value.charCodeAt(0));
     }
     toNumber(value) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,7 +93,7 @@ export class TsUtil extends Object {
     }
     getByteArray(string) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return string.getBytes();
+        return Array.from(new TextEncoder().encode(string), byte => (byte << 24) >> 24);
         ;
     }
     isItemListener(owner) {

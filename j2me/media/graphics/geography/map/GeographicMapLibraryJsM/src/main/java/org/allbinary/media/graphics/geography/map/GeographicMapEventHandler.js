@@ -44,15 +44,17 @@ export class GeographicMapEventHandler extends BasicEventHandler {
         super.removeListener(eventListenerInterface);
     }
     fireEvent() {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var gameLayer = this.list.get(index);
+                let gameLayer = this.list.get(index);
                 ;
                 gameLayer.move();
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
     }

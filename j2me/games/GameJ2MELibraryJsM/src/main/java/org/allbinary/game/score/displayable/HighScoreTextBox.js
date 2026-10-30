@@ -34,7 +34,7 @@ import { InApplicationPurchaseFactory } from '../../../../../org/allbinary/logic
 //not GWT import const InApplicationPurchaseFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoreUtil } from './HighScoreUtil.js';
-//not GWT import - same folder const HighScoreUtil
+//sameFolderImports - not GWT import - same folder const HighScoreUtil
 export class HighScoreTextBox extends CustomTextBox {
     constructor(highScoresFactoryInterface, highScoresHelper, abeClientInformation, gameInfo, cmdListener, name, highScore, backgrounBasicColor, foregroundBasicColor) {
         super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, Font.getDefaultFont(), backgrounBasicColor, foregroundBasicColor);
@@ -44,10 +44,10 @@ export class HighScoreTextBox extends CustomTextBox {
         this.submitted = false;
         //For kotlin this is before the body of the constructor.
         this.highScoreUtil = new HighScoreUtil(highScoresFactoryInterface, highScoresHelper, abeClientInformation, gameInfo, cmdListener, name, highScore);
-        var operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
+        let operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
         ;
         if (operatingSystemInterface.isOverScan()) {
-            var username = InApplicationPurchaseFactory.getInstance().getUserName();
+            let username = InApplicationPurchaseFactory.getInstance().getUserName();
             ;
             if (username !=
                 null) {
@@ -86,7 +86,7 @@ export class HighScoreTextBox extends CustomTextBox {
     }
     //@Throws(Exception.constructor)
     update() {
-        var name = this.getTextFieldItem().getString();
+        let name = this.getTextFieldItem().getString();
         ;
         this.highScoreUtil.update(name);
         super.update();

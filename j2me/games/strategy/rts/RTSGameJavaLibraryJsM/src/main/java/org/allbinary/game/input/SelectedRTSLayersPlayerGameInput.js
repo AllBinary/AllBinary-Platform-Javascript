@@ -51,15 +51,15 @@ import { ErrorSound } from '../../../../org/allbinary/media/audio/ErrorSound.js'
 //not GWT import const GeographicMapCompositeInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerGameInput } from './PlayerGameInput.js';
-//not GWT import - same folder const PlayerGameInput
+//sameFolderImports - not GWT import - same folder const PlayerGameInput
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const RTSPlayerGameInput
+//sameFolderImports - not GWT import - same folder const RTSPlayerGameInput
 import { SelectedRTSLayersPlayerUpgradeGameInputProcessor } from './SelectedRTSLayersPlayerUpgradeGameInputProcessor.js';
-//not GWT import - same folder const SelectedRTSLayersPlayerUpgradeGameInputProcessor
+//sameFolderImports - not GWT import - same folder const SelectedRTSLayersPlayerUpgradeGameInputProcessor
 import { SelectedRTSLayersPlayerDowngradeGameInputProcessor } from './SelectedRTSLayersPlayerDowngradeGameInputProcessor.js';
-//not GWT import - same folder const SelectedRTSLayersPlayerDowngradeGameInputProcessor
+//sameFolderImports - not GWT import - same folder const SelectedRTSLayersPlayerDowngradeGameInputProcessor
 import { GameInputProcessorUtil } from './GameInputProcessorUtil.js';
-//not GWT import - same folder const GameInputProcessorUtil
+//sameFolderImports - not GWT import - same folder const GameInputProcessorUtil
 export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
     constructor(towerInfoPaintable, rtsPlayerLayerInterface, list, playerInputId, selectRTSLayerVisitorFactoryInterface) {
         super(list, new BasicArrayListD(), playerInputId);
@@ -73,9 +73,9 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
         this.rtsPlayerLayerInterface = rtsPlayerLayerInterface;
         this.list = list;
         this.selectRTSLayerVisitorInterface = selectRTSLayerVisitorFactoryInterface.create(this);
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
         this.upgradeGameNotificationEvent = new GameNotificationEvent(this, RTSGameStrings.getInstance().UPGRADE, smallIntegerSingletonFactory.getAt(2), basicColorFactory.PINK, BooleanFactory.getInstance().FALSE);
         this.noMoneyGameNotificationEvent = new GameNotificationEvent(this, RTSGameStrings.getInstance().NO_MONEY, smallIntegerSingletonFactory.getAt(2), basicColorFactory.PINK, BooleanFactory.getInstance().FALSE);
@@ -83,9 +83,9 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
-        var geographicMapCompositeInterface = allBinaryGameLayerManager;
+        let geographicMapCompositeInterface = allBinaryGameLayerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
         this.upgradeGameNotificationEvent.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
         this.noMoneyGameNotificationEvent.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
@@ -103,15 +103,15 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     upgrade() {
-        var anyChanged = false;
+        let anyChanged = false;
         ;
-        for (var index = this.selectedRTSLayersList.size() - 1; index >= 0; index--) {
-            var rtsLayer = this.selectedRTSLayersList.get(index);
+        for (let index = this.selectedRTSLayersList.size() - 1; index >= 0; index--) {
+            let rtsLayer = this.selectedRTSLayersList.get(index);
             ;
             if (rtsLayer.isUpgradeable()) {
-                var capital = this.rtsPlayerLayerInterface.getCapital();
+                let capital = this.rtsPlayerLayerInterface.getCapital();
                 ;
-                var upgradeCost = rtsLayer.getUpgradeCost();
+                let upgradeCost = rtsLayer.getUpgradeCost();
                 ;
                 if (upgradeCost <= capital.getTotalMoney()) {
                     anyChanged = true;
@@ -131,25 +131,25 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
             }
         }
         if (anyChanged) {
-            var rtsPlayerGameInput = this.rtsPlayerLayerInterface.getPlayerGameInput();
+            let rtsPlayerGameInput = this.rtsPlayerLayerInterface.getPlayerGameInput();
             ;
             rtsPlayerGameInput.updatePaintable();
         }
     }
     //@Throws(Exception.constructor)
     downgrade() {
-        var anyChanged = false;
+        let anyChanged = false;
         ;
-        for (var index = this.selectedRTSLayersList.size(); --index >= 0;) {
-            var rtsLayer = this.selectedRTSLayersList.get(index);
+        for (let index = this.selectedRTSLayersList.size(); --index >= 0;) {
+            let rtsLayer = this.selectedRTSLayersList.get(index);
             ;
             if (rtsLayer.isDowngradeable()) {
                 anyChanged = true;
                 this.rtsPlayerLayerInterface.add(DowngradeSound.getInstance());
-                var downgradeCost = rtsLayer.getDowngradeCost();
+                let downgradeCost = rtsLayer.getDowngradeCost();
                 ;
                 rtsLayer.downgrade();
-                var capital = this.rtsPlayerLayerInterface.getCapital();
+                let capital = this.rtsPlayerLayerInterface.getCapital();
                 ;
                 capital.addMoney(downgradeCost);
                 if (!this.rtsPlayerLayerInterface.implmentsArtificialIntelligenceCompositeInterface()) {
@@ -158,7 +158,7 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
             }
         }
         if (anyChanged) {
-            var rtsPlayerGameInput = this.rtsPlayerLayerInterface.getPlayerGameInput();
+            let rtsPlayerGameInput = this.rtsPlayerLayerInterface.getPlayerGameInput();
             ;
             rtsPlayerGameInput.updatePaintable();
         }
@@ -178,12 +178,12 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
     //@Throws(Exception.constructor)
     processInput(layerManager) {
         try {
-            var size = this.list.size();
+            let size = this.list.size();
             ;
-            var key = 0;
+            let key = 0;
             ;
-            for (var index = 0; index < size; index++) {
-                var gameKeyEvent = this.list.get(index);
+            for (let index = 0; index < size; index++) {
+                let gameKeyEvent = this.list.get(index);
                 ;
                 key = gameKeyEvent.getKey();
                 this.processInputKey(key);
@@ -194,10 +194,12 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
             else {
                 this.update();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.PROCESS_INPUT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.PROCESS_INPUT, e);
+            }
         }
     }
     getSelectedBasicArrayList() {
@@ -218,7 +220,7 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
         this.paintSelectedRTSLayersList = this.selectedRTSLayersList;
     }
     setSelectedRTSLayer(selectedLayer) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Selected Layer: ");
         if (selectedLayer !=
@@ -231,7 +233,7 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
         this.deselectAll();
         if (this.selectedRTSLayersList.size() > 0) {
             this.getPreSelectedRTSLayersList().clear();
-            var tempList = this.getPreSelectedRTSLayersList();
+            let tempList = this.getPreSelectedRTSLayersList();
             ;
             this.preSelectedRTSLayersList = this.selectedRTSLayersList;
             this.selectedRTSLayersList = tempList;
@@ -254,33 +256,33 @@ export class SelectedRTSLayersPlayerGameInput extends PlayerGameInput {
         }
     }
     selectAllPreselected() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Select all Preselected: ");
         stringBuffer.append(this.preSelectedRTSLayersList.toString());
         this.logUtil.putF(stringBuffer.toString(), this, "selectAllPreselected");
-        for (var index = this.preSelectedRTSLayersList.size() - 1; index >= 0; index--) {
-            var rtsLayer = this.preSelectedRTSLayersList.get(index);
+        for (let index = this.preSelectedRTSLayersList.size() - 1; index >= 0; index--) {
+            let rtsLayer = this.preSelectedRTSLayersList.get(index);
             ;
             rtsLayer.select();
         }
     }
     deselectAllPreselected() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Deselect all Preselected: ");
         stringBuffer.append(this.preSelectedRTSLayersList.toString());
         this.logUtil.putF(stringBuffer.toString(), this, "deselectAllPreselected");
-        for (var index = this.preSelectedRTSLayersList.size() - 1; index >= 0; index--) {
-            var rtsLayer = this.preSelectedRTSLayersList.get(index);
+        for (let index = this.preSelectedRTSLayersList.size() - 1; index >= 0; index--) {
+            let rtsLayer = this.preSelectedRTSLayersList.get(index);
             ;
             rtsLayer.deselect();
         }
         this.preSelectedRTSLayersList.clear();
     }
     deselectAll() {
-        for (var index = this.selectedRTSLayersList.size() - 1; index >= 0; index--) {
-            var rtsLayer = this.selectedRTSLayersList.get(index);
+        for (let index = this.selectedRTSLayersList.size() - 1; index >= 0; index--) {
+            let rtsLayer = this.selectedRTSLayersList.get(index);
             ;
             rtsLayer.deselect();
         }

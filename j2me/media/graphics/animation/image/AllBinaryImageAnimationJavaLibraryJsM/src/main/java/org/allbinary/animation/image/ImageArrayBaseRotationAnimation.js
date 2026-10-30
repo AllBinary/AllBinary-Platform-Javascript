@@ -49,28 +49,28 @@ export class ImageArrayBaseRotationAnimation extends RotationAnimation {
         if (this.alphaP != alpha) {
             super.setAlpha(alpha);
             this.imageModifierUtil.reset();
-            var index = this.circularIndexUtil.getIndex();
+            let index = this.circularIndexUtil.getIndex();
             ;
             this.imageModifierUtil.setAlpha(this.originalImageArray[index], this.imageArray[index], index, this.alphaP);
         }
     }
     nextRotation() {
         super.nextRotation();
-        var index = this.circularIndexUtil.getIndex();
+        let index = this.circularIndexUtil.getIndex();
         ;
         this.imageModifierUtil.setAlpha(this.originalImageArray[index], this.imageArray[index], index, this.alphaP);
         this.currentImage = this.imageArray[index];
     }
     previousRotation() {
         super.previousRotation();
-        var index = this.circularIndexUtil.getIndex();
+        let index = this.circularIndexUtil.getIndex();
         ;
         this.imageModifierUtil.setAlpha(this.originalImageArray[index], this.imageArray[index], index, this.alphaP);
         this.currentImage = this.imageArray[index];
     }
     setFrame(index2) {
         super.setFrame(index2);
-        var index = this.circularIndexUtil.getIndex();
+        let index = this.circularIndexUtil.getIndex();
         ;
         this.imageModifierUtil.setAlpha(this.originalImageArray[index], this.imageArray[index], index, this.alphaP);
         this.currentImage = this.imageArray[index];
@@ -91,32 +91,32 @@ export class ImageArrayBaseRotationAnimation extends RotationAnimation {
         graphics.drawImage(this.currentImage, x, y, this.anchor);
     }
     close() {
-        var disposalUtil = DisposalUtil.getInstance();
+        let disposalUtil = DisposalUtil.getInstance();
         ;
-        var size2 = this.imageArray.length;
+        let size2 = this.imageArray.length;
         ;
-        for (var index = 0; index < size2; index++) {
+        for (let index = 0; index < size2; index++) {
             disposalUtil.disposeImage(this.imageArray[index]);
         }
-        var size = this.originalImageArray.length;
+        let size = this.originalImageArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             disposalUtil.disposeImage(this.originalImageArray[index]);
         }
         disposalUtil.disposeImage(this.currentImage);
     }
     //@Throws(Throwable.constructor)
     finalize() {
-        var disposalUtil = DisposalUtil.getInstance();
+        let disposalUtil = DisposalUtil.getInstance();
         ;
-        var size2 = this.imageArray.length;
+        let size2 = this.imageArray.length;
         ;
-        for (var index = 0; index < size2; index++) {
+        for (let index = 0; index < size2; index++) {
             disposalUtil.disposeImage(this.imageArray[index]);
         }
-        var size = this.originalImageArray.length;
+        let size = this.originalImageArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             disposalUtil.disposeImage(this.originalImageArray[index]);
         }
         disposalUtil.disposeImage(this.currentImage);

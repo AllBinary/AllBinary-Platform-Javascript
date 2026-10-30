@@ -21,7 +21,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerGameInput } from './PlayerGameInput.js';
-//not GWT import - same folder const GameInputProcessorInterface
+//sameFolderImports - not GWT import - same folder const GameInputProcessorInterface
 export class GameInputProcessorComposite extends PlayerGameInput {
     constructor(name, gameInputProcessorInterface) {
         super(new BasicArrayListD(), new BasicArrayListD(), -1);
@@ -33,13 +33,15 @@ export class GameInputProcessorComposite extends PlayerGameInput {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     update() {
         try {
-            var list = this.getGameKeyEventList();
+            let list = this.getGameKeyEventList();
             ;
             this.gameInputProcessorInterface.onInput(list);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+            }
         }
     }
     toString() {

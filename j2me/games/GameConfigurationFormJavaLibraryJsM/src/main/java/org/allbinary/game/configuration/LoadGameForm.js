@@ -48,7 +48,7 @@ export class LoadGameForm extends CommandForm {
         this.initCommands(commandListener);
     }
     initCommands(cmdListener) {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         this.removeAllCommands();
         this.addCommand(gameCommandsFactory.LOAD_FILE);
@@ -58,7 +58,7 @@ export class LoadGameForm extends CommandForm {
     }
     //@Throws(Exception.constructor)
     update() {
-        var list = GamePersistanceSingleton.getInstance().getIds();
+        let list = GamePersistanceSingleton.getInstance().getIds();
         ;
         this.deleteAll();
         if (list.size() > 0) {
@@ -72,7 +72,7 @@ export class LoadGameForm extends CommandForm {
         super.update();
     }
     add(list, name, option) {
-        var choiceGroup = this.getChoiceGroup(list, name, option);
+        let choiceGroup = this.getChoiceGroup(list, name, option);
         ;
         if (list.size() > 0) {
             choiceGroup.setSelectedIndex(0, true);
@@ -80,16 +80,16 @@ export class LoadGameForm extends CommandForm {
         this.meUtil.appendItem(this, choiceGroup);
     }
     getChoiceGroup(list, name, option) {
-        var METHOD_NAME = "getChoiceGroup";
+        let METHOD_NAME = "getChoiceGroup";
         ;
-        var ADDING_CHOICE = "Adding Choice: ";
+        let ADDING_CHOICE = "Adding Choice: ";
         ;
-        var choiceGroup = new ChoiceGroup(name, option, StringUtil.getInstance().getArrayInstance(), NullImage.NULL_IMAGE_ARRAY);
+        let choiceGroup = new ChoiceGroup(name, option, StringUtil.getInstance().getArrayInstance(), NullImage.NULL_IMAGE_ARRAY);
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var anyType = list.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let anyType = list.objectArray[index];
             ;
             this.logUtil.putF(new StringMaker().append(ADDING_CHOICE).append(anyType.toString()).toString(), this, METHOD_NAME);
             choiceGroup.append(anyType.toString(), NullImage.NULL_IMAGE);
@@ -99,7 +99,7 @@ export class LoadGameForm extends CommandForm {
     }
     getSelectedId() {
         if (this.areChoices) {
-            var choiceGroup = this.get(0);
+            let choiceGroup = this.get(0);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return choiceGroup.getSelectedIndex();
@@ -112,9 +112,9 @@ export class LoadGameForm extends CommandForm {
     }
     getSelectedText() {
         if (this.areChoices) {
-            var choiceGroup = this.get(0);
+            let choiceGroup = this.get(0);
             ;
-            var value = Integer.valueOf(choiceGroup.getString(choiceGroup.getSelectedIndex())).intValue();
+            let value = Integer.valueOf(choiceGroup.getString(choiceGroup.getSelectedIndex())).intValue();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return value;

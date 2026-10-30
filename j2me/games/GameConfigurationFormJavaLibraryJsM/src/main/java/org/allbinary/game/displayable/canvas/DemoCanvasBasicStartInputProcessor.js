@@ -25,7 +25,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
-//not GWT import - same folder const BasicMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const BasicMenuInputProcessor
 export class DemoCanvasBasicStartInputProcessor extends BasicMenuInputProcessor {
     constructor(gameKeyEventList, gameCanvas) {
         super(gameKeyEventList, -1, gameCanvas);
@@ -33,13 +33,13 @@ export class DemoCanvasBasicStartInputProcessor extends BasicMenuInputProcessor 
     }
     //@Throws(Exception.constructor)
     processInputList() {
-        var list = this.getGameKeyEventList();
+        let list = this.getGameKeyEventList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var gameKeyEvent;
+        let gameKeyEvent;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             gameKeyEvent = list.objectArray[index];
             this.logUtil.putF(new StringMaker().append("Start GameKey: ").append(StringUtil.getInstance().toString(gameKeyEvent)).toString(), this, GameInputStrings.getInstance().PROCESS_INPUT);
         }

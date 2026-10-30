@@ -18,7 +18,7 @@ import { SingletonAnimationInterfaceFactory } from '../../../../org/allbinary/an
 //not GWT import const IndexedAnimationToImageArrayUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayAnimation } from './ImageArrayAnimation.js';
-//not GWT import - same folder const ImageArrayAnimation
+//sameFolderImports - not GWT import - same folder const ImageArrayAnimation
 export class ImageArraySingletonAnimationInterfaceFactory extends SingletonAnimationInterfaceFactory {
     constructor(imageArray) {
         super(new ImageArrayAnimation(imageArray, AnimationBehavior.getInstance()));

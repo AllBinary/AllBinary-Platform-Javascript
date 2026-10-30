@@ -18,7 +18,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameRunnable } from './GameRunnable.js';
-//not GWT import - same folder const GameRunnable
+//sameFolderImports - not GWT import - same folder const GameRunnable
 export class RunnableCanvasSingleThreadStartRunnable extends GameRunnable {
     constructor(demoCanvas) {
         super();
@@ -28,12 +28,14 @@ export class RunnableCanvasSingleThreadStartRunnable extends GameRunnable {
     run() {
         try {
             this.runnableCanvas.run();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+            }
         }
     }
     //@Throws(Exception.constructor)

@@ -46,10 +46,17 @@ export class OpenGLESStrings extends Object {
     charsWidth(ch, offset, length) {
         throw new RuntimeException();
     }
-    stringWidth(string) {
+    stringWidth(...args) {
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.stringWidth$overload1(args[0]);
+        if (args.length === 3 && typeof args[0] === 'string' && typeof args[1] === 'number' && typeof args[2] === 'number')
+            return this.stringWidth$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: stringWidth');
+    }
+    stringWidth$overload1(string) {
         throw new RuntimeException();
     }
-    stringWidth(string, offset, len) {
+    stringWidth$overload2(string, offset, len) {
         throw new RuntimeException();
     }
 }

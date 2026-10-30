@@ -17,14 +17,14 @@ import { Object } from '../../../../java/lang/Object.js';
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicColorUtil } from './BasicColorUtil.js';
-//not GWT import - same folder const BasicColorUtil
+//sameFolderImports - not GWT import - same folder const BasicColorUtil
 export class BasicColor extends Object {
     constructor(alphaValue, value, name) {
         super();
         this.name = name;
-        var tempValue = 0;
+        let tempValue = 0;
         ;
-        var basicColorUtil = BasicColorUtil.getInstance();
+        let basicColorUtil = BasicColorUtil.getInstance();
         ;
         if (basicColorUtil.isAlpha) {
             if (basicColorUtil.ffOpaque) {
@@ -37,19 +37,19 @@ export class BasicColor extends Object {
         else {
             tempValue = value;
         }
-        var alphaInt = ((tempValue >> 24) & 255);
+        let alphaInt = ((tempValue >> 24) & 255);
         ;
         this.alpha = alphaInt;
         this.alphaComponent = (alphaInt) / 255;
-        var redInt = ((tempValue >> 16) & 255);
+        let redInt = ((tempValue >> 16) & 255);
         ;
         this.red = redInt;
         this.redComponent = (redInt) / 255;
-        var greenInt = ((tempValue >> 8) & 255);
+        let greenInt = ((tempValue >> 8) & 255);
         ;
         this.green = greenInt;
         this.greenComponent = (greenInt) / 255;
-        var blueInt = ((tempValue) & 255);
+        let blueInt = ((tempValue) & 255);
         ;
         this.blue = blueInt;
         this.blueComponent = (blueInt) / 255;
@@ -64,7 +64,7 @@ export class BasicColor extends Object {
         return this.value;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("BasicColor: ");
         stringBuffer.append("Alpha: ");

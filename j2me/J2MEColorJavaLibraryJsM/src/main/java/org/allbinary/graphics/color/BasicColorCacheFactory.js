@@ -18,9 +18,9 @@ import { Integer } from '../../../../java/lang/Integer.js';
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const BasicColor
+//sameFolderImports - not GWT import - same folder const BasicColor
 import { BasicColorFactory } from './BasicColorFactory.js';
-//not GWT import - same folder const BasicColorFactory
+//sameFolderImports - not GWT import - same folder const BasicColorFactory
 export class BasicColorCacheFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -35,7 +35,7 @@ export class BasicColorCacheFactory extends Object {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getAndOrCreate(integer) {
-        var basicColor = this.hashtable.get(integer);
+        let basicColor = this.hashtable.get(integer);
         ;
         if (basicColor ==
             null) {

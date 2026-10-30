@@ -22,14 +22,14 @@ import { PartnerIdentifierFileUtil } from '../../org/allbinary/logic/system/secu
 //not GWT import const PartnerIdentifierFileUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidResources } from './AndroidResources.js';
-//not GWT import - same folder const AndroidResources
+//sameFolderImports - not GWT import - same folder const AndroidResources
 export class AllBinaryAndroidGameInitializationUtil extends Object {
     static init() {
-        var resourceUtil = ResourceUtil.getInstance();
+        let resourceUtil = ResourceUtil.getInstance();
         ;
-        var androidResources = AndroidResources.getInstance();
+        let androidResources = AndroidResources.getInstance();
         ;
-        var licenseInitInfoUtil = LicenseInitInfoUtil.getInstance();
+        let licenseInitInfoUtil = LicenseInitInfoUtil.getInstance();
         ;
         resourceUtil.addResource(licenseInitInfoUtil.INITFILENAME, Integer.valueOf(androidResources.raw.licenseinitdata));
         resourceUtil.addResource(PartnerIdentifierFileUtil.getInstance().FILE_NAME, Integer.valueOf(androidResources.raw.partner));

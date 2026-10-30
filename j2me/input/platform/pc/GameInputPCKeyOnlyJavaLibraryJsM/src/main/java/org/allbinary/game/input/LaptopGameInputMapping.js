@@ -14,9 +14,9 @@
 //not GWT import const InputToGameKeyMapping
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCGameInputMapping } from './PCGameInputMapping.js';
-//not GWT import - same folder const PCGameInputMapping
+//sameFolderImports - not GWT import - same folder const PCGameInputMapping
 import { LaptopDefaultGameInputMapping } from './LaptopDefaultGameInputMapping.js';
-//not GWT import - same folder const LaptopDefaultGameInputMapping
+//sameFolderImports - not GWT import - same folder const LaptopDefaultGameInputMapping
 export class LaptopGameInputMapping extends PCGameInputMapping {
     getDefault() {
         //if statement needs to be on the same line and ternary does not work the same way.

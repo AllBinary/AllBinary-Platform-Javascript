@@ -14,8 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const InputStream
-import { InputStreamReader } from '../../../../../../java/io/InputStreamReader.js';
-//not GWT import const InputStreamReader
+//not plain js import { InputStreamReader } 
+const InputStreamReader = globalThis.java.io.InputStreamReader;
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //not plain js import { LogUtil } 
@@ -37,32 +37,34 @@ export class PartnerIdentifierFileUtil extends Object {
     }
     get() {
         try {
-            var resourceUtil = ResourceUtil.getInstance();
+            let resourceUtil = ResourceUtil.getInstance();
             ;
-            var inputStream = resourceUtil.getResourceAsStream(this.FILE_NAME);
+            let inputStream = resourceUtil.getResourceAsStream(this.FILE_NAME);
             ;
-            var inputStreamReader = new InputStreamReader(inputStream);
+            let inputStreamReader = new InputStreamReader(inputStream);
             ;
-            var chars = new Array(30);
+            let chars = new Array(30);
             ;
-            var size = inputStreamReader.read(chars);
+            let size = inputStreamReader.read(chars);
             ;
-            var partnerString = StringUtil.getInstance().EMPTY_STRING;
+            let partnerString = StringUtil.getInstance().EMPTY_STRING;
             ;
             if (size > 0) {
-                partnerString = chars.slice(0, size).join('');
+                partnerString = ((data, offset, count) => data.slice(offset, offset + count).map(value => typeof value === 'number' ? String.fromCharCode(value & 255) : value).join(''))(chars, 0, size);
             }
             inputStreamReader.close();
             //if statement needs to be on the same line and ternary does not work the same way.
             return partnerString;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return StringUtil.getInstance().NULL_STRING;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return StringUtil.getInstance().NULL_STRING;
+            }
         }
     }
 }

@@ -14,7 +14,7 @@
 //not GWT import const ImageModifierUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AlphaBaseProcessor } from './AlphaBaseProcessor.js';
-//not GWT import - same folder const AlphaBaseProcessor
+//sameFolderImports - not GWT import - same folder const AlphaBaseProcessor
 export class AlphaProcessor extends AlphaBaseProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

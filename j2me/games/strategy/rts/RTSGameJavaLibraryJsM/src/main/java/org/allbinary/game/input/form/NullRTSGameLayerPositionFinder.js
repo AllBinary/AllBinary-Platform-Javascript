@@ -26,7 +26,7 @@ export class NullRTSGameLayerPositionFinder extends Object {
         super();
     }
     getLayerInterface(geographicMapCellPosition) {
-        var layerInterface = DropCellPositionHistory.getInstance().getLayerInterface(geographicMapCellPosition);
+        let layerInterface = DropCellPositionHistory.getInstance().getLayerInterface(geographicMapCellPosition);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return layerInterface;

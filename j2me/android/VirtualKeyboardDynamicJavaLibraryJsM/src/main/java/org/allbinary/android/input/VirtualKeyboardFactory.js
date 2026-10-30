@@ -21,10 +21,10 @@ import { VirtualKeyboardAPI3 } from '../../../../org/allbinary/android/input/api
 //not GWT import const Activity
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VirtualKeyboard } from './VirtualKeyboard.js';
-//not GWT import - same folder const VirtualKeyboard
+//sameFolderImports - not GWT import - same folder const VirtualKeyboard
 export class VirtualKeyboardFactory extends Object {
     static init(activity) {
-        var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
+        let SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
         ;
         if (SDK_VERSION <= 2) {
             VirtualKeyboardFactory.virtualKeyboard = new VirtualKeyboardAPI1(activity);

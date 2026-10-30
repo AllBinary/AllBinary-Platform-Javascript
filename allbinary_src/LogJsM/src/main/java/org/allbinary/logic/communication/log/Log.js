@@ -19,7 +19,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Log extends Object {
-    constructor(specialMessage, anyType = {}, functionName, exception = {}) {
+    constructor(specialMessage, anyType, functionName, exception) {
         super();
         this.logFormatUtil = LogFormatUtil.getInstance();
         this.specialMessage = specialMessage;
@@ -44,9 +44,9 @@ export class Log extends Object {
         return this.exception;
     }
     toString() {
-        var className = CommonStrings.getInstance().EMPTY;
+        let className = CommonStrings.getInstance().EMPTY;
         ;
-        var clazz = this.anyType.constructor;
+        let clazz = this.anyType.constructor;
         ;
         if (clazz.toString() !=
             null) {

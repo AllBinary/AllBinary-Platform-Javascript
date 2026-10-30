@@ -25,7 +25,7 @@ export class HighScoreCommandsBaseFactory extends Object {
         this.HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS;
     }
     isHighScoreCommand(command) {
-        for (var index = this.HIGH_SCORE_COMMANDS.length - 1; index >= 0; index--) {
+        for (let index = this.HIGH_SCORE_COMMANDS.length - 1; index >= 0; index--) {
             if (command == this.HIGH_SCORE_COMMANDS[index]) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
@@ -36,7 +36,7 @@ export class HighScoreCommandsBaseFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getIndex(command) {
-        for (var index = this.HIGH_SCORE_COMMANDS.length - 1; index >= 0; index--) {
+        for (let index = this.HIGH_SCORE_COMMANDS.length - 1; index >= 0; index--) {
             if (command == this.HIGH_SCORE_COMMANDS[index]) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return index;

@@ -16,17 +16,17 @@ import { AndroidUtil } from '../../../../org/allbinary/AndroidUtil.js';
 //not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CircleAnimation } from './CircleAnimation.js';
-//not GWT import - same folder const CircleAnimation
+//sameFolderImports - not GWT import - same folder const CircleAnimation
 export class AdjustedCircleAnimation extends CircleAnimation {
     static createAnimation(width, height, xAdjustment, yAdjustment, basicColor) {
-        var adjustedCircleAnimation = new AdjustedCircleAnimation(width, height, basicColor);
+        let adjustedCircleAnimation = new AdjustedCircleAnimation(width, height, basicColor);
         ;
         adjustedCircleAnimation.initXY(xAdjustment, yAdjustment);
         //if statement needs to be on the same line and ternary does not work the same way.
         return adjustedCircleAnimation;
     }
     static createW(width, height, innerWidth, basicColor) {
-        var adjustedCircleAnimation = new AdjustedCircleAnimation(width, height, basicColor);
+        let adjustedCircleAnimation = new AdjustedCircleAnimation(width, height, basicColor);
         ;
         adjustedCircleAnimation.init(innerWidth);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,7 +44,7 @@ export class AdjustedCircleAnimation extends CircleAnimation {
     }
     init(innerWidth) {
         if (AndroidUtil.isAndroid()) {
-            var widthPortion = (((innerWidth / 3) * 10) / 7);
+            let widthPortion = (globalThis.Math.trunc(((globalThis.Math.trunc(innerWidth / 3)) * 10) / 7));
             ;
             this.xAdjustment = -((this.width >> 1) - widthPortion);
             this.yAdjustment = this.xAdjustment;

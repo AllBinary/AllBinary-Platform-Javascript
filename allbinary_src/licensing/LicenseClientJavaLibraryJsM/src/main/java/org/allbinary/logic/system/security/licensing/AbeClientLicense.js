@@ -27,14 +27,14 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const LicenseType
+//sameFolderImports - not GWT import - same folder const LicenseType
 import { AbeClientInformationData } from './AbeClientInformationData.js';
-//not GWT import - same folder const AbeClientInformationData
+//sameFolderImports - not GWT import - same folder const AbeClientInformationData
 import { LicenseTypeFactory } from './LicenseTypeFactory.js';
-//not GWT import - same folder const LicenseTypeFactory
+//sameFolderImports - not GWT import - same folder const LicenseTypeFactory
 export class AbeClientLicense extends Object {
     static hasRequiredKeys(resultHashtable) {
-        var abeClientInformationData = AbeClientInformationData.getInstance();
+        let abeClientInformationData = AbeClientInformationData.getInstance();
         ;
         if (resultHashtable.containsKey(abeClientInformationData.LICENSEID) && resultHashtable.containsKey(abeClientInformationData.LICENSESERVERS) && resultHashtable.containsKey(abeClientInformationData.KEY) && resultHashtable.containsKey(abeClientInformationData.LICENSE_TYPE)) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,29 +48,29 @@ export class AbeClientLicense extends Object {
     constructor(hashtable) {
         super();
         this.hashtable = StdUtil.getInstance().createHashtable();
-        var abeClientInformationData = AbeClientInformationData.getInstance();
+        let abeClientInformationData = AbeClientInformationData.getInstance();
         ;
-        var keyValue = hashtable.get(abeClientInformationData.KEY);
+        let keyValue = hashtable.get(abeClientInformationData.KEY);
         ;
         if (keyValue !=
             null) {
-            if (keyValue instanceof String) {
+            if (((value) => typeof value === 'string' || value instanceof String)(keyValue)) {
                 this.hashtable.put(abeClientInformationData.KEY, keyValue);
             }
         }
         this.id = hashtable.get(abeClientInformationData.LICENSEID);
-        var vector = hashtable.get(abeClientInformationData.LICENSESERVERS);
+        let vector = hashtable.get(abeClientInformationData.LICENSESERVERS);
         ;
         this.servers = new BasicArrayListD();
-        var size = vector.size();
+        let size = vector.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.servers.add(vector.get(index));
         }
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         this.setSpecial(stringUtil.getNonNull(hashtable.get(abeClientInformationData.SPECIAL)));
-        var licenseTypeString = stringUtil.getNonNull(hashtable.get(abeClientInformationData.LICENSE_TYPE));
+        let licenseTypeString = stringUtil.getNonNull(hashtable.get(abeClientInformationData.LICENSE_TYPE));
         ;
         this.licenseType = LicenseTypeFactory.getInstance().getInstance(licenseTypeString);
     }
@@ -92,7 +92,7 @@ export class AbeClientLicense extends Object {
         return this.servers;
     }
     isValid() {
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (!stringValidationUtil.isEmpty(this.getKey(AbeClientInformationData.getInstance().KEY))) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,9 +102,9 @@ export class AbeClientLicense extends Object {
         return false;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var BREAK = "<br/>";
+        let BREAK = "<br/>";
         ;
         stringBuffer.append("License Id: ");
         stringBuffer.append(this.getLicenseId());
@@ -115,12 +115,12 @@ export class AbeClientLicense extends Object {
         stringBuffer.append("Keys: ");
         stringBuffer.append(this.hashtable.toString());
         stringBuffer.append(BREAK);
-        var serverVector = this.getServers();
+        let serverVector = this.getServers();
         ;
-        var size = serverVector.size();
+        let size = serverVector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var nextServerString = serverVector.get(index);
+        for (let index = 0; index < size; index++) {
+            let nextServerString = serverVector.get(index);
             ;
             stringBuffer.append("Server: ");
             stringBuffer.append(nextServerString);

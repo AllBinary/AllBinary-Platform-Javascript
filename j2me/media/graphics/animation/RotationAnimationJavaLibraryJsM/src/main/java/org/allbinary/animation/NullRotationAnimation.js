@@ -7,7 +7,7 @@ import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RotationAnimation } from './RotationAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class NullRotationAnimation extends RotationAnimation {
     static createTotalAngle(angleInfo, totalAngle, animationBehavior) {
         //if statement needs to be on the same line and ternary does not work the same way.

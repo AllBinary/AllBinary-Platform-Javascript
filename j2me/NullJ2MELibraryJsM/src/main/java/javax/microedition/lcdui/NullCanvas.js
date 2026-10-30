@@ -1,9 +1,10 @@
 /* Generated Code Do Not Modify */
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-//not GWT import const Stack
+//not plain js import { Stack } 
+const Stack = globalThis.java.util.Stack;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Canvas } from './Canvas.js';
-//not GWT import - same folder const Graphics
+//sameFolderImports - not GWT import - same folder const Graphics
 export class NullCanvas extends Canvas {
     constructor() {
         super();

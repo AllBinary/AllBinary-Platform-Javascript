@@ -12,14 +12,14 @@
 */
 //not GWT import const EventListenerInterface
 import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import - same folder const WaypointEventListenerInterface
+//sameFolderImports - not GWT import - same folder const WaypointEventListenerInterface
 export class WaypointEventHandler extends BasicEventHandler {
     constructor() {
         super();
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var waypointEventListenerInterface = eventListenerInterface;
+        let waypointEventListenerInterface = eventListenerInterface;
         ;
         waypointEventListenerInterface.onWaypointEvent(eventObject);
     }

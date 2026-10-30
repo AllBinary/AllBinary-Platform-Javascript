@@ -24,17 +24,17 @@ import { ImageRotationUtil } from '../../../../org/allbinary/media/image/ImageRo
 //not GWT import const ImageRotationUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation
+//sameFolderImports - not GWT import - same folder const ImageBaseRotationAnimation
 import { ModifierBaseProcessor } from './ModifierBaseProcessor.js';
-//not GWT import - same folder const ModifierBaseProcessor
+//sameFolderImports - not GWT import - same folder const ModifierBaseProcessor
 import { ScaleProcessor } from './ScaleProcessor.js';
-//not GWT import - same folder const ScaleBaseProcessor
+//sameFolderImports - not GWT import - same folder const ScaleBaseProcessor
 import { SetColorProcessor } from './SetColorProcessor.js';
-//not GWT import - same folder const SetColorProcessor
+//sameFolderImports - not GWT import - same folder const SetColorProcessor
 import { ChangeColorProcessor } from './ChangeColorProcessor.js';
-//not GWT import - same folder const ChangeColorProcessor
+//sameFolderImports - not GWT import - same folder const ChangeColorProcessor
 import { AlphaProcessor } from './AlphaProcessor.js';
-//not GWT import - same folder const AlphaProcessor
+//sameFolderImports - not GWT import - same folder const AlphaProcessor
 export class AllBinaryJ2SEImageRotationAnimation extends ImageBaseRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);
@@ -61,7 +61,7 @@ export class AllBinaryJ2SEImageRotationAnimation extends ImageBaseRotationAnimat
         this.twoImages[1] = ImageCopyUtil.getInstance().createImageForRotation(image);
     }
     setBasicColorP(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getBasicColorP() ==
             null
@@ -75,7 +75,7 @@ export class AllBinaryJ2SEImageRotationAnimation extends ImageBaseRotationAnimat
         }
     }
     changeBasicColor(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getChangeBasicColor() ==
             null
@@ -89,7 +89,7 @@ export class AllBinaryJ2SEImageRotationAnimation extends ImageBaseRotationAnimat
         }
     }
     setAlpha(alpha) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.alphaP != alpha) {
             changed = true;
@@ -149,16 +149,16 @@ export class AllBinaryJ2SEImageRotationAnimation extends ImageBaseRotationAnimat
     }
     close() {
         super.close();
-        var disposalUtil = DisposalUtil.getInstance();
+        let disposalUtil = DisposalUtil.getInstance();
         ;
-        var size2 = this.twoImages.length;
+        let size2 = this.twoImages.length;
         ;
-        for (var index = 0; index < size2; index++) {
+        for (let index = 0; index < size2; index++) {
             disposalUtil.disposeImage(this.twoImages[index]);
         }
-        var size = this.originalImageArray.length;
+        let size = this.originalImageArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             disposalUtil.disposeImage(this.originalImageArray[index]);
         }
         disposalUtil.disposeImage(this.realOriginalImage);
@@ -167,16 +167,16 @@ export class AllBinaryJ2SEImageRotationAnimation extends ImageBaseRotationAnimat
     //@Throws(Throwable.constructor)
     finalize() {
         super.finalize();
-        var disposalUtil = DisposalUtil.getInstance();
+        let disposalUtil = DisposalUtil.getInstance();
         ;
-        var size2 = this.twoImages.length;
+        let size2 = this.twoImages.length;
         ;
-        for (var index = 0; index < size2; index++) {
+        for (let index = 0; index < size2; index++) {
             disposalUtil.disposeImage(this.twoImages[index]);
         }
-        var size = this.originalImageArray.length;
+        let size = this.originalImageArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             disposalUtil.disposeImage(this.originalImageArray[index]);
         }
         disposalUtil.disposeImage(this.realOriginalImage);

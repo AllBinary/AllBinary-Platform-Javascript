@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LicenseInitInfo } from './LicenseInitInfo.js';
-//not GWT import - same folder const LicenseInitInfo
+//sameFolderImports - not GWT import - same folder const LicenseInitInfo
 export class LicenseInitInfoUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -45,7 +45,7 @@ export class LicenseInitInfoUtil extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     readAgain(initializeCounter) {
-        var licenseInitInfo = new LicenseInitInfo();
+        let licenseInitInfo = new LicenseInitInfo();
         ;
         licenseInitInfo.clearServers();
         licenseInitInfo.addServer(this.OFFICIAL_ALLBINARY_SERVICES_SERVER);

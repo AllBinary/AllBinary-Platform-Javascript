@@ -35,11 +35,11 @@ export class AnimationFactoryInitializationVisitor extends Object {
     visit() {
     }
     toString() {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var commonLabels = CommonLabels.getInstance();
+        let commonLabels = CommonLabels.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(PositionStrings.getInstance().DX_LABEL).appendfloat(this.dx);
         stringBuffer.append(PositionStrings.getInstance().DY_LABEL).appendfloat(this.dy);

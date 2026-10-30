@@ -17,7 +17,7 @@ import { PersistentInputMapping } from '../../../../org/allbinary/game/input/map
 //not GWT import const AbeClientInformationInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCKeyFactory } from './PCKeyFactory.js';
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 export class PCGameInputMapping extends PersistentInputMapping {
     constructor() {
         super(GamePersistanceStrings.getInstance().SAVED_INPUT_CONFIGURATION_RECORD_ID);

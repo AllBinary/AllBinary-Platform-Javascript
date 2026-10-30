@@ -17,10 +17,10 @@ import { AnimationBehavior } from '../../../../org/allbinary/animation/Animation
 //not GWT import const CacheableInterfaceFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayRotationAnimationCacheable } from './ImageArrayRotationAnimationCacheable.js';
-//not GWT import - same folder const ImageArrayRotationAnimationCacheable
+//sameFolderImports - not GWT import - same folder const ImageArrayRotationAnimationCacheable
 export class ImageArrayRotationAnimationCacheableInterfaceFactory extends Object {
     //@Throws(Exception.constructor)
-    getInstance(key = {}) {
+    getInstance(key) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new ImageArrayRotationAnimationCacheable(key, AnimationBehavior.getInstance());
     }

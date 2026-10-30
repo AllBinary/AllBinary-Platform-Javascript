@@ -13,7 +13,7 @@
 */
 //not GWT import const AllBinaryLayer
 import { AllBinaryLayerCircularPool } from '../../../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
-//not GWT import - same folder const PointsLayer
+//sameFolderImports - not GWT import - same folder const PointsLayer
 export class PointsLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     constructor(allbinaryLayerFactoryInterface, total) {
         super();
@@ -21,9 +21,9 @@ export class PointsLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     }
     //@Throws(Exception.constructor)
     visit(sourceLayerInterface) {
-        var pointsLayer = this.getNextInstance();
+        let pointsLayer = this.getNextInstance();
         ;
-        var scoreableInterface = sourceLayerInterface;
+        let scoreableInterface = sourceLayerInterface;
         ;
         pointsLayer.visit(scoreableInterface);
     }

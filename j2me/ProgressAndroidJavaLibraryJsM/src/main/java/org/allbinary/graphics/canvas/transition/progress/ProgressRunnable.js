@@ -14,11 +14,11 @@
 //not GWT import const SimpleProgressActivityInterface
 //not plain js import { ARunnable } 
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
-//not GWT import - same folder const ProgressCanvas
+//sameFolderImports - not GWT import - same folder const ProgressCanvas
 export class ProgressRunnable extends ARunnable {
     constructor(midletActivity, progressCanvas) {
         super();
-        var midletActivity2 = midletActivity;
+        let midletActivity2 = midletActivity;
         ;
         this.midletActivity = midletActivity2;
         this.progressCanvas = progressCanvas;

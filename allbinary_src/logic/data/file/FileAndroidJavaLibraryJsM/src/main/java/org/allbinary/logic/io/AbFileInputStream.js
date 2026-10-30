@@ -47,20 +47,29 @@ export class AbFileInputStream extends InputStream {
         return this.fileInputStream.getChannel();
         ;
     }
+    read(...args) {
+        if (args.length === 0)
+            return this.read$overload1();
+        if (args.length === 1)
+            return this.read$overload2(args[0]);
+        if (args.length === 3 && typeof args[1] === 'number' && typeof args[2] === 'number')
+            return this.read$overload3(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: read');
+    }
     //@Throws(IOException.constructor)
-    read() {
+    read$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.fileInputStream.read();
         ;
     }
     //@Throws(IOException.constructor)
-    read(b) {
+    read$overload2(b) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.fileInputStream.read(b);
         ;
     }
     //@Throws(IOException.constructor)
-    read(buffer, offset, count) {
+    read$overload3(buffer, offset, count) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.fileInputStream.read(buffer, offset, count);
         ;

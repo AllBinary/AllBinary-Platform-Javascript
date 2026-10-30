@@ -14,7 +14,7 @@
 //not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MyFontProcessor } from './MyFontProcessor.js';
-//not GWT import - same folder const UpdateMyFontInterface
+//sameFolderImports - not GWT import - same folder const UpdateMyFontInterface
 export class UpdateMyFontProcessor extends MyFontProcessor {
     constructor(keyValueDrawCharArray) {
         super();

@@ -11,7 +11,7 @@ export class EnableFacesShaderOpenGLProcessor extends ObjectThreedOpenGLProcesso
     constructor() {
         super();
     }
-    process(gl, anyType = {}) {
+    process(gl, anyType) {
     }
 }
 EnableFacesShaderOpenGLProcessor.instance = new EnableFacesShaderOpenGLProcessor();

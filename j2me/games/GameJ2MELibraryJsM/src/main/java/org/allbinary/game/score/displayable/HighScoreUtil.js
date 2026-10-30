@@ -51,7 +51,7 @@ export class HighScoreUtil extends Object {
     }
     saveHighScore() {
         this.logUtil.putF(new StringMaker().append(this.commonStrings.START).append(StringUtil.getInstance().toString(this.highScore)).toString(), this, "saveHighScore");
-        var size = this.highScoresArray.length;
+        let size = this.highScoresArray.length;
         ;
         if (this.firstTime && size == 0) {
             this.logUtil.putF("Games canvas did not give us any HighScores", this, "saveHighScore");
@@ -59,11 +59,11 @@ export class HighScoreUtil extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var highScores;
+        let highScores;
         ;
-        var highScoresAsString;
+        let highScoresAsString;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             highScores = this.highScoresArray[index];
             highScores.addHighScore(this.highScore);
             highScoresAsString = highScores.toString();
@@ -72,7 +72,7 @@ export class HighScoreUtil extends Object {
         this.highScoresHelper.setHighScoresArray(this.highScoresArray);
     }
     submit(myCanvas) {
-        var commandListener = myCanvas.getCustomCommandListener();
+        let commandListener = myCanvas.getCustomCommandListener();
         ;
         commandListener.commandAction(HighScoreUtil.SUBMIT_TEXTBOX_COMMAND, myCanvas);
     }

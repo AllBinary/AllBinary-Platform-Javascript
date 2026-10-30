@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderUpdater } from './ShaderUpdater.js';
-//not GWT import - same folder const ShaderOpenGLProcessor
+//sameFolderImports - not GWT import - same folder const ShaderOpenGLProcessor
 export class AppRendererShaderUpdaterFactory extends ShaderUpdater {
     constructor() {
         super(...arguments);
@@ -30,7 +30,7 @@ export class AppRendererShaderUpdaterFactory extends ShaderUpdater {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.shaderOpenGLProcessorArray;
     }
-    setShaderComposite(object3d = {}) {
+    setShaderComposite(object3d) {
     }
 }
 AppRendererShaderUpdaterFactory.instanceC = new AppRendererShaderUpdaterFactory();

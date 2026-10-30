@@ -17,7 +17,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ScreenRepaintUtil extends Object {
     static repaint(displayable) {
-        var canvas = displayable;
+        let canvas = displayable;
         ;
         canvas.repaint();
     }

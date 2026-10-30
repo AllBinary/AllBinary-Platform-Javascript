@@ -13,7 +13,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidGameKey } from './AndroidGameKey.js';
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 export class AndroidKeyFactory extends ActivityFractureUtil {
     constructor() {
         super(...arguments);
@@ -136,7 +136,7 @@ export class AndroidKeyFactory extends ActivityFractureUtil {
         this.SEARCH = new AndroidGameKey(KeyEvent.KEYCODE_SEARCH, "SEARCH");
     }
     init() {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF("Start/End", this, commonStrings.INIT);
     }

@@ -18,9 +18,9 @@ import { NullOpenGLProcessorFactory } from '../../../../../org/allbinary/graphic
 //not GWT import const OpenGLProcessor
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const ModelViewProjection
+//sameFolderImports - not GWT import - same folder const ModelViewProjection
 import { NullOpenGLTextureProcessor } from './NullOpenGLTextureProcessor.js';
-//not GWT import - same folder const OpenGLObject3dProcessor
+//sameFolderImports - not GWT import - same folder const OpenGLObject3dProcessor
 export class ShaderComposite extends Object {
     constructor(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor) {
         super();

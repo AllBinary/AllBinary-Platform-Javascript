@@ -15,7 +15,7 @@
 import { HealthBarTwodAnimation } from '../../../../../org/allbinary/game/health/HealthBarTwodAnimation.js';
 //not GWT import const HealthListenerInterface
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import - same folder const Life
+//sameFolderImports - not GWT import - same folder const Life
 export class HealthIncludingLifeBar extends Paintable {
     //@Throws(Exception.constructor)
     static createHealthIncludingLifeBar(layerInterface, life, healthInterface, location, direction) {

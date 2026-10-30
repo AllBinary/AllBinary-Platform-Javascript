@@ -16,14 +16,14 @@ import { LocalPlayerInputIdFactory } from '../../../../../org/allbinary/game/inp
 //not GWT import const EventListenerInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DownKeyEventHandlerBase } from './DownKeyEventHandlerBase.js';
-//not GWT import - same folder const DownKeyEventHandlerBase
+//sameFolderImports - not GWT import - same folder const DownKeyEventHandlerBase
 export class DownKeyEventHandler extends DownKeyEventHandlerBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return DownKeyEventHandler.instance;
     }
     getInstanceForDevice(deviceId) {
-        var playerInputId = this.playerInputIdFactory.getPlayerForDevice(deviceId);
+        let playerInputId = this.playerInputIdFactory.getPlayerForDevice(deviceId);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return DownKeyEventHandler.instanceArray[playerInputId];
@@ -38,20 +38,20 @@ export class DownKeyEventHandler extends DownKeyEventHandlerBase {
     }
     removeAllListeners() {
         super.removeAllListeners();
-        for (var index = DownKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = DownKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             DownKeyEventHandler.instanceArray[index].removeAllListeners();
         }
     }
     removeListenerSingleThreaded(eventListenerInterface) {
         super.removeListenerSingleThreaded(eventListenerInterface);
-        for (var index = DownKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = DownKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             DownKeyEventHandler.instanceArray[index].removeListenerSingleThreaded(eventListenerInterface);
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     removeListener(eventListenerInterface) {
         super.removeListener(eventListenerInterface);
-        for (var index = DownKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = DownKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             DownKeyEventHandler.instanceArray[index].removeListener(eventListenerInterface);
         }
     }

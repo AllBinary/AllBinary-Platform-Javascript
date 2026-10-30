@@ -1,5 +1,5 @@
 /* Generated Code Do Not Modify */
-//not GWT import - same folder const FloatBuffer
+//sameFolderImports - not GWT import - same folder const FloatBuffer
 //Interfaces do not have static fields for typescript so create a class with the static fields
 export class GL10I {
 }

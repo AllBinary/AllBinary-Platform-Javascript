@@ -19,7 +19,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { EventStrings } from '../../../../../../../org/allbinary/logic/util/event/EventStrings.js';
 //not GWT import const EventStrings
 import { BasicEventHandler } from '../../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import - same folder const GeographicMapCellPositionEventListenerInterface
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPositionEventListenerInterface
 export class GeographicMapCellPositionEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,15 +44,17 @@ export class GeographicMapCellPositionEventHandler extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var miniMapLayer = this.list.get(index);
+                let miniMapLayer = this.list.get(index);
                 ;
                 miniMapLayer.onGeographicMapCellPositionEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
         super.fireEvent(eventObject);
@@ -60,40 +62,44 @@ export class GeographicMapCellPositionEventHandler extends BasicEventHandler {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     fireRemoveEvent(eventObject) {
-        var list = this.eventListenerInterfaceList;
+        let list = this.eventListenerInterfaceList;
         ;
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var miniMapLayer = this.list.get(index);
+                let miniMapLayer = this.list.get(index);
                 ;
                 miniMapLayer.onRemoveGeographicMapCellPositionEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var geographicMapCellPositionEventListenerInterface;
+        let geographicMapCellPositionEventListenerInterface;
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             try {
                 eventListenerInterface = list.get(index);
                 geographicMapCellPositionEventListenerInterface = eventListenerInterface;
                 geographicMapCellPositionEventListenerInterface.onRemoveGeographicMapCellPositionEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var geographicMapCellPositionEventListenerInterface = eventListenerInterface;
+        let geographicMapCellPositionEventListenerInterface = eventListenerInterface;
         ;
         geographicMapCellPositionEventListenerInterface.onGeographicMapCellPositionEvent(eventObject);
     }

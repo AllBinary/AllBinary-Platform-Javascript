@@ -17,7 +17,7 @@ import { BasicGroupFactory } from '../../../../../org/allbinary/game/identificat
 //not GWT import const BasicGroupFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import - same folder const RTSFormInput
+//sameFolderImports - not GWT import - same folder const RTSFormInput
 export class NullRTSFormInputFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

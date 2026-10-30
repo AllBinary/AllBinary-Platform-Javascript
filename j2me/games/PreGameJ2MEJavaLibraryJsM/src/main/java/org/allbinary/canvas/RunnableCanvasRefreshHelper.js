@@ -14,7 +14,7 @@
 //not GWT import const MyCanvas
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Processor } from './Processor.js';
-//not GWT import - same folder const Processor
+//sameFolderImports - not GWT import - same folder const Processor
 export class RunnableCanvasRefreshHelper extends Processor {
     constructor(runnableCanvas) {
         super();

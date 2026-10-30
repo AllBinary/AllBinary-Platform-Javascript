@@ -17,7 +17,7 @@ import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/ma
 //not GWT import const SmallIntegerSingletonFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Aggression } from './Aggression.js';
-//not GWT import - same folder const Aggression
+//sameFolderImports - not GWT import - same folder const Aggression
 export class Driver extends Object {
     constructor(turnSpeed, trackPathSelectionSkill, aggression) {
         super();

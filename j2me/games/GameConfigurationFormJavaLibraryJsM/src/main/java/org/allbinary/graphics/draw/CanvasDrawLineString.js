@@ -20,7 +20,7 @@ import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/U
 //not GWT import const UpdateMyFontProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DrawStringUtil } from './DrawStringUtil.js';
-//not GWT import - same folder const DrawStringUtil
+//sameFolderImports - not GWT import - same folder const DrawStringUtil
 export class CanvasDrawLineString extends Object {
     constructor(x, y) {
         super();
@@ -31,7 +31,7 @@ export class CanvasDrawLineString extends Object {
         this.y = y;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
         this.myFontProcessor = MyFontProcessor.getInstance();

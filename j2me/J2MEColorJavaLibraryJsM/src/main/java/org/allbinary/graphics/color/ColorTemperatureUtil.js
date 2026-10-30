@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicColorFactory } from './BasicColorFactory.js';
-//not GWT import - same folder const BasicColor
+//sameFolderImports - not GWT import - same folder const BasicColor
 export class ColorTemperatureUtil extends Object {
     constructor() {
         super(...arguments);
@@ -26,7 +26,7 @@ export class ColorTemperatureUtil extends Object {
         return ColorTemperatureUtil.instance;
     }
     getBasicColor(thirdTemp) {
-        var basicColor = this.basicColorFactory.RED;
+        let basicColor = this.basicColorFactory.RED;
         ;
         if (thirdTemp > 3700) {
             basicColor = this.basicColorFactory.PURPLE;

@@ -15,17 +15,17 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInputProcessor } from './GameInputProcessor.js';
-//not GWT import - same folder const GameInputProcessor
+//sameFolderImports - not GWT import - same folder const GameInputProcessor
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const InputFactory
+//sameFolderImports - not GWT import - same folder const InputFactory
 export class GameInputProcessorUtil extends Object {
     static init(inputProcessorArray) {
-        var noInputProcessor = GameInputProcessor.getInstance();
+        let noInputProcessor = GameInputProcessor.getInstance();
         ;
-        var total = InputFactory.getInstance().MAX;
+        let total = InputFactory.getInstance().MAX;
         ;
-        for (var index = 0; index < total; index++) {
-            var inputProcessorCanBeNull = inputProcessorArray[index];
+        for (let index = 0; index < total; index++) {
+            let inputProcessorCanBeNull = inputProcessorArray[index];
             ;
             if (inputProcessorCanBeNull ==
                 null) {

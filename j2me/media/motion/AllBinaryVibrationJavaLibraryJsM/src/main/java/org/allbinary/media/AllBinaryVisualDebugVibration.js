@@ -26,7 +26,7 @@ import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js'
 //not GWT import const TimeDelayHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryVibrationME } from './AllBinaryVibrationME.js';
-//not GWT import - same folder const AllBinaryVibrationME
+//sameFolderImports - not GWT import - same folder const AllBinaryVibrationME
 export class AllBinaryVisualDebugVibration extends AllBinaryVibrationME {
     constructor() {
         super(...arguments);
@@ -38,7 +38,7 @@ export class AllBinaryVisualDebugVibration extends AllBinaryVibrationME {
         this.width = 0;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.width = font.stringWidth(this.VIBRATING);
         this.myFontProcessor = MyFontProcessor.getInstance();

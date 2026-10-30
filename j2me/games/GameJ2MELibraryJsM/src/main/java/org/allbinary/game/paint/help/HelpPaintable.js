@@ -42,13 +42,13 @@ export class HelpPaintable extends Paintable {
         this.basicColor = basicColor;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.titleBeginWidth = (font.stringWidth(this.title) >> 1);
         this.charHeight = font.getHeight();
-        var size = this.inputInfo.length;
+        let size = this.inputInfo.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.beginWidthArray[index] = (font.stringWidth(this.inputInfo[index]) >> 1);
         }
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -60,13 +60,13 @@ export class HelpPaintable extends Paintable {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var halfWidth = this.displayInfo.getLastHalfWidth();
+        let halfWidth = this.displayInfo.getLastHalfWidth();
         ;
         graphics.setColor(this.basicColor.intValue());
         graphics.drawString(this.title, halfWidth - this.titleBeginWidth, this.charHeight, this.anchor);
-        var size = this.inputInfo.length;
+        let size = this.inputInfo.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             graphics.drawString(this.inputInfo[index], halfWidth - this.beginWidthArray[index], (index + 3) * this.charHeight, this.anchor);
         }
     }

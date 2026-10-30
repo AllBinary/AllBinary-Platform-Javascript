@@ -22,9 +22,9 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageUtil } from './ImageUtil.js';
-//not GWT import - same folder const ImageUtil
+//sameFolderImports - not GWT import - same folder const ImageUtil
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageModifierUtil extends Object {
     constructor() {
         super(...arguments);
@@ -38,32 +38,32 @@ export class ImageModifierUtil extends Object {
     setBasicColorP(basicColor) {
     }
     setColor(unusedOriginalImage, image, imageIndex, basicColor) {
-        var newBufferedImage = this.imageUtil.getBufferedImage(image);
+        let newBufferedImage = this.imageUtil.getBufferedImage(image);
         ;
-        var r = basicColor.red;
+        let r = basicColor.red;
         ;
-        var g = basicColor.green;
+        let g = basicColor.green;
         ;
-        var b = basicColor.blue;
+        let b = basicColor.blue;
         ;
-        var width = image.getWidth();
+        let width = image.getWidth();
         ;
-        var height = image.getHeight();
+        let height = image.getHeight();
         ;
-        var colorModel;
+        let colorModel;
         ;
-        var dataElements;
+        let dataElements;
         ;
-        var ax = 0;
+        let ax = 0;
         ;
-        var rx = 0;
+        let rx = 0;
         ;
-        var gx = 0;
+        let gx = 0;
         ;
-        var bx = 0;
+        let bx = 0;
         ;
-        for (var index = 0; index < width; index++) {
-            for (var index2 = 0; index2 < height; index2++) {
+        for (let index = 0; index < width; index++) {
+            for (let index2 = 0; index2 < height; index2++) {
                 colorModel = newBufferedImage.getColorModel();
                 dataElements = newBufferedImage.getRaster().getDataElements(index, index2, null);
                 ax = colorModel.getAlpha(dataElements);
@@ -77,34 +77,34 @@ export class ImageModifierUtil extends Object {
         }
     }
     changeColor(unusedOriginalImage, image, imageIndex, basicColor) {
-        var newBufferedImage = this.imageUtil.getBufferedImage(image);
+        let newBufferedImage = this.imageUtil.getBufferedImage(image);
         ;
-        var MAX = 255;
+        let MAX = 255;
         ;
-        var r = (basicColor.red) / MAX;
+        let r = (basicColor.red) / MAX;
         ;
-        var g = (basicColor.green) / MAX;
+        let g = (basicColor.green) / MAX;
         ;
-        var b = (basicColor.blue) / MAX;
+        let b = (basicColor.blue) / MAX;
         ;
-        var width = image.getWidth();
+        let width = image.getWidth();
         ;
-        var height = image.getHeight();
+        let height = image.getHeight();
         ;
-        var colorModel;
+        let colorModel;
         ;
-        var dataElements;
+        let dataElements;
         ;
-        var ax = 0;
+        let ax = 0;
         ;
-        var rx = 0;
+        let rx = 0;
         ;
-        var gx = 0;
+        let gx = 0;
         ;
-        var bx = 0;
+        let bx = 0;
         ;
-        for (var index = 0; index < width; index++) {
-            for (var index2 = 0; index2 < height; index2++) {
+        for (let index = 0; index < width; index++) {
+            for (let index2 = 0; index2 < height; index2++) {
                 colorModel = newBufferedImage.getColorModel();
                 dataElements = newBufferedImage.getRaster().getDataElements(index, index2, null);
                 ax = colorModel.getAlpha(dataElements);
@@ -119,18 +119,18 @@ export class ImageModifierUtil extends Object {
         }
     }
     setAlpha(unusedOriginalImage, image, imageIndex, alphaInt) {
-        var alpha = alphaInt;
+        let alpha = ((alphaInt) << 24 >> 24);
         ;
-        var newBufferedImage = this.imageUtil.getBufferedImage(image);
+        let newBufferedImage = this.imageUtil.getBufferedImage(image);
         ;
-        var width = image.getWidth();
+        let width = image.getWidth();
         ;
-        var height = image.getHeight();
+        let height = image.getHeight();
         ;
-        var raster = newBufferedImage.getAlphaRaster();
+        let raster = newBufferedImage.getAlphaRaster();
         ;
-        for (var index = 0; index < width; index++) {
-            for (var index2 = 0; index2 < height; index2++) {
+        for (let index = 0; index < width; index++) {
+            for (let index2 = 0; index2 < height; index2++) {
                 raster.getPixel(index, index2, this.colorArray);
                 this.colorArray[0] = alpha & this.colorArray[0];
                 raster.setPixel(index, index2, this.colorArray);
@@ -139,29 +139,31 @@ export class ImageModifierUtil extends Object {
     }
     getImageArray(originalImageArray) {
         try {
-            var newImageArray = new Array(originalImageArray.length);
+            let newImageArray = new Array(originalImageArray.length);
             ;
-            var size = newImageArray.length;
+            let size = newImageArray.length;
             ;
-            var originalImage;
+            let originalImage;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 originalImage = originalImageArray[index];
-                var image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
+                let image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
                 ;
                 image.getGraphics().drawImage(originalImage, 0, 0, Anchor.TOP_LEFT);
                 newImageArray[index] = image;
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return newImageArray;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, this, "getImageArray", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return originalImageArray;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, this, "getImageArray", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return originalImageArray;
+            }
         }
     }
     handleImage(imageArray, index, image) {

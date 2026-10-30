@@ -56,15 +56,15 @@ export class CompleteMotionGestureInputToGameMotionGestureInput extends Object {
         return CompleteMotionGestureInputToGameMotionGestureInput.instance;
     }
     init() {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         try {
             PreLogUtil.put("Compound Motion Gestures", this, commonStrings.INIT);
-            var motionGestureConfiguration = MotionGestureConfigurationFactory.getInstance();
+            let motionGestureConfiguration = MotionGestureConfigurationFactory.getInstance();
             ;
-            var touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
+            let touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
             ;
-            var list = new BasicArrayListD();
+            let list = new BasicArrayListD();
             ;
             list.add(touchMotionGestureFactory.DIAGONAL_DOWN_LEFT);
             motionGestureConfiguration.addMotionGestureAction(list, DiagonalDownLeftTouchInputToGameKeyEventAction.getInstance());
@@ -92,10 +92,12 @@ export class CompleteMotionGestureInputToGameMotionGestureInput extends Object {
             list = new BasicArrayListD();
             list.add(touchMotionGestureFactory.RELEASED);
             motionGestureConfiguration.addMotionGestureAction(list, ReleaseTouchInputToGameKeyEventAction.getInstance());
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const ImageCache
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLImageCache } from './OpenGLImageCache.js';
-//not GWT import - same folder const OpenGLImageCache
+//sameFolderImports - not GWT import - same folder const OpenGLImageCache
 //ImageCacheOpenGLESJavaLibrary
 export class OpenGLImageCacheFactory extends Object {
     static getInstance() {

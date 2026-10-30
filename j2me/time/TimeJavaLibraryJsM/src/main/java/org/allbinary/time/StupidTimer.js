@@ -15,7 +15,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 import { ThreadObjectUtil } from '../../../org/allbinary/thread/ThreadObjectUtil.js';
-//not GWT import - same folder const TimeDelayHelper
+//sameFolderImports - not GWT import - same folder const TimeDelayHelper
 export class StupidTimer extends Object {
     constructor() {
         super(...arguments);
@@ -25,21 +25,21 @@ export class StupidTimer extends Object {
         this.threadObjectUtil = ThreadObjectUtil.getInstance();
     }
     visitBool(visitorInterface) {
-        var result = visitorInterface.visit(this.nullUtil.NULL_OBJECT);
+        let result = visitorInterface.visit(this.nullUtil.NULL_OBJECT);
         ;
-        var result2 = result.valueOf();
+        let result2 = result.valueOf();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return result2;
     }
     //@Throws(Exception.constructor)
     visit(visitorInterface, timeDelayHelper) {
-        var tookTooLong = false;
+        let tookTooLong = false;
         ;
-        var WAITING_FOR = "Waiting for: ";
+        let WAITING_FOR = "Waiting for: ";
         ;
         PreLogUtil.put(new StringMaker().append(WAITING_FOR).append(StringUtil.getInstance().toString(visitorInterface)).toString(), this, this.commonStrings.VISIT);
-        var index = 0;
+        let index = 0;
         ;
         while (this.visitBool(visitorInterface)) {
             if (index % 10 == 0) {

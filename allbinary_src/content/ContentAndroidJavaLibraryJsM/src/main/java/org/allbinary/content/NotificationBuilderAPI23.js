@@ -16,10 +16,10 @@ import { Builder } from '../../../android/app/Notification/Builder.js';
 //not GWT import const Parcelable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NotificationBuilder } from './NotificationBuilder.js';
-//not GWT import - same folder const NotificationBuilder
+//sameFolderImports - not GWT import - same folder const NotificationBuilder
 export class NotificationBuilderAPI23 extends NotificationBuilder {
     build(context, command, message, integer, pendingIntent) {
-        var notification = new Builder(context).setSmallIcon(integer.intValue()).setTicker(message).setWhen(Date.now()).setContentTitle(command.getLabel()).setContentText(message).setContentIntent(pendingIntent).build();
+        let notification = new Builder(context).setSmallIcon(integer.intValue()).setTicker(message).setWhen(Date.now()).setContentTitle(command.getLabel()).setContentText(message).setContentIntent(pendingIntent).build();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return notification;

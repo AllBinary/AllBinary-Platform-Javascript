@@ -17,11 +17,11 @@ import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TileLayerPositionIntoViewPositionUtil extends Object {
     static init(gameCanvasInterface, viewPosition) {
-        var geographicMapCompositeInterface = gameCanvasInterface.getLayerManager();
+        let geographicMapCompositeInterface = gameCanvasInterface.getLayerManager();
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
         viewPosition.setTiledLayer(tiledLayer);
     }

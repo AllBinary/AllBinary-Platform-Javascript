@@ -48,23 +48,25 @@ import { PathFindingThreadPool } from '../../../../../../org/allbinary/thread/Pa
 //not GWT import const ThreadPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import { ProgressPaintable } from './ProgressPaintable.js';
-//not GWT import - same folder const ProgressPaintable
+//sameFolderImports - not GWT import - same folder const ProgressPaintable
 import { ProgressEndListener } from './ProgressEndListener.js';
-//not GWT import - same folder const ProgressEndListener
 export class ProgressCanvas extends RunnableCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, false);
-        this.hasPainted = false;
         //inner= member=true isStatic=
-        this.ProgressPaintable = class extends Paintable {
-            constructor(progressCanvas) {
-                super();
-                this.progressCanvas = progressCanvas;
-            }
-            paint(graphics) {
-                this.progressCanvas.paint2(graphics);
-            }
-        };
+        this.ProgressPaintable = (() => {
+            const outer$ProgressCanvas = this;
+            return class extends Paintable {
+                constructor(progressCanvas) {
+                    super();
+                    this.progressCanvas = progressCanvas;
+                }
+                paint(graphics) {
+                    this.progressCanvas.paint2(graphics);
+                }
+            };
+        })();
+        this.hasPainted = false;
         this.GAUGE_PAINTABLE = new this.ProgressPaintable(this);
         this.maxValue = 100.0;
         this.TEXT = this.commonStrings.LOADING;
@@ -94,10 +96,10 @@ export class ProgressCanvas extends RunnableCanvas {
         this.ADD_EARLY_PORTION = "addEarlyPortion";
         //For kotlin this is before the body of the constructor.
         this.backgroundBasicColor = backgroundBasicColor;
-        this.gauge = new ABCustomGaugeItem(StringUtil.getInstance().EMPTY_STRING, Math.round(this.maxValue), 0, backgroundBasicColor, foregroundBasicColor);
+        this.gauge = new ABCustomGaugeItem(StringUtil.getInstance().EMPTY_STRING, globalThis.Math.trunc(this.maxValue), 0, backgroundBasicColor, foregroundBasicColor);
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.gauge.setHeight(font.getHeight() + 2);
         this.myFontProcessor = MyFontProcessor.getInstance();

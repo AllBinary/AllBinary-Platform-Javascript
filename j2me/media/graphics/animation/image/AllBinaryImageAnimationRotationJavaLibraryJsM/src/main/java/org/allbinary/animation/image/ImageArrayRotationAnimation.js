@@ -16,11 +16,11 @@ import { Exception } from '../../../../java/lang/Exception.js';
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayBaseRotationAnimation } from './ImageArrayBaseRotationAnimation.js';
-//not GWT import - same folder const ImageArrayRotationAnimationInfo
+//sameFolderImports - not GWT import - same folder const ImageArrayRotationAnimationInfo
 export class ImageArrayRotationAnimation extends ImageArrayBaseRotationAnimation {
     //@Throws(Exception.constructor)
-    static createAnimation(anyType = {}, animationBehavior) {
-        var imageRotationAnimationInfo = anyType;
+    static createAnimation(anyType, animationBehavior) {
+        let imageRotationAnimationInfo = anyType;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new ImageArrayRotationAnimation(imageRotationAnimationInfo.getImageArray(), imageRotationAnimationInfo.getAngleInfoP(), imageRotationAnimationInfo.getTotalAngle(), animationBehavior);

@@ -13,7 +13,7 @@
 */
 //not GWT import const AllBinaryLayer
 import { AllBinaryLayerCircularPool } from '../../../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
-//not GWT import - same folder const LifeLayer
+//sameFolderImports - not GWT import - same folder const LifeLayer
 export class LifeLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     constructor(allbinaryLayerFactoryInterface, total) {
         super();
@@ -21,11 +21,11 @@ export class LifeLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     }
     //@Throws(Exception.constructor)
     visit(sourceLayerInterface) {
-        var lifeLayer = this.getNextInstance();
+        let lifeLayer = this.getNextInstance();
         ;
-        var lifeInterfaceCompositeInterface = sourceLayerInterface;
+        let lifeInterfaceCompositeInterface = sourceLayerInterface;
         ;
-        var lifeInterface = lifeInterfaceCompositeInterface.getLifeInterface();
+        let lifeInterface = lifeInterfaceCompositeInterface.getLifeInterface();
         ;
         lifeLayer.visit(lifeInterface);
     }

@@ -21,9 +21,9 @@ import { DestroyedLayerProcessor } from '../../../../../org/allbinary/game/comba
 import { BasicGroupFactory } from '../../../../../org/allbinary/game/identification/BasicGroupFactory.js';
 //not GWT import const BasicGroupFactory
 import { MultiPlayerGameLayer } from '../../../../../org/allbinary/game/multiplayer/layer/MultiPlayerGameLayer.js';
-//not GWT import - same folder const PickupableInterface
+//sameFolderImports - not GWT import - same folder const PickupableInterface
 import { CountedPickedUpLayerInterfaceFactory } from './CountedPickedUpLayerInterfaceFactory.js';
-//not GWT import - same folder const PickedUpLayerInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const PickedUpLayerInterfaceFactoryInterface
 export class PickupLayer extends MultiPlayerGameLayer {
     constructor(name, remoteInfo, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition) {
         super(remoteInfo, BasicGroupFactory.getInstance().NONE_ARRAY, name, rectangle, viewPosition);
@@ -45,20 +45,20 @@ export class PickupLayer extends MultiPlayerGameLayer {
         this.setPosition(x, y, z);
     }
     paint(graphics) {
-        var viewPosition = this.getViewPosition();
+        let viewPosition = this.getViewPosition();
         ;
-        var viewX = viewPosition.getX();
+        let viewX = viewPosition.getX();
         ;
-        var viewY = viewPosition.getY();
+        let viewY = viewPosition.getY();
         ;
         this.animationInterface.paintXY(graphics, viewX, viewY);
     }
     paintThreed(graphics) {
-        var viewPosition = this.getViewPosition();
+        let viewPosition = this.getViewPosition();
         ;
-        var viewX = viewPosition.getX();
+        let viewX = viewPosition.getX();
         ;
-        var viewY = viewPosition.getY();
+        let viewY = viewPosition.getY();
         ;
         this.animationInterface.paintThreedXYZ(graphics, viewX, viewY, 3);
     }
@@ -87,7 +87,7 @@ export class PickupLayer extends MultiPlayerGameLayer {
     }
     //@Throws(Exception.constructor)
     set(gl) {
-        var openGLSurfaceChangedInterface = this.animationInterface;
+        let openGLSurfaceChangedInterface = this.animationInterface;
         ;
         openGLSurfaceChangedInterface.set(gl);
     }

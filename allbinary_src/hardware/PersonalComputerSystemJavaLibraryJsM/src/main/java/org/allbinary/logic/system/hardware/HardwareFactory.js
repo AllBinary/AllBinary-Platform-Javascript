@@ -20,16 +20,23 @@ import { OperatingSystems } from '../../../../../org/allbinary/logic/system/os/O
 import { LinuxHardware } from '../../../../../org/allbinary/logic/system/hardware/linux/LinuxHardware.js';
 //not GWT import const LinuxHardware
 import { WindowsHardware } from '../../../../../org/allbinary/logic/system/hardware/windows/WindowsHardware.js';
-//not GWT import - same folder const HardwareInterface
+//sameFolderImports - not GWT import - same folder const HardwareInterface
 export class HardwareFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return HardwareFactory.instance;
     }
     //@Throws(Exception.constructor)
-    static getInstance(os) {
+    static getInstance$overload2(os) {
         try {
-            var operatingSystems = OperatingSystems.getInstance();
+            let operatingSystems = OperatingSystems.getInstance();
             ;
             if (os.getName().compareTo(operatingSystems.LINUX) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,10 +47,12 @@ export class HardwareFactory extends Object {
                 return new WindowsHardware();
             }
             throw new Exception("No Hardware Imp for: " + os.getName());
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     constructor() {

@@ -18,7 +18,7 @@ import { AngleInfo } from '../../../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HackRotationSpriteIndexedAnimation } from './HackRotationSpriteIndexedAnimation.js';
-//not GWT import - same folder const HackRotationSpriteIndexedAnimation
+//sameFolderImports - not GWT import - same folder const HackRotationSpriteIndexedAnimation
 export class AllBinarySpriteRotationAnimation extends HackRotationSpriteIndexedAnimation {
     constructor(sprite, image, animationBehavior) {
         super(sprite, image, AngleInfo.getInstance((AngleFactory.getInstance().TOTAL_ANGLE / sprite.getRawFrameCount())), animationBehavior);
@@ -34,7 +34,7 @@ export class AllBinarySpriteRotationAnimation extends HackRotationSpriteIndexedA
         this.angleInfo.adjustAngle(this.sprite.getFrame());
     }
     setFrameByDirection(direction) {
-        var angle = this.directionUtil.getFrameAngle(direction);
+        let angle = this.directionUtil.getFrameAngle(direction);
         ;
         this.adjustFrameToAngle(angle);
     }
@@ -49,6 +49,6 @@ export class AllBinarySpriteRotationAnimation extends HackRotationSpriteIndexedA
         this.adjustFrame(angle.getValue());
     }
     adjustFrame(angle) {
-        this.setFrame(this.frameUtil.getFrameForAngle(angle, Math.round(this.angleInfo.getAngleIncrementInfo().getAngleIncrement())));
+        this.setFrame(this.frameUtil.getFrameForAngle(angle, globalThis.Math.trunc(this.angleInfo.getAngleIncrementInfo().getAngleIncrement())));
     }
 }

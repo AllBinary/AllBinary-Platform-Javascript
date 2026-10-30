@@ -33,36 +33,36 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InGameFeatures extends Init {
     init() {
-        var LABEL = "Screen Buttons";
+        let LABEL = "Screen Buttons";
         ;
-        var orientationData = OrientationData.getInstance();
+        let orientationData = OrientationData.getInstance();
         ;
-        var exclusiveOrientationSensorVector = GameFeatureChoiceGroups.getExclusiveInstance().get().get(orientationData.ORIENTATION_SENSOR_INPUT);
+        let exclusiveOrientationSensorVector = GameFeatureChoiceGroups.getExclusiveInstance().get().get(orientationData.ORIENTATION_SENSOR_INPUT);
         ;
-        var inGameFeatureChoiceGroups = InGameFeatureChoiceGroups.getExclusiveInstance();
+        let inGameFeatureChoiceGroups = InGameFeatureChoiceGroups.getExclusiveInstance();
         ;
         if (exclusiveOrientationSensorVector !=
             null) {
-            var inGameExclusiveOrientationSensorVectorCanBeNull = inGameFeatureChoiceGroups.get().get(orientationData.ORIENTATION_SENSOR_INPUT);
+            let inGameExclusiveOrientationSensorVectorCanBeNull = inGameFeatureChoiceGroups.get().get(orientationData.ORIENTATION_SENSOR_INPUT);
             ;
             if (inGameExclusiveOrientationSensorVectorCanBeNull ==
                 null) {
                 this.addToInGameMenu();
             }
             else {
-                var inGameExclusiveOrientationSensorVector = inGameExclusiveOrientationSensorVectorCanBeNull;
+                let inGameExclusiveOrientationSensorVector = inGameExclusiveOrientationSensorVectorCanBeNull;
                 ;
                 if (inGameExclusiveOrientationSensorVector.size() == 0) {
                     this.addToInGameMenu();
                 }
             }
         }
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(TouchFeatureFactory.getInstance().SHOW_SCREEN_BUTTONS) || features.isFeature(TouchFeatureFactory.getInstance().AUTO_HIDE_SHOW_SCREEN_BUTTONS) || features.isFeature(TouchFeatureFactory.getInstance().HIDE_SCREEN_BUTTONS)) {
-            var exclusiveScreenButtonsVector = new BasicArrayListD();
+            let exclusiveScreenButtonsVector = new BasicArrayListD();
             ;
-            var touchFeatureFactory = TouchFeatureFactory.getInstance();
+            let touchFeatureFactory = TouchFeatureFactory.getInstance();
             ;
             exclusiveScreenButtonsVector.add(touchFeatureFactory.AUTO_HIDE_SHOW_SCREEN_BUTTONS);
             exclusiveScreenButtonsVector.add(touchFeatureFactory.SHOW_SCREEN_BUTTONS);
@@ -71,24 +71,24 @@ export class InGameFeatures extends Init {
         }
     }
     addToInGameMenu() {
-        var orientationData = OrientationData.getInstance();
+        let orientationData = OrientationData.getInstance();
         ;
-        var inGameExclusiveOrientationSensorVector = new BasicArrayListD();
+        let inGameExclusiveOrientationSensorVector = new BasicArrayListD();
         ;
         inGameExclusiveOrientationSensorVector.add(SensorFeatureFactory.getInstance().ORIENTATION_SENSORS);
         inGameExclusiveOrientationSensorVector.add(SensorFeatureFactory.getInstance().NO_ORIENTATION);
         InGameFeatureChoiceGroups.getExclusiveInstance().add(orientationData.ORIENTATION_SENSOR_INPUT, inGameExclusiveOrientationSensorVector);
     }
     isAny() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var touchFeatureFactory = TouchFeatureFactory.getInstance();
+        let touchFeatureFactory = TouchFeatureFactory.getInstance();
         ;
         if (features.isFeature(touchFeatureFactory.SHOW_SCREEN_BUTTONS) || features.isFeature(touchFeatureFactory.AUTO_HIDE_SHOW_SCREEN_BUTTONS) || features.isFeature(touchFeatureFactory.HIDE_SCREEN_BUTTONS)) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
         }
-        var exclusiveOrientationSensorVector = GameFeatureChoiceGroups.getExclusiveInstance().get().get(OrientationData.getInstance().ORIENTATION_SENSOR_INPUT);
+        let exclusiveOrientationSensorVector = GameFeatureChoiceGroups.getExclusiveInstance().get().get(OrientationData.getInstance().ORIENTATION_SENSOR_INPUT);
         ;
         if (exclusiveOrientationSensorVector !=
             null) {

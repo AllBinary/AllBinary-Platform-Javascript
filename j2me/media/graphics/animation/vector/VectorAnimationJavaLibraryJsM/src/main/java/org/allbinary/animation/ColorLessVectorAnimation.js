@@ -16,7 +16,7 @@ import { BasicColorFactory } from '../../../org/allbinary/graphics/color/BasicCo
 //not GWT import const BasicColorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimation } from './VectorAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class ColorLessVectorAnimation extends VectorAnimation {
     constructor(currentPoints, animationBehavior) {
         super(currentPoints, BasicColorFactory.getInstance().WHITE, animationBehavior);

@@ -28,7 +28,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NumberStringHud } from './NumberStringHud.js';
-//not GWT import - same folder const NumberStringHud
+//sameFolderImports - not GWT import - same folder const NumberStringHud
 export class NumberStringHudFactory extends Object {
     constructor() {
         super(...arguments);
@@ -45,15 +45,17 @@ export class NumberStringHudFactory extends Object {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return new NumberStringHud(StringUtil.getInstance().EMPTY_STRING, 9, BasicHudFactory.getInstance().ABSOLUTE, 1, 0, BasicColorFactory.getInstance().NULL_COLOR);
-            //: 
         }
-        catch (e) {
-            var logUtil = LogUtil.getInstance();
-            ;
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
-            throw new RuntimeException();
+        catch (caught) {
+            {
+                const e = caught;
+                let logUtil = LogUtil.getInstance();
+                ;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+                throw new RuntimeException();
+            }
         }
     }
 }

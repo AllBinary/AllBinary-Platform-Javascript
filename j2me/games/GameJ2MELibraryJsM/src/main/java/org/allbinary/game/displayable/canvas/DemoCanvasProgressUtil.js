@@ -17,16 +17,16 @@ import { Object } from '../../../../../java/lang/Object.js';
 import { ProgressCanvasFactory } from '../../../../../org/allbinary/graphics/canvas/transition/progress/ProgressCanvasFactory.js';
 //not GWT import const ProgressCanvasFactory
 import { PaintableComposite } from '../../../../../org/allbinary/graphics/paint/PaintableComposite.js';
-//not GWT import - same folder const DemoCanvas
+//sameFolderImports - not GWT import - same folder const DemoCanvas
 export class DemoCanvasProgressUtil extends Object {
     static showProgress(demoCanvas) {
         DemoCanvasProgressUtil.showProgressOptionallyInTheBackground(demoCanvas, false);
     }
     static showProgressOptionallyInTheBackground(demoCanvas, background) {
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.startBackground(background);
-        var paintableArray = new Array(2);
+        let paintableArray = new Array(2);
         ;
         paintableArray[0] = progressCanvas;
         paintableArray[1] = demoCanvas.getDefaultPaintableInterface();

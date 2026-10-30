@@ -22,7 +22,7 @@ export class LivesHudWidget extends BasicHud {
         super(location, direction, 2, BasicColorFactory.getInstance().WHITE);
         //For kotlin this is before the body of the constructor.
         this.lifeInterface = lifeInterface;
-        var size = Math.round(this.getLifeInterface().getMaxlives());
+        let size = globalThis.Math.trunc(this.getLifeInterface().getMaxlives());
         ;
         this.xArray = new Array(size);
         this.animationInterface = animationInterface;
@@ -31,9 +31,9 @@ export class LivesHudWidget extends BasicHud {
     }
     updateMeasurement(graphics) {
         super.updateMeasurement(graphics);
-        var maxLives = Math.round(this.getLifeInterface().getMaxlives());
+        let maxLives = globalThis.Math.trunc(this.getLifeInterface().getMaxlives());
         ;
-        for (var index = 0; index < maxLives; index++) {
+        for (let index = 0; index < maxLives; index++) {
             this.xArray[index] = this.getX() + (index * 16);
         }
     }
@@ -47,7 +47,7 @@ export class LivesHudWidget extends BasicHud {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        for (var index = Math.round(this.getLifeInterface().get()); --index >= 0;) {
+        for (let index = globalThis.Math.trunc(this.getLifeInterface().get()); --index >= 0;) {
             this.animationInterface.paintXY(graphics, this.xArray[index], this.getY());
         }
     }

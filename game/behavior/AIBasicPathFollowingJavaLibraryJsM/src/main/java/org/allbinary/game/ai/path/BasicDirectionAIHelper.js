@@ -26,13 +26,13 @@ export class BasicDirectionAIHelper extends Object {
         this.angleInfo = angleInfo;
     }
     turnAI(frame) {
-        var keyDirection = -1;
+        let keyDirection = -1;
         ;
-        var directionAngle = this.angleInfo.getAngleIncrementInfo().getFrameAngle(frame);
+        let directionAngle = this.angleInfo.getAngleIncrementInfo().getFrameAngle(frame);
         ;
-        var angle = this.angleInfo.getAngle();
+        let angle = this.angleInfo.getAngle();
         ;
-        var degrees = Math.abs(directionAngle - angle);
+        let degrees = Math.abs(directionAngle - angle);
         ;
         if (degrees < 180) {
             if (angle > directionAngle) {
@@ -54,7 +54,7 @@ export class BasicDirectionAIHelper extends Object {
         return keyDirection;
     }
     getAIKeyPressed(frame) {
-        var angle = this.angleInfo.getAngleIncrementInfo().getFrameAngle(frame.intValue());
+        let angle = this.angleInfo.getAngleIncrementInfo().getFrameAngle(frame.intValue());
         ;
         if (this.angleInfo.getAngle() != angle) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,11 +67,11 @@ export class BasicDirectionAIHelper extends Object {
         }
     }
     getAIKeyPressedFromDirection(geographicMapDirectionData) {
-        var keyDirection = -1;
+        let keyDirection = -1;
         ;
-        var angleIncrementInfo = this.angleInfo.getAngleIncrementInfo();
+        let angleIncrementInfo = this.angleInfo.getAngleIncrementInfo();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         if (geographicMapDirectionData == directionFactory.DOWN) {
             keyDirection = this.getAIKeyPressed(angleIncrementInfo.DOWN_FRAME);

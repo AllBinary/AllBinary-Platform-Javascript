@@ -20,7 +20,7 @@ import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameNotificationEvent extends AllBinaryEventObject {
-    constructor(anyType = {}, string, seconds, basicColor, permanent) {
+    constructor(anyType, string, seconds, basicColor, permanent) {
         super(anyType);
         this.string = StringUtil.getInstance().EMPTY_STRING;
         this.basicColor = BasicColorFactory.getInstance().BLACK;

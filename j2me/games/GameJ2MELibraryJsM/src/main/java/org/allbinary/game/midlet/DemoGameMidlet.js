@@ -27,11 +27,11 @@ import { NullGameCanvasRunnable } from '../../../../org/allbinary/game/displayab
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameMidlet } from './GameMidlet.js';
-//not GWT import - same folder const GameMidlet
+//sameFolderImports - not GWT import - same folder const GameMidlet
 import { DemoRunnable } from './DemoRunnable.js';
-//not GWT import - same folder const DemoRunnable
+//sameFolderImports - not GWT import - same folder const DemoRunnable
 import { CreateGameRunnable } from './CreateGameRunnable.js';
-//not GWT import - same folder const CreateGameRunnable
+//sameFolderImports - not GWT import - same folder const CreateGameRunnable
 export class DemoGameMidlet extends GameMidlet {
     constructor(clientInformationFactory) {
         super(clientInformationFactory);
@@ -39,7 +39,7 @@ export class DemoGameMidlet extends GameMidlet {
     }
     //@Throws(Exception.constructor)
     isContinue() {
-        var hashtable = this.getStartStateHashtable();
+        let hashtable = this.getStartStateHashtable();
         ;
         if (hashtable !=
             null
@@ -80,7 +80,7 @@ export class DemoGameMidlet extends GameMidlet {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     setDemo() {
         this.logUtil.putF(this.commonStrings.START, this, "setDemo");
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.start();
         PrimaryThreadPool.getInstance().runTask(new DemoRunnable(this));
@@ -88,13 +88,13 @@ export class DemoGameMidlet extends GameMidlet {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     createGame() {
-        var CREATE_GAME = "createGame";
+        let CREATE_GAME = "createGame";
         ;
         this.logUtil.putF(this.commonStrings.START, this, CREATE_GAME);
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.start();
-        var hashtable = this.getStartStateHashtable();
+        let hashtable = this.getStartStateHashtable();
         ;
         this.setStartStateHashtable(StdUtil.getInstance().NULL_TABLE);
         PrimaryThreadPool.getInstance().runTask(new CreateGameRunnable(this, hashtable));

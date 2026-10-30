@@ -12,8 +12,8 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-import { Stack } from '../../../java/util/Stack.js';
-//not GWT import const Stack
+//not plain js import { Stack } 
+const Stack = globalThis.java.util.Stack;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABStack extends Stack {
     push(item) {
@@ -36,12 +36,12 @@ export class ABStack extends Stack {
         return super.empty();
         ;
     }
-    search(obj = {}) {
+    search(obj) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return super.search(obj);
         ;
     }
-    removeElement(obj = {}) {
+    removeElement(obj) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return super.removeElement(obj);
         ;

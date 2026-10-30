@@ -14,7 +14,7 @@
 //not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SequenceAI } from './SequenceAI.js';
-//not GWT import - same folder const SequenceAI
+//sameFolderImports - not GWT import - same folder const SequenceAI
 export class ComboSequenceAI extends SequenceAI {
     constructor(artificialIntelligenceInterface, ownerLayerInterface, gameInput) {
         super(artificialIntelligenceInterface, ownerLayerInterface, gameInput);
@@ -22,11 +22,11 @@ export class ComboSequenceAI extends SequenceAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var artificialIntelligenceInterfaceArray = this.getArtificialIntelligenceInterface();
+        let artificialIntelligenceInterfaceArray = this.getArtificialIntelligenceInterface();
         ;
-        var size = artificialIntelligenceInterfaceArray.length;
+        let size = artificialIntelligenceInterfaceArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.setIndex(index);
             super.processAI(allBinaryLayerManager);
         }

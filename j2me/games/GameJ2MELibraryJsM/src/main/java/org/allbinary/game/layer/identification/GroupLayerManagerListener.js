@@ -46,58 +46,58 @@ export class GroupLayerManagerListener extends LayerManagerEventListener {
         LayerManagerEventHandler.getInstance().addListener(this);
     }
     clear() {
-        var groupList;
+        let groupList;
         ;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             groupList = this.list.objectArray[index];
             groupList.clear();
         }
     }
     getGroupSizeFromInterface(groupInterfaceCompositeInterface) {
-        var groupInterfaceArray = groupInterfaceCompositeInterface.getGroupInterface();
+        let groupInterfaceArray = groupInterfaceCompositeInterface.getGroupInterface();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getGroupSize(groupInterfaceArray[0]);
         ;
     }
     getGroupSize(groupInterface) {
-        var id = Math.round(groupInterface.getGroupId());
+        let id = globalThis.Math.trunc(groupInterface.getGroupId());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getGroupSizeById(id);
         ;
     }
     getList(groupInterface) {
-        var id = Math.round(groupInterface.getGroupId());
+        let id = globalThis.Math.trunc(groupInterface.getGroupId());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getListById(id);
         ;
     }
     getListById(groupId) {
-        var groupList = this.list.objectArray[groupId];
+        let groupList = this.list.objectArray[groupId];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return groupList;
     }
     getGroupSizeById(groupId) {
-        var groupList = this.list.objectArray[groupId];
+        let groupList = this.list.objectArray[groupId];
         ;
-        var size = groupList.size();
+        let size = groupList.size();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return size;
     }
     areAllOtherGroupsEmpty(groupInterface) {
-        var id = Math.round(groupInterface.getGroupId());
+        let id = globalThis.Math.trunc(groupInterface.getGroupId());
         ;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             if (id != index) {
-                var groupSize = this.getGroupSizeById(index);
+                let groupSize = this.getGroupSizeById(index);
                 ;
                 if (groupSize != 0) {
                     this.logUtil.putF(new StringMaker().append("Group Size: ").appendint(groupSize).toString(), this, "areAllOtherGroupsEmpty");
@@ -110,21 +110,21 @@ export class GroupLayerManagerListener extends LayerManagerEventListener {
         return true;
     }
     isIdInList(id, excludeGroupList) {
-        var size = excludeGroupList.size();
+        let size = excludeGroupList.size();
         ;
-        var groupInterfaceArray;
+        let groupInterfaceArray;
         ;
-        var groupInterface;
+        let groupInterface;
         ;
-        var groupId = 0;
+        let groupId = 0;
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             groupInterfaceArray = excludeGroupList.objectArray[index];
-            var size2 = groupInterfaceArray.length;
+            let size2 = groupInterfaceArray.length;
             ;
-            for (var index2 = 0; index2 < size2; index2++) {
+            for (let index2 = 0; index2 < size2; index2++) {
                 groupInterface = groupInterfaceArray[index2];
-                groupId = Math.round(groupInterface.getGroupId());
+                groupId = globalThis.Math.trunc(groupInterface.getGroupId());
                 if (groupId == id) {
                     //if statement needs to be on the same line and ternary does not work the same way.
                     return true;
@@ -135,11 +135,11 @@ export class GroupLayerManagerListener extends LayerManagerEventListener {
         return false;
     }
     areAllOtherGroupsLessThan(excludeGroupList, maxSize) {
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             if (!this.isIdInList(index, excludeGroupList)) {
-                var groupSize = this.getGroupSizeById(index);
+                let groupSize = this.getGroupSizeById(index);
                 ;
                 if (groupSize >= maxSize) {
                     //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,18 +160,18 @@ export class GroupLayerManagerListener extends LayerManagerEventListener {
     }
     //@Throws(Exception.constructor)
     onCreateLayerManagerEvent(layerManagerEvent) {
-        var layerInterface = layerManagerEvent.getLayerInterface();
+        let layerInterface = layerManagerEvent.getLayerInterface();
         ;
-        var groupInterfaceArray = layerInterface.getGroupInterface();
+        let groupInterfaceArray = layerInterface.getGroupInterface();
         ;
-        var size = groupInterfaceArray.length;
+        let size = groupInterfaceArray.length;
         ;
-        var id = 0;
+        let id = 0;
         ;
-        var groupList;
+        let groupList;
         ;
-        for (var index = 0; index < size; index++) {
-            id = Math.round(groupInterfaceArray[index].getGroupId());
+        for (let index = 0; index < size; index++) {
+            id = globalThis.Math.trunc(groupInterfaceArray[index].getGroupId());
             groupList = this.list.objectArray[id];
             if (groupList ==
                 null) {
@@ -186,35 +186,35 @@ export class GroupLayerManagerListener extends LayerManagerEventListener {
     }
     //@Throws(Exception.constructor)
     onDeleteLayerManagerEvent(layerManagerEvent) {
-        var layerInterface = layerManagerEvent.getLayerInterface();
+        let layerInterface = layerManagerEvent.getLayerInterface();
         ;
-        var groupInterfaceArray = layerInterface.getGroupInterface();
+        let groupInterfaceArray = layerInterface.getGroupInterface();
         ;
-        var size = groupInterfaceArray.length;
+        let size = groupInterfaceArray.length;
         ;
-        var id = 0;
+        let id = 0;
         ;
-        var groupList;
+        let groupList;
         ;
-        for (var index = 0; index < size; index++) {
-            id = Math.round(groupInterfaceArray[index].getGroupId());
+        for (let index = 0; index < size; index++) {
+            id = globalThis.Math.trunc(groupInterfaceArray[index].getGroupId());
             groupList = this.list.objectArray[id];
             groupList.remove(layerInterface);
         }
     }
     log() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var GROUP = "Group: ";
+        let GROUP = "Group: ";
         ;
-        var SPACE = CommonSeps.getInstance().SPACE;
+        let SPACE = CommonSeps.getInstance().SPACE;
         ;
-        var TOTAL_LABEL = CommonLabels.getInstance().TOTAL_LABEL;
+        let TOTAL_LABEL = CommonLabels.getInstance().TOTAL_LABEL;
         ;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = size - 1; index >= 0; index--) {
-            var groupList = this.list.objectArray[index];
+        for (let index = size - 1; index >= 0; index--) {
+            let groupList = this.list.objectArray[index];
             ;
             stringBuffer.append(GROUP);
             stringBuffer.appendint(index);

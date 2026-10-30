@@ -40,9 +40,9 @@ export class BasicArrayListUtil extends Object {
         return BasicArrayListUtil.instance;
     }
     static main(args) {
-        var commonPhoneStrings = CommonPhoneStrings.getInstance();
+        let commonPhoneStrings = CommonPhoneStrings.getInstance();
         ;
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
         list.add(commonPhoneStrings.ONE);
         list.add(commonPhoneStrings.TWO);
@@ -57,7 +57,7 @@ export class BasicArrayListUtil extends Object {
         console.log(list.toString());
     }
     getRandom(list) {
-        var i_random = this.getRandomIndex(list);
+        let i_random = this.getRandomIndex(list);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return list.objectArray[i_random];
@@ -68,15 +68,15 @@ export class BasicArrayListUtil extends Object {
         ;
     }
     reverse(list) {
-        var lastMinusOneIndex = list.size() - 2;
+        let lastMinusOneIndex = list.size() - 2;
         ;
-        var temp;
+        let temp;
         ;
-        var size = lastMinusOneIndex / 2;
+        let size = globalThis.Math.trunc(lastMinusOneIndex / 2);
         ;
-        var secondSwapIndex = 0;
+        let secondSwapIndex = 0;
         ;
-        for (var index = 0; index <= size; index++) {
+        for (let index = 0; index <= size; index++) {
             secondSwapIndex = lastMinusOneIndex - index;
             temp = list.removeAt(index);
             list.addAt(index, list.removeAt(secondSwapIndex));
@@ -84,16 +84,16 @@ export class BasicArrayListUtil extends Object {
         }
     }
     log(list) {
-        var S_LABEL = " s: ";
+        let S_LABEL = " s: ";
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(CommonLabels.getInstance().TOTAL_LABEL);
         stringBuffer.appendint(size);
-        for (var index = size - 1; index >= 0; index--) {
-            var usedList = list.objectArray[index];
+        for (let index = size - 1; index >= 0; index--) {
+            let usedList = list.objectArray[index];
             ;
             stringBuffer.append(S_LABEL);
             stringBuffer.appendint(usedList.size());

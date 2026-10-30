@@ -21,16 +21,16 @@ import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/lo
 //not GWT import const SmallIntegerSingletonFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapCellTypeFactory } from './GeographicMapCellTypeFactory.js';
-//not GWT import - same folder const GeographicMapCellTypeFactory
+//sameFolderImports - not GWT import - same folder const GeographicMapCellTypeFactory
 export class GeographicMapCellType extends Object {
     constructor(type, reset) {
         super();
         this.logUtil = LogUtil.getInstance();
         this.type = type;
         if (type != Integer.MIN_VALUE) {
-            var geographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance();
+            let geographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance();
             ;
-            var geographicMapCellTypeArray = geographicMapCellTypeFactory.getGeographicMapCellTypeArray();
+            let geographicMapCellTypeArray = geographicMapCellTypeFactory.getGeographicMapCellTypeArray();
             ;
             if (geographicMapCellTypeArray[type] ==
                 null

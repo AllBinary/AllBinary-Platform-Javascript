@@ -22,7 +22,7 @@ import { GameTickTimeDelayHelperFactory } from '../../../../../org/allbinary/tim
 //not GWT import const GameTickTimeDelayHelperFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameRunnable } from './GameRunnable.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class GameCanvasRunnable extends GameRunnable {
     constructor(allBinaryGameCanvas) {
         super();
@@ -36,12 +36,14 @@ export class GameCanvasRunnable extends GameRunnable {
             this.allBinaryGameCanvas.getLoopTimeHelperP().setStartTime(this.gameTickTimeDelayHelper.setStartTime());
             this.gameTickDisplayInfoSingleton.update();
             this.allBinaryGameCanvas.processGame();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+            }
         }
     }
     //@Throws(Exception.constructor)

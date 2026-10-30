@@ -31,7 +31,7 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class PopupMenuInputProcessor extends BasicMenuInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCanvas, rectangle) {
         super(gameKeyEventList, playerInputId, gameCanvas);
@@ -47,7 +47,7 @@ export class PopupMenuInputProcessor extends BasicMenuInputProcessor {
     //@Throws(Exception.constructor)
     processInput(key) {
         if (key == Canvas.KEY_STAR) {
-            var gameCanvas = this.getCanvas();
+            let gameCanvas = this.getCanvas();
             ;
             gameCanvas.toggleMenu();
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,17 +59,17 @@ export class PopupMenuInputProcessor extends BasicMenuInputProcessor {
     //@Throws(Exception.constructor)
     processInputList() {
         try {
-            var motionInputsIndex = this.processMotionInputs();
+            let motionInputsIndex = this.processMotionInputs();
             ;
-            var list = this.getGameKeyEventList();
+            let list = this.getGameKeyEventList();
             ;
-            var size = list.size();
+            let size = list.size();
             ;
-            var key = 0;
+            let key = 0;
             ;
-            var gameKeyEvent;
+            let gameKeyEvent;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 gameKeyEvent = list.objectArray[index];
                 if (gameKeyEvent !=
                     null) {
@@ -88,20 +88,22 @@ export class PopupMenuInputProcessor extends BasicMenuInputProcessor {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return -1;
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, GameInputStrings.getInstance().PROCESS_INPUT, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return -1;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, GameInputStrings.getInstance().PROCESS_INPUT, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return -1;
+            }
         }
     }
     //@Throws(Exception.constructor)
     processMotionInputs() {
-        var lastIndex = this.motionGestureEventList.size() - 1;
+        let lastIndex = this.motionGestureEventList.size() - 1;
         ;
         if (lastIndex >= 0) {
-            var motionGestureEvent = this.motionGestureEventList.objectArray[lastIndex];
+            let motionGestureEvent = this.motionGestureEventList.objectArray[lastIndex];
             ;
             this.processMotionInput(motionGestureEvent);
         }
@@ -117,18 +119,18 @@ export class PopupMenuInputProcessor extends BasicMenuInputProcessor {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
+        let touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
         ;
-        var motionGestureInput = motionGestureEvent.getMotionGesture();
+        let motionGestureInput = motionGestureEvent.getMotionGesture();
         ;
         if (motionGestureInput == touchMotionGestureFactory.RELEASED) {
-            var point = motionGestureEvent.getCurrentPoint();
+            let point = motionGestureEvent.getCurrentPoint();
             ;
-            var rectPoint = this.rectangle.getPoint();
+            let rectPoint = this.rectangle.getPoint();
             ;
             if (this.rectangleCollisionUtil.isInside(rectPoint.getX(), rectPoint.getY(), this.rectangle.getMaxX() + 20, this.rectangle.getMaxY(), point.getX(), point.getY())) {
                 if (this.clickTimeHelper.isTimeTNT()) {
-                    var gameCanvas = this.getCanvas();
+                    let gameCanvas = this.getCanvas();
                     ;
                     gameCanvas.toggleMenu();
                 }

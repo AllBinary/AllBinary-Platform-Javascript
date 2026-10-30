@@ -46,7 +46,7 @@ export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extend
         super.init(level);
     }
     isLoadingLevel(level) {
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         if (level == resourceLoadingLevelFactory.LOAD_TOUCH.getLevel()) {
             //if statement needs to be on the same line and ternary does not work the same way.

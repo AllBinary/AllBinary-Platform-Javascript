@@ -21,7 +21,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CellPosition } from './CellPosition.js';
-//not GWT import - same folder const CellPosition
+//sameFolderImports - not GWT import - same folder const CellPosition
 export class CellPositionFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,9 +36,9 @@ export class CellPositionFactory extends Object {
         this.rows = 0;
     }
     init(columns, rows) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Init: columns: ");
         stringBuffer.appendint(columns);
@@ -48,8 +48,8 @@ export class CellPositionFactory extends Object {
         this.cellPositionArray = new Array(columns).fill(null).map(() => new Array(rows).fill(null));
         this.columns = columns;
         this.rows = rows;
-        for (var column = 0; column < columns; column++) {
-            for (var row = 0; row < rows; row++) {
+        for (let column = 0; column < columns; column++) {
+            for (let row = 0; row < rows; row++) {
                 this.createInstance(column, row);
             }
         }
@@ -58,18 +58,20 @@ export class CellPositionFactory extends Object {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.cellPositionArray[i_column][i_row];
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(new StringMaker().append("columns: ").appendint(this.getColumns()).append(" rows: ").appendint(this.getRows()).append(" col: ").appendint(i_column).append(" row: ").appendint(i_row).toString(), this, commonStrings.GET_INSTANCE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return this.NONE;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(new StringMaker().append("columns: ").appendint(this.getColumns()).append(" rows: ").appendint(this.getRows()).append(" col: ").appendint(i_column).append(" row: ").appendint(i_row).toString(), this, commonStrings.GET_INSTANCE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return this.NONE;
+            }
         }
     }
     createInstance(i_column, i_row) {
-        var cellPositionCanBeNull = this.cellPositionArray[i_column][i_row];
+        let cellPositionCanBeNull = this.cellPositionArray[i_column][i_row];
         ;
         if (cellPositionCanBeNull ==
             null) {

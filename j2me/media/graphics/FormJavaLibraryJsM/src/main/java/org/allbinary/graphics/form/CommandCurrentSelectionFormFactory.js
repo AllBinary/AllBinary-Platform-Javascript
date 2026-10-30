@@ -19,14 +19,14 @@ import { TouchFeatureFactory } from '../../../../org/allbinary/game/configuratio
 //not GWT import const ABCustomItem
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollSelectionFormNoneFactory } from './ScrollSelectionFormNoneFactory.js';
-//not GWT import - same folder const ScrollSelectionFormNoneFactory
+//sameFolderImports - not GWT import - same folder const ScrollSelectionFormNoneFactory
 import { CommandCurrentSelectionForm } from './CommandCurrentSelectionForm.js';
-//not GWT import - same folder const FormType
+//sameFolderImports - not GWT import - same folder const FormType
 export class CommandCurrentSelectionFormFactory extends Object {
     //@Throws(Exception.constructor)
     static getInstance(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {
         if (Features.getInstance().isFeature(TouchFeatureFactory.getInstance().TOUCH_ENABLED)) {
-            var scrollSelectionForm = new CommandCurrentSelectionForm(title, items, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor);
+            let scrollSelectionForm = new CommandCurrentSelectionForm(title, items, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor);
             ;
             scrollSelectionForm.init(rectangle, formType);
             //if statement needs to be on the same line and ternary does not work the same way.

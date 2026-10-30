@@ -29,17 +29,19 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryGameCanvas } from './AllBinaryGameCanvas.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class NullGameCanvas extends AllBinaryGameCanvas {
     static createNull() {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return new NullGameCanvas(AllBinaryGameLayerManager.getNullInstance());
-            //: 
         }
-        catch (e) {
-            LogUtil.getInstance().put(CommonStrings.getInstance().EXCEPTION, "NullGameCanvas", CommonStrings.getInstance().GET_INSTANCE, e);
-            throw new RuntimeException();
+        catch (caught) {
+            {
+                const e = caught;
+                LogUtil.getInstance().put(CommonStrings.getInstance().EXCEPTION, "NullGameCanvas", CommonStrings.getInstance().GET_INSTANCE, e);
+                throw new RuntimeException();
+            }
         }
     }
     static getInstance() {
@@ -51,7 +53,7 @@ export class NullGameCanvas extends AllBinaryGameCanvas {
     }
     //@Throws(Exception.constructor)
     static createCanvas(gameLayerManager) {
-        var nullGameCanvas = new NullGameCanvas(gameLayerManager);
+        let nullGameCanvas = new NullGameCanvas(gameLayerManager);
         ;
         nullGameCanvas.setInitialized(true);
         nullGameCanvas.setTitle(NullGameCanvas.NO_GAME);
@@ -98,10 +100,12 @@ export class NullGameCanvas extends AllBinaryGameCanvas {
         try {
             this.logUtil.putF(this.commonStrings.START_RUNNABLE, this, this.commonStrings.RUN);
             this.logUtil.putF(this.commonStrings.END_RUNNABLE, this, this.commonStrings.RUN);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+            }
         }
     }
     getType() {

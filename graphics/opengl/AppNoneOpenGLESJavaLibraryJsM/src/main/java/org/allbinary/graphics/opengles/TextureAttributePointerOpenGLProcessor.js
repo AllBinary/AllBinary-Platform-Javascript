@@ -25,7 +25,7 @@ export class TextureAttributePointerOpenGLProcessor extends ObjectThreedOpenGLPr
     constructor() {
         super();
     }
-    process(gl, anyType = {}) {
+    process(gl, anyType) {
         throw new RuntimeException();
     }
 }

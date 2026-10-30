@@ -17,7 +17,7 @@ import { BasicHud } from '../../../../../../../../org/allbinary/game/graphics/hu
 import { MyFontProcessor } from '../../../../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const MyFontProcessor
 import { PrimitiveLongSingleton } from '../../../../../../../../org/allbinary/logic/math/PrimitiveLongSingleton.js';
-//not GWT import - same folder const Timer
+//sameFolderImports - not GWT import - same folder const Timer
 export class TimeHudWidget extends BasicHud {
     //@Throws(Exception.constructor)
     static getInstance(location, direction, basicColor, timer) {
@@ -37,7 +37,7 @@ export class TimeHudWidget extends BasicHud {
         this.updateMaxHeight = 14;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.updateMaxWidth = font.getSize() * 5;
         this.offset = font.stringWidth(this.TIME_STRING) + MyFontProcessor.defaultStringWidth(font, 3);

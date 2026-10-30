@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const GameInitializationInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const GameInitializationInterfaceFactoryInterface
 import { BaseGameInitialization } from './BaseGameInitialization.js';
-//not GWT import - same folder const GameInitializationInterface
+//sameFolderImports - not GWT import - same folder const GameInitializationInterface
 export class BasicBuildGameInitializerFactory extends Object {
     getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -33,7 +33,7 @@ import { ScaleProperties } from '../../../../../org/allbinary/media/ScalePropert
 //not GWT import const Sound
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
-//not GWT import - same folder const SpriteIndexedAnimation
+//sameFolderImports - not GWT import - same folder const SpriteIndexedAnimation
 export class ImageCaptionIndexedAnimationFactory extends Object {
     constructor(captionImage, spriteMovieImage, soundInterface, frameWidth, frameHeight, captionDx, captionDy, dx, dy, time, animationBehaviorFactory) {
         super();
@@ -57,15 +57,15 @@ export class ImageCaptionIndexedAnimationFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var scaledImage = this.animationFactoryImageScaleUtil.createImage(this.captionImage, this.captionImage.getWidth(), this.captionImage.getHeight(), this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let scaledImage = this.animationFactoryImageScaleUtil.createImage(this.captionImage, this.captionImage.getWidth(), this.captionImage.getHeight(), this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
-        var animationInterface = new ImageAnimation(scaledImage, this.animationBehaviorFactory.getOrCreateInstance());
+        let animationInterface = new ImageAnimation(scaledImage, this.animationBehaviorFactory.getOrCreateInstance());
         ;
-        var sprite = this.animationFactorySpriteScaleUtil.createImage(this.spriteMovieImage, this.frameWidth, this.frameHeight, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let sprite = this.animationFactorySpriteScaleUtil.createImage(this.spriteMovieImage, this.frameWidth, this.frameHeight, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
-        var movieIndexedAnimationInterface = new SpriteIndexedAnimation(sprite, this.spriteMovieImage, BasicColorUtil.getInstance().ZERO_ARRAY, this.animationBehaviorFactory.getOrCreateInstance());
+        let movieIndexedAnimationInterface = new SpriteIndexedAnimation(sprite, this.spriteMovieImage, BasicColorUtil.getInstance().ZERO_ARRAY, this.animationBehaviorFactory.getOrCreateInstance());
         ;
-        var player = this.soundInterface.getPlayerP();
+        let player = this.soundInterface.getPlayerP();
         ;
         if (player ==
             null) {

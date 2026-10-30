@@ -20,7 +20,7 @@ import { SmallIntegerSingletonFactory } from '../../../../../../../org/allbinary
 import { BasicGeographicMap } from '../../../../../../../org/allbinary/media/graphics/geography/map/BasicGeographicMap.js';
 //not GWT import const BasicGeographicMap
 import { GeographicMapCellPositionBaseFactory } from '../../../../../../../org/allbinary/media/graphics/geography/map/GeographicMapCellPositionBaseFactory.js';
-//not GWT import - same folder const AllBinaryTiledLayerFactoryInterface
+//sameFolderImports - not GWT import - same folder const AllBinaryTiledLayerFactoryInterface
 export class BasicGeographicMapFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory) {

@@ -22,26 +22,26 @@ import { BasicAI } from '../../../../../org/allbinary/game/ai/BasicAI.js';
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThrustAIVisitorFactory } from './ThrustAIVisitorFactory.js';
-//not GWT import - same folder const ThrustAIVisitorFactory
+//sameFolderImports - not GWT import - same folder const ThrustAIVisitorFactory
 import { BasicProbabilityAIDataFactory } from './BasicProbabilityAIDataFactory.js';
-//not GWT import - same folder const BasicProbabilityAIDataFactory
+//sameFolderImports - not GWT import - same folder const BasicProbabilityAIDataFactory
 import { LastKeyAIVisitorFactory } from './LastKeyAIVisitorFactory.js';
-//not GWT import - same folder const LastKeyAIVisitorFactory
+//sameFolderImports - not GWT import - same folder const LastKeyAIVisitorFactory
 import { DiveAndDirectionalTrackingAI } from './DiveAndDirectionalTrackingAI.js';
-//not GWT import - same folder const DiveAndDirectionalTrackingAI
+//sameFolderImports - not GWT import - same folder const DiveAndDirectionalTrackingAI
 export class DiveAndDirectionalTrackingAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {
-        var visitorCanBeNull = hashtable.get(BasicAI.AI_VISITOR);
+        let visitorCanBeNull = hashtable.get(BasicAI.AI_VISITOR);
         ;
         if (visitorCanBeNull ==
             null) {
             visitorCanBeNull = ThrustAIVisitorFactory.getInstance();
         }
-        var hashtable2 = new BasicProbabilityAIDataFactory().getInstance();
+        let hashtable2 = new BasicProbabilityAIDataFactory().getInstance();
         ;
         hashtable2.put(BasicAI.AI_VISITOR, LastKeyAIVisitorFactory.getInstance());
-        var artificialIntelligenceInterface = new BasicRandomAIFactory().getInstance(hashtable2, ownerLayerInterface, gameInput);
+        let artificialIntelligenceInterface = new BasicRandomAIFactory().getInstance(hashtable2, ownerLayerInterface, gameInput);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new DiveAndDirectionalTrackingAI(ownerLayerInterface, artificialIntelligenceInterface, gameInput, visitorCanBeNull);

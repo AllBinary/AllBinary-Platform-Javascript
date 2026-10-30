@@ -22,16 +22,16 @@ import { DropCellPositionHistory } from '../../../../../../../org/allbinary/medi
 //not GWT import const DropCellPositionHistory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomMapGeneratorBase } from './CustomMapGeneratorBase.js';
-//not GWT import - same folder const RaceTrackGeographicMap
+//sameFolderImports - not GWT import - same folder const RaceTrackGeographicMap
 export class CustomMapGenerator extends CustomMapGeneratorBase {
     constructor(raceTrackGeographicMap) {
         super();
         this.dropCellPositionHistory = DropCellPositionHistory.getInstance();
         this.raceTrackGeographicMap = raceTrackGeographicMap;
         this.geographicMapCellTypeFactory = this.raceTrackGeographicMap.getGeographicMapCellTypeFactory();
-        var mapArray = raceTrackGeographicMap.getRaceTrackData().getMapArray();
+        let mapArray = raceTrackGeographicMap.getRaceTrackData().getMapArray();
         ;
-        var size2 = mapArray[0].length;
+        let size2 = mapArray[0].length;
         ;
         this.customMapArray = new Array(mapArray.length).fill(null).map(() => new Array(size2).fill(null));
         if (mapArray.length != this.customMapArray.length || mapArray[0].length != this.customMapArray[0].length) {
@@ -40,32 +40,32 @@ export class CustomMapGenerator extends CustomMapGeneratorBase {
     }
     //@Throws(Exception.constructor)
     copyMapIntoCustomMap() {
-        var mapArray = this.raceTrackGeographicMap.getRaceTrackData().getMapArray();
+        let mapArray = this.raceTrackGeographicMap.getRaceTrackData().getMapArray();
         ;
-        var startIndex2 = mapArray[0].length - 1;
+        let startIndex2 = mapArray[0].length - 1;
         ;
-        for (var index = mapArray.length - 1; index >= 0; index--) {
-            for (var index2 = startIndex2; index2 >= 0; index2--) {
+        for (let index = mapArray.length - 1; index >= 0; index--) {
+            for (let index2 = startIndex2; index2 >= 0; index2--) {
                 this.customMapArray[index][index2] = this.getCustomType(index2, index, mapArray[index][index2]);
             }
         }
     }
     //@Throws(Exception.constructor)
     getCustomType(column, row, currentType) {
-        var emptyType = this.geographicMapCellTypeFactory.getEmptyType();
+        let emptyType = this.geographicMapCellTypeFactory.getEmptyType();
         ;
-        var geographicMapCellPositionFactory = this.raceTrackGeographicMap.getGeographicMapCellPositionFactory();
+        let geographicMapCellPositionFactory = this.raceTrackGeographicMap.getGeographicMapCellPositionFactory();
         ;
-        var cellPosition = geographicMapCellPositionFactory.getAt(column, row);
+        let cellPosition = geographicMapCellPositionFactory.getAt(column, row);
         ;
         if (this.dropCellPositionHistory.isCellPositionWithDrop(cellPosition)) {
-            var layer = this.dropCellPositionHistory.getLayerInterface(cellPosition);
+            let layer = this.dropCellPositionHistory.getLayerInterface(cellPosition);
             ;
             if (layer == AllBinaryLayer.NULL_ALLBINARY_LAYER) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return emptyType;
             }
-            var rtsLayer = layer;
+            let rtsLayer = layer;
             ;
             if (!(rtsLayer.getType() == WaypointLayer.getStaticType())) {
                 //if statement needs to be on the same line and ternary does not work the same way.

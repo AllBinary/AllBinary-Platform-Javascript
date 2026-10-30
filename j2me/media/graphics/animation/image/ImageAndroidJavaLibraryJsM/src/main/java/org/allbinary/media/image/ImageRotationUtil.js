@@ -21,7 +21,7 @@ import { Matrix } from '../../../../android/graphics/Matrix.js';
 //not GWT import const AndroidImageInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageRotationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -34,17 +34,17 @@ export class ImageRotationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createRotatedImage(originalImage, rotationInDegrees) {
-        var image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
+        let image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
         ;
         if (image.isMutable()) {
-            var bitmap = image.getBitmap();
+            let bitmap = image.getBitmap();
             ;
-            var width = bitmap.getWidth();
+            let width = bitmap.getWidth();
             ;
-            var height = bitmap.getHeight();
+            let height = bitmap.getHeight();
             ;
             this.matrix.setRotate(rotationInDegrees, (width >> 1), (height >> 1));
-            var canvas = image.getCanvas();
+            let canvas = image.getCanvas();
             ;
             canvas.concat(this.matrix);
             image.getGraphics().drawImage(originalImage, 0, 0, this.anchor);

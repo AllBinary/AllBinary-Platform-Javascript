@@ -4,9 +4,9 @@ import { RuntimeException } from '../../../java/lang/RuntimeException.js';
 //not GWT import const OpenGLSurfaceChangedInterface
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const GraphicsInterface
+//sameFolderImports - not GWT import - same folder const GraphicsInterface
 import { NullGL10 } from './NullGL10.js';
-//not GWT import - same folder const NullGL10
+//sameFolderImports - not GWT import - same folder const NullGL10
 export class OpenGLESGraphics extends Object {
     constructor() {
         super();

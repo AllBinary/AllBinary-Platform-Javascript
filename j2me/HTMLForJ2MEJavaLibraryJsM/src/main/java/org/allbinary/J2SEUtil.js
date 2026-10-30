@@ -22,19 +22,19 @@ export class J2SEUtil extends Object {
         return J2SEUtil.instance;
     }
     getHashMapAsArray(hashMap) {
-        var objectArray = hashMap.keys().();
+        let objectArray = hashMap.keys().();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return objectArray;
     }
     getMapAsArray(map) {
-        var objectArray = map.keySet().();
+        let objectArray = map.keySet().();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return objectArray;
     }
     getSetAsArray(set) {
-        var objectArray = set.toArray();
+        let objectArray = set.toArray();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return objectArray;

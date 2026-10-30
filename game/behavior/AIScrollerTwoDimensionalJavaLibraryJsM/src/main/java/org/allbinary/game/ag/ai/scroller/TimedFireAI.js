@@ -20,7 +20,7 @@ import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/lo
 import { GameTickTimeDelayHelperFactory } from '../../../../../../org/allbinary/time/GameTickTimeDelayHelperFactory.js';
 //not GWT import const GameTickTimeDelayHelperFactory
 import { TimeDelayHelper } from '../../../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import - same folder const TimeFiredInterface
+//sameFolderImports - not GWT import - same folder const TimeFiredInterface
 export class TimedFireAI extends BasicAI {
     constructor(delay, ownerLayerInterface, gameInput) {
         super(ownerLayerInterface, gameInput);
@@ -30,7 +30,7 @@ export class TimedFireAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var timeFiredInterface = this.getOwnerLayerInterface();
+        let timeFiredInterface = this.getOwnerLayerInterface();
         ;
         if (this.maxFireDelayTimeHelper.isTime(GameTickTimeDelayHelperFactory.getInstance().startTime) && timeFiredInterface.getLastFireTime() + this.maxFireDelayTimeHelper.delay < this.maxFireDelayTimeHelper.getStartTime()) {
             super.processKeyAI(Canvas.KEY_NUM1);

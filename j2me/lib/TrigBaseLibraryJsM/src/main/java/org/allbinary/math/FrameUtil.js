@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AngleFactory } from './AngleFactory.js';
-//not GWT import - same folder const AngleFactory
+//sameFolderImports - not GWT import - same folder const AngleFactory
 export class FrameUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -26,17 +26,17 @@ export class FrameUtil extends Object {
     }
     getFrameForAngle(angle, angleIncrement) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.adjustAngleToFrameAngle(Math.round(angle)) / angleIncrement;
+        return this.adjustAngleToFrameAngle(globalThis.Math.trunc(angle)) / angleIncrement;
     }
     getFrameAngle(frame, angleIncrement) {
-        var frameAngle = angleIncrement * frame - 90;
+        let frameAngle = angleIncrement * frame - 90;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.adjustAngleToFrameAngle(frameAngle);
         ;
     }
     adjustAngleToFrameAngle(currentAngle) {
-        var angleFactory = AngleFactory.getInstance();
+        let angleFactory = AngleFactory.getInstance();
         ;
         if (currentAngle > 359) {
             currentAngle = (currentAngle - angleFactory.TOTAL_ANGLE);

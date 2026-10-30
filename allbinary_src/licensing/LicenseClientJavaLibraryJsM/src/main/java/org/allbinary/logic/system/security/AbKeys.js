@@ -17,6 +17,8 @@ import { Object } from '../../../../../java/lang/Object.js';
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const AbeClientInformationInterface
 import { AbeLicenseInterfaceFactory } from '../../../../../org/allbinary/logic/system/security/licensing/AbeLicenseInterfaceFactory.js';
+//not GWT import const AbeLicenseInterfaceFactory
+import { LicensingException } from '../../../../../org/allbinary/logic/system/security/licensing/LicensingException.js';
 //not GWT import const LicensingException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbKeys extends Object {
@@ -40,23 +42,18 @@ export class AbKeys extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return AbeLicenseInterfaceFactory.getInstance().getLicenseInstance(abeClientInformation).getKey(keyName);
             ;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            if (caught instanceof LicensingException) {
+                const e = caught;
+                throw e;
+            }
+            else {
+                const e = caught;
+                this.logUtil.put("Licensing Failure", this, "getKey()", e);
+                throw new LicensingException("Unknown License Failure");
+            }
         }
-        //: 
-        /* catch(e)
-                    {
-        this.logUtil!.put("Licensing Failure", this, "getKey()", e);
-            
-        
-        
-        
-                                    throw new LicensingException("Unknown License Failure");
-                            
-        }
-        */
     }
 }
 AbKeys.instance = new AbKeys();

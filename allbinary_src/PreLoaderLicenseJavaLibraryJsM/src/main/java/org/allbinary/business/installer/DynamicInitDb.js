@@ -16,7 +16,7 @@ import { InitDbHelperFactory } from '../../../../org/allbinary/business/init/db/
 //not GWT import const LicensingException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitDb } from './InitDb.js';
-//not GWT import - same folder const InitDb
+//sameFolderImports - not GWT import - same folder const InitDb
 //Warning you must have sql root access
 export class DynamicInitDb extends InitDb {
     constructor(abeClientInformation) {

@@ -27,15 +27,15 @@ import { SecondaryThreadPool } from '../../../../org/allbinary/thread/SecondaryT
 //not GWT import const SecondaryThreadPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresBase } from './HighScoresBase.js';
-//not GWT import - same folder const HighScoresResultsListener
+//sameFolderImports - not GWT import - same folder const HighScoresResultsListener
 import { RecordStoreHighScores } from './RecordStoreHighScores.js';
-//not GWT import - same folder const RecordStoreHighScores
+//sameFolderImports - not GWT import - same folder const RecordStoreHighScores
 import { ScoreComparator } from './ScoreComparator.js';
-//not GWT import - same folder const ScoreComparator
+//sameFolderImports - not GWT import - same folder const ScoreComparator
 import { LastFetchHighScoresFactory } from './LastFetchHighScoresFactory.js';
-//not GWT import - same folder const LastFetchHighScoresFactory
+//sameFolderImports - not GWT import - same folder const LastFetchHighScoresFactory
 import { HighScoresHelper2 } from './HighScoresHelper2.js';
-//not GWT import - same folder const HighScoresHelperBaseInterface
+//sameFolderImports - not GWT import - same folder const HighScoresHelperBaseInterface
 export class BasicHighScoresFactory extends HighScoresBase {
     static loaded(index2) {
         if (index2 >= 0) {
@@ -64,16 +64,16 @@ export class BasicHighScoresFactory extends HighScoresBase {
     fetchHighScoresPreload(gameInfo, highScoresResultsListener, preload) {
         SecondaryThreadPool.getInstance().runTask(new class extends ARunnable {
             run() {
-                var logUtil = LogUtil.getInstance();
+                let logUtil = LogUtil.getInstance();
                 ;
                 try {
-                    logUtil.putF(BasicHighScoresFactory.prototype.commonStrings.START, this, FETCH);
+                    logUtil.putF(outer$BasicHighScoresFactory.commonStrings.START, this, FETCH);
                     highScoresArray[0] = RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, new ScoreComparator(true));
-                    var gameType = gameInfo.getGameType();
+                    let gameType = gameInfo.getGameType();
                     ;
-                    var gameTypeFactory = GameTypeFactory.getInstance();
+                    let gameTypeFactory = GameTypeFactory.getInstance();
                     ;
-                    var gameInfo2 = gameInfo;
+                    let gameInfo2 = gameInfo;
                     ;
                     if (gameType == gameTypeFactory.SINGLE_PLAYER || gameType == gameTypeFactory.BOT) {
                         gameInfo2 = BasicHighScoresGameInfoFactory.getInstance().SINGLE_PLAYER_SERVER;
@@ -82,13 +82,15 @@ export class BasicHighScoresFactory extends HighScoresBase {
                         gameInfo2 = BasicHighScoresGameInfoFactory.getInstance().MULTI_PLAYER_SERVER;
                     }
                     highScoresArray[1] = RemoteHighScores.getInstancePreload(abeClientInformation, softwareInformation, gameInfo2, WORLD_TOP_SCORES, SCORES, BooleanFactory.getInstance().FALSE, preload);
-                    logUtil.putF(BasicHighScoresFactory.prototype.commonStrings.END, this, FETCH);
+                    logUtil.putF(outer$BasicHighScoresFactory.commonStrings.END, this, FETCH);
                     LastFetchHighScoresFactory.getInstance().highScoresArray = highScoresArray;
                     highScoresResultsListener.setHighScoresArray(highScoresArray);
-                    //: 
                 }
-                catch (e) {
-                    logUtil.put(commonStrings.EXCEPTION, this, FETCH, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        logUtil.put(commonStrings.EXCEPTION, this, FETCH, e);
+                    }
                 }
             }
         });

@@ -30,7 +30,7 @@ export class AdvancedRTSGameLayerPositionFinder extends Object {
         super();
     }
     getLayerInterface(geographicMapCellPosition) {
-        var layerInterface = DropCellPositionHistory.getInstance().getLayerInterface(geographicMapCellPosition);
+        let layerInterface = DropCellPositionHistory.getInstance().getLayerInterface(geographicMapCellPosition);
         ;
         if (layerInterface == AllBinaryLayer.NULL_ALLBINARY_LAYER) {
             layerInterface = WaypointCellPositionHistory.getInstance().getLayerInterface(geographicMapCellPosition);

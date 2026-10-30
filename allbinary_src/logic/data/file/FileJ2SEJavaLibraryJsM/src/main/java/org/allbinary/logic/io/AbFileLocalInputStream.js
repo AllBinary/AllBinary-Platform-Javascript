@@ -16,7 +16,7 @@ import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFile
 //not GWT import const AbFileNativeUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileInputStream } from './AbFileInputStream.js';
-//not GWT import - same folder const AbFileInputStream
+//sameFolderImports - not GWT import - same folder const AbFileInputStream
 export class AbFileLocalInputStream extends AbFileInputStream {
     constructor(file) {
         super(AbFileNativeUtil.get(file));

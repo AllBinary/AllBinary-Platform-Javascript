@@ -20,7 +20,7 @@ import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/ha
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const LayerManagerEventListenerInterface
+//sameFolderImports - not GWT import - same folder const LayerManagerEventListenerInterface
 export class LayerManagerEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -47,15 +47,17 @@ export class LayerManagerEventHandler extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var layerManagerEventListener = this.list.objectArray[index];
+                let layerManagerEventListener = this.list.objectArray[index];
                 ;
                 layerManagerEventListener.onCreateLayerManagerEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
         super.fireEvent(eventObject);
@@ -63,41 +65,45 @@ export class LayerManagerEventHandler extends BasicEventHandler {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     fireDeleteEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var layerManagerEventListener = this.list.objectArray[index];
+                let layerManagerEventListener = this.list.objectArray[index];
                 ;
                 layerManagerEventListener.onDeleteLayerManagerEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
-        var eventListenerInterfaceList = this.eventListenerInterfaceList;
+        let eventListenerInterfaceList = this.eventListenerInterfaceList;
         ;
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var layerManagerEventListenerInterface;
+        let layerManagerEventListenerInterface;
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (index < eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = eventListenerInterfaceList.objectArray[index];
                 layerManagerEventListenerInterface = eventListenerInterface;
                 layerManagerEventListenerInterface.onDeleteLayerManagerEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
             index++;
         }
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var layerManagerEventListenerInterface = eventListenerInterface;
+        let layerManagerEventListenerInterface = eventListenerInterface;
         ;
         layerManagerEventListenerInterface.onCreateLayerManagerEvent(eventObject);
     }

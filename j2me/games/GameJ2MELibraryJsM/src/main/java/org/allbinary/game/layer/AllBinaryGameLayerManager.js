@@ -41,7 +41,7 @@ export class AllBinaryGameLayerManager extends AllBinaryLayerManager {
         this.playerGameInputCompositeInterface = NullPlayerGameInputComposite.NULL_PLAYER_GAME_INPUT_COMPOSITE;
         this.backgroundBasicColor = backgroundBasicColor;
         this.foregroundBasicColor = foregroundBasicColor;
-        var itemColorFactory = ItemColorFactory.getInstance();
+        let itemColorFactory = ItemColorFactory.getInstance();
         ;
         itemColorFactory.INVERT_PAINT = this.backgroundBasicColor.intValue();
         itemColorFactory.PAINT = this.foregroundBasicColor.intValue();
@@ -77,11 +77,11 @@ export class AllBinaryGameLayerManager extends AllBinaryLayerManager {
         this.gameInfo = gameInfo;
     }
     setLayerProcessorList(list) {
-        var layerProcessorInterfaceArray = new Array(list.size());
+        let layerProcessorInterfaceArray = new Array(list.size());
         ;
-        var size = layerProcessorInterfaceArray.length;
+        let size = layerProcessorInterfaceArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             layerProcessorInterfaceArray[index] = list.objectArray[index];
         }
         this.setLayerProcessorArray(layerProcessorInterfaceArray);

@@ -27,7 +27,7 @@ export class AllBinaryRendererBase3 extends Object {
     //@Throws(Exception.constructor)
     update(gl) {
         while (this.list.size() > 0) {
-            var openGLESImage = this.list.removeAt(0);
+            let openGLESImage = this.list.removeAt(0);
             ;
             if (openGLESImage !=
                 null) {

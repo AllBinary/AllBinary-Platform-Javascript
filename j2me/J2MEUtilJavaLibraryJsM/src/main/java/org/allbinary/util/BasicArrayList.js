@@ -21,9 +21,9 @@ export class BasicArrayList extends Object {
         this.currentIndex = 0;
         this.objectArray = objectArray;
     }
-    addAt(index, element = {}) {
+    addAt(index, element) {
         if (index > this.currentIndex || index < 0) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(CommonLabels.getInstance().INDEX_LABEL);
             stringBuffer.appendint(index);
@@ -36,7 +36,7 @@ export class BasicArrayList extends Object {
         this.objectArray[index] = element;
         this.currentIndex++;
     }
-    add(anyType = {}) {
+    add(anyType) {
         this.ensureCapacity(this.currentIndex + 1);
         this.objectArray[this.currentIndex++] = anyType;
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,7 +44,7 @@ export class BasicArrayList extends Object {
     }
     removeAt(index) {
         if (index >= this.currentIndex) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(CommonLabels.getInstance().INDEX_LABEL);
             stringBuffer.appendint(index);
@@ -52,9 +52,9 @@ export class BasicArrayList extends Object {
             stringBuffer.appendint(this.currentIndex);
             throw new IndexOutOfBoundsException(stringBuffer.toString());
         }
-        var oldValue = this.objectArray[index];
+        let oldValue = this.objectArray[index];
         ;
-        var numMoved = this.currentIndex - index - 1;
+        let numMoved = this.currentIndex - index - 1;
         ;
         if (numMoved > 0) {
             System.arraycopy(this.objectArray, index + 1, this.objectArray, index, numMoved);
@@ -64,13 +64,13 @@ export class BasicArrayList extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return oldValue;
     }
-    remove(anyType = {}) {
+    remove(anyType) {
         if (anyType ==
             null) {
-            for (var index = 0; index < this.currentIndex; index++) {
+            for (let index = 0; index < this.currentIndex; index++) {
                 if (this.objectArray[index] ==
                     null) {
-                    var numMoved = this.currentIndex - index - 1;
+                    let numMoved = this.currentIndex - index - 1;
                     ;
                     if (numMoved > 0) {
                         System.arraycopy(this.objectArray, index + 1, this.objectArray, index, numMoved);
@@ -83,9 +83,9 @@ export class BasicArrayList extends Object {
             }
         }
         else {
-            for (var index = 0; index < this.currentIndex; index++) {
-                if (anyType == this.objectArray[index] || anyType === this.objectArray[index]) {
-                    var numMoved = this.currentIndex - index - 1;
+            for (let index = 0; index < this.currentIndex; index++) {
+                if (anyType == this.objectArray[index] || (anyType === this.objectArray[index])) {
+                    let numMoved = this.currentIndex - index - 1;
                     ;
                     if (numMoved > 0) {
                         System.arraycopy(this.objectArray, index + 1, this.objectArray, index, numMoved);
@@ -101,11 +101,11 @@ export class BasicArrayList extends Object {
         return false;
     }
     removeAll2(list) {
-        var result = true;
+        let result = true;
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (this.remove(list.get(index))) {
             }
             else {
@@ -117,23 +117,23 @@ export class BasicArrayList extends Object {
     }
     addAll2(list) {
         this.ensureCapacity(this.currentIndex + list.currentIndex);
-        var listSize = list.currentIndex;
+        let listSize = list.currentIndex;
         ;
-        for (var index = 0; index < listSize; index++) {
+        for (let index = 0; index < listSize; index++) {
             this.objectArray[this.currentIndex++] = list.objectArray[index];
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return true;
     }
     addAllList(list) {
-        var newObjectArray = list.toArray();
+        let newObjectArray = list.toArray();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.addAll(newObjectArray);
         ;
     }
     addAll(newObjectArray) {
-        var numSize = newObjectArray.length;
+        let numSize = newObjectArray.length;
         ;
         this.ensureCapacity(this.currentIndex + numSize);
         System.arraycopy(newObjectArray, 0, this.objectArray, this.currentIndex, numSize);
@@ -142,10 +142,10 @@ export class BasicArrayList extends Object {
         return numSize != 0;
     }
     ensureCapacity(minSize) {
-        var oldCapacity = this.objectArray.length;
+        let oldCapacity = this.objectArray.length;
         ;
         if (minSize > oldCapacity) {
-            var newCapacity = ((oldCapacity * 3) >> 1) + 1;
+            let newCapacity = ((oldCapacity * 3) >> 1) + 1;
             ;
             if (newCapacity < minSize) {
                 newCapacity = minSize;
@@ -154,16 +154,16 @@ export class BasicArrayList extends Object {
         }
     }
     trimToSize() {
-        var oldCapacity = this.objectArray.length;
+        let oldCapacity = this.objectArray.length;
         ;
         if (this.currentIndex < oldCapacity) {
             this.objectArray = this.arrayUtil.copyOf(this.objectArray, this.currentIndex);
         }
     }
-    indexOf(anyType = {}) {
+    indexOf(anyType) {
         if (anyType ==
             null) {
-            for (var i = 0; i < this.currentIndex; i++) {
+            for (let i = 0; i < this.currentIndex; i++) {
                 if (this.objectArray[i] ==
                     null) {
                     //if statement needs to be on the same line and ternary does not work the same way.
@@ -172,8 +172,8 @@ export class BasicArrayList extends Object {
             }
         }
         else {
-            for (var i = 0; i < this.currentIndex; i++) {
-                if (anyType === this.objectArray[i]) {
+            for (let i = 0; i < this.currentIndex; i++) {
+                if ((anyType === this.objectArray[i])) {
                     //if statement needs to be on the same line and ternary does not work the same way.
                     return i;
                 }
@@ -182,10 +182,10 @@ export class BasicArrayList extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return -1;
     }
-    lastIndexOf(anyType = {}) {
+    lastIndexOf(anyType) {
         if (anyType ==
             null) {
-            for (var i = this.currentIndex - 1; i >= 0; i--) {
+            for (let i = this.currentIndex - 1; i >= 0; i--) {
                 if (this.objectArray[i] ==
                     null) {
                     //if statement needs to be on the same line and ternary does not work the same way.
@@ -194,8 +194,8 @@ export class BasicArrayList extends Object {
             }
         }
         else {
-            for (var i = this.currentIndex - 1; i >= 0; i--) {
-                if (anyType === this.objectArray[i]) {
+            for (let i = this.currentIndex - 1; i >= 0; i--) {
+                if ((anyType === this.objectArray[i])) {
                     //if statement needs to be on the same line and ternary does not work the same way.
                     return i;
                 }
@@ -206,7 +206,7 @@ export class BasicArrayList extends Object {
     }
     get(index) {
         if (index >= this.currentIndex) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(CommonLabels.getInstance().INDEX_LABEL);
             stringBuffer.appendint(index);
@@ -217,9 +217,9 @@ export class BasicArrayList extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.objectArray[index];
     }
-    set(index, element = {}) {
+    set(index, element) {
         if (index >= this.currentIndex) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(CommonLabels.getInstance().INDEX_LABEL);
             stringBuffer.appendint(index);
@@ -227,14 +227,14 @@ export class BasicArrayList extends Object {
             stringBuffer.appendint(this.currentIndex);
             throw new IndexOutOfBoundsException(stringBuffer.toString());
         }
-        var oldValue = this.objectArray[index];
+        let oldValue = this.objectArray[index];
         ;
         this.objectArray[index] = element;
         //if statement needs to be on the same line and ternary does not work the same way.
         return oldValue;
     }
     clear() {
-        for (var i = 0; i < this.currentIndex; i++) {
+        for (let i = 0; i < this.currentIndex; i++) {
             this.objectArray[i] =
                 null;
         }
@@ -248,7 +248,7 @@ export class BasicArrayList extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.currentIndex == 0;
     }
-    contains(anyType = {}) {
+    contains(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.indexOf(anyType) >= 0;
     }
@@ -272,13 +272,13 @@ export class BasicArrayList extends Object {
         return objectArray;
     }
     clone() {
-        var size = this.size();
+        let size = this.size();
         ;
-        var list = new BasicArrayListS(size);
+        let list = new BasicArrayListS(size);
         ;
-        var anyType;
+        let anyType;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             anyType = this.objectArray[index];
             list.add(anyType);
         }
@@ -286,11 +286,11 @@ export class BasicArrayList extends Object {
         return list;
     }
     toString() {
-        var COMMA_SEP = CommonSeps.getInstance().COMMA_SEP;
+        let COMMA_SEP = CommonSeps.getInstance().COMMA_SEP;
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        for (var index = 0; index < this.currentIndex; index++) {
+        for (let index = 0; index < this.currentIndex; index++) {
             stringBuffer.append(this.objectArray[index].toString());
             stringBuffer.append(COMMA_SEP);
         }

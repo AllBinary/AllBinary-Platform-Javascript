@@ -42,7 +42,7 @@ export class GameDifficultyOptions extends CommandForm {
         this.list = list;
         this.update();
         this.initCommands(commandListener);
-        var gameDifficultyFactory = GameDifficultyFactory.getInstance();
+        let gameDifficultyFactory = GameDifficultyFactory.getInstance();
         ;
         this.setSelectedId(gameDifficultyFactory.getLevel());
     }
@@ -55,12 +55,12 @@ export class GameDifficultyOptions extends CommandForm {
     }
     //@Throws(Exception.constructor)
     save() {
-        var gameDifficultyFactory = GameDifficultyFactory.getInstance();
+        let gameDifficultyFactory = GameDifficultyFactory.getInstance();
         ;
         gameDifficultyFactory.setLevel(this.getSelectedId());
     }
     initCommands(cmdListener) {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         this.removeAllCommands();
         this.addCommand(gameCommandsFactory.CLOSE_AND_SHOW_GAME_CANVAS);
@@ -73,7 +73,7 @@ export class GameDifficultyOptions extends CommandForm {
         super.update();
     }
     add(list, name, option) {
-        var choiceGroup = this.getChoiceGroup(list, name, option);
+        let choiceGroup = this.getChoiceGroup(list, name, option);
         ;
         if (list.size() > 0) {
             choiceGroup.setSelectedIndex(0, true);
@@ -81,17 +81,17 @@ export class GameDifficultyOptions extends CommandForm {
         this.meUtil.appendItem(this, choiceGroup);
     }
     getChoiceGroup(list, name, option) {
-        var METHOD_NAME = "addChoiceGroup";
+        let METHOD_NAME = "addChoiceGroup";
         ;
-        var NAME = "Adding Choice: ";
+        let NAME = "Adding Choice: ";
         ;
-        var choiceGroup = new ChoiceGroup(name, option, StringUtil.getInstance().getArrayInstance(), NullImage.NULL_IMAGE_ARRAY);
+        let choiceGroup = new ChoiceGroup(name, option, StringUtil.getInstance().getArrayInstance(), NullImage.NULL_IMAGE_ARRAY);
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var anyType;
+        let anyType;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             anyType = list.objectArray[index];
             this.logUtil.putF(new StringMaker().append(NAME).append(anyType.toString()).toString(), this, METHOD_NAME);
             choiceGroup.append(anyType.toString(), NullImage.NULL_IMAGE);
@@ -100,21 +100,21 @@ export class GameDifficultyOptions extends CommandForm {
         return choiceGroup;
     }
     setSelectedId(id) {
-        var choiceGroup = this.get(0);
+        let choiceGroup = this.get(0);
         ;
         choiceGroup.setSelectedIndex(id, true);
     }
     getSelectedId() {
-        var choiceGroup = this.get(0);
+        let choiceGroup = this.get(0);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return choiceGroup.getSelectedIndex();
         ;
     }
     getSelectedText() {
-        var choiceGroup = this.get(0);
+        let choiceGroup = this.get(0);
         ;
-        var value = Integer.valueOf(choiceGroup.getString(choiceGroup.getSelectedIndex())).intValue();
+        let value = Integer.valueOf(choiceGroup.getString(choiceGroup.getSelectedIndex())).intValue();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return value;

@@ -19,9 +19,16 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicStoreFrontsEntity } from './BasicStoreFrontsEntity.js';
-//not GWT import - same folder const BasicStoreFrontInterface
+//sameFolderImports - not GWT import - same folder const BasicStoreFrontInterface
 export class BasicStoreFrontFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return BasicStoreFrontFactory.instance;
     }
@@ -30,23 +37,25 @@ export class BasicStoreFrontFactory extends Object {
         this.logUtil = LogUtil.getInstance();
     }
     //@Throws(Exception.constructor)
-    getInstance(storeName) {
+    getInstance$overload2(storeName) {
         try {
-            var storeFronts = new BasicStoreFrontsEntity();
+            let storeFronts = new BasicStoreFrontsEntity();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return storeFronts.getStoreFrontInterface(storeName);
             ;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().FACTORYERROR)) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().FACTORYERROR)) {
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
         }
     }
 }

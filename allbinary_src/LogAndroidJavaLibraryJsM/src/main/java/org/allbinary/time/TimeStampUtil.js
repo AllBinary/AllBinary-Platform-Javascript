@@ -28,9 +28,9 @@ import { Calendar } from '../../../java/util/Calendar.js';
         super();
     }
     /*actual*/ getAsString() {
-        var calendar = Calendar.getInstance();
+        let calendar = Calendar.getInstance();
         ;
-        var date = calendar.getTime();
+        let date = calendar.getTime();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return date.toString();

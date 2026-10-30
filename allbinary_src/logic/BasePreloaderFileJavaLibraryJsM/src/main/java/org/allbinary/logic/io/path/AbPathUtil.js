@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbPath } from './AbPath.js';
-//not GWT import - same folder const AbPath
+//sameFolderImports - not GWT import - same folder const AbPath
 export class AbPathUtil extends Object {
     constructor() {
         super(...arguments);

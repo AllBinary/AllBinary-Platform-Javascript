@@ -30,15 +30,15 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABTextFieldItem } from './ABTextFieldItem.js';
-//not GWT import - same folder const ABTextFieldItem
+//sameFolderImports - not GWT import - same folder const ABTextFieldItem
 export class CustomTextBox extends GameCommandCanvas {
     constructor(cmdListener, label, text, maxSize, constraints, font, backgroundBasicColor, foregroundBasicColor) {
         super(cmdListener, label, backgroundBasicColor, foregroundBasicColor);
         this.inputFactory = InputFactory.getInstance();
         //For kotlin this is before the body of the constructor.
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
-        var textFieldItem = new ABTextFieldItem(this, new TextItemVisitor(), stringUtil.EMPTY_STRING, stringUtil.EMPTY_STRING, maxSize, 0, stringUtil.EMPTY_STRING, font, backgroundBasicColor, foregroundBasicColor);
+        let textFieldItem = new ABTextFieldItem(this, new TextItemVisitor(), stringUtil.EMPTY_STRING, stringUtil.EMPTY_STRING, maxSize, 0, stringUtil.EMPTY_STRING, font, backgroundBasicColor, foregroundBasicColor);
         ;
         textFieldItem.setString(text);
         this.textFieldItem = textFieldItem;
@@ -62,9 +62,9 @@ export class CustomTextBox extends GameCommandCanvas {
     keyPressedByDevice(keyCode, deviceId) {
         try {
             this.logUtil.putF(new StringMaker().append(CommonSeps.getInstance().SPACE).appendint(keyCode).toString(), this, this.gameInputStrings.KEY_PRESSED);
-            var platformKeyFactory = PlatformKeyFactory.getInstance();
+            let platformKeyFactory = PlatformKeyFactory.getInstance();
             ;
-            var input = this.inputFactory.getInstanceById(keyCode);
+            let input = this.inputFactory.getInstanceById(keyCode);
             ;
             if (platformKeyFactory.isSubmission(input)) {
                 this.submit();
@@ -72,10 +72,12 @@ export class CustomTextBox extends GameCommandCanvas {
             else {
                 this.textFieldItem.keyPressed(keyCode);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.KEY_PRESSED, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.KEY_PRESSED, e);
+            }
         }
     }
     keyReleasedByDevice(keyCode, deviceId) {

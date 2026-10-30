@@ -28,11 +28,11 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NotificationBuilder } from './NotificationBuilder.js';
-//not GWT import - same folder const NotificationBuilder
+//sameFolderImports - not GWT import - same folder const NotificationBuilder
 import { NotificationBuilderAPI23 } from './NotificationBuilderAPI23.js';
-//not GWT import - same folder const NotificationBuilderAPI23
+//sameFolderImports - not GWT import - same folder const NotificationBuilderAPI23
 import { CommandUriAction } from './CommandUriAction.js';
-//not GWT import - same folder const CommandUriAction
+//sameFolderImports - not GWT import - same folder const CommandUriAction
 export class NotificationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,7 +42,7 @@ export class NotificationUtil extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.notificationManager = ResourceUtil.getInstance().getContext().getSystemService(Context.NOTIFICATION_SERVICE);
-        var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
+        let SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
         ;
         if (SDK_VERSION > 22) {
             this.notificationBuilder = new NotificationBuilderAPI23();
@@ -52,26 +52,21 @@ export class NotificationUtil extends Object {
         }
     }
     notify(command, resource, message) {
-        var context = ResourceUtil.getInstance().getContext();
+        let context = ResourceUtil.getInstance().getContext();
         ;
-        var intent = CommandUriAction.getInstance().getIntent(command);
+        let intent = CommandUriAction.getInstance().getIntent(command);
         ;
-        var integer = ResourceUtil.getInstance().getResourceId(resource);
+        let integer = ResourceUtil.getInstance().getResourceId(resource);
         ;
-        var FLAG_IMMUTABLE = 1 << 26;
+        let FLAG_IMMUTABLE = 1 << 26;
         ;
-        var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
+        let SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
         ;
-        var pendingIntent = PendingIntent.getActivity(context, 0, intent, SDK_VERSION > 22
-            ?
-                FLAG_IMMUTABLE
-            :
-                0);
-        !;
+        let pendingIntent = PendingIntent.getActivity(context, 0, intent, (SDK_VERSION > 22 ? FLAG_IMMUTABLE : 0));
         ;
         if (this.notificationBuilder ==
             null) {
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             this.logUtil.putF(commonStrings.EXCEPTION, this, commonStrings.NOT_IMPLEMENTED);
             //if statement needs to be on the same line and ternary does not work the same way.

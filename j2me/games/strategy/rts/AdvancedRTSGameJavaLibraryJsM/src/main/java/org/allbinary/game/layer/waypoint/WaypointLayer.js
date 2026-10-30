@@ -26,11 +26,11 @@ import { AttackSound } from '../../../../../org/allbinary/media/audio/AttackSoun
 //not GWT import const AttackSound
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableWaypointBehavior } from './CollidableWaypointBehavior.js';
-//not GWT import - same folder const CollidableWaypointBehavior
+//sameFolderImports - not GWT import - same folder const CollidableWaypointBehavior
 import { Waypoint } from './Waypoint.js';
-//not GWT import - same folder const Waypoint
+//sameFolderImports - not GWT import - same folder const Waypoint
 import { WaypointCellPositionHistory } from './WaypointCellPositionHistory.js';
-//not GWT import - same folder const WaypointCellPositionHistory
+//sameFolderImports - not GWT import - same folder const WaypointCellPositionHistory
 export class WaypointLayer extends AdvancedRTSGameLayer {
     static getStaticType() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,10 +55,12 @@ export class WaypointLayer extends AdvancedRTSGameLayer {
     processTick(allBinaryLayerManager) {
         try {
             this.indexedButShouldBeRotationAnimationInterface.nextFrame();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "processTick", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "processTick", e);
+            }
         }
     }
     damage(damage, damageType) {

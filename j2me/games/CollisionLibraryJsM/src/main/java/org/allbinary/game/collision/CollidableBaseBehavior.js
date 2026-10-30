@@ -23,11 +23,11 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const CollidableInterface
+//sameFolderImports - not GWT import - same folder const CollidableInterface
 import { LayerCollisionUtil } from './LayerCollisionUtil.js';
-//not GWT import - same folder const CollidableInterfaceCompositeInterface
+//sameFolderImports - not GWT import - same folder const CollidableInterfaceCompositeInterface
 import { CollisionTypeFactory } from './CollisionTypeFactory.js';
-//not GWT import - same folder const CollisionType
+//sameFolderImports - not GWT import - same folder const CollisionType
 export class CollidableBaseBehavior extends Object {
     constructor(collidable) {
         super();

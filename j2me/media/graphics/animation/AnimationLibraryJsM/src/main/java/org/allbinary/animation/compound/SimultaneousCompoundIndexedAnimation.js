@@ -24,31 +24,31 @@ export class SimultaneousCompoundIndexedAnimation extends IndexedAnimation {
         this.animationInterfaceArray = animationInterfaceArray;
     }
     setFrame(frameIndex) {
-        var indexedAnimation;
+        let indexedAnimation;
         ;
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             indexedAnimation = this.animationInterfaceArray[index];
             indexedAnimation.setFrame(frameIndex);
         }
     }
     getFrame() {
-        var indexedAnimation = this.animationInterfaceArray[0];
+        let indexedAnimation = this.animationInterfaceArray[0];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return indexedAnimation.getFrame();
         ;
     }
     getSize() {
-        var indexedAnimation = this.animationInterfaceArray[0];
+        let indexedAnimation = this.animationInterfaceArray[0];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return indexedAnimation.getSize();
         ;
     }
     previousFrame() {
-        var indexedAnimation;
+        let indexedAnimation;
         ;
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             indexedAnimation = this.animationInterfaceArray[index];
             indexedAnimation.previousFrame();
         }
@@ -62,21 +62,21 @@ export class SimultaneousCompoundIndexedAnimation extends IndexedAnimation {
     }
     //@Throws(Exception.constructor)
     nextFrame() {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].nextFrame();
         }
     }
     paintXY(graphics, x, y) {
-        var size = this.animationInterfaceArray.length;
+        let size = this.animationInterfaceArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.animationInterfaceArray[index].paintXY(graphics, x, y);
         }
     }
     paintThreedXYZ(graphics, x, y, z) {
-        var size = this.animationInterfaceArray.length;
+        let size = this.animationInterfaceArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.animationInterfaceArray[index].paintThreedXYZ(graphics, x, y, z);
         }
     }

@@ -18,7 +18,7 @@ import { Sprite } from '../../../../javax/microedition/lcdui/game/Sprite.js';
 //not GWT import const Sprite
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const SpriteFactoryInterface
+//sameFolderImports - not GWT import - same folder const SpriteFactoryInterface
 export class SpriteFactory extends Object {
     constructor() {
         super(...arguments);

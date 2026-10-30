@@ -7,7 +7,7 @@ import { BaseBasicArrayListCache } from '../../../../../../org/allbinary/logic/u
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGeographicMapExtractedPathCacheFactory } from './BasicGeographicMapExtractedPathCacheFactory.js';
-//not GWT import - same folder const BasicGeographicMapExtractedPathCacheFactory
+//sameFolderImports - not GWT import - same folder const BasicGeographicMapExtractedPathCacheFactory
 export class BasicGeographicMapExtractedPathsCacheFactory extends BaseBasicArrayListCache {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -20,7 +20,7 @@ export class BasicGeographicMapExtractedPathsCacheFactory extends BaseBasicArray
     }
     init(maxConcurrentPaths, maxPaths) {
         if (maxConcurrentPaths != this.maxConcurrentPaths) {
-            for (var index = maxConcurrentPaths; index >= this.maxConcurrentPaths; index--) {
+            for (let index = maxConcurrentPaths; index >= this.maxConcurrentPaths; index--) {
                 this.list.add(new BasicArrayListS(maxPaths));
             }
             this.maxConcurrentPaths = maxConcurrentPaths;
@@ -38,7 +38,7 @@ export class BasicGeographicMapExtractedPathsCacheFactory extends BaseBasicArray
         }
     }
     release(list) {
-        for (var index = list.size() - 1; index >= 0; index--) {
+        for (let index = list.size() - 1; index >= 0; index--) {
             BasicGeographicMapExtractedPathCacheFactory.getInstance().release(list.get(index));
         }
         list.clear();

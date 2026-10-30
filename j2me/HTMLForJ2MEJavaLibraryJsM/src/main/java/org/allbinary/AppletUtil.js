@@ -15,7 +15,7 @@
 import { Object } from '../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AppletUtil extends Object {
-    static isAppletLoader(anyType = {}) {
+    static isAppletLoader(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return false;
     }

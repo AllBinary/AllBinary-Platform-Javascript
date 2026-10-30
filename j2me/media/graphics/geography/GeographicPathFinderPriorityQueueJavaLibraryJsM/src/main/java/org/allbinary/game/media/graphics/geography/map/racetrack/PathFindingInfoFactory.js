@@ -41,7 +41,7 @@ export class PathFindingInfoFactory extends BasePathFindingInfoFactory {
     }
     //@Throws(Exception.constructor)
     getInstancePathFindingInfo(geographicMapInterface, mapArray) {
-        var pathFindingInfo = new PathFindingInfo(this.pathFindingInfo.getPathFindingNodeCostInfoFactoryInterface(), new BasicArrayListS(1), new BasicArrayListS(1));
+        let pathFindingInfo = new PathFindingInfo(this.pathFindingInfo.getPathFindingNodeCostInfoFactoryInterface(), new BasicArrayListS(1), new BasicArrayListS(1));
         ;
         RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance().init();
         this.init(geographicMapInterface, pathFindingInfo, mapArray);
@@ -60,16 +60,16 @@ export class PathFindingInfoFactory extends BasePathFindingInfoFactory {
     }
     //@Throws(Exception.constructor)
     buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray) {
-        var geographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
+        let geographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
         ;
-        var allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var totalColumns = allBinaryTiledLayer.getColumns();
+        let totalColumns = allBinaryTiledLayer.getColumns();
         ;
-        var totalRows = allBinaryTiledLayer.getRows();
+        let totalRows = allBinaryTiledLayer.getRows();
         ;
-        for (var column = 0; column < totalColumns; column++) {
-            for (var row = 0; row < totalRows; row++) {
+        for (let column = 0; column < totalColumns; column++) {
+            for (let row = 0; row < totalRows; row++) {
                 this.buildPathFindingNodesForCellPosition(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory.getAt(column, row));
             }
         }

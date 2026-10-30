@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const CacheType
+//sameFolderImports - not GWT import - same folder const CacheType
 export class PoolType extends Object {
     constructor(cacheType) {
         super();
@@ -24,7 +24,7 @@ export class PoolType extends Object {
         return this.cacheType;
     }
     toString() {
-        var POOL_TYPE = "PoolType: ";
+        let POOL_TYPE = "PoolType: ";
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return POOL_TYPE + this.getCacheType().toString();

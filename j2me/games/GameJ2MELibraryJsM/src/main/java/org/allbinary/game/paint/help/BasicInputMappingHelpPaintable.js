@@ -26,7 +26,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HelpPaintable } from './HelpPaintable.js';
-//not GWT import - same folder const HelpPaintable
+//sameFolderImports - not GWT import - same folder const HelpPaintable
 export class BasicInputMappingHelpPaintable extends HelpPaintable {
     constructor(gameInputMappingArray, basicColor) {
         super("Help Screen", BasicColorFactory.getInstance().BLACK, basicColor);
@@ -36,23 +36,23 @@ export class BasicInputMappingHelpPaintable extends HelpPaintable {
         this.update(this.NONE, this.NONE);
     }
     update(selectedGameKey, selectedInput) {
-        var gameKeyMapping = PlatformInputMappingFactory.getInstance().getPersistentInputMappingInstance();
+        let gameKeyMapping = PlatformInputMappingFactory.getInstance().getPersistentInputMappingInstance();
         ;
-        var EQUAL = " = ";
+        let EQUAL = " = ";
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var size = this.gameInputMappingArray.length;
+        let size = this.gameInputMappingArray.length;
         ;
-        var keyInfo = new Array(size);
+        let keyInfo = new Array(size);
         ;
-        var gameInputMapping;
+        let gameInputMapping;
         ;
-        var gameKey;
+        let gameKey;
         ;
-        var list;
+        let list;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             gameInputMapping = this.gameInputMappingArray[index];
             gameKey = gameInputMapping.getGameKey();
             list = gameKeyMapping.getInputMapping().getMappedInput(gameKey);
@@ -62,17 +62,17 @@ export class BasicInputMappingHelpPaintable extends HelpPaintable {
         super.setInputInfoP(keyInfo);
     }
     get(keyList) {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var AND = "and ";
+        let AND = "and ";
         ;
-        var key;
+        let key;
         ;
-        var size = keyList.size();
+        let size = keyList.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             key = keyList.objectArray[index];
             stringBuffer.append(key.getName());
             if (index + 1 < keyList.size()) {

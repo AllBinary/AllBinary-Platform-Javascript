@@ -63,11 +63,11 @@ export class GameInput extends Object {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     removeNonAIInputGameKeyEvents() {
-        var list = this.gameKeyEventList;
+        let list = this.gameKeyEventList;
         ;
-        var gameKeyEvent;
+        let gameKeyEvent;
         ;
-        for (var index = list.size(); --index >= 0;) {
+        for (let index = list.size(); --index >= 0;) {
             gameKeyEvent = list.objectArray[index];
             if (gameKeyEvent.getSourceId() != 1) {
                 list.removeAt(index);
@@ -76,16 +76,16 @@ export class GameInput extends Object {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     update() {
-        var removeList = this.removalGameKeyEventList;
+        let removeList = this.removalGameKeyEventList;
         ;
-        var list = this.gameKeyEventList;
+        let list = this.gameKeyEventList;
         ;
-        var size = removeList.size();
+        let size = removeList.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var anyType = removeList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let anyType = removeList.objectArray[index];
             ;
-            for (var index2 = list.size(); --index2 >= 0;) {
+            for (let index2 = list.size(); --index2 >= 0;) {
                 if (list.objectArray[index2] == anyType) {
                     list.removeAt(index2);
                 }

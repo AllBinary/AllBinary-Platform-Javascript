@@ -34,9 +34,9 @@ const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const AbeClientInformationInterface
+//sameFolderImports - not GWT import - same folder const AbeClientInformationInterface
 import { AbeClientInformationData } from './AbeClientInformationData.js';
-//not GWT import - same folder const AbeClientInformationData
+//sameFolderImports - not GWT import - same folder const AbeClientInformationData
 // This is the information sent to the license server
 export class ClientInformation extends Object {
     constructor(name, version, specialName, shortName) {
@@ -88,11 +88,11 @@ export class ClientInformation extends Object {
         ;
     }
     toHashtable() {
-        var abeClientInformationData = AbeClientInformationData.getInstance();
+        let abeClientInformationData = AbeClientInformationData.getInstance();
         ;
-        var genericOperatingSystem = this.getOperatingSystemInterface();
+        let genericOperatingSystem = this.getOperatingSystemInterface();
         ;
-        var clientInfoHashtable = StdUtil.getInstance().createHashtable();
+        let clientInfoHashtable = StdUtil.getInstance().createHashtable();
         ;
         clientInfoHashtable.put(abeClientInformationData.NAME, this.name);
         clientInfoHashtable.put(abeClientInformationData.VERSION, this.version);
@@ -102,9 +102,9 @@ export class ClientInformation extends Object {
         clientInfoHashtable.put(abeClientInformationData.OSARCH, genericOperatingSystem.getArch());
         clientInfoHashtable.put(abeClientInformationData.OSVERSION, genericOperatingSystem.getVersion());
         clientInfoHashtable.put(abeClientInformationData.OS, genericOperatingSystem.toString());
-        var hardwareInterface = SystemHardwareFactory.getInstance().getInstance(genericOperatingSystem);
+        let hardwareInterface = SystemHardwareFactory.getInstance().getInstance(genericOperatingSystem);
         ;
-        var hardwareString = hardwareInterface.toString();
+        let hardwareString = hardwareInterface.toString();
         ;
         clientInfoHashtable.put(abeClientInformationData.HARDWARE, hardwareString);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,19 +121,19 @@ export class ClientInformation extends Object {
         }
     }
     isLargerOrDifferentServerList(list) {
-        var size = list.size() - 1;
+        let size = list.size() - 1;
         ;
-        var currentSize = this.licenseServers.size() - 1;
+        let currentSize = this.licenseServers.size() - 1;
         ;
         if (size > currentSize) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
         }
-        for (var index = size; index >= 0; index--) {
-            var newServerName = list.objectArray[index];
+        for (let index = size; index >= 0; index--) {
+            let newServerName = list.objectArray[index];
             ;
-            for (var index2 = currentSize; index2 >= 0; index2--) {
-                var nextOldServerName = this.licenseServers.objectArray[index];
+            for (let index2 = currentSize; index2 >= 0; index2--) {
+                let nextOldServerName = this.licenseServers.objectArray[index];
                 ;
                 if (this.tsUtil.compareTo(newServerName, nextOldServerName) != 0) {
                     //if statement needs to be on the same line and ternary does not work the same way.

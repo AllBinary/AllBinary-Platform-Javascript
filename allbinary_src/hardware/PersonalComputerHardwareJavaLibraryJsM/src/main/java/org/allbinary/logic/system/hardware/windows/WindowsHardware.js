@@ -51,10 +51,12 @@ export class WindowsHardware extends Object {
             this.monitorInterfaceVector = new BasicArrayListD();
             if (this.componentInterfaceVector.size() < this.MINHARDWARE)
                 throw new Exception("Not Enough Data For A Valid License On Windows");
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     getComponentType(component) {
@@ -145,12 +147,12 @@ export class WindowsHardware extends Object {
         return this.componentInterfaceVector.get(index);
     }
     toString() {
-        var hardwareBuffer = new StringMaker();
+        let hardwareBuffer = new StringMaker();
         ;
-        var size = this.componentInterfaceVector.size();
+        let size = this.componentInterfaceVector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var componentInterface = this.componentInterfaceVector.get(index);
+        for (let index = 0; index < size; index++) {
+            let componentInterface = this.componentInterfaceVector.get(index);
             ;
             hardwareBuffer.append(componentInterface.toString());
             hardwareBuffer.append(CommonSeps.getInstance().NEW_LINE);

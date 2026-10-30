@@ -28,14 +28,14 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const BasicStoreFrontInterface
+//sameFolderImports - not GWT import - same folder const BasicStoreFrontInterface
 export class BasicStoreFront extends Object {
     constructor() {
         super();
     }
     constructor(storeHashMap) {
         super();
-        var storeFrontData = StoreFrontData.getInstance();
+        let storeFrontData = StoreFrontData.getInstance();
         ;
         this.name = storeHashMap.get(storeFrontData.NAME);
         this.userName = storeHashMap.get(UserData.USERNAME);
@@ -71,7 +71,7 @@ export class BasicStoreFront extends Object {
         return org.allbinary.globals.URLGLOBALS.getTestHtmlPath() + this.getCurrentHostNamePath();
     }
     getCurrentHostName() {
-        var location = null;
+        let location = null;
         ;
         if (org.allbinary.globals.URLGLOBALS.isTestingMode()) {
             location = this.getTestHostName();
@@ -83,7 +83,7 @@ export class BasicStoreFront extends Object {
         return location;
     }
     getCurrentHostNamePath() {
-        var location = null;
+        let location = null;
         ;
         if (org.allbinary.globals.URLGLOBALS.isTestingMode()) {
             location = this.getTestHostNamePath();
@@ -95,7 +95,7 @@ export class BasicStoreFront extends Object {
         return location;
     }
     getCurrentHomeHostName() {
-        var location = null;
+        let location = null;
         ;
         if (org.allbinary.globals.URLGLOBALS.isTestingMode()) {
             location = this.getTestHomeHostName();
@@ -107,7 +107,7 @@ export class BasicStoreFront extends Object {
         return location;
     }
     getCurrentHomeHostNamePath() {
-        var location = null;
+        let location = null;
         ;
         if (org.allbinary.globals.URLGLOBALS.isTestingMode()) {
             location = this.getTestHomeHostNamePath();
@@ -177,16 +177,18 @@ export class BasicStoreFront extends Object {
     //@Throws(Exception.constructor)
     getSubStores() {
         try {
-            var tokenizer = new Tokenizer(CommonSeps.getInstance().SEMICOLON);
+            let tokenizer = new Tokenizer(CommonSeps.getInstance().SEMICOLON);
             ;
-            var subStoreVector = tokenizer.getTokensFromString(this.subStores, new BasicArrayListD());
+            let subStoreVector = tokenizer.getTokensFromString(this.subStores, new BasicArrayListD());
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return subStoreVector;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     getTagLocation() {

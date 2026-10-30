@@ -9,7 +9,7 @@ export class MultiPlayerGameFeatureFactory extends Object {
     constructor() {
         super();
     }
-    addCommands(anyType = {}) {
+    addCommands(anyType) {
     }
 }
 MultiPlayerGameFeatureFactory.instance = new MultiPlayerGameFeatureFactory();

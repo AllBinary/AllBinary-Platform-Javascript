@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+import { IOException } from '../../../../../../java/io/IOException.js';
 //not GWT import const IOException
 import { Calendar } from '../../../../../../java/util/Calendar.js';
 //not GWT import const Calendar
@@ -22,13 +23,13 @@ import { AbeLicenseClient } from '../../../../../../org/allbinary/logic/system/s
 //not GWT import const AbeLicenseClient
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AbeClientInformationInterface
+//sameFolderImports - not GWT import - same folder const AbeClientInformationInterface
 import { AbeNoLicense } from './AbeNoLicense.js';
-//not GWT import - same folder const AbeNoLicense
+//sameFolderImports - not GWT import - same folder const AbeNoLicense
 import { AbeClientInformationData } from './AbeClientInformationData.js';
-//not GWT import - same folder const AbeClientInformationData
+//sameFolderImports - not GWT import - same folder const AbeClientInformationData
 import { LicensingException } from './LicensingException.js';
-//not GWT import - same folder const LicensingException
+//sameFolderImports - not GWT import - same folder const LicensingException
 export class AbeLicenseInterfaceFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +61,7 @@ export class AbeLicenseInterfaceFactory extends Object {
         try {
             this.logUtil.putF("Getting Keys", this, this.commonStrings.GET);
             this.abeLicenseInterface = AbeNoLicense.getInstance();
-            var licenseClient = new AbeLicenseClient();
+            let licenseClient = new AbeLicenseClient();
             ;
             this.abeLicenseInterface = licenseClient.get(abeClientInformation);
             if (this.abeLicenseInterface !=
@@ -69,29 +70,24 @@ export class AbeLicenseInterfaceFactory extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.abeLicenseInterface;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Licensing IO Error", this, this.commonStrings.GET, e);
-            throw new LicensingException("License Server Connection Error");
+        catch (caught) {
+            if (caught instanceof IOException) {
+                const e = caught;
+                this.logUtil.put("Licensing IO Error", this, this.commonStrings.GET, e);
+                throw new LicensingException("License Server Connection Error");
+            }
+            else {
+                const e = caught;
+                this.logUtil.put("Licensing Failure", this, this.commonStrings.GET, e);
+                throw new LicensingException("Unknown License Failure: " + this.constructor.name.toString());
+            }
         }
-        //: 
-        /* catch(e)
-                    {
-        this.logUtil!.put("Licensing Failure", this, this.commonStrings!.GET, e);
-            
-        
-        
-        
-                                    throw new LicensingException("Unknown License Failure: " +this.constructor.name.toString()!);
-                            
-        }
-        */
     }
     isTimeToGetKey() {
-        var calendar = Calendar.getInstance();
+        let calendar = Calendar.getInstance();
         ;
-        var currentTime = calendar.getTimeInMillis();
+        let currentTime = calendar.getTimeInMillis();
         ;
         if (this.abeLicenseInterface ==
             null

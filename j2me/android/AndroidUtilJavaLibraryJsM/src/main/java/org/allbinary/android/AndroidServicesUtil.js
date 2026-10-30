@@ -34,19 +34,19 @@ export class AndroidServicesUtil extends Object {
         return AndroidServicesUtil.instance;
     }
     isServiceRunning(name) {
-        var activityManager = this.resourceUtil.getContext().getSystemService(Context.ACTIVITY_SERVICE);
+        let activityManager = this.resourceUtil.getContext().getSystemService(Context.ACTIVITY_SERVICE);
         ;
-        var runningServicesList = activityManager.getRunningServices(this.SERVICE_LIMIT_MAX);
+        let runningServicesList = activityManager.getRunningServices(this.SERVICE_LIMIT_MAX);
         ;
-        var runningServiceInfo;
+        let runningServiceInfo;
         ;
-        var serviceComponent;
+        let serviceComponent;
         ;
-        var serviceName;
+        let serviceName;
         ;
-        var size = runningServicesList.length;
+        let size = runningServicesList.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             runningServiceInfo = runningServicesList.get(index);
             serviceComponent = runningServiceInfo.service;
             serviceName = serviceComponent.toString();

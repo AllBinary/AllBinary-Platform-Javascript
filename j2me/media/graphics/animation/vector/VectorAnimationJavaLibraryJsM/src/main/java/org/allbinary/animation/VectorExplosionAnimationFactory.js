@@ -15,11 +15,11 @@
 import { Object } from '../../../java/lang/Object.js';
 //not GWT import const BasicColor
 import { BasicColorFactory } from '../../../org/allbinary/graphics/color/BasicColorFactory.js';
-//not GWT import - same folder const ProceduralAnimationInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const ProceduralAnimationInterfaceFactoryInterface
 import { VectorExplosionGenerator } from './VectorExplosionGenerator.js';
-//not GWT import - same folder const VectorAnimationInterface
+//sameFolderImports - not GWT import - same folder const VectorAnimationInterface
 import { VectorRotationAnimation } from './VectorRotationAnimation.js';
-//not GWT import - same folder const Animation
+//sameFolderImports - not GWT import - same folder const Animation
 export class VectorExplosionAnimationFactory extends Object {
     constructor(basicColor, animationBehaviorFactory) {
         super();
@@ -30,13 +30,13 @@ export class VectorExplosionAnimationFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstanceAnimation(animationInterface) {
-        var vectorRotationAnimationInterface = animationInterface;
+        let vectorRotationAnimationInterface = animationInterface;
         ;
-        var frame = vectorRotationAnimationInterface.getFrame();
+        let frame = vectorRotationAnimationInterface.getFrame();
         ;
-        var framePoints = vectorRotationAnimationInterface.getPoints(frame);
+        let framePoints = vectorRotationAnimationInterface.getPoints(frame);
         ;
-        var points = this.vectorExplosionGenerator.getInstance(framePoints, 6, this.vectorExplosionGenerator.ROTATION);
+        let points = this.vectorExplosionGenerator.getInstance(framePoints, 6, this.vectorExplosionGenerator.ROTATION);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new VectorRotationAnimation(points, this.getBasicColorP(), this.animationBehaviorFactory.getOrCreateInstance());

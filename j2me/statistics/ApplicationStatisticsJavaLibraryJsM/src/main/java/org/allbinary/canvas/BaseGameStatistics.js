@@ -68,10 +68,10 @@ export class BaseGameStatistics extends Object {
         this.totalRefreshes++;
     }
     getRefreshRate() {
-        var elapsed = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
+        let elapsed = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
         ;
         if (elapsed > 1) {
-            var time = (this.totalRefreshes / (elapsed >> this.DEFAULT_SCALE_FACTOR));
+            let time = (globalThis.Math.trunc(this.totalRefreshes / (elapsed >> this.DEFAULT_SCALE_FACTOR)));
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return time;
@@ -86,20 +86,20 @@ export class BaseGameStatistics extends Object {
         return this.timeDelayHelper;
     }
     to2DCharArray() {
-        var totalTime = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
+        let totalTime = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
         ;
         totalTime = (totalTime >> this.DEFAULT_SCALE_FACTOR);
         if (totalTime > 0 && this.updateDelayHelper.isTime(this.gameTickTimeDelayHelper.startTime)) {
-            var framesPerSec = Math.round((this.totalFrames / totalTime));
+            let framesPerSec = globalThis.Math.trunc((globalThis.Math.trunc(this.totalFrames / totalTime)));
             ;
             if (framesPerSec < 10) {
                 this.CHAR_ARRAY[1][0] = this.SPACE_CHAR;
                 this.CHAR_ARRAY[1][1] = this.primitiveLongSingleton.NUMBER_CHAR_ARRAY[framesPerSec];
             }
             else if (framesPerSec < 100) {
-                var tens = framesPerSec / 10;
+                let tens = globalThis.Math.trunc(framesPerSec / 10);
                 ;
-                var removeTens = tens * 10;
+                let removeTens = tens * 10;
                 ;
                 this.CHAR_ARRAY[1][0] = this.primitiveLongSingleton.NUMBER_CHAR_ARRAY[tens];
                 this.CHAR_ARRAY[1][1] = this.primitiveLongSingleton.NUMBER_CHAR_ARRAY[framesPerSec - removeTens];
@@ -108,18 +108,18 @@ export class BaseGameStatistics extends Object {
                 this.CHAR_ARRAY[1][0] = this.PLUS_CHAR;
                 this.CHAR_ARRAY[1][1] = this.PLUS_CHAR;
             }
-            var refreshesPerSec = Math.round((this.totalRefreshes / totalTime));
+            let refreshesPerSec = globalThis.Math.trunc((globalThis.Math.trunc(this.totalRefreshes / totalTime)));
             ;
             if (refreshesPerSec < 10) {
                 this.CHAR_ARRAY[3][0] = this.X_CHAR;
                 this.CHAR_ARRAY[3][1] = this.primitiveLongSingleton.NUMBER_CHAR_ARRAY[refreshesPerSec];
             }
             else if (refreshesPerSec < 100) {
-                var tens = refreshesPerSec / 10;
+                let tens = globalThis.Math.trunc(refreshesPerSec / 10);
                 ;
-                var removeTens = tens * 10;
+                let removeTens = tens * 10;
                 ;
-                this.CHAR_ARRAY[3][0] = this.primitiveLongSingleton.NUMBER_CHAR_ARRAY[refreshesPerSec / 10];
+                this.CHAR_ARRAY[3][0] = this.primitiveLongSingleton.NUMBER_CHAR_ARRAY[globalThis.Math.trunc(refreshesPerSec / 10)];
                 this.CHAR_ARRAY[3][1] = this.primitiveLongSingleton.NUMBER_CHAR_ARRAY[refreshesPerSec - removeTens];
             }
             else {
@@ -131,18 +131,18 @@ export class BaseGameStatistics extends Object {
         return this.CHAR_ARRAY;
     }
     toStringArray() {
-        var totalTime = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
+        let totalTime = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
         ;
-        totalTime = (totalTime / 10000);
+        totalTime = (globalThis.Math.trunc(totalTime / 10000));
         if (totalTime > 0) {
             this.STRING_ARRAY[1] = (totalTime).toString();
             this.STRING_ARRAY[3] = (this.totalFrames).toString();
-            this.STRING_ARRAY[5] = (this.totalFrames / totalTime).toString();
+            this.STRING_ARRAY[5] = (globalThis.Math.trunc(this.totalFrames / totalTime)).toString();
             this.STRING_ARRAY[7] = (this.totalRefreshes).toString();
-            this.STRING_ARRAY[9] = (this.totalRefreshes / totalTime).toString();
+            this.STRING_ARRAY[9] = (globalThis.Math.trunc(this.totalRefreshes / totalTime)).toString();
         }
         else {
-            var string = this.EMPTY_STRING;
+            let string = this.EMPTY_STRING;
             ;
             this.STRING_ARRAY[1] = string;
             this.STRING_ARRAY[3] = string;
@@ -154,19 +154,19 @@ export class BaseGameStatistics extends Object {
         return this.STRING_ARRAY;
     }
     toStringAt(totalTime) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.STRING_ARRAY[0]);
         stringBuffer.appendlong(totalTime);
         stringBuffer.append(this.STRING_ARRAY[2]);
         stringBuffer.appendlong(this.totalFrames);
         stringBuffer.append(this.STRING_ARRAY[4]);
-        stringBuffer.appendlong(this.totalFrames / totalTime);
+        stringBuffer.appendlong(globalThis.Math.trunc(this.totalFrames / totalTime));
         if (this.totalRefreshes > 0) {
             stringBuffer.append(this.STRING_ARRAY[6]);
             stringBuffer.appendlong(this.totalRefreshes);
             stringBuffer.append(this.STRING_ARRAY[8]);
-            stringBuffer.appendlong(this.totalRefreshes / totalTime);
+            stringBuffer.appendlong(globalThis.Math.trunc(this.totalRefreshes / totalTime));
             stringBuffer.append(CommonSeps.getInstance().NEW_LINE);
         }
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -174,9 +174,9 @@ export class BaseGameStatistics extends Object {
         ;
     }
     toString() {
-        var totalTime = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
+        let totalTime = this.timeDelayHelper.getElapsed(this.gameTickTimeDelayHelper.startTime);
         ;
-        totalTime = (totalTime / 1000);
+        totalTime = (globalThis.Math.trunc(totalTime / 1000));
         if (totalTime > 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.toStringAt(totalTime);

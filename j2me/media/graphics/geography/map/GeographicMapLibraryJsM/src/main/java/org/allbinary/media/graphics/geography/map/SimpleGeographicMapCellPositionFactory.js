@@ -13,9 +13,9 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import - same folder const GeographicMapCellPositionFactoryInterface
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPositionFactoryInterface
 import { GeographicMapCellPosition } from './GeographicMapCellPosition.js';
-//not GWT import - same folder const BasicGeographicMap
+//sameFolderImports - not GWT import - same folder const BasicGeographicMap
 export class SimpleGeographicMapCellPositionFactory extends Object {
     getInstance(geographicMapInterface, i_column, i_row, columns, rows, width, height) {
         //if statement needs to be on the same line and ternary does not work the same way.

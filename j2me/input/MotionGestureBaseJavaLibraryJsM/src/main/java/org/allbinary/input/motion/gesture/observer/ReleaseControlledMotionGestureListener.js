@@ -31,7 +31,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const MotionGestureEvent
+//sameFolderImports - not GWT import - same folder const MotionGestureEvent
 export class ReleaseControlledMotionGestureListener extends Object {
     constructor(signed) {
         super();
@@ -85,17 +85,19 @@ export class ReleaseControlledMotionGestureListener extends Object {
             this.isMouseGestureOccurring = false;
             this.signed.onMotionGestureCompleted(this.motionGestureCollection);
             this.motionGestureCollection.clear();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(StringUtil.getInstance().toString(ev.getMotionGesture())).toString(), this, "release", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(StringUtil.getInstance().toString(ev.getMotionGesture())).toString(), this, "release", e);
+            }
         }
     }
     onMotionGestureEvent(ev) {
         if (this.isMouseGestureOccurring == false)
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
-        var motionGestureInput = ev.getMotionGesture();
+        let motionGestureInput = ev.getMotionGesture();
         ;
         if (motionGestureInput == TouchMotionGestureFactory.getInstance().PRESSED) {
             this.onPressedMotionGestureEvent(ev);

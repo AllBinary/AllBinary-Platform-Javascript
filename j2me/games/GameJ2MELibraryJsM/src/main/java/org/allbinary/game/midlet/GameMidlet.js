@@ -161,13 +161,13 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameMidletStateFactory } from './GameMidletStateFactory.js';
-//not GWT import - same folder const GameMidletStateFactory
+//sameFolderImports - not GWT import - same folder const GameMidletStateFactory
 import { GameMidletEventHandler } from './GameMidletEventHandler.js';
-//not GWT import - same folder const GameMidletEventHandler
+//sameFolderImports - not GWT import - same folder const GameMidletEventHandler
 import { DemoGameMidletEvent } from './DemoGameMidletEvent.js';
-//not GWT import - same folder const DemoGameMidletEvent
+//sameFolderImports - not GWT import - same folder const DemoGameMidletEvent
 import { DemoGameMidletStateFactory } from './DemoGameMidletStateFactory.js';
-//not GWT import - same folder const DemoGameMidletStateFactory
+//sameFolderImports - not GWT import - same folder const DemoGameMidletStateFactory
 export class GameMidlet extends ProgressMidlet {
     constructor(clientInformationFactory) {
         super(clientInformationFactory);
@@ -200,7 +200,7 @@ export class GameMidlet extends ProgressMidlet {
         //For kotlin this is before the body of the constructor.
         SmallIntegerSingletonFactory.getInstance().initWithRange(0x291, 6);
         this.loadGameForm = CommandForm.getNullCommandForm();
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.init(this);
         GameFeatureEventHandler.getInstance().addListenerInterface(ChangedGameFeatureListener.getInstance());
@@ -226,7 +226,7 @@ export class GameMidlet extends ProgressMidlet {
     }
     pauseApp() {
         this.pauseAppBackground(true);
-        var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+        let gameAdState = this.gameAdStateFactory.getCurrentInstance();
         ;
         gameAdState.getAdvertisements().stopAll();
     }
@@ -242,14 +242,14 @@ export class GameMidlet extends ProgressMidlet {
     }
     unPauseApp() {
         this.unPauseAppBackground(true);
-        var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+        let gameAdState = this.gameAdStateFactory.getCurrentInstance();
         ;
         gameAdState.getAdvertisements().startAll();
     }
     unPauseAppBackground(background) {
         this.logUtil.putF(this.commonStrings.START, this, this.UN_PAUSE_APP_BACKGROUND);
         AllBinarySensorManager.getInstance().init();
-        var gameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
+        let gameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
         ;
         if (gameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE) {
             gameCanvasRunnableInterface.unPause();
@@ -259,7 +259,7 @@ export class GameMidlet extends ProgressMidlet {
         }
     }
     destroyAppInRunnable(unconditional, isProgress) {
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         if (isProgress) {
             progressCanvas.start();
@@ -271,11 +271,11 @@ export class GameMidlet extends ProgressMidlet {
         }
     }
     destroyApp(unconditional) {
-        var METHOD_NAME = "GameMidlet::destroyApp";
+        let METHOD_NAME = "GameMidlet::destroyApp";
         ;
         try {
             PreLogUtil.put(GameStatisticsFactory.getInstance().toString(), this, METHOD_NAME);
-            var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+            let gameAdState = this.gameAdStateFactory.getCurrentInstance();
             ;
             gameAdState.getAdvertisements().stopAll();
             if (!this.isDestroyed()) {
@@ -288,23 +288,25 @@ export class GameMidlet extends ProgressMidlet {
             }
             super.destroyApp(true);
             PreLogUtil.put(this.commonStrings.END, this, METHOD_NAME);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, METHOD_NAME, e);
+            }
         }
         this.logUtil.putF(this.commonStrings.END, this, METHOD_NAME);
     }
     //@Throws(MIDletStateChangeException.constructor)
     startApp() {
         try {
-            var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+            let gameAdState = this.gameAdStateFactory.getCurrentInstance();
             ;
             gameAdState.getAdvertisements().startAll();
-            var START_APP = "startApp";
+            let START_APP = "startApp";
             ;
             this.logUtil.putF(this.commonStrings.START, this, START_APP);
-            var gameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
+            let gameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
             ;
             if (gameCanvasRunnableInterface == NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE) {
                 this.gameMidletStateFactory.setCurrentGameState(this.gameStateFactory.NO_GAME_STATE);
@@ -319,35 +321,37 @@ export class GameMidlet extends ProgressMidlet {
                     this.logUtil.putF("GameCanvasRunnableInterface is not current displayable", this, START_APP);
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "startApp", e);
-            this.destroyApp(false);
-            this.notifyDestroyed();
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "startApp", e);
+                this.destroyApp(false);
+                this.notifyDestroyed();
+            }
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     commandAction(command, displayable) {
         try {
-            var displayableAsString = this.NO_DISPLAYABLE;
+            let displayableAsString = this.NO_DISPLAYABLE;
             ;
             if (displayable !=
                 null) {
                 displayableAsString = displayable.toString();
             }
-            var label = this.NO_COMMAND;
+            let label = this.NO_COMMAND;
             ;
             if (command !=
                 null) {
                 label = command.getLabel();
             }
             PreLogUtil.put(new StringMaker().append(this.COMMAND_NAME).append(label).append(this.DISPLAYABLE).append(displayableAsString).toString(), this, this.COMMAND_ACTION);
-            var gameCommandsFactory = GameCommandsFactory.getInstance();
+            let gameCommandsFactory = GameCommandsFactory.getInstance();
             ;
-            var allbinaryGameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
+            let allbinaryGameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
             ;
-            var gameCanvasRunnableInterface = allbinaryGameCanvasRunnableInterface;
+            let gameCanvasRunnableInterface = allbinaryGameCanvasRunnableInterface;
             ;
             if (command == gameCommandsFactory.SHOW_GAME_CANVAS) {
                 if (this.getDisplay().getCurrent() != gameCanvasRunnableInterface && allbinaryGameCanvasRunnableInterface.getType() != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE.getType()) {
@@ -356,7 +360,7 @@ export class GameMidlet extends ProgressMidlet {
                 this.unPauseAppBackground(false);
             }
             else if (command == gameCommandsFactory.CLOSE_AND_SHOW_GAME_CANVAS) {
-                var menuListener = displayable;
+                let menuListener = displayable;
                 ;
                 menuListener.close();
                 this.setDisplay(gameCanvasRunnableInterface);
@@ -392,11 +396,11 @@ export class GameMidlet extends ProgressMidlet {
                 }
             }
             else if (command == gameCommandsFactory.BUY_COMMAND) {
-                var inApplicationPurchaseFactory = InApplicationPurchaseFactory.getInstance();
+                let inApplicationPurchaseFactory = InApplicationPurchaseFactory.getInstance();
                 ;
-                var list = LockableFeatureFactory.getInstance().getList();
+                let list = LockableFeatureFactory.getInstance().getList();
                 ;
-                var lockableFeature = list.get(0);
+                let lockableFeature = list.get(0);
                 ;
                 if (list.size() > 0 && !inApplicationPurchaseFactory.isPurchased(lockableFeature)) {
                     inApplicationPurchaseFactory.purchase(lockableFeature);
@@ -408,7 +412,7 @@ export class GameMidlet extends ProgressMidlet {
             else if (command == gameCommandsFactory.QUIT_COMMAND) {
                 if (this.gameStartTimeHelper.isTimeTNT()) {
                     if (displayable instanceof HighScoreTextBox) {
-                        var menuListener = displayable;
+                        let menuListener = displayable;
                         ;
                         menuListener.close();
                     }
@@ -429,14 +433,14 @@ export class GameMidlet extends ProgressMidlet {
             }
             else if (command == gameCommandsFactory.SET_MENU_DISPLAYABLE) {
                 this.pauseAppBackground(false);
-                var menuListener = displayable;
+                let menuListener = displayable;
                 ;
                 menuListener.open();
                 this.setDisplay(displayable);
             }
             else if (command == gameCommandsFactory.START_TRACE) {
                 this.debugInterface.start();
-                var gameCanvas = allbinaryGameCanvasRunnableInterface;
+                let gameCanvas = allbinaryGameCanvasRunnableInterface;
                 ;
                 gameCanvas.addCommand(gameCommandsFactory.STOP_TRACE);
                 gameCanvas.removeCommand(gameCommandsFactory.START_TRACE);
@@ -445,33 +449,33 @@ export class GameMidlet extends ProgressMidlet {
                 this.pauseAppBackground(false);
                 this.debugInterface.stop();
                 this.unPauseAppBackground(false);
-                var gameCanvas = allbinaryGameCanvasRunnableInterface;
+                let gameCanvas = allbinaryGameCanvasRunnableInterface;
                 ;
                 gameCanvas.addCommand(gameCommandsFactory.START_TRACE);
                 gameCanvas.removeCommand(gameCommandsFactory.STOP_TRACE);
             }
             else if (command == gameCommandsFactory.DEFAULT_OPTIONS) {
-                var tempDisplayable = displayable;
+                let tempDisplayable = displayable;
                 ;
                 if (tempDisplayable instanceof GameOptionsForm) {
                     GameFeatureFormUtil.getInstance().setDefault(tempDisplayable);
                 }
             }
             else if (command == GameInputMappingInstructionsCanvas.DISPLAY) {
-                var tempDisplayable = displayable;
+                let tempDisplayable = displayable;
                 ;
                 if (tempDisplayable instanceof GameInputMappingCanvas) {
-                    var gameInputMappingCanvas = tempDisplayable;
+                    let gameInputMappingCanvas = tempDisplayable;
                     ;
                     gameInputMappingCanvas.update();
                 }
                 this.commandAction(gameCommandsFactory.SET_MENU_DISPLAYABLE, this.getInputMappingInstructionsCanvas());
             }
             else if (HighScoreCommandsFactory.getInstance().isHighScoreCommand(command)) {
-                var tempDisplayable = displayable;
+                let tempDisplayable = displayable;
                 ;
                 if (tempDisplayable instanceof HighScoresCanvas) {
-                    var highScoresCanvas = tempDisplayable;
+                    let highScoresCanvas = tempDisplayable;
                     ;
                     highScoresCanvas.updateCommand(command);
                 }
@@ -480,7 +484,7 @@ export class GameMidlet extends ProgressMidlet {
                 this.commandAction(gameCommandsFactory.SET_MENU_DISPLAYABLE, this.createHighScoresCanvas());
             }
             else if (command == GameInputMappingInstructionsCanvas.CLOSE) {
-                var menuListener = displayable;
+                let menuListener = displayable;
                 ;
                 menuListener.close();
                 this.commandAction(GameInputMappingCanvas.DISPLAY, NullCanvas.NULL_CANVAS);
@@ -492,38 +496,38 @@ export class GameMidlet extends ProgressMidlet {
                 this.commandAction(gameCommandsFactory.SET_MENU_DISPLAYABLE, this.getInputMappingCanvas());
             }
             else if (command == GameInputMappingCanvas.DEFAULT) {
-                var tempDisplayable = displayable;
+                let tempDisplayable = displayable;
                 ;
                 if (tempDisplayable instanceof GameInputMappingCanvas) {
-                    var gameInputMappingCanvas = tempDisplayable;
+                    let gameInputMappingCanvas = tempDisplayable;
                     ;
                     gameInputMappingCanvas.setDefault();
                 }
             }
             else if (command == InGameOptionsForm.DISPLAY) {
                 this.pauseAppBackground(false);
-                var progressCanvas = ProgressCanvasFactory.getInstance();
+                let progressCanvas = ProgressCanvasFactory.getInstance();
                 ;
                 progressCanvas.addNormalPortion(50, "In Game Options");
-                var layerManager = this.createGameLayerManager();
+                let layerManager = this.createGameLayerManager();
                 ;
-                var inGameOptionsFormFactory = InGameOptionsFormFactory.getInstance();
+                let inGameOptionsFormFactory = InGameOptionsFormFactory.getInstance();
                 ;
                 inGameOptionsFormFactory.init(this, new InGameFeatures(), "Options In Game", layerManager.getBackgroundBasicColor(), layerManager.getForegroundBasicColor());
-                var inGameOptionsForm = inGameOptionsFormFactory.get();
+                let inGameOptionsForm = inGameOptionsFormFactory.get();
                 ;
                 inGameOptionsForm.setItemStateListener(allbinaryGameCanvasRunnableInterface);
                 this.commandAction(gameCommandsFactory.SET_MENU_DISPLAYABLE, inGameOptionsForm);
             }
             else if (command == InGameOptionsForm.DEFAULT) {
-                var inGameOptionsForm = InGameOptionsFormFactory.getInstance().get();
+                let inGameOptionsForm = InGameOptionsFormFactory.getInstance().get();
                 ;
                 GameFeatureFormUtil.getInstance().setDefault(inGameOptionsForm);
             }
             else if (command == gameCommandsFactory.DISPLAY_OPTIONS) {
                 AllBinaryMediaManager.setMuted(true);
                 this.stopAll();
-                var mainFeatureFactory = MainFeatureFactory.getInstance();
+                let mainFeatureFactory = MainFeatureFactory.getInstance();
                 ;
                 this.isFullScreen = this.features.isFeature(mainFeatureFactory.FULL_SCREEN);
                 ResizableListenerHandler.getInstance().fireEvent(true);
@@ -533,7 +537,7 @@ export class GameMidlet extends ProgressMidlet {
             else if (command == gameCommandsFactory.CLOSE_OPTIONS) {
                 ResizableListenerHandler.getInstance().fireEvent(false);
                 this.commandAction(gameCommandsFactory.CLOSE_AND_SHOW_GAME_CANVAS, displayable);
-                var stringBuffer = new StringMaker();
+                let stringBuffer = new StringMaker();
                 ;
                 stringBuffer.append("Close isFullScreen/change: ");
                 stringBuffer.appendboolean(this.isFullScreen);
@@ -548,12 +552,12 @@ export class GameMidlet extends ProgressMidlet {
             }
             else if (command == gameCommandsFactory.DISPLAY_LOAD_FORM) {
                 this.pauseAppBackground(false);
-                var keyValuePersistance = GamePersistanceSingleton.getInstance();
+                let keyValuePersistance = GamePersistanceSingleton.getInstance();
                 ;
                 keyValuePersistance.clear();
                 keyValuePersistance.loadAll(this.abeClientInformation);
                 if (this.getLoadGameForm() == CommandForm.getNullCommandForm()) {
-                    var layerManager = this.createGameLayerManager();
+                    let layerManager = this.createGameLayerManager();
                     ;
                     this.setLoadGameForm(new LoadGameForm(this, "Load Game", layerManager.getBackgroundBasicColor(), layerManager.getForegroundBasicColor()));
                 }
@@ -563,15 +567,15 @@ export class GameMidlet extends ProgressMidlet {
                 this.commandAction(gameCommandsFactory.SET_MENU_DISPLAYABLE, this.getLoadGameForm());
             }
             else if (command == gameCommandsFactory.LOAD_FILE) {
-                var loadGameForm = this.getLoadGameForm();
+                let loadGameForm = this.getLoadGameForm();
                 ;
-                var index = loadGameForm.getSelectedId();
+                let index = loadGameForm.getSelectedId();
                 ;
                 if (index != -1) {
-                    var keyValuePersistance = GamePersistanceSingleton.getInstance();
+                    let keyValuePersistance = GamePersistanceSingleton.getInstance();
                     ;
                     this.setStartStateHashtable(keyValuePersistance.get(index));
-                    var menuListener = this.getLoadGameForm();
+                    let menuListener = this.getLoadGameForm();
                     ;
                     menuListener.close();
                     PreLogUtil.put(BasicMotionGesturesHandler.getInstance().toString(), this, this.COMMAND_ACTION);
@@ -580,12 +584,12 @@ export class GameMidlet extends ProgressMidlet {
                 }
             }
             else if (command == gameCommandsFactory.DELETE_FILE) {
-                var loadGameForm = this.getLoadGameForm();
+                let loadGameForm = this.getLoadGameForm();
                 ;
-                var index = loadGameForm.getSelectedText();
+                let index = loadGameForm.getSelectedText();
                 ;
                 if (index != -1) {
-                    var keyValuePersistance = GamePersistanceSingleton.getInstance();
+                    let keyValuePersistance = GamePersistanceSingleton.getInstance();
                     ;
                     keyValuePersistance.delete(this.abeClientInformation, index);
                     keyValuePersistance.clear();
@@ -594,7 +598,7 @@ export class GameMidlet extends ProgressMidlet {
                 }
             }
             else if (command == gameCommandsFactory.SAVE) {
-                var keyValuePersistance = GamePersistanceSingleton.getInstance();
+                let keyValuePersistance = GamePersistanceSingleton.getInstance();
                 ;
                 this.pauseAppBackground(false);
                 keyValuePersistance.save(this.abeClientInformation, this.getCurrentStateHashtable());
@@ -603,7 +607,7 @@ export class GameMidlet extends ProgressMidlet {
             else if (command == HighScoreUtil.SUBMIT_TEXTBOX_COMMAND) {
                 this.logUtil.putF("Submitted Score", this, this.COMMAND_ACTION);
                 if (displayable instanceof HighScoreTextBox) {
-                    var highScoreTextBox = displayable;
+                    let highScoreTextBox = displayable;
                     ;
                     highScoreTextBox.submitted = true;
                 }
@@ -617,14 +621,14 @@ export class GameMidlet extends ProgressMidlet {
                 this.webCommandProcessor.process(this, gameCommandsFactory.OPEN_WEB_URL, NullCanvas.NULL_CANVAS);
             }
             else if (command == gameCommandsFactory.TOGGLE_KEYBOARD) {
-                var virtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance();
+                let virtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance();
                 ;
                 virtualKeyboardEventHandler.fireEvent(virtualKeyboardEventHandler.SHOW_EVENT);
             }
             else if (this.tsUtil.compareTo(command.getLabel(), gameCommandsFactory.TOGGLE_FULLSCREEN.getLabel()) == 0) {
-                var mainFeatureFactory = MainFeatureFactory.getInstance();
+                let mainFeatureFactory = MainFeatureFactory.getInstance();
                 ;
-                var isFullScreen = this.features.isFeature(mainFeatureFactory.FULL_SCREEN);
+                let isFullScreen = this.features.isFeature(mainFeatureFactory.FULL_SCREEN);
                 ;
                 if (isFullScreen) {
                     this.features.removeDefault(mainFeatureFactory.FULL_SCREEN);
@@ -634,24 +638,26 @@ export class GameMidlet extends ProgressMidlet {
                 }
                 this.updateFullScreen();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(command.getLabel()).toString(), this, this.midletStrings.COMMAND_ACTION, e);
-            if (command != GameCommandsFactory.getInstance().EXIT_COMMAND) {
-                this.exitProgress(false);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(command.getLabel()).toString(), this, this.midletStrings.COMMAND_ACTION, e);
+                if (command != GameCommandsFactory.getInstance().EXIT_COMMAND) {
+                    this.exitProgress(false);
+                }
             }
         }
     }
     updateFullScreen() {
-        var mainFeatureFactory = MainFeatureFactory.getInstance();
+        let mainFeatureFactory = MainFeatureFactory.getInstance();
         ;
-        var isFullScreen = this.features.isFeature(mainFeatureFactory.FULL_SCREEN);
+        let isFullScreen = this.features.isFeature(mainFeatureFactory.FULL_SCREEN);
         ;
-        var displayable = this.getDisplay().getCurrent();
+        let displayable = this.getDisplay().getCurrent();
         ;
         if (displayable instanceof Canvas) {
-            var canvas = displayable;
+            let canvas = displayable;
             ;
             canvas.setFullScreenMode(isFullScreen);
         }
@@ -684,7 +690,7 @@ export class GameMidlet extends ProgressMidlet {
     }
     //@Throws(Exception.constructor)
     startGameCanvasRunnableInterface() {
-        var threadFactoryUtil = ThreadFactoryUtil.getInstance();
+        let threadFactoryUtil = ThreadFactoryUtil.getInstance();
         ;
         this.thread = threadFactoryUtil.getInstanceGameCanvasRunnable(this.allbinaryGameCanvasRunnableInterface);
         this.logUtil.putF(new StringMaker().append("Thread Priority: ").appendint(this.thread.getPriority()).toString(), this, "startGameCanvasRunnableInterface");
@@ -697,7 +703,7 @@ export class GameMidlet extends ProgressMidlet {
         GameNotificationEventHandler.getInstance().removeAllListeners();
         ColorChangeEventHandler.getInstance().removeAllListeners();
         GameEventHandlerUtil.removeAllListeners();
-        var gameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
+        let gameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface;
         ;
         if (gameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE) {
             this.logUtil.putF(new StringMaker().append("Set Running False: ").append(gameCanvasRunnableInterface.toString()).toString(), this, this.gameStrings.STOP_GAME_CANVAS_RUNNABLE_INTERFACE);
@@ -707,7 +713,7 @@ export class GameMidlet extends ProgressMidlet {
             this.logUtil.putF("StopGame - Could Not Stop", this, this.gameStrings.STOP_GAME_CANVAS_RUNNABLE_INTERFACE);
         }
         ThreadUtil.getInstance().join(this.thread);
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         if (this.features.isFeature(MainFeatureFactory.getInstance().LOAD_ALL)) {
             progressCanvas.addNormalPortion(50, "Stopped Game Runnable");
@@ -725,13 +731,13 @@ export class GameMidlet extends ProgressMidlet {
         this.allbinaryGameCanvasRunnableInterface = gameCanvasRunnableInterface;
     }
     createGameLayerManager() {
-        var gameInfo = new GameInfo(GameTypeFactory.getInstance().SINGLE_PLAYER, GameMode.SERVER, PlayerTypesFactory.getInstance().PLAYER_TYPE_ONE, 1, 1);
+        let gameInfo = new GameInfo(GameTypeFactory.getInstance().SINGLE_PLAYER, GameMode.SERVER, PlayerTypesFactory.getInstance().PLAYER_TYPE_ONE, 1, 1);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new AllBinaryGameLayerManager(this.basicColorFactory.BLACK, this.basicColorFactory.WHITE, gameInfo);
     }
     getGameOptionsForm() {
-        var layerManager = this.createGameLayerManager();
+        let layerManager = this.createGameLayerManager();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return GameOptionsFormFactory.getInstance().init(this, "Game Options", layerManager.getBackgroundBasicColor(), layerManager.getForegroundBasicColor());
@@ -740,21 +746,21 @@ export class GameMidlet extends ProgressMidlet {
     //@Throws(Exception.constructor)
     save() {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.SAVE);
-        var hashtable = this.getCurrentStateHashtable();
+        let hashtable = this.getCurrentStateHashtable();
         ;
         GamePersistanceSingleton.getInstance().save(this.abeClientInformation, hashtable);
     }
     //@Throws(Exception.constructor)
     getCurrentStateHashtable() {
         this.logUtil.putF(this.commonStrings.START, this, "getCurrentStateHashtable");
-        var hashtable = StdUtil.getInstance().createHashtable();
+        let hashtable = StdUtil.getInstance().createHashtable();
         ;
         if (this.allbinaryGameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE) {
-            var currentHashtable = this.allbinaryGameCanvasRunnableInterface.getCurrentStateHashtable();
+            let currentHashtable = this.allbinaryGameCanvasRunnableInterface.getCurrentStateHashtable();
             ;
-            var enumeration = currentHashtable.keys();
+            let enumeration = currentHashtable.keys();
             ;
-            var key;
+            let key;
             ;
             while (this.enumerationUtil.hasMoreElements(enumeration)) {
                 key = this.enumerationUtil.nextElement(enumeration);
@@ -783,10 +789,10 @@ export class GameMidlet extends ProgressMidlet {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
-        var displayable = this.getDisplay().getCurrent();
+        let displayable = this.getDisplay().getCurrent();
         ;
         if (displayable instanceof DemoCanvas) {
-            var demoCanvas = displayable;
+            let demoCanvas = displayable;
             ;
             if (demoCanvas.isDemoLoading()) {
                 //if statement needs to be on the same line and ternary does not work the same way.

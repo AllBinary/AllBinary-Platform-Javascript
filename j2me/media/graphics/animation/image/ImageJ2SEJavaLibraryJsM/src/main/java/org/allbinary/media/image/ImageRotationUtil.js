@@ -20,9 +20,9 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not GWT import const J2SEMutableImage
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageJ2SERotationUtil } from './ImageJ2SERotationUtil.js';
-//not GWT import - same folder const ImageJ2SERotationUtil
+//sameFolderImports - not GWT import - same folder const ImageJ2SERotationUtil
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageRotationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -34,19 +34,19 @@ export class ImageRotationUtil extends Object {
     }
     rotateImage(originalImage, image, totalAngle) {
         if (image.isMutable()) {
-            var j2seImage = image;
+            let j2seImage = image;
             ;
-            var newBufferedImage = j2seImage.getImage();
+            let newBufferedImage = j2seImage.getImage();
             ;
-            var originalAwtImage = null;
+            let originalAwtImage = null;
             ;
             if (originalImage.isMutable()) {
-                var originalJ2SEImage = originalImage;
+                let originalJ2SEImage = originalImage;
                 ;
                 originalAwtImage = originalJ2SEImage.getImage();
             }
             else {
-                var originalJ2SEImage = originalImage;
+                let originalJ2SEImage = originalImage;
                 ;
                 originalAwtImage = originalJ2SEImage.getImage();
             }
@@ -58,26 +58,26 @@ export class ImageRotationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createRotatedImage(originalImage, rotationInDegrees) {
-        var image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
+        let image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
         ;
         if (image.isMutable()) {
-            var originalAwtImage = null;
+            let originalAwtImage = null;
             ;
             if (originalImage.isMutable()) {
-                var originalJ2SEImage = originalImage;
+                let originalJ2SEImage = originalImage;
                 ;
                 originalAwtImage = originalJ2SEImage.getImage();
             }
             else {
-                var originalJ2SEImage = originalImage;
+                let originalJ2SEImage = originalImage;
                 ;
                 originalAwtImage = originalJ2SEImage.getImage();
             }
-            var j2seImage = image;
+            let j2seImage = image;
             ;
-            var newBufferedImage = j2seImage.getImage();
+            let newBufferedImage = j2seImage.getImage();
             ;
-            var bufferedImage = this.imageJ2SERotationUtil.createRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees);
+            let bufferedImage = this.imageJ2SERotationUtil.createRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return image;

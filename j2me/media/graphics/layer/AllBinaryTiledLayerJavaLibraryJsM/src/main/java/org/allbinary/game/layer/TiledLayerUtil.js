@@ -13,16 +13,16 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const AllBinaryTiledLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryTiledLayer
 export class TiledLayerUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TiledLayerUtil.instance;
     }
     keepOnBorderdMapX(terrainTiledLayer, x, width, mapBorderBufferWidth) {
-        var newX = x;
+        let newX = x;
         ;
-        var maxRight = terrainTiledLayer.getWidth() - width - mapBorderBufferWidth;
+        let maxRight = terrainTiledLayer.getWidth() - width - mapBorderBufferWidth;
         ;
         if (x + width > maxRight) {
             newX = maxRight;
@@ -34,9 +34,9 @@ export class TiledLayerUtil extends Object {
         return newX;
     }
     keepOnBorderdMapY(terrainTiledLayer, y, height, mapBorderBufferHeight) {
-        var newY = y;
+        let newY = y;
         ;
-        var maxBottom = terrainTiledLayer.getHeight() - height - mapBorderBufferHeight;
+        let maxBottom = terrainTiledLayer.getHeight() - height - mapBorderBufferHeight;
         ;
         if (y + height > maxBottom) {
             newY = maxBottom;
@@ -48,9 +48,9 @@ export class TiledLayerUtil extends Object {
         return newY;
     }
     keepOnMapX(terrainTiledLayer, x, width) {
-        var newX = x;
+        let newX = x;
         ;
-        var maxRight = terrainTiledLayer.getWidth() - width;
+        let maxRight = terrainTiledLayer.getWidth() - width;
         ;
         if (x >= maxRight) {
             newX = maxRight;
@@ -62,9 +62,9 @@ export class TiledLayerUtil extends Object {
         return newX;
     }
     keepOnMapY(terrainTiledLayer, y, height) {
-        var newY = y;
+        let newY = y;
         ;
-        var maxBottom = terrainTiledLayer.getHeight() - height;
+        let maxBottom = terrainTiledLayer.getHeight() - height;
         ;
         if (y >= maxBottom) {
             newY = maxBottom;

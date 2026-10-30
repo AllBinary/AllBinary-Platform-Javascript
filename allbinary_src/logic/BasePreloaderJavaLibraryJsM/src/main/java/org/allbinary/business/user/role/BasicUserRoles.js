@@ -18,7 +18,7 @@ import { Exception } from '../../../../../java/lang/Exception.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const BasicUserRole
+//sameFolderImports - not GWT import - same folder const BasicUserRole
 export class BasicUserRoles extends Object {
     constructor() {
         super(...arguments);
@@ -30,12 +30,12 @@ export class BasicUserRoles extends Object {
     }
     //@Throws(Exception.constructor)
     getRole(role) {
-        var roleVector = this.getAll();
+        let roleVector = this.getAll();
         ;
-        var size = roleVector.size();
+        let size = roleVector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var userRole = roleVector.get(index);
+        for (let index = 0; index < size; index++) {
+            let userRole = roleVector.get(index);
             ;
             if (role.compareTo(userRole.toString()) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.

@@ -26,27 +26,27 @@ import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/disp
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BoundBounceAI } from './BoundBounceAI.js';
-//not GWT import - same folder const BoundBounceAI
+//sameFolderImports - not GWT import - same folder const BoundBounceAI
 import { ReverseVelocityBoundsVisitor } from './ReverseVelocityBoundsVisitor.js';
-//not GWT import - same folder const ReverseVelocityBoundsVisitor
+//sameFolderImports - not GWT import - same folder const ReverseVelocityBoundsVisitor
 export class TopUBoundBounceAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {
-        var velocityInterfaceCompositeInterface = ownerLayerInterface;
+        let velocityInterfaceCompositeInterface = ownerLayerInterface;
         ;
-        var velocityInterface = velocityInterfaceCompositeInterface.getVelocityProperties();
+        let velocityInterface = velocityInterfaceCompositeInterface.getVelocityProperties();
         ;
-        var maxDistancePerTick = (velocityInterface.getMaxForwardVelocity() >> velocityInterface.getVelocityXBasicDecimalP().getScaledFactor());
+        let maxDistancePerTick = (velocityInterface.getMaxForwardVelocity() >> velocityInterface.getVelocityXBasicDecimalP().getScaledFactor());
         ;
-        var halfWidth = ownerLayerInterface.getWidth() * 2 + maxDistancePerTick + 1;
+        let halfWidth = ownerLayerInterface.getWidth() * 2 + maxDistancePerTick + 1;
         ;
-        var halfHeight = ownerLayerInterface.getHeight() * 2 + maxDistancePerTick + 1;
+        let halfHeight = ownerLayerInterface.getHeight() * 2 + maxDistancePerTick + 1;
         ;
-        var point = PointFactory.getInstance().createXY(halfWidth, halfHeight + 60);
+        let point = PointFactory.getInstance().createXY(halfWidth, halfHeight + 60);
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var rectangle = new Rectangle(point, (displayInfo.getLastWidth() - halfWidth - point.getX()), (displayInfo.getLastHeight() - halfHeight - point.getY()));
+        let rectangle = new Rectangle(point, (displayInfo.getLastWidth() - halfWidth - point.getX()), (displayInfo.getLastHeight() - halfHeight - point.getY()));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new BoundBounceAI(ownerLayerInterface, gameInput, new TopULayerBounds(rectangle), new ReverseVelocityBoundsVisitor(ownerLayerInterface));

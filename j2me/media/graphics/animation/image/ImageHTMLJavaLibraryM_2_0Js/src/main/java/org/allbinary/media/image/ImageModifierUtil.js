@@ -55,9 +55,9 @@ export class ImageModifierUtil extends Object {
     changeColor(unusedOriginalImage, image, imageIndex, basicColor) {
     }
     setAlpha(originalImage, image, imageIndex, alpha) {
-        var alphaF = alpha;
+        let alphaF = alpha;
         ;
-        var alphaFloat = alphaF / 255;
+        let alphaFloat = alphaF / 255;
         ;
         this.setAlphaF(originalImage, image, imageIndex, alphaFloat);
     }
@@ -68,38 +68,38 @@ export class ImageModifierUtil extends Object {
         }
     }
     setAlpha2(originalImage, image, imageIndex, alpha) {
-        var htmlImage = image;
+        let htmlImage = image;
         ;
-        var canvasImage = htmlImage.getImage();
+        let canvasImage = htmlImage.getImage();
         ;
-        var originalPlaynImage = originalImage.getImage();
+        let originalPlaynImage = originalImage.getImage();
         ;
-        var canvas = this.playnUtil.getCanvas(canvasImage);
+        let canvas = this.playnUtil.getCanvas(canvasImage);
         ;
         canvas.clear();
         canvas.setAlpha(alpha);
         canvas.draw(originalPlaynImage, 0, 0);
     }
     setAlpha3(image, alpha) {
-        var alphaF = alpha;
+        let alphaF = alpha;
         ;
-        var alphaFloat = alphaF / 255;
+        let alphaFloat = alphaF / 255;
         ;
-        var htmlImage = image;
+        let htmlImage = image;
         ;
-        var canvasImage = htmlImage.getImage();
+        let canvasImage = htmlImage.getImage();
         ;
-        var canvas = this.playnUtil.getCanvas(canvasImage);
+        let canvas = this.playnUtil.getCanvas(canvasImage);
         ;
         canvas.setAlpha(alphaFloat);
     }
     getImageArray(originalImageArray) {
-        var size = originalImageArray.length;
+        let size = originalImageArray.length;
         ;
         this.alphaArray = new Array(size);
-        var imageArray = new Array(size);
+        let imageArray = new Array(size);
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             imageArray[index] = originalImageArray[index];
             this.handleImage(imageArray, index, originalImageArray[index]);
         }
@@ -107,7 +107,7 @@ export class ImageModifierUtil extends Object {
         return imageArray;
     }
     handleImage(imageArray, index, image) {
-        var image3 = image.getImage();
+        let image3 = image.getImage();
         ;
         if (image3 !=
             null) {
@@ -115,15 +115,15 @@ export class ImageModifierUtil extends Object {
                 this.copy(imageArray, index, image, image3);
             }
             else {
-                var callback = new class extends Callback {
-                    onSuccess(resource = {}) {
-                        var logUtil = LogUtil.getInstance();
+                let callback = new class extends Callback {
+                    onSuccess(resource) {
+                        let logUtil = LogUtil.getInstance();
                         ;
                         logUtil.putF(this.resourceCallbackStrings.DONE + image.getName(), this, this.resourceCallbackStrings.HANDLE_IMAGE);
                         copy(imageArray, index, image, image3);
                     }
                     onFailure(e) {
-                        var logUtil = LogUtil.getInstance();
+                        let logUtil = LogUtil.getInstance();
                         ;
                         logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(this.resourceCallbackStrings.ERROR).append(image.getName()).toString(), this, this.resourceCallbackStrings.HANDLE_IMAGE, e);
                     }
@@ -138,22 +138,24 @@ export class ImageModifierUtil extends Object {
     }
     copy(imageArray, index, image, image3) {
         try {
-            var image2 = Image.createImageWH(Math.round(image3.width()), Math.round(image3.height()));
+            let image2 = Image.createImageWH(globalThis.Math.trunc(image3.width()), globalThis.Math.trunc(image3.height()));
             ;
-            var graphics = image2.getGraphics();
+            let graphics = image2.getGraphics();
             ;
             graphics.drawImage(image, 0, 0, Anchor.TOP_LEFT);
             imageArray[index] = image2;
-            //: 
         }
-        catch (e) {
-            this.logUtil.putF(this.commonStrings.EXCEPTION_LABEL + this.resourceCallbackStrings.DONE, this, this.resourceCallbackStrings.HANDLE_IMAGE);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.putF(this.commonStrings.EXCEPTION_LABEL + this.resourceCallbackStrings.DONE, this, this.resourceCallbackStrings.HANDLE_IMAGE);
+            }
         }
     }
     reset() {
-        var size = this.alphaArray.length;
+        let size = this.alphaArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.alphaArray[index] = true;
         }
     }

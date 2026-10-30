@@ -30,7 +30,7 @@ export class LapWidget extends BasicHud {
         this.updateMaxWidth = 40;
     }
     update(lapInfo) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.delete(0, stringBuffer.length());
         stringBuffer.append(this.LAP_STR);

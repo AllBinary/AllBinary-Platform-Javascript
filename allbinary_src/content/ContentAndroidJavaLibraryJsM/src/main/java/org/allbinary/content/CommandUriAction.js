@@ -44,23 +44,25 @@ export class CommandUriAction extends Object {
     }
     process(command) {
         try {
-            var intent = this.getIntent(command);
+            let intent = this.getIntent(command);
             ;
             ResourceUtil.getInstance().getContext().startActivity(intent);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+            }
         }
     }
     getIntent(command) {
-        var url = this.hashtable.get(command);
+        let url = this.hashtable.get(command);
         ;
-        var uri = Uri.parse(url);
+        let uri = Uri.parse(url);
         ;
-        var intent = new Intent(Intent.ACTION_VIEW, uri);
+        let intent = new Intent(Intent.ACTION_VIEW, uri);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return intent;

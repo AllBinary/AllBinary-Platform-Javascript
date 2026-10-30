@@ -14,7 +14,7 @@
 //not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollMapGameInputProcessor } from './ScrollMapGameInputProcessor.js';
-//not GWT import - same folder const ScrollMapPlayerGameInput
+//sameFolderImports - not GWT import - same folder const ScrollMapPlayerGameInput
 export class ScrollMapRightGameInputProcessor extends ScrollMapGameInputProcessor {
     constructor(scrollMapPlayerGameInput) {
         super(scrollMapPlayerGameInput);

@@ -5,7 +5,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const Visitor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABTextItem } from './ABTextItem.js';
-//not GWT import - same folder const ABTextItem
+//sameFolderImports - not GWT import - same folder const ABTextItem
 export class ABTextFieldItem extends ABTextItem {
     constructor(canvas, visitor, label, value, maxSize, layout, altText, font, backgroundBasicColor, foregroundBasicColor) {
         super(label, layout, altText, backgroundBasicColor, foregroundBasicColor);

@@ -26,7 +26,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameGraphicsResourceUtil } from './GameGraphicsResourceUtil.js';
-//not GWT import - same folder const GameGraphicsResourceUtil
+//sameFolderImports - not GWT import - same folder const GameGraphicsResourceUtil
 export class BasicGameResources extends Object {
     constructor() {
         super();
@@ -36,7 +36,7 @@ export class BasicGameResources extends Object {
     }
     init(ROOT, SIZE) {
         try {
-            var scale = GameConfigurationCentral.getInstance().SCALE.getValue().intValue();
+            let scale = GameConfigurationCentral.getInstance().SCALE.getValue().intValue();
             ;
             if (scale > 1 && scale - 1 < SIZE.length) {
                 this.append(ROOT, SIZE[scale - 1]);
@@ -44,19 +44,21 @@ export class BasicGameResources extends Object {
             else {
                 throw new Exception(new StringMaker().append("Invalid Value: ").appendint(scale).toString());
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     append(ROOT, sizeString) {
-        var DESTROY = "_destroy";
+        let DESTROY = "_destroy";
         ;
-        var string = this.getString();
+        let string = this.getString();
         ;
         BasicGameResources.stringBuffer.delete(0, BasicGameResources.stringBuffer.length());
         BasicGameResources.stringBuffer.append(ROOT);

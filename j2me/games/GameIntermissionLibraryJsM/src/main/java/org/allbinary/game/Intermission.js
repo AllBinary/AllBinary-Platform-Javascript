@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import - same folder const IntermissionInterface
+//sameFolderImports - not GWT import - same folder const IntermissionInterface
 import { NullIntermissionEnableListener } from './NullIntermissionEnableListener.js';
-//not GWT import - same folder const IntermissionEnableListenerInterface
+//sameFolderImports - not GWT import - same folder const IntermissionEnableListenerInterface
 export class Intermission extends Object {
     constructor() {
         super();

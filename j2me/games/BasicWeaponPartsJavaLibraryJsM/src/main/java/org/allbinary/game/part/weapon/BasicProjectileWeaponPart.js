@@ -22,7 +22,7 @@ import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLaye
 //not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicWeaponPart } from './BasicWeaponPart.js';
-//not GWT import - same folder const BasicWeaponPart
+//sameFolderImports - not GWT import - same folder const BasicWeaponPart
 export class BasicProjectileWeaponPart extends BasicWeaponPart {
     static createBasicProjectileWeaponPart(animationInterface, weaponLayerCircularStaticPool) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -35,7 +35,7 @@ export class BasicProjectileWeaponPart extends BasicWeaponPart {
     }
     //@Throws(Exception.constructor)
     processScore(allbinaryLayerManager, angle, otherAngle, weaponProperties, scoreableInterface) {
-        var weaponLayer = this.weaponLayerCircularStaticPool.getInstanceWeaponLayer(this.getOwnerLayerInterface(), this.relativeRelationship.getX(), this.relativeRelationship.getY(), this.relativeRelationship.getZ(), Math.round(angle), Math.round(otherAngle), weaponProperties, scoreableInterface);
+        let weaponLayer = this.weaponLayerCircularStaticPool.getInstanceWeaponLayer(this.getOwnerLayerInterface(), this.relativeRelationship.getX(), this.relativeRelationship.getY(), this.relativeRelationship.getZ(), globalThis.Math.trunc(angle), globalThis.Math.trunc(otherAngle), weaponProperties, scoreableInterface);
         ;
         allbinaryLayerManager.append(weaponLayer);
     }

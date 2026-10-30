@@ -21,7 +21,7 @@ import { GenericOperatingSystem } from '../../../../../../org/allbinary/logic/sy
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidSystemProperties } from './AndroidSystemProperties.js';
-//not GWT import - same folder const AndroidSystemProperties
+//sameFolderImports - not GWT import - same folder const AndroidSystemProperties
 export class AndroidOS extends GenericOperatingSystem {
     constructor() {
         super();
@@ -30,14 +30,14 @@ export class AndroidOS extends GenericOperatingSystem {
         this.DEVICE_SOFTWARE_VERSION = "DeviceSoftwareVersion";
         this.LINE_1_NUMBER = "Line1Number";
         this.OUYA = "ouya";
-        var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
+        let SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
         ;
         if (SDK_VERSION > 10) {
             this.scalable = true;
         }
-        var properties = AndroidSystemProperties.getInstance();
+        let properties = AndroidSystemProperties.getInstance();
         ;
-        var commonStrings = CommonSeps.getInstance();
+        let commonStrings = CommonSeps.getInstance();
         ;
         this.stringBuffer.append(this.DEVICE_ID);
         this.stringBuffer.append(commonStrings.EQUALS);
@@ -101,7 +101,7 @@ export class AndroidOS extends GenericOperatingSystem {
         this.stringBuffer.append(commonStrings.SPACE);
     }
     isOverScan() {
-        var properties = AndroidSystemProperties.getInstance();
+        let properties = AndroidSystemProperties.getInstance();
         ;
         if (properties.getDevice().toLowerCase().indexOf(this.OUYA) >= 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -119,7 +119,7 @@ export class AndroidOS extends GenericOperatingSystem {
         return 90;
     }
     toString() {
-        var osBuffer = new StringMaker();
+        let osBuffer = new StringMaker();
         ;
         osBuffer.append(super.toString());
         osBuffer.append(CommonSeps.getInstance().SPACE);

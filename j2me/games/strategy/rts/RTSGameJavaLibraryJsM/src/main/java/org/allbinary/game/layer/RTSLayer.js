@@ -59,19 +59,19 @@ import { LayerDistanceUtil } from '../../../../org/allbinary/math/LayerDistanceU
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const PathFindingLayerInterface
+//sameFolderImports - not GWT import - same folder const PathFindingLayerInterface
 import { RTSLayer2LogHelper } from './RTSLayer2LogHelper.js';
-//not GWT import - same folder const GeographicMapCellPositionAreaBase
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPositionAreaBase
 import { GeographicMapCellPositionArea } from './GeographicMapCellPositionArea.js';
-//not GWT import - same folder const RTSPlayerLayerInterface
+//sameFolderImports - not GWT import - same folder const RTSPlayerLayerInterface
 import { RTSLayerUtil } from './RTSLayerUtil.js';
-//not GWT import - same folder const SelectionHudPaintable
+//sameFolderImports - not GWT import - same folder const SelectionHudPaintable
 export class RTSLayer extends MultiPlayerGameLayer {
     //@Throws(Exception.constructor)
     static createSimulatedInstance(remoteInfo) {
-        var nullAnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance();
+        let nullAnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance();
         ;
-        var nullIndexedAnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance();
+        let nullIndexedAnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new RTSLayer(RemoteInfo.REMOTE_INFO, GroupFactory.getInstance().NULL_GROUP_ARRAY, StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0, new TileLayerPositionIntoViewPosition());
@@ -128,7 +128,7 @@ export class RTSLayer extends MultiPlayerGameLayer {
         this.indexedButShouldBeRotationAnimationInterface = animationInterfaceFactoryInterface.getInstance(0);
         this.initAnimationInterface = this.indexedButShouldBeRotationAnimationInterface;
         this.destroyAnimationInterface = proceduralAnimationInterfaceFactoryInterface.getInstanceAnimation(this.indexedButShouldBeRotationAnimationInterface);
-        var animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+        let animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
         ;
         this.rangeAnimation = animation;
         this.initRangeAnimation = animation;
@@ -140,13 +140,13 @@ export class RTSLayer extends MultiPlayerGameLayer {
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
         super.setAllBinaryGameLayerManager(allBinaryGameLayerManager);
-        var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+        let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var viewPosition2 = this.getViewPosition();
+        let viewPosition2 = this.getViewPosition();
         ;
         viewPosition2.setTiledLayer(tiledLayer);
         this.updateWaypointBehavior(geographicMapInterface);
@@ -167,7 +167,7 @@ export class RTSLayer extends MultiPlayerGameLayer {
         this.setSelected(true);
     }
     deselect() {
-        var animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+        let animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
         ;
         this.rangeAnimation = animation;
         this.sensorRangeAnimation = animation;
@@ -204,10 +204,12 @@ export class RTSLayer extends MultiPlayerGameLayer {
             else {
                 this.build();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "processTick", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "processTick", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -222,11 +224,11 @@ export class RTSLayer extends MultiPlayerGameLayer {
     }
     paint(graphics) {
         super.paintFirst(graphics);
-        var viewPosition = this.getViewPosition();
+        let viewPosition = this.getViewPosition();
         ;
-        var viewX = viewPosition.getX();
+        let viewX = viewPosition.getX();
         ;
-        var viewY = viewPosition.getY();
+        let viewY = viewPosition.getY();
         ;
         this.getAnimationInterface().paintXY(graphics, viewX, viewY);
     }
@@ -260,7 +262,7 @@ export class RTSLayer extends MultiPlayerGameLayer {
             this.verticleBuildAnimationInterface.nextFrame();
             this.hackVerticleBuild++;
         }
-        this.percentCompleteP = 100 * this.hackVerticleBuild / this.BUILD_VALUE;
+        this.percentCompleteP = globalThis.Math.trunc(100 * this.hackVerticleBuild / this.BUILD_VALUE);
         this.getHudPaintable().updateInfo();
     }
     isSelfUpgradeable() {
@@ -322,9 +324,9 @@ export class RTSLayer extends MultiPlayerGameLayer {
     }
     //@Throws(Exception.constructor)
     setTarget(targetGameLayer) {
-        var anotherTargetDistance = this.layerDistanceUtil.getDistance(this, targetGameLayer);
+        let anotherTargetDistance = this.layerDistanceUtil.getDistance(this, targetGameLayer);
         ;
-        var waypointBehaviorBase = this.getWaypointBehavior();
+        let waypointBehaviorBase = this.getWaypointBehavior();
         ;
         waypointBehaviorBase.setTargetWithDistance(targetGameLayer, anotherTargetDistance);
     }

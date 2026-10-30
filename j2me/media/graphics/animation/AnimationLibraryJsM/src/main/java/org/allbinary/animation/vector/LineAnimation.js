@@ -44,7 +44,7 @@ export class LineAnimation extends Animation {
         this.newLine = this.tempLine;
     }
     paintXY(graphics, x, y) {
-        var currentLine = this.line;
+        let currentLine = this.line;
         ;
         this.basicSetColorUtil.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor());
         graphics.drawLine(currentLine[0][0], currentLine[0][1], currentLine[1][0], currentLine[1][1]);

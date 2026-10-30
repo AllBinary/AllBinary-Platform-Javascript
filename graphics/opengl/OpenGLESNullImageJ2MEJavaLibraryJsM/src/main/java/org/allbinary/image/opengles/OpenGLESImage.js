@@ -27,9 +27,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const OpenGLSurfaceChangedInterface
+//sameFolderImports - not GWT import - same folder const OpenGLSurfaceChangedInterface
 import { OpenGLESImageProperties } from './OpenGLESImageProperties.js';
-//not GWT import - same folder const OpenGLESImageProperties
+//sameFolderImports - not GWT import - same folder const OpenGLESImageProperties
 //OpenGLESNullImageJ2MEJavaLibrary
 export class OpenGLESImage extends Object {
     constructor(image, bitmapFactory, textureFactory) {

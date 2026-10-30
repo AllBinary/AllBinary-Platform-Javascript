@@ -22,7 +22,7 @@ import { StringValidationUtil } from '../../../../../org/allbinary/logic/string/
 //not GWT import const StringValidationUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BooleanFactory } from './BooleanFactory.js';
-//not GWT import - same folder const BooleanFactory
+//sameFolderImports - not GWT import - same folder const BooleanFactory
 export class BooleanUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -34,15 +34,15 @@ export class BooleanUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getFromString(booleanString) {
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
-        var booleanFactory = BooleanFactory.getInstance();
+        let booleanFactory = BooleanFactory.getInstance();
         ;
         if (stringValidationUtil.isEmpty(booleanString)) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
-        var booleanStringLowerCase = booleanString.toLowerCase();
+        let booleanStringLowerCase = booleanString.toLowerCase();
         ;
         if (this.tsUtil.compareTo(booleanStringLowerCase, booleanFactory.TRUE_STRING) == 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,9 +58,9 @@ export class BooleanUtil extends Object {
     }
     //@Throws(Exception.constructor)
     isStringBoolean(booleanString) {
-        var booleanFactory = BooleanFactory.getInstance();
+        let booleanFactory = BooleanFactory.getInstance();
         ;
-        var booleanStringLowerCase = booleanString.toLowerCase();
+        let booleanStringLowerCase = booleanString.toLowerCase();
         ;
         if (booleanStringLowerCase.compareTo(booleanFactory.TRUE_STRING) == 0 || booleanStringLowerCase.compareTo(booleanFactory.FALSE_STRING) == 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,11 +70,11 @@ export class BooleanUtil extends Object {
         return false;
     }
     toStringFromBooleanArray(booleanArray) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var size = booleanArray.length;
+        let size = booleanArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             stringMaker.appendboolean(booleanArray[index]);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

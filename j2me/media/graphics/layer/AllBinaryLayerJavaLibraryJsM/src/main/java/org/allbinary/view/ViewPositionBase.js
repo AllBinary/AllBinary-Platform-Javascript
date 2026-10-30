@@ -35,7 +35,7 @@ export class ViewPositionBase extends GPoint {
         return this.getZ();
         ;
     }
-    setAllbinaryLayer(allbinaryLayer = {}) {
+    setAllbinaryLayer(allbinaryLayer) {
     }
 }
 ViewPositionBase.NULL_VIEW_POSITION = new ViewPositionBase(0, 0, 0);

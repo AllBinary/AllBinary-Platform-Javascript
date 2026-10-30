@@ -19,13 +19,13 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryMediaManager } from './AllBinaryMediaManager.js';
-//not GWT import - same folder const SoundsFactoryInterface
+//sameFolderImports - not GWT import - same folder const SoundsFactoryInterface
 export class AllBinaryMediaManagerShutdown extends Object {
     //@Throws(Exception.constructor)
     static shutdown(soundsFactoryInterface) {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         logUtil.putF(commonStrings.START, instance, "shutdown");
         AllBinaryMediaManager.shutdown(soundsFactoryInterface);

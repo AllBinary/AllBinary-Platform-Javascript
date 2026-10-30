@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DbInitInfo } from './DbInitInfo.js';
-//not GWT import - same folder const DbInitInfo
+//sameFolderImports - not GWT import - same folder const DbInitInfo
 export class HistoryDbInitInfo extends DbInitInfo {
     constructor() {
         super(INITFILE, true);

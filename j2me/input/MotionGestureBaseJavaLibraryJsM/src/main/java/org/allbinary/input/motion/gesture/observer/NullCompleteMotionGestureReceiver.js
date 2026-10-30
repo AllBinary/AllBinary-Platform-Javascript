@@ -19,12 +19,12 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const CompleteMotionGestureListenerInterface
+//sameFolderImports - not GWT import - same folder const CompleteMotionGestureListenerInterface
 export class NullCompleteMotionGestureReceiver extends Object {
     constructor() {
         super();
         this.logUtil = LogUtil.getInstance();
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF("Null Gesture Reciever", this, commonStrings.CONSTRUCTOR);
     }

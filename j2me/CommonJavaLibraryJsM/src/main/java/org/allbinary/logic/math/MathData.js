@@ -27,7 +27,7 @@ export class MathData extends Object {
         super();
         this.PLUS = "+";
         this.GREATER_THAN = ">";
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         this.EQUALS = commonSeps.EQUALS;
         this.MINUS = commonSeps.DASH;

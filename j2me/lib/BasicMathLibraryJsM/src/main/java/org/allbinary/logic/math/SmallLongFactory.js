@@ -21,10 +21,10 @@ export class SmallLongFactory extends Object {
         return SmallLongFactory.instance;
     }
     initWithRange(value, negativeValue) {
-        for (var index = value - 1; index >= this.lastMin; index--) {
+        for (let index = value - 1; index >= this.lastMin; index--) {
             this.INTEGER_ARRAY[index + this.NEGATIVE_MAX] = new Long(index);
         }
-        for (var index = negativeValue - 1; index >= this.lastNegativeMin; index--) {
+        for (let index = negativeValue - 1; index >= this.lastNegativeMin; index--) {
             this.INTEGER_ARRAY[index] = new Long(-index);
         }
         if (this.lastMin < value) {
@@ -39,10 +39,10 @@ export class SmallLongFactory extends Object {
         if (this.INTEGER_ARRAY[0] ==
             null) {
             if (this.lastMin < this.POSITIVE_MAX || this.lastNegativeMin < this.NEGATIVE_MAX) {
-                for (var index = this.POSITIVE_MAX - 1; index >= this.lastMin; index--) {
+                for (let index = this.POSITIVE_MAX - 1; index >= this.lastMin; index--) {
                     this.INTEGER_ARRAY[index + this.NEGATIVE_MAX] = new Long(index);
                 }
-                for (var index = this.NEGATIVE_MAX - 1; index >= this.lastNegativeMin; index--) {
+                for (let index = this.NEGATIVE_MAX - 1; index >= this.lastNegativeMin; index--) {
                     this.INTEGER_ARRAY[index] = new Long(-index);
                 }
                 this.lastMin = this.POSITIVE_MAX;
@@ -66,10 +66,10 @@ export class SmallLongFactory extends Object {
             return this.INTEGER_ARRAY[-1 + this.NEGATIVE_MAX];
         }
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.INTEGER_ARRAY[(Math.round(index)) + this.NEGATIVE_MAX];
+        return this.INTEGER_ARRAY[(globalThis.Math.trunc(index)) + this.NEGATIVE_MAX];
     }
     getString(index) {
-        var i = index + this.NEGATIVE_MAX;
+        let i = index + this.NEGATIVE_MAX;
         ;
         if (this.STRING_ARRAY[i] ==
             null) {

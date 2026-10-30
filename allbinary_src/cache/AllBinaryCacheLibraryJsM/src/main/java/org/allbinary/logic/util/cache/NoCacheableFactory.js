@@ -14,13 +14,13 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { Exception } from '../../../../../java/lang/Exception.js';
-//not GWT import - same folder const CacheableInterface
+//sameFolderImports - not GWT import - same folder const CacheableInterface
 export class NoCacheableFactory extends Object {
     constructor() {
         super();
     }
     //@Throws(Exception.constructor)
-    getInstance(key = {}) {
+    getInstance(key) {
         throw new Exception("This Factory Does Not");
     }
 }

@@ -17,7 +17,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AllBinaryEventObject extends Object {
-    constructor(anyType = {}) {
+    constructor(anyType) {
         super();
         this.source = anyType;
     }
@@ -25,7 +25,7 @@ export class AllBinaryEventObject extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.source;
     }
-    setSource(source = {}) {
+    setSource(source) {
         this.source = source;
     }
 }

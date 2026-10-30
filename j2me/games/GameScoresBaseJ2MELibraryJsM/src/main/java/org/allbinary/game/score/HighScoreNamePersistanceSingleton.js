@@ -22,6 +22,8 @@ import { DataInputStream } from '../../../../java/io/DataInputStream.js';
 import { DataOutputStream } from '../../../../java/io/DataOutputStream.js';
 //not GWT import const RecordEnumeration
 import { RecordStore } from '../../../../javax/microedition/rms/RecordStore.js';
+//not GWT import const RecordStore
+import { RecordStoreException } from '../../../../javax/microedition/rms/RecordStoreException.js';
 //not GWT import const RecordStoreException
 import { TsUtil } from '../../../../org/allbinary/TsUtil.js';
 //not GWT import const GameInfo
@@ -73,10 +75,10 @@ export class HighScoreNamePersistanceSingleton extends Object {
     }
     //@Throws(Exception.constructor)
     deleteAll(abeClientInformation, gameInfo) {
-        var size = this.nameBasicArrayList.size();
+        let size = this.nameBasicArrayList.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var integer = this.nameBasicArrayList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let integer = this.nameBasicArrayList.objectArray[index];
             ;
             this.delete(abeClientInformation, gameInfo, integer.intValue());
         }
@@ -89,16 +91,18 @@ export class HighScoreNamePersistanceSingleton extends Object {
     }
     //@Throws(Exception.constructor)
     delete(abeClientInformation, gameInfo, deleteId) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
             this.logUtil.putF(new StringMaker().append("Deleting: ").appendint(deleteId).toString(), this, this.commonStrings.delete);
             recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
             recordStore.deleteRecord(deleteId);
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             if (recordStore !=
@@ -113,25 +117,25 @@ export class HighScoreNamePersistanceSingleton extends Object {
         return this.nameBasicArrayList;
     }
     load(abeClientInformation, gameInfo) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
             if (this.name == StringUtil.getInstance().EMPTY_STRING) {
-                var LOADING_ID = "Loading id: ";
+                let LOADING_ID = "Loading id: ";
                 ;
                 recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
-                var recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
+                let recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
                 ;
-                var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+                let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
                 ;
-                var recordAsBytes;
+                let recordAsBytes;
                 ;
-                var byteArrayInputStream;
+                let byteArrayInputStream;
                 ;
-                var inputStream;
+                let inputStream;
                 ;
                 while (recordEnum.hasNextElement()) {
-                    var id = recordEnum.nextRecordId();
+                    let id = recordEnum.nextRecordId();
                     ;
                     this.logUtil.putF(new StringMaker().append(LOADING_ID).appendint(id).toString(), this, this.commonStrings.LOAD);
                     recordAsBytes = this.tsUtil.getRecord(recordStore, id);
@@ -143,11 +147,13 @@ export class HighScoreNamePersistanceSingleton extends Object {
                     this.nameBasicArrayList.add(smallIntegerSingletonFactory.getAt(id));
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.save(abeClientInformation, gameInfo, this.name);
-            this.logUtil.putF(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(ExceptionUtil.getInstance().getStackTrace(e)).toString(), this, this.commonStrings.LOAD);
+        catch (caught) {
+            {
+                const e = caught;
+                this.save(abeClientInformation, gameInfo, this.name);
+                this.logUtil.putF(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(ExceptionUtil.getInstance().getStackTrace(e)).toString(), this, this.commonStrings.LOAD);
+            }
         }
         finally {
             try {
@@ -156,34 +162,41 @@ export class HighScoreNamePersistanceSingleton extends Object {
                     PreLogUtil.put("Closing RecordStore", this, this.commonStrings.LOAD);
                     recordStore.closeRecordStore();
                 }
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.LOAD, e);
+            catch (caught) {
+                if (caught instanceof RecordStoreException) {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.LOAD, e);
+                }
+                else {
+                    throw caught;
+                }
             }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.name;
     }
     save(abeClientInformation, gameInfo, name) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
             this.logUtil.putF(new StringMaker().append("Saving: ").append(name).toString(), this, this.commonStrings.SAVE);
             recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
-            var byteArrayOutputStream = new ByteArrayOutputStream();
+            let byteArrayOutputStream = new ByteArrayOutputStream();
             ;
-            var outputStream = new DataOutputStream(byteArrayOutputStream);
+            let outputStream = new DataOutputStream(byteArrayOutputStream);
             ;
             outputStream.writeUTF(name);
-            var savedGameBytes = byteArrayOutputStream.toByteArray();
+            let savedGameBytes = byteArrayOutputStream.toByteArray();
             ;
             recordStore.addRecord(savedGameBytes, 0, savedGameBytes.length);
             this.name = name;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.SAVE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.SAVE, e);
+            }
         }
         finally {
             try {
@@ -192,10 +205,15 @@ export class HighScoreNamePersistanceSingleton extends Object {
                     PreLogUtil.put("Closing RecordStore", this, this.commonStrings.SAVE);
                     recordStore.closeRecordStore();
                 }
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.SAVE, e);
+            catch (caught) {
+                if (caught instanceof RecordStoreException) {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.SAVE, e);
+                }
+                else {
+                    throw caught;
+                }
             }
         }
     }

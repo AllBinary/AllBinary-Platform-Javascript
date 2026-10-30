@@ -30,26 +30,26 @@ export class SmallIntegerSingletonFactory extends Object {
         return SmallIntegerSingletonFactory.instance;
     }
     getMin() {
-        var minAllowed = this.getMinAllowed();
+        let minAllowed = this.getMinAllowed();
         ;
         if (this.MIN <= minAllowed) {
             if (J2MEUtil.isJ2ME()) {
             }
             else if (AndroidUtil.isAndroid()) {
-                var logUtil = LogUtil.getInstance();
+                let logUtil = LogUtil.getInstance();
                 ;
                 logUtil.putF(new StringMaker().append("Android InputFactory was initialized before GameMidlet: ").appendint(this.MIN).toString(), this, "getMin");
                 this.initWithRange(0x291, 6);
             }
             else {
-                var logUtil = LogUtil.getInstance();
+                let logUtil = LogUtil.getInstance();
                 ;
                 logUtil.putF(new StringMaker().append("InputFactory was initialized before GameMidlet or KeyFactoryInitializer - Currently this is occurs on JS build by TouchMotionGestureFactory constructor: ").appendint(this.MIN).toString(), this, "getMin");
                 this.initWithRange(0x2D0, 6);
             }
         }
         if (this.MIN <= minAllowed) {
-            var logUtil = LogUtil.getInstance();
+            let logUtil = LogUtil.getInstance();
             ;
             logUtil.put("This means you loaded the InputFactory before determining the platform input size requirements.", this, "getMin", new Exception());
         }
@@ -73,10 +73,10 @@ export class SmallIntegerSingletonFactory extends Object {
         }
     }
     initWithRange(value, negativeValue) {
-        for (var index = value - 1; index >= this.lastMin; index--) {
+        for (let index = value - 1; index >= this.lastMin; index--) {
             this.INTEGER_ARRAY[index + this.NEGATIVE_MAX] = new Integer(index);
         }
-        for (var index = negativeValue - 1; index >= this.lastNegativeMin; index--) {
+        for (let index = negativeValue - 1; index >= this.lastNegativeMin; index--) {
             this.INTEGER_ARRAY[index] = new Integer(-index);
         }
         if (this.lastMin < value) {
@@ -89,10 +89,10 @@ export class SmallIntegerSingletonFactory extends Object {
     }
     init() {
         if (this.lastMin < this.POSITIVE_MAX || this.lastNegativeMin < this.NEGATIVE_MAX) {
-            for (var index = this.POSITIVE_MAX - 1; index >= this.lastMin; index--) {
+            for (let index = this.POSITIVE_MAX - 1; index >= this.lastMin; index--) {
                 this.INTEGER_ARRAY[index + this.NEGATIVE_MAX] = new Integer(index);
             }
-            for (var index = this.NEGATIVE_MAX - 1; index >= this.lastNegativeMin; index--) {
+            for (let index = this.NEGATIVE_MAX - 1; index >= this.lastNegativeMin; index--) {
                 this.INTEGER_ARRAY[index] = new Integer(-index);
             }
             this.lastMin = this.POSITIVE_MAX;
@@ -124,7 +124,7 @@ export class SmallIntegerSingletonFactory extends Object {
         return this.INTEGER_ARRAY[index + this.NEGATIVE_MAX];
     }
     createInstance(index) {
-        var integer = this.getAt(index);
+        let integer = this.getAt(index);
         ;
         if (integer ==
             null) {
@@ -134,7 +134,7 @@ export class SmallIntegerSingletonFactory extends Object {
         return integer;
     }
     getString(index) {
-        var i = index + this.NEGATIVE_MAX;
+        let i = index + this.NEGATIVE_MAX;
         ;
         if (this.STRING_ARRAY[i] ==
             null) {

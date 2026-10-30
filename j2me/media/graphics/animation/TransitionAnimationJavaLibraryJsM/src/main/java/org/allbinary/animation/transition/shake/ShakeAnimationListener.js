@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const ShakeEvent
+//sameFolderImports - not GWT import - same folder const ShakeEvent
 export class ShakeAnimationListener extends Object {
     onSmallShakeEvent() {
     }

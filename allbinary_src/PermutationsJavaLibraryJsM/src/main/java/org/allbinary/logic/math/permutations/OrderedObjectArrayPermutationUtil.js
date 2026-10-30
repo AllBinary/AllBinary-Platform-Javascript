@@ -19,26 +19,26 @@ import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
 //not GWT import const Visitor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ComparableObject } from './ComparableObject.js';
-//not GWT import - same folder const ComparableObject
+//sameFolderImports - not GWT import - same folder const ComparableObject
 import { ObjectPermutationVisitor } from './ObjectPermutationVisitor.js';
-//not GWT import - same folder const ObjectPermutationVisitor
+//sameFolderImports - not GWT import - same folder const ObjectPermutationVisitor
 export class OrderedObjectArrayPermutationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return OrderedObjectArrayPermutationUtil.instance;
     }
     static main(args) {
-        var TOTAL = 7;
+        let TOTAL = 7;
         ;
-        var data = new Array(TOTAL);
+        let data = new Array(TOTAL);
         ;
-        for (var i = 0; i < TOTAL; i++) {
+        for (let i = 0; i < TOTAL; i++) {
             data[i] = new ComparableObject();
         }
         Arrays.sort(data);
-        var permutationVisitor = new ObjectPermutationVisitor(data);
+        let permutationVisitor = new ObjectPermutationVisitor(data);
         ;
-        var ORIGINAL_DATA_LABEL = "Original Data: ";
+        let ORIGINAL_DATA_LABEL = "Original Data: ";
         ;
         console.log(ORIGINAL_DATA_LABEL);
         permutationVisitor.visit(data);
@@ -50,16 +50,16 @@ export class OrderedObjectArrayPermutationUtil extends Object {
         this.FINISHED = "\nFINISHED";
     }
     getNext(data) {
-        var length = data.length;
+        let length = data.length;
         ;
-        var i = length - 1;
+        let i = length - 1;
         ;
-        var tsUtil = TsUtil.getInstance();
+        let tsUtil = TsUtil.getInstance();
         ;
         while (tsUtil.hashCode(data[i - 1]) >= tsUtil.hashCode(data[i])) {
             i = i - 1;
         }
-        var j = length;
+        let j = length;
         ;
         while (tsUtil.hashCode(data[j - 1]) <= tsUtil.hashCode(data[i - 1])) {
             j = j - 1;
@@ -74,16 +74,16 @@ export class OrderedObjectArrayPermutationUtil extends Object {
         }
     }
     swap(data, a, b) {
-        var temp = data[a];
+        let temp = data[a];
         ;
         data[a] = data[b];
         data[b] = temp;
     }
     factorial(dataLength) {
-        var temp = 1;
+        let temp = 1;
         ;
         if (dataLength > 1) {
-            for (var i = 1; i <= dataLength; i++) {
+            for (let i = 1; i <= dataLength; i++) {
                 temp *= i;
             }
         }
@@ -91,11 +91,11 @@ export class OrderedObjectArrayPermutationUtil extends Object {
         return temp;
     }
     generate(data, visitor) {
-        var iterations = this.factorial(data.length);
+        let iterations = this.factorial(data.length);
         ;
         console.log(this.TOTAL_ITERATIONS_TABLE);
         console.log(iterations);
-        for (var count = 0; count < iterations - 1; count++) {
+        for (let count = 0; count < iterations - 1; count++) {
             this.getNext(data);
             visitor.visit(this);
         }

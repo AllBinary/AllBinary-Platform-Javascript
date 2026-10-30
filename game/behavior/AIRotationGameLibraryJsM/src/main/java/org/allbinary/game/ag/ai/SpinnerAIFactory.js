@@ -19,10 +19,10 @@ import { Canvas } from '../../../../../javax/microedition/lcdui/Canvas.js';
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpinnerAI } from './SpinnerAI.js';
-//not GWT import - same folder const SpinnerAI
+//sameFolderImports - not GWT import - same folder const SpinnerAI
 export class SpinnerAIFactory extends Object {
     getInstance(hashtable, ownerLayerInterface, gameInput) {
-        var direction = [Canvas.LEFT];
+        let direction = [Canvas.LEFT];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new SpinnerAI(direction, ownerLayerInterface, gameInput);

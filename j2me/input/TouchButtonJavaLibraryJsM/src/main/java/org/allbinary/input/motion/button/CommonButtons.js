@@ -27,16 +27,16 @@ export class CommonButtons extends Object {
     }
     constructor() {
         super();
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var commonButtonSize = 128;
+        let commonButtonSize = 128;
         ;
         while (commonButtonSize > 64) {
-            var totalColumns = displayInfo.getLastWidth() / commonButtonSize;
+            let totalColumns = displayInfo.getLastWidth() / commonButtonSize;
             ;
-            var totalRows = displayInfo.getLastHeight() / commonButtonSize;
+            let totalRows = displayInfo.getLastHeight() / commonButtonSize;
             ;
-            var max = totalColumns;
+            let max = totalColumns;
             ;
             if (totalRows > max) {
                 max = totalRows;

@@ -14,9 +14,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { TsUtil } from '../../../../../org/allbinary/TsUtil.js';
-//not GWT import - same folder const Comparable
+//sameFolderImports - not GWT import - same folder const Comparable
 export class ComparableObject extends Object {
-    compareTo(anyType = {}) {
+    compareTo(anyType) {
         if (TsUtil.getInstance().hashCode(this) < TsUtil.getInstance().hashCode(anyType)) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return -1;

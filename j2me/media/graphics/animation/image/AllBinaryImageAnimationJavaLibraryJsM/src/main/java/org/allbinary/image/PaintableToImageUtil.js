@@ -16,13 +16,13 @@ import { Object } from '../../../java/lang/Object.js';
 //not GWT import const PaintableInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameFeatureImageCacheFactory } from './GameFeatureImageCacheFactory.js';
-//not GWT import - same folder const GameFeatureImageCacheFactory
+//sameFolderImports - not GWT import - same folder const GameFeatureImageCacheFactory
 export class PaintableToImageUtil extends Object {
     //@Throws(Exception.constructor)
     static getImage(paintableInterface, width, height) {
-        var image = GameFeatureImageCacheFactory.getInstance().get(PaintableToImageUtil.instance.constructor.name.toString(), width, height);
+        let image = GameFeatureImageCacheFactory.getInstance().get(PaintableToImageUtil.instance.constructor.name.toString(), width, height);
         ;
-        var graphics = image.getGraphics();
+        let graphics = image.getGraphics();
         ;
         paintableInterface.paint(graphics);
         //if statement needs to be on the same line and ternary does not work the same way.

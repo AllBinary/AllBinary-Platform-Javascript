@@ -16,14 +16,14 @@ import { WaypointLayer } from '../../../../../../org/allbinary/game/layer/waypoi
 //not GWT import const RemoteInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeologicalResourceInfoHudPaintableSingleton } from './GeologicalResourceInfoHudPaintableSingleton.js';
-//not GWT import - same folder const GeologicalResourceInfoHudPaintable
+//sameFolderImports - not GWT import - same folder const GeologicalResourceInfoHudPaintable
 export class ResourceWaypointLayer extends WaypointLayer {
     constructor(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y) {
         super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y);
         //For kotlin this is before the body of the constructor.
     }
     createHudPaintable() {
-        var rtsLayerHudPaintable = GeologicalResourceInfoHudPaintableSingleton.getInstance();
+        let rtsLayerHudPaintable = GeologicalResourceInfoHudPaintableSingleton.getInstance();
         ;
         rtsLayerHudPaintable.setBasicColorP(this.allBinaryGameLayerManagerP.getForegroundBasicColor());
         rtsLayerHudPaintable.setRtsLayer(this);
@@ -31,7 +31,7 @@ export class ResourceWaypointLayer extends WaypointLayer {
         return rtsLayerHudPaintable;
     }
     getHudPaintable() {
-        var rtsLayerHudPaintable = GeologicalResourceInfoHudPaintableSingleton.getInstance();
+        let rtsLayerHudPaintable = GeologicalResourceInfoHudPaintableSingleton.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return rtsLayerHudPaintable;

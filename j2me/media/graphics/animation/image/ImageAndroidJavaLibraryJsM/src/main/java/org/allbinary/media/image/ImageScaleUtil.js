@@ -54,9 +54,9 @@ export class ImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, mutable) {
-        var scaleX = scaleNominatorX / scaleDenominatorX;
+        let scaleX = scaleNominatorX / scaleDenominatorX;
         ;
-        var scaleY = scaleNominatorY / scaleDenominatorY;
+        let scaleY = scaleNominatorY / scaleDenominatorY;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.createImage(imageCache, originalImage, scaleX, scaleY, cached);
@@ -64,26 +64,26 @@ export class ImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImage(imageCache, originalImage, scaleX, scaleY, cached) {
-        var originalAndroidImage = originalImage;
+        let originalAndroidImage = originalImage;
         ;
-        var originalBitmap = originalAndroidImage.getBitmap();
+        let originalBitmap = originalAndroidImage.getBitmap();
         ;
-        var width = Math.round((originalBitmap.getWidth() * scaleX));
+        let width = globalThis.Math.trunc((originalBitmap.getWidth() * scaleX));
         ;
-        var height = Math.round((originalBitmap.getHeight() * scaleY));
+        let height = globalThis.Math.trunc((originalBitmap.getHeight() * scaleY));
         ;
-        var index = this.imageBasicArrayList.indexOf(originalImage);
+        let index = this.imageBasicArrayList.indexOf(originalImage);
         ;
-        var alreadyAvailable = false;
+        let alreadyAvailable = false;
         ;
         if (index >= 0) {
-            var scaleX2Float = this.scaleXBasicArrayList.get(index);
+            let scaleX2Float = this.scaleXBasicArrayList.get(index);
             ;
-            var scaleX2 = scaleX2Float;
+            let scaleX2 = scaleX2Float;
             ;
-            var scaleY2Float = this.scaleYBasicArrayList.get(index);
+            let scaleY2Float = this.scaleYBasicArrayList.get(index);
             ;
-            var scaleY2 = scaleY2Float;
+            let scaleY2 = scaleY2Float;
             ;
             if (scaleX2 == scaleX && scaleY2 == scaleY) {
                 alreadyAvailable = true;
@@ -94,7 +94,7 @@ export class ImageScaleUtil extends Object {
             return this.scaledImageBasicArrayList.get(index);
         }
         else {
-            var scaledImage = this.getScaledImage(imageCache, originalImage, scaleX, scaleY, width, height, cached);
+            let scaledImage = this.getScaledImage(imageCache, originalImage, scaleX, scaleY, width, height, cached);
             ;
             this.imageBasicArrayList.add(originalImage);
             this.scaledImageBasicArrayList.add(scaledImage);
@@ -106,7 +106,7 @@ export class ImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getScaledImage(imageCache, originalImage, scaleX, scaleY, width, height, cached) {
-        var image = NullImage.NULL_IMAGE;
+        let image = NullImage.NULL_IMAGE;
         ;
         if (cached) {
             image = imageCache.get(this.constructor.name.toString(), width, height);
@@ -115,7 +115,7 @@ export class ImageScaleUtil extends Object {
             image = imageCache.get(this.commonStrings.CREATE_IMAGE, width, height);
         }
         if (image.isMutable()) {
-            var matrix = new Matrix();
+            let matrix = new Matrix();
             ;
             this.scale(image, matrix, scaleX, scaleY);
             image.getGraphics().drawImage(originalImage, 0, 0, this.anchor);
@@ -128,7 +128,7 @@ export class ImageScaleUtil extends Object {
     }
     scale(image, matrix, scaleX, scaleY) {
         matrix.setScale(scaleX, scaleY);
-        var canvas = image.getCanvas();
+        let canvas = image.getCanvas();
         ;
         canvas.concat(matrix);
     }

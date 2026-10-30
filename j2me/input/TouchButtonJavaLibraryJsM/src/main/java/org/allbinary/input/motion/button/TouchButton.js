@@ -30,7 +30,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const TouchButtonResource
+//sameFolderImports - not GWT import - same folder const TouchButtonResource
 export class TouchButton extends Paintable {
     //@Throws(Exception.constructor)
     static createButton(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder) {
@@ -63,22 +63,24 @@ export class TouchButton extends Paintable {
     }
     updateRectangle() {
         try {
-            var pointFactory = PointFactory.getInstance();
+            let pointFactory = PointFactory.getInstance();
             ;
-            var x = this.rawRectangle.getWidth() * this.cellPositionP.getColumn();
+            let x = this.rawRectangle.getWidth() * this.cellPositionP.getColumn();
             ;
-            var y = this.rawRectangle.getHeight() * this.cellPositionP.getRow();
+            let y = this.rawRectangle.getHeight() * this.cellPositionP.getRow();
             ;
             this.rectangleP = new Rectangle(pointFactory.createXY(x + this.xBorder, y + this.yBorder), this.rawRectangle.getWidth(), this.rawRectangle.getHeight());
-            var point = this.rectangleP.getPoint();
+            let point = this.rectangleP.getPoint();
             ;
             this.animationX = point.getX();
             this.animationY = point.getY();
             this.hintAnimationY = this.animationY - 32;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "updateRectangle", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "updateRectangle", e);
+            }
         }
     }
     getCellPosition() {
@@ -94,9 +96,9 @@ export class TouchButton extends Paintable {
         return this.touchButtonInput;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         stringBuffer.append("TouchButton: ");
         stringBuffer.append(stringUtil.toString(this.getRectangle()));

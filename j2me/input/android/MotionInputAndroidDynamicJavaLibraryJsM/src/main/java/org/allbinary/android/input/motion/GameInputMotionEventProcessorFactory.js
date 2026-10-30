@@ -18,10 +18,10 @@ import { AndroidInfoFactory } from '../../../../../org/allbinary/android/Android
 import { GameInputMotionEventProcessorAPI1 } from '../../../../../org/allbinary/android/input/motion/api1/GameInputMotionEventProcessorAPI1.js';
 //not GWT import const GameInputMotionEventProcessorAPI1
 import { GameInputMotionEventProcessorAPI5 } from '../../../../../org/allbinary/android/input/motion/api5/GameInputMotionEventProcessorAPI5.js';
-//not GWT import - same folder const BaseGameInputMotionEventProcessor
+//sameFolderImports - not GWT import - same folder const BaseGameInputMotionEventProcessor
 export class GameInputMotionEventProcessorFactory extends Object {
     static getInstance() {
-        var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
+        let SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
         ;
         if (SDK_VERSION <= 4) {
             //if statement needs to be on the same line and ternary does not work the same way.

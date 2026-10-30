@@ -23,38 +23,38 @@ export class ByteUtil extends Object {
         super();
     }
     xor(array, mask) {
-        var bytes = new Array(array.length);
+        let bytes = new Array(array.length);
         ;
-        var size = array.length;
+        let size = array.length;
         ;
-        var index = 0;
+        let index = 0;
         ;
-        var currentByte;
+        let currentByte;
         ;
         while (index < size) {
             currentByte = array[index];
-            bytes[index] = (currentByte ^ mask);
+            bytes[index] = (((currentByte ^ mask)) << 24 >> 24);
             index++;
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return bytes;
     }
     not(array) {
-        var bytes = new Array(array.length);
+        let bytes = new Array(array.length);
         ;
-        var size = array.length;
+        let size = array.length;
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (index < size) {
-            bytes[index] = ~array[index];
+            bytes[index] = ((~array[index]) << 24 >> 24);
             index++;
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return bytes;
     }
     xorByte(array, index) {
-        var mask = 0;
+        let mask = 0;
         ;
         if (index == 0)
             mask = 1;
@@ -83,9 +83,9 @@ export class ByteUtil extends Object {
         }
         else {
         }
-        var size = newByteArray.length;
+        let size = newByteArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (newByteArray[index] != oldByteArray[index]) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;
@@ -106,9 +106,9 @@ export class ByteUtil extends Object {
             stats[0] = newSize;
         }
         stats[1] = 0;
-        var size = newSize;
+        let size = newSize;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (newByteArray[index] != oldByteArray[index]) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;

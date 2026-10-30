@@ -24,11 +24,11 @@ import { CommonButtons } from '../../../../org/allbinary/input/motion/button/Com
 //not GWT import const CommonButtons
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SelectionHudPaintable } from './SelectionHudPaintable.js';
-//not GWT import - same folder const SelectionHudPaintable
+//sameFolderImports - not GWT import - same folder const SelectionHudPaintable
 import { RTSLayerCompositePaintable } from './RTSLayerCompositePaintable.js';
-//not GWT import - same folder const RTSLayerCompositePaintable
+//sameFolderImports - not GWT import - same folder const RTSLayerCompositePaintable
 import { UpgradableWideRTSLayerPaintable } from './UpgradableWideRTSLayerPaintable.js';
-//not GWT import - same folder const RTSLayer
+//sameFolderImports - not GWT import - same folder const RTSLayer
 export class UpgradableRTSLayerHudPaintable extends SelectionHudPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,19 +50,19 @@ export class UpgradableRTSLayerHudPaintable extends SelectionHudPaintable {
     }
     updateMeasurement(graphics) {
         super.updateMeasurement(graphics);
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.charHeight = font.getHeight();
         this.charWidth = MyFontProcessor.defaultCharWidth(font);
     }
     update() {
         super.update();
-        var commonButtons = CommonButtons.getInstance();
+        let commonButtons = CommonButtons.getInstance();
         ;
         this.costY = (this.y + commonButtons.STANDARD_BUTTON_SIZE);
         this.costY1 = (this.y + commonButtons.STANDARD_BUTTON_SIZE - this.charHeight);
         this.percentCompleteX2 = this.imageX + commonButtons.STANDARD_BUTTON_SIZE - this.charWidth;
-        var displayInfoSingleton = DisplayInfoSingleton.getInstance();
+        let displayInfoSingleton = DisplayInfoSingleton.getInstance();
         ;
         if (displayInfoSingleton.getLastWidth() > 320) {
             this.rtsLayerCompositePaintableLateInit = new UpgradableWideRTSLayerPaintable(this);
@@ -72,14 +72,14 @@ export class UpgradableRTSLayerHudPaintable extends SelectionHudPaintable {
         }
     }
     updateSelectionInfo() {
-        var rtsLayer = this.getRtsLayer();
+        let rtsLayer = this.getRtsLayer();
         ;
         this.rtsLayerCompositePaintableLateInit.update(rtsLayer);
         this.setAnimationInterface(rtsLayer.getVerticleBuildAnimationInterface());
         this.setName(rtsLayer.getName());
     }
     updateInfo() {
-        var rtsLayer = this.getRtsLayer();
+        let rtsLayer = this.getRtsLayer();
         ;
         this.percentComplete = rtsLayer.getPercentComplete();
         if (this.percentComplete < 10) {

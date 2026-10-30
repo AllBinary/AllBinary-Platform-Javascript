@@ -20,7 +20,8 @@ import { Math } from '../../../../java/lang/Math.js';
 const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
 //not GWT import const MediaException
-import { PlayerListener } from '../../../../javax/microedition/media/PlayerListener.js';
+import { PlayerListenerI } from '../../../../javax/microedition/media/PlayerListener.js';
+const PlayerListener = PlayerListenerI;
 //not GWT import const PlayerListener
 import { AudioInputStream } from '../../../../javax/sound/sampled/AudioInputStream.js';
 //not GWT import const AudioInputStream
@@ -42,20 +43,20 @@ import { MusicThreadPool } from '../../../../org/allbinary/thread/MusicThreadPoo
 //not GWT import const MusicThreadPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicPlayer } from './BasicPlayer.js';
-//not GWT import - same folder const BasicPlayer
+//sameFolderImports - not GWT import - same folder const BasicPlayer
 import { NullAudioFormat } from './NullAudioFormat.js';
-//not GWT import - same folder const NullAudioFormat
+//sameFolderImports - not GWT import - same folder const NullAudioFormat
 import { NullClip } from './NullClip.js';
-//not GWT import - same folder const NullClip
+//sameFolderImports - not GWT import - same folder const NullClip
 import { NullControl } from './NullControl.js';
-//not GWT import - same folder const NullControl
+//sameFolderImports - not GWT import - same folder const NullControl
 export class PCClipWavPlayer extends BasicPlayer {
     constructor(inputStream) {
         super();
         this.logUtil = LogUtil.getInstance();
-        var audioInputStream = new AudioInputStream(new ByteArrayInputStream(NullUtil.getInstance().NULL_BYTE_ARRAY), NullAudioFormat.NULL_AUDIO_FORMAT, 0);
+        let audioInputStream = new AudioInputStream(new ByteArrayInputStream(NullUtil.getInstance().NULL_BYTE_ARRAY), NullAudioFormat.NULL_AUDIO_FORMAT, 0);
         ;
-        var clip = new NullClip();
+        let clip = new NullClip();
         ;
         try {
             audioInputStream = AudioSystem.getAudioInputStream(inputStream);
@@ -65,10 +66,12 @@ export class PCClipWavPlayer extends BasicPlayer {
                 this.logUtil.put("Clip was null", this, this.commonStrings.CONSTRUCTOR, new Exception());
                 throw new RuntimeException();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+            }
         }
         this.audioInputStream = audioInputStream;
         this.clip = clip;
@@ -78,10 +81,12 @@ export class PCClipWavPlayer extends BasicPlayer {
             run() {
                 try {
                     close2();
-                    //: 
                 }
-                catch (e) {
-                    PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+                    }
                 }
             }
         });
@@ -103,10 +108,12 @@ export class PCClipWavPlayer extends BasicPlayer {
             run() {
                 try {
                     start2();
-                    //: 
                 }
-                catch (e) {
-                    PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+                    }
                 }
             }
         });
@@ -120,7 +127,7 @@ export class PCClipWavPlayer extends BasicPlayer {
     }
     //@Throws(Exception.constructor)
     create(audioInputStream) {
-        var clip = AudioSystem.getClip();
+        let clip = AudioSystem.getClip();
         ;
         clip.addLineListener(this);
         clip.open(audioInputStream);
@@ -134,10 +141,12 @@ export class PCClipWavPlayer extends BasicPlayer {
             run() {
                 try {
                     stop2();
-                    //: 
                 }
-                catch (e) {
-                    PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+                    }
                 }
             }
         });
@@ -159,7 +168,7 @@ export class PCClipWavPlayer extends BasicPlayer {
         this.setVolumeF((leftVolume) / 100.0);
     }
     getVolume() {
-        var masterGainFloatControl = this.clip.getControl(FloatControl.Type.MASTER_GAIN);
+        let masterGainFloatControl = this.clip.getControl(FloatControl.Type.MASTER_GAIN);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return Math.pow(10, masterGainFloatControl.getValue() / 20);
@@ -168,7 +177,7 @@ export class PCClipWavPlayer extends BasicPlayer {
         if (volume < 0 || volume > 1) {
             throw new IllegalArgumentException("Volume: " + volume);
         }
-        var masterGainFloatControl = this.clip.getControl(FloatControl.Type.MASTER_GAIN);
+        let masterGainFloatControl = this.clip.getControl(FloatControl.Type.MASTER_GAIN);
         ;
         masterGainFloatControl.setValue(20 * Math.log10(volume));
     }
@@ -177,11 +186,11 @@ export class PCClipWavPlayer extends BasicPlayer {
         return this.clip.getMicrosecondLength() / 1000;
     }
     update(event) {
-        if (event.getType() === LineEvent.Type.STOP) {
-            var size = this.listenersList.size();
+        if ((event.getType() === LineEvent.Type.STOP)) {
+            let size = this.listenersList.size();
             ;
-            for (var index = 0; index < size; index++) {
-                var listener = this.listenersList.get(size);
+            for (let index = 0; index < size; index++) {
+                let listener = this.listenersList.get(size);
                 ;
                 listener.playerUpdate(this, PlayerListener.END_OF_MEDIA, null);
             }

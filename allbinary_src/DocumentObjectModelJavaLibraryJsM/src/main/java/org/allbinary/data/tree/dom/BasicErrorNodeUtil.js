@@ -18,20 +18,22 @@ import { ErrorData } from '../../../../../org/allbinary/business/error/ErrorData
 //not GWT import const Node
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ModDomHelper } from './ModDomHelper.js';
-//not GWT import - same folder const ModDomHelper
+//sameFolderImports - not GWT import - same folder const ModDomHelper
 export class BasicErrorNodeUtil extends Object {
     //@Throws(Exception.constructor)
     static get(document, errorText) {
         try {
-            var node = document.createElement(ErrorData.getInstance().NAME);
+            let node = document.createElement(ErrorData.getInstance().NAME);
             ;
             node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstance().TEXT, errorText));
             //if statement needs to be on the same line and ternary does not work the same way.
             return node;
-            //: 
         }
-        catch (e) {
-            throw new Exception("Error Node Creation Failure");
+        catch (caught) {
+            {
+                const e = caught;
+                throw new Exception("Error Node Creation Failure");
+            }
         }
     }
     constructor() {

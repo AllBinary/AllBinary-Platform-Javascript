@@ -28,7 +28,7 @@ export class ThreedObjResources extends Object {
         return ThreedObjResources.instance;
     }
     get(resourceName) {
-        var resourceName2 = this.hashtable.get(resourceName);
+        let resourceName2 = this.hashtable.get(resourceName);
         ;
         if (resourceName2 !=
             null) {

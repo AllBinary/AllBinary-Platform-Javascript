@@ -25,9 +25,9 @@ import { EventStrings } from '../../../../../org/allbinary/logic/util/event/Even
 //not GWT import const EventStrings
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShowVirtualKeyboardRunnable } from './ShowVirtualKeyboardRunnable.js';
-//not GWT import - same folder const ShowVirtualKeyboardRunnable
+//sameFolderImports - not GWT import - same folder const ShowVirtualKeyboardRunnable
 import { HideVirtualKeyboardRunnable } from './HideVirtualKeyboardRunnable.js';
-//not GWT import - same folder const HideVirtualKeyboardRunnable
+//sameFolderImports - not GWT import - same folder const HideVirtualKeyboardRunnable
 export class VirtualKeyboardAPI3 extends VirtualKeyboard {
     constructor(activity) {
         super();
@@ -36,7 +36,7 @@ export class VirtualKeyboardAPI3 extends VirtualKeyboard {
         this.activity = activity;
         this.showVirtualKeyboardRunnable = new ShowVirtualKeyboardRunnable(this.activity);
         this.hideVirtualKeyboardRunnable = new HideVirtualKeyboardRunnable(this.activity);
-        var virtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance();
+        let virtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance();
         ;
         virtualKeyboardEventHandler.removeAllListeners();
         virtualKeyboardEventHandler.addListenerInterface(this);
@@ -45,7 +45,7 @@ export class VirtualKeyboardAPI3 extends VirtualKeyboard {
         ForcedLogUtil.log(EventStrings.getInstance().PERFORMANCE_MESSAGE, this);
     }
     onVirtualKeyboardEvent(virtualKeyboardEvent) {
-        var isShow = virtualKeyboardEvent.getSource();
+        let isShow = virtualKeyboardEvent.getSource();
         ;
         if (isShow.valueOf()) {
             this.showVirtualKeyboard();

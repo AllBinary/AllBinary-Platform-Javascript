@@ -25,7 +25,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const ValidatorBaseInterface
+//sameFolderImports - not GWT import - same folder const ValidatorBaseInterface
 export class ValidatorBase extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

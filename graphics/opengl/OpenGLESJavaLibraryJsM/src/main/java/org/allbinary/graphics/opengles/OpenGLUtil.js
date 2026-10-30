@@ -29,9 +29,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLCapabilities } from './OpenGLCapabilities.js';
-//not GWT import - same folder const OpenGLCapabilities
+//sameFolderImports - not GWT import - same folder const OpenGLCapabilities
 import { OpenGLLogUtil } from './OpenGLLogUtil.js';
-//not GWT import - same folder const OpenGLLogUtil
+//sameFolderImports - not GWT import - same folder const OpenGLLogUtil
 export class OpenGLUtil extends Object {
     constructor() {
         super(...arguments);
@@ -52,26 +52,37 @@ export class OpenGLUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return OpenGLUtil.instance;
     }
-    onSurfaceCreated(gl) {
+    onSurfaceCreated(...args) {
+        if (args.length === 1)
+            return this.onSurfaceCreated$overload1(args[0]);
+        if (args.length === 2)
+            return this.onSurfaceCreated$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: onSurfaceCreated');
+    }
+    onSurfaceCreated$overload1(gl) {
         try {
             if (!this.created) {
                 this.created = true;
                 PreLogUtil.put(CommonLabels.getInstance().START_LABEL + OpenGLCapabilities.getInstance().toString(), this, this.renderStrings.ON_SURFACE_CREATED);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.renderStrings.ON_SURFACE_CREATED, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.renderStrings.ON_SURFACE_CREATED, e);
+            }
         }
     }
-    onSurfaceCreated(gl, loadTextures) {
+    onSurfaceCreated$overload2(gl, loadTextures) {
         try {
             loadTextures.load(gl);
             OpenGLLogUtil.getInstance().logError(gl);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.renderStrings.ON_SURFACE_CREATED, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.renderStrings.ON_SURFACE_CREATED, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -81,7 +92,7 @@ export class OpenGLUtil extends Object {
             this.surfaceCreatedAndInitialized = true;
         }
         graphics.update();
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.update(graphics);
         getInstance = OpenGLImageCacheFactory.getInstance();
@@ -92,7 +103,7 @@ export class OpenGLUtil extends Object {
         this.set(gl);
     }
     addImage(image) {
-        var encapsulateImage = this.preResourceImageUtil.encapsulate(image);
+        let encapsulateImage = this.preResourceImageUtil.encapsulate(image);
         ;
         if (encapsulateImage != image) {
             //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
@@ -124,11 +135,11 @@ export class OpenGLUtil extends Object {
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.lockObject) 
         //mutex.withLock
-        var runnable;
+        let runnable;
         ;
-        var size = this.runnableList.size();
+        let size = this.runnableList.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             runnable = this.runnableList.get(index);
             runnable.run();
         }
@@ -136,11 +147,11 @@ export class OpenGLUtil extends Object {
     }
     //@Throws(Exception.constructor)
     set(gl) {
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        var image;
+        let image;
         ;
-        for (var index2 = 0; index2 < size; index2++) {
+        for (let index2 = 0; index2 < size; index2++) {
             image = this.list.get(index2);
             image.set(gl);
         }

@@ -20,7 +20,7 @@ import { CollidableDestroyableDamageableLayer } from '../../../../org/allbinary/
 //not GWT import const UpdateMyFontInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SelectionHudPaintable } from './SelectionHudPaintable.js';
-//not GWT import - same folder const RTSLayer
+//sameFolderImports - not GWT import - same folder const RTSLayer
 export class RTSLayerHudPaintable extends SelectionHudPaintable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,7 +36,7 @@ export class RTSLayerHudPaintable extends SelectionHudPaintable {
     }
     updateMeasurement(graphics) {
         super.updateMeasurement(graphics);
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
         this.costY1 = (this.y + ((this.weaponProperties.length + 1) * this.fontHeight));
@@ -49,16 +49,16 @@ export class RTSLayerHudPaintable extends SelectionHudPaintable {
     }
     updateSelectionInfo() {
         this.setName(this.getRtsLayer().getName());
-        var partInterface = this.getRtsLayer().getPartInterfaceArray()[0];
+        let partInterface = this.getRtsLayer().getPartInterfaceArray()[0];
         ;
         this.weaponProperties = partInterface.getWeaponProperties().toStringArray();
         this.myFontProcessor = this.updateMyFontProcessor;
     }
     paint(graphics) {
         super.paint(graphics);
-        var size = this.weaponProperties.length;
+        let size = this.weaponProperties.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             graphics.drawString(this.weaponProperties[index], this.textX, this.y + ((index + 1) * this.fontHeight), 0);
         }
     }

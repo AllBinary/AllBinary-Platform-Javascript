@@ -21,9 +21,9 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 //not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayAnimation } from './ImageArrayAnimation.js';
-//not GWT import - same folder const ImageArrayAnimation
+//sameFolderImports - not GWT import - same folder const ImageArrayAnimation
 import { AdjustedImageArrayAnimation } from './AdjustedImageArrayAnimation.js';
-//not GWT import - same folder const AdjustedImageArrayAnimation
+//sameFolderImports - not GWT import - same folder const AdjustedImageArrayAnimation
 export class ImageArrayAnimationFactory extends Object {
     constructor(imageArray, dx, dy, animationBehaviorFactory) {
         super();

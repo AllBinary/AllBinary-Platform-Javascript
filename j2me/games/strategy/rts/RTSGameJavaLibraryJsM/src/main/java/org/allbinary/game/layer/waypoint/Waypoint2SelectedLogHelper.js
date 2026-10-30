@@ -27,7 +27,7 @@ const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Waypoint2LogHelper } from './Waypoint2LogHelper.js';
-//not GWT import - same folder const Waypoint2LogHelper
+//sameFolderImports - not GWT import - same folder const Waypoint2LogHelper
 export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
     constructor() {
         super(...arguments);
@@ -49,7 +49,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         return Waypoint2SelectedLogHelper.instanceC;
     }
     initRange(associatedAdvancedRTSGameLayer, closeRange, sensorRange) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.CLOSE_RANGE);
@@ -60,7 +60,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
     }
     processPossibleTarget(associatedAdvancedRTSGameLayer, waypointBehaviorBase, layerInterface, anotherTargetDistance, isShorterThanCurrentTargetDistance, isCurrentTargetDestroyed) {
         if (waypointBehaviorBase.isWaypointListEmptyOrOnlyTargets() && waypointBehaviorBase.isInSensorRange(layerInterface, anotherTargetDistance)) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
             stringBuffer.append(this.ONLY_TARGETS);
@@ -76,7 +76,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         }
     }
     processSetTarget(associatedAdvancedRTSGameLayer, waypointBehaviorBase, layerInterface, anotherTargetDistance) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -88,7 +88,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: processPossibleTarget2");
     }
     processPossibleTargetCloser(associatedAdvancedRTSGameLayer, waypointBehaviorBase, layerInterface, anotherTargetDistance) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -100,7 +100,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: processPossibleTarget3");
     }
     setTarget(associatedAdvancedRTSGameLayer, waypointBehaviorBase, layerInterface, anotherTargetDistance) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -117,7 +117,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF("Target Destroyed", this, "selected: setTargetPath");
     }
     setTargetPathIgnoreNewPath(associatedAdvancedRTSGameLayer, waypointBehaviorBase) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" Set Path To Target: ");
@@ -127,7 +127,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: setTargetPath");
     }
     processWaypoint(associatedAdvancedRTSGameLayer, waypointBehaviorBase, targetLayer, size) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" Size: ");
@@ -143,7 +143,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: processWaypoint");
     }
     processWaypointTracked(associatedAdvancedRTSGameLayer, waypointBehaviorBase) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" currentPathGeographicMapCellPosition: ");
@@ -155,7 +155,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: processWaypoint");
     }
     processWaypointTrackedVisit(associatedAdvancedRTSGameLayer, geographicMapCellPosition) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" Visited: ");
@@ -172,7 +172,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(new StringMaker().append(associatedAdvancedRTSGameLayer.getName()).append(" Target Destroyed").toString(), this, "selected: processTargeting");
     }
     processTargeting(associatedAdvancedRTSGameLayer, dx, dy) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -184,7 +184,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: processTargeting");
     }
     processTargetingNonWayPoint(associatedAdvancedRTSGameLayer, dx, dy) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" Targeting Non Waypoint ");
@@ -196,7 +196,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: processTargeting");
     }
     removeWaypoint(associatedAdvancedRTSGameLayer, unitWaypointBehavior2, waypointLayer, reason) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -208,7 +208,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: removeWaypoint");
     }
     removeWaypointList(associatedAdvancedRTSGameLayer, unitWaypointBehavior2, list) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -224,7 +224,7 @@ export class Waypoint2SelectedLogHelper extends Waypoint2LogHelper {
         this.logUtil.putF(new StringMaker().append(associatedAdvancedRTSGameLayer.getName()).append(" Cleared Target").toString(), this, "selected: clearTarget");
     }
     addWaypointFromUser(associatedAdvancedRTSGameLayer, advancedRTSGameLayer) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" Adding Waypoint to Selected: ");

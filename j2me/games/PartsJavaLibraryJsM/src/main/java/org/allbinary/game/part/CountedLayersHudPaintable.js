@@ -19,7 +19,7 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const UpdateMyFontInterface
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-//not GWT import - same folder const CountedLayerInterfaceFactoryPart
+//sameFolderImports - not GWT import - same folder const CountedLayerInterfaceFactoryPart
 export class CountedLayersHudPaintable extends Object {
     constructor(partInterfaceArray, dropSize, startIndex, countedTotalStringColor, countedPartsBorder) {
         super();
@@ -33,14 +33,14 @@ export class CountedLayersHudPaintable extends Object {
         this.dropSize = dropSize;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.height = font.getHeight();
         if (this.dropSize > font.getHeight()) {
             this.height = this.dropSize;
         }
         if (CountedLayersHudPaintable.XXStringWidth == 0) {
-            var XXString = "XX";
+            let XXString = "XX";
             ;
             CountedLayersHudPaintable.XXStringWidth = font.stringWidth(XXString);
         }
@@ -48,25 +48,25 @@ export class CountedLayersHudPaintable extends Object {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var lastWidth = this.displayInfoSingleton.getLastWidth();
+        let lastWidth = this.displayInfoSingleton.getLastWidth();
         ;
-        var widthEdge = lastWidth - this.dropSize;
+        let widthEdge = lastWidth - this.dropSize;
         ;
-        var size = this.partInterfaceArray.length;
+        let size = this.partInterfaceArray.length;
         ;
-        var count = 0;
+        let count = 0;
         ;
-        var y = 0;
+        let y = 0;
         ;
-        var countedLayerInterfaceFactory;
+        let countedLayerInterfaceFactory;
         ;
-        var pickedUpLayerInterfaceFactoryInterface;
+        let pickedUpLayerInterfaceFactoryInterface;
         ;
-        var layerInterface;
+        let layerInterface;
         ;
-        var charArray;
+        let charArray;
         ;
-        for (var index = this.startIndex; index < size; index++) {
+        for (let index = this.startIndex; index < size; index++) {
             countedLayerInterfaceFactory = this.partInterfaceArray[index];
             if (countedLayerInterfaceFactory.getTotal() > 0) {
                 pickedUpLayerInterfaceFactoryInterface = countedLayerInterfaceFactory.getCountedPickedUpLayerInterfaceFactory();

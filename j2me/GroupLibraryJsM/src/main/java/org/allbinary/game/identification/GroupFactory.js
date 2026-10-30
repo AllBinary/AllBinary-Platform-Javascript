@@ -25,7 +25,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Group } from './Group.js';
-//not GWT import - same folder const Group
+//sameFolderImports - not GWT import - same folder const Group
 export class GroupFactory extends Object {
     constructor() {
         super(...arguments);
@@ -39,31 +39,31 @@ export class GroupFactory extends Object {
         return GroupFactory.instance;
     }
     getNextGroup() {
-        var group = this.list.objectArray[this.index];
+        let group = this.list.objectArray[this.index];
         ;
         this.index++;
         //if statement needs to be on the same line and ternary does not work the same way.
         return group;
     }
     getNextGroupByName(name) {
-        var group = this.getNextGroup();
+        let group = this.getNextGroup();
         ;
         group.setName(name);
         //if statement needs to be on the same line and ternary does not work the same way.
         return group;
     }
     init(groups, nameArray) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
-        var TEAM = "Team ";
+        let TEAM = "Team ";
         ;
         this.list.clear();
         this.index = 0;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        var name;
+        let name;
         ;
         while (size < groups) {
             name = stringUtil.EMPTY_STRING;

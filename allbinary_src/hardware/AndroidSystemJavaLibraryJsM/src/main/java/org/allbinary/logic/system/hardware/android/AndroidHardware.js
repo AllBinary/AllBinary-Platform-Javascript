@@ -50,7 +50,7 @@ export class AndroidHardware extends Object {
         this.DEVICES = this.PROC_BUS_INPUT_DIRECTORY + "devices/";
         this.MINHARDWARE = 3;
         this.init(this.DEVICES);
-        var size = this.componentInterfaceVector.size();
+        let size = this.componentInterfaceVector.size();
         ;
         if (size < this.MINHARDWARE) {
             throw new Exception("Not Enough Data For A Valid License On Linux");
@@ -58,15 +58,17 @@ export class AndroidHardware extends Object {
     }
     //@Throws(Exception.constructor)
     init(filePath) {
-        var lineNumberReader = NullCloseable.NULL_CLOSEABLE;
+        let lineNumberReader = NullCloseable.NULL_CLOSEABLE;
         ;
         try {
             lineNumberReader = this.get(filePath);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Hardware Data: " + this.toString(), this, this.commonStrings.INIT, e);
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Hardware Data: " + this.toString(), this, this.commonStrings.INIT, e);
+                throw e;
+            }
         }
         finally {
             if (lineNumberReader !=
@@ -78,12 +80,12 @@ export class AndroidHardware extends Object {
     //@Throws(Exception.constructor)
     get(filePath) {
         this.componentInterfaceVector = new BasicArrayListD();
-        var pciFile = new FileReader(filePath);
+        let pciFile = new FileReader(filePath);
         ;
-        var lineNumberReader = new LineNumberReader(pciFile);
+        let lineNumberReader = new LineNumberReader(pciFile);
         ;
         this.logUtil.putF("File Found", this, this.commonStrings.CONSTRUCTOR);
-        var nextLine = lineNumberReader.readLine();
+        let nextLine = lineNumberReader.readLine();
         ;
         while (nextLine !=
             null) {
@@ -98,12 +100,12 @@ export class AndroidHardware extends Object {
         return this.componentInterfaceVector.get(index);
     }
     toString() {
-        var stringBuilder = new StringMaker();
+        let stringBuilder = new StringMaker();
         ;
-        var size = this.componentInterfaceVector.size();
+        let size = this.componentInterfaceVector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var componentInterface = this.componentInterfaceVector.get(index);
+        for (let index = 0; index < size; index++) {
+            let componentInterface = this.componentInterfaceVector.get(index);
             ;
             stringBuilder.append(componentInterface.toString());
             stringBuilder.append(CommonSeps.getInstance().NEW_LINE);

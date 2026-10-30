@@ -14,11 +14,11 @@
 //not GWT import const AnimationBehaviorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { LeftToRightImageAnimation } from './LeftToRightImageAnimation.js';
-//not GWT import - same folder const LeftToRightImageAnimation
+//sameFolderImports - not GWT import - same folder const LeftToRightImageAnimation
 import { AdjustedLeftToRightImageAnimation } from './AdjustedLeftToRightImageAnimation.js';
-//not GWT import - same folder const AdjustedLeftToRightImageAnimation
+//sameFolderImports - not GWT import - same folder const AdjustedLeftToRightImageAnimation
 export class LeftToRightImageAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, sequenceArray, dx, dy, animationBehaviorFactory) {
         super(image, sequenceArray, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory);
@@ -26,7 +26,7 @@ export class LeftToRightImageAnimationFactory extends BaseImageAnimationFactory 
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var scaledImage = this.animationFactoryImageScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let scaledImage = this.animationFactoryImageScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
         if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
             this.animationFactoryImageScaleUtil.processAdjust(this);

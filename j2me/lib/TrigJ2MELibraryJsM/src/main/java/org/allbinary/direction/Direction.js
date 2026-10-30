@@ -46,7 +46,7 @@ export class Direction extends Object {
         return this.name;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Direction: ");
         stringBuffer.append(this.getName());

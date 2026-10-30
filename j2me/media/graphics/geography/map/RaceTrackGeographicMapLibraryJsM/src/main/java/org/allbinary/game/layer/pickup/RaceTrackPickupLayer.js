@@ -25,9 +25,9 @@ import { ViewPositionEventHandler } from '../../../../../org/allbinary/view/even
 //not GWT import const ViewPositionEventHandler
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PickupLayer } from './PickupLayer.js';
-//not GWT import - same folder const PickupLayer
+//sameFolderImports - not GWT import - same folder const PickupLayer
 import { CountedPickedUpLayerInterfaceFactory } from './CountedPickedUpLayerInterfaceFactory.js';
-//not GWT import - same folder const CountedPickedUpLayerInterfaceFactory
+//sameFolderImports - not GWT import - same folder const CountedPickedUpLayerInterfaceFactory
 export class RaceTrackPickupLayer extends PickupLayer {
     constructor() {
         super(NAME, RemoteInfo.REMOTE_INFO, 0, CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY, NullAnimationFactory.getFactoryInstance().getInstance(0), new Rectangle(PointFactory.getInstance().ZERO_ZERO, 0, 0), new TileLayerPositionIntoViewPosition());
@@ -35,7 +35,7 @@ export class RaceTrackPickupLayer extends PickupLayer {
         //For kotlin this is before the body of the constructor.
     }
     setTiledLayer(tiledLayer) {
-        var viewPosition = this.getViewPosition();
+        let viewPosition = this.getViewPosition();
         ;
         viewPosition.setTiledLayer(tiledLayer);
         this.viewPositionEventHandler.addListener(this);

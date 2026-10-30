@@ -64,7 +64,7 @@ export class AllBinaryMidlet extends MIDlet {
         this.logUtil.putF(this.commonStrings.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet");
     }
     setDisplay(newDisplay) {
-        var title = StringUtil.getInstance().EMPTY_STRING;
+        let title = StringUtil.getInstance().EMPTY_STRING;
         ;
         if (newDisplay != NullCanvas.NULL_CANVAS) {
             title = newDisplay.getTitle();
@@ -76,7 +76,7 @@ export class AllBinaryMidlet extends MIDlet {
                 this.logUtil.putF(new StringMaker().append(this.SETTING_NO_TITLE).append(StringUtil.getInstance().toString(newDisplay)).toString(), this, this.SET_DISPLAY);
             }
         }
-        var display = this.getDisplay();
+        let display = this.getDisplay();
         ;
         display.setCurrent(newDisplay);
     }
@@ -107,16 +107,18 @@ export class AllBinaryMidlet extends MIDlet {
     destroyAppInRunnable(unconditional, isProgress) {
     }
     destroyApp(unconditional) {
-        var METHOD_NAME = "AllBinaryMidlet::destroyApp";
+        let METHOD_NAME = "AllBinaryMidlet::destroyApp";
         ;
         try {
             this.logUtil.putF(this.commonStrings.START, this, METHOD_NAME);
             PreLogUtil.put(Memory.getInfo(), this, METHOD_NAME);
             this.setDestroyed(true);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, METHOD_NAME, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -138,9 +140,8 @@ export class AllBinaryMidlet extends MIDlet {
     }
     commandAction(command, displayable) {
     }
-}
+} //JSNI Expose so JSNI can access this class *** 
 AllBinaryMidlet.NULL_ALLBINARY_MIDLET = NullUtil.getInstance().NULL_OBJECT;
-//JSNI Expose so JSNI can access this class *** 
 globalThis.org = globalThis.org || {};
 globalThis.org.allbinary = globalThis.org.allbinary || {};
 globalThis.org.allbinary.midlet = globalThis.org.allbinary.midlet || {};

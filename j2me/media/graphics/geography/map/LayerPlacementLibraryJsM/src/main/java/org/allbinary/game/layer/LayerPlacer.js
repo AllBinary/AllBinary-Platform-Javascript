@@ -25,9 +25,9 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { EnumerationUtil } 
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
-//not GWT import - same folder const LayerPlacementType
+//sameFolderImports - not GWT import - same folder const LayerPlacementType
 import { LayerPlacementTypeFactory } from './LayerPlacementTypeFactory.js';
-//not GWT import - same folder const LayerPlacementTypeFactory
+//sameFolderImports - not GWT import - same folder const LayerPlacementTypeFactory
 export class LayerPlacer extends Object {
     constructor(layerInterfaceVisitor, dimension) {
         super();
@@ -37,36 +37,36 @@ export class LayerPlacer extends Object {
     }
     //@Throws(Exception.constructor)
     processList(list) {
-        var size = list.size();
+        let size = list.size();
         ;
-        var layerPlacementInterface;
+        let layerPlacementInterface;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             layerPlacementInterface = list.objectArray[index];
             this.process(layerPlacementInterface);
         }
     }
     //@Throws(Exception.constructor)
     process(layerPlacementInterface) {
-        var relativePoint = this.getPoint(layerPlacementInterface);
+        let relativePoint = this.getPoint(layerPlacementInterface);
         ;
-        var layerInterfaceFactory = LayerInterfaceFactory.getInstance();
+        let layerInterfaceFactory = LayerInterfaceFactory.getInstance();
         ;
-        var hashtable = layerPlacementInterface.getInstance();
+        let hashtable = layerPlacementInterface.getInstance();
         ;
-        var enumeration = hashtable.keys();
+        let enumeration = hashtable.keys();
         ;
-        var point;
+        let point;
         ;
-        var layerHashtable;
+        let layerHashtable;
         ;
-        var x = 0;
+        let x = 0;
         ;
-        var y = 0;
+        let y = 0;
         ;
-        var z = 0;
+        let z = 0;
         ;
-        var layerInterface;
+        let layerInterface;
         ;
         while (this.enumerationUtil.hasMoreElements(enumeration)) {
             point = this.enumerationUtil.nextElement(enumeration);
@@ -80,31 +80,31 @@ export class LayerPlacer extends Object {
     }
     //@Throws(Exception.constructor)
     getPoint(layerPlacementInterface) {
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var layerPlacementType = layerPlacementInterface.getLayerType();
+        let layerPlacementType = layerPlacementInterface.getLayerType();
         ;
         if (layerPlacementType == LayerPlacementTypeFactory.getInstance().MAP) {
-            var width = layerPlacementInterface.getWidth();
+            let width = layerPlacementInterface.getWidth();
             ;
-            var height = layerPlacementInterface.getHeight();
+            let height = layerPlacementInterface.getHeight();
             ;
-            var x = ((this.dimension.getX() - width) / 2);
+            let x = ((this.dimension.getX() - width) / 2);
             ;
-            var y = ((this.dimension.getY() - height) / 2);
+            let y = ((this.dimension.getY() - height) / 2);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return pointFactory.createXY(x, y);
             ;
         }
         else if (layerPlacementType == LayerPlacementTypeFactory.getInstance().UP) {
-            var width = layerPlacementInterface.getWidth();
+            let width = layerPlacementInterface.getWidth();
             ;
-            var height = layerPlacementInterface.getHeight();
+            let height = layerPlacementInterface.getHeight();
             ;
-            var x = ((this.dimension.getX() - width) / 2);
+            let x = ((this.dimension.getX() - width) / 2);
             ;
-            var y = -height;
+            let y = -height;
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return pointFactory.createXY(x, y);

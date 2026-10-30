@@ -17,9 +17,9 @@ import { Features } from '../../../../org/allbinary/game/configuration/feature/F
 //not GWT import const Features
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLConfiguration } from './OpenGLConfiguration.js';
-//not GWT import - same folder const OpenGLConfiguration
+//sameFolderImports - not GWT import - same folder const OpenGLConfiguration
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeatureFactory
+//sameFolderImports - not GWT import - same folder const OpenGLFeatureFactory
 export class OpenGLFeatureUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -27,11 +27,11 @@ export class OpenGLFeatureUtil extends Object {
     }
     constructor() {
         super();
-        var openGLConfiguration = OpenGLConfiguration.getInstance();
+        let openGLConfiguration = OpenGLConfiguration.getInstance();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
         this.anyThreed = openGLConfiguration.isOpenGL() && (features.isFeature(openGLFeatureFactory.OPENGL_2D_AND_3D) || features.isFeature(openGLFeatureFactory.OPENGL_3D));
     }

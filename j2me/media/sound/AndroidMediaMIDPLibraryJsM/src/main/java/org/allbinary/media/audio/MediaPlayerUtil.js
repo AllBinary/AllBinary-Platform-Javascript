@@ -29,11 +29,11 @@ export class MediaPlayerUtil extends Object {
     }
     //@Throws(Exception.constructor)
     waitForMediaPlayer(mediaPlayer) {
-        var MESSAGE = "Not Stopped Waiting";
+        let MESSAGE = "Not Stopped Waiting";
         ;
-        var METHOD_NAME = "wait";
+        let METHOD_NAME = "wait";
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (mediaPlayer.isPlaying() && index < 50) {
             this.logUtil.putF(MESSAGE, this, METHOD_NAME);

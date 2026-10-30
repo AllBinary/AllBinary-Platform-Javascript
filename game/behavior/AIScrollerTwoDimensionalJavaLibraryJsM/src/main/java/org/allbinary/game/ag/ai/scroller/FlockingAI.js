@@ -31,35 +31,35 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePatrolAI } from './BasePatrolAI.js';
-//not GWT import - same folder const BasePatrolAI
+//sameFolderImports - not GWT import - same folder const BasePatrolAI
 export class FlockingAI extends BasicAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(ownerLayerInterface, gameInput);
         //For kotlin this is before the body of the constructor.
-        var allowedDistance = hashtable.get(BasePatrolAI.MAX_DISTANCE);
+        let allowedDistance = hashtable.get(BasePatrolAI.MAX_DISTANCE);
         ;
         this.allowedDistance = allowedDistance.intValue();
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var maxDistance = 0;
+        let maxDistance = 0;
         ;
-        var farAllbinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER;
+        let farAllbinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER;
         ;
-        var groupLayerManagerListener = GroupLayerManagerListener.getInstance();
+        let groupLayerManagerListener = GroupLayerManagerListener.getInstance();
         ;
-        var list = groupLayerManagerListener.getList(BasicGroupFactory.getInstance().ENEMY);
+        let list = groupLayerManagerListener.getList(BasicGroupFactory.getInstance().ENEMY);
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var allBinaryLayer;
+        let allBinaryLayer;
         ;
-        var ownerLayerInterface;
+        let ownerLayerInterface;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             allBinaryLayer = list.get(index);
             if (allBinaryLayer.getType() != WeaponLayer.getStaticType()) {
-                var distance = this.getXYDistance(allBinaryLayer);
+                let distance = this.getXYDistance(allBinaryLayer);
                 ;
                 if (distance > maxDistance) {
                     maxDistance = distance;
@@ -89,15 +89,15 @@ export class FlockingAI extends BasicAI {
         }
     }
     getXYDistance(allBinaryLayer) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var xTotalDistance = (allBinaryLayer.getXP() + allBinaryLayer.getHalfWidth()) - (ownerLayerInterface.getXP() + ownerLayerInterface.getHalfWidth());
+        let xTotalDistance = (allBinaryLayer.getXP() + allBinaryLayer.getHalfWidth()) - (ownerLayerInterface.getXP() + ownerLayerInterface.getHalfWidth());
         ;
-        var yTotalDistance = (allBinaryLayer.getYP() + allBinaryLayer.getHalfHeight()) - (ownerLayerInterface.getYP() + ownerLayerInterface.getHalfHeight());
+        let yTotalDistance = (allBinaryLayer.getYP() + allBinaryLayer.getHalfHeight()) - (ownerLayerInterface.getYP() + ownerLayerInterface.getHalfHeight());
         ;
-        var mathUtil = MathUtil.getInstance();
+        let mathUtil = MathUtil.getInstance();
         ;
-        var totalDistance = mathUtil.abs(xTotalDistance) + mathUtil.abs(yTotalDistance);
+        let totalDistance = mathUtil.abs(xTotalDistance) + mathUtil.abs(yTotalDistance);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return totalDistance;

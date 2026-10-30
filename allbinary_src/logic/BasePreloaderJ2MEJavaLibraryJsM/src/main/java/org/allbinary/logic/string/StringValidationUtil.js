@@ -37,16 +37,16 @@ export class StringValidationUtil extends Object {
         return false;
     }
     isNumber(value) {
-        var numberOfDecimalPoints = 0;
+        let numberOfDecimalPoints = 0;
         ;
-        for (var index = 0; index < value.length; index++) {
-            var digit = value[index];
+        for (let index = 0; index < value.length; index++) {
+            let digit = value[index];
             ;
-            if (!this.isNumberFromChar(digit) && digit != '.') {
+            if (!this.isNumberFromChar(digit) && digit != '.'.charCodeAt(0)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;
             }
-            if (digit == '.') {
+            if (digit == '.'.charCodeAt(0)) {
                 numberOfDecimalPoints++;
                 if (numberOfDecimalPoints > 1) {
                     //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,7 +58,7 @@ export class StringValidationUtil extends Object {
         return true;
     }
     isNumberFromChar(digit) {
-        if (digit != '0' && digit != '1' && digit != '2' && digit != '3' && digit != '4' && digit != '5' && digit != '6' && digit != '7' && digit != '8' && digit != '9') {
+        if (digit != '0'.charCodeAt(0) && digit != '1'.charCodeAt(0) && digit != '2'.charCodeAt(0) && digit != '3'.charCodeAt(0) && digit != '4'.charCodeAt(0) && digit != '5'.charCodeAt(0) && digit != '6'.charCodeAt(0) && digit != '7'.charCodeAt(0) && digit != '8'.charCodeAt(0) && digit != '9'.charCodeAt(0)) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }

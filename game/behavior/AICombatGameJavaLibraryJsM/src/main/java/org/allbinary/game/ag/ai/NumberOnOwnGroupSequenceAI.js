@@ -25,12 +25,12 @@ export class NumberOnOwnGroupSequenceAI extends SequenceAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var layerInterface = this.getOwnerLayerInterface();
+        let layerInterface = this.getOwnerLayerInterface();
         ;
-        var index = this.getIndex();
+        let index = this.getIndex();
         ;
         if (this.numberOnSameTeam.length > index) {
-            var size = GroupLayerManagerListener.getInstance().getGroupSizeFromInterface(layerInterface);
+            let size = GroupLayerManagerListener.getInstance().getGroupSizeFromInterface(layerInterface);
             ;
             if (this.numberOnSameTeam[index].intValue() > size) {
                 this.next();

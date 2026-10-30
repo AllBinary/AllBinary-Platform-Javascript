@@ -29,27 +29,27 @@ export class DisplaysUtil extends Object {
         return DisplaysUtil.instance;
     }
     getPrimaryScreenSize() {
-        var dimension = Toolkit.getDefaultToolkit().getScreenSize();
+        let dimension = Toolkit.getDefaultToolkit().getScreenSize();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Rectangle(PointFactory.getInstance().ZERO_ZERO, dimension.width, dimension.height);
     }
     getScreenSizesAsRectangleArray() {
-        var graphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        let graphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ;
-        var graphicsDeviceArray = graphicsEnvironment.getScreenDevices();
+        let graphicsDeviceArray = graphicsEnvironment.getScreenDevices();
         ;
-        var graphicsDevice;
+        let graphicsDevice;
         ;
-        var displayMode;
+        let displayMode;
         ;
-        var rectangle;
+        let rectangle;
         ;
-        var size = graphicsDeviceArray.length;
+        let size = graphicsDeviceArray.length;
         ;
-        var rectangleArray = new Array(size);
+        let rectangleArray = new Array(size);
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             graphicsDevice = graphicsDeviceArray[index];
             displayMode = graphicsDevice.getDisplayMode();
             rectangle = new Rectangle(PointFactory.getInstance().ZERO_ZERO, displayMode.getWidth(), displayMode.getHeight());

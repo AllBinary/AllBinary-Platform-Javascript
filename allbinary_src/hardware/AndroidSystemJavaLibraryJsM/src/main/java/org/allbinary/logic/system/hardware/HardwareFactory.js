@@ -26,9 +26,16 @@ import { OperatingSystems } from '../../../../../org/allbinary/logic/system/os/O
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoHardware } from './NoHardware.js';
-//not GWT import - same folder const HardwareInterface
+//sameFolderImports - not GWT import - same folder const HardwareInterface
 export class HardwareFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return HardwareFactory.instance;
     }
@@ -38,9 +45,9 @@ export class HardwareFactory extends Object {
         this.tsUtil = TsUtil.getInstance();
     }
     //@Throws(Exception.constructor)
-    getInstance(os) {
+    getInstance$overload2(os) {
         try {
-            var operatingSystems = OperatingSystems.getInstance();
+            let operatingSystems = OperatingSystems.getInstance();
             ;
             if (this.tsUtil.compareTo(os.getName(), operatingSystems.ANDROID) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,14 +58,16 @@ export class HardwareFactory extends Object {
                 return new AndroidHardware();
             }
             throw new Exception("No Hardware Imp for: " + os.getName());
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put("Ignoring Exception Returning NoHardware", this, commonStrings.GET_INSTANCE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return new NoHardware();
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put("Ignoring Exception Returning NoHardware", this, commonStrings.GET_INSTANCE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return new NoHardware();
+            }
         }
     }
 }

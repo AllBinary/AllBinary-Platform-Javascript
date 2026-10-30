@@ -15,11 +15,11 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
-//not GWT import - same folder const SoundsFactoryInterface
+//sameFolderImports - not GWT import - same folder const SoundsFactoryInterface
 export class AllBinaryMediaManagerShutdown extends Object {
     //@Throws(Exception.constructor)
     static shutdown(soundsFactoryInterface) {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
         logUtil.putF("No Media Shutdown for Android Process", AllBinaryMediaManagerShutdown.instance, "shutdown");
     }

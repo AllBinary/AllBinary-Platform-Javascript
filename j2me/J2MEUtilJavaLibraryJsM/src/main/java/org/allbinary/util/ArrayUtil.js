@@ -25,92 +25,92 @@ export class ArrayUtil extends Object {
         ;
     }
     copyOfType(original, newLength, newType) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfbyte(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfshort(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfint(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOflong(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfchar(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOffloat(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfdouble(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfboolean(original, newLength) {
-        var copy = new Array(newLength);
+        let copy = new Array(newLength);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     reverse(intArray) {
-        var length = intArray.length - 1;
+        let length = intArray.length - 1;
         ;
-        var temp = 0;
+        let temp = 0;
         ;
-        var size = length / 2;
+        let size = globalThis.Math.trunc(length / 2);
         ;
-        for (var index = 0; index <= size; index++) {
+        for (let index = 0; index <= size; index++) {
             temp = intArray[index];
             intArray[index] = intArray[length - index];
             intArray[length - index] = temp;
         }
     }
     flip(intArray, width, height) {
-        var length = height - 1;
+        let length = height - 1;
         ;
-        var temp = 0;
+        let temp = 0;
         ;
-        var index = 0;
+        let index = 0;
         ;
-        var rowIndex = 0;
+        let rowIndex = 0;
         ;
-        for (var y = 0; y <= length / 2; y++) {
-            for (var x = 0; x < width; x++) {
+        for (let y = 0; y <= globalThis.Math.trunc(length / 2); y++) {
+            for (let x = 0; x < width; x++) {
                 rowIndex = ((length - y) * width);
                 index = x + (y * width);
                 temp = intArray[index];
@@ -120,17 +120,17 @@ export class ArrayUtil extends Object {
         }
     }
     toStringFromTwoDimensionaArray(twoDimensionalIntArray) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var endIndex = twoDimensionalIntArray.length;
+        let endIndex = twoDimensionalIntArray.length;
         ;
-        var endIndex2 = twoDimensionalIntArray[0].length;
+        let endIndex2 = twoDimensionalIntArray[0].length;
         ;
-        for (var index = 0; index < endIndex; index++) {
+        for (let index = 0; index < endIndex; index++) {
             stringBuffer.append(commonSeps.BRACE_OPEN);
-            for (var index2 = 0; index2 < endIndex2; index2++) {
+            for (let index2 = 0; index2 < endIndex2; index2++) {
                 stringBuffer.appendint(twoDimensionalIntArray[index][index2]);
                 stringBuffer.append(commonSeps.COMMA_SEP);
             }
@@ -142,11 +142,11 @@ export class ArrayUtil extends Object {
         ;
     }
     toStringFromObjectArray(objectArray) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        for (var index = 0; index < objectArray.length; index++) {
+        for (let index = 0; index < objectArray.length; index++) {
             stringBuffer.append(StringUtil.getInstance().toString(objectArray[index]));
             stringBuffer.append(commonSeps.COMMA_SEP);
         }
@@ -155,11 +155,11 @@ export class ArrayUtil extends Object {
         ;
     }
     toStringFromByteArray(byteArray) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        for (var index = 0; index < byteArray.length; index++) {
+        for (let index = 0; index < byteArray.length; index++) {
             stringBuffer.appendbyte(byteArray[index]);
             stringBuffer.append(commonSeps.COMMA_SEP);
         }

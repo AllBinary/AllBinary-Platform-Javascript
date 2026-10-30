@@ -22,24 +22,24 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PrimitiveLongSingleton } from './PrimitiveLongSingleton.js';
-//not GWT import - same folder const PrimitiveLongSingleton
+//sameFolderImports - not GWT import - same folder const PrimitiveLongSingleton
 //not plain js - same folder import { MathUtil } 
 const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 export class PrimitiveLongUtil extends Object {
     static createPowerOfTen(powerOfTen) {
-        var primitiveLongUtil = new PrimitiveLongUtil(powerOfTen, NullUtil.getInstance().NULL_OBJECT);
+        let primitiveLongUtil = new PrimitiveLongUtil(powerOfTen, NullUtil.getInstance().NULL_OBJECT);
         ;
         if (powerOfTen % 10 != 0) {
-            var logUtil = LogUtil.getInstance();
+            let logUtil = LogUtil.getInstance();
             ;
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             logUtil.put(commonStrings.EXCEPTION, primitiveLongUtil, commonStrings.CONSTRUCTOR, new Exception("Max must be power of 10"));
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return primitiveLongUtil;
     }
-    constructor(powerOfTen, unused = {}) {
+    constructor(powerOfTen, unused) {
         super();
         this.logUtil = LogUtil.getInstance();
         this.currentTotalDigits = 0;
@@ -60,14 +60,14 @@ export class PrimitiveLongUtil extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.primitiveLongSingleton.UNK;
         }
-        var index = 0;
+        let index = 0;
         ;
-        var div = this.powerOfTen;
+        let div = this.powerOfTen;
         ;
-        var lastValue = 0;
+        let lastValue = 0;
         ;
         while (div >= 1) {
-            var digit = (value - lastValue) / div;
+            let digit = globalThis.Math.trunc((value - lastValue) / div);
             ;
             if (digit >= 0 && digit < 10) {
                 if (digit == 0 && index == 0) {
@@ -77,7 +77,7 @@ export class PrimitiveLongUtil extends Object {
                 }
                 lastValue += digit * div;
             }
-            div = div / 10;
+            div = globalThis.Math.trunc(div / 10);
         }
         this.setCurrentTotalDigits(index);
         //if statement needs to be on the same line and ternary does not work the same way.

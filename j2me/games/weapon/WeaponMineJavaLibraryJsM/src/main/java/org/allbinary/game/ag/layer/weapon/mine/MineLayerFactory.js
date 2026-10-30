@@ -16,7 +16,7 @@ import { Object } from '../../../../../../../java/lang/Object.js';
 //not GWT import const ViewPositionFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MineLayer } from './MineLayer.js';
-//not GWT import - same folder const MineLayer
+//sameFolderImports - not GWT import - same folder const MineLayer
 export class MineLayerFactory extends Object {
     constructor(viewPositionFactoryInterface) {
         super();

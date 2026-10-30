@@ -47,7 +47,7 @@ import { WeakCrypt } from '../../../../../org/allbinary/logic/system/security/cr
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DbConnectionInfo } from './DbConnectionInfo.js';
-//not GWT import - same folder const DbConnectionInfo
+//sameFolderImports - not GWT import - same folder const DbConnectionInfo
 export class DbInitInfo extends DbConnectionInfo {
     constructor(initFileName, read) {
         super();
@@ -67,7 +67,7 @@ export class DbInitInfo extends DbConnectionInfo {
         }
     }
     getUrl() {
-        var url = super.getUrl();
+        let url = super.getUrl();
         ;
         if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADER)) {
             PreLogUtil.put(this.httpData.URL_LABEL + url, this, GET_URL);
@@ -77,31 +77,31 @@ export class DbInitInfo extends DbConnectionInfo {
     }
     //@Throws(Exception.constructor)
     write() {
-        var PATH = new AbPath(URLGLOBALS.getWebappPath() + this.PACKAGE, StringUtil.getInstance().EMPTY_STRING);
+        let PATH = new AbPath(URLGLOBALS.getWebappPath() + this.PACKAGE, StringUtil.getInstance().EMPTY_STRING);
         ;
         this.directory.create(PATH);
-        var FILEABPATH = new AbPath(URLGLOBALS.getWebappPath() + this.PACKAGE, this.initFileName);
+        let FILEABPATH = new AbPath(URLGLOBALS.getWebappPath() + this.PACKAGE, this.initFileName);
         ;
         try {
-            var newFile = AbFile.createAbFileFromAbPath(FILEABPATH);
+            let newFile = AbFile.createAbFileFromAbPath(FILEABPATH);
             ;
             newFile.createNewFile();
-            var dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(newFile);
+            let dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(newFile);
             ;
             try {
-                var cryptedJdbcDriver = new WeakCrypt(1).encrypt(this.getJdbcDriver()).getBytes();
+                let cryptedJdbcDriver = Array.from(new TextEncoder().encode(new WeakCrypt(1).encrypt(this.getJdbcDriver())), byte => (byte << 24) >> 24);
                 ;
-                var cryptedName = new WeakCrypt(2).encrypt(this.getName()).getBytes();
+                let cryptedName = Array.from(new TextEncoder().encode(new WeakCrypt(2).encrypt(this.getName())), byte => (byte << 24) >> 24);
                 ;
-                var cryptedUserName = new WeakCrypt(3).encrypt(this.getUserName()).getBytes();
+                let cryptedUserName = Array.from(new TextEncoder().encode(new WeakCrypt(3).encrypt(this.getUserName())), byte => (byte << 24) >> 24);
                 ;
-                var cryptedPassword = new WeakCrypt(4).encrypt(this.getPassword()).getBytes();
+                let cryptedPassword = Array.from(new TextEncoder().encode(new WeakCrypt(4).encrypt(this.getPassword())), byte => (byte << 24) >> 24);
                 ;
-                var cryptedSchema = new WeakCrypt(5).encrypt(this.getSchema()).getBytes();
+                let cryptedSchema = Array.from(new TextEncoder().encode(new WeakCrypt(5).encrypt(this.getSchema())), byte => (byte << 24) >> 24);
                 ;
-                var cryptedServer = new WeakCrypt(6).encrypt(this.getServer()).getBytes();
+                let cryptedServer = Array.from(new TextEncoder().encode(new WeakCrypt(6).encrypt(this.getServer())), byte => (byte << 24) >> 24);
                 ;
-                var cryptedPort = new WeakCrypt(7).encrypt(this.getPort()).getBytes();
+                let cryptedPort = Array.from(new TextEncoder().encode(new WeakCrypt(7).encrypt(this.getPort())), byte => (byte << 24) >> 24);
                 ;
                 dataOutputStream.writeUTF(DatabaseEncoder.encode(cryptedJdbcDriver));
                 dataOutputStream.writeUTF(DatabaseEncoder.encode(cryptedName));
@@ -111,83 +111,74 @@ export class DbInitInfo extends DbConnectionInfo {
                 dataOutputStream.writeUTF(DatabaseEncoder.encode(cryptedServer));
                 dataOutputStream.writeUTF(DatabaseEncoder.encode(cryptedPort));
                 this.hasRead = false;
-                try {
-                }
-                finally {
-                    StreamUtil.getInstance().close(dataOutputStream);
-                }
-                //: 
             }
-            catch (e) {
+            finally {
+                StreamUtil.getInstance().close(dataOutputStream);
+            }
+        }
+        catch (caught) {
+            {
+                const e = caught;
                 if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
                     PreLogUtil.putOE("Failed Write: " + FILEABPATH.toString(), this, "write", e);
                 }
             }
         }
-        //@Throws(Exception.constructor)
-        finally {
-        }
-        //@Throws(Exception.constructor)
-        load();
-        {
-            var FILEABPATH = new AbPath(URLGLOBALS.getWebappPath() + this.PACKAGE, this.initFileName);
+    }
+    //@Throws(Exception.constructor)
+    load() {
+        let FILEABPATH = new AbPath(URLGLOBALS.getWebappPath() + this.PACKAGE, this.initFileName);
+        ;
+        try {
+            let file = AbFile.createAbFileFromAbPath(FILEABPATH);
             ;
-            try {
-                var file = AbFile.createAbFileFromAbPath(FILEABPATH);
+            if (file.isFile()) {
+                let iFile = new AbFileInputStream(file);
                 ;
-                if (file.isFile()) {
-                    var iFile = new AbFileInputStream(file);
+                let iData = new AbDataInputStream(iFile);
+                ;
+                try {
+                    let decryptedJdbcDriver = decode.toCharArray();
                     ;
-                    var iData = new AbDataInputStream(iFile);
+                    let decryptedName = decode.toCharArray();
                     ;
-                    try {
-                        var decryptedJdbcDriver = decode.toCharArray();
-                        ;
-                        var decryptedName = decode.toCharArray();
-                        ;
-                        var decryptedUserName = decode.toCharArray();
-                        ;
-                        var decryptedPassword = decode.toCharArray();
-                        ;
-                        var decryptedSchema = decode.toCharArray();
-                        ;
-                        var decryptedServer = decode.toCharArray();
-                        ;
-                        var decryptedPort = decode.toCharArray();
-                        ;
-                        this.setJdbcDriver(new WeakCrypt(1).decrypt(decryptedJdbcDriver));
-                        this.setName(new WeakCrypt(2).decrypt(decryptedName));
-                        this.setUserName(new WeakCrypt(3).decrypt(decryptedUserName));
-                        this.setPassword(new WeakCrypt(4).decrypt(decryptedPassword));
-                        this.setSchema(new WeakCrypt(5).decrypt(decryptedSchema));
-                        this.setServer(new WeakCrypt(6).decrypt(decryptedServer));
-                        this.setPort(new WeakCrypt(7).decrypt(decryptedPort));
-                        var stringUtil = StringUtil.getInstance();
-                        ;
-                        try {
-                        }
-                        finally {
-                            StreamUtil.getInstance().close(iData);
-                        }
-                    }
-                    finally {
-                    }
-                    {
-                        this.hasRead = false;
-                        if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADER)) {
-                            PreLogUtil.put("Not a File - Failed Loading: " + FILEABPATH.toString(), this, this.commonStrings.LOAD);
-                        }
-                    }
-                    //: 
+                    let decryptedUserName = decode.toCharArray();
+                    ;
+                    let decryptedPassword = decode.toCharArray();
+                    ;
+                    let decryptedSchema = decode.toCharArray();
+                    ;
+                    let decryptedServer = decode.toCharArray();
+                    ;
+                    let decryptedPort = decode.toCharArray();
+                    ;
+                    this.setJdbcDriver(new WeakCrypt(1).decrypt(decryptedJdbcDriver));
+                    this.setName(new WeakCrypt(2).decrypt(decryptedName));
+                    this.setUserName(new WeakCrypt(3).decrypt(decryptedUserName));
+                    this.setPassword(new WeakCrypt(4).decrypt(decryptedPassword));
+                    this.setSchema(new WeakCrypt(5).decrypt(decryptedSchema));
+                    this.setServer(new WeakCrypt(6).decrypt(decryptedServer));
+                    this.setPort(new WeakCrypt(7).decrypt(decryptedPort));
+                    let stringUtil = StringUtil.getInstance();
+                    ;
                 }
-                try { }
-                catch (e) {
-                    if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                        PreLogUtil.putOE("Failed Loading: " + FILEABPATH.toString(), this, this.commonStrings.LOAD, e);
-                    }
+                finally {
+                    StreamUtil.getInstance().close(iData);
                 }
             }
-            finally {
+            else {
+                this.hasRead = false;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADER)) {
+                    PreLogUtil.put("Not a File - Failed Loading: " + FILEABPATH.toString(), this, this.commonStrings.LOAD);
+                }
+            }
+        }
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE("Failed Loading: " + FILEABPATH.toString(), this, this.commonStrings.LOAD, e);
+                }
             }
         }
     }
@@ -200,11 +191,13 @@ export class DbInitInfo extends DbConnectionInfo {
                 this.hasRead = true;
                 this.load();
             }
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, "updateIfNeeded", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, "updateIfNeeded", e);
+                }
             }
         }
     }

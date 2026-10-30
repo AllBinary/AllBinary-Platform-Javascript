@@ -30,7 +30,7 @@ import { PathFindingNode } from '../../../../../../../org/allbinary/media/graphi
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackRoadsGeographicMapCellHistoryFactory } from './RaceTrackRoadsGeographicMapCellHistoryFactory.js';
-//not GWT import - same folder const RaceTrackRoadsGeographicMapCellHistoryFactory
+//sameFolderImports - not GWT import - same folder const RaceTrackRoadsGeographicMapCellHistoryFactory
 export class BasePathFindingInfoFactory extends Object {
     constructor() {
         super(...arguments);
@@ -42,49 +42,51 @@ export class BasePathFindingInfoFactory extends Object {
         class RaceTrackGeographicMapCellPositionFactoryInitVisitor extends Object {
             constructor() {
                 super();
-                var raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
+                let raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
                 ;
                 this.startLineId = raceTrackGeographicMapCellTypeFactory.getStartType();
                 this.finishLineId = raceTrackGeographicMapCellTypeFactory.getEndType();
             }
             //@Throws(Exception.constructor)
             visit(tiledLayer, cellPosition) {
-                var row = cellPosition.getRow();
+                let row = cellPosition.getRow();
                 ;
-                var column = cellPosition.getColumn();
+                let column = cellPosition.getColumn();
                 ;
                 try {
-                    var cellTypeId = mapArray[row][column];
+                    let cellTypeId = mapArray[row][column];
                     ;
-                    var geographicCellType = geographicMapInterface.getCellTypeFromMapCellTypeInt(cellTypeId);
+                    let geographicCellType = geographicMapInterface.getCellTypeFromMapCellTypeInt(cellTypeId);
                     ;
                     if (geographicCellType == this.startLineId) {
-                        BasePathFindingInfoFactory.prototype.addStartPathFindingNode(pathFindingInfo, cellPosition);
+                        outer$BasePathFindingInfoFactory.addStartPathFindingNode(pathFindingInfo, cellPosition);
                     }
                     if (geographicCellType == this.finishLineId) {
                         if (geographicCellType == this.startLineId) {
-                            BasePathFindingInfoFactory.prototype.addEndPathFindingNode(pathFindingInfo, geographicMapInterface.getGeographicMapCellPositionFactoryInterface().getInstance(geographicMapInterface, cellPosition.getColumn(), cellPosition.getRow(), tiledLayer.getColumns(), tiledLayer.getRows(), tiledLayer.getCellWidth(), tiledLayer.getCellHeight()));
+                            outer$BasePathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, geographicMapInterface.getGeographicMapCellPositionFactoryInterface().getInstance(geographicMapInterface, cellPosition.getColumn(), cellPosition.getRow(), tiledLayer.getColumns(), tiledLayer.getRows(), tiledLayer.getCellWidth(), tiledLayer.getCellHeight()));
                         }
                         else {
-                            BasePathFindingInfoFactory.prototype.addEndPathFindingNode(pathFindingInfo, cellPosition);
+                            outer$BasePathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, cellPosition);
                         }
                     }
-                    var raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
+                    let raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
                     ;
-                    var geographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance();
+                    let geographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance();
                     ;
                     if (raceTrackGeographicMapCellTypeFactory.isPath(geographicMapCellTypeFactory.get(geographicCellType))) {
                         RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance().track(cellPosition);
                     }
                     else {
                     }
-                    //: 
                 }
-                catch (e) {
-                    var commonSeps = CommonSeps.getInstance();
-                    ;
-                    this.logUtil.put(new StringMaker().append(commonSeps.BRACKET_OPEN).appendint(row).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(column).append("] in [").appendint(mapArray.length).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(mapArray[0].length).append(commonSeps.BRACKET_CLOSE).toString(), this, "visit", e);
-                    throw e;
+                catch (caught) {
+                    {
+                        const e = caught;
+                        let commonSeps = CommonSeps.getInstance();
+                        ;
+                        this.logUtil.put(new StringMaker().append(commonSeps.BRACKET_OPEN).appendint(row).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(column).append("] in [").appendint(mapArray.length).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(mapArray[0].length).append(commonSeps.BRACKET_CLOSE).toString(), this, "visit", e);
+                        throw e;
+                    }
                 }
             }
         }

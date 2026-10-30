@@ -26,7 +26,7 @@ const ImageImpl = globalThis.playn.core.ImageImpl;
 const HTMLPlaynUtil = globalThis.playn.html.HTMLPlaynUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageRotationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -38,16 +38,16 @@ export class ImageRotationUtil extends Object {
     }
     rotateImage(originalImage, image, totalAngle) {
         if (image.isMutable()) {
-            var htmlImage = image;
+            let htmlImage = image;
             ;
-            var canvasImage = htmlImage.getImage();
+            let canvasImage = htmlImage.getImage();
             ;
-            var canvas = this.playnUtil.getCanvas(canvasImage);
+            let canvas = this.playnUtil.getCanvas(canvasImage);
             ;
             canvas.save();
             canvas.clear();
             canvas.translate(originalImage.getWidth() / 2, originalImage.getHeight() / 2);
-            var image2 = this.rotateImageCanvasSurface(originalImage, image, canvas, totalAngle);
+            let image2 = this.rotateImageCanvasSurface(originalImage, image, canvas, totalAngle);
             ;
             this.drawImage(originalImage, image, canvas);
             canvas.restore();
@@ -85,15 +85,15 @@ export class ImageRotationUtil extends Object {
         }
     }
     drawImage(originalImage, image, canvasSurface) {
-        var originalPlayNImage = null;
+        let originalPlayNImage = null;
         ;
         if (originalImage.isMutable()) {
-            var originalHTMLImage = originalImage;
+            let originalHTMLImage = originalImage;
             ;
             originalPlayNImage = originalHTMLImage.getImage();
         }
         else {
-            var originalHTMLImage = originalImage;
+            let originalHTMLImage = originalImage;
             ;
             originalPlayNImage = originalHTMLImage.getImage();
         }
@@ -101,9 +101,9 @@ export class ImageRotationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createRotatedImage(originalImage, rotationInDegrees) {
-        var image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
+        let image = ImageCreationUtil.getInstance().createImageWH(originalImage.getWidth(), originalImage.getHeight());
         ;
-        var rotatedImage = this.rotateImage(originalImage, image, rotationInDegrees);
+        let rotatedImage = this.rotateImage(originalImage, image, rotationInDegrees);
         ;
         if (rotatedImage ==
             null) {

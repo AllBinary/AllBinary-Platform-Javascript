@@ -24,20 +24,20 @@ import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScale
 //not GWT import const AndroidImageInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { ImageAnimation } from './ImageAnimation.js';
-//not GWT import - same folder const ImageAnimation
+//sameFolderImports - not GWT import - same folder const ImageAnimation
 export class AllBinaryScreenRelationalImageAnimationInterfaceFactory extends BaseImageAnimationFactory {
     constructor(image, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), 0, 0, 0, 0, animationBehaviorFactory);
         this.lastImage = NullImage.NULL_IMAGE;
         //For kotlin this is before the body of the constructor.
         if (this.lastImage != NullImage.NULL_IMAGE) {
-            var androidImageInterface = this.lastImage;
+            let androidImageInterface = this.lastImage;
             ;
             androidImageInterface.getBitmap().recycle();
         }
-        var scale = ScreenRelationalUtil.getInstance().getScaleImage(image);
+        let scale = ScreenRelationalUtil.getInstance().getScaleImage(image);
         ;
         this.lastImage = ImageScaleUtil.getInstance().createImage(GameFeatureImageCacheFactory.getInstance(), this.getImage(), scale, scale, false);
     }

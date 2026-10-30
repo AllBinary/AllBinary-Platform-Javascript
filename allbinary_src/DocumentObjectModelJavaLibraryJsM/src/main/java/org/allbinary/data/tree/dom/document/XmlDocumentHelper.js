@@ -18,7 +18,9 @@ import { ByteArrayOutputStream } from '../../../../../../java/io/ByteArrayOutput
 import { StringReader } from '../../../../../../java/io/StringReader.js';
 //not GWT import const StringReader
 import { StringWriter } from '../../../../../../java/io/StringWriter.js';
-//not GWT import const Writer
+//not GWT import const StringWriter
+//not plain js import { Writer } 
+const Writer = globalThis.java.io.Writer;
 import { DocumentBuilderFactory } from '../../../../../../javax/xml/parsers/DocumentBuilderFactory.js';
 //not GWT import const DocumentBuilderFactory
 import { OutputKeys } from '../../../../../../javax/xml/transform/OutputKeys.js';
@@ -49,24 +51,26 @@ export class XmlDocumentHelper extends Object {
     //@Throws(Exception.constructor)
     static toString(document) {
         try {
-            var domSource = new DOMSource(document);
+            let domSource = new DOMSource(document);
             ;
-            var byteArrayOutputStream = new ByteArrayOutputStream();
+            let byteArrayOutputStream = new ByteArrayOutputStream();
             ;
-            var streamResult = new StreamResult(byteArrayOutputStream);
+            let streamResult = new StreamResult(byteArrayOutputStream);
             ;
-            var copyTransformerFactory = TransformerFactory.newInstance();
+            let copyTransformerFactory = TransformerFactory.newInstance();
             ;
-            var copyTransformer = copyTransformerFactory.newTransformer();
+            let copyTransformer = copyTransformerFactory.newTransformer();
             ;
             copyTransformer.transform(domSource, streamResult);
             //if statement needs to be on the same line and ternary does not work the same way.
             return byteArrayOutputStream.toString();
             ;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     constructor() {
@@ -77,35 +81,32 @@ export class XmlDocumentHelper extends Object {
     }
     init(indent, ignoreDeclaration) {
         try {
-            var booleanFactory = BooleanFactory.getInstance();
+            let booleanFactory = BooleanFactory.getInstance();
             ;
-            var transformerFactory = TransformerFactory.newInstance();
+            let transformerFactory = TransformerFactory.newInstance();
             ;
             transformerFactory.setAttribute(this.INDENT_NUMBER, indent);
             this.transformer = transformerFactory.newTransformer();
             this.transformer.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance().UTF_8);
-            this.transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, ignoreDeclaration
-                ?
-                    booleanFactory.YES
-                :
-                    booleanFactory.NO);
-            ;
+            this.transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, (ignoreDeclaration ? booleanFactory.YES : booleanFactory.NO));
             this.transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory.YES);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     format(xmlString) {
-        var src = new InputSource(new StringReader(xmlString));
+        let src = new InputSource(new StringReader(xmlString));
         ;
-        var document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(src);
+        let document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(src);
         ;
-        var out = new StringWriter();
+        let out = new StringWriter();
         ;
         this.transformer.transform(new DOMSource(document), new StreamResult(out));
         //if statement needs to be on the same line and ternary does not work the same way.

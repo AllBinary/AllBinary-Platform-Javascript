@@ -31,10 +31,10 @@ export class GLUtil extends Object {
         return GLUtil.instance;
     }
     makeFloatBuffer3(p_a, p_b, p_c) {
-        var b = ByteBuffer.allocateDirect(3 * this.BYTES_PER_FLOAT);
+        let b = ByteBuffer.allocateDirect(3 * this.BYTES_PER_FLOAT);
         ;
         b.order(ByteOrder.nativeOrder());
-        var buffer = b.asFloatBuffer();
+        let buffer = b.asFloatBuffer();
         ;
         buffer.put(p_a);
         buffer.put(p_b);
@@ -44,10 +44,10 @@ export class GLUtil extends Object {
         return buffer;
     }
     makeFloatBuffer4(p_a, p_b, p_c, p_d) {
-        var b = ByteBuffer.allocateDirect(4 * this.BYTES_PER_FLOAT);
+        let b = ByteBuffer.allocateDirect(4 * this.BYTES_PER_FLOAT);
         ;
         b.order(ByteOrder.nativeOrder());
-        var buffer = b.asFloatBuffer();
+        let buffer = b.asFloatBuffer();
         ;
         buffer.put(p_a);
         buffer.put(p_b);
@@ -58,17 +58,17 @@ export class GLUtil extends Object {
         return buffer;
     }
     makeFloatBuffer(byteBuffer) {
-        var b = ByteBuffer.allocateDirect(byteBuffer.limit() * this.BYTES_PER_FLOAT);
+        let b = ByteBuffer.allocateDirect(byteBuffer.limit() * this.BYTES_PER_FLOAT);
         ;
         b.order(ByteOrder.nativeOrder());
-        var buffer = b.asFloatBuffer();
+        let buffer = b.asFloatBuffer();
         ;
-        var unsigned = 0;
+        let unsigned = 0;
         ;
-        var v = 0.0;
+        let v = 0.0;
         ;
         while (byteBuffer.hasRemaining()) {
-            unsigned = (Math.round(byteBuffer.get())) & 0xFF;
+            unsigned = (globalThis.Math.trunc(byteBuffer.get())) & 0xFF;
             v = (unsigned) / 255;
             buffer.put(v);
         }
@@ -82,24 +82,24 @@ export class GLUtil extends Object {
         ;
     }
     rotateUVs(uvs, angleDegrees, pivotU, pivotV) {
-        var angleRad = Math.toRadians(angleDegrees);
+        let angleRad = Math.toRadians(angleDegrees);
         ;
-        var cosA = Math.cos(angleRad);
+        let cosA = Math.cos(angleRad);
         ;
-        var sinA = Math.sin(angleRad);
+        let sinA = Math.sin(angleRad);
         ;
-        for (var i = 0; i < uvs.length;) {
-            var u = uvs[i];
+        for (let i = 0; i < uvs.length;) {
+            let u = uvs[i];
             ;
-            var v = uvs[i + 1];
+            let v = uvs[i + 1];
             ;
-            var du = u - pivotU;
+            let du = u - pivotU;
             ;
-            var dv = v - pivotV;
+            let dv = v - pivotV;
             ;
-            var ru = (du * cosA - dv * sinA) + pivotU;
+            let ru = (du * cosA - dv * sinA) + pivotU;
             ;
-            var rv = (du * sinA + dv * cosA) + pivotV;
+            let rv = (du * sinA + dv * cosA) + pivotV;
             ;
             uvs[i] = ru;
             uvs[i + 1] = rv;

@@ -26,9 +26,9 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const PickedUpLayerType
+//sameFolderImports - not GWT import - same folder const PickedUpLayerType
 import { PickedUpLayerTypeFactory } from './PickedUpLayerTypeFactory.js';
-//not GWT import - same folder const CountedPickedUpLayerInterfaceFactory
+//sameFolderImports - not GWT import - same folder const CountedPickedUpLayerInterfaceFactory
 export class PickupBehavior extends Object {
     static getNullInstance() {
         if (PickupBehavior.NULL_PICKUP_BEHAVIOR == NullUtil.getInstance().NULL_OBJECT) {
@@ -45,78 +45,82 @@ export class PickupBehavior extends Object {
     }
     doPickup(pickupProcessorInterface) {
         try {
-            var healthInterfaceCompositeInterface = this.ownerLayerInterface;
+            let healthInterfaceCompositeInterface = this.ownerLayerInterface;
             ;
             if (healthInterfaceCompositeInterface.getHealthInterface().isAlive()) {
                 pickupProcessorInterface.process(this.ownerLayerInterface);
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "doPickup", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "doPickup", e);
+            }
         }
     }
     doPickupLayer(pickupLayerInterface) {
         try {
-            var pickedUpLayerInterfaceFactoryInterface = pickupLayerInterface.getPickedUpLayerInterfaceFactoryInterface();
+            let pickedUpLayerInterfaceFactoryInterface = pickupLayerInterface.getPickedUpLayerInterfaceFactoryInterface();
             ;
-            var pickedUpLayerType = pickedUpLayerInterfaceFactoryInterface.getPickedUpLayerType();
+            let pickedUpLayerType = pickedUpLayerInterfaceFactoryInterface.getPickedUpLayerType();
             ;
-            var pickedUpLayerTypeFactory = PickedUpLayerTypeFactory.getInstance();
+            let pickedUpLayerTypeFactory = PickedUpLayerTypeFactory.getInstance();
             ;
             if (pickedUpLayerType == pickedUpLayerTypeFactory.BEAM || pickedUpLayerType == pickedUpLayerTypeFactory.MINE || pickedUpLayerType == pickedUpLayerTypeFactory.PROJECTILE || pickedUpLayerType == pickedUpLayerTypeFactory.ENHANCEMENT) {
                 this.add(pickedUpLayerInterfaceFactoryInterface);
             }
             else if (pickedUpLayerInterfaceFactoryInterface.getPickedUpLayerType() == pickedUpLayerTypeFactory.PART) {
-                var collidableDestroyableDamageableLayer = this.ownerLayerInterface;
+                let collidableDestroyableDamageableLayer = this.ownerLayerInterface;
                 ;
                 collidableDestroyableDamageableLayer.addPart(pickedUpLayerInterfaceFactoryInterface);
             }
             else if (pickedUpLayerType == pickedUpLayerTypeFactory.NONE) {
             }
             else {
-                var pickupProcessorInterface = pickedUpLayerInterfaceFactoryInterface;
+                let pickupProcessorInterface = pickedUpLayerInterfaceFactoryInterface;
                 ;
                 this.doPickup(pickupProcessorInterface);
             }
             pickupLayerInterface.setPickedUp();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, this, "doPickup", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, this, "doPickup", e);
+            }
         }
     }
     add(countedPickedUpLayerInterfaceFactoryInterface) {
-        var partIndex = countedPickedUpLayerInterfaceFactoryInterface.getId() + this.countedIndex;
+        let partIndex = countedPickedUpLayerInterfaceFactoryInterface.getId() + this.countedIndex;
         ;
         this.addAt(countedPickedUpLayerInterfaceFactoryInterface, partIndex);
     }
     addAt(countedPickedUpLayerInterfaceFactoryInterface, partIndex) {
-        var collidableDestroyableDamageableLayer = this.ownerLayerInterface;
+        let collidableDestroyableDamageableLayer = this.ownerLayerInterface;
         ;
-        var countedLayerInterfaceFactory = collidableDestroyableDamageableLayer.getPartInterfaceArray()[partIndex];
+        let countedLayerInterfaceFactory = collidableDestroyableDamageableLayer.getPartInterfaceArray()[partIndex];
         ;
         countedLayerInterfaceFactory.setTotal(countedLayerInterfaceFactory.getTotal() + countedPickedUpLayerInterfaceFactoryInterface.getTotal());
     }
     getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray) {
-        var collidableDestroyableDamageableLayer = this.ownerLayerInterface;
+        let collidableDestroyableDamageableLayer = this.ownerLayerInterface;
         ;
-        var partInterfaceArray = collidableDestroyableDamageableLayer.getPartInterfaceArray();
+        let partInterfaceArray = collidableDestroyableDamageableLayer.getPartInterfaceArray();
         ;
-        var size = partInterfaceArray.length;
+        let size = partInterfaceArray.length;
         ;
-        var nextCountedLayerInterfaceFactory;
+        let nextCountedLayerInterfaceFactory;
         ;
-        var countedPickedUpLayerInterfaceFactory;
+        let countedPickedUpLayerInterfaceFactory;
         ;
-        for (var index = this.countedIndex; index < size; index++) {
+        for (let index = this.countedIndex; index < size; index++) {
             nextCountedLayerInterfaceFactory = collidableDestroyableDamageableLayer.getPartInterfaceArray()[index];
             countedPickedUpLayerInterfaceFactory = nextCountedLayerInterfaceFactory.getCountedPickedUpLayerInterfaceFactory();
-            for (var index2 = pickedUpLayerTypeArray.length; --index2 >= 0;) {
+            for (let index2 = pickedUpLayerTypeArray.length; --index2 >= 0;) {
                 if (countedPickedUpLayerInterfaceFactory.getPickedUpLayerType() == pickedUpLayerTypeArray[index2]) {
                     if (nextCountedLayerInterfaceFactory.getTotal() > 0) {
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,17 +134,17 @@ export class PickupBehavior extends Object {
     }
     //@Throws(Exception.constructor)
     getCountedLayerInterfaceFactoryForSlot(slotIndex) {
-        var currentSlot = 0;
+        let currentSlot = 0;
         ;
-        var collidableDestroyableDamageableLayer = this.ownerLayerInterface;
+        let collidableDestroyableDamageableLayer = this.ownerLayerInterface;
         ;
-        var partInterfaceArray = collidableDestroyableDamageableLayer.getPartInterfaceArray();
+        let partInterfaceArray = collidableDestroyableDamageableLayer.getPartInterfaceArray();
         ;
-        var size = partInterfaceArray.length;
+        let size = partInterfaceArray.length;
         ;
-        var nextCountedLayerInterfaceFactory;
+        let nextCountedLayerInterfaceFactory;
         ;
-        for (var index = this.countedIndex; index < size; index++) {
+        for (let index = this.countedIndex; index < size; index++) {
             nextCountedLayerInterfaceFactory = collidableDestroyableDamageableLayer.getPartInterfaceArray()[index];
             if (nextCountedLayerInterfaceFactory.getTotal() > 0) {
                 if (currentSlot == slotIndex) {

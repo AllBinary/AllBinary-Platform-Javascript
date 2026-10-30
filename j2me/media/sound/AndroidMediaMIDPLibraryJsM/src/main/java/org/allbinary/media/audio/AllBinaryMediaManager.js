@@ -35,13 +35,13 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Sounds } from './Sounds.js';
-//not GWT import - same folder const Sound
+//sameFolderImports - not GWT import - same folder const Sound
 import { AndroidMediaPlayerWrapper } from './AndroidMediaPlayerWrapper.js';
-//not GWT import - same folder const PlayerComposite
+//sameFolderImports - not GWT import - same folder const PlayerComposite
 import { MediaPlayerUtil } from './MediaPlayerUtil.js';
-//not GWT import - same folder const MediaPlayerUtil
+//sameFolderImports - not GWT import - same folder const MediaPlayerUtil
 import { NoPlayer } from './NoPlayer.js';
-//not GWT import - same folder const NoPlayer
+//sameFolderImports - not GWT import - same folder const NoPlayer
 //AndroidMediaMIDPLibrary
 export class AllBinaryMediaManager extends Object {
     static isMuted() {
@@ -56,9 +56,9 @@ export class AllBinaryMediaManager extends Object {
     }
     //@Throws(Exception.constructor)
     static init(soundsFactoryInterface) {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
-        var commonString = CommonStrings.getInstance();
+        let commonString = CommonStrings.getInstance();
         ;
         logUtil.putF(commonString.START, AllBinaryMediaManager.THIS, commonString.INIT);
         AllBinaryMediaManager.shutdown(soundsFactoryInterface);
@@ -69,22 +69,22 @@ export class AllBinaryMediaManager extends Object {
     }
     //@Throws(Exception.constructor)
     static shutdown(soundsFactoryInterface) {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
-        var commonString = CommonStrings.getInstance();
+        let commonString = CommonStrings.getInstance();
         ;
         logUtil.putF(commonString.START, AllBinaryMediaManager.THIS, "shutdown");
         if (soundsFactoryInterface.isInitialized()) {
             new Sounds(soundsFactoryInterface).stopAll();
-            var soundInterfaceArray = soundsFactoryInterface.getSoundInterfaceArray();
+            let soundInterfaceArray = soundsFactoryInterface.getSoundInterfaceArray();
             ;
-            var player;
+            let player;
             ;
-            var player2;
+            let player2;
             ;
-            var androidMediaPlayerWrapper;
+            let androidMediaPlayerWrapper;
             ;
-            for (var i = 0; i < soundInterfaceArray.length; i++) {
+            for (let i = 0; i < soundInterfaceArray.length; i++) {
                 if (soundInterfaceArray[i] !=
                     null) {
                     player = soundInterfaceArray[i].getPlayerP();
@@ -111,18 +111,20 @@ export class AllBinaryMediaManager extends Object {
     //@Throws(Exception.constructor)
     static createPlayer(resource) {
         AllBinaryMediaManager.mostUsedTotal++;
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
         if (Features.getInstance().isFeature(GameFeatureFactory.getInstance().SOUND)) {
             try {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return new AndroidMediaPlayerWrapper(resource);
-                //: 
             }
-            catch (e) {
-                logUtil.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " + CommonLabels.getInstance().TOTAL_LABEL + AllBinaryMediaManager.mostUsedTotal, AllBinaryMediaManager.THIS, "createPlayer", e);
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return NoPlayer.NO_PLAYER;
+            catch (caught) {
+                {
+                    const e = caught;
+                    logUtil.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " + CommonLabels.getInstance().TOTAL_LABEL + AllBinaryMediaManager.mostUsedTotal, AllBinaryMediaManager.THIS, "createPlayer", e);
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return NoPlayer.NO_PLAYER;
+                }
             }
         }
         else {

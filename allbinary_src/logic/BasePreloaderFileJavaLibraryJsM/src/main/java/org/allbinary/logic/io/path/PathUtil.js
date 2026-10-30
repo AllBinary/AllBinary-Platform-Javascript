@@ -22,9 +22,9 @@ import { StringValidationUtil } from '../../../../../org/allbinary/logic/string/
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //not plain js - same folder import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
-//not GWT import - same folder const AbFilePath
+//sameFolderImports - not GWT import - same folder const AbFilePath
 import { AbPath } from './AbPath.js';
-//not GWT import - same folder const AbPath
+//sameFolderImports - not GWT import - same folder const AbPath
 //Used to correct user input for paths
 export class PathUtil extends Object {
     static getInstance() {
@@ -60,9 +60,9 @@ export class PathUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getWithoutExtension(filePath) {
-        var indexOfFileExtensionDelmiter = this.abPathData.getExtensionIndex(filePath);
+        let indexOfFileExtensionDelmiter = this.abPathData.getExtensionIndex(filePath);
         ;
-        var pathWithoutExtension = filePath;
+        let pathWithoutExtension = filePath;
         ;
         if (indexOfFileExtensionDelmiter >= 0) {
             pathWithoutExtension = filePath.substring(0, indexOfFileExtensionDelmiter);
@@ -91,7 +91,7 @@ export class PathUtil extends Object {
         }
     }
     isValidEnd(path) {
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (stringValidationUtil.isEmpty(path)) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,7 +121,7 @@ export class PathUtil extends Object {
         return path;
     }
     adjust(path) {
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (stringValidationUtil.isEmpty(path)) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -135,7 +135,7 @@ export class PathUtil extends Object {
     }
     //@Throws(Exception.constructor)
     removeNameFromPath(path) {
-        var endIndex = path.lastIndexOf(this.abPathData.SEPARATOR);
+        let endIndex = path.lastIndexOf(this.abPathData.SEPARATOR);
         ;
         if (endIndex < 0) {
             endIndex = path.lastIndexOf(this.filePathData.SEPARATORCHAR);
@@ -151,7 +151,7 @@ export class PathUtil extends Object {
             ;
         }
         else {
-            var pathWithoutName = path.substring(0, endIndex);
+            let pathWithoutName = path.substring(0, endIndex);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return new AbPath(pathWithoutName, StringUtil.getInstance().EMPTY_STRING);

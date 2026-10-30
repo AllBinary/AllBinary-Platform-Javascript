@@ -16,9 +16,9 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayerManager
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const PlayerGameInputCompositeInterface
+//sameFolderImports - not GWT import - same folder const PlayerGameInputCompositeInterface
 import { NoPlayerGameInput } from './NoPlayerGameInput.js';
-//not GWT import - same folder const PlayerGameInput
+//sameFolderImports - not GWT import - same folder const PlayerGameInput
 export class NullPlayerGameInputComposite extends Object {
     getName() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -33,7 +33,7 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeature
+//sameFolderImports - not GWT import - same folder const OpenGLFeature
 export class OpenGLConfiguration extends Object {
     static getInstance() {
         if (OpenGLConfiguration.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -56,7 +56,7 @@ export class OpenGLConfiguration extends Object {
     }
     //@Throws(Exception.constructor)
     init() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (ChangedGameFeatureListener.getInstance().isChangedFeature(MainFeatureFactory.getInstance().STATIC)) {
             if (this.isOpenGL()) {
@@ -86,11 +86,11 @@ export class OpenGLConfiguration extends Object {
     }
     //@Throws(Exception.constructor)
     update(gameFeature, colorLocked) {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
-        var modified = false;
+        let modified = false;
         ;
         if (gameFeature == openGLFeatureFactory.OPENGL) {
             if (features.isFeature(gameFeature)) {
@@ -184,9 +184,9 @@ export class OpenGLConfiguration extends Object {
         return this.type;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         stringBuffer.append(" isOpenGL: ");
         stringBuffer.appendboolean(this.isOpenGL());

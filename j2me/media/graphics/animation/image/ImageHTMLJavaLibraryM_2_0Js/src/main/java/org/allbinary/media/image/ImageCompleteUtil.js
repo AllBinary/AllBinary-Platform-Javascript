@@ -37,9 +37,9 @@ export class ImageCompleteUtil extends Object {
     }
     //@Throws(Exception.constructor)
     isReady(image, name, timeDelayHelper) {
-        var playnImage = image;
+        let playnImage = image;
         ;
-        var playnCoreImage = playnImage.getImage();
+        let playnCoreImage = playnImage.getImage();
         ;
         if (!playnCoreImage.isReady() || playnCoreImage.width() + playnCoreImage.height() <= 0) {
             this.handleTimeout(name);
@@ -52,7 +52,7 @@ export class ImageCompleteUtil extends Object {
                 PreLogUtil.put("Waiting for Not Ready Image: " + image.getName(), this, this.ISREADY);
             }
         }
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         PreLogUtil.put(this.COMPLETE + image.getName(), this, commonStrings.SUCCESS);
         //if statement needs to be on the same line and ternary does not work the same way.

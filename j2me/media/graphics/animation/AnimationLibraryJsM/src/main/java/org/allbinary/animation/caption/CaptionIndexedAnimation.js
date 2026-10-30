@@ -37,7 +37,7 @@ export class CaptionIndexedAnimation extends IndexedAnimation {
         this.dy = dy;
         this.time = time;
         this.END_EVENT = new AllBinaryEventObject(this);
-        var timePerFrame = this.time / this.getSize();
+        let timePerFrame = this.time / this.getSize();
         ;
         this.timeDelayHelper = new TimeDelayHelper(timePerFrame);
         this.player = player;

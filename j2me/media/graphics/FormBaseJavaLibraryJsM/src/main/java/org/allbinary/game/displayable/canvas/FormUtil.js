@@ -28,11 +28,11 @@ export class FormUtil extends Object {
         return FormUtil.instance;
     }
     createFormRectangle() {
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var rectangle = new Rectangle(pointFactory.createXY(30, 10), displayInfo.getLastWidth() - 30, displayInfo.getLastHeight() - 35);
+        let rectangle = new Rectangle(pointFactory.createXY(30, 10), displayInfo.getLastWidth() - 30, displayInfo.getLastHeight() - 35);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return rectangle;

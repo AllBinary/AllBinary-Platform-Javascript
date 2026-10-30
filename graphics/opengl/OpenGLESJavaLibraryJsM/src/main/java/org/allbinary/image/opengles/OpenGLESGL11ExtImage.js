@@ -25,7 +25,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const PlatformTextureBaseFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLESImage } from './OpenGLESImage.js';
-//not GWT import - same folder const OpenGLESImage
+//sameFolderImports - not GWT import - same folder const OpenGLESImage
 //Many devices don't support this even though it is supposed to
 export class OpenGLESGL11ExtImage extends OpenGLESImage {
     constructor(image, bitmapFactory, textureFactory) {
@@ -40,15 +40,17 @@ export class OpenGLESGL11ExtImage extends OpenGLESImage {
         try {
             this.logUtil.putF(this.commonStrings.START, this, "onResize");
             this.a = DisplayInfoSingleton.getInstance().getLastHeight() - this.getHeight();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "onResize", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "onResize", e);
+            }
         }
     }
     set(gl) {
         this.onDisplayChangeEvent(DisplayInfoSingleton.getInstance().displayChangeEvent);
-        var gl11 = gl;
+        let gl11 = gl;
         ;
         if (super.initTexture(gl11)) {
             this.textureFactory.load(gl11, GL10.GL_TEXTURE_2D, 0, this, 0, true);
@@ -60,7 +62,7 @@ export class OpenGLESGL11ExtImage extends OpenGLESImage {
     draw(gl, x, y, z) {
         gl.glEnable(GL10.GL_TEXTURE_2D);
         gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties.textureID);
-        var gl11Ext = gl;
+        let gl11Ext = gl;
         ;
         gl11Ext.glDrawTexfOES(x, (this.a - y), z, this.getWidth(), this.getHeight());
         gl.glDisable(GL10.GL_TEXTURE_2D);

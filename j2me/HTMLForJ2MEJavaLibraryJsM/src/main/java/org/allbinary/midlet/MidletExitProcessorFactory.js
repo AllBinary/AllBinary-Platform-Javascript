@@ -22,7 +22,7 @@ import { Processor } from '../../../org/allbinary/canvas/Processor.js';
 //not GWT import const Processor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MidletExitProcessor } from './MidletExitProcessor.js';
-//not GWT import - same folder const MidletExitProcessor
+//sameFolderImports - not GWT import - same folder const MidletExitProcessor
 export class MidletExitProcessorFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

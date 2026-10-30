@@ -16,7 +16,7 @@ import { Object } from '../../../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayerFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HealLayer } from './HealLayer.js';
-//not GWT import - same folder const HealLayer
+//sameFolderImports - not GWT import - same folder const HealLayer
 export class HealLayerFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance() {

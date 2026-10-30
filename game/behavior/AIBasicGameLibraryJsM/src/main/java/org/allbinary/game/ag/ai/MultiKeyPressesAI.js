@@ -20,7 +20,7 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { KeyPressesAI } from './KeyPressesAI.js';
-//not GWT import - same folder const KeyPressesAI
+//sameFolderImports - not GWT import - same folder const KeyPressesAI
 export class MultiKeyPressesAI extends KeyPressesAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(hashtable, ownerLayerInterface, gameInput);
@@ -34,15 +34,15 @@ export class MultiKeyPressesAI extends KeyPressesAI {
     }
     //@Throws(Exception.constructor)
     update() {
-        var gameInput = this.getGameInput();
+        let gameInput = this.getGameInput();
         ;
-        var keys = this.keys;
+        let keys = this.keys;
         ;
-        var size = keys.length;
+        let size = keys.length;
         ;
         if (this.isOn()) {
-            for (var index = 0; index < size; index++) {
-                var key = keys[index].intValue();
+            for (let index = 0; index < size; index++) {
+                let key = keys[index].intValue();
                 ;
                 if (key != -1) {
                     gameInput.add(this.gameKeyEventFactory.getInstanceForKey(this, key));
@@ -50,8 +50,8 @@ export class MultiKeyPressesAI extends KeyPressesAI {
             }
         }
         else {
-            for (var index = 0; index < size; index++) {
-                var key = keys[index].intValue();
+            for (let index = 0; index < size; index++) {
+                let key = keys[index].intValue();
                 ;
                 if (key != -1) {
                     gameInput.addForRemoval(this.gameKeyEventFactory.getInstanceForKey(this, key));

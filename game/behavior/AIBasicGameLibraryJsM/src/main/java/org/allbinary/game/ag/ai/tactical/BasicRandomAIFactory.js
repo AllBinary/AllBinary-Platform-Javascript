@@ -23,17 +23,17 @@ import { InputProbability } from '../../../../../../org/allbinary/game/ag/ai/Inp
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicRandomAI } from './BasicRandomAI.js';
-//not GWT import - same folder const BasicRandomAI
+//sameFolderImports - not GWT import - same folder const BasicRandomAI
 export class BasicRandomAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {
-        var visitor = hashtable.get(BasicAI.AI_VISITOR);
+        let visitor = hashtable.get(BasicAI.AI_VISITOR);
         ;
         if (visitor ==
             null) {
             throw new Exception("No Visitor Provided");
         }
-        var inputProbability = hashtable.get(InputProbability.INPUT_PROBABILITY);
+        let inputProbability = hashtable.get(InputProbability.INPUT_PROBABILITY);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new BasicRandomAI(ownerLayerInterface, gameInput, inputProbability, visitor);

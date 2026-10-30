@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const MovementInterface
+//sameFolderImports - not GWT import - same folder const MovementInterface
 export class Movement extends Object {
     constructor() {
         super();

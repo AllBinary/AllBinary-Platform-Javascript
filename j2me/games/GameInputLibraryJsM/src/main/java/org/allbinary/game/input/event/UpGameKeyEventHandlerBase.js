@@ -23,7 +23,7 @@ import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const UpGameKeyEventListenerInterface
+//sameFolderImports - not GWT import - same folder const UpGameKeyEventListenerInterface
 export class UpGameKeyEventHandlerBase extends BasicEventHandler {
     constructor() {
         super();
@@ -49,43 +49,47 @@ export class UpGameKeyEventHandlerBase extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var playerGameInput = this.list.objectArray[index];
+                let playerGameInput = this.list.objectArray[index];
                 ;
                 playerGameInput.onUpGameKeyEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
         super.fireEvent(eventObject);
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var upGameKeyEventListenerInterface = eventListenerInterface;
+        let upGameKeyEventListenerInterface = eventListenerInterface;
         ;
         upGameKeyEventListenerInterface.onUpGameKeyEvent(eventObject);
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
         stringBuffer.append(super.toString());
         stringBuffer.append(UpGameKeyEventHandlerBase.TOTAL_LISTENERS);
         stringBuffer.appendint(size);
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             try {
-                var eventListenerInterface = this.list.get(index);
+                let eventListenerInterface = this.list.get(index);
                 ;
                 stringBuffer.append(UpGameKeyEventHandlerBase.LISTENER_LABEL);
                 stringBuffer.append(eventListenerInterface.toString());
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+                }
             }
         }
         //if statement needs to be on the same line and ternary does not work the same way.

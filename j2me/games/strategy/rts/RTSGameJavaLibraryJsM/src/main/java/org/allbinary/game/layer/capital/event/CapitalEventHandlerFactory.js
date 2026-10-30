@@ -16,24 +16,25 @@ import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const Group
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CapitalEventHandler } from './CapitalEventHandler.js';
-//not GWT import - same folder const CapitalEventHandler
+//sameFolderImports - not GWT import - same folder const CapitalEventHandler
 export class CapitalEventHandlerFactory extends Object {
     static init() {
-        capitalEventHandlerArray = new Array(10);
-        for (var index = CapitalEventHandlerFactory.capitalEventHandlerArray.length - 1; index >= 0; index--) {
+        for (let index = CapitalEventHandlerFactory.capitalEventHandlerArray.length - 1; index >= 0; index--) {
             CapitalEventHandlerFactory.capitalEventHandlerArray[index] = new CapitalEventHandler();
         }
         return 0;
     }
     static getInstance(groupInterface) {
+        let groupId = globalThis.Math.trunc(groupInterface.getGroupId());
+        ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return CapitalEventHandlerFactory.capitalEventHandlerArray[Math.round(groupInterface.getGroupId())];
-        !;
+        return CapitalEventHandlerFactory.capitalEventHandlerArray[groupId];
     }
     static removeAll() {
-        for (var index = CapitalEventHandlerFactory.capitalEventHandlerArray.length - 1; index >= 0; index--) {
+        for (let index = CapitalEventHandlerFactory.capitalEventHandlerArray.length - 1; index >= 0; index--) {
             CapitalEventHandlerFactory.capitalEventHandlerArray[index].removeAllListeners();
         }
     }
 }
+CapitalEventHandlerFactory.capitalEventHandlerArray = new Array(10);
 CapitalEventHandlerFactory.initResult = CapitalEventHandlerFactory.init();

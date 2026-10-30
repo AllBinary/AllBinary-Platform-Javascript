@@ -15,7 +15,7 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GPoint } from './GPoint.js';
-//not GWT import - same folder const GPoint
+//sameFolderImports - not GWT import - same folder const GPoint
 export class PointFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

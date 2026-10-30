@@ -22,13 +22,13 @@ import { AllBinaryEventObject } from '../../../../../../../org/allbinary/logic/u
 //not GWT import const GeographicMapCellPosition
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GeographicMapCellPositionEvent extends AllBinaryEventObject {
-    constructor(anyType = {}, geographicMapCellPosition) {
+    constructor(anyType, geographicMapCellPosition) {
         super(anyType);
         this.geographicMapCellPosition = CellPositionFactory.getInstance().NONE;
         //For kotlin this is before the body of the constructor.
         this.geographicMapCellPosition = geographicMapCellPosition;
     }
-    init(anyType = {}) {
+    init(anyType) {
         this.setSource(anyType);
     }
     setGeographicMapCellPosition(geographicMapCellPosition) {
@@ -39,7 +39,7 @@ export class GeographicMapCellPositionEvent extends AllBinaryEventObject {
         return this.geographicMapCellPosition;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("CellPositionEvent: ");
         stringBuffer.append("\nGeographicMapCellPosition: ");

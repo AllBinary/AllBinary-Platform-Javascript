@@ -28,7 +28,7 @@ import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseGameInitialization } from './BaseGameInitialization.js';
-//not GWT import - same folder const BaseGameInitialization
+//sameFolderImports - not GWT import - same folder const BaseGameInitialization
 export class CommonGameInitialization extends BaseGameInitialization {
     constructor(resourceInitializationArray, portion) {
         super(resourceInitializationArray, portion);
@@ -38,11 +38,11 @@ export class CommonGameInitialization extends BaseGameInitialization {
     //@Throws(Exception.constructor)
     init(abeClientInformation, commandListener, level) {
         super.init(abeClientInformation, commandListener, level);
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         if (!this.isGameInitialized() && level == resourceLoadingLevelFactory.LOAD_ALL.getLevel()) {
             this.setGameInitialized(true);
-            var progressCanvas = ProgressCanvasFactory.getInstance();
+            let progressCanvas = ProgressCanvasFactory.getInstance();
             ;
             SmallIntegerSingletonFactory.getInstance().init();
             progressCanvas.addNormalPortion(50, "Integers");

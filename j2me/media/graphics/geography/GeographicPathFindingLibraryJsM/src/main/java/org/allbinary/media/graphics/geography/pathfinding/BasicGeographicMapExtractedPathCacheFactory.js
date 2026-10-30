@@ -18,7 +18,7 @@ export class BasicGeographicMapExtractedPathCacheFactory extends BaseBasicArrayL
     }
     init(maxConcurrentPaths, maxPaths) {
         if (maxConcurrentPaths != this.maxConcurrentPaths) {
-            for (var index = maxConcurrentPaths; index >= this.maxConcurrentPaths; index--) {
+            for (let index = maxConcurrentPaths; index >= this.maxConcurrentPaths; index--) {
                 this.list.add(new BasicArrayListS(maxPaths));
             }
             this.maxConcurrentPaths = maxConcurrentPaths;

@@ -25,7 +25,7 @@ import { BasicGeographicMapUtil } from '../../../../../org/allbinary/media/graph
 //not GWT import const GeographicMapCellPosition
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TopViewCharacterBehavior } from './TopViewCharacterBehavior.js';
-//not GWT import - same folder const TopViewCharacterBehavior
+//sameFolderImports - not GWT import - same folder const TopViewCharacterBehavior
 export class PlayerTopViewCharacterBehavior extends TopViewCharacterBehavior {
     constructor() {
         super(...arguments);
@@ -36,7 +36,7 @@ export class PlayerTopViewCharacterBehavior extends TopViewCharacterBehavior {
         TrackingEventHandler.getInstance().fireEvent(TrackingEventCircularStaticPool.getInstance().getNextInstance(layer));
     }
     terrainMove(layer, geographicMapInterfaceArray, x, y) {
-        var basicGeographicMapUtil = BasicGeographicMapUtil.getInstance();
+        let basicGeographicMapUtil = BasicGeographicMapUtil.getInstance();
         ;
         basicGeographicMapUtil.setPosition(geographicMapInterfaceArray, x, y);
     }

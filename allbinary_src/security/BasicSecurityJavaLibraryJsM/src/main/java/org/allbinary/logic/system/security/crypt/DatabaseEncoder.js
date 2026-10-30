@@ -35,11 +35,11 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 export class DatabaseEncoder extends Object {
     static encode(value) {
         try {
-            var array = value;
+            let array = value;
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            for (var index = 0; index < array.length; index++) {
+            for (let index = 0; index < array.length; index++) {
                 stringBuffer.append(Number(array[index]).toString());
                 if (index < array.length - 1) {
                     stringBuffer.append(CommonSeps.getInstance().SPACE);
@@ -48,53 +48,57 @@ export class DatabaseEncoder extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return stringBuffer.toString();
             ;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, "DatabaseEncoder", "decode", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return StringUtil.getInstance().EMPTY_STRING;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, "DatabaseEncoder", "decode", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return StringUtil.getInstance().EMPTY_STRING;
+            }
         }
     }
     static decode(value) {
         try {
-            var tokenizer = new Tokenizer(CommonSeps.getInstance().SPACE);
+            let tokenizer = new Tokenizer(CommonSeps.getInstance().SPACE);
             ;
-            var vector = tokenizer.getTokensFromString(value, new BasicArrayListD());
+            let vector = tokenizer.getTokensFromString(value, new BasicArrayListD());
             ;
-            var byteVector = new BasicArrayListD();
+            let byteVector = new BasicArrayListD();
             ;
-            var size = vector.size();
+            let size = vector.size();
             ;
-            var byteOfData;
+            let byteOfData;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 byteOfData = vector.objectArray[index];
                 byteVector.add(Number(byteOfData));
             }
-            var decode = new Array(byteVector.size());
+            let decode = new Array(byteVector.size());
             ;
-            var decodeIndex = 0;
+            let decodeIndex = 0;
             ;
-            var aByte;
+            let aByte;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 aByte = byteVector.objectArray[index];
                 decode[decodeIndex] = aByte;
                 decodeIndex++;
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return decode;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putSE(commonStrings.EXCEPTION, "DatabaseEncoder", "decode", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NullUtil.getInstance().NULL_BYTE_ARRAY;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putSE(commonStrings.EXCEPTION, "DatabaseEncoder", "decode", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NullUtil.getInstance().NULL_BYTE_ARRAY;
+            }
         }
     }
     constructor() {

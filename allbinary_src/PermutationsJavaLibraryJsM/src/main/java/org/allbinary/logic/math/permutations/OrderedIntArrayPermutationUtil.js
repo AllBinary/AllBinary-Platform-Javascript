@@ -16,23 +16,23 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Visitor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IntPermutationVisitor } from './IntPermutationVisitor.js';
-//not GWT import - same folder const IntPermutationVisitor
+//sameFolderImports - not GWT import - same folder const IntPermutationVisitor
 export class OrderedIntArrayPermutationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return OrderedIntArrayPermutationUtil.instance;
     }
     static main(args) {
-        var TOTAL = 3;
+        let TOTAL = 3;
         ;
-        var data = new Array(TOTAL);
+        let data = new Array(TOTAL);
         ;
-        for (var i = 0; i < TOTAL; i++) {
+        for (let i = 0; i < TOTAL; i++) {
             data[i] = i;
         }
-        var permutationVisitor = new IntPermutationVisitor(data);
+        let permutationVisitor = new IntPermutationVisitor(data);
         ;
-        var ORIGINAL_DATA_LABEL = "Original Data: ";
+        let ORIGINAL_DATA_LABEL = "Original Data: ";
         ;
         console.log(ORIGINAL_DATA_LABEL);
         permutationVisitor.print(data);
@@ -44,14 +44,14 @@ export class OrderedIntArrayPermutationUtil extends Object {
         this.FINISHED = "\nFINISHED";
     }
     getNext(data) {
-        var length = data.length;
+        let length = data.length;
         ;
-        var i = length - 1;
+        let i = length - 1;
         ;
         while (data[i - 1] >= data[i]) {
             i = i - 1;
         }
-        var j = length;
+        let j = length;
         ;
         while (data[j - 1] <= data[i - 1]) {
             j = j - 1;
@@ -66,16 +66,16 @@ export class OrderedIntArrayPermutationUtil extends Object {
         }
     }
     swap(data, a, b) {
-        var temp = data[a];
+        let temp = data[a];
         ;
         data[a] = data[b];
         data[b] = temp;
     }
     factorial(dataLength) {
-        var temp = 1;
+        let temp = 1;
         ;
         if (dataLength > 1) {
-            for (var i = 1; i <= dataLength; i++) {
+            for (let i = 1; i <= dataLength; i++) {
                 temp *= i;
             }
         }
@@ -83,11 +83,11 @@ export class OrderedIntArrayPermutationUtil extends Object {
         return temp;
     }
     generate(data, visitor) {
-        var iterations = this.factorial(data.length);
+        let iterations = this.factorial(data.length);
         ;
         console.log(this.TOTAL_ITERATIONS_TABLE);
         console.log(iterations);
-        for (var count = 0; count < iterations - 1; count++) {
+        for (let count = 0; count < iterations - 1; count++) {
             this.getNext(data);
             visitor.visit(this);
         }

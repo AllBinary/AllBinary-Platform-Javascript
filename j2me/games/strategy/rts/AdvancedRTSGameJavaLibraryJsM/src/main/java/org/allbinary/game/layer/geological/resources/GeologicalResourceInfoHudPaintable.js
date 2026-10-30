@@ -17,7 +17,7 @@ import { WaypointInfoHudPaintable } from '../../../../../../org/allbinary/game/l
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { KeyValueDrawCharArray } from '../../../../../../org/allbinary/graphics/draw/KeyValueDrawCharArray.js';
-//not GWT import - same folder const GeologicalGeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeologicalGeographicMapCellPosition
 export class GeologicalResourceInfoHudPaintable extends WaypointInfoHudPaintable {
     constructor() {
         super();
@@ -26,20 +26,20 @@ export class GeologicalResourceInfoHudPaintable extends WaypointInfoHudPaintable
     }
     updateMeasurement(graphics) {
         super.updateMeasurement(graphics);
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = (2 * font.getHeight());
     }
     updateSelectionInfo() {
         super.updateSelectionInfo();
-        var rtsLayer = this.rtsLayerP;
+        let rtsLayer = this.rtsLayerP;
         ;
-        var list = rtsLayer.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
+        let list = rtsLayer.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
         ;
-        var total = 0;
+        let total = 0;
         ;
-        for (var index = list.size(); --index >= 0;) {
-            var geographicMapCellPosition = list.get(index);
+        for (let index = list.size(); --index >= 0;) {
+            let geographicMapCellPosition = list.get(index);
             ;
             total += geographicMapCellPosition.getGeologicalResource().getTotal();
         }

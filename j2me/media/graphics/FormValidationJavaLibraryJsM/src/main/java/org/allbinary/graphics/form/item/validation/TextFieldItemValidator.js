@@ -32,13 +32,13 @@ export class TextFieldItemValidator extends ValidatorBase {
         this.allowOnEmpty = allowOnEmpty;
     }
     isValid() {
-        var booleanFactory = BooleanFactory.getInstance();
+        let booleanFactory = BooleanFactory.getInstance();
         ;
-        var result = booleanFactory.TRUE;
+        let result = booleanFactory.TRUE;
         ;
-        var string = this.textFieldItem.getString();
+        let string = this.textFieldItem.getString();
         ;
-        var textLength = string.length;
+        let textLength = string.length;
         ;
         if ((textLength == 0 && this.allowOnEmpty) || textLength > this.min && textLength < this.max) {
         }
@@ -54,18 +54,18 @@ export class TextFieldItemValidator extends ValidatorBase {
         return result;
     }
     toList() {
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
-        var string = this.textFieldItem.getString();
+        let string = this.textFieldItem.getString();
         ;
-        var textLength = string.length;
+        let textLength = string.length;
         ;
         if (textLength > this.min && textLength < this.max) {
         }
         else {
-            var label = this.textFieldItem.getLabel();
+            let label = this.textFieldItem.getLabel();
             ;
-            var name = label.substring(0, label.length - 2);
+            let name = label.substring(0, label.length - 2);
             ;
             if (textLength < this.min) {
                 list.add(new StringMaker().append(name).append(" is to short").toString());

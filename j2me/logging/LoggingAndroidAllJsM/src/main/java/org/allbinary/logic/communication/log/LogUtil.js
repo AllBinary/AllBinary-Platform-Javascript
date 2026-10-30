@@ -41,35 +41,35 @@ const Log = globalThis.org.allbinary.logic.communication.log.Log;
         this.LABEL = "org.allbinary";
     }
     /*actual*/ putL(log) {
-        var specialMessage = log.getSpecialMessage();
+        let specialMessage = log.getSpecialMessage();
         ;
-        var anyType = log.getObject();
+        let anyType = log.getObject();
         ;
-        var functionName = log.getFunctionName();
+        let functionName = log.getFunctionName();
         ;
-        var exception = log.getThrowable();
+        let exception = log.getThrowable();
         ;
         this.put(specialMessage, anyType, functionName, exception);
     }
-    /*actual*/ putF(specialMessage, anyType = {}, functionName) {
+    /*actual*/ putF(specialMessage, anyType, functionName) {
         this.put(specialMessage, anyType, functionName, NullUtil.getInstance().NULL_OBJECT);
     }
     putFS(specialMessage, string, functionName) {
         this.putS(specialMessage, string, functionName, NullUtil.getInstance().NULL_OBJECT);
     }
-    /*actual*/ put(specialMessage, anyType = {}, functionName, exception = {}) {
-        var className = this.LABEL;
+    /*actual*/ put(specialMessage, anyType, functionName, exception) {
+        let className = this.LABEL;
         ;
         className = new StringMaker().append(anyType.constructor.name.toString()).append(this.commonSeps.COLON).append(Integer.toHexString(TsUtil.getInstance().hashCode(anyType))).toString();
-        var message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
+        let message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
         ;
         hilog.info(0x0000, className, LogUtil.PUBLIC, message);
     }
-    /*actual*/ putS(specialMessage, string, functionName, exception = {}) {
-        var className = this.LABEL;
+    /*actual*/ putS(specialMessage, string, functionName, exception) {
+        let className = this.LABEL;
         ;
         className = new StringMaker().append(string).append(this.commonSeps.COLON).append(Integer.toHexString(TsUtil.getInstance().hashCode(string))).toString();
-        var message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
+        let message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
         ;
         hilog.info(0x0000, className, LogUtil.PUBLIC, message);
     }

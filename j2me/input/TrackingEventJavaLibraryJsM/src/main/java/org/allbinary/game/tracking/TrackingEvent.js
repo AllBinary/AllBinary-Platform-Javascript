@@ -20,9 +20,9 @@ import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEventHandler } from './TrackingEventHandler.js';
-//not GWT import - same folder const TrackingEventHandler
+//sameFolderImports - not GWT import - same folder const TrackingEventHandler
 export class TrackingEvent extends AllBinaryEventObject {
-    constructor(allBinaryLayerInterface = {}) {
+    constructor(allBinaryLayerInterface) {
         super(allBinaryLayerInterface);
         this.layerInterface = AllBinaryLayer.NULL_ALLBINARY_LAYER;
         //For kotlin this is before the body of the constructor.
@@ -30,7 +30,7 @@ export class TrackingEvent extends AllBinaryEventObject {
             this.setLayerInterface(allBinaryLayerInterface);
         }
     }
-    init(anyType = {}) {
+    init(anyType) {
         this.setSource(anyType);
     }
     getLayerInterface() {
@@ -44,7 +44,7 @@ export class TrackingEvent extends AllBinaryEventObject {
         this.layerInterface = layerInterface;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("TrackingEvent: \n");
         stringBuffer.append("LayerInterface: ");

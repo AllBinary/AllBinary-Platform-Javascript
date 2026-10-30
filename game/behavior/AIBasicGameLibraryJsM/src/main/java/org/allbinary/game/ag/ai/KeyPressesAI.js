@@ -25,18 +25,18 @@ export class KeyPressesAI extends BasicAI {
         this.on = true;
         //For kotlin this is before the body of the constructor.
         this.keys = new Array(hashtable.size());
-        var objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
+        let objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
         ;
-        var size = objectArray.length;
+        let size = objectArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.keys[index] = hashtable.get(objectArray[index]);
         }
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
         if (this.on) {
-            for (var index = 0; index < this.keys.length; index++) {
+            for (let index = 0; index < this.keys.length; index++) {
                 super.processKeyAI(this.keys[index].intValue());
             }
         }

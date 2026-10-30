@@ -19,7 +19,7 @@ import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageMo
 //not GWT import const ImageModifierUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation
+//sameFolderImports - not GWT import - same folder const ImageBaseRotationAnimation
 export class AllBinaryFlickerAndroidImageRotationAnimation extends ImageBaseRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);
@@ -33,7 +33,7 @@ export class AllBinaryFlickerAndroidImageRotationAnimation extends ImageBaseRota
         this.increment = (this.angleInfo.getAngleIncrementInfo().getAngleIncrement());
     }
     setBasicColorP(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getBasicColorP() ==
             null
@@ -51,7 +51,7 @@ export class AllBinaryFlickerAndroidImageRotationAnimation extends ImageBaseRota
         this.setBasicColorP(basicColor);
     }
     setAlpha(alpha) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.alphaP != alpha) {
             changed = true;
@@ -77,10 +77,10 @@ export class AllBinaryFlickerAndroidImageRotationAnimation extends ImageBaseRota
         this.androidImageUtil.rotate(this.getImage(), originalImage, matrix, this.imageModifierUtil.paint);
     }
     setFrame(index) {
-        var currentFrame = this.circularIndexUtil.getIndex();
+        let currentFrame = this.circularIndexUtil.getIndex();
         ;
         this.circularIndexUtil.setIndex(index);
-        var newFrame = this.circularIndexUtil.getIndex();
+        let newFrame = this.circularIndexUtil.getIndex();
         ;
         this.angleInfo.adjustAngle(newFrame);
         this.matrix.setRotate((newFrame - currentFrame) * this.increment, this.halfWidth, this.halfHeight);

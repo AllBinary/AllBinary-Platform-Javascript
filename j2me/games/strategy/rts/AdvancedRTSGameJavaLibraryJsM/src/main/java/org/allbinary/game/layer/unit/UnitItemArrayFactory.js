@@ -41,9 +41,9 @@ export class UnitItemArrayFactory extends Object {
     }
     //@Throws(Exception.constructor)
     createFlagItem(flagResources, layerInterfaceFactoryInterface) {
-        var name = flagResources.NAME;
+        let name = flagResources.NAME;
         ;
-        var index = name.indexOf(this.commonSeps.SPACE);
+        let index = name.indexOf(this.commonSeps.SPACE);
         ;
         if (index >= 0) {
             name = name.substring(index);
@@ -54,11 +54,11 @@ export class UnitItemArrayFactory extends Object {
     }
     //@Throws(Exception.constructor)
     createNamedFlagItem(flagResources, name, layerInterfaceFactoryInterface) {
-        var IMAGE_CACHE = GameFeatureImageCacheFactory.getInstance();
+        let IMAGE_CACHE = GameFeatureImageCacheFactory.getInstance();
         ;
-        var image = IMAGE_CACHE.getWithKey(flagResources.RESOURCE_ICON);
+        let image = IMAGE_CACHE.getWithKey(flagResources.RESOURCE_ICON);
         ;
-        var item = new LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources.NAME, this.basicColor, [
+        let item = new LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources.NAME, this.basicColor, [
             new RTSLayerTextAnimation(RTSGameStrings.getInstance().DRAGGABLE, image)
         ], layerInterfaceFactoryInterface);
         ;
@@ -75,7 +75,7 @@ export class UnitItemArrayFactory extends Object {
         return this.resources;
     }
     indexOf(basicGameResources) {
-        for (var index = this.resources.length - 1; index >= 0; index--) {
+        for (let index = this.resources.length - 1; index >= 0; index--) {
             if (this.resources[index] == basicGameResources) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return index;

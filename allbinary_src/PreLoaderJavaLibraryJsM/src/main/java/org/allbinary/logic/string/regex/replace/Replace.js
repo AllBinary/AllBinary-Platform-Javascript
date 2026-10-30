@@ -35,26 +35,28 @@ import { LogConfigTypes } from '../../../../../../org/allbinary/logic/communicat
 export class Replace extends Object {
     static main(args) {
         try {
-            var stringUtil = StringUtil.getInstance();
+            let stringUtil = StringUtil.getInstance();
             ;
-            var appUrlGlobals = new AppUrlGlobals();
+            let appUrlGlobals = new AppUrlGlobals();
             ;
             appUrlGlobals.setWebappPath("G:/mnt/bc/mydev/work/allbinary_src/ToolsJavaLibrary/tools");
             URLGLOBALS.init(appUrlGlobals);
-            var testString = "\"super gun\" big tank \"goodgunriflegun";
+            let testString = "\"super gun\" big tank \"goodgunriflegun";
             ;
-            var replace = new Replace("gun", "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz");
+            let replace = new Replace("gun", "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz");
             ;
             console.log("Old String: " + testString);
             testString = replace.all(testString);
             console.log("New String: " + testString);
-            var replaceCat = new Replace("abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz", stringUtil.EMPTY_STRING);
+            let replaceCat = new Replace("abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz", stringUtil.EMPTY_STRING);
             ;
             testString = replaceCat.all(testString);
             console.log("New String: " + testString);
-            //: 
         }
-        catch (e) {
+        catch (caught) {
+            {
+                const e = caught;
+            }
         }
     }
     constructor(key, value) {
@@ -96,35 +98,35 @@ export class Replace extends Object {
         ;
     }
     upTo(replace, total) {
-        var newStringBuffer = new StringMaker();
+        let newStringBuffer = new StringMaker();
         ;
-        var totalNumberOfReplaces = 0;
+        let totalNumberOfReplaces = 0;
         ;
-        var keys;
+        let keys;
         ;
-        var values;
+        let values;
         ;
-        var keyArray = this.j2seUtil.getHashMapAsArray(this.hashMap);
+        let keyArray = this.j2seUtil.getHashMapAsArray(this.hashMap);
         ;
-        var size = keyArray.length;
+        let size = keyArray.length;
         ;
-        for (var index2 = 0; index2 < size; index2++) {
+        for (let index2 = 0; index2 < size; index2++) {
             keys = keyArray[index2];
             values = this.hashMap.get(keys);
-            var foundTotal = 0;
+            let foundTotal = 0;
             ;
-            var index = 0;
+            let index = 0;
             ;
-            var nextKey;
+            let nextKey;
             ;
-            var end = 0;
+            let end = 0;
             ;
-            var nextSecondKey;
+            let nextSecondKey;
             ;
-            var begin2 = 0;
+            let begin2 = 0;
             ;
             while (index < replace.length) {
-                var begin = replace.indexOf(keys[0], index);
+                let begin = replace.indexOf(keys[0], index);
                 ;
                 if (begin != -1) {
                     foundTotal++;
@@ -143,7 +145,7 @@ export class Replace extends Object {
                         nextSecondKey = keys[1];
                         begin2 = replace.indexOf(nextSecondKey, index);
                         if (begin2 != -1) {
-                            var end2 = begin2 + nextSecondKey.length;
+                            let end2 = begin2 + nextSecondKey.length;
                             ;
                             newStringBuffer.delete(0, newStringBuffer.length());
                             newStringBuffer.append(replace.substring(0, begin2));
@@ -172,30 +174,30 @@ export class Replace extends Object {
         return replace;
     }
     line(replace) {
-        var newStringBuffer = new StringMaker();
+        let newStringBuffer = new StringMaker();
         ;
-        var totalNumberOfReplaces = 0;
+        let totalNumberOfReplaces = 0;
         ;
-        var key;
+        let key;
         ;
-        var value;
+        let value;
         ;
-        var keyArray = this.j2seUtil.getHashMapAsArray(this.hashMap);
+        let keyArray = this.j2seUtil.getHashMapAsArray(this.hashMap);
         ;
-        var size = keyArray.length;
+        let size = keyArray.length;
         ;
-        for (var index2 = 0; index2 < size; index2++) {
+        for (let index2 = 0; index2 < size; index2++) {
             key = keyArray[index2];
             value = this.hashMap.get(key);
-            var index = 0;
+            let index = 0;
             ;
             while (index < replace.length) {
                 newStringBuffer.delete(0, newStringBuffer.length());
-                var begin = replace.indexOf(key, index);
+                let begin = replace.indexOf(key, index);
                 ;
                 if (begin != -1) {
                     console.log(this.FOUND_KEY);
-                    var end = replace.indexOf('\n', begin + key.length) + 1;
+                    let end = replace.indexOf('\n', begin + key.length) + 1;
                     ;
                     if (end >= 0) {
                         newStringBuffer.append(replace.substring(0, begin));

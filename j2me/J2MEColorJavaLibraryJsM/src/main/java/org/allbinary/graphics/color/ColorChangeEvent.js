@@ -16,9 +16,9 @@ import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicColorFactory } from './BasicColorFactory.js';
-//not GWT import - same folder const BasicColor
+//sameFolderImports - not GWT import - same folder const BasicColor
 export class ColorChangeEvent extends AllBinaryEventObject {
-    constructor(anyType = {}) {
+    constructor(anyType) {
         super(anyType);
         this.basicColor = BasicColorFactory.getInstance().WHITE;
         //For kotlin this is before the body of the constructor.

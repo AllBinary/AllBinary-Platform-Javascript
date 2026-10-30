@@ -20,16 +20,16 @@ import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicTerrainInfo } from './BasicTerrainInfo.js';
-//not GWT import - same folder const BasicTerrainInfo
+//sameFolderImports - not GWT import - same folder const BasicTerrainInfo
 export class TerrainEvent extends AllBinaryEventObject {
-    constructor(basicTerrainInfo = {}) {
+    constructor(basicTerrainInfo) {
         super(basicTerrainInfo);
         this.basicTerrainInfo = BasicTerrainInfo.NULL_BASIC_TERRAIN_INFO;
         //For kotlin this is before the body of the constructor.
         this.setBasicTerrainInfo(this.basicTerrainInfo);
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("TerrainEvent: \n");
         stringBuffer.append("LayerInterface: ");

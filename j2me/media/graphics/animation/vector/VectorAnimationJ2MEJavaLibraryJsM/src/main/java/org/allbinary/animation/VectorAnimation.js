@@ -20,14 +20,14 @@ import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveInt
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IndexedAnimation } from './IndexedAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class VectorAnimation extends IndexedAnimation {
     static createVectorAnimation(currentPoints2, basicColor, animationBehavior) {
-        var currentPoints = Array.from({ length: 1 }, () => Array.from({ length: currentPoints2.length }, () => new Array(0).fill(2)));
+        let currentPoints = Array.from({ length: 1 }, () => Array.from({ length: currentPoints2.length }, () => new Array(0).fill(2)));
         ;
-        var size = currentPoints2.length;
+        let size = currentPoints2.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             currentPoints[0][index][0] = currentPoints2[index][0];
             currentPoints[0][index][1] = currentPoints2[index][1];
         }
@@ -43,7 +43,7 @@ export class VectorAnimation extends IndexedAnimation {
         this.setBasicColorP(basicColor);
     }
     setBasicColorP(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getBasicColorP() ==
             null
@@ -56,7 +56,7 @@ export class VectorAnimation extends IndexedAnimation {
         }
     }
     changeBasicColor(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getChangeBasicColor() ==
             null
@@ -69,7 +69,7 @@ export class VectorAnimation extends IndexedAnimation {
         }
     }
     setAlpha(alpha) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.alphaP != alpha) {
             changed = true;
@@ -110,19 +110,19 @@ export class VectorAnimation extends IndexedAnimation {
     }
     paintVectors(graphics, x, y) {
         try {
-            var nextPointX = 0;
+            let nextPointX = 0;
             ;
-            var nextPointY = 0;
+            let nextPointY = 0;
             ;
-            var nextPoint;
+            let nextPoint;
             ;
-            var point;
+            let point;
             ;
-            var currentPointsFrame = this.currentPoints[this.circularIndexUtil.getIndex()];
+            let currentPointsFrame = this.currentPoints[this.circularIndexUtil.getIndex()];
             ;
-            var size = currentPointsFrame.length;
+            let size = currentPointsFrame.length;
             ;
-            var index = size - 2;
+            let index = size - 2;
             ;
             while (--index >= 0) {
                 nextPoint = currentPointsFrame[index];
@@ -136,10 +136,12 @@ export class VectorAnimation extends IndexedAnimation {
                     index--;
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "paintVectors", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "paintVectors", e);
+            }
         }
     }
     paintXY(graphics, x, y) {

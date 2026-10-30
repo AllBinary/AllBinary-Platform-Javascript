@@ -39,9 +39,9 @@ import { DropCellPositionHistory } from '../../../../../../../../org/allbinary/m
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackDropCellPositionGenerator } from './RaceTrackDropCellPositionGenerator.js';
-//not GWT import - same folder const RaceTrackDropCellPositionGenerator
+//sameFolderImports - not GWT import - same folder const RaceTrackDropCellPositionGenerator
 import { RaceTrackAdjacentDropLayerFactory } from './RaceTrackAdjacentDropLayerFactory.js';
-//not GWT import - same folder const RaceTrackAdjacentDropLayerFactory
+//sameFolderImports - not GWT import - same folder const RaceTrackAdjacentDropLayerFactory
 export class RaceTrackAdjacentDropCellPositionGenerator extends RaceTrackDropCellPositionGenerator {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,23 +57,23 @@ export class RaceTrackAdjacentDropCellPositionGenerator extends RaceTrackDropCel
     }
     //@Throws(Exception.constructor)
     getFirstNonRoadAdjacentCellPosition(column, row) {
-        var nonRoadGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
+        let nonRoadGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
         ;
-        var geographicMapCellPositionFactory = this.raceTrackGeographicMap.getGeographicMapCellPositionFactory();
+        let geographicMapCellPositionFactory = this.raceTrackGeographicMap.getGeographicMapCellPositionFactory();
         ;
         this.surroundingCellPositions[0] = geographicMapCellPositionFactory.getAt(column, row - 1);
         this.surroundingCellPositions[1] = geographicMapCellPositionFactory.getAt(column, row + 1);
         this.surroundingCellPositions[2] = geographicMapCellPositionFactory.getAt(column - 1, row);
         this.surroundingCellPositions[3] = geographicMapCellPositionFactory.getAt(column + 1, row);
-        var baseRaceTrackGeographicMap = this.raceTrackGeographicMap;
+        let baseRaceTrackGeographicMap = this.raceTrackGeographicMap;
         ;
-        var raceTrackGeographicMapCellTypeFactory = baseRaceTrackGeographicMap.getGeographicMapCellTypeFactory();
+        let raceTrackGeographicMapCellTypeFactory = baseRaceTrackGeographicMap.getGeographicMapCellTypeFactory();
         ;
-        var geographicMapCellPosition;
+        let geographicMapCellPosition;
         ;
-        var raceTrackGeographicMapCellType;
+        let raceTrackGeographicMapCellType;
         ;
-        for (var index = this.surroundingCellPositions.length; --index >= 0;) {
+        for (let index = this.surroundingCellPositions.length; --index >= 0;) {
             geographicMapCellPosition = this.surroundingCellPositions[index];
             raceTrackGeographicMapCellType = this.raceTrackGeographicMap.getCellTypeAt(geographicMapCellPosition);
             if (!raceTrackGeographicMapCellTypeFactory.isPath(raceTrackGeographicMapCellType)) {
@@ -91,21 +91,21 @@ export class RaceTrackAdjacentDropCellPositionGenerator extends RaceTrackDropCel
     }
     //@Throws(Exception.constructor)
     drop(allBinaryLayerManager, index) {
-        var geographicMapCellPosition = this.list.get(index);
+        let geographicMapCellPosition = this.list.get(index);
         ;
-        var randomGeographicMapCellPosition = this.getFirstNonRoadAdjacentCellPosition(geographicMapCellPosition.getColumn(), geographicMapCellPosition.getRow());
+        let randomGeographicMapCellPosition = this.getFirstNonRoadAdjacentCellPosition(geographicMapCellPosition.getColumn(), geographicMapCellPosition.getRow());
         ;
         if (randomGeographicMapCellPosition ==
             null) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var dropCellPositionHistory = DropCellPositionHistory.getInstance();
+        let dropCellPositionHistory = DropCellPositionHistory.getInstance();
         ;
         if (!dropCellPositionHistory.isCellPositionWithDrop(geographicMapCellPosition)) {
-            var direction = this.geographicMapDirectionUtil.getDirectionFromCellPositionToAdjacentCellPosition(randomGeographicMapCellPosition, geographicMapCellPosition);
+            let direction = this.geographicMapDirectionUtil.getDirectionFromCellPositionToAdjacentCellPosition(randomGeographicMapCellPosition, geographicMapCellPosition);
             ;
-            var objectCanBeNull = this.hashtable.get(this.groupCommonFactory.ID);
+            let objectCanBeNull = this.hashtable.get(this.groupCommonFactory.ID);
             ;
             if (objectCanBeNull !=
                 null) {
@@ -114,27 +114,27 @@ export class RaceTrackAdjacentDropCellPositionGenerator extends RaceTrackDropCel
                 this.hashtable.put(this.groupCommonFactory.ID, BasicGroupFactory.getInstance().NONE_ARRAY);
             }
             this.hashtable.put(DirectionFactory.getInstance().NAME, direction);
-            var point = randomGeographicMapCellPosition.getPoint();
+            let point = randomGeographicMapCellPosition.getPoint();
             ;
-            var x = point.getX();
+            let x = point.getX();
             ;
-            var y = point.getY();
+            let y = point.getY();
             ;
-            var z = point.getZ();
+            let z = point.getZ();
             ;
-            var layerInterface = RaceTrackAdjacentDropLayerFactory.getInstance().getRandomInstance().getNextInstance(hashtable, x, y, z);
+            let layerInterface = RaceTrackAdjacentDropLayerFactory.getInstance().getRandomInstance().getNextInstance(hashtable, x, y, z);
             ;
-            var baseRaceTrackGeographicMap = this.raceTrackGeographicMap;
+            let baseRaceTrackGeographicMap = this.raceTrackGeographicMap;
             ;
-            var list = this.layerCoveringCellPositionsUtil.getAll(baseRaceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, new BasicArrayListD());
+            let list = this.layerCoveringCellPositionsUtil.getAll(baseRaceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, new BasicArrayListD());
             ;
             if (dropCellPositionHistory.anyCellPositionWithDrop(list)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return;
             }
-            var geographicMapCellType;
+            let geographicMapCellType;
             ;
-            for (var index2 = list.size(); --index2 >= 0;) {
+            for (let index2 = list.size(); --index2 >= 0;) {
                 geographicMapCellType = this.raceTrackGeographicMap.getCellTypeAt(list.get(index2));
                 if (this.raceTrackGeographicMapCellTypeFactory.isPath(geographicMapCellType)) {
                     //if statement needs to be on the same line and ternary does not work the same way.

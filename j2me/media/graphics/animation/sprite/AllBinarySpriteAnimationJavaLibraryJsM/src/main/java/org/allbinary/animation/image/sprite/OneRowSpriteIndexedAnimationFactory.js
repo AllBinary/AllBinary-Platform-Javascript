@@ -22,13 +22,13 @@ import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/Primit
 //not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
-//not GWT import - same folder const SpriteIndexedAnimation
+//sameFolderImports - not GWT import - same folder const SpriteIndexedAnimation
 import { AdjustedSpriteIndexedAnimation } from './AdjustedSpriteIndexedAnimation.js';
-//not GWT import - same folder const AdjustedSpriteIndexedAnimation
+//sameFolderImports - not GWT import - same folder const AdjustedSpriteIndexedAnimation
 export class OneRowSpriteIndexedAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createFactoryDX(image, dx, animationBehaviorFactory) {
-        var oneRowSpriteIndexedAnimationFactory = new OneRowSpriteIndexedAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory);
+        let oneRowSpriteIndexedAnimationFactory = new OneRowSpriteIndexedAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory);
         ;
         oneRowSpriteIndexedAnimationFactory.initW(dx);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,7 +36,7 @@ export class OneRowSpriteIndexedAnimationFactory extends BaseImageAnimationFacto
     }
     //@Throws(Exception.constructor)
     static createFactoryDXY(image, dx, dy, animationBehaviorFactory) {
-        var oneRowSpriteIndexedAnimationFactory = new OneRowSpriteIndexedAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory);
+        let oneRowSpriteIndexedAnimationFactory = new OneRowSpriteIndexedAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory);
         ;
         oneRowSpriteIndexedAnimationFactory.init(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,7 +67,7 @@ export class OneRowSpriteIndexedAnimationFactory extends BaseImageAnimationFacto
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var sprite = this.animationFactorySpriteScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let sprite = this.animationFactorySpriteScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
         if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
             //if statement needs to be on the same line and ternary does not work the same way.

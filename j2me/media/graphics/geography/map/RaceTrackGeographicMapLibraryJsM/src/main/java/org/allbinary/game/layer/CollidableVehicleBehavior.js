@@ -18,7 +18,7 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 import { CollisionTypeFactory } from '../../../../org/allbinary/game/collision/CollisionTypeFactory.js';
 //not GWT import const CollisionTypeFactory
 import { CollidableDestroyableDamageableBehavior } from '../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableBehavior.js';
-//not GWT import - same folder const VehicleFrictionProperties
+//sameFolderImports - not GWT import - same folder const VehicleFrictionProperties
 export class CollidableVehicleBehavior extends CollidableDestroyableDamageableBehavior {
     constructor(collidable) {
         super(collidable);
@@ -29,12 +29,12 @@ export class CollidableVehicleBehavior extends CollidableDestroyableDamageableBe
     }
     //@Throws(Exception.constructor)
     collide(ownerLayer, collidableInterfaceCompositeInterface) {
-        var collisionTypeFactory = CollisionTypeFactory.getInstance();
+        let collisionTypeFactory = CollisionTypeFactory.getInstance();
         ;
-        var collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
+        let collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
         ;
         if (collisionType == collisionTypeFactory.PICKUP) {
-            var collidableDestroyableDamageableLayer = ownerLayer;
+            let collidableDestroyableDamageableLayer = ownerLayer;
             ;
             collidableDestroyableDamageableLayer.getPickupBehavior().doPickupLayer(collidableInterfaceCompositeInterface);
         }
@@ -49,15 +49,15 @@ export class CollidableVehicleBehavior extends CollidableDestroyableDamageableBe
         ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this);
     }
     collideVehicle(ownerLayer, vehiclePropertiesCompositeInterface) {
-        var ownerVehicleLayerInterface = ownerLayer;
+        let ownerVehicleLayerInterface = ownerLayer;
         ;
-        var ownerVehicleProperties = ownerVehicleLayerInterface.getVehicleProperties();
+        let ownerVehicleProperties = ownerVehicleLayerInterface.getVehicleProperties();
         ;
-        var vehicleProperties = vehiclePropertiesCompositeInterface.getVehicleProperties();
+        let vehicleProperties = vehiclePropertiesCompositeInterface.getVehicleProperties();
         ;
-        var impactVelocityX = ownerVehicleProperties.getVelocityProperties().getVelocityXBasicDecimalP().getUnscaled() - vehicleProperties.getVelocityProperties().getVelocityXBasicDecimalP().getUnscaled();
+        let impactVelocityX = ownerVehicleProperties.getVelocityProperties().getVelocityXBasicDecimalP().getUnscaled() - vehicleProperties.getVelocityProperties().getVelocityXBasicDecimalP().getUnscaled();
         ;
-        var impactVelocityY = ownerVehicleProperties.getVelocityProperties().getVelocityYBasicDecimalP().getUnscaled() - vehicleProperties.getVelocityProperties().getVelocityYBasicDecimalP().getUnscaled();
+        let impactVelocityY = ownerVehicleProperties.getVelocityProperties().getVelocityYBasicDecimalP().getUnscaled() - vehicleProperties.getVelocityProperties().getVelocityYBasicDecimalP().getUnscaled();
         ;
         if (impactVelocityX != 0) {
             this.halfImpactVelocityX = (impactVelocityX >> 1);
@@ -78,7 +78,7 @@ export class CollidableVehicleBehavior extends CollidableDestroyableDamageableBe
         this.totalImpactVelocity = impactVelocityX + impactVelocityY;
     }
     collideFriction(vehiclePropertiesCompositeInterface) {
-        var vehicleFrictionProperties = vehiclePropertiesCompositeInterface.getVehicleProperties().getVehicleFrictionProperties();
+        let vehicleFrictionProperties = vehiclePropertiesCompositeInterface.getVehicleProperties().getVehicleFrictionProperties();
         ;
         vehiclePropertiesCompositeInterface.getVehicleProperties().getVehicleFrictionProperties().friction(vehiclePropertiesCompositeInterface.getVehicleProperties().getVelocityProperties(), vehicleFrictionProperties.getCrashFrictionNominator());
     }

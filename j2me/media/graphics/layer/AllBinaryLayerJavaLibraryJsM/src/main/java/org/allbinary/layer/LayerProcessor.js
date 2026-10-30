@@ -16,7 +16,7 @@ import { Object } from '../../../java/lang/Object.js';
 import { Exception } from '../../../java/lang/Exception.js';
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinaryLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryLayer
 export class LayerProcessor extends Object {
     constructor(layerManager) {
         super();
@@ -37,11 +37,11 @@ export class LayerProcessor extends Object {
     }
     //@Throws(Exception.constructor)
     process(allBinaryLayerManager) {
-        var layerManager = this.getLayerManager();
+        let layerManager = this.getLayerManager();
         ;
-        var size = layerManager.getSize();
+        let size = layerManager.getSize();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.processAt(allBinaryLayerManager, layerManager.getLayerAt(index), index);
         }
     }

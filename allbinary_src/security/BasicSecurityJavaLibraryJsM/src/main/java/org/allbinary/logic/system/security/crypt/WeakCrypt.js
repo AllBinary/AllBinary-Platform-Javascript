@@ -27,7 +27,7 @@ import { KeySpecFactory } from '../../../../../../org/allbinary/logic/system/sec
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DatabaseEncoder } from './DatabaseEncoder.js';
-//not GWT import - same folder const DatabaseEncoder
+//sameFolderImports - not GWT import - same folder const DatabaseEncoder
 export class WeakCrypt extends Object {
     constructor(key) {
         super();
@@ -35,41 +35,47 @@ export class WeakCrypt extends Object {
         this.abCrypt = new AbCrypt(KeySpecFactory.getInstance().DES);
         try {
             this.abCrypt.init(WeakCrypt.keys[key]);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, this, "SuperCrypt(key)", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, this, "SuperCrypt(key)", e);
+            }
         }
     }
     encrypt(value) {
         try {
-            var crypted = this.abCrypt.encrypt(this.tsUtil.getByteArray(value));
+            let crypted = this.abCrypt.encrypt(this.tsUtil.getByteArray(value));
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return DatabaseEncoder.encode(crypted);
             ;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return StringUtil.getInstance().EMPTY_STRING;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return StringUtil.getInstance().EMPTY_STRING;
+            }
         }
     }
     decrypt(value) {
         try {
-            var decrypted = this.abCrypt.decrypt(DatabaseEncoder.decode(value));
+            let decrypted = this.abCrypt.decrypt(DatabaseEncoder.decode(value));
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return String.fromCharCode(...decrypted);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return StringUtil.getInstance().EMPTY_STRING;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return StringUtil.getInstance().EMPTY_STRING;
+            }
         }
     }
 }

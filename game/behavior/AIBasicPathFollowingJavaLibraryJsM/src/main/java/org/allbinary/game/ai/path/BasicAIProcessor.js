@@ -24,7 +24,7 @@ import { GeographicMapCellPathHistoryInfo } from '../../../../../org/allbinary/m
 //not GWT import const GeographicMapCellPathHistoryInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicDirectionAIHelper } from './BasicDirectionAIHelper.js';
-//not GWT import - same folder const BasicDirectionAIHelper
+//sameFolderImports - not GWT import - same folder const BasicDirectionAIHelper
 export class BasicAIProcessor extends Object {
     constructor(name, geographicMapCellHistory, geographicMapCellPathHistoryInfo, chosenPathList, angleInfo, seed) {
         super();
@@ -50,11 +50,11 @@ export class BasicAIProcessor extends Object {
     }
     //@Throws(Exception.constructor)
     goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition) {
-        var keyDirection = -1;
+        let keyDirection = -1;
         ;
-        var goToGeographicMapCellPosition = this.geographicMapCellPathHistoryInfo.getNextChosenOnPathGeographicMapCellPosition();
+        let goToGeographicMapCellPosition = this.geographicMapCellPathHistoryInfo.getNextChosenOnPathGeographicMapCellPosition();
         ;
-        var geographicMapDirectionData = this.geographicMapDirectionUtil.getDirectionFromCellPositionToAdjacentCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition);
+        let geographicMapDirectionData = this.geographicMapDirectionUtil.getDirectionFromCellPositionToAdjacentCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition);
         ;
         if (geographicMapDirectionData == DirectionFactory.getInstance().NOT_BORDERED_WITH) {
             geographicMapDirectionData = this.geographicMapDirectionUtil.getDirectionFromCellPositionToCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition);
@@ -69,7 +69,7 @@ export class BasicAIProcessor extends Object {
     }
     //@Throws(Exception.constructor)
     processAI(myManager, currentGeographicMapCellPosition) {
-        var keyDirection = -1;
+        let keyDirection = -1;
         ;
         if (this.geographicMapCellPositionBasicArrayList.contains(currentGeographicMapCellPosition)) {
             this.update();

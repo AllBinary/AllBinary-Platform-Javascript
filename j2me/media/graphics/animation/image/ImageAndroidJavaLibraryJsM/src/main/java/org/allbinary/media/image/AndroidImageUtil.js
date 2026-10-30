@@ -23,29 +23,29 @@ export class AndroidImageUtil extends Object {
     }
     paintBitmap(bitmap, originalBitmap, paint) {
         bitmap.eraseColor(Color.TRANSPARENT);
-        var canvas = new android.graphics.Canvas();
+        let canvas = new android.graphics.Canvas();
         ;
         canvas.setBitmap(bitmap);
         canvas.drawBitmap(originalBitmap, 0.0, 0.0, paint);
     }
     paint(image, originalImage, paint) {
-        var androidImage = image;
+        let androidImage = image;
         ;
         androidImage.getBitmap().eraseColor(Color.TRANSPARENT);
-        var canvas = androidImage.getCanvas();
+        let canvas = androidImage.getCanvas();
         ;
-        var originalAndroidImage = originalImage;
+        let originalAndroidImage = originalImage;
         ;
         canvas.drawBitmap(originalAndroidImage.getBitmap(), 0.0, 0.0, paint);
     }
     rotate(image, originalImage, matrix, paint) {
-        var androidImage = image;
+        let androidImage = image;
         ;
         androidImage.getBitmap().eraseColor(Color.TRANSPARENT);
-        var canvas = androidImage.getCanvas();
+        let canvas = androidImage.getCanvas();
         ;
         canvas.concat(matrix);
-        var originalAndroidImage = originalImage;
+        let originalAndroidImage = originalImage;
         ;
         canvas.drawBitmap(originalAndroidImage.getBitmap(), 0.0, 0.0, paint);
     }

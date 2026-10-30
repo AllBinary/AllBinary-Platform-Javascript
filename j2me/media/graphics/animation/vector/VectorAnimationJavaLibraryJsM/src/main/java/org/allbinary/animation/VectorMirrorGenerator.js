@@ -29,9 +29,18 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimationUtil } from './VectorAnimationUtil.js';
-//not GWT import - same folder const VectorAnimationUtil
+//sameFolderImports - not GWT import - same folder const VectorAnimationUtil
 export class VectorMirrorGenerator extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 2 && typeof args[1] === 'number')
+            return this.getInstance$overload2(args[0], args[1]);
+        if (args.length === 2 && typeof args[1] === 'number')
+            return this.getInstance$overload3(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return VectorMirrorGenerator.instance;
     }
@@ -40,49 +49,51 @@ export class VectorMirrorGenerator extends Object {
         this.logUtil = LogUtil.getInstance();
         this.vectorAnimationUtil = VectorAnimationUtil.getInstance();
     }
-    getInstance(points, width) {
+    getInstance$overload2(points, width) {
         try {
-            var pointFactory = PointFactory.getInstance();
+            let pointFactory = PointFactory.getInstance();
             ;
-            var pointBasicArrayList;
+            let pointBasicArrayList;
             ;
-            var nextPoints;
+            let nextPoints;
             ;
-            var size2 = 0;
+            let size2 = 0;
             ;
-            var size = points.length;
+            let size = points.length;
             ;
-            var pointsBasicArrayList = new BasicArrayListS(size);
+            let pointsBasicArrayList = new BasicArrayListS(size);
             ;
-            for (var frame = 0; frame < size; frame++) {
+            for (let frame = 0; frame < size; frame++) {
                 nextPoints = points[frame];
                 size2 = nextPoints.length;
                 pointBasicArrayList = new BasicArrayListS(size2);
-                for (var index = 0; index < size2; index++) {
+                for (let index = 0; index < size2; index++) {
                     pointBasicArrayList.add(pointFactory.createXY(nextPoints[index][0], nextPoints[index][1]));
                 }
                 pointsBasicArrayList.add(pointBasicArrayList);
             }
-            for (var index = 0; index < points.length; index++) {
+            for (let index = 0; index < points.length; index++) {
                 pointsBasicArrayList.add(this.getInstance(pointsBasicArrayList.objectArray[index], width));
             }
-            var newPoints = this.vectorAnimationUtil.toAnimationArrayFromListOfPointList(pointsBasicArrayList);
+            let newPoints = this.vectorAnimationUtil.toAnimationArrayFromListOfPointList(pointsBasicArrayList);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return newPoints;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NullUtil.getInstance().NULL_INT_ARRAY_ARRAY_ARRAY;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NullUtil.getInstance().NULL_INT_ARRAY_ARRAY_ARRAY;
+            }
         }
     }
     //@Throws(Exception.constructor)
-    getInstance(pointBasicArrayList, width) {
-        var graphicsPipe = new BasicGraphicsPipeline(pointBasicArrayList);
+    getInstance$overload3(pointBasicArrayList, width) {
+        let graphicsPipe = new BasicGraphicsPipeline(pointBasicArrayList);
         ;
         graphicsPipe.createMatrix();
         graphicsPipe.mirror(width);

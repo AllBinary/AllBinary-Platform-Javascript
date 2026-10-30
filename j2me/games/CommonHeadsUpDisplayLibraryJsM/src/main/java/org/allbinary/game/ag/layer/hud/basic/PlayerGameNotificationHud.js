@@ -41,42 +41,43 @@ import { TimeDelayHelper } from '../../../../../../../org/allbinary/time/TimeDel
 //not GWT import const TimeDelayHelper
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//Current folder imports from return types, extended types, and scope (deduplicated)
-//import { SetAndRemoveProcessor } from './SetAndRemoveProcessor.js';
-//not GWT import - same folder const SetAndRemoveProcessor
-//import { NextUnremoveableProcessor } from './NextUnremoveableProcessor.js';
-//not GWT import - same folder const NextUnremoveableProcessor
 export class PlayerGameNotificationHud extends GameNotificationHud {
     constructor(location, direction, bufferZone, basicColor) {
         super(location, direction, bufferZone, basicColor);
+        //inner= member=true isStatic=
+        this.SetAndRemoveProcessor = (() => {
+            const outer$PlayerGameNotificationHud = this;
+            return class extends Processor {
+                constructor(updateMeasurementProcessor) {
+                    super();
+                    this.updateMeasurementProcessor = updateMeasurementProcessor;
+                }
+                //@Throws(Exception.constructor)
+                process() {
+                    this.updateMeasurementProcessor.setAndRemoveProcess();
+                }
+            };
+        })();
+        //inner= member=true isStatic=
+        this.NextUnremoveableProcessor = (() => {
+            const outer$PlayerGameNotificationHud = this;
+            return class extends Processor {
+                constructor(updateMeasurementProcessor) {
+                    super();
+                    this.updateMeasurementProcessor = updateMeasurementProcessor;
+                }
+                //@Throws(Exception.constructor)
+                process() {
+                    this.updateMeasurementProcessor.setNextUnremoveableProcess();
+                }
+            };
+        })();
         this.gameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance();
         this.EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
         this.displayInfo = DisplayInfoSingleton.getInstance();
         this.timeDelayHelper = new TimeDelayHelper(0);
         this.gameNotification = new GameNotification();
         this.permanentGameNotification = new GameNotification();
-        //inner= member=true isStatic=
-        this.SetAndRemoveProcessor = class extends Processor {
-            constructor(updateMeasurementProcessor) {
-                super();
-                this.updateMeasurementProcessor = updateMeasurementProcessor;
-            }
-            //@Throws(Exception.constructor)
-            process() {
-                this.updateMeasurementProcessor.setAndRemoveProcess();
-            }
-        };
-        //inner= member=true isStatic=
-        this.NextUnremoveableProcessor = class extends Processor {
-            constructor(updateMeasurementProcessor) {
-                super();
-                this.updateMeasurementProcessor = updateMeasurementProcessor;
-            }
-            //@Throws(Exception.constructor)
-            process() {
-                this.updateMeasurementProcessor.setNextUnremoveableProcess();
-            }
-        };
         this.setAndRemoveProcessor = new this.SetAndRemoveProcessor(this);
         this.nextUnremoveableProcessor = new this.NextUnremoveableProcessor(this);
         this.processor = Processor.getInstance();
@@ -87,7 +88,7 @@ export class PlayerGameNotificationHud extends GameNotificationHud {
         this.width = 0;
         //For kotlin this is before the body of the constructor.
         this.circularIndexUtil = CircularIndexUtil.createInstance(0);
-        var gameNotificationEventHandler = GameNotificationEventHandler.getInstance();
+        let gameNotificationEventHandler = GameNotificationEventHandler.getInstance();
         ;
         gameNotificationEventHandler.removeAllListeners();
         gameNotificationEventHandler.addListenerInterface(this);
@@ -95,19 +96,21 @@ export class PlayerGameNotificationHud extends GameNotificationHud {
     updateMeasurement(graphics) {
         try {
             super.updateMeasurement(graphics);
-            var font = graphics.getFont();
+            let font = graphics.getFont();
             ;
             this.width = font.stringWidth(this.string);
             this.processor.process();
             this.processor = Processor.getInstance();
-            //: 
         }
-        catch (e) {
-            var logUtil = LogUtil.getInstance();
-            ;
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let logUtil = LogUtil.getInstance();
+                ;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+            }
         }
     }
     getPoint(x, y) {
@@ -133,7 +136,7 @@ export class PlayerGameNotificationHud extends GameNotificationHud {
     //@Throws(Exception.constructor)
     processTick() {
         if (this.timeDelayHelper.isTime(this.gameTickTimeDelayHelper.startTime)) {
-            var gameAdState = GameAdStateFactory.getInstance().getCurrentInstance();
+            let gameAdState = GameAdStateFactory.getInstance().getCurrentInstance();
             ;
             if (gameAdState.isShowingAtLocation(this.getLocation())) {
                 this.offsetY = -54;
@@ -162,9 +165,9 @@ export class PlayerGameNotificationHud extends GameNotificationHud {
         this.setX((this.displayInfo.getLastWidth() - this.width) >> 1);
         this.point.setX(this.getX());
         this.point.setY(this.getY());
-        var time = this.gameNotification.timeList.removeAt(0);
+        let time = this.gameNotification.timeList.removeAt(0);
         ;
-        var iTime = time.intValue() * 1000;
+        let iTime = time.intValue() * 1000;
         ;
         if (iTime == 0) {
             iTime = 500;
@@ -174,19 +177,19 @@ export class PlayerGameNotificationHud extends GameNotificationHud {
     }
     //@Throws(Exception.constructor)
     setNextUnremoveable() {
-        var index = this.circularIndexUtil.getIndex();
+        let index = this.circularIndexUtil.getIndex();
         ;
         this.string = this.permanentGameNotification.stringList.objectArray[index];
         this.processor = this.nextUnremoveableProcessor;
     }
     //@Throws(Exception.constructor)
     setNextUnremoveableProcess() {
-        var index = this.circularIndexUtil.getIndex();
+        let index = this.circularIndexUtil.getIndex();
         ;
         this.setX((this.displayInfo.getLastWidth() - this.width) >> 1);
         this.point.setX(this.getX());
         this.point.setY(this.getY());
-        var time = this.permanentGameNotification.timeList.objectArray[index];
+        let time = this.permanentGameNotification.timeList.objectArray[index];
         ;
         this.timeDelayHelper.delay = time.intValue() * 1000;
         this.setBasicColorP(this.permanentGameNotification.colorList.objectArray[index]);

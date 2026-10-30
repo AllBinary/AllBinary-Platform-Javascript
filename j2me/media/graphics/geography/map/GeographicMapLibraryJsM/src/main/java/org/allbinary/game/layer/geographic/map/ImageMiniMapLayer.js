@@ -20,7 +20,7 @@ import { PaintableToImageUtil } from '../../../../../../org/allbinary/image/Pain
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MiniMapLayer } from './MiniMapLayer.js';
-//not GWT import - same folder const MiniMapLayer
+//sameFolderImports - not GWT import - same folder const MiniMapLayer
 export class ImageMiniMapLayer extends MiniMapLayer {
     constructor(geographicMapInterface, viewPosition) {
         super(geographicMapInterface, viewPosition);
@@ -30,9 +30,9 @@ export class ImageMiniMapLayer extends MiniMapLayer {
     }
     //@Throws(Exception.constructor)
     init() {
-        var aWidth = this.allBinaryTiledLayer.getWidth();
+        let aWidth = this.allBinaryTiledLayer.getWidth();
         ;
-        var aHeight = this.allBinaryTiledLayer.getHeight();
+        let aHeight = this.allBinaryTiledLayer.getHeight();
         ;
         this.image = PaintableToImageUtil.getImage(this.allBinaryTiledLayer, aWidth, aHeight);
     }

@@ -15,6 +15,9 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const MediaException
 import { PlayerI } from '../../../../javax/microedition/media/Player.js';
+//not GWT import const Player
+import { PlayerListenerI } from '../../../../javax/microedition/media/PlayerListener.js';
+const PlayerListener = PlayerListenerI;
 //not GWT import const PlayerListener
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
@@ -24,9 +27,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const Controllable2
+//sameFolderImports - not GWT import - same folder const Controllable2
 import { NullControl } from './NullControl.js';
-//not GWT import - same folder const NullControl
+//sameFolderImports - not GWT import - same folder const NullControl
 //BasicPlayerJavaLibrary
 export class BasicPlayer extends Object {
     constructor() {

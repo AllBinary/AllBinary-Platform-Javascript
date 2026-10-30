@@ -86,11 +86,11 @@ import { EventStrings } from '../../../../../org/allbinary/logic/util/event/Even
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const MenuListener
+//sameFolderImports - not GWT import - same folder const MenuListener
 import { NoMenuInputProcessor } from './NoMenuInputProcessor.js';
-//not GWT import - same folder const BasicMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const BasicMenuInputProcessor
 import { ImmediateCommandFormInputProcessor } from './ImmediateCommandFormInputProcessor.js';
-//not GWT import - same folder const ImmediateCommandFormInputProcessor
+//sameFolderImports - not GWT import - same folder const ImmediateCommandFormInputProcessor
 export class GameCommandCanvas extends MyCanvas {
     constructor(cmdListener, name, backgroundBasicColor, foregroundBasicColor) {
         super(name, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST);
@@ -119,27 +119,31 @@ export class GameCommandCanvas extends MyCanvas {
             try {
                 this.initMenu();
                 this.repaintProcessor.process();
-                //: 
             }
-            catch (e) {
-                throw new RuntimeException();
+            catch (caught) {
+                {
+                    const e = caught;
+                    throw new RuntimeException();
+                }
             }
         }
     }
     updateMeasurement(graphics) {
         try {
-            var font = graphics.getFont();
+            let font = graphics.getFont();
             ;
             this.logUtil.putF(new StringMaker().append(this.commonStrings.START).append(this.canvasStrings.FD_WIDTH).appendint(MyFontProcessor.defaultCharWidth(font)).append(this.canvasStrings.FD_HEIGHT).appendint(font.getHeight()).toString(), this, this.canvasStrings.UPDATE_MEASUREMENT);
             this.fontHeight = font.getHeight();
-            var rectangle = this.createRectangle(this.menuForm.size());
+            let rectangle = this.createRectangle(this.menuForm.size());
             ;
             this.menuForm.init(rectangle, FormTypeFactory.getInstance().VERTICAL_CENTER_FORM);
             this.update();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+            }
         }
         this.myFontProcessor = MyFontProcessor.getInstance();
     }
@@ -157,7 +161,7 @@ export class GameCommandCanvas extends MyCanvas {
     }
     //@Throws(Exception.constructor)
     initMenu() {
-        var form = this.createForm();
+        let form = this.createForm();
         ;
         this.menuForm = form;
         if (form != ScrollSelectionFormNoneFactory.getInstance()) {
@@ -168,22 +172,22 @@ export class GameCommandCanvas extends MyCanvas {
     }
     //@Throws(Exception.constructor)
     createForm() {
-        var items = new CommandTextItemArrayFactory(new AllCommandsVisitor()).getInstance(this.getCommandStack(), this.backgroundBasicColor, this.foregroundBasicColor);
+        let items = new CommandTextItemArrayFactory(new AllCommandsVisitor()).getInstance(this.getCommandStack(), this.backgroundBasicColor, this.foregroundBasicColor);
         ;
-        var rectangle = this.createRectangle(items.length);
+        let rectangle = this.createRectangle(items.length);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance().EMPTY_STRING, items, rectangle, FormTypeFactory.getInstance().VERTICAL_CENTER_FORM, 15, false, this.backgroundBasicColor, this.foregroundBasicColor);
         ;
     }
     createRectangle(size) {
-        var height = size * this.fontHeight;
+        let height = size * this.fontHeight;
         ;
-        var startY = (this.displayInfo.getLastHeight() * 2 / 3) - height;
+        let startY = (this.displayInfo.getLastHeight() * 2 / 3) - height;
         ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var rectangle = new Rectangle(pointFactory.createXY(30, startY), this.displayInfo.getLastWidth() - 30, startY);
+        let rectangle = new Rectangle(pointFactory.createXY(30, startY), this.displayInfo.getLastWidth() - 30, startY);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return rectangle;
@@ -231,10 +235,10 @@ export class GameCommandCanvas extends MyCanvas {
     }
     addGameKeyEvent(keyCode, deviceId, repeated) {
         try {
-            var gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
+            let gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
             ;
             if (gameKey != this.gameKeyFactory.NONE) {
-                var gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
+                let gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
                 ;
                 this.downGameKeyEventHandler.fireEvent(gameKeyEvent);
                 this.downGameKeyEventHandler.getInstanceForDevice(deviceId).fireEvent(gameKeyEvent);
@@ -242,18 +246,20 @@ export class GameCommandCanvas extends MyCanvas {
             else {
                 this.logUtil.putF(new StringMaker().append(this.gameInputStrings.NO_KEY).appendint(keyCode).toString(), this, this.gameInputStrings.ADD_KEY_EVENT);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+            }
         }
     }
     removeGameKeyEvent(keyCode, deviceId, repeated) {
         try {
-            var gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
+            let gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
             ;
             if (gameKey != this.gameKeyFactory.NONE) {
-                var gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
+                let gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
                 ;
                 this.upGameKeyEventHandler.fireEvent(gameKeyEvent);
                 this.upGameKeyEventHandler.getInstanceForDevice(deviceId).fireEvent(gameKeyEvent);
@@ -261,10 +267,12 @@ export class GameCommandCanvas extends MyCanvas {
             else {
                 this.logUtil.putF(new StringMaker().append(this.gameInputStrings.NO_KEY).appendint(keyCode).toString(), this, this.gameInputStrings.REMOVE_KEY_EVENT);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Key Event Error", this, this.gameInputStrings.REMOVE_KEY_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Key Event Error", this, this.gameInputStrings.REMOVE_KEY_EVENT, e);
+            }
         }
     }
     paint(graphics) {

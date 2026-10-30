@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const VectorAnimationFactoryInterface
+//sameFolderImports - not GWT import - same folder const VectorAnimationFactoryInterface
 import { TimedVectorAnimation } from './TimedVectorAnimation.js';
-//not GWT import - same folder const TimedVectorAnimation
+//sameFolderImports - not GWT import - same folder const TimedVectorAnimation
 import { AnimationBehavior } from './AnimationBehavior.js';
-//not GWT import - same folder const VectorAnimation
+//sameFolderImports - not GWT import - same folder const VectorAnimation
 export class TimedVectorAnimationFactory extends Object {
     getInstance(points, basicColor) {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -39,44 +39,44 @@ const Log = globalThis.org.allbinary.logic.communication.log.Log;
         this.LOG_SUCCESS = "org.allbinary: ";
     }
     /*actual*/ putL(log) {
-        var specialMessage = log.getSpecialMessage();
+        let specialMessage = log.getSpecialMessage();
         ;
-        var anyType = log.getObject();
+        let anyType = log.getObject();
         ;
-        var functionName = log.getFunctionName();
+        let functionName = log.getFunctionName();
         ;
-        var exception = log.getThrowable();
+        let exception = log.getThrowable();
         ;
         this.put(specialMessage, anyType, functionName, exception);
     }
-    /*actual*/ putF(specialMessage, anyType = {}, functionName) {
-        var className = CommonStrings.getInstance().EMPTY;
+    /*actual*/ putF(specialMessage, anyType, functionName) {
+        let className = CommonStrings.getInstance().EMPTY;
         ;
         if (anyType.constructor.name.toString() !=
             null) {
             className = new StringMaker().append(anyType.constructor.name.toString()).append(CommonSeps.getInstance().COLON).append(Integer.toHexString(TsUtil.getInstance().hashCode(anyType))).toString();
         }
-        var message = this.logFormatUtil.getS(className, functionName, specialMessage);
+        let message = this.logFormatUtil.getS(className, functionName, specialMessage);
         ;
         console.log(this.LOG_SUCCESS + message);
     }
     /*actual*/ putFS(specialMessage, className, functionName) {
-        var message = this.logFormatUtil.getS(className, functionName, specialMessage);
+        let message = this.logFormatUtil.getS(className, functionName, specialMessage);
         ;
         console.log(this.LOG_SUCCESS + message);
     }
-    /*actual*/ put(specialMessage, anyType = {}, functionName, exception = {}) {
-        var className = CommonStrings.getInstance().EMPTY;
+    /*actual*/ put(specialMessage, anyType, functionName, exception) {
+        let className = CommonStrings.getInstance().EMPTY;
         ;
         if (anyType.constructor.name.toString() !=
             null) {
-            var hashCodeValue = TsUtil.getInstance().hashCode(anyType);
+            let hashCodeValue = TsUtil.getInstance().hashCode(anyType);
             ;
-            var hexString = Integer.toHexString(hashCodeValue);
+            let hexString = Integer.toHexString(hashCodeValue);
             ;
             className = new StringMaker().append(anyType.constructor.name.toString()).append(CommonSeps.getInstance().COLON).append(hexString).toString();
         }
-        var message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
+        let message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
         ;
         console.log(this.LOG_SUCCESS + message);
     }

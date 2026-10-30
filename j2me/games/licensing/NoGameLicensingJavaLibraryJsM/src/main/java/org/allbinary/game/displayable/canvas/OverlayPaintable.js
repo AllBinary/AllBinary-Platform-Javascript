@@ -25,13 +25,14 @@ export class OverlayPaintable extends InitUpdatePaintable {
         this.logUtil = LogUtil.getInstance();
     }
     update() {
-        try {
-            //: 
-        }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+        try { }
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+            }
         }
     }
     paint(graphics) {

@@ -35,18 +35,32 @@ export class Directory extends Object {
     constructor() {
         super();
     }
-    create(directoryAbPath) {
+    create(...args) {
+        if (args.length === 1)
+            return this.create$overload1(args[0]);
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.create$overload2(args[0]);
+        throw new TypeError('No matching overload: create');
+    }
+    create$overload1(directoryAbPath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.create(directoryAbPath.toFileSystemString());
         ;
     }
+    remove(...args) {
+        if (args.length === 1)
+            return this.remove$overload1(args[0]);
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.remove$overload2(args[0]);
+        throw new TypeError('No matching overload: remove');
+    }
     //@Throws(Exception.constructor)
-    remove(existingDirectoryAbPath) {
+    remove$overload1(existingDirectoryAbPath) {
         this.remove(existingDirectoryAbPath.toFileSystemString());
     }
-    create(directory) {
+    create$overload2(directory) {
         try {
-            var directoryFile = FileFactory.getInstance().getInstance(directory);
+            let directoryFile = FileFactory.getInstance().getInstance(directory);
             ;
             if (!directoryFile.isDirectory()) {
                 PreLogUtil.put("Creating Directories: " + directory, this, "create");
@@ -57,17 +71,19 @@ export class Directory extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("Error Creating Directories: " + directory, this, "create", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("Error Creating Directories: " + directory, this, "create", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     //@Throws(Exception.constructor)
-    remove(existingDirectory) {
-        var existingDirectoryFile = FileFactory.getInstance().getInstance(existingDirectory);
+    remove$overload2(existingDirectory) {
+        let existingDirectoryFile = FileFactory.getInstance().getInstance(existingDirectory);
         ;
         if (existingDirectoryFile.isDirectory()) {
             if (existingDirectoryFile.list().length > 0) {
@@ -81,34 +97,53 @@ export class Directory extends Object {
             throw new Exception("Category Directory Is Missing:" + existingDirectory);
         }
     }
-    search(fileFilter, file) {
+    search(...args) {
+        if (args.length === 2)
+            return this.search$overload1(args[0], args[1]);
+        if (args.length === 3 && typeof args[2] === 'boolean')
+            return this.search$overload2(args[0], args[1], args[2]);
+        if (args.length === 1)
+            return this.search$overload3(args[0]);
+        if (args.length === 2 && typeof args[1] === 'boolean')
+            return this.search$overload4(args[0], args[1]);
+        if (args.length === 2 && typeof args[0] === 'string')
+            return this.search$overload5(args[0], args[1]);
+        if (args.length === 3 && typeof args[0] === 'string' && typeof args[2] === 'boolean')
+            return this.search$overload6(args[0], args[1], args[2]);
+        if (args.length === 2 && typeof args[0] === 'number')
+            return this.search$overload7(args[0], args[1]);
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[2] === 'boolean')
+            return this.search$overload8(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: search');
+    }
+    search$overload1(fileFilter, file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.search(fileFilter, file, false);
         ;
     }
-    search(fileFilter, file, isRecursiveSearch) {
-        var fileList = new BasicArrayListD();
+    search$overload2(fileFilter, file, isRecursiveSearch) {
+        let fileList = new BasicArrayListD();
         ;
-        var recursiveFileList;
+        let recursiveFileList;
         ;
         if (file.isDirectory()) {
-            var fileArray = file.listFilesFileFilter(fileFilter);
+            let fileArray = file.listFilesFileFilter(fileFilter);
             ;
             if (fileArray ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            var files = FileWrapperUtil.wrapFiles(fileArray);
+            let files = FileWrapperUtil.wrapFiles(fileArray);
             ;
             if (files ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            var size = files.length;
+            let size = files.length;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 fileList.add(files[index]);
                 if (isRecursiveSearch) {
                     recursiveFileList = this.search(fileFilter, files[index], isRecursiveSearch);
@@ -119,32 +154,32 @@ export class Directory extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return fileList;
     }
-    search(file) {
+    search$overload3(file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.search(file, false);
         ;
     }
-    search(file, isRecursiveSearch) {
-        var fileList = new BasicArrayListD();
+    search$overload4(file, isRecursiveSearch) {
+        let fileList = new BasicArrayListD();
         ;
-        var recursiveFileList;
+        let recursiveFileList;
         ;
         if (file.isDirectory()) {
-            var fileArray = file.listFiles();
+            let fileArray = file.listFiles();
             ;
             if (fileArray ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            var files = FileWrapperUtil.wrapFiles(fileArray);
+            let files = FileWrapperUtil.wrapFiles(fileArray);
             ;
             if (files ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            for (var index = 0; index < files.length; index++) {
+            for (let index = 0; index < files.length; index++) {
                 fileList.add(files[index]);
                 if (isRecursiveSearch) {
                     recursiveFileList = this.search(files[index], isRecursiveSearch);
@@ -155,32 +190,32 @@ export class Directory extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return fileList;
     }
-    search(searchValue, file) {
+    search$overload5(searchValue, file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.search(searchValue, file, false);
         ;
     }
-    search(searchValue, file, isRecursiveSearch) {
-        var fileList = new BasicArrayListD();
+    search$overload6(searchValue, file, isRecursiveSearch) {
+        let fileList = new BasicArrayListD();
         ;
-        var recursiveFileList;
+        let recursiveFileList;
         ;
         if (file.isDirectory()) {
-            var fileArray = file.listFiles();
+            let fileArray = file.listFiles();
             ;
             if (fileArray ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            var files = FileWrapperUtil.wrapFiles(fileArray);
+            let files = FileWrapperUtil.wrapFiles(fileArray);
             ;
             if (files ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            for (var index = 0; index < files.length; index++) {
+            for (let index = 0; index < files.length; index++) {
                 if (files[index].getPath().indexOf(searchValue) >= 0) {
                     fileList.add(files[index]);
                 }
@@ -193,32 +228,32 @@ export class Directory extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return fileList;
     }
-    search(level, file) {
+    search$overload7(level, file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.search(level, file, false);
         ;
     }
-    search(level, file, isRecursiveSearch) {
-        var fileList = new BasicArrayListD();
+    search$overload8(level, file, isRecursiveSearch) {
+        let fileList = new BasicArrayListD();
         ;
-        var recursiveFileList;
+        let recursiveFileList;
         ;
         if (file.isDirectory()) {
-            var fileArray = file.listFiles();
+            let fileArray = file.listFiles();
             ;
             if (fileArray ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            var files = FileWrapperUtil.wrapFiles(fileArray);
+            let files = FileWrapperUtil.wrapFiles(fileArray);
             ;
             if (files ==
                 null) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return fileList;
             }
-            for (var index = 0; index < files.length; index++) {
+            for (let index = 0; index < files.length; index++) {
                 fileList.add(files[index]);
                 if (level <= 0) {
                     //if statement needs to be on the same line and ternary does not work the same way.

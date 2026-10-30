@@ -32,7 +32,7 @@ export class DirectoryOrIncludeFileExtensionBooleanFileVisitor extends IncludeFi
     visit(file) {
         if (file.isDirectory()) {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return Boolean.TRUE;
+            return true;
         }
         if (this.includesString ==
             null
@@ -43,7 +43,7 @@ export class DirectoryOrIncludeFileExtensionBooleanFileVisitor extends IncludeFi
         }
         else {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return Boolean.FALSE;
+            return false;
         }
     }
 }

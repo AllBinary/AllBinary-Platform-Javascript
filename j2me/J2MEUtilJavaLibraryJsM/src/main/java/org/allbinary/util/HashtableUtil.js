@@ -33,11 +33,11 @@ export class HashtableUtil extends Object {
         return HashtableUtil.instance;
     }
     putAll(fromHashtable, hashtable) {
-        var enumeration = fromHashtable.keys();
+        let enumeration = fromHashtable.keys();
         ;
-        var keyCanBeNull;
+        let keyCanBeNull;
         ;
-        var valueCanBeNull;
+        let valueCanBeNull;
         ;
         while (this.enumerationUtil.hasMoreElements(enumeration)) {
             keyCanBeNull = this.enumerationUtil.nextElement(enumeration);
@@ -51,11 +51,11 @@ export class HashtableUtil extends Object {
         }
     }
     getKeysAsArray(hashtable) {
-        var objectArray = new Array(hashtable.size());
+        let objectArray = new Array(hashtable.size());
         ;
-        var index = 0;
+        let index = 0;
         ;
-        var enumeration = hashtable.keys();
+        let enumeration = hashtable.keys();
         ;
         while (this.enumerationUtil.hasMoreElements(enumeration)) {
             objectArray[index++] = this.enumerationUtil.nextElement(enumeration);
@@ -64,9 +64,9 @@ export class HashtableUtil extends Object {
         return objectArray;
     }
     getKeysAsList(hashtable) {
-        var list = new BasicArrayListS(hashtable.size());
+        let list = new BasicArrayListS(hashtable.size());
         ;
-        var enumeration = hashtable.keys();
+        let enumeration = hashtable.keys();
         ;
         while (this.enumerationUtil.hasMoreElements(enumeration)) {
             list.add(this.enumerationUtil.nextElement(enumeration));

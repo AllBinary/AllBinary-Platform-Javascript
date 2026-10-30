@@ -43,27 +43,29 @@ export class RepaintBehavior extends Object {
     repaint(canvas) {
     }
     onChangeRepaint(canvas) {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
         if (features.isFeature(openGLFeatureFactory.OPENGL)) {
             DisplayInfoSingleton.getInstance().process();
         }
         else {
-            var thread = new Thread(new class extends ARunnable {
+            let thread = new Thread(new class extends ARunnable {
                 run() {
                     try {
                         canvas.repaint();
                         DisplayInfoSingleton.getInstance().process();
-                        //: 
                     }
-                    catch (e) {
-                        var commonStrings = CommonStrings.getInstance();
-                        ;
-                        var logUtil = LogUtil.getInstance();
-                        ;
-                        logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            let commonStrings = CommonStrings.getInstance();
+                            ;
+                            let logUtil = LogUtil.getInstance();
+                            ;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
                     }
                 }
             }, this.NAME);

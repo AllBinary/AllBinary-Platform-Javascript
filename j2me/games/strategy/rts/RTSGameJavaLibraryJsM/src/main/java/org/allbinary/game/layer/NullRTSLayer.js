@@ -17,7 +17,7 @@ import { NullRTSFormInputFactory } from '../../../../org/allbinary/game/input/fo
 //not GWT import const Sound
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPathFindingLayer } from './NullPathFindingLayer.js';
-//not GWT import - same folder const PlayerOwnedRTSLayers
+//sameFolderImports - not GWT import - same folder const PlayerOwnedRTSLayers
 export class NullRTSLayer extends NullPathFindingLayer {
     getName() {
         throw new RuntimeException();

@@ -17,7 +17,7 @@ import { DamageUtil } from '../../../../../org/allbinary/game/combat/damage/Dama
 //not GWT import const CollidableCompositeLayer
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
-//not GWT import - same folder const CollidableDestroyableDamageableLayer
+//sameFolderImports - not GWT import - same folder const CollidableDestroyableDamageableLayer
 export class CollidableDestroyableDamageableBehavior extends CollidableBaseBehavior {
     constructor(collidable) {
         super(collidable);
@@ -35,9 +35,9 @@ export class CollidableDestroyableDamageableBehavior extends CollidableBaseBehav
     }
     //@Throws(Exception.constructor)
     collide(ownerLayer, collidableInterfaceCompositeInterface) {
-        var ownerCollidableDestroyableDamageableLayer = ownerLayer;
+        let ownerCollidableDestroyableDamageableLayer = ownerLayer;
         ;
-        var collidableDestroyableDamageableLayer = collidableInterfaceCompositeInterface;
+        let collidableDestroyableDamageableLayer = collidableInterfaceCompositeInterface;
         ;
         ownerCollidableDestroyableDamageableLayer.damage(collidableDestroyableDamageableLayer.getDamage(0), 0);
     }

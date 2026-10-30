@@ -27,7 +27,7 @@ import { ActivityFractureUtilAPI5 } from '../../../../../org/allbinary/android/a
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ActivityFractureInputUtilFactory extends Object {
     static getInstance() {
-        var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
+        let SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
         ;
         if (SDK_VERSION <= 4) {
             //if statement needs to be on the same line and ternary does not work the same way.

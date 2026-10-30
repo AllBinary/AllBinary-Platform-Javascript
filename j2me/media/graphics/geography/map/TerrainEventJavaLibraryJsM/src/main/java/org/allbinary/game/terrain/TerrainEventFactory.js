@@ -18,7 +18,7 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not GWT import const AllBinaryEventObjectFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TerrainEvent } from './TerrainEvent.js';
-//not GWT import - same folder const TerrainEvent
+//sameFolderImports - not GWT import - same folder const TerrainEvent
 export class TerrainEventFactory extends Object {
     constructor() {
         super();

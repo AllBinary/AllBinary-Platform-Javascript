@@ -13,9 +13,9 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
-//not GWT import - same folder const ItemPaintableFactory
+//sameFolderImports - not GWT import - same folder const ItemPaintableFactory
 import { LockablePaintable } from './LockablePaintable.js';
-//not GWT import - same folder const PaintableForm
+//sameFolderImports - not GWT import - same folder const PaintableForm
 export class LockableFormPaintableFactory extends ItemPaintableFactory {
     constructor(lockedIndex) {
         super();

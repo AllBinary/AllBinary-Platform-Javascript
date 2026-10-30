@@ -14,9 +14,9 @@
 //not GWT import const PlatformTextureBaseFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLImageFactory } from './OpenGLImageFactory.js';
-//not GWT import - same folder const OpenGLImageFactory
+//sameFolderImports - not GWT import - same folder const OpenGLImageFactory
 import { OpenGLESGL10Image } from './OpenGLESGL10Image.js';
-//not GWT import - same folder const OpenGLESGL10Image
+//sameFolderImports - not GWT import - same folder const OpenGLESGL10Image
 export class OpenGLESGL10ImageFactory extends OpenGLImageFactory {
     getInstance(image, bitmapFactory, textureFactory) {
         //if statement needs to be on the same line and ternary does not work the same way.

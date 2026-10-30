@@ -18,7 +18,7 @@ import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/ev
 //not GWT import const BasicEventHandler
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const GameNotificationEvent
+//sameFolderImports - not GWT import - same folder const GameNotificationEvent
 export class GameNotificationEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -30,9 +30,9 @@ export class GameNotificationEventHandler extends BasicEventHandler {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     removeAllListeners() {
-        var eventListenerInterface = NullEventListener.NULL_EVENT_LISTENER;
+        let eventListenerInterface = NullEventListener.NULL_EVENT_LISTENER;
         ;
-        var list = this.eventListenerInterfaceList;
+        let list = this.eventListenerInterfaceList;
         ;
         if (list.size() > 0) {
             eventListenerInterface = list.objectArray[0];
@@ -48,7 +48,7 @@ export class GameNotificationEventHandler extends BasicEventHandler {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var gameNotificationListenerInterface = eventListenerInterface;
+        let gameNotificationListenerInterface = eventListenerInterface;
         ;
         gameNotificationListenerInterface.onGameNotificationEvent(eventObject);
     }

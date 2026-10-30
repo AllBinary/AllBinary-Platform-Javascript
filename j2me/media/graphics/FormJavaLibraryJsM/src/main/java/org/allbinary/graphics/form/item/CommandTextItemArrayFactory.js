@@ -31,36 +31,36 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommandTextItem } from './CommandTextItem.js';
-//not GWT import - same folder const ABCustomItem
+//sameFolderImports - not GWT import - same folder const ABCustomItem
 export class CommandTextItemArrayFactory extends Object {
     constructor(visitorInterface) {
         super();
         this.list = new BasicArrayListD();
         this.visitorInterface = visitorInterface;
     }
-    getInstance(vector = {}, backgroundBasicColor, foregroundBasicColor) {
-        var vectorUtil = VectorUtil.getInstance();
+    getInstance(vector, backgroundBasicColor, foregroundBasicColor) {
+        let vectorUtil = VectorUtil.getInstance();
         ;
-        var size = vectorUtil.getSize(vector);
+        let size = vectorUtil.getSize(vector);
         ;
         this.list.clear();
-        var textItem;
+        let textItem;
         ;
-        var priorityLimit = 7;
+        let priorityLimit = 7;
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var isLargeEnoughDisplayForBigMenu = (displayInfo.isPortrait() && displayInfo.getLastHeight() >= ScreenInfo.getInstance().MEDIUM_WIDTH) || (!displayInfo.isPortrait() && displayInfo.getLastWidth() >= ScreenInfo.getInstance().MEDIUM_WIDTH);
+        let isLargeEnoughDisplayForBigMenu = (displayInfo.isPortrait() && displayInfo.getLastHeight() >= ScreenInfo.getInstance().MEDIUM_WIDTH) || (!displayInfo.isPortrait() && displayInfo.getLastWidth() >= ScreenInfo.getInstance().MEDIUM_WIDTH);
         ;
         if (!isLargeEnoughDisplayForBigMenu && size > 3) {
             priorityLimit = 3;
         }
-        var command;
+        let command;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             command = vectorUtil.elementAt(vector, index);
             if (command.getPriority() < priorityLimit) {
-                var aBoolean = this.visitorInterface.visit(command);
+                let aBoolean = this.visitorInterface.visit(command);
                 ;
                 if (aBoolean.valueOf()) {
                     textItem = new CommandTextItem(command, ImageItem.LAYOUT_DEFAULT, StringUtil.getInstance().EMPTY_STRING, backgroundBasicColor, foregroundBasicColor);
@@ -68,11 +68,11 @@ export class CommandTextItemArrayFactory extends Object {
                 }
             }
         }
-        var textItemArray = new Array(this.list.size());
+        let textItemArray = new Array(this.list.size());
         ;
-        var size2 = textItemArray.length;
+        let size2 = textItemArray.length;
         ;
-        for (var index = 0; index < size2; index++) {
+        for (let index = 0; index < size2; index++) {
             textItemArray[index] = this.list.objectArray[index];
         }
         //if statement needs to be on the same line and ternary does not work the same way.

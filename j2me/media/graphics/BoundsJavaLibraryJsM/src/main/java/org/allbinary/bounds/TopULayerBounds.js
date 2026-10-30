@@ -14,7 +14,7 @@
 //not GWT import const Rectangle
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerBounds } from './LayerBounds.js';
-//not GWT import - same folder const BoundsVisitorInterface
+//sameFolderImports - not GWT import - same folder const BoundsVisitorInterface
 export class TopULayerBounds extends LayerBounds {
     constructor(rectangle) {
         super(rectangle);

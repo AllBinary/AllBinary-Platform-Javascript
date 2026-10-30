@@ -20,7 +20,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //ActualPlatform
 /*actual*/ export class Memory extends Object {
     /*actual*/ static getInfo() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Memory: Free: ");
         stringBuffer.appendlong(Runtime.getRuntime().freeMemory());

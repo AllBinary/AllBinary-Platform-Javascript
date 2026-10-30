@@ -18,14 +18,14 @@ import { GameConfigurationCentral } from '../../../org/allbinary/game/configurat
 import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
 //not GWT import const AngleFactory
 import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
-//not GWT import - same folder const ProceduralAnimationInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const ProceduralAnimationInterfaceFactoryInterface
 import { NullRotationAnimation } from './NullRotationAnimation.js';
-//not GWT import - same folder const NullRotationAnimation
+//sameFolderImports - not GWT import - same folder const NullRotationAnimation
 import { AnimationBehavior } from './AnimationBehavior.js';
-//not GWT import - same folder const Animation
+//sameFolderImports - not GWT import - same folder const Animation
 export class RotationAnimationFactory extends Object {
     static createFactory() {
-        var totalAngle = AngleFactory.getInstance().TOTAL_ANGLE;
+        let totalAngle = AngleFactory.getInstance().TOTAL_ANGLE;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new RotationAnimationFactory(totalAngle, (totalAngle / GameConfigurationCentral.getInstance().getGameControlFidelity()));

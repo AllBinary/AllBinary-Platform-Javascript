@@ -23,21 +23,21 @@ export class ScrollOverImmediateAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var x = ownerLayerInterface.getXP();
+        let x = ownerLayerInterface.getXP();
         ;
-        var y = ownerLayerInterface.getYP();
+        let y = ownerLayerInterface.getYP();
         ;
-        var x2 = ownerLayerInterface.getX2();
+        let x2 = ownerLayerInterface.getX2();
         ;
-        var y2 = ownerLayerInterface.getY2();
+        let y2 = ownerLayerInterface.getY2();
         ;
-        var width = ownerLayerInterface.getWidth();
+        let width = ownerLayerInterface.getWidth();
         ;
-        var height = ownerLayerInterface.getHeight();
+        let height = ownerLayerInterface.getHeight();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         if (x2 > displayInfo.getLastWidth()) {
             ownerLayerInterface.setPosition(0, y, ownerLayerInterface.getZP());

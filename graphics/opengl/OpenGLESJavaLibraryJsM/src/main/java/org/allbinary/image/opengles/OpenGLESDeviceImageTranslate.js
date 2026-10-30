@@ -14,7 +14,7 @@
 //not GWT import const GL10
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLESImageTranslate } from './OpenGLESImageTranslate.js';
-//not GWT import - same folder const OpenGLESImage
+//sameFolderImports - not GWT import - same folder const OpenGLESImage
 export class OpenGLESDeviceImageTranslate extends OpenGLESImageTranslate {
     constructor() {
         super(...arguments);

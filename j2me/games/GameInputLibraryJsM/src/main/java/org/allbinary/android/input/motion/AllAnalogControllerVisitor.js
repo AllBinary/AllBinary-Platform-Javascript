@@ -18,14 +18,14 @@ import { AnalogLocationInputFactory } from '../../../../../org/allbinary/game/in
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnalogControllerVisitor } from './AnalogControllerVisitor.js';
-//not GWT import - same folder const AnalogLocationInputProcessor
+//sameFolderImports - not GWT import - same folder const AnalogLocationInputProcessor
 export class AllAnalogControllerVisitor extends AnalogControllerVisitor {
     process(allbinaryLayerManager, analogLocationInputProcessor) {
-        var analogLocationInputList = AnalogLocationInputFactory.getInstance().getList();
+        let analogLocationInputList = AnalogLocationInputFactory.getInstance().getList();
         ;
-        var analogLocationInput;
+        let analogLocationInput;
         ;
-        for (var index = analogLocationInputList.size() - 1; index >= 0; index--) {
+        for (let index = analogLocationInputList.size() - 1; index >= 0; index--) {
             analogLocationInput = analogLocationInputList.get(index);
             analogLocationInputProcessor.process(allbinaryLayerManager, analogLocationInput);
         }

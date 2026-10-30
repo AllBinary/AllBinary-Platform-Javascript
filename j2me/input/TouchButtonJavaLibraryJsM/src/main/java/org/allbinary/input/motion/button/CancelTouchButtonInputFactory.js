@@ -17,9 +17,9 @@ import { InputFactory } from '../../../../../org/allbinary/game/input/InputFacto
 //not GWT import const InputFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const TouchButtonInput
+//sameFolderImports - not GWT import - same folder const TouchButtonInput
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
-//not GWT import - same folder const BasicTouchInputFactory
+//sameFolderImports - not GWT import - same folder const BasicTouchInputFactory
 export class CancelTouchButtonInputFactory extends Object {
     static getInstance() {
         if (CancelTouchButtonInputFactory.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -31,9 +31,9 @@ export class CancelTouchButtonInputFactory extends Object {
     constructor() {
         super();
         this.cancelInputArray = new Array(InputFactory.getInstance().MAX);
-        var basicTouchInputFactory = BasicTouchInputFactory.getInstance();
+        let basicTouchInputFactory = BasicTouchInputFactory.getInstance();
         ;
-        for (var index = this.cancelInputArray.length - 1; index >= 0; index--) {
+        for (let index = this.cancelInputArray.length - 1; index >= 0; index--) {
             this.cancelInputArray[index] = basicTouchInputFactory.NONE;
         }
         this.cancelInputArray[basicTouchInputFactory.UP.getSourceId()] = basicTouchInputFactory.DOWN;

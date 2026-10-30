@@ -23,22 +23,22 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeatureFactory
+//sameFolderImports - not GWT import - same folder const OpenGLFeatureFactory
 export class OpenGLOptions extends Object {
     init() {
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
         if (Features.getInstance().isFeature(openGLFeatureFactory.OPENGL_OPTIONS)) {
-            var openGLMultipleList = new BasicArrayListD();
+            let openGLMultipleList = new BasicArrayListD();
             ;
             openGLMultipleList.add(openGLFeatureFactory.OPENGL);
             GameFeatureChoiceGroups.getMultipleInstance().add("OpenGL (Complete Restart)", openGLMultipleList);
-            var openGLVersionSelectorMultipleList = new BasicArrayListD();
+            let openGLVersionSelectorMultipleList = new BasicArrayListD();
             ;
             openGLVersionSelectorMultipleList.add(openGLFeatureFactory.OPENGL_AUTO_SELECT);
             openGLVersionSelectorMultipleList.add(openGLFeatureFactory.OPENGL_MINIMUM);
             GameFeatureChoiceGroups.getExclusiveInstance().add("OpenGL Version Selector", openGLVersionSelectorMultipleList);
-            var openGLImageColorMultipleList = new BasicArrayListD();
+            let openGLImageColorMultipleList = new BasicArrayListD();
             ;
             openGLImageColorMultipleList.add(openGLFeatureFactory.IMAGE_COLOR_DEPTH_4444);
             openGLImageColorMultipleList.add(openGLFeatureFactory.IMAGE_COLOR_DEPTH_8888);

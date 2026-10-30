@@ -29,7 +29,7 @@ export class ScoreHudWidget extends NumberStringHud {
         this.updateMaxHeight = 14;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.updateMaxWidth = font.getSize() * 5;
         super.updateMeasurement(graphics);

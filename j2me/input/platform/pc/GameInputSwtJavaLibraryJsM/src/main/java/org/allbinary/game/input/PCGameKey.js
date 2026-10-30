@@ -16,12 +16,12 @@
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Input } from './Input.js';
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const InputFactory
+//sameFolderImports - not GWT import - same folder const InputFactory
 export class PCGameKey extends Input {
     static getString(keyCode) {
-        var input = InputFactory.getInstance().getInstanceById(keyCode);
+        let input = InputFactory.getInstance().getInstanceById(keyCode);
         ;
         if (input !=
             null) {
@@ -37,7 +37,7 @@ export class PCGameKey extends Input {
     constructor(keyCode, name) {
         super(keyCode, name);
         //For kotlin this is before the body of the constructor.
-        var id = this.getId();
+        let id = this.getId();
         ;
         if (id >= 0) {
             InputFactory.getInstance().add(id, this);

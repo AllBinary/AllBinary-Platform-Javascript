@@ -14,7 +14,7 @@
 //not GWT import const Layer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LinePathAnimation } from './LinePathAnimation.js';
-//not GWT import - same folder const LinePathAnimation
+//sameFolderImports - not GWT import - same folder const LinePathAnimation
 export class LinePathRelativeAnimation extends LinePathAnimation {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

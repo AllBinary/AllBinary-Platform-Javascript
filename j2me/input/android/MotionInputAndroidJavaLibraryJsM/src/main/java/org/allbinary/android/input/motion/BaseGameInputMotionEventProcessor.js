@@ -22,7 +22,7 @@ import { MotionGestureReceiveInterfaceFactory } from '../../../../../org/allbina
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionEventProcessor } from './MotionEventProcessor.js';
-//not GWT import - same folder const MotionEventProcessor
+//sameFolderImports - not GWT import - same folder const MotionEventProcessor
 export class BaseGameInputMotionEventProcessor extends MotionEventProcessor {
     constructor() {
         super();
@@ -33,7 +33,7 @@ export class BaseGameInputMotionEventProcessor extends MotionEventProcessor {
     process(motionEvent) {
     }
     addListener() {
-        var motionGesturesHandler = BasicMotionGesturesHandler.getInstance();
+        let motionGesturesHandler = BasicMotionGesturesHandler.getInstance();
         ;
         motionGesturesHandler.addListenerInterface(this.gameMotionGestureListener);
     }

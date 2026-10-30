@@ -20,7 +20,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const CacheableInterface
+//sameFolderImports - not GWT import - same folder const CacheableInterface
 export class AbstractArrayListPool extends Object {
     constructor(cacheableInterfaceFactoryInterface) {
         super();
@@ -33,7 +33,7 @@ export class AbstractArrayListPool extends Object {
         throw new Exception(this.commonStrings.NOT_IMPLEMENTED);
     }
     //@Throws(Exception.constructor)
-    remove(key = {}) {
+    remove(key) {
         throw new Exception(this.commonStrings.NOT_IMPLEMENTED);
     }
     //@Throws(Exception.constructor)
@@ -42,7 +42,7 @@ export class AbstractArrayListPool extends Object {
     }
     //@Throws(Exception.constructor)
     addArray(cacheableInterfaces) {
-        for (var index = 0; index < cacheableInterfaces.length; index++) {
+        for (let index = 0; index < cacheableInterfaces.length; index++) {
             this.buffers.add(cacheableInterfaces[index]);
         }
     }

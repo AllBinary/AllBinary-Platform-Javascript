@@ -26,7 +26,7 @@ export class GeologicalResource extends Object {
         this.setTotal(this.initTotal);
     }
     add(value) {
-        var max = Integer.MAX_VALUE;
+        let max = Integer.MAX_VALUE;
         ;
         if (this.getTotal() + value > max) {
             this.setTotal(max);

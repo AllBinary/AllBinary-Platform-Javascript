@@ -24,7 +24,7 @@ export class SimultaneousCompoundIndexAnimation extends IndexedAnimation {
         this.animationInterfaceArray = animationInterfaceArray;
     }
     setFrame(frameIndex) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].setFrame(frameIndex);
         }
     }
@@ -45,13 +45,13 @@ export class SimultaneousCompoundIndexAnimation extends IndexedAnimation {
         ;
     }
     previousFrame() {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].previousFrame();
         }
     }
     //@Throws(Exception.constructor)
     nextFrame() {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].nextFrame();
         }
     }
@@ -63,18 +63,18 @@ export class SimultaneousCompoundIndexAnimation extends IndexedAnimation {
         ;
     }
     paintXY(graphics, x, y) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].paintXY(graphics, x, y);
         }
     }
     paintThreedXYZ(graphics, x, y, z) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].paintThreedXYZ(graphics, x, y, z);
         }
     }
     //@Throws(Exception.constructor)
     set(gl) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].set(gl);
         }
     }

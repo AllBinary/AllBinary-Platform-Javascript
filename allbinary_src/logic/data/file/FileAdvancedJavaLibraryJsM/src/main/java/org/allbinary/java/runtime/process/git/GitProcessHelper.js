@@ -30,7 +30,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProcessBuilder } from './ProcessBuilder.js';
-//not GWT import - same folder const Process
+//sameFolderImports - not GWT import - same folder const Process
 //Do not use this instead just skip target, build, Application paths.
 export class GitProcessHelper extends Object {
     static getInstance() {
@@ -40,38 +40,45 @@ export class GitProcessHelper extends Object {
     constructor() {
         super();
         this.trackedStrings = TrackedStrings.getInstance();
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var THIS_IS_SLOW = "This is slow consider path exclusion instead";
+        let THIS_IS_SLOW = "This is slow consider path exclusion instead";
         ;
         logUtil.putF(THIS_IS_SLOW, this, commonStrings.CONSTRUCTOR);
     }
+    trackedFiles(...args) {
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
+            return this.trackedFiles$overload1(args[0], args[1]);
+        if (args.length === 3 && typeof args[0] === 'string' && typeof args[1] === 'string' && typeof args[2] === 'string')
+            return this.trackedFiles$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: trackedFiles');
+    }
     //@Throws(IOException.constructor, InterruptedException.constructor)
-    trackedFiles(rootAsString, pathspec) {
+    trackedFiles$overload1(rootAsString, pathspec) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.trackedFiles(rootAsString, pathspec, ".java");
         ;
     }
     //@Throws(IOException.constructor, InterruptedException.constructor)
-    trackedFiles(rootAsString, pathspec, suffix) {
-        var process = new ProcessBuilder(this.trackedStrings.GIT_COMMAND, this.trackedStrings.CHANGE_DIRECTORY_OPTION, rootAsString, this.trackedStrings.LIST_FILES_COMMAND, this.trackedStrings.SEP_BY_NULL_CHAR_INSTEAD_OF_NEW_LINE, this.trackedStrings.PATHSPEC_SEPARATOR, pathspec).redirectError(ProcessBuilder.Redirect.INHERIT).start();
+    trackedFiles$overload2(rootAsString, pathspec, suffix) {
+        let process = new ProcessBuilder(this.trackedStrings.GIT_COMMAND, this.trackedStrings.CHANGE_DIRECTORY_OPTION, rootAsString, this.trackedStrings.LIST_FILES_COMMAND, this.trackedStrings.SEP_BY_NULL_CHAR_INSTEAD_OF_NEW_LINE, this.trackedStrings.PATHSPEC_SEPARATOR, pathspec).redirectError(ProcessBuilder.Redirect.INHERIT).start();
         ;
-        var output = process.getInputStream().readAllBytes();
+        let output = process.getInputStream().readAllBytes();
         ;
-        var exitCode = process.waitFor();
+        let exitCode = process.waitFor();
         ;
         if (exitCode != 0) {
             throw new IllegalStateException(new StringMaker().append("git ls-files failed for ").append(rootAsString).append(" with exit code ").appendint(exitCode).toString());
         }
-        var files = new ArrayList();
+        let files = new ArrayList();
         ;
-        var start = 0;
+        let start = 0;
         ;
-        var relativePath;
+        let relativePath;
         ;
-        for (var index = 0; index < output.length; index++) {
+        for (let index = 0; index < output.length; index++) {
             if (output[index] == 0) {
                 relativePath = String.fromCharCode(...output);
                 if (relativePath.endsWith(suffix)) {
@@ -85,20 +92,22 @@ export class GitProcessHelper extends Object {
     }
     isTracked(file) {
         try {
-            var nativeFile = AbFileNativeUtil.get(file);
+            let nativeFile = AbFileNativeUtil.get(file);
             ;
-            var parentFile = nativeFile.getParentFile();
+            let parentFile = nativeFile.getParentFile();
             ;
-            var process = new ProcessBuilder(this.trackedStrings.GIT_COMMAND, this.trackedStrings.CHANGE_DIRECTORY_OPTION, parentFile.getPath(), this.trackedStrings.LIST_FILES_COMMAND, this.trackedStrings.ERROR_UNMATCH_OPTION, this.trackedStrings.PATHSPEC_SEPARATOR, nativeFile.getName()).redirectErrorStream(true).start();
+            let process = new ProcessBuilder(this.trackedStrings.GIT_COMMAND, this.trackedStrings.CHANGE_DIRECTORY_OPTION, parentFile.getPath(), this.trackedStrings.LIST_FILES_COMMAND, this.trackedStrings.ERROR_UNMATCH_OPTION, this.trackedStrings.PATHSPEC_SEPARATOR, nativeFile.getName()).redirectErrorStream(true).start();
             ;
             process.getInputStream().readAllBytes();
             //if statement needs to be on the same line and ternary does not work the same way.
             return process.waitFor() == 0;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
 }

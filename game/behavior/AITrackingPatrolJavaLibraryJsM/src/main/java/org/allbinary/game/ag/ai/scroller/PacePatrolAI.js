@@ -31,7 +31,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePatrolAI } from './BasePatrolAI.js';
-//not GWT import - same folder const BasePatrolAI
+//sameFolderImports - not GWT import - same folder const BasePatrolAI
 export class PacePatrolAI extends BasePatrolAI {
     constructor(hashtable, ownerLayerInterface, gameInput) {
         super(hashtable, ownerLayerInterface, gameInput);
@@ -44,9 +44,9 @@ export class PacePatrolAI extends BasePatrolAI {
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
         this.update();
-        var direction = this.setFiringDirectionForTargetIfInRange();
+        let direction = this.setFiringDirectionForTargetIfInRange();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         if (direction == directionFactory.LEFT) {
             if (this.lastKeyDirection != keyDirection || !this.isFollowLimitedByTerrain) {
@@ -71,34 +71,34 @@ export class PacePatrolAI extends BasePatrolAI {
         }
     }
     setFiringDirectionForTargetIfInRange() {
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var direction = directionFactory.NOT_BORDERED_WITH;
+        let direction = directionFactory.NOT_BORDERED_WITH;
         ;
-        var lastTrackingEvent;
+        let lastTrackingEvent;
         ;
-        var lastTrackingLayerInterface;
+        let lastTrackingLayerInterface;
         ;
-        var directionCompositeInterface;
+        let directionCompositeInterface;
         ;
-        var size = this.trackingList.size();
+        let size = this.trackingList.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             lastTrackingEvent = this.trackingList.get(0);
             lastTrackingLayerInterface = lastTrackingEvent.getLayerInterface();
-            var x = lastTrackingLayerInterface.getXP();
+            let x = lastTrackingLayerInterface.getXP();
             ;
-            var y = lastTrackingLayerInterface.getYP();
+            let y = lastTrackingLayerInterface.getYP();
             ;
-            var yDistance = ownerLayerInterface.getYP() - y - ownerLayerInterface.getHeight();
+            let yDistance = ownerLayerInterface.getYP() - y - ownerLayerInterface.getHeight();
             ;
-            var xDistance = ownerLayerInterface.getXP() - x - ownerLayerInterface.getWidth();
+            let xDistance = ownerLayerInterface.getXP() - x - ownerLayerInterface.getWidth();
             ;
-            var absXDistance = Math.abs(xDistance);
+            let absXDistance = Math.abs(xDistance);
             ;
-            var absYDistance = Math.abs(yDistance);
+            let absYDistance = Math.abs(yDistance);
             ;
             if (absYDistance <= 100) {
                 if (absXDistance < getFiringDistance() / 2) {

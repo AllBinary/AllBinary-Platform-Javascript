@@ -22,11 +22,11 @@ export class TopViewCharacterBehavior extends Object {
     terrainMove(layer, geographicMapInterfaceArray, x, y) {
     }
     hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray) {
-        var size = geographicMapInterfaceArray.length;
+        let size = geographicMapInterfaceArray.length;
         ;
-        var basicTopViewGeographicMapCellTypeFactory;
+        let basicTopViewGeographicMapCellTypeFactory;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             basicTopViewGeographicMapCellTypeFactory = geographicMapInterfaceArray[index].getGeographicMapCellTypeFactory();
             if (basicTopViewGeographicMapCellTypeFactory.BLOCK_CELL_TYPE.isType(geographicMapCellTypeArray[index])) {
                 //if statement needs to be on the same line and ternary does not work the same way.

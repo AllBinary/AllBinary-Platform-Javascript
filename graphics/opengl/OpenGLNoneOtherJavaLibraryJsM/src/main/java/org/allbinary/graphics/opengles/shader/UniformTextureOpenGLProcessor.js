@@ -14,11 +14,11 @@
 //not GWT import const GL10
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLObject3dProcessor } from './OpenGLObject3dProcessor.js';
-//not GWT import - same folder const ShaderComposite
+//sameFolderImports - not GWT import - same folder const ShaderComposite
 export class UniformTextureOpenGLProcessor extends OpenGLObject3dProcessor {
     constructor(shaderComposite, handleIndex) {
         super();
     }
-    process(gl, unused = {}, index) {
+    process(gl, unused, index) {
     }
 }

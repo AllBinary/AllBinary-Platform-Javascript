@@ -28,17 +28,19 @@ export class ThrustAIVisitor extends Visitor {
         this.logUtil = LogUtil.getInstance();
         this.TRUE = BooleanFactory.getInstance().TRUE;
     }
-    visit(anyType = {}) {
+    visit(anyType) {
         try {
-            var basicAI = anyType;
+            let basicAI = anyType;
             ;
             basicAI.processKeyAI(Canvas.UP);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.VISIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.VISIT, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.TRUE;

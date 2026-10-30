@@ -37,19 +37,19 @@ import { ScrollMapEventHandler } from '../../../../org/allbinary/layer/event/Scr
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerGameInput } from './PlayerGameInput.js';
-//not GWT import - same folder const PlayerGameInput
+//sameFolderImports - not GWT import - same folder const PlayerGameInput
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const GameInputProcessor
+//sameFolderImports - not GWT import - same folder const GameInputProcessor
 import { ScrollMapUpGameInputProcessor } from './ScrollMapUpGameInputProcessor.js';
-//not GWT import - same folder const ScrollMapUpGameInputProcessor
+//sameFolderImports - not GWT import - same folder const ScrollMapUpGameInputProcessor
 import { ScrollMapDownGameInputProcessor } from './ScrollMapDownGameInputProcessor.js';
-//not GWT import - same folder const ScrollMapDownGameInputProcessor
+//sameFolderImports - not GWT import - same folder const ScrollMapDownGameInputProcessor
 import { ScrollMapRightGameInputProcessor } from './ScrollMapRightGameInputProcessor.js';
-//not GWT import - same folder const ScrollMapRightGameInputProcessor
+//sameFolderImports - not GWT import - same folder const ScrollMapRightGameInputProcessor
 import { ScrollMapLeftGameInputProcessor } from './ScrollMapLeftGameInputProcessor.js';
-//not GWT import - same folder const ScrollMapLeftGameInputProcessor
+//sameFolderImports - not GWT import - same folder const ScrollMapLeftGameInputProcessor
 import { GameInputProcessorUtil } from './GameInputProcessorUtil.js';
-//not GWT import - same folder const GameInputProcessorUtil
+//sameFolderImports - not GWT import - same folder const GameInputProcessorUtil
 export class ScrollMapPlayerGameInput extends PlayerGameInput {
     constructor(geographicMapInterface, list, playerInputId) {
         super(list, new BasicArrayListD(), playerInputId);
@@ -67,7 +67,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     move(dx, dy) {
-        var terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
+        let terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
         ;
         terrainTiledLayer.moveDXY(-dx, -dy);
         this.scrollMapEvent.setDxDy(-dx, -dy);
@@ -79,40 +79,40 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     scrollMiddleX() {
-        var terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
+        let terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         this.move(-terrainTiledLayer.getXP(), 0);
         if (terrainTiledLayer.getWidth() < displayInfo.getLastWidth()) {
-            var diffX = ((displayInfo.getLastWidth() - terrainTiledLayer.getWidth()) >> 1);
+            let diffX = ((displayInfo.getLastWidth() - terrainTiledLayer.getWidth()) >> 1);
             ;
             this.move(-diffX, 0);
         }
         else {
-            var diffX = ((terrainTiledLayer.getWidth() - displayInfo.getLastWidth()) >> 1);
+            let diffX = ((terrainTiledLayer.getWidth() - displayInfo.getLastWidth()) >> 1);
             ;
             this.move(diffX, 0);
         }
     }
     //@Throws(Exception.constructor)
     scrollY(anchor) {
-        var terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
+        let terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         if (anchor == Graphics.TOP) {
             this.logUtil.putF("Top", this, "scrollY");
         }
         else if (anchor == Graphics.BOTTOM) {
             this.logUtil.putF("Bottom", this, "scrollY");
-            var diffY = (terrainTiledLayer.getHeight() - displayInfo.getLastHeight());
+            let diffY = (terrainTiledLayer.getHeight() - displayInfo.getLastHeight());
             ;
             this.move(0, diffY);
         }
         else if (anchor == Graphics.VCENTER) {
             this.logUtil.putF("Center", this, "scrollY");
-            var diffY = (terrainTiledLayer.getHeight() - displayInfo.getLastHeight()) / 2;
+            let diffY = (terrainTiledLayer.getHeight() - displayInfo.getLastHeight()) / 2;
             ;
             this.move(0, diffY);
         }
@@ -122,7 +122,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     up() {
-        var y = this.geographicMapInterface.getAllBinaryTiledLayer().getYP() - 10;
+        let y = this.geographicMapInterface.getAllBinaryTiledLayer().getYP() - 10;
         ;
         if (this.keepOnMapMinY(y)) {
             this.move(0, -10);
@@ -130,7 +130,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     down() {
-        var y = -this.geographicMapInterface.getAllBinaryTiledLayer().getYP() + 10;
+        let y = -this.geographicMapInterface.getAllBinaryTiledLayer().getYP() + 10;
         ;
         if (this.keepOnMapMaxY(y)) {
             this.move(0, 10);
@@ -138,7 +138,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     right() {
-        var x = this.geographicMapInterface.getAllBinaryTiledLayer().getYP() + 10;
+        let x = this.geographicMapInterface.getAllBinaryTiledLayer().getYP() + 10;
         ;
         if (this.keepOnMapMinX(x)) {
             this.move(10, 0);
@@ -146,7 +146,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
     }
     //@Throws(Exception.constructor)
     left() {
-        var x = -this.geographicMapInterface.getAllBinaryTiledLayer().getYP() - 10;
+        let x = -this.geographicMapInterface.getAllBinaryTiledLayer().getYP() - 10;
         ;
         if (this.keepOnMapMaxX(x)) {
             this.move(-10, 0);
@@ -166,12 +166,12 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
     //@Throws(Exception.constructor)
     processInput(layerManager) {
         try {
-            var size = this.inputList.size();
+            let size = this.inputList.size();
             ;
-            var key = 0;
+            let key = 0;
             ;
-            for (var index = 0; index < size; index++) {
-                var gameKeyEvent = this.inputList.get(index);
+            for (let index = 0; index < size; index++) {
+                let gameKeyEvent = this.inputList.get(index);
                 ;
                 key = gameKeyEvent.getKey();
                 this.processInputKey(key);
@@ -182,16 +182,18 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
             else {
                 this.update();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.PROCESS_INPUT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.PROCESS_INPUT, e);
+            }
         }
     }
     getSpecialHeight() {
-        var terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
+        let terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         if (terrainTiledLayer.getHeight() > displayInfo.getLastHeight()) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -203,9 +205,9 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
         }
     }
     getSpecialWidth() {
-        var terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
+        let terrainTiledLayer = this.geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         if (terrainTiledLayer.getWidth() > displayInfo.getLastWidth()) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -217,7 +219,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
         }
     }
     keepOnMapMaxY(newY) {
-        var y = this.geographicMapInterface.getAllBinaryTiledLayer().getYP();
+        let y = this.geographicMapInterface.getAllBinaryTiledLayer().getYP();
         ;
         if (y > this.maxBottom + this.border) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -229,7 +231,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
         }
     }
     keepOnMapMinY(newY) {
-        var y = this.geographicMapInterface.getAllBinaryTiledLayer().getYP();
+        let y = this.geographicMapInterface.getAllBinaryTiledLayer().getYP();
         ;
         if (y < -this.border) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -241,7 +243,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
         }
     }
     keepOnMapMaxX(newX) {
-        var x = this.geographicMapInterface.getAllBinaryTiledLayer().getXP();
+        let x = this.geographicMapInterface.getAllBinaryTiledLayer().getXP();
         ;
         if (x < -this.maxRight - this.border) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -253,7 +255,7 @@ export class ScrollMapPlayerGameInput extends PlayerGameInput {
         }
     }
     keepOnMapMinX(newX) {
-        var x = this.geographicMapInterface.getAllBinaryTiledLayer().getXP();
+        let x = this.geographicMapInterface.getAllBinaryTiledLayer().getXP();
         ;
         if (x > this.border) {
             //if statement needs to be on the same line and ternary does not work the same way.

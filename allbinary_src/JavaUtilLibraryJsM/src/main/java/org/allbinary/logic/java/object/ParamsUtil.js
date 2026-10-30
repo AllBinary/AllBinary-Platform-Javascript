@@ -20,9 +20,9 @@ export class ParamsUtil extends Object {
     static viewParams(params) {
         if (params !=
             null) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            for (var index = 0; index < params.length; index++) {
+            for (let index = 0; index < params.length; index++) {
                 stringBuffer.append(" ");
                 stringBuffer.append(params[index].getName());
             }

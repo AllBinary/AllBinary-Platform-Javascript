@@ -20,7 +20,7 @@ import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveInt
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RotationAnimation } from './RotationAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class VectorBaseRotationAnimation extends RotationAnimation {
     constructor(angleInfo, currentPoints, basicColor, animationBehavior) {
         super(angleInfo, CircularIndexUtil.createInstance(360 / angleInfo.getAngleIncrementInfo().getAngleIncrement()), animationBehavior);
@@ -63,19 +63,19 @@ export class VectorBaseRotationAnimation extends RotationAnimation {
     paintXY(graphics, x, y) {
         this.basicSetColorUtil.setBasicColorP(graphics, this.basicColor);
         try {
-            var nextPointX = 0;
+            let nextPointX = 0;
             ;
-            var nextPointY = 0;
+            let nextPointY = 0;
             ;
-            var nextPoint;
+            let nextPoint;
             ;
-            var point;
+            let point;
             ;
-            var currentPointsFrame = this.currentPoints[this.circularIndexUtil.getIndex()];
+            let currentPointsFrame = this.currentPoints[this.circularIndexUtil.getIndex()];
             ;
-            var size = currentPointsFrame.length;
+            let size = currentPointsFrame.length;
             ;
-            var index = size - 2;
+            let index = size - 2;
             ;
             while (--index >= 0) {
                 nextPoint = currentPointsFrame[index];
@@ -89,10 +89,12 @@ export class VectorBaseRotationAnimation extends RotationAnimation {
                     index--;
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "paintVectors", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "paintVectors", e);
+            }
         }
     }
     getPoints(frame) {

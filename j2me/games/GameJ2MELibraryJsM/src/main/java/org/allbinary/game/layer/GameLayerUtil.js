@@ -18,9 +18,9 @@ import { DisplayInfoSingleton } from '../../../../org/allbinary/graphics/display
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameLayerUtil extends Object {
     static isOnScreen(layer) {
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var viewPosition = layer.getViewPosition();
+        let viewPosition = layer.getViewPosition();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return GameLayerUtil.isInside(viewPosition.getX(), viewPosition.getY(), viewPosition.getX2(), viewPosition.getY2(), 0, 0, displayInfo.getLastWidth(), displayInfo.getLastHeight());

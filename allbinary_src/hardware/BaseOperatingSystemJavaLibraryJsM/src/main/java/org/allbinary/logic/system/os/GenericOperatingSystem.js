@@ -23,7 +23,7 @@ import { StringValidationUtil } from '../../../../../org/allbinary/logic/string/
 //not GWT import const StringValidationUtil
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const OperatingSystemInterface
+//sameFolderImports - not GWT import - same folder const OperatingSystemInterface
 //not plain js - same folder import { SystemProperties } 
 const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
 export class GenericOperatingSystem extends Object {
@@ -31,11 +31,11 @@ export class GenericOperatingSystem extends Object {
         super();
         this.characterSet = new CharacterSet();
         this.scalable = false;
-        var systemProperties = SystemProperties.getInstance();
+        let systemProperties = SystemProperties.getInstance();
         ;
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
-        var EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
+        let EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
         ;
         if (stringValidationUtil.isEmpty(systemProperties.getName())) {
             this.osName = EMPTY_STRING;
@@ -93,9 +93,9 @@ export class GenericOperatingSystem extends Object {
         return false;
     }
     toString() {
-        var NEW_LINE = CommonSeps.getInstance().NEW_LINE;
+        let NEW_LINE = CommonSeps.getInstance().NEW_LINE;
         ;
-        var osBuffer = new StringMaker();
+        let osBuffer = new StringMaker();
         ;
         osBuffer.append("Operating System Info: \n");
         osBuffer.append(this.getName());

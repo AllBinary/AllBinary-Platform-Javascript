@@ -20,7 +20,7 @@ import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/Primitive
 //not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageSegmentAnimation } from './ImageSegmentAnimation.js';
-//not GWT import - same folder const ImageSegmentAnimation
+//sameFolderImports - not GWT import - same folder const ImageSegmentAnimation
 export class RightToLeftImageAnimation extends ImageSegmentAnimation {
     constructor(image, animationBehavior) {
         super(image, PrimitiveIntUtil.getArrayInstance(), animationBehavior);

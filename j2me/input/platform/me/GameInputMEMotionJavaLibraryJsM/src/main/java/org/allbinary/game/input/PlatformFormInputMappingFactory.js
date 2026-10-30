@@ -23,7 +23,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import - same folder const GameKeyFactory
+//sameFolderImports - not GWT import - same folder const GameKeyFactory
 export class PlatformFormInputMappingFactory extends Object {
     constructor() {
         super(...arguments);
@@ -40,9 +40,9 @@ export class PlatformFormInputMappingFactory extends Object {
     getOrCreate() {
         try {
             if (this.inputToGameKeyMapping == InputToGameKeyMapping.getNullInstance()) {
-                var inputToGameKeyMapping = new InputToGameKeyMapping();
+                let inputToGameKeyMapping = new InputToGameKeyMapping();
                 ;
-                var gameKeyFactory = GameKeyFactory.getInstance();
+                let gameKeyFactory = GameKeyFactory.getInstance();
                 ;
                 inputToGameKeyMapping.add(gameKeyFactory.UP, gameKeyFactory.UP);
                 inputToGameKeyMapping.add(gameKeyFactory.DOWN, gameKeyFactory.DOWN);
@@ -51,12 +51,14 @@ export class PlatformFormInputMappingFactory extends Object {
                 inputToGameKeyMapping.add(gameKeyFactory.KEY_NUM1, gameKeyFactory.GAME_A);
                 this.inputToGameKeyMapping = inputToGameKeyMapping;
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.inputToGameKeyMapping;

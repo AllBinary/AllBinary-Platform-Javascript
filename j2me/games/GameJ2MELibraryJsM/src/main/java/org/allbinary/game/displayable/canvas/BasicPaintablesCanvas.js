@@ -16,7 +16,7 @@ import { ColorFillPaintableFactory } from '../../../../../org/allbinary/game/pai
 //not GWT import const Paintable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameCommandCanvas } from './GameCommandCanvas.js';
-//not GWT import - same folder const GameCommandCanvas
+//sameFolderImports - not GWT import - same folder const GameCommandCanvas
 export class BasicPaintablesCanvas extends GameCommandCanvas {
     constructor(cmdListener, name, allBinaryGameLayerManager, paintableArray) {
         super(cmdListener, name, allBinaryGameLayerManager.getBackgroundBasicColor(), allBinaryGameLayerManager.getForegroundBasicColor());
@@ -27,7 +27,7 @@ export class BasicPaintablesCanvas extends GameCommandCanvas {
     paint(graphics) {
         this.colorFillPaintable.paint(graphics);
         graphics.setColor(this.foregroundColor);
-        for (var index = this.paintableArray.length - 1; index >= 0; index--) {
+        for (let index = this.paintableArray.length - 1; index >= 0; index--) {
             this.paintableArray[index].paint(graphics);
         }
         super.paint(graphics);

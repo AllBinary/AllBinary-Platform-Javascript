@@ -21,7 +21,7 @@ import { PrimitiveIntUtil } from '../../../org/allbinary/logic/math/PrimitiveInt
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Animation } from './Animation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class IndexedAnimation extends Animation {
     constructor(animationBehavior) {
         super();

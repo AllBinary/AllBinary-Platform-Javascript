@@ -17,13 +17,13 @@ import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CapitalEvent extends AllBinaryEventObject {
-    constructor(anyType = {}) {
+    constructor(anyType) {
         super(anyType);
         this.value = 0;
         //For kotlin this is before the body of the constructor.
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("CapitalEvent: Value: \n");
         stringBuffer.appendint(this.getValue());

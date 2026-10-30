@@ -18,7 +18,7 @@ import { AngleFactory } from '../../../org/allbinary/math/AngleFactory.js';
 //not GWT import const AngleFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DirectionFactory } from './DirectionFactory.js';
-//not GWT import - same folder const Direction
+//sameFolderImports - not GWT import - same folder const Direction
 export class DirectionUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -28,9 +28,9 @@ export class DirectionUtil extends Object {
         super();
         this.directionArray = new Array(10);
         this.directionArray2 = new Array(10);
-        var angleFactory = AngleFactory.getInstance();
+        let angleFactory = AngleFactory.getInstance();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         this.directionArray[directionFactory.LEFT.getValue()] = angleFactory.LEFT;
         this.directionArray[directionFactory.RIGHT.getValue()] = angleFactory.RIGHT;

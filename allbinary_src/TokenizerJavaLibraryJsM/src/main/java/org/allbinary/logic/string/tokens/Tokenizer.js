@@ -45,16 +45,16 @@ export class Tokenizer extends Object {
         this.endSep = endSep;
     }
     getInsideSep(string) {
-        var tokenList = new BasicArrayListD();
+        let tokenList = new BasicArrayListD();
         ;
-        var index = 0;
+        let index = 0;
         ;
-        var size = string.length;
+        let size = string.length;
         ;
         while (index < size) {
             index = string.indexOf(this.sep, index);
             if (index != -1) {
-                var end = string.indexOf(this.endSep, index + this.sep.length);
+                let end = string.indexOf(this.endSep, index + this.sep.length);
                 ;
                 if (end != -1) {
                     tokenList.add(string.substring(index + this.sep.length, end - (this.endSep.length - 1)));
@@ -71,9 +71,9 @@ export class Tokenizer extends Object {
         return tokenList;
     }
     getTokensFromString(string, tokenVector) {
-        var index = 0;
+        let index = 0;
         ;
-        var end = 0;
+        let end = 0;
         ;
         while (index < string.length) {
             end = string.indexOf(this.sep, index);
@@ -90,15 +90,15 @@ export class Tokenizer extends Object {
         return tokenVector;
     }
     getTokens(stringVector) {
-        var tokenHashtable = StdUtil.getInstance().createHashtable();
+        let tokenHashtable = StdUtil.getInstance().createHashtable();
         ;
-        var string = StringUtil.getInstance().EMPTY_STRING;
+        let string = StringUtil.getInstance().EMPTY_STRING;
         ;
-        var end = 0;
+        let end = 0;
         ;
-        var size = stringVector.size();
+        let size = stringVector.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             string = stringVector.objectArray[index];
             end = string.indexOf(this.sep);
             if (end >= 0) {

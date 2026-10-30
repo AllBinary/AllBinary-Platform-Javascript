@@ -28,7 +28,7 @@ export class LayerInterfaceFactoryImageItem extends ABCustomImageItem {
     }
     paintXY(graphics, x, y) {
         super.paintXY(graphics, x, y);
-        for (var index = this.animationArray.length; --index >= 0;) {
+        for (let index = this.animationArray.length; --index >= 0;) {
             this.animationArray[index].paintXY(graphics, x, y);
         }
     }

@@ -28,7 +28,7 @@ import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class MotionGestureEvent extends AllBinaryEventObject {
-    constructor(source = {}, id, motionGesture) {
+    constructor(source, id, motionGesture) {
         super(source);
         this.motionGesture = TouchMotionGestureFactory.getInstance().NO_MOTION;
         this.previousPoint = PointFactory.getInstance().ZERO_ZERO;
@@ -60,9 +60,9 @@ export class MotionGestureEvent extends AllBinaryEventObject {
         this.currentPoint = currentPoint;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         stringBuffer.append(stringUtil.toString(this.motionGesture));
         stringBuffer.append(this.commonLabels.CURRENT);

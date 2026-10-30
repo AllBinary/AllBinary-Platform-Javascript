@@ -25,60 +25,75 @@ export class DomDocumentHelper extends Object {
         System.setProperty("jdk.xml.maxElementDepth", "0");
         System.setProperty("jdk.xml.xpathExprOpLimit", "0");
         System.setProperty("jdk.xml.xpathTotalOpLimit", "0");
-        var LIMIT = "500000";
+        let LIMIT = "500000";
         ;
         System.setProperty("jdk.xml.maxGeneralEntitySizeLimit", LIMIT);
         System.setProperty("jdk.xml.totalEntitySizeLimit", LIMIT);
     }
-    static create() {
+    static create(...args) {
+        if (args.length === 0)
+            return this.create$overload1();
+        if (args.length === 1)
+            return this.create$overload2(args[0]);
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.create$overload3(args[0]);
+        throw new TypeError('No matching overload: create');
+    }
+    static create$overload1() {
         try {
-            var factory = DocumentBuilderFactory.newInstance();
+            let factory = DocumentBuilderFactory.newInstance();
             ;
-            var builder = factory.newDocumentBuilder();
+            let builder = factory.newDocumentBuilder();
             ;
-            var document = builder.newDocument();
+            let document = builder.newDocument();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return document;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
+            }
         }
     }
     //@Throws(Exception.constructor)
-    static create(inputStream) {
+    static create$overload2(inputStream) {
         try {
-            var factory = DocumentBuilderFactory.newInstance();
+            let factory = DocumentBuilderFactory.newInstance();
             ;
-            var builder = factory.newDocumentBuilder();
+            let builder = factory.newDocumentBuilder();
             ;
-            var document = builder.parse(inputStream);
+            let document = builder.parse(inputStream);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return document;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     //@Throws(Exception.constructor)
-    static create(xmlString) {
+    static create$overload3(xmlString) {
         try {
-            var factory = DocumentBuilderFactory.newInstance();
+            let factory = DocumentBuilderFactory.newInstance();
             ;
-            var builder = factory.newDocumentBuilder();
+            let builder = factory.newDocumentBuilder();
             ;
-            var document = builder.parse(new StringBufferInputStream(xmlString));
+            let document = builder.parse(new StringBufferInputStream(xmlString));
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return document;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     constructor() {

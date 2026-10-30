@@ -42,7 +42,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputToGameKeyMapping } from './InputToGameKeyMapping.js';
-//not GWT import - same folder const InputToGameKeyMapping
+//sameFolderImports - not GWT import - same folder const InputToGameKeyMapping
 //GameInputPersistanceLibrary
 export class PersistentInputMapping extends Object {
     static getNullInstance() {
@@ -101,29 +101,31 @@ export class PersistentInputMapping extends Object {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.INIT);
         try {
             this.inputPersistance.loadAll(abeClientInformation);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
-            this.inputPersistance.deleteRecoreStore(abeClientInformation);
-            this.setDefault(abeClientInformation);
-            this.inputPersistance.loadAll(abeClientInformation);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+                this.inputPersistance.deleteRecoreStore(abeClientInformation);
+                this.setDefault(abeClientInformation);
+                this.inputPersistance.loadAll(abeClientInformation);
+            }
         }
-        var list = this.inputPersistance.getList();
+        let list = this.inputPersistance.getList();
         ;
-        var totalMappedTo = 0;
+        let totalMappedTo = 0;
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var hashtable;
+        let hashtable;
         ;
-        var enumeration;
+        let enumeration;
         ;
-        var mappedToInput;
+        let mappedToInput;
         ;
-        var gameActionInput;
+        let gameActionInput;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             hashtable = list.objectArray[index];
             enumeration = hashtable.keys();
             while (this.enumerationUtil.hasMoreElements(enumeration)) {
@@ -133,7 +135,7 @@ export class PersistentInputMapping extends Object {
                 this.getInputMapping().add(gameActionInput, mappedToInput);
             }
         }
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("End - Total Loaded Keys Mapped: ");
         stringBuffer.appendint(this.getTotalMapped());

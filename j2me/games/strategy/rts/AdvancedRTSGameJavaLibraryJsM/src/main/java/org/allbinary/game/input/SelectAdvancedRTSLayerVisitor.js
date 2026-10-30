@@ -25,27 +25,27 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { Visitor } from '../../../../org/allbinary/logic/util/visitor/Visitor.js';
-//not GWT import - same folder const SelectedRTSLayersPlayerGameInput
+//sameFolderImports - not GWT import - same folder const SelectedRTSLayersPlayerGameInput
 export class SelectAdvancedRTSLayerVisitor extends Visitor {
     constructor(selectedRTSLayersPlayerGameInput) {
         super();
         this.selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput;
     }
-    visit(anyType = {}) {
-        var selectedLayer = anyType;
+    visit(anyType) {
+        let selectedLayer = anyType;
         ;
         if (selectedLayer != CollidableDestroyableDamageableLayer.getNullInstance() && selectedLayer.getType() == BuildingLayer.getStaticType()) {
-            var rtsGameLayer = selectedLayer;
+            let rtsGameLayer = selectedLayer;
             ;
-            var assignWaypointsUtil = AssignWaypointsUtil.getInstance();
+            let assignWaypointsUtil = AssignWaypointsUtil.getInstance();
             ;
-            var list = this.selectedRTSLayersPlayerGameInput.getSelectedBasicArrayList();
+            let list = this.selectedRTSLayersPlayerGameInput.getSelectedBasicArrayList();
             ;
-            var currentRTSLayer;
+            let currentRTSLayer;
             ;
-            var unitLayer;
+            let unitLayer;
             ;
-            for (var index = list.size() - 1; index >= 0; index--) {
+            for (let index = list.size() - 1; index >= 0; index--) {
                 currentRTSLayer = list.get(index);
                 if (currentRTSLayer.getType() == UnitLayer.getStaticType()) {
                     unitLayer = currentRTSLayer;

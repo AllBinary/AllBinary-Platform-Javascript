@@ -27,7 +27,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageCopyUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,7 +56,7 @@ export class ImageCopyUtil extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return originalImage;
         }
-        var image = this.imageCreationUtil.createImageWH(originalImage.getWidth(), originalImage.getHeight());
+        let image = this.imageCreationUtil.createImageWH(originalImage.getWidth(), originalImage.getHeight());
         ;
         if (image.isMutable()) {
             image.getGraphics().drawImage(originalImage, 0, 0, this.anchor);
@@ -74,9 +74,9 @@ export class ImageCopyUtil extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return originalImage;
         }
-        var newWidth = Math.round((originalImage.getWidth() * canvasScale));
+        let newWidth = globalThis.Math.trunc((originalImage.getWidth() * canvasScale));
         ;
-        var newHeight = Math.round((originalImage.getHeight() * canvasScale));
+        let newHeight = globalThis.Math.trunc((originalImage.getHeight() * canvasScale));
         ;
         if (resize) {
             if (newWidth < newHeight) {
@@ -86,14 +86,14 @@ export class ImageCopyUtil extends Object {
                 newHeight = newWidth;
             }
         }
-        var image = this.imageCreationUtil.createImageWH(newWidth, newHeight);
+        let image = this.imageCreationUtil.createImageWH(newWidth, newHeight);
         ;
         if (image.isMutable()) {
-            var halfWidthDelta = (newWidth - originalImage.getWidth()) / 2;
+            let halfWidthDelta = (newWidth - originalImage.getWidth()) / 2;
             ;
-            var halfHeightDelta = (newHeight - originalImage.getHeight()) / 2;
+            let halfHeightDelta = (newHeight - originalImage.getHeight()) / 2;
             ;
-            var graphics = image.getGraphics();
+            let graphics = image.getGraphics();
             ;
             graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, this.anchor);
             //if statement needs to be on the same line and ternary does not work the same way.

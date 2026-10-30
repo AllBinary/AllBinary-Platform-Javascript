@@ -52,9 +52,9 @@ import { DropCellPositionHistory } from '../../../../../org/allbinary/media/grap
 //not GWT import const RaceTrackGeographicMapCellTypeFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import - same folder const RTSFormInput
+//sameFolderImports - not GWT import - same folder const RTSFormInput
 import { PrimaryWaypointHelper } from './PrimaryWaypointHelper.js';
-//not GWT import - same folder const PrimaryWaypointHelper
+//sameFolderImports - not GWT import - same folder const PrimaryWaypointHelper
 export class WaypointRTSFormInput extends RTSFormInput {
     constructor(groupInterface, isPrimaryWaypointCreator) {
         super(groupInterface);
@@ -62,9 +62,9 @@ export class WaypointRTSFormInput extends RTSFormInput {
         this.stickyAssociatedRtsLayer = NullPathFindingLayer.NULL_PATH_FINDING_LAYER;
         //For kotlin this is before the body of the constructor.
         this.isPrimaryWaypointCreator = isPrimaryWaypointCreator;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
         this.dragToSpotGameNotificationEvent = new GameNotificationEvent(this, RTSGameStrings.getInstance().DRAG_TO_SPOT, smallIntegerSingletonFactory.getAt(2), basicColorFactory.WHITE, BooleanFactory.getInstance().FALSE);
         this.spotTakenGameNotificationEvent = new GameNotificationEvent(this, RTSGameStrings.getInstance().SPOT_TAKEN, smallIntegerSingletonFactory.getAt(2), basicColorFactory.WHITE, BooleanFactory.getInstance().FALSE);
@@ -76,9 +76,9 @@ export class WaypointRTSFormInput extends RTSFormInput {
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
         super.setAllBinaryGameLayerManager(allBinaryGameLayerManager);
-        var geographicMapCompositeInterface = allBinaryGameLayerManager;
+        let geographicMapCompositeInterface = allBinaryGameLayerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
         this.dragToSpotGameNotificationEvent.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
         this.spotTakenGameNotificationEvent.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
@@ -92,17 +92,17 @@ export class WaypointRTSFormInput extends RTSFormInput {
         super.process(layerManager);
         if (this.isStickyItemSelected() || associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance()) {
             if (this.isStickyItemSelected() && associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance()) {
-                var geographicMapCompositeInterface = layerManager;
+                let geographicMapCompositeInterface = layerManager;
                 ;
-                var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+                let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
                 ;
-                var allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+                let allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
                 ;
-                var x = point.getX() + allBinaryTiledLayer.getXP();
+                let x = point.getX() + allBinaryTiledLayer.getXP();
                 ;
-                var y = point.getY() + allBinaryTiledLayer.getYP();
+                let y = point.getY() + allBinaryTiledLayer.getYP();
                 ;
-                var geographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(x, y);
+                let geographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(x, y);
                 ;
                 this.processCellPosition(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition);
             }
@@ -120,20 +120,20 @@ export class WaypointRTSFormInput extends RTSFormInput {
     }
     //@Throws(Exception.constructor)
     processCellPosition(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition) {
-        var itemIndex = this.getSelectedStickyItemIndex();
+        let itemIndex = this.getSelectedStickyItemIndex();
         ;
         if (this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == CollidableDestroyableDamageableLayer.getNullInstance()) {
             this.newUnconstructedRTSLayerInterfaceArray[itemIndex] = this.getInstance(layerManager, this.getSelectedStickyItem(), geographicMapCellPosition);
         }
         else {
-            var cellPoint = geographicMapCellPosition.getPoint();
+            let cellPoint = geographicMapCellPosition.getPoint();
             ;
-            var rtsLayer = this.newUnconstructedRTSLayerInterfaceArray[itemIndex];
+            let rtsLayer = this.newUnconstructedRTSLayerInterfaceArray[itemIndex];
             ;
             rtsLayer.setPosition(cellPoint.getX(), cellPoint.getY(), rtsLayer.getZP());
-            var geographicMapCompositeInterface = rtsLayer.allBinaryGameLayerManagerP;
+            let geographicMapCompositeInterface = rtsLayer.allBinaryGameLayerManagerP;
             ;
-            var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+            let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
             ;
             rtsLayer.geographicMapCellPositionAreaBase.update(geographicMapInterface);
         }
@@ -157,9 +157,9 @@ export class WaypointRTSFormInput extends RTSFormInput {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
-        var geographicMapCellPositionArea = layerInterface.geographicMapCellPositionAreaBase;
+        let geographicMapCellPositionArea = layerInterface.geographicMapCellPositionAreaBase;
         ;
-        var list = geographicMapCellPositionArea.getOccupyingGeographicMapCellPositionList();
+        let list = geographicMapCellPositionArea.getOccupyingGeographicMapCellPositionList();
         ;
         if (DropCellPositionHistory.getInstance().anyCellPositionWithDrop(list) || WaypointCellPositionHistory.getInstance().anyCellPositionWithDrop(list)) {
             rtsPlayerLayerInterface.add(ErrorSound.getInstance());
@@ -169,15 +169,15 @@ export class WaypointRTSFormInput extends RTSFormInput {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
-        var geographicMapCompositeInterface = layerManager;
+        let geographicMapCompositeInterface = layerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
+        let raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
         ;
-        var geographicMapCellType;
+        let geographicMapCellType;
         ;
-        for (var index = list.size(); --index >= 0;) {
+        for (let index = list.size(); --index >= 0;) {
             geographicMapCellType = geographicMapInterface.getCellTypeAt(list.get(index));
             if (raceTrackGeographicMapCellTypeFactory.isPath(geographicMapCellType)) {
                 rtsPlayerLayerInterface.add(ErrorSound.getInstance());
@@ -188,11 +188,11 @@ export class WaypointRTSFormInput extends RTSFormInput {
                 return false;
             }
         }
-        var cost = layerInterface.getCost();
+        let cost = layerInterface.getCost();
         ;
-        var capital = rtsPlayerLayerInterface.getCapital();
+        let capital = rtsPlayerLayerInterface.getCapital();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Trying to Build: ");
         stringBuffer.append(layerInterface.getName());
@@ -206,19 +206,19 @@ export class WaypointRTSFormInput extends RTSFormInput {
             this.newUnconstructedRTSLayerInterfaceArray[itemIndex] = CollidableDestroyableDamageableLayer.getNullInstance();
             capital.removeMoney(cost);
             WaypointCellPositionHistory.getInstance().addList(list, layerInterface);
-            var geographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(layerInterface.getXP(), layerInterface.getYP());
+            let geographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(layerInterface.getXP(), layerInterface.getYP());
             ;
-            var waypointLayer = layerInterface;
+            let waypointLayer = layerInterface;
             ;
             this.addWayPoint(waypointLayer);
-            var rtsPlayerGameInput = rtsPlayerLayerInterface.getPlayerGameInput();
+            let rtsPlayerGameInput = rtsPlayerLayerInterface.getPlayerGameInput();
             ;
             rtsPlayerGameInput.setSelectedRTSLayer(layerInterface, geographicMapCellPosition);
-            var advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
+            let advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
             ;
             advancedRTSPlayerLayerInterface.getAdvancedPlayerOwnedRTSLayers().addWaypoint(layerInterface);
             layerManager.append(layerInterface);
-            var waypointAvancedRTSGameLayer = waypointLayer;
+            let waypointAvancedRTSGameLayer = waypointLayer;
             ;
             rtsPlayerLayerInterface.add(waypointAvancedRTSGameLayer.getWaypointBehavior().getWaypoint().getSound());
             if (!rtsPlayerLayerInterface.implmentsArtificialIntelligenceCompositeInterface()) {
@@ -238,9 +238,9 @@ export class WaypointRTSFormInput extends RTSFormInput {
     }
     //@Throws(Exception.constructor)
     addWayPoint(layerInterface) {
-        var stickyAssociatedAdvandedRtsLayer = this.stickyAssociatedRtsLayer;
+        let stickyAssociatedAdvandedRtsLayer = this.stickyAssociatedRtsLayer;
         ;
-        var list = stickyAssociatedAdvandedRtsLayer.getWaypointBehavior().getOwnedWaypointList();
+        let list = stickyAssociatedAdvandedRtsLayer.getWaypointBehavior().getOwnedWaypointList();
         ;
         RTSLayerUtil.getInstance().destroyAndClear(list);
         list.add(layerInterface);

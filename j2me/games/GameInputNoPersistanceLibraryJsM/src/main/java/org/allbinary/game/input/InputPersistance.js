@@ -37,7 +37,7 @@ const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 //GameInputNoPersistanceLibrary
 export class InputPersistance extends BasicPersitance {
     constructor(name) {
@@ -47,17 +47,17 @@ export class InputPersistance extends BasicPersitance {
     }
     //@Throws(Exception.constructor)
     loadAll(abeClientInformation) {
-        var recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
+        let recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
         ;
-        var recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
+        let recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
         ;
-        var hashtable;
+        let hashtable;
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
-        var id = 0;
+        let id = 0;
         ;
         while (recordEnum.hasNextElement()) {
             id = recordEnum.nextRecordId();
@@ -72,22 +72,22 @@ export class InputPersistance extends BasicPersitance {
     //@Throws(Exception.constructor)
     save(abeClientInformation, hashtable) {
         PreLogUtil.put(new StringMaker().append(this.persistanceStrings.NOT_SAVING).append(StringUtil.getInstance().toString(hashtable)).toString(), this, this.commonStrings.SAVE);
-        var recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
+        let recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
         ;
-        var gameActionInput;
+        let gameActionInput;
         ;
-        var list;
+        let list;
         ;
-        var input;
+        let input;
         ;
-        var inputObjectArray = this.hashtableUtil.getKeysAsArray(hashtable);
+        let inputObjectArray = this.hashtableUtil.getKeysAsArray(hashtable);
         ;
-        var size = inputObjectArray.length;
+        let size = inputObjectArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             gameActionInput = inputObjectArray[index];
             list = hashtable.get(inputObjectArray[index]);
-            for (var index2 = 0; index2 < list.size(); index2++) {
+            for (let index2 = 0; index2 < list.size(); index2++) {
                 input = list.get(index2);
             }
         }

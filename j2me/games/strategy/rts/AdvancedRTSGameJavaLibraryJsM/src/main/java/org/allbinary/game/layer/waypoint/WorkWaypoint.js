@@ -20,7 +20,7 @@ import { SmallIntegerSingletonFactory } from '../../../../../org/allbinary/logic
 //not GWT import const SmallIntegerSingletonFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Waypoint } from './Waypoint.js';
-//not GWT import - same folder const WaypointInfoHudPaintable
+//sameFolderImports - not GWT import - same folder const WaypointInfoHudPaintable
 export class WorkWaypoint extends Waypoint {
     constructor(ownerLayer) {
         super(ownerLayer, WorkSound.getInstance());
@@ -32,37 +32,37 @@ export class WorkWaypoint extends Waypoint {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var size = this.getConnectedWaypointList().size();
+        let size = this.getConnectedWaypointList().size();
         ;
         if (size > 0) {
-            var occupyList = this.ownerLayer.getGeographicMapCellPositionArea().getOccupyingGeographicMapCellPositionList();
+            let occupyList = this.ownerLayer.getGeographicMapCellPositionArea().getOccupyingGeographicMapCellPositionList();
             ;
-            var outOfResources = true;
+            let outOfResources = true;
             ;
-            var geologicalGeographicMapCellPosition;
+            let geologicalGeographicMapCellPosition;
             ;
-            var geologicalResource;
+            let geologicalResource;
             ;
-            for (var index = occupyList.size(); --index >= 0;) {
+            for (let index = occupyList.size(); --index >= 0;) {
                 geologicalGeographicMapCellPosition = occupyList.get(index);
                 geologicalResource = geologicalGeographicMapCellPosition.getGeologicalResource();
                 if (geologicalResource.getTotal() >= 1) {
                     outOfResources = false;
-                    var maxResourceLoad = Math.round(unitLayer.getMaxResourceLoad());
+                    let maxResourceLoad = globalThis.Math.trunc(unitLayer.getMaxResourceLoad());
                     ;
                     geologicalResource.remove(maxResourceLoad);
                     unitLayer.setLoad(maxResourceLoad);
                 }
             }
-            var waypointInfoHudPaintable = this.ownerLayer.getHudPaintable();
+            let waypointInfoHudPaintable = this.ownerLayer.getHudPaintable();
             ;
             if (this.ownerLayer == waypointInfoHudPaintable.getRtsLayer()) {
                 waypointInfoHudPaintable.updateSelectionInfo();
             }
             if (!outOfResources) {
-                var unitWaypointBehavior = unitLayer.getWaypointBehavior();
+                let unitWaypointBehavior = unitLayer.getWaypointBehavior();
                 ;
-                var rtsLayer;
+                let rtsLayer;
                 ;
                 while (this.getConnectedWaypointList().size() > 0) {
                     rtsLayer = this.getConnectedWaypointList().get(0);

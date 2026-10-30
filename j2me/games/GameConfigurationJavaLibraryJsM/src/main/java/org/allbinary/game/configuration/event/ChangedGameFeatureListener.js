@@ -14,7 +14,7 @@
 //not GWT import const GameConfiguration
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseChangedGameFeatureListener } from './BaseChangedGameFeatureListener.js';
-//not GWT import - same folder const BaseChangedGameFeatureListener
+//sameFolderImports - not GWT import - same folder const BaseChangedGameFeatureListener
 export class ChangedGameFeatureListener extends BaseChangedGameFeatureListener {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

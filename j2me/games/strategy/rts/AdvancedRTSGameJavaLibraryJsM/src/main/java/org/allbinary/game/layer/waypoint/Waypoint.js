@@ -34,7 +34,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointBase } from './WaypointBase.js';
-//not GWT import - same folder const WaypointBase
+//sameFolderImports - not GWT import - same folder const WaypointBase
 export class Waypoint extends WaypointBase {
     constructor(ownerLayer, sound) {
         super(sound);
@@ -48,11 +48,11 @@ export class Waypoint extends WaypointBase {
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
         super.setAllBinaryGameLayerManager(allBinaryGameLayerManager);
-        var geographicMapCompositeInterface = allBinaryGameLayerManager;
+        let geographicMapCompositeInterface = allBinaryGameLayerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
         if (this.paths != this.basicArrayListUtil.NULL_ARRAY_OF_ARRAY) {
             throw new RuntimeException();
@@ -62,9 +62,9 @@ export class Waypoint extends WaypointBase {
         this.clearPaths();
     }
     releaseCachedPaths() {
-        for (var columnIndex = this.paths.length; --columnIndex >= 0;) {
-            for (var rowIndex = this.paths.length; --rowIndex >= 0;) {
-                var pathsList = this.paths[columnIndex][rowIndex];
+        for (let columnIndex = this.paths.length; --columnIndex >= 0;) {
+            for (let rowIndex = this.paths.length; --rowIndex >= 0;) {
+                let pathsList = this.paths[columnIndex][rowIndex];
                 ;
                 if (pathsList != this.basicArrayListUtil.getImmutableInstance()) {
                     BasicGeographicMapExtractedPathsCacheFactory.getInstance().release(pathsList);
@@ -79,7 +79,7 @@ export class Waypoint extends WaypointBase {
     }
     //@Throws(Exception.constructor)
     getPathsListRunnable(geographicMapCellPosition) {
-        var pathsList = this.paths[geographicMapCellPosition.getColumn()][geographicMapCellPosition.getRow()];
+        let pathsList = this.paths[geographicMapCellPosition.getColumn()][geographicMapCellPosition.getRow()];
         ;
         if (pathsList == this.basicArrayListUtil.getImmutableInstance()) {
             pathsList = this.createPaths(geographicMapCellPosition);
@@ -89,10 +89,10 @@ export class Waypoint extends WaypointBase {
         return pathsList;
     }
     getEndGeographicMapCellPosition(startGeographicMapCellPosition) {
-        var endGeographicMapCellPosition = this.basicArrayListUtil.getRandom(this.endList);
+        let endGeographicMapCellPosition = this.basicArrayListUtil.getRandom(this.endList);
         ;
         if (startGeographicMapCellPosition == endGeographicMapCellPosition) {
-            for (var index = this.endList.size() - 1; index >= 0; index--) {
+            for (let index = this.endList.size() - 1; index >= 0; index--) {
                 endGeographicMapCellPosition = this.endList.get(index);
                 if (startGeographicMapCellPosition != endGeographicMapCellPosition) {
                     break;
@@ -109,7 +109,7 @@ export class Waypoint extends WaypointBase {
             return this.basicArrayListUtil.getImmutableInstance();
             ;
         }
-        var endGeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition);
+        let endGeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition);
         ;
         if (endGeographicMapCellPosition ==
             null) {
@@ -127,24 +127,24 @@ export class Waypoint extends WaypointBase {
                 throw new Exception("Start should not be End: " + this.endList.size());
             }
         }
-        var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+        let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var raceTrackGeographicMap = geographicMapInterface;
+        let raceTrackGeographicMap = geographicMapInterface;
         ;
-        var raceTrackGeographicMapCellTypeFactory = raceTrackGeographicMap.getGeographicMapCellTypeFactory();
+        let raceTrackGeographicMapCellTypeFactory = raceTrackGeographicMap.getGeographicMapCellTypeFactory();
         ;
-        var customMapGenerator = raceTrackGeographicMap.getCustomMapGenerator();
+        let customMapGenerator = raceTrackGeographicMap.getCustomMapGenerator();
         ;
         customMapGenerator.copyMapIntoCustomMap();
-        var customMapArray = customMapGenerator.getCustomMapArray();
+        let customMapArray = customMapGenerator.getCustomMapArray();
         ;
         customMapArray[startGeographicMapCellPosition.getRow()][startGeographicMapCellPosition.getColumn()] = raceTrackGeographicMapCellTypeFactory.getStartType();
         customMapArray[endGeographicMapCellPosition.getRow()][endGeographicMapCellPosition.getColumn()] = raceTrackGeographicMapCellTypeFactory.getEndType();
-        var pathFindingInfo = PathFindingInfoFactory.getInstance().getInstancePathFindingInfo(raceTrackGeographicMap, customMapArray);
+        let pathFindingInfo = PathFindingInfoFactory.getInstance().getInstancePathFindingInfo(raceTrackGeographicMap, customMapArray);
         ;
-        var list = PathGenerator.getInstance().getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2);
+        let list = PathGenerator.getInstance().getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2);
         ;
         if (list.size() < 1) {
             throw new Exception("Path may have been cleared by clearing caching");
@@ -160,8 +160,8 @@ export class Waypoint extends WaypointBase {
         this.clearPaths();
     }
     clearPaths() {
-        for (var columnIndex = this.paths.length; --columnIndex >= 0;) {
-            for (var rowIndex = this.paths.length; --rowIndex >= 0;) {
+        for (let columnIndex = this.paths.length; --columnIndex >= 0;) {
+            for (let rowIndex = this.paths.length; --rowIndex >= 0;) {
                 this.paths[columnIndex][rowIndex] = this.basicArrayListUtil.getImmutableInstance();
             }
         }
@@ -176,13 +176,13 @@ export class Waypoint extends WaypointBase {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var size = this.getConnectedWaypointList().size();
+        let size = this.getConnectedWaypointList().size();
         ;
         if (size > 0) {
-            var unitWaypointBehavior = unitLayer.getWaypointBehavior();
+            let unitWaypointBehavior = unitLayer.getWaypointBehavior();
             ;
             while (this.getConnectedWaypointList().size() > 0) {
-                var rtsLayer = this.getConnectedWaypointList().get(0);
+                let rtsLayer = this.getConnectedWaypointList().get(0);
                 ;
                 if (rtsLayer.isDestroyed()) {
                     this.getConnectedWaypointList().remove(rtsLayer);

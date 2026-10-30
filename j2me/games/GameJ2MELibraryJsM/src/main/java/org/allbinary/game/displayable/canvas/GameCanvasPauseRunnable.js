@@ -22,7 +22,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameRunnable } from './GameRunnable.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class GameCanvasPauseRunnable extends GameRunnable {
     constructor(allBinaryGameCanvas) {
         super();
@@ -34,19 +34,21 @@ export class GameCanvasPauseRunnable extends GameRunnable {
     //@Throws(Exception.constructor)
     processLoopSleep() {
         try {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
-            var isOpenGL = features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL);
+            let isOpenGL = features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL);
             ;
             if (isOpenGL) {
                 this.allBinaryGameCanvas.processSleep();
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+            }
         }
     }
 }

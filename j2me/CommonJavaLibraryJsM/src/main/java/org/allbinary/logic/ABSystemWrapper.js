@@ -20,7 +20,7 @@ export class ABSystemWrapper extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return ABSystemWrapper.instance;
     }
-    arraycopy(src = {}, srcPos, dest = {}, destPos, length) {
+    arraycopy(src, srcPos, dest, destPos, length) {
         System.arraycopy(src, srcPos, dest, destPos, length);
     }
     currentTimeMillis() {

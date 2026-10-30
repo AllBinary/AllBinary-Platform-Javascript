@@ -22,7 +22,7 @@ import { GameCommandsFactory } from '../../../org/allbinary/game/commands/GameCo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CustomGameMenuUtil extends Object {
     static add(canvas) {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         if (AppletUtil.isAppletLoader(canvas)) {
         }

@@ -23,7 +23,7 @@ import { BasicEventHandler } from '../../../../../org/allbinary/logic/util/event
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const DownGameKeyEventListenerInterface
+//sameFolderImports - not GWT import - same folder const DownGameKeyEventListenerInterface
 export class DownGameKeyEventHandlerBase extends BasicEventHandler {
     constructor() {
         super();
@@ -49,46 +49,50 @@ export class DownGameKeyEventHandlerBase extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var playerGameInput = this.list.objectArray[index];
+                let playerGameInput = this.list.objectArray[index];
                 ;
                 playerGameInput.onDownGameKeyEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
         super.fireEvent(eventObject);
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var downGameKeyEventListenerInterface = eventListenerInterface;
+        let downGameKeyEventListenerInterface = eventListenerInterface;
         ;
         downGameKeyEventListenerInterface.onDownGameKeyEvent(eventObject);
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(super.toString());
         stringBuffer.append(DownGameKeyEventHandlerBase.TOTAL_LISTENERS);
         stringBuffer.appendint(this.list.size());
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (index < size) {
             try {
                 eventListenerInterface = this.list.get(index);
                 stringBuffer.append(DownGameKeyEventHandlerBase.LISTENER_LABEL);
                 stringBuffer.append(eventListenerInterface.toString());
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+                }
             }
             index++;
         }

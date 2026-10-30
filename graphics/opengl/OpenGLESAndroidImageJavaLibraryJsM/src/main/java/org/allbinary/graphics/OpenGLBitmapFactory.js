@@ -8,26 +8,35 @@ import { PlatformBitmapBaseFactory } from '../../../org/allbinary/platform/graph
 //not GWT import const AndroidImageInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //import { Config } from './Config.js';
-//not GWT import - same folder const Config
+//sameFolderImports - not GWT import - same folder const Config
 import { OpenGLBitmap } from './OpenGLBitmap.js';
-//not GWT import - same folder const OpenGLBitmap
 export class OpenGLBitmapFactory extends PlatformBitmapBaseFactory {
     constructor() {
         super(...arguments);
         //inner= member=true isStatic=
-        this.Config = class extends Object {
-            constructor(bitmapConfig) {
-                super();
-                this.bitmapConfig = bitmapConfig;
-            }
-        };
+        this.Config = (() => {
+            const outer$OpenGLBitmapFactory = this;
+            return class extends Object {
+                constructor(bitmapConfig) {
+                    super();
+                    this.bitmapConfig = bitmapConfig;
+                }
+            };
+        })();
         this.ARGB_8888 = new this.Config(Bitmap.Config.ARGB_8888);
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return OpenGLBitmapFactory.instance;
     }
-    createBitmap(width, height, config) {
+    createBitmap(...args) {
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[1] === 'number')
+            return this.createBitmap$overload1(args[0], args[1], args[2]);
+        if (args.length === 1)
+            return this.createBitmap$overload2(args[0]);
+        throw new TypeError('No matching overload: createBitmap');
+    }
+    createBitmap$overload1(width, height, config) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new OpenGLBitmap(Bitmap.createBitmap(width, height, config.bitmapConfig));
     }
@@ -36,7 +45,7 @@ export class OpenGLBitmapFactory extends PlatformBitmapBaseFactory {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new OpenGLBitmap(BitmapFactory.decodeStream(inputStream));
     }
-    createBitmap(image) {
+    createBitmap$overload2(image) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new OpenGLBitmap(image.getBitmap());
     }

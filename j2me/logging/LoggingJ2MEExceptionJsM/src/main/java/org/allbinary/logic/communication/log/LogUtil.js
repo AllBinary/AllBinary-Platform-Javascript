@@ -38,33 +38,33 @@ const Log = globalThis.org.allbinary.logic.communication.log.Log;
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var exception = log.getThrowable();
+        let exception = log.getThrowable();
         ;
         if (exception ==
             null) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var specialMessage = log.getSpecialMessage();
+        let specialMessage = log.getSpecialMessage();
         ;
-        var anyType = log.getObject();
+        let anyType = log.getObject();
         ;
-        var functionName = log.getFunctionName();
+        let functionName = log.getFunctionName();
         ;
         this.put(specialMessage, anyType, functionName, exception);
     }
-    /*actual*/ putF(specialMessage, anyType = {}, functionName) {
+    /*actual*/ putF(specialMessage, anyType, functionName) {
     }
-    /*actual*/ putF(specialMessage, className, functionName) {
+    /*actual*/ putFS(specialMessage, className, functionName) {
     }
-    /*actual*/ put(specialMessage, anyType = {}, functionName, exception = {}) {
-        var className = CommonStrings.getInstance().EMPTY;
+    /*actual*/ put(specialMessage, anyType, functionName, exception) {
+        let className = CommonStrings.getInstance().EMPTY;
         ;
         if (anyType.constructor.name.toString() !=
             null) {
             className = anyType.constructor.name.toString();
         }
-        var message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
+        let message = this.logFormatUtil.get(className, functionName, specialMessage, exception);
         ;
         console.log(this.LOG_SUCCESS + message);
     }

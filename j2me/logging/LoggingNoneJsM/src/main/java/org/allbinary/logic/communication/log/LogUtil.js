@@ -27,11 +27,11 @@ const Log = globalThis.org.allbinary.logic.communication.log.Log;
     }
     /*actual*/ putP(log) {
     }
-    /*actual*/ putF(specialMessage, anyType = {}, functionName) {
+    /*actual*/ putF(specialMessage, anyType, functionName) {
     }
-    /*actual*/ putF(specialMessage, className, functionName) {
+    /*actual*/ putFS(specialMessage, className, functionName) {
     }
-    /*actual*/ put(specialMessage, anyType = {}, functionName, exception = {}) {
+    /*actual*/ put(specialMessage, anyType, functionName, exception) {
     }
 }
 LogUtil.instance = new LogUtil();

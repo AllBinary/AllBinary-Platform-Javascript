@@ -14,15 +14,14 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameRunnable } from './GameRunnable.js';
-//not GWT import - same folder const GameRunnable
+//sameFolderImports - not GWT import - same folder const GameRunnable
 export class NullWaitGameRunnable extends GameRunnable {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullWaitGameRunnable.instance;
     }
-}
+} //JSNI Expose so JSNI can access this class *** 
 NullWaitGameRunnable.instance = new NullWaitGameRunnable();
-//JSNI Expose so JSNI can access this class *** 
 globalThis.org = globalThis.org || {};
 globalThis.org.allbinary = globalThis.org.allbinary || {};
 globalThis.org.allbinary.game = globalThis.org.allbinary.game || {};

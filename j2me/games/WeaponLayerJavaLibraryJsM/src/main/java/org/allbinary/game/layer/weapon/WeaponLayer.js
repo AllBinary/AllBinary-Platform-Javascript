@@ -30,7 +30,7 @@ import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLaye
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableWeaponBehavior } from './CollidableWeaponBehavior.js';
-//not GWT import - same folder const CollidableWeaponBehavior
+//sameFolderImports - not GWT import - same folder const CollidableWeaponBehavior
 export class WeaponLayer extends MultiPlayerGameLayer {
     static getStaticType() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,7 +81,7 @@ export class WeaponLayer extends MultiPlayerGameLayer {
         this.movement.init(weaponProperties.getSpeed(), angle, otherAngle);
     }
     setGroupInterfaces() {
-        var basicGroupFactory = BasicGroupFactory.getInstance();
+        let basicGroupFactory = BasicGroupFactory.getInstance();
         ;
         if (this.sourceLayerInterface.getGroupInterface()[0] == basicGroupFactory.ENEMY) {
             this.setGroupInterface(basicGroupFactory.ENEMY_ARRAY);
@@ -94,9 +94,9 @@ export class WeaponLayer extends MultiPlayerGameLayer {
     processTick(allBinaryLayerManager) {
         if (this.isExhausted() && !this.isDestroyed()) {
             if (this.isReadyForExplosion()) {
-                var indexedAnimationInterface = this.getAnimationInterface();
+                let indexedAnimationInterface = this.getAnimationInterface();
                 ;
-                var currentFrame = indexedAnimationInterface.getFrame();
+                let currentFrame = indexedAnimationInterface.getFrame();
                 ;
                 if (currentFrame < indexedAnimationInterface.getAnimationSize() - 1) {
                     indexedAnimationInterface.nextFrame();
@@ -106,7 +106,7 @@ export class WeaponLayer extends MultiPlayerGameLayer {
                 }
             }
             else {
-                var collidableWeaponBehavior = this.getCollidableInferface();
+                let collidableWeaponBehavior = this.getCollidableInferface();
                 ;
                 if (collidableWeaponBehavior.isCollided()) {
                     this.setAnimationInterface(this.destroyedAnimationInterface);
@@ -143,7 +143,7 @@ export class WeaponLayer extends MultiPlayerGameLayer {
     }
     getDamage(damageType) {
         if (!this.isExhausted()) {
-            var total = this.getInitDamage() - this.totalDamage;
+            let total = this.getInitDamage() - this.totalDamage;
             ;
             this.givePoints(total);
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -189,12 +189,12 @@ export class WeaponLayer extends MultiPlayerGameLayer {
         this.sourceLayerInterface = sourceLayerInterface;
     }
     paint(graphics) {
-        var viewPosition = this.getViewPosition();
+        let viewPosition = this.getViewPosition();
         ;
         this.animationInterface.paintXY(graphics, viewPosition.getX() - this.getHalfWidth(), viewPosition.getY() - this.getHalfHeight());
     }
     paintThreed(graphics) {
-        var viewPosition = this.getViewPosition();
+        let viewPosition = this.getViewPosition();
         ;
         this.animationInterface.paintThreedXYZ(graphics, viewPosition.getX() - this.getHalfWidth(), viewPosition.getY() - this.getHalfHeight(), viewPosition.getZ() - this.getHalfDepth());
     }

@@ -21,13 +21,13 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ConstructorUtil extends Object {
     static viewAll(myClass, lineBreak) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var constructor = myClass.getConstructors();
+        let constructor = myClass.getConstructors();
         ;
         stringBuffer.append("Constructors: ");
         stringBuffer.append(lineBreak);
-        for (var index = 0; index < constructor.length; index++) {
+        for (let index = 0; index < constructor.length; index++) {
             stringBuffer.append(ConstructorUtil.view(constructor[index], lineBreak));
         }
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -37,14 +37,14 @@ export class ConstructorUtil extends Object {
     static view(constructor, lineBreak) {
         if (constructor !=
             null) {
-            var commonSeps = CommonSeps.getInstance();
+            let commonSeps = CommonSeps.getInstance();
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(constructor.getName());
-            var classes = constructor.getParameterTypes();
+            let classes = constructor.getParameterTypes();
             ;
-            for (var index = 0; index < classes.length; index++) {
+            for (let index = 0; index < classes.length; index++) {
                 stringBuffer.append(commonSeps.SPACE);
                 stringBuffer.append(classes[index].getName());
                 stringBuffer.append(commonSeps.COLON);

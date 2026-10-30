@@ -23,7 +23,14 @@ import { MethodUtil } from '../../../../../../org/allbinary/logic/java/anyType/M
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ClassUtil extends Object {
-    static viewAll(anyType = {}, lineBreak) {
+    static viewAll(...args) {
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.viewAll$overload1(args[0], args[1]);
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.viewAll$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: viewAll');
+    }
+    static viewAll$overload1(anyType, lineBreak) {
         if (anyType !=
             null) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -33,12 +40,12 @@ export class ClassUtil extends Object {
         else if ()
             ;
     }
-    static viewAll(myClass, lineBreak) {
+    static viewAll$overload2(myClass, lineBreak) {
         if (myClass !=
             null) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            var classes = myClass.getClasses();
+            let classes = myClass.getClasses();
             ;
             stringBuffer.append(lineBreak);
             stringBuffer.append("Class: ");
@@ -50,7 +57,7 @@ export class ClassUtil extends Object {
             stringBuffer.append(lineBreak);
             stringBuffer.append("Classes: ");
             stringBuffer.append(lineBreak);
-            for (var index = 0; index < classes.length; index++) {
+            for (let index = 0; index < classes.length; index++) {
                 stringBuffer.append("Class: ");
                 stringBuffer.append(classes[index].getName());
                 stringBuffer.append(lineBreak);

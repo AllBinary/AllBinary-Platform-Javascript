@@ -58,7 +58,7 @@ export class TextNotificationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     fire(message) {
-        var gameNotificationEvent = new GameNotificationEvent(this, message, this.TWO, BasicColorFactory.getInstance().RED, this.FALSE);
+        let gameNotificationEvent = new GameNotificationEvent(this, message, this.TWO, BasicColorFactory.getInstance().RED, this.FALSE);
         ;
         this.gameNotificationEventHandler.fireEvent(gameNotificationEvent);
     }

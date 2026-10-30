@@ -39,9 +39,9 @@ export class WeblisketFinder extends Object {
     }
     //@Throws(Exception.constructor)
     static main(args) {
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
-        var vector = WeblisketFinder.getInstance().findAll(stringUtil.EMPTY_STRING);
+        let vector = WeblisketFinder.getInstance().findAll(stringUtil.EMPTY_STRING);
         ;
         console.log(vector.size());
     }
@@ -57,22 +57,24 @@ export class WeblisketFinder extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.subDirectory.search(WeblisketFinder.KEY, AbFile.createAbFile(path));
             ;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "findAll", e);
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+        catch (caught) {
+            {
+                const e = caught;
                 this.logUtil.put(this.commonStrings.EXCEPTION, this, "findAll", e);
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, "findAll", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
         }
     }
     getInstallationPath(file) {
         try {
-            var filePath = file.getPath();
+            let filePath = file.getPath();
             ;
-            var end = filePath.indexOf(KEY);
+            let end = filePath.indexOf(KEY);
             ;
             if (end < 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,14 +83,16 @@ export class WeblisketFinder extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return filePath.substring(0, end);
             ;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, "getInstallationPath", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, "getInstallationPath", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
         }
     }
 }

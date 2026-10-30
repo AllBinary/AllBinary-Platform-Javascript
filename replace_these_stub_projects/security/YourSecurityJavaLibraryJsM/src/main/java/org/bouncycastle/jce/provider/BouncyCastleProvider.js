@@ -7,7 +7,7 @@ export class BouncyCastleProvider extends Provider {
         super(BouncyCastleProvider.PROVIDER_NAME, 1.41, BouncyCastleProvider.info);
         //For kotlin this is before the body of the constructor.
     }
-    setParameter(parameterName, parameter = {}) {
+    setParameter(parameterName, parameter) {
     }
 }
 BouncyCastleProvider.info = "BouncyCastle Security Provider v1.41";

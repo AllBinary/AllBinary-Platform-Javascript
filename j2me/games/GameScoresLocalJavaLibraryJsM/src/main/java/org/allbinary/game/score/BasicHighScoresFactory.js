@@ -5,13 +5,13 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const AbeClientInformationInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresBase } from './HighScoresBase.js';
-//not GWT import - same folder const HighScoresResultsListener
+//sameFolderImports - not GWT import - same folder const HighScoresResultsListener
 import { RecordStoreHighScores } from './RecordStoreHighScores.js';
-//not GWT import - same folder const RecordStoreHighScores
+//sameFolderImports - not GWT import - same folder const RecordStoreHighScores
 import { ScoreComparator } from './ScoreComparator.js';
-//not GWT import - same folder const ScoreComparator
+//sameFolderImports - not GWT import - same folder const ScoreComparator
 import { HighScoresHelper2 } from './HighScoresHelper2.js';
-//not GWT import - same folder const HighScoresHelperBaseInterface
+//sameFolderImports - not GWT import - same folder const HighScoresHelperBaseInterface
 export class BasicHighScoresFactory extends HighScoresBase {
     static loaded(index2) {
         if (index2 >= 0) {
@@ -39,10 +39,12 @@ export class BasicHighScoresFactory extends HighScoresBase {
         try {
             this.highScoresArray[0] = RecordStoreHighScores.getInstance(this.abeClientInformation, gameInfo, this.TOP, this.PERSONAL_HIGH_SCORES, this.SCORES, new ScoreComparator(true));
             highScoresResultsListener.setHighScoresArray(this.highScoresArray);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.FETCH, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.FETCH, e);
+            }
         }
     }
     createHighScoresHelper() {

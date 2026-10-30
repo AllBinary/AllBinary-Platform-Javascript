@@ -24,7 +24,7 @@ import { ProcessPaintable } from '../../../../../org/allbinary/graphics/paint/Pr
 //not GWT import const ProcessPaintable
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class BufferedGameCanvasPaintHelper extends ProcessPaintable {
     constructor(gameCanvas) {
         super();
@@ -37,7 +37,7 @@ export class BufferedGameCanvasPaintHelper extends ProcessPaintable {
         throw new Exception("No Longer Used");
     }
     process() {
-        var myCanvas = this.gameCanvas;
+        let myCanvas = this.gameCanvas;
         ;
         myCanvas.draw(this.offScreenImage[this.circularIndexUtil.getIndex()].getGraphics());
         this.circularIndexUtil.next();

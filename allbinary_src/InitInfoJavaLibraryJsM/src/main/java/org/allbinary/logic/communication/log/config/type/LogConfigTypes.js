@@ -29,11 +29,11 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const Node
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigTypeFactory } from './LogConfigTypeFactory.js';
-//not GWT import - same folder const LogConfigTypeFactory
+//sameFolderImports - not GWT import - same folder const LogConfigTypeFactory
 import { LogConfigTypeData } from './LogConfigTypeData.js';
-//not GWT import - same folder const LogConfigTypeData
+//sameFolderImports - not GWT import - same folder const LogConfigTypeData
 import { LogConfigType } from './LogConfigType.js';
-//not GWT import - same folder const LogConfigType
+//sameFolderImports - not GWT import - same folder const LogConfigType
 export class LogConfigTypes extends Object {
     static init() {
         LogConfigTypes.init();
@@ -44,40 +44,42 @@ export class LogConfigTypes extends Object {
         try {
             PreLogUtil.put("Initialize LogconfigTypes", "LogConfigTypes", "init()");
             LogConfigTypeFactory.getInstance();
-            var loggingInitInfo = new LoggingInitInfo();
+            let loggingInitInfo = new LoggingInitInfo();
             ;
-            var logConfigTypeVector = loggingInitInfo.getTypeList();
+            let logConfigTypeVector = loggingInitInfo.getTypeList();
             ;
             PreLogUtil.put("Number Of Log Configs: " + loggingInitInfo.getNumberOfLogConfigs(), "LogConfigTypes", "init()");
             PreLogUtil.put("Number Of Log Config Type Names: " + logConfigTypeVector.size(), "LogConfigTypes", "init()");
             LogConfigTypes.LOGGING.addAllList(logConfigTypeVector);
             LogConfigTypes.LOGGING.add(LogConfigTypeFactory.getInstance().NETBEANS_MODULE);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putSE("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putSE("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     static getInstance(node) {
-        var nameValueNode = DomSearchHelper.getNode(LogConfigTypeData.getInstance().NAME, node.getChildNodes());
+        let nameValueNode = DomSearchHelper.getNode(LogConfigTypeData.getInstance().NAME, node.getChildNodes());
         ;
-        var name = DomNodeHelper.getTextNodeValue(nameValueNode);
+        let name = DomNodeHelper.getTextNodeValue(nameValueNode);
         ;
-        var descriptionValueNode = DomSearchHelper.getNodeNoThrow(LogConfigTypeData.getInstance().DESCRIPTION, node.getChildNodes());
+        let descriptionValueNode = DomSearchHelper.getNodeNoThrow(LogConfigTypeData.getInstance().DESCRIPTION, node.getChildNodes());
         ;
         if (descriptionValueNode !=
             null) {
-            var description = DomNodeHelper.getTextNodeValue(descriptionValueNode);
+            let description = DomNodeHelper.getTextNodeValue(descriptionValueNode);
             ;
         }
-        var availableLogConfigTypes = LogConfigType.availableLogConfigTypes;
+        let availableLogConfigTypes = LogConfigType.availableLogConfigTypes;
         ;
-        var size = availableLogConfigTypes.size();
+        let size = availableLogConfigTypes.size();
         ;
-        var logConfigType;
+        let logConfigType;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             logConfigType = availableLogConfigTypes.get(index);
             if (logConfigType.getName().compareTo(name) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.

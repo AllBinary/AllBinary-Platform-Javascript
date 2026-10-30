@@ -28,15 +28,15 @@ import { ImageToRotationImageArrayUtil } from '../../../../org/allbinary/media/i
 //not GWT import const ImageToRotationImageArrayUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { ImageArrayRotationAnimation } from './ImageArrayRotationAnimation.js';
-//not GWT import - same folder const ImageArrayRotationAnimation
+//sameFolderImports - not GWT import - same folder const ImageArrayRotationAnimation
 import { AdjustedImageArrayRotationAnimation } from './AdjustedImageArrayRotationAnimation.js';
-//not GWT import - same folder const AdjustedImageArrayRotationAnimation
+//sameFolderImports - not GWT import - same folder const AdjustedImageArrayRotationAnimation
 export class AllBinaryArrayImageRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createFactory(image, dx, dy) {
-        var arrayImageRotationAnimationFactory = new AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), AngleFactory.getInstance().TOTAL_ANGLE / GameConfigurationCentral.getInstance().getGameControlFidelity(), AnimationBehaviorFactory.getInstance());
+        let arrayImageRotationAnimationFactory = new AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), AngleFactory.getInstance().TOTAL_ANGLE / GameConfigurationCentral.getInstance().getGameControlFidelity(), AnimationBehaviorFactory.getInstance());
         ;
         arrayImageRotationAnimationFactory.initDXY(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,7 +44,7 @@ export class AllBinaryArrayImageRotationAnimationFactory extends BaseImageAnimat
     }
     //@Throws(Exception.constructor)
     static createFactoryA(image, dx, dy, angleIncrement) {
-        var arrayImageRotationAnimationFactory = new AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), angleIncrement, AnimationBehaviorFactory.getInstance());
+        let arrayImageRotationAnimationFactory = new AllBinaryArrayImageRotationAnimationFactory(image, image.getWidth(), image.getHeight(), angleIncrement, AnimationBehaviorFactory.getInstance());
         ;
         arrayImageRotationAnimationFactory.initDXY(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +59,7 @@ export class AllBinaryArrayImageRotationAnimationFactory extends BaseImageAnimat
     }
     //@Throws(Exception.constructor)
     init() {
-        this.setImageArray(ImageToRotationImageArrayUtil.getInstance().generate(this.getImage(), this.getAngleIncrement(), Math.round(AngleFactory.getInstance().TOTAL_ANGLE)));
+        this.setImageArray(ImageToRotationImageArrayUtil.getInstance().generate(this.getImage(), this.getAngleIncrement(), globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE)));
     }
     initDXY(dx, dy) {
         this.animationFactoryInitializationVisitor.dx = dx;
@@ -69,23 +69,23 @@ export class AllBinaryArrayImageRotationAnimationFactory extends BaseImageAnimat
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var scaledImageArray = new Array(this.imageArray.length);
+        let scaledImageArray = new Array(this.imageArray.length);
         ;
-        var size = scaledImageArray.length;
+        let size = scaledImageArray.length;
         ;
-        var image = this.getImage();
+        let image = this.getImage();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             scaledImageArray[index] = this.animationFactoryImageScaleUtil.createImage(image, image.getWidth(), image.getHeight(), this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         }
         if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
             this.animationFactoryImageScaleUtil.processAdjust(this);
             //if statement needs to be on the same line and ternary does not work the same way.
-            return new AdjustedImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.getAngleIncrement()), Math.round(AngleFactory.getInstance().TOTAL_ANGLE), this.animationFactoryInitializationVisitor.dx, this.animationFactoryInitializationVisitor.dy, this.animationBehaviorFactory.getOrCreateInstance());
+            return new AdjustedImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.getAngleIncrement()), globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE), this.animationFactoryInitializationVisitor.dx, this.animationFactoryInitializationVisitor.dy, this.animationBehaviorFactory.getOrCreateInstance());
         }
         else {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return new ImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.getAngleIncrement()), Math.round(AngleFactory.getInstance().TOTAL_ANGLE), this.animationBehaviorFactory.getOrCreateInstance());
+            return new ImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.getAngleIncrement()), globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE), this.animationBehaviorFactory.getOrCreateInstance());
         }
     }
     setImageArray(imageArray) {

@@ -16,9 +16,9 @@
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapCellHistoryProgressBase } from './GeographicMapCellHistoryProgressBase.js';
-//not GWT import - same folder const GeographicMapCellHistoryProgressBase
+//sameFolderImports - not GWT import - same folder const GeographicMapCellHistoryProgressBase
 import { GeographicMapCellHistory } from './GeographicMapCellHistory.js';
-//not GWT import - same folder const GeographicMapCellHistory
+//sameFolderImports - not GWT import - same folder const GeographicMapCellHistory
 export class GeographicMapCellHistoryProgress extends GeographicMapCellHistoryProgressBase {
     constructor(geographicMapCellHistoryArray) {
         super();
@@ -31,15 +31,15 @@ export class GeographicMapCellHistoryProgress extends GeographicMapCellHistoryPr
         this.totalVisitedArray = new Array(this.geographicMapCellHistoryArray.length);
     }
     isAnyProgress() {
-        var isProgressing = false;
+        let isProgressing = false;
         ;
-        var size = this.geographicMapCellHistoryArray.length;
+        let size = this.geographicMapCellHistoryArray.length;
         ;
-        var currentTotalVisited = 0;
+        let currentTotalVisited = 0;
         ;
-        var totalVisited = 0;
+        let totalVisited = 0;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             totalVisited = this.geographicMapCellHistoryArray[index].getTotalVisited();
             currentTotalVisited = this.totalVisitedArray[index];
             if (currentTotalVisited < totalVisited) {

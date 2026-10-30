@@ -21,7 +21,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { BasicGeographicMap } from '../../../../../../../org/allbinary/media/graphics/geography/map/BasicGeographicMap.js';
-//not GWT import - same folder const RaceTrackData
+//sameFolderImports - not GWT import - same folder const RaceTrackData
 export class BaseRaceTrackGeographicMap extends BasicGeographicMap {
     constructor(raceTrackInfo, raceTrackData, tiledLayer, miniGeographicMap, geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory) {
         super(raceTrackInfo.getId(), raceTrackInfo.getName(), raceTrackData.getCellTypeIdToGeographicMapCellTypeArray(), tiledLayer, raceTrackInfo.getForegroundBasicColor(), raceTrackInfo.getBackgroundBasicColor(), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory);
@@ -30,20 +30,20 @@ export class BaseRaceTrackGeographicMap extends BasicGeographicMap {
         this.raceTrackInfo = raceTrackInfo;
         this.raceTrackData = raceTrackData;
         this.miniGeographicMap = miniGeographicMap;
-        var miniTiledLayer = this.miniGeographicMap.getAllBinaryTiledLayer();
+        let miniTiledLayer = this.miniGeographicMap.getAllBinaryTiledLayer();
         ;
         if (miniTiledLayer.getColumns() != this.getGeographicMapCellPositionFactory().getColumns()) {
-            var error = new StringMaker().append("RaceTrackMap has incorrect Mini Map columns: ").appendint(miniTiledLayer.getColumns()).append(" != ").appendint(this.getGeographicMapCellPositionFactory().getColumns()).toString();
+            let error = new StringMaker().append("RaceTrackMap has incorrect Mini Map columns: ").appendint(miniTiledLayer.getColumns()).append(" != ").appendint(this.getGeographicMapCellPositionFactory().getColumns()).toString();
             ;
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             this.logUtil.putF(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR);
             throw new Exception(error);
         }
         if (miniTiledLayer.getRows() != this.getGeographicMapCellPositionFactory().getRows()) {
-            var error = "RaceTrackMap has incorrect Mini Map rows";
+            let error = "RaceTrackMap has incorrect Mini Map rows";
             ;
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             this.logUtil.putF(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR);
             throw new Exception(error);

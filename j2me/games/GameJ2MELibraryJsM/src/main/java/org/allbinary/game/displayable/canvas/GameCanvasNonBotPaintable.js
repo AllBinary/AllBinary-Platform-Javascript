@@ -13,7 +13,7 @@
 */
 //not GWT import const Graphics
 import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class GameCanvasNonBotPaintable extends Paintable {
     constructor(gameCanvas) {
         super();

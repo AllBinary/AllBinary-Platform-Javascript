@@ -40,13 +40,13 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicPersitance } from './BasicPersitance.js';
-//not GWT import - same folder const BasicPersitance
+//sameFolderImports - not GWT import - same folder const BasicPersitance
 import { NullRecordStore } from './NullRecordStore.js';
-//not GWT import - same folder const NullRecordStore
+//sameFolderImports - not GWT import - same folder const NullRecordStore
 import { NullRecordFilter } from './NullRecordFilter.js';
-//not GWT import - same folder const NullRecordFilter
+//sameFolderImports - not GWT import - same folder const NullRecordFilter
 import { NullRecordComparator } from './NullRecordComparator.js';
-//not GWT import - same folder const NullRecordComparator
+//sameFolderImports - not GWT import - same folder const NullRecordComparator
 export class KeyValuePersistance extends BasicPersitance {
     constructor(recordId) {
         super(recordId);
@@ -59,30 +59,30 @@ export class KeyValuePersistance extends BasicPersitance {
     }
     //@Throws(Exception.constructor)
     loadAllSize(abeClientInformation, size) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
             recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
-            var recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
+            let recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
             ;
-            var hashtable;
+            let hashtable;
             ;
-            var name;
+            let name;
             ;
-            var value;
+            let value;
             ;
-            var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+            let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            var recordAsBytes;
+            let recordAsBytes;
             ;
-            var byteArrayInputStream;
+            let byteArrayInputStream;
             ;
-            var inputStream;
+            let inputStream;
             ;
             while (recordEnum.hasNextElement()) {
-                var id = recordEnum.nextRecordId();
+                let id = recordEnum.nextRecordId();
                 ;
                 stringBuffer.delete(0, stringBuffer.length());
                 this.logUtil.putF(stringBuffer.append(this.persistanceStrings.LOADING_ID).appendint(id).toString(), this, this.persistanceStrings.LOAD_ALL);
@@ -92,7 +92,7 @@ export class KeyValuePersistance extends BasicPersitance {
                     byteArrayInputStream = new ByteArrayInputStream(recordAsBytes);
                     inputStream = new DataInputStream(byteArrayInputStream);
                     hashtable = new ABHashtable();
-                    for (var index = 0; index < size; index++) {
+                    for (let index = 0; index < size; index++) {
                         name = inputStream.readUTF();
                         inputStream.readUTF();
                         value = inputStream.readUTF();
@@ -102,10 +102,12 @@ export class KeyValuePersistance extends BasicPersitance {
                     this.idList.add(smallIntegerSingletonFactory.getAt(id));
                 }
             }
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             if (recordStore !=
@@ -117,41 +119,43 @@ export class KeyValuePersistance extends BasicPersitance {
     }
     //@Throws(Exception.constructor)
     save(abeClientInformation, hashtable) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
             this.logUtil.putF(new StringMaker().append(this.persistanceStrings.SAVING).append(StringUtil.getInstance().toString(hashtable)).toString(), this, this.commonStrings.SAVE);
             recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
-            var byteArrayOutputStream = new ByteArrayOutputStream();
+            let byteArrayOutputStream = new ByteArrayOutputStream();
             ;
-            var outputStream = new DataOutputStream(byteArrayOutputStream);
+            let outputStream = new DataOutputStream(byteArrayOutputStream);
             ;
-            var value;
+            let value;
             ;
-            var commonSeps = CommonSeps.getInstance();
+            let commonSeps = CommonSeps.getInstance();
             ;
-            var objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
+            let objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
             ;
-            var anyType;
+            let anyType;
             ;
-            var size = objectArray.length;
+            let size = objectArray.length;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 outputStream.writeUTF(objectArray[index]);
                 outputStream.writeUTF(commonSeps.EQUALS);
                 anyType = objectArray[index];
                 value = hashtable.get(anyType);
                 outputStream.writeUTF(value);
             }
-            var tsUtil = TsUtil.getInstance();
+            let tsUtil = TsUtil.getInstance();
             ;
-            var savedGameBytes = tsUtil.getByteArray(byteArrayOutputStream.toString());
+            let savedGameBytes = tsUtil.getByteArray(byteArrayOutputStream.toString());
             ;
             recordStore.addRecord(savedGameBytes, 0, savedGameBytes.length);
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             if (recordStore !=
@@ -162,7 +166,7 @@ export class KeyValuePersistance extends BasicPersitance {
         }
     }
     get(index) {
-        var hashtable = this.valueList.objectArray[index];
+        let hashtable = this.valueList.objectArray[index];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return hashtable;

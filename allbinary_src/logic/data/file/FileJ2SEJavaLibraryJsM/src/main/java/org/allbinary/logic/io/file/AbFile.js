@@ -21,7 +21,7 @@ import { AbPath } from '../../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const AbFileInterface
+//sameFolderImports - not GWT import - same folder const AbFileInterface
 export class AbFile extends Object {
     //@Throws(Exception.constructor)
     static createAbFileWithChild(file, childPathName) {
@@ -208,32 +208,53 @@ export class AbFile extends Object {
         return this.file.setReadOnly();
         ;
     }
-    setWritable(writable, ownerOnly) {
+    setWritable(...args) {
+        if (args.length === 2 && typeof args[0] === 'boolean' && typeof args[1] === 'boolean')
+            return this.setWritable$overload1(args[0], args[1]);
+        if (args.length === 1 && typeof args[0] === 'boolean')
+            return this.setWritable$overload2(args[0]);
+        throw new TypeError('No matching overload: setWritable');
+    }
+    setWritable$overload1(writable, ownerOnly) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.file.setExecutable(writable, ownerOnly);
         ;
     }
-    setWritable(writable) {
+    setWritable$overload2(writable) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.file.setWritable(writable);
         ;
     }
-    setReadable(readable, ownerOnly) {
+    setReadable(...args) {
+        if (args.length === 2 && typeof args[0] === 'boolean' && typeof args[1] === 'boolean')
+            return this.setReadable$overload1(args[0], args[1]);
+        if (args.length === 1 && typeof args[0] === 'boolean')
+            return this.setReadable$overload2(args[0]);
+        throw new TypeError('No matching overload: setReadable');
+    }
+    setReadable$overload1(readable, ownerOnly) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.file.setReadable(readable, ownerOnly);
         ;
     }
-    setReadable(readable) {
+    setReadable$overload2(readable) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.file.setReadable(readable);
         ;
     }
-    setExecutable(executable, ownerOnly) {
+    setExecutable(...args) {
+        if (args.length === 2 && typeof args[0] === 'boolean' && typeof args[1] === 'boolean')
+            return this.setExecutable$overload1(args[0], args[1]);
+        if (args.length === 1 && typeof args[0] === 'boolean')
+            return this.setExecutable$overload2(args[0]);
+        throw new TypeError('No matching overload: setExecutable');
+    }
+    setExecutable$overload1(executable, ownerOnly) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.file.setExecutable(executable, ownerOnly);
         ;
     }
-    setExecutable(executable) {
+    setExecutable$overload2(executable) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.file.setExecutable(executable);
         ;
@@ -263,7 +284,7 @@ export class AbFile extends Object {
         return this.file.compareTo(pathname);
         ;
     }
-    equals(obj = {}) {
+    equals(obj) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TsUtil.getInstance().equalsNotstring(this.file, obj);
         ;

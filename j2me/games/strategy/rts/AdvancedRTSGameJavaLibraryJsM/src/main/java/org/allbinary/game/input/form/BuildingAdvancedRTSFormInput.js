@@ -37,22 +37,22 @@ import { DropCellPositionHistory } from '../../../../../org/allbinary/media/grap
 //not GWT import const DropCellPositionHistory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BuildingRTSFormInput } from './BuildingRTSFormInput.js';
-//not GWT import - same folder const BuildingRTSFormInput
+//sameFolderImports - not GWT import - same folder const BuildingRTSFormInput
 export class BuildingAdvancedRTSFormInput extends BuildingRTSFormInput {
     constructor(groupInterface, isUnitProducer) {
         super(groupInterface, isUnitProducer);
         this.BUILD_BUILDING_RTS_LAYER_EVENT = new RTSLayerEvent(NullPathFindingLayer.NULL_PATH_FINDING_LAYER);
         //For kotlin this is before the body of the constructor.
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
         this.atLeastOneHouseGameNotificationEvent = new GameNotificationEvent(this, "Build At Least One House First", SmallIntegerSingletonFactory.getInstance().getAt(2), basicColorFactory.WHITE, BooleanFactory.getInstance().FALSE);
     }
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
         super.setAllBinaryGameLayerManager(allBinaryGameLayerManager);
-        var geographicMapCompositeInterface = allBinaryGameLayerManager;
+        let geographicMapCompositeInterface = allBinaryGameLayerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
         this.atLeastOneHouseGameNotificationEvent.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
     }
@@ -68,11 +68,11 @@ export class BuildingAdvancedRTSFormInput extends BuildingRTSFormInput {
     }
     //@Throws(Exception.constructor)
     isBuildAttemptValid(rtsPlayerLayerInterface, layerInterface) {
-        var advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
+        let advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
         ;
-        var advancedPlayerOwnedRTSLayers = advancedRTSPlayerLayerInterface.getAdvancedPlayerOwnedRTSLayers();
+        let advancedPlayerOwnedRTSLayers = advancedRTSPlayerLayerInterface.getAdvancedPlayerOwnedRTSLayers();
         ;
-        var totalHouses = advancedPlayerOwnedRTSLayers.getHouseList().size();
+        let totalHouses = advancedPlayerOwnedRTSLayers.getHouseList().size();
         ;
         if (totalHouses < 1 && layerInterface.getName().indexOf(" House") < 0) {
             rtsPlayerLayerInterface.add(ErrorSound.getInstance());

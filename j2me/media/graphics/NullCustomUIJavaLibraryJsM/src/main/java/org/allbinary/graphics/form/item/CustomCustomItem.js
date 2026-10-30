@@ -4,7 +4,7 @@ import { UpdateMyFontProcessor } from '../../../../../org/allbinary/graphics/fon
 //not GWT import const UpdateMyFontProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABCustomItem } from './ABCustomItem.js';
-//not GWT import - same folder const ABCustomItem
+//sameFolderImports - not GWT import - same folder const ABCustomItem
 export class CustomCustomItem extends ABCustomItem {
     constructor(label, backgroundBasicColor, foregroundBasicColor) {
         super(label, backgroundBasicColor, foregroundBasicColor);

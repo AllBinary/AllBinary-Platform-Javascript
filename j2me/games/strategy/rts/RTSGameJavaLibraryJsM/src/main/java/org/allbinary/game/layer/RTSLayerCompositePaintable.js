@@ -18,7 +18,7 @@ import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js
 //not GWT import const Paintable
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import - same folder const RTSLayer
+//sameFolderImports - not GWT import - same folder const RTSLayer
 export class RTSLayerCompositePaintable extends Paintable {
     constructor(upgradableRTSLayerHudPaintable) {
         super();

@@ -28,11 +28,11 @@ export class CompoundAnimationInterfaceFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var size = this.basicAnimationInterfaceFactoryInterfaceArrayP.length;
+        let size = this.basicAnimationInterfaceFactoryInterfaceArrayP.length;
         ;
-        var animationInterfaceArray = this.createArray(size);
+        let animationInterfaceArray = this.createArray(size);
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             animationInterfaceArray[index] = this.basicAnimationInterfaceFactoryInterfaceArrayP[index].getInstance(instanceId);
         }
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +53,9 @@ export class CompoundAnimationInterfaceFactory extends Object {
         return this.basicAnimationInterfaceFactoryInterfaceArrayP;
     }
     setInitialScale(scaleProperties) {
-        var size = this.basicAnimationInterfaceFactoryInterfaceArrayP.length;
+        let size = this.basicAnimationInterfaceFactoryInterfaceArrayP.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.basicAnimationInterfaceFactoryInterfaceArrayP[index].setInitialScale(scaleProperties);
         }
     }

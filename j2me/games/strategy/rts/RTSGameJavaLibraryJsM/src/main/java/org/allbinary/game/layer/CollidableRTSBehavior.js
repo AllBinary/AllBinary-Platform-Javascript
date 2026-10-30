@@ -15,16 +15,16 @@
 import { CollisionTypeFactory } from '../../../../org/allbinary/game/collision/CollisionTypeFactory.js';
 //not GWT import const CollisionTypeFactory
 import { CollidableDestroyableDamageableBehavior } from '../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableBehavior.js';
-//not GWT import - same folder const CollidableCompositeLayer
+//sameFolderImports - not GWT import - same folder const CollidableCompositeLayer
 export class CollidableRTSBehavior extends CollidableDestroyableDamageableBehavior {
     constructor(collidable) {
         super(collidable);
         //For kotlin this is before the body of the constructor.
     }
     isCollision(ownerLayer, collidableInterfaceCompositeInterface) {
-        var collisionTypeFactory = CollisionTypeFactory.getInstance();
+        let collisionTypeFactory = CollisionTypeFactory.getInstance();
         ;
-        var collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
+        let collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
         ;
         if (collisionType == collisionTypeFactory.PICKUP) {
         }
@@ -48,9 +48,9 @@ export class CollidableRTSBehavior extends CollidableDestroyableDamageableBehavi
     }
     //@Throws(Exception.constructor)
     collide(ownerLayer, collidableInterfaceCompositeInterface) {
-        var collisionTypeFactory = CollisionTypeFactory.getInstance();
+        let collisionTypeFactory = CollisionTypeFactory.getInstance();
         ;
-        var collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
+        let collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
         ;
         if (collisionType == collisionTypeFactory.PICKUP) {
         }

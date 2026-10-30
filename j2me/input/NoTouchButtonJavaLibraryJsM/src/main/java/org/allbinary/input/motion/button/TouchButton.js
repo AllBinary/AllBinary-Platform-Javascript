@@ -28,7 +28,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const TouchButtonInput
+//sameFolderImports - not GWT import - same folder const TouchButtonInput
 export class TouchButton extends Paintable {
     constructor(touchButtonInput, animationInterface, rawRectangle, cellPosition, xBorder, yBorder) {
         super();
@@ -51,21 +51,23 @@ export class TouchButton extends Paintable {
     }
     updateRectangle() {
         try {
-            var x = this.rawRectangle.getWidth() * this.cellPosition.getColumn();
+            let x = this.rawRectangle.getWidth() * this.cellPosition.getColumn();
             ;
-            var y = this.rawRectangle.getHeight() * this.cellPosition.getRow();
+            let y = this.rawRectangle.getHeight() * this.cellPosition.getRow();
             ;
-            var pointFactory = PointFactory.getInstance();
+            let pointFactory = PointFactory.getInstance();
             ;
             this.rectangle = new Rectangle(pointFactory.createXY(x + this.xBorder, y + this.yBorder), this.rawRectangle.getWidth(), this.rawRectangle.getHeight());
-            var point = this.rectangle.getPoint();
+            let point = this.rectangle.getPoint();
             ;
             this.animationX = point.getX();
             this.animationY = point.getY();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "updateRectangle", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "updateRectangle", e);
+            }
         }
     }
     getCellPositionP() {
@@ -81,9 +83,9 @@ export class TouchButton extends Paintable {
         return this.touchButtonInput;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         stringBuffer.append("TouchButton: ");
         stringBuffer.append(stringUtil.toString(this.rectangle));

@@ -46,7 +46,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigData } from './LogConfigData.js';
-//not GWT import - same folder const LogConfigData
+//sameFolderImports - not GWT import - same folder const LogConfigData
 export class LogConfig extends Object {
     constructor(aName, aDescription, aPath, aFileName) {
         super();
@@ -58,20 +58,20 @@ export class LogConfig extends Object {
     }
     constructor(node) {
         super();
-        var enabledValueNode = DomSearchHelper.getNode(EntryData.getInstance().ENABLE, node.getChildNodes());
+        let enabledValueNode = DomSearchHelper.getNode(EntryData.getInstance().ENABLE, node.getChildNodes());
         ;
-        var isEnabledString = DomNodeHelper.getTextNodeValue(enabledValueNode);
+        let isEnabledString = DomNodeHelper.getTextNodeValue(enabledValueNode);
         ;
         this.isEnabled = BooleanUtil.getInstance().getFromString(isEnabledString);
-        var logConfigData = LogConfigData.getInstance();
+        let logConfigData = LogConfigData.getInstance();
         ;
-        var nameValueNode = DomSearchHelper.getNode(logConfigData.NAME, node.getChildNodes());
+        let nameValueNode = DomSearchHelper.getNode(logConfigData.NAME, node.getChildNodes());
         ;
         this.name = DomNodeHelper.getTextNodeValue(nameValueNode);
-        var descriptionValueNode = DomSearchHelper.getNode(logConfigData.DESCRIPTION, node.getChildNodes());
+        let descriptionValueNode = DomSearchHelper.getNode(logConfigData.DESCRIPTION, node.getChildNodes());
         ;
         this.description = DomNodeHelper.getTextNodeValue(descriptionValueNode);
-        var fileValueNode = DomSearchHelper.getNode(logConfigData.FILE, node.getChildNodes());
+        let fileValueNode = DomSearchHelper.getNode(logConfigData.FILE, node.getChildNodes());
         ;
         this.fileName = DomNodeHelper.getTextNodeValue(fileValueNode);
     }
@@ -111,36 +111,36 @@ export class LogConfig extends Object {
     }
     //@Throws(Exception.constructor)
     getDoc() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(URLGLOBALS.getWebappPath());
         stringBuffer.append(PATH_GLOBALS.getInstance().INIT_PATH);
         stringBuffer.append(this.getFileName());
-        var file = AbFile.createAbFile(stringBuffer.toString());
+        let file = AbFile.createAbFile(stringBuffer.toString());
         ;
-        var document = DomDocumentHelper.create(new AbFileLocalInputStream(file));
+        let document = DomDocumentHelper.create(new AbFileLocalInputStream(file));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return document;
     }
     //@Throws(Exception.constructor)
     getTypeVector() {
-        var logKeyVector = new BasicArrayListD();
+        let logKeyVector = new BasicArrayListD();
         ;
-        var document = this.getDoc();
+        let document = this.getDoc();
         ;
-        var logConfigTypesNodeList = document.getElementsByTagName(LogConfigTypesData.getInstance().NAME);
+        let logConfigTypesNodeList = document.getElementsByTagName(LogConfigTypesData.getInstance().NAME);
         ;
-        var logConfigTypesNode = logConfigTypesNodeList.item(0);
+        let logConfigTypesNode = logConfigTypesNodeList.item(0);
         ;
-        var logConfigTypeNodeVector = DomSearchHelper.getAllNodes(LogConfigTypeData.getInstance().NAME, logConfigTypesNode.getChildNodes());
+        let logConfigTypeNodeVector = DomSearchHelper.getAllNodes(LogConfigTypeData.getInstance().NAME, logConfigTypesNode.getChildNodes());
         ;
-        var size = logConfigTypeNodeVector.size();
+        let size = logConfigTypeNodeVector.size();
         ;
-        for (var i = 0; i < size; i++) {
-            var node = logConfigTypeNodeVector.get(i);
+        for (let i = 0; i < size; i++) {
+            let node = logConfigTypeNodeVector.get(i);
             ;
-            var logType = LogConfigTypes.getInstance(node);
+            let logType = LogConfigTypes.getInstance(node);
             ;
             logKeyVector.add(logType);
         }

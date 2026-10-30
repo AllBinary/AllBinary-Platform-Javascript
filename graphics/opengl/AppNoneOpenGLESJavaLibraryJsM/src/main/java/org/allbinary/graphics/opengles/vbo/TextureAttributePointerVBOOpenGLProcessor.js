@@ -25,7 +25,7 @@ export class TextureAttributePointerVBOOpenGLProcessor extends ObjectThreedOpenG
     constructor() {
         super();
     }
-    process(gl, anyType = {}) {
+    process(gl, anyType) {
         throw new RuntimeException();
     }
 }

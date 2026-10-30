@@ -27,9 +27,9 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AppUrlGlobals } from './AppUrlGlobals.js';
-//not GWT import - same folder const AppUrlGlobals
+//sameFolderImports - not GWT import - same folder const AppUrlGlobals
 import { URLGLOBALS } from './URLGLOBALS.js';
-//not GWT import - same folder const URLGLOBALS
+//sameFolderImports - not GWT import - same folder const URLGLOBALS
 export class Globals extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,21 +40,21 @@ export class Globals extends Object {
         this.logUtil = LogUtil.getInstance();
     }
     init(classLoader, pathString) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var appUrlGlobals = new AppUrlGlobals();
+        let appUrlGlobals = new AppUrlGlobals();
         ;
         appUrlGlobals.setWebappPath(pathString);
         URLGLOBALS.init(appUrlGlobals);
         WebappClassLoaderInfo.setLoader(classLoader);
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Setting Up AllBinary System Configuration Args: ");
         stringBuffer.append(pathString);
         stringBuffer.append(" ClassLoader: ");
         stringBuffer.append(classLoader.constructor.name.toString());
         this.logUtil.putF(stringBuffer.toString(), this, commonStrings.INIT);
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (stringValidationUtil.isEmpty(pathString)) {
             stringBuffer.delete(0, stringBuffer.length());

@@ -28,7 +28,7 @@ export class KeyValueFactory extends Object {
         return KeyValueFactory.instance;
     }
     get(key) {
-        var value = this.MAP.get(key);
+        let value = this.MAP.get(key);
         ;
         if (value ==
             null) {

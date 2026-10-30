@@ -24,7 +24,7 @@ export class HttpData extends Object {
     constructor() {
         super();
         this.URL_LABEL = "Url: ";
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         this.EQUALS = commonSeps.EQUALS;
         this.PARAM_SEP = commonSeps.AMPERSAND;

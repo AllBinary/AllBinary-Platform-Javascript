@@ -23,7 +23,7 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const GameKeyCompleteMotionGestureInputEvent
+//sameFolderImports - not GWT import - same folder const GameKeyCompleteMotionGestureInputEvent
 export class GameKeyCompleteMotionGestureInputEventFactory extends Object {
     constructor() {
         super(...arguments);
@@ -39,8 +39,8 @@ export class GameKeyCompleteMotionGestureInputEventFactory extends Object {
     }
     updateAll() {
         this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().START_LABEL).appendint(this.eventList.size()).toString(), this, "updateAll");
-        for (var index = this.eventList.size() - 1; index >= 0; index--) {
-            var gameKeyCompleteMotionGestureInputEvent = this.eventList.objectArray[index];
+        for (let index = this.eventList.size() - 1; index >= 0; index--) {
+            let gameKeyCompleteMotionGestureInputEvent = this.eventList.objectArray[index];
             ;
             gameKeyCompleteMotionGestureInputEvent.update();
         }

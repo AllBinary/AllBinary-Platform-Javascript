@@ -13,11 +13,11 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Sound } from './Sound.js';
-//not GWT import - same folder const Sound
+//sameFolderImports - not GWT import - same folder const Sound
 import { PlayerComposite } from './PlayerComposite.js';
-//not GWT import - same folder const PlayerComposite
+//sameFolderImports - not GWT import - same folder const PlayerComposite
 import { AllBinaryMediaManager } from './AllBinaryMediaManager.js';
-//not GWT import - same folder const AllBinaryMediaManager
+//sameFolderImports - not GWT import - same folder const AllBinaryMediaManager
 export class CompositeSound extends Sound {
     constructor(resource) {
         super(resource);

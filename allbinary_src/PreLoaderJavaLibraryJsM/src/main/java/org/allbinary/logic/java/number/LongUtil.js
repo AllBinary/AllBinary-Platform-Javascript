@@ -19,17 +19,17 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LongData } from './LongData.js';
-//not GWT import - same folder const LongData
+//sameFolderImports - not GWT import - same folder const LongData
 export class LongUtil extends Object {
     static fillIn(end) {
-        var frameStringBuffer = new StringMaker();
+        let frameStringBuffer = new StringMaker();
         ;
         if (frameStringBuffer.length() < LongData.MAX_LONG_LENGTH) {
-            var commonPhoneStrings = CommonPhoneStrings.getInstance();
+            let commonPhoneStrings = CommonPhoneStrings.getInstance();
             ;
-            var size = LongData.MAX_LONG_LENGTH - frameStringBuffer.length();
+            let size = LongData.MAX_LONG_LENGTH - frameStringBuffer.length();
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 frameStringBuffer.append(commonPhoneStrings.ZERO);
             }
         }

@@ -17,13 +17,13 @@ import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 //not GWT import const MIDlet
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GLHolder } from './GLHolder.js';
-//not GWT import - same folder const RatioProcessor
+//sameFolderImports - not GWT import - same folder const RatioProcessor
 //SWTWithoutJOGL
 export class SWTJOGLProcessor extends Object {
     constructor() {
         super(...arguments);
         this.glHolder = new class extends GLHolder {
-            run(renderer = {}) {
+            run(renderer) {
             }
         };
     }
@@ -31,13 +31,13 @@ export class SWTJOGLProcessor extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return SWTJOGLProcessor.instance;
     }
-    init(display = {}, comp = {}) {
+    init(display, comp) {
     }
     isHolderCreated() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.glHolder.isCreated;
     }
-    setRenderer(renderer = {}) {
+    setRenderer(renderer) {
     }
     isJOGL() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -47,7 +47,7 @@ export class SWTJOGLProcessor extends Object {
     }
     onSurfaceCreated() {
     }
-    onSurfaceChangedForEvent(event = {}) {
+    onSurfaceChangedForEvent(event) {
     }
     onSurfaceChanged() {
     }

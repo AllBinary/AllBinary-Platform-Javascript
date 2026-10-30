@@ -21,7 +21,7 @@ import { AllBinaryEventCircularPool } from '../../../../../../org/allbinary/logi
 //not GWT import const AllBinaryEventCircularPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionEventFactory } from './MotionEventFactory.js';
-//not GWT import - same folder const MotionGestureEvent
+//sameFolderImports - not GWT import - same folder const MotionGestureEvent
 export class MotionEventCircularPool extends Object {
     static createPool(id) {
         //if statement needs to be on the same line and ternary does not work the same way.

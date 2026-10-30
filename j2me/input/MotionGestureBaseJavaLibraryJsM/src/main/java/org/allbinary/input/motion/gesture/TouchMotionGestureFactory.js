@@ -19,7 +19,7 @@ import { InputFactory } from '../../../../../org/allbinary/game/input/InputFacto
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionGestureInput } from './MotionGestureInput.js';
-//not GWT import - same folder const MotionGestureInput
+//sameFolderImports - not GWT import - same folder const MotionGestureInput
 export class TouchMotionGestureFactory extends Object {
     static getInstance() {
         if (TouchMotionGestureFactory.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -30,7 +30,7 @@ export class TouchMotionGestureFactory extends Object {
     }
     constructor() {
         super();
-        var MAX = InputFactory.getInstance().MAX;
+        let MAX = InputFactory.getInstance().MAX;
         ;
         this.LEFT = new MotionGestureInput(MAX - 3, "Left Touch");
         this.RIGHT = new MotionGestureInput(MAX - 4, "Right Touch");

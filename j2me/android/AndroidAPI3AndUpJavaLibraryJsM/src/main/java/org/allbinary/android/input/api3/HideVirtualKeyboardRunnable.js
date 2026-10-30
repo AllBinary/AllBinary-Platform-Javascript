@@ -30,18 +30,18 @@ export class HideVirtualKeyboardRunnable extends Object {
         this.activity = activity;
     }
     run() {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         try {
-            var inputMethodManager = this.activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            let inputMethodManager = this.activity.getSystemService(Context.INPUT_METHOD_SERVICE);
             ;
-            var viewCompositeInterface = this.activity;
+            let viewCompositeInterface = this.activity;
             ;
             if (viewCompositeInterface ==
                 null) {
                 ForcedLogUtil.log("Activity Null", this);
             }
-            var view = viewCompositeInterface.getView();
+            let view = viewCompositeInterface.getView();
             ;
             if (view.getWindowToken() ==
                 null) {
@@ -49,13 +49,15 @@ export class HideVirtualKeyboardRunnable extends Object {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return;
             }
-            var token = view.getWindowToken();
+            let token = view.getWindowToken();
             ;
             inputMethodManager.hideSoftInputFromWindow(token, 0);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+            }
         }
     }
 }

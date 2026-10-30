@@ -17,7 +17,7 @@ import { AllBinaryEventCircularPool } from '../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventCircularPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TerrainEventFactory } from './TerrainEventFactory.js';
-//not GWT import - same folder const BasicTerrainInfo
+//sameFolderImports - not GWT import - same folder const BasicTerrainInfo
 export class TerrainEventCircularStaticPool extends Object {
     constructor() {
         super(...arguments);
@@ -33,7 +33,7 @@ export class TerrainEventCircularStaticPool extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getNext(basicTerrainInfo) {
-        var trackingEvent = this.EVENT_POOL.getNextInstance();
+        let trackingEvent = this.EVENT_POOL.getNextInstance();
         ;
         trackingEvent.setBasicTerrainInfoForCircularStaticPool(basicTerrainInfo);
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -26,7 +26,7 @@ export class PlayerOwnedRTSLayers extends Object {
         this.rtsLayerList = new BasicArrayListD();
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("All: ");
         stringBuffer.appendint(this.rtsLayerList.size());

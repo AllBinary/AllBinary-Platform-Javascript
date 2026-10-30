@@ -5,7 +5,7 @@ import { PlatformTextureBaseFactory } from '../../../org/allbinary/platform/open
 //not GWT import const PlatformTextureBaseFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLGLUUtils } from './OpenGLGLUUtils.js';
-//not GWT import - same folder const OpenGLGLUUtils
+//sameFolderImports - not GWT import - same folder const OpenGLGLUUtils
 export class OpenGLTextureFactory extends PlatformTextureBaseFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

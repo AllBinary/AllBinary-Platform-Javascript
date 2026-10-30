@@ -14,7 +14,7 @@
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation
+//sameFolderImports - not GWT import - same folder const ImageBaseRotationAnimation
 export class AdjustedImageBaseRotationAnimation extends ImageBaseRotationAnimation {
     constructor(image, angleInfo, totalAngle, dx, dy, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);

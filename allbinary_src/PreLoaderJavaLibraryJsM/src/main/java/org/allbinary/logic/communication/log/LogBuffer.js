@@ -34,10 +34,10 @@ export class LogBuffer extends Object {
         this.logEntryVector.add(log);
     }
     logAll() {
-        var size = this.logEntryVector.size();
+        let size = this.logEntryVector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var log = this.logEntryVector.get(index);
+        for (let index = 0; index < size; index++) {
+            let log = this.logEntryVector.get(index);
             ;
             this.logUtil.putL(log);
         }

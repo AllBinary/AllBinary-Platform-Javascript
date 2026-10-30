@@ -25,7 +25,7 @@ import { EventStrings } from '../../../../../../org/allbinary/logic/util/event/E
 //not GWT import const EventStrings
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const GameKeyCompleteMotionGestureInputEvent
+//sameFolderImports - not GWT import - same folder const GameKeyCompleteMotionGestureInputEvent
 export class SingleKeyPressGameKeyFromMotionGestureEventListener extends CompleteMotionGestureInputEventListener {
     constructor() {
         super(...arguments);
@@ -36,17 +36,19 @@ export class SingleKeyPressGameKeyFromMotionGestureEventListener extends Complet
     }
     onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent) {
         try {
-            var gameKeyCompleteMotionGestureInputEvent = completeMotionGestureInputEvent;
+            let gameKeyCompleteMotionGestureInputEvent = completeMotionGestureInputEvent;
             ;
-            var gameKeyEvent = gameKeyCompleteMotionGestureInputEvent.getGameKeyEvent();
+            let gameKeyEvent = gameKeyCompleteMotionGestureInputEvent.getGameKeyEvent();
             ;
             PressGameKeyEventHandler.getInstance().fireEvent(gameKeyEvent);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "onCompleteMotionGestureInputEvent", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "onCompleteMotionGestureInputEvent", e);
+            }
         }
     }
 }

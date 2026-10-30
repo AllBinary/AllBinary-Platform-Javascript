@@ -19,7 +19,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicUserRoleFactory } from './BasicUserRoleFactory.js';
-//not GWT import - same folder const BasicUserRoleFactory
+//sameFolderImports - not GWT import - same folder const BasicUserRoleFactory
 export class AdminRoleFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -38,7 +38,7 @@ export class AdminRoleFactory extends Object {
         this.adjusterManagementRoles = new BasicArrayListD();
         this.shippingManagementRoles = new BasicArrayListD();
         this.webManagementRoles = new BasicArrayListD();
-        var basicUserRoleFactory = BasicUserRoleFactory.getInstance();
+        let basicUserRoleFactory = BasicUserRoleFactory.getInstance();
         ;
         this.adminRoles.add(basicUserRoleFactory.ADMINISTRATOR);
         this.storeAdminRoles.add(basicUserRoleFactory.ADMINISTRATOR);

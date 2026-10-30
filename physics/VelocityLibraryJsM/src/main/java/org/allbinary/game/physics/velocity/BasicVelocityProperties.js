@@ -31,7 +31,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const BasicVelocityInterface
+//sameFolderImports - not GWT import - same folder const BasicVelocityInterface
 export class BasicVelocityProperties extends Object {
     constructor() {
         super();
@@ -60,79 +60,79 @@ export class BasicVelocityProperties extends Object {
         return this.velocityZBasicDecimal;
     }
     setVelocityWithBigDecimalAndDirection(magnitudeBasicDecimal, direction, otherDirection) {
-        var angle = this.directionUtil.getAngle(direction);
+        let angle = this.directionUtil.getAngle(direction);
         ;
-        var otherAngle = this.directionUtil.getAngle(otherDirection);
+        let otherAngle = this.directionUtil.getAngle(otherDirection);
         ;
         this.setVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle);
     }
     setVelocityWithDirection(magnitude, direction, otherDirection) {
-        var angle = this.directionUtil.getAngle(direction);
+        let angle = this.directionUtil.getAngle(direction);
         ;
-        var otherAngle = this.directionUtil.getAngle(otherDirection);
+        let otherAngle = this.directionUtil.getAngle(otherDirection);
         ;
         this.setVelocity(magnitude, angle, otherAngle);
     }
     addVelocityWithBigDecimalAndDirection(magnitudeBasicDecimal, direction, otherDirection) {
-        var angle = this.directionUtil.getAngle(direction);
+        let angle = this.directionUtil.getAngle(direction);
         ;
-        var otherAngle = this.directionUtil.getAngle(otherDirection);
+        let otherAngle = this.directionUtil.getAngle(otherDirection);
         ;
         this.addVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle);
     }
     addVelocityWithDirection(magnitude, direction, otherDirection) {
-        var angle = this.directionUtil.getAngle(direction);
+        let angle = this.directionUtil.getAngle(direction);
         ;
-        var otherAngle = this.directionUtil.getAngle(otherDirection);
+        let otherAngle = this.directionUtil.getAngle(otherDirection);
         ;
         this.addVelocity(magnitude, angle, otherAngle);
     }
     setVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle) {
-        var magnitude = magnitudeBasicDecimal.getUnscaled();
+        let magnitude = magnitudeBasicDecimal.getUnscaled();
         ;
         this.setVelocity(magnitude, angle, otherAngle);
     }
     addVelocityWithBigDecimal(magnitudeBasicDecimal, angle, otherAngle) {
-        var magnitude = magnitudeBasicDecimal.getUnscaled();
+        let magnitude = magnitudeBasicDecimal.getUnscaled();
         ;
         this.addVelocity(magnitude, angle, otherAngle);
     }
     setVelocity(magnitude, angle, otherAngle) {
-        this.setVelocityi(magnitude, Math.round(angle.getValue()), Math.round(otherAngle.getValue()));
+        this.setVelocityi(magnitude, globalThis.Math.trunc(angle.getValue()), globalThis.Math.trunc(otherAngle.getValue()));
     }
     addVelocity(magnitude, angle, otherAngle) {
-        this.addVelocityi(magnitude, Math.round(angle.getValue()), Math.round(otherAngle.getValue()));
+        this.addVelocityi(magnitude, globalThis.Math.trunc(angle.getValue()), globalThis.Math.trunc(otherAngle.getValue()));
     }
     setVelocityi(magnitude, angle, otherAngle) {
-        var xVector = (this.axisMathVectorUtil.calculateX(magnitude, angle) / this.velocityXBasicDecimal.getScaledFactorValue());
+        let xVector = (this.axisMathVectorUtil.calculateX(magnitude, angle) / this.velocityXBasicDecimal.getScaledFactorValue());
         ;
-        var yVector = (this.axisMathVectorUtil.calculateY(magnitude, angle) / this.velocityYBasicDecimal.getScaledFactorValue());
+        let yVector = (this.axisMathVectorUtil.calculateY(magnitude, angle) / this.velocityYBasicDecimal.getScaledFactorValue());
         ;
-        var zVector = (this.axisMathVectorUtil.calculateZ(magnitude, otherAngle) / this.velocityZBasicDecimal.getScaledFactorValue());
+        let zVector = (this.axisMathVectorUtil.calculateZ(magnitude, otherAngle) / this.velocityZBasicDecimal.getScaledFactorValue());
         ;
         this.velocityXBasicDecimal.setlong(xVector);
         this.velocityYBasicDecimal.setlong(yVector);
         this.velocityZBasicDecimal.setlong(zVector);
     }
     addVelocityi(magnitude, angle, otherAngle) {
-        var xVector = (this.axisMathVectorUtil.calculateX(magnitude, angle) / this.velocityXBasicDecimal.getScaledFactorValue());
+        let xVector = (this.axisMathVectorUtil.calculateX(magnitude, angle) / this.velocityXBasicDecimal.getScaledFactorValue());
         ;
-        var yVector = (this.axisMathVectorUtil.calculateY(magnitude, angle) / this.velocityYBasicDecimal.getScaledFactorValue());
+        let yVector = (this.axisMathVectorUtil.calculateY(magnitude, angle) / this.velocityYBasicDecimal.getScaledFactorValue());
         ;
-        var zVector = (this.axisMathVectorUtil.calculateZ(magnitude, otherAngle) / this.velocityZBasicDecimal.getScaledFactorValue());
+        let zVector = (this.axisMathVectorUtil.calculateZ(magnitude, otherAngle) / this.velocityZBasicDecimal.getScaledFactorValue());
         ;
         this.velocityXBasicDecimal.addlong(xVector);
         this.velocityYBasicDecimal.addlong(yVector);
         this.velocityZBasicDecimal.addlong(zVector);
     }
     toString() {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var positionStrings = PositionStrings.getInstance();
+        let positionStrings = PositionStrings.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         stringBuffer.append("Velocity ");
         stringBuffer.append(positionStrings.X_LABEL);

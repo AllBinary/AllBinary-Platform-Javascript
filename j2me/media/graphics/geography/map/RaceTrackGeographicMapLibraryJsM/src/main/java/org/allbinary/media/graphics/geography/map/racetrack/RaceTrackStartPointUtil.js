@@ -22,13 +22,13 @@ import { PointFactory } from '../../../../../../../org/allbinary/graphics/PointF
 export class RaceTrackStartPointUtil extends Object {
     //@Throws(Exception.constructor)
     static get(geographicMapInterface, pathFindingInfo, index) {
-        var list = pathFindingInfo.getStartPathFindingNodeList();
+        let list = pathFindingInfo.getStartPathFindingNodeList();
         ;
-        var startPathFindingNode = list.get(index);
+        let startPathFindingNode = list.get(index);
         ;
-        var geographicMapCellPosition = startPathFindingNode.geographicMapCellPosition;
+        let geographicMapCellPosition = startPathFindingNode.geographicMapCellPosition;
         ;
-        var point = geographicMapCellPosition.getPoint();
+        let point = geographicMapCellPosition.getPoint();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return PointFactory.getInstance().createXY(point.getX(), point.getY() + geographicMapInterface.getAllBinaryTiledLayer().getHalfCellHeight());

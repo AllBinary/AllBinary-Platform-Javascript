@@ -32,7 +32,7 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABStack = globalThis.org.allbinary.util.ABStack;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScreenRepaintProcessorFactory } from './ScreenRepaintProcessorFactory.js';
-//not GWT import - same folder const ScreenRepaintProcessorFactory
+//sameFolderImports - not GWT import - same folder const ScreenRepaintProcessorFactory
 export class CommandForm extends Form {
     static getNullCommandForm() {
         if (CommandForm.NULL_COMMAND_FORM == NullUtil.getInstance().NULL_OBJECT) {
@@ -50,10 +50,12 @@ export class CommandForm extends Form {
         this.commandStack = StdUtil.getInstance().createStack();
         try {
             this.repaintProcessor.process();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     initCommands(cmdListener) {
@@ -77,9 +79,9 @@ export class CommandForm extends Form {
         super.addCommand(command);
     }
     removeAllCommands() {
-        var size = this.commandStack.size();
+        let size = this.commandStack.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             super.removeCommand(this.commandStack.pop());
         }
     }

@@ -35,7 +35,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputMapping } from './InputMapping.js';
-//not GWT import - same folder const InputMapping
+//sameFolderImports - not GWT import - same folder const InputMapping
 export class InputToGameKeyMapping extends InputMapping {
     static getNullInstance() {
         if (InputToGameKeyMapping.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -56,7 +56,7 @@ export class InputToGameKeyMapping extends InputMapping {
         this.clear();
     }
     clear() {
-        for (var index = this.platformToGameKeyMapping.length - 1; index >= 0; index--) {
+        for (let index = this.platformToGameKeyMapping.length - 1; index >= 0; index--) {
             this.platformToGameKeyMapping[index] = this.gameKeyFactory.NONE;
         }
     }
@@ -65,8 +65,8 @@ export class InputToGameKeyMapping extends InputMapping {
         this.clear();
     }
     addMapping(inputToGameKeyMapping) {
-        for (var index = inputToGameKeyMapping.getMaxMappable() - 1; index >= 0; index--) {
-            var input = inputToGameKeyMapping.getInstance(index);
+        for (let index = inputToGameKeyMapping.getMaxMappable() - 1; index >= 0; index--) {
+            let input = inputToGameKeyMapping.getInstance(index);
             ;
             if (input != this.gameKeyFactory.NONE) {
                 this.addAll(input, inputToGameKeyMapping.getMappedInput(input));
@@ -74,8 +74,8 @@ export class InputToGameKeyMapping extends InputMapping {
         }
     }
     addAll(input, list) {
-        for (var index = list.size() - 1; index >= 0; index--) {
-            var mappedToInput = list.objectArray[index];
+        for (let index = list.size() - 1; index >= 0; index--) {
+            let mappedToInput = list.objectArray[index];
             ;
             this.add(input, mappedToInput);
         }
@@ -90,7 +90,7 @@ export class InputToGameKeyMapping extends InputMapping {
         this.set(input, this.gameKeyFactory.NONE);
     }
     set(input, mappedToInput) {
-        var id = mappedToInput.getId();
+        let id = mappedToInput.getId();
         ;
         if (id >= 0 && id < this.platformToGameKeyMapping.length) {
             this.platformToGameKeyMapping[id] = input;
@@ -101,13 +101,13 @@ export class InputToGameKeyMapping extends InputMapping {
         return this.platformToGameKeyMapping.length;
     }
     getReverseInstance(id) {
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
-        var inputFactory = InputFactory.getInstance();
+        let inputFactory = InputFactory.getInstance();
         ;
-        for (var index = 0; index < this.platformToGameKeyMapping.length; index++) {
+        for (let index = 0; index < this.platformToGameKeyMapping.length; index++) {
             if (this.platformToGameKeyMapping[index].getId() == id) {
-                var input = inputFactory.getInstanceById(index);
+                let input = inputFactory.getInstanceById(index);
                 ;
                 if (input !=
                     null) {
@@ -120,7 +120,7 @@ export class InputToGameKeyMapping extends InputMapping {
     }
     //@Throws(Exception.constructor)
     initGameKey(canvas, gameKey) {
-        var key = canvas.getKeyCode(gameKey.getId());
+        let key = canvas.getKeyCode(gameKey.getId());
         ;
         if (key < 0 && -key < this.negativePlatformToGameKeyMapping.length) {
             this.negativePlatformToGameKeyMapping[-key] = gameKey;
@@ -136,11 +136,11 @@ export class InputToGameKeyMapping extends InputMapping {
     }
     //@Throws(Exception.constructor)
     getSmallestCanvasGameKeyCode(canvas) {
-        var nextKey = 0;
+        let nextKey = 0;
         ;
-        var smallestKey = 0;
+        let smallestKey = 0;
         ;
-        for (var index = this.mappedGameKeys.length; --index >= 0;) {
+        for (let index = this.mappedGameKeys.length; --index >= 0;) {
             nextKey = canvas.getKeyCode(this.mappedGameKeys[index].getId());
             if (nextKey < smallestKey) {
                 smallestKey = nextKey;
@@ -151,9 +151,9 @@ export class InputToGameKeyMapping extends InputMapping {
     }
     init(canvas) {
         try {
-            var negativePlatformToGameKeyMapping = [];
+            let negativePlatformToGameKeyMapping = [];
             ;
-            var smallestKey = this.getSmallestCanvasGameKeyCode(canvas);
+            let smallestKey = this.getSmallestCanvasGameKeyCode(canvas);
             ;
             if (smallestKey < 0) {
                 smallestKey--;
@@ -161,18 +161,20 @@ export class InputToGameKeyMapping extends InputMapping {
                     smallestKey = -256;
                 }
                 negativePlatformToGameKeyMapping = new Array(-smallestKey);
-                for (var index = negativePlatformToGameKeyMapping.length; --index >= 0;) {
+                for (let index = negativePlatformToGameKeyMapping.length; --index >= 0;) {
                     negativePlatformToGameKeyMapping[index] = this.gameKeyFactory.NONE;
                 }
                 this.negativePlatformToGameKeyMapping = negativePlatformToGameKeyMapping;
             }
-            for (var index = this.mappedGameKeys.length; --index >= 0;) {
+            for (let index = this.mappedGameKeys.length; --index >= 0;) {
                 this.initGameKey(canvas, this.mappedGameKeys[index]);
             }
-            //: 
         }
-        catch (t) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, t);
+        catch (caught) {
+            {
+                const t = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, t);
+            }
         }
     }
     getInstanceForCanvas(canvas, id) {

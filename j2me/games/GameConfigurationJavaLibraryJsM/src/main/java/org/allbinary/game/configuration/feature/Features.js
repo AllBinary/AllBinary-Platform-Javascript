@@ -36,17 +36,17 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const Feature
+//sameFolderImports - not GWT import - same folder const Feature
 import { GameFeatureFactory } from './GameFeatureFactory.js';
-//not GWT import - same folder const GameFeatureFactory
+//sameFolderImports - not GWT import - same folder const GameFeatureFactory
 import { InputFeatureFactory } from './InputFeatureFactory.js';
-//not GWT import - same folder const InputFeatureFactory
+//sameFolderImports - not GWT import - same folder const InputFeatureFactory
 import { SensorFeatureFactory } from './SensorFeatureFactory.js';
-//not GWT import - same folder const SensorFeatureFactory
+//sameFolderImports - not GWT import - same folder const SensorFeatureFactory
 import { TouchFeatureFactory } from './TouchFeatureFactory.js';
-//not GWT import - same folder const TouchFeatureFactory
+//sameFolderImports - not GWT import - same folder const TouchFeatureFactory
 import { MainFeatureFactory } from './MainFeatureFactory.js';
-//not GWT import - same folder const MainFeatureFactory
+//sameFolderImports - not GWT import - same folder const MainFeatureFactory
 export class Features extends Object {
     static getInstance() {
         if (Features.SINGLETON == NullUtil.getInstance().NULL_OBJECT) {
@@ -94,13 +94,13 @@ export class Features extends Object {
     }
     init() {
         try {
-            var gameFeatureFactory = GameFeatureFactory.getInstance();
+            let gameFeatureFactory = GameFeatureFactory.getInstance();
             ;
-            var inputFeatureFactory = InputFeatureFactory.getInstance();
+            let inputFeatureFactory = InputFeatureFactory.getInstance();
             ;
-            var sensorFeatureFactory = SensorFeatureFactory.getInstance();
+            let sensorFeatureFactory = SensorFeatureFactory.getInstance();
             ;
-            var touchFeatureFactory = TouchFeatureFactory.getInstance();
+            let touchFeatureFactory = TouchFeatureFactory.getInstance();
             ;
             this.addDefault(gameFeatureFactory.ARTIFICIAL_INTELLEGENCE_PROCESSOR);
             this.addDefault(gameFeatureFactory.COLLIDABLE_INTERFACE_LAYER_PROCESSOR);
@@ -110,7 +110,7 @@ export class Features extends Object {
             this.addDefault(inputFeatureFactory.REMOVE_DUPLICATE_KEY_PRESSES);
             this.addDefault(gameFeatureFactory.SCREEN_SHAKE);
             this.addDefault(gameFeatureFactory.POST_IMAGE_LOADING_MODIFICATION);
-            var operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
+            let operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
             ;
             if (operatingSystemInterface.isOverScan()) {
                 this.addDefault(sensorFeatureFactory.NO_ORIENTATION);
@@ -123,10 +123,12 @@ export class Features extends Object {
             this.addDefault(touchFeatureFactory.TOUCH_ENABLED);
             this.addDefault(MainFeatureFactory.getInstance().FULL_SCREEN);
             this.addDefault(MainFeatureFactory.getInstance().LOAD_ONDEMAND);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+            }
         }
     }
     isDefault(gameFeature) {

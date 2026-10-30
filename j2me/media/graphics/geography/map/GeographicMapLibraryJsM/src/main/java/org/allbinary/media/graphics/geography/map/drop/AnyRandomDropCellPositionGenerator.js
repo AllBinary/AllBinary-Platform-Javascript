@@ -24,7 +24,7 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not GWT import const BasicGeographicMap
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseDropCellPositionGenerator } from './BaseDropCellPositionGenerator.js';
-//not GWT import - same folder const BaseDropCellPositionGenerator
+//sameFolderImports - not GWT import - same folder const BaseDropCellPositionGenerator
 export class AnyRandomDropCellPositionGenerator extends BaseDropCellPositionGenerator {
     constructor() {
         super(...arguments);
@@ -34,21 +34,21 @@ export class AnyRandomDropCellPositionGenerator extends BaseDropCellPositionGene
     //@Throws(Exception.constructor)
     update(allBinaryGameLayerManager, geographicMapInterface) {
         this.geographicMapInterface = geographicMapInterface;
-        var basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
+        let basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
         ;
-        var randomFactory = MyRandomFactory.getInstance();
+        let randomFactory = MyRandomFactory.getInstance();
         ;
-        var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var total = tiledLayer.getColumns() * tiledLayer.getRows();
+        let total = tiledLayer.getColumns() * tiledLayer.getRows();
         ;
-        var randomColumn = 0;
+        let randomColumn = 0;
         ;
-        var randomRow = 0;
+        let randomRow = 0;
         ;
-        var geographicMapCellPosition;
+        let geographicMapCellPosition;
         ;
-        for (var index = total; --index >= 0;) {
+        for (let index = total; --index >= 0;) {
             randomColumn = randomFactory.getAbsoluteNextInt(tiledLayer.getColumns());
             randomRow = randomFactory.getAbsoluteNextInt(tiledLayer.getRows());
             geographicMapCellPosition = basicGeographicMapCellPositionFactory.getAt(randomColumn, randomRow);

@@ -25,16 +25,18 @@ export class ToastUtil extends Object {
                 this.string = string;
             }
             run() {
-                var logUtil = LogUtil.getInstance();
+                let logUtil = LogUtil.getInstance();
                 ;
                 try {
                     Toast.makeText(context, this.string, time).show();
-                    //: 
                 }
-                catch (e) {
-                    var commonStrings = CommonStrings.getInstance();
-                    ;
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        let commonStrings = CommonStrings.getInstance();
+                        ;
+                        logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                    }
                 }
             }
         }

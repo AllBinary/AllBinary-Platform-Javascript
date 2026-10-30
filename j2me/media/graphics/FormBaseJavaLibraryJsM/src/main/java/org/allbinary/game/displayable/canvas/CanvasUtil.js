@@ -20,7 +20,7 @@ const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class CanvasUtil extends Object {
     static getKeyName(key) {
-        var commonPhoneStrings = CommonPhoneStrings.getInstance();
+        let commonPhoneStrings = CommonPhoneStrings.getInstance();
         ;
         if (key == Canvas.UP) {
             //if statement needs to be on the same line and ternary does not work the same way.

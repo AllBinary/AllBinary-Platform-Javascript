@@ -19,7 +19,7 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 //not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimultaneousCompoundIndexAnimation } from './SimultaneousCompoundIndexAnimation.js';
-//not GWT import - same folder const SimultaneousCompoundIndexAnimation
+//sameFolderImports - not GWT import - same folder const SimultaneousCompoundIndexAnimation
 export class SimultaneousCompoundIndexAnimationInterfaceFactory extends Object {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {
         super();
@@ -28,11 +28,11 @@ export class SimultaneousCompoundIndexAnimationInterfaceFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var size = this.basicAnimationInterfaceFactoryInterfaceArray.length;
+        let size = this.basicAnimationInterfaceFactoryInterfaceArray.length;
         ;
-        var animationInterfaceArray = new Array(size);
+        let animationInterfaceArray = new Array(size);
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             animationInterfaceArray[index] = this.basicAnimationInterfaceFactoryInterfaceArray[index].getInstance(instanceId);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

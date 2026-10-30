@@ -20,15 +20,24 @@ import { Info } from '../../../../javax/sound/sampled/Line/Info.js';
 //not GWT import const LineUnavailableException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullJ2SEControl } from './NullJ2SEControl.js';
-//not GWT import - same folder const NullJ2SEControl
+//sameFolderImports - not GWT import - same folder const NullJ2SEControl
 import { NullAudioFormat } from './NullAudioFormat.js';
-//not GWT import - same folder const NullAudioFormat
+//sameFolderImports - not GWT import - same folder const NullAudioFormat
 export class NullClip extends Object {
+    open(...args) {
+        if (args.length === 4 && typeof args[2] === 'number' && typeof args[3] === 'number')
+            return this.open$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 1)
+            return this.open$overload2(args[0]);
+        if (args.length === 0)
+            return this.open$overload3();
+        throw new TypeError('No matching overload: open');
+    }
     //@Throws(LineUnavailableException.constructor)
-    open(format, data, offset, bufferSize) {
+    open$overload1(format, data, offset, bufferSize) {
     }
     //@Throws(LineUnavailableException.constructor, IOException.constructor)
-    open(stream) {
+    open$overload2(stream) {
     }
     getFrameLength() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -95,7 +104,7 @@ export class NullClip extends Object {
         return new Info(this.constructor, NullAudioFormat.NULL_AUDIO_FORMAT);
     }
     //@Throws(LineUnavailableException.constructor)
-    open() {
+    open$overload3() {
     }
     close() {
     }

@@ -14,7 +14,7 @@
 //not GWT import const Graphics
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LocationPaintable } from './LocationPaintable.js';
-//not GWT import - same folder const LocationPaintable
+//sameFolderImports - not GWT import - same folder const LocationPaintable
 export class StringLocationPaintable extends LocationPaintable {
     constructor(value) {
         super();

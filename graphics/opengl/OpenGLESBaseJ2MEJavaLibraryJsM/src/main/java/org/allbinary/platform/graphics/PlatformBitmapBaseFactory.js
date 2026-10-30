@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
-//not GWT import - same folder const PlatformBitmapBase
+//sameFolderImports - not GWT import - same folder const PlatformBitmapBase
 export class PlatformBitmapBaseFactory extends Object {
     createBitmap(image) {
         throw new RuntimeException();

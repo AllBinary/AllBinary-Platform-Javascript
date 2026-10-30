@@ -20,7 +20,7 @@ import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.
 //not GWT import const TimeDelayHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayAnimation } from './ImageArrayAnimation.js';
-//not GWT import - same folder const ImageArrayAnimation
+//sameFolderImports - not GWT import - same folder const ImageArrayAnimation
 export class ImageArraySpecialAnimation extends ImageArrayAnimation {
     constructor(imageArray, animationBehavior) {
         super(imageArray, animationBehavior);

@@ -39,13 +39,13 @@ export class SaveGameForm extends CommandForm {
         this.meUtil = MEUtil.getInstance();
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
-        var timeString = (ABSystemWrapper.getInstance().currentTimeMillis()).toString();
+        let timeString = (ABSystemWrapper.getInstance().currentTimeMillis()).toString();
         ;
         this.meUtil.appendItem(this, new TextField("Name: ", timeString, 30, TextField.ANY));
         this.initCommands(commandListener);
     }
     initCommands(cmdListener) {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         this.removeAllCommands();
         this.addCommand(gameCommandsFactory.SAVE);

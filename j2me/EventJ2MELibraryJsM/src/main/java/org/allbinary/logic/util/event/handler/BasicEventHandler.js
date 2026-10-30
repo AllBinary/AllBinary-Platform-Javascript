@@ -26,7 +26,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const BasicEventHandlerInterface
+//sameFolderImports - not GWT import - same folder const BasicEventHandlerInterface
 export class BasicEventHandler extends Object {
     constructor() {
         super();
@@ -39,21 +39,21 @@ export class BasicEventHandler extends Object {
         this.eventListenerInterfaceList = new BasicArrayListD();
     }
     addListeners(vector) {
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var size = vector.size();
+        let size = vector.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             eventListenerInterface = vector.get(index);
             this.addListenerInterface(eventListenerInterface);
         }
     }
     removeListeners(vector) {
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var size = vector.size();
+        let size = vector.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             eventListenerInterface = vector.get(index);
             this.removeListener(eventListenerInterface);
         }
@@ -76,18 +76,20 @@ export class BasicEventHandler extends Object {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (index < this.eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = this.eventListenerInterfaceList.get(index);
                 this.process(eventObject, eventListenerInterface);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.eventStrings.FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.eventStrings.FIRE_EVENT, e);
+                }
             }
             index++;
         }
@@ -101,23 +103,25 @@ export class BasicEventHandler extends Object {
         return this.eventListenerInterfaceList;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.eventStrings.TOTAL_LISTENERS);
         stringBuffer.appendint(this.eventListenerInterfaceList.size());
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (index < this.eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = this.eventListenerInterfaceList.get(index);
                 stringBuffer.append(this.eventStrings.LISTENER_LABEL);
                 stringBuffer.append(eventListenerInterface.toString());
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.TOSTRING, e);
+                }
             }
             index++;
         }

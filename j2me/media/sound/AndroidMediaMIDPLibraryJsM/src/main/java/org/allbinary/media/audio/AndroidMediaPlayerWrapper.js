@@ -16,6 +16,9 @@ import { Exception } from '../../../../java/lang/Exception.js';
 import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 //not GWT import const MediaException
 import { PlayerI } from '../../../../javax/microedition/media/Player.js';
+//not GWT import const Player
+import { PlayerListenerI } from '../../../../javax/microedition/media/PlayerListener.js';
+const PlayerListener = PlayerListenerI;
 //not GWT import const PlayerListener
 import { MediaPlayer } from '../../../../android/media/MediaPlayer.js';
 //not GWT import const MediaPlayer
@@ -33,16 +36,18 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicPlayer } from './BasicPlayer.js';
-//not GWT import - same folder const BasicPlayer
+//sameFolderImports - not GWT import - same folder const BasicPlayer
 export class AndroidMediaPlayerWrapper extends BasicPlayer {
     static createPlayerWrapper() {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return new AndroidMediaPlayerWrapper(StringUtil.getInstance().EMPTY_STRING);
-            //: 
         }
-        catch (e) {
-            throw new RuntimeException();
+        catch (caught) {
+            {
+                const e = caught;
+                throw new RuntimeException();
+            }
         }
     }
     constructor(resource) {
@@ -53,9 +58,9 @@ export class AndroidMediaPlayerWrapper extends BasicPlayer {
             if (resource == StringUtil.getInstance().EMPTY_STRING) {
             }
             else {
-                var resourceUtil = ResourceUtil.getInstance();
+                let resourceUtil = ResourceUtil.getInstance();
                 ;
-                var mediaPlayer = MediaPlayer.create(resourceUtil.getContext(), resourceUtil.getResourceId(resource).intValue());
+                let mediaPlayer = MediaPlayer.create(resourceUtil.getContext(), resourceUtil.getResourceId(resource).intValue());
                 ;
                 if (mediaPlayer ==
                     null) {
@@ -64,11 +69,13 @@ export class AndroidMediaPlayerWrapper extends BasicPlayer {
                 this.setMediaPlayer(mediaPlayer);
                 this.mediaPlayer.setLooping(false);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION_LABEL + resource, this, this.commonStrings.CONSTRUCTOR, e);
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION_LABEL + resource, this, this.commonStrings.CONSTRUCTOR, e);
+                throw e;
+            }
         }
     }
     setLoopCount(count) {
@@ -103,10 +110,12 @@ export class AndroidMediaPlayerWrapper extends BasicPlayer {
         try {
             this.mediaPlayer.release();
             this.mediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CLOSE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CLOSE, e);
+            }
         }
     }
     //@Throws(MediaException.constructor)
@@ -119,10 +128,12 @@ export class AndroidMediaPlayerWrapper extends BasicPlayer {
             }
             this.mediaPlayer.start();
             super.start();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+            }
         }
     }
     //@Throws(MediaException.constructor)
@@ -132,18 +143,20 @@ export class AndroidMediaPlayerWrapper extends BasicPlayer {
             this.mediaPlayer.stop();
             this.mediaPlayer.prepare();
             super.stop();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "stop", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "stop", e);
+            }
         }
     }
     update(event) {
         this.logUtil.putF("LineEvent: " + event, this, this.commonStrings.UPDATE);
-        var size = this.listenersList.size();
+        let size = this.listenersList.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var listener = this.listenersList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let listener = this.listenersList.objectArray[index];
             ;
             listener.playerUpdate(this, event, NullUtil.getInstance().NULL_OBJECT);
         }

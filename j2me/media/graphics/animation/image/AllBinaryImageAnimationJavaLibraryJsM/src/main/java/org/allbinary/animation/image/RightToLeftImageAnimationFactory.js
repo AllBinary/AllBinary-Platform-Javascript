@@ -16,11 +16,11 @@ import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/Primitive
 //not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { RightToLeftImageAnimation } from './RightToLeftImageAnimation.js';
-//not GWT import - same folder const RightToLeftImageAnimation
+//sameFolderImports - not GWT import - same folder const RightToLeftImageAnimation
 import { AdjustedRightToLeftImageAnimation } from './AdjustedRightToLeftImageAnimation.js';
-//not GWT import - same folder const AdjustedRightToLeftImageAnimation
+//sameFolderImports - not GWT import - same folder const AdjustedRightToLeftImageAnimation
 export class RightToLeftImageAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, dx, dy, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory);
@@ -28,7 +28,7 @@ export class RightToLeftImageAnimationFactory extends BaseImageAnimationFactory 
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var scaledImage = this.animationFactoryImageScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let scaledImage = this.animationFactoryImageScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
         if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
             this.animationFactoryImageScaleUtil.processAdjust(this);

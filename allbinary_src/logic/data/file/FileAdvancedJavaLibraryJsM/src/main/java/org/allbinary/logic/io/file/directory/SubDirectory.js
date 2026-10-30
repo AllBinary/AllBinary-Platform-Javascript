@@ -22,21 +22,21 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Directory } from './Directory.js';
-//not GWT import - same folder const Directory
+//sameFolderImports - not GWT import - same folder const Directory
 export class SubDirectory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return SubDirectory.instance;
     }
     static toString(files) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var NEW_LINE = CommonSeps.getInstance().NEW_LINE;
+        let NEW_LINE = CommonSeps.getInstance().NEW_LINE;
         ;
-        var size = files.size();
+        let size = files.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var file = files.get(index);
+        for (let index = 0; index < size; index++) {
+            let file = files.get(index);
             ;
             stringBuffer.append(file.getPath());
             stringBuffer.append(NEW_LINE);
@@ -49,22 +49,33 @@ export class SubDirectory extends Object {
         super();
         this.directory = Directory.getInstance();
     }
-    search(fileFilter, file) {
+    search(...args) {
+        if (args.length === 2)
+            return this.search$overload1(args[0], args[1]);
+        if (args.length === 1)
+            return this.search$overload2(args[0]);
+        if (args.length === 2 && typeof args[0] === 'string')
+            return this.search$overload3(args[0], args[1]);
+        if (args.length === 2 && typeof args[0] === 'number')
+            return this.search$overload4(args[0], args[1]);
+        throw new TypeError('No matching overload: search');
+    }
+    search$overload1(fileFilter, file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.directory.search(fileFilter, file, true);
         ;
     }
-    search(file) {
+    search$overload2(file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.directory.search(file, true);
         ;
     }
-    search(searchValue, file) {
+    search$overload3(searchValue, file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.directory.search(searchValue, file, true);
         ;
     }
-    search(level, file) {
+    search$overload4(level, file) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.directory.search(level, file, true);
         ;

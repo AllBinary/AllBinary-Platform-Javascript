@@ -16,7 +16,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not GWT import const BasicGeographicMap
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePathFinderGraphVisitor } from './BasePathFinderGraphVisitor.js';
-//not GWT import - same folder const BasePathFinderGraphVisitor
+//sameFolderImports - not GWT import - same folder const BasePathFinderGraphVisitor
 //1.4.2
 export class PathFinderGraphHackVisitor extends BasePathFinderGraphVisitor {
     constructor(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight) {
@@ -24,19 +24,19 @@ export class PathFinderGraphHackVisitor extends BasePathFinderGraphVisitor {
         //For kotlin this is before the body of the constructor.
     }
     //@Throws(Exception.constructor)
-    visit(graph = {}, startPathFindingNodeList, endPathFindingNodeList) {
+    visit(graph, startPathFindingNodeList, endPathFindingNodeList) {
         this.fixStart(graph, startPathFindingNodeList);
         this.fixEnd(graph, endPathFindingNodeList);
         this.fixOverPassEdges(graph);
     }
     //@Throws(Exception.constructor)
-    fixStart(graph = {}, startPathFindingNodeList) {
+    fixStart(graph, startPathFindingNodeList) {
     }
     //@Throws(Exception.constructor)
-    fixEnd(graph = {}, endPathFindingNodeList) {
+    fixEnd(graph, endPathFindingNodeList) {
     }
     //@Throws(Exception.constructor)
-    fixOverPassEdges(graph = {}) {
+    fixOverPassEdges(graph) {
     }
     //@Throws(Exception.constructor)
     fixPath(startPathFindingNodeList, endPathFindingNodeList, pathList) {
@@ -44,7 +44,7 @@ export class PathFinderGraphHackVisitor extends BasePathFinderGraphVisitor {
     //@Throws(Exception.constructor)
     removeOverPassEdges(pathList) {
     }
-    isValid(graphPath = {}) {
+    isValid(graphPath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return false;
     }

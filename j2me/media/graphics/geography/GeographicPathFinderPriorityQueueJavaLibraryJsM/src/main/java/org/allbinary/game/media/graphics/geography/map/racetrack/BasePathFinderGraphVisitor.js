@@ -29,23 +29,23 @@ export class BasePathFinderGraphVisitor extends PathFinderGraphVisitorBase {
         this.maxPathWeight = maxPathWeight;
     }
     //@Throws(Exception.constructor)
-    visit(graph = {}, startPathFindingNodeList, endPathFindingNodeList) {
+    visit(graph, startPathFindingNodeList, endPathFindingNodeList) {
     }
     //@Throws(Exception.constructor)
     fixPath(startPathFindingNodeList, endPathFindingNodeList, pathList) {
-        var startPathFindingNode;
+        let startPathFindingNode;
         ;
-        for (var index = startPathFindingNodeList.size() - 1; index >= 0; index--) {
+        for (let index = startPathFindingNodeList.size() - 1; index >= 0; index--) {
             startPathFindingNode = startPathFindingNodeList.get(index);
             pathList.remove(startPathFindingNode.geographicMapCellPosition);
             pathList.addAt(0, startPathFindingNode.geographicMapCellPosition);
         }
     }
-    isValid(graphPath = {}) {
+    isValid(graphPath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return false;
     }
-    getInvalidReason(graphPath = {}) {
+    getInvalidReason(graphPath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return StringUtil.getInstance().EMPTY_STRING;
     }

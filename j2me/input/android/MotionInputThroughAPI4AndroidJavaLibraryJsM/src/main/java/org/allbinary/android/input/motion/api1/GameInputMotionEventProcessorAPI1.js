@@ -37,11 +37,11 @@ export class GameInputMotionEventProcessorAPI1 extends BaseGameInputMotionEventP
     }
     process(motionEvent) {
         try {
-            var x = Math.round(motionEvent.getX());
+            let x = globalThis.Math.trunc(motionEvent.getX());
             ;
-            var y = Math.round(motionEvent.getY());
+            let y = globalThis.Math.trunc(motionEvent.getY());
             ;
-            var action = motionEvent.getAction();
+            let action = motionEvent.getAction();
             ;
             if (action == MotionEvent.ACTION_DOWN) {
                 this.motionRecognizer.processStartMotionEvent(x, y, motionEvent.getDeviceId(), 0);
@@ -52,10 +52,12 @@ export class GameInputMotionEventProcessorAPI1 extends BaseGameInputMotionEventP
             else if (action == MotionEvent.ACTION_MOVE) {
                 this.motionRecognizer.processDraggedMotionEvent(x, y, motionEvent.getDeviceId(), 0);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+            }
         }
     }
 }

@@ -40,23 +40,23 @@ import { ImageCompleteUtil } from '../../../../../org/allbinary/media/image/Imag
 //not GWT import const ImageCompleteUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonBlankResource } from './TouchButtonBlankResource.js';
-//not GWT import - same folder const TouchButtonResource
+//sameFolderImports - not GWT import - same folder const TouchButtonResource
 import { TouchButtonGenericActionResource } from './TouchButtonGenericActionResource.js';
-//not GWT import - same folder const TouchButtonGenericActionResource
+//sameFolderImports - not GWT import - same folder const TouchButtonGenericActionResource
 import { TouchButtonStartResource } from './TouchButtonStartResource.js';
-//not GWT import - same folder const TouchButtonStartResource
+//sameFolderImports - not GWT import - same folder const TouchButtonStartResource
 import { TouchButtonUpResource } from './TouchButtonUpResource.js';
-//not GWT import - same folder const TouchButtonUpResource
+//sameFolderImports - not GWT import - same folder const TouchButtonUpResource
 import { TouchButtonDownResource } from './TouchButtonDownResource.js';
-//not GWT import - same folder const TouchButtonDownResource
+//sameFolderImports - not GWT import - same folder const TouchButtonDownResource
 import { TouchButtonTurnLeftResource } from './TouchButtonTurnLeftResource.js';
-//not GWT import - same folder const TouchButtonTurnLeftResource
+//sameFolderImports - not GWT import - same folder const TouchButtonTurnLeftResource
 import { TouchButtonTurnRightResource } from './TouchButtonTurnRightResource.js';
-//not GWT import - same folder const TouchButtonTurnRightResource
+//sameFolderImports - not GWT import - same folder const TouchButtonTurnRightResource
 import { TouchButtonStrafeLeftResource } from './TouchButtonStrafeLeftResource.js';
-//not GWT import - same folder const TouchButtonStrafeLeftResource
+//sameFolderImports - not GWT import - same folder const TouchButtonStrafeLeftResource
 import { TouchButtonStrafeRightResource } from './TouchButtonStrafeRightResource.js';
-//not GWT import - same folder const TouchButtonStrafeRightResource
+//sameFolderImports - not GWT import - same folder const TouchButtonStrafeRightResource
 export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extends BaseResourceAnimationInterfaceFactoryInterfaceFactory {
     static createFactory() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,58 +76,58 @@ export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extend
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var portion = 140;
+        let portion = 140;
         ;
-        var loadingString = new StringMaker().append(this.toString()).append(" Loading: ").toString();
+        let loadingString = new StringMaker().append(this.toString()).append(" Loading: ").toString();
         ;
-        var index = 0;
+        let index = 0;
         ;
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.addPortion(portion, loadingString, index++);
-        var touchButtonBlankResource = TouchButtonBlankResource.getInstance();
+        let touchButtonBlankResource = TouchButtonBlankResource.getInstance();
         ;
-        var touchButtonGenericActionResource = TouchButtonGenericActionResource.getInstance();
+        let touchButtonGenericActionResource = TouchButtonGenericActionResource.getInstance();
         ;
-        var touchButtonStartResource = TouchButtonStartResource.getInstance();
+        let touchButtonStartResource = TouchButtonStartResource.getInstance();
         ;
-        var touchButtonUpResource = TouchButtonUpResource.getInstance();
+        let touchButtonUpResource = TouchButtonUpResource.getInstance();
         ;
-        var touchButtonDownResource = TouchButtonDownResource.getInstance();
+        let touchButtonDownResource = TouchButtonDownResource.getInstance();
         ;
-        var touchButtonTurnLeftResource = TouchButtonTurnLeftResource.getInstance();
+        let touchButtonTurnLeftResource = TouchButtonTurnLeftResource.getInstance();
         ;
-        var touchButtonTurnRightResource = TouchButtonTurnRightResource.getInstance();
+        let touchButtonTurnRightResource = TouchButtonTurnRightResource.getInstance();
         ;
-        var touchButtonStrafeLeftResource = TouchButtonStrafeLeftResource.getInstance();
+        let touchButtonStrafeLeftResource = TouchButtonStrafeLeftResource.getInstance();
         ;
-        var touchButtonStrafeRightResource = TouchButtonStrafeRightResource.getInstance();
+        let touchButtonStrafeRightResource = TouchButtonStrafeRightResource.getInstance();
         ;
-        var touchButtonBlankResourceImage = imageCache.getWithKey(touchButtonBlankResource.RESOURCE);
+        let touchButtonBlankResourceImage = imageCache.getWithKey(touchButtonBlankResource.RESOURCE);
         ;
-        var touchButtonGenericActionResourceImage = imageCache.getWithKey(touchButtonGenericActionResource.RESOURCE);
+        let touchButtonGenericActionResourceImage = imageCache.getWithKey(touchButtonGenericActionResource.RESOURCE);
         ;
-        var touchButtonStartResourceImage = imageCache.getWithKey(touchButtonStartResource.RESOURCE);
+        let touchButtonStartResourceImage = imageCache.getWithKey(touchButtonStartResource.RESOURCE);
         ;
-        var touchButtonUpResourceImage = imageCache.getWithKey(touchButtonUpResource.RESOURCE);
+        let touchButtonUpResourceImage = imageCache.getWithKey(touchButtonUpResource.RESOURCE);
         ;
-        var touchButtonDownResourceImage = imageCache.getWithKey(touchButtonDownResource.RESOURCE);
+        let touchButtonDownResourceImage = imageCache.getWithKey(touchButtonDownResource.RESOURCE);
         ;
-        var touchButtonTurnLeftResourceImage = imageCache.getWithKey(touchButtonTurnLeftResource.RESOURCE);
+        let touchButtonTurnLeftResourceImage = imageCache.getWithKey(touchButtonTurnLeftResource.RESOURCE);
         ;
-        var touchButtonTurnRightResourceImage = imageCache.getWithKey(touchButtonTurnRightResource.RESOURCE);
+        let touchButtonTurnRightResourceImage = imageCache.getWithKey(touchButtonTurnRightResource.RESOURCE);
         ;
-        var touchButtonStrafeLeftResourceImage = imageCache.getWithKey(touchButtonStrafeLeftResource.RESOURCE);
+        let touchButtonStrafeLeftResourceImage = imageCache.getWithKey(touchButtonStrafeLeftResource.RESOURCE);
         ;
-        var touchButtonStrafeRightResourceImage = imageCache.getWithKey(touchButtonStrafeRightResource.RESOURCE);
+        let touchButtonStrafeRightResourceImage = imageCache.getWithKey(touchButtonStrafeRightResource.RESOURCE);
         ;
-        var nullAnimationFactory = NullAnimationFactory.getFactoryInstance();
+        let nullAnimationFactory = NullAnimationFactory.getFactoryInstance();
         ;
         if (OperatingSystemFactory.getInstance().getOperatingSystemInstance().isOverScan()) {
             imageCache.getWithKey(TouchButtonStartResource.getInstance().HINT);
         }
         progressCanvas.addPortion(portion, loadingString, index++);
-        var imageCompleteUtil = ImageCompleteUtil.getInstance();
+        let imageCompleteUtil = ImageCompleteUtil.getInstance();
         ;
         progressCanvas.addPortion(portion, loadingString, index++);
         imageCompleteUtil.waitForImage(touchButtonBlankResourceImage, touchButtonBlankResource.RESOURCE);
@@ -165,7 +165,7 @@ export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extend
         this.add(touchButtonStrafeRightResource.RESOURCE, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonStrafeRightResourceImage, AnimationBehaviorFactory.getInstance()));
         this.add(touchButtonStrafeRightResource.HINT, nullAnimationFactory);
         if (OperatingSystemFactory.getInstance().getOperatingSystemInstance().isOverScan()) {
-            var touchButtonStartHintResource = imageCache.getWithKey(TouchButtonStartResource.getInstance().HINT);
+            let touchButtonStartHintResource = imageCache.getWithKey(TouchButtonStartResource.getInstance().HINT);
             ;
             this.add(touchButtonStartResource.HINT, OneRowSpriteIndexedAnimationFactory.createFactory(touchButtonStartHintResource, AnimationBehaviorFactory.getInstance()));
         }
@@ -175,7 +175,7 @@ export class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory extend
         super.init(level);
     }
     isLoadingLevel(level) {
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         if (level == resourceLoadingLevelFactory.LOAD_TOUCH.getLevel()) {
             //if statement needs to be on the same line and ternary does not work the same way.

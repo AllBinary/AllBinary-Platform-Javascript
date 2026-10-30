@@ -14,7 +14,7 @@
 //not GWT import const View
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseViewWrapper } from './BaseViewWrapper.js';
-//not GWT import - same folder const BaseViewWrapper
+//sameFolderImports - not GWT import - same folder const BaseViewWrapper
 export class ViewWrapper extends BaseViewWrapper {
     constructor(view) {
         super();

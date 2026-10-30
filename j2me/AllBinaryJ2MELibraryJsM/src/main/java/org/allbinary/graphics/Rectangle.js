@@ -19,7 +19,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const GPoint
+//sameFolderImports - not GWT import - same folder const GPoint
 export class Rectangle extends Object {
     constructor(point, width, height) {
         super();
@@ -57,7 +57,7 @@ export class Rectangle extends Object {
         this.height = height;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.getPoint().toString());
         stringBuffer.append(CommonSeps.getInstance().SPACE);

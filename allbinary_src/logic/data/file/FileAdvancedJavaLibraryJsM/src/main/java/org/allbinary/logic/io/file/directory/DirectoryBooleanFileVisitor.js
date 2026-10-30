@@ -19,16 +19,23 @@ export class DirectoryBooleanFileVisitor extends Object {
     constructor() {
         super();
     }
-    visit(anyType = {}) {
+    visit(...args) {
+        if (args.length === 1)
+            return this.visit$overload1(args[0]);
+        if (args.length === 1)
+            return this.visit$overload2(args[0]);
+        throw new TypeError('No matching overload: visit');
+    }
+    visit$overload1(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.visit(anyType);
     }
-    visit(file) {
+    visit$overload2(file) {
         if (file.isDirectory()) {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return Boolean.TRUE;
+            return true;
         }
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Boolean.FALSE;
+        return false;
     }
 }

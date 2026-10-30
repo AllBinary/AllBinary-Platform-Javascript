@@ -34,7 +34,7 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class StartIntermissionPaintable extends InitUpdatePaintable {
     constructor(gameCanvas, stringArray, basicColor, font) {
         super();
@@ -58,22 +58,22 @@ export class StartIntermissionPaintable extends InitUpdatePaintable {
         this.font = font;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeightP = font.getHeight();
         this.myFontProcessor = MyFontProcessor.getInstance();
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var existingFont = graphics.getFont();
+        let existingFont = graphics.getFont();
         ;
         this.fontDebugFactory.setFont(this.font, graphics);
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         this.basicSetColorUtil.setBasicColorP3(graphics, this.basicColor, this.color);
-        var beginWidth = 0;
+        let beginWidth = 0;
         ;
-        for (var index = this.lineYOffsetArray.length - 1; index >= 0; index--) {
+        for (let index = this.lineYOffsetArray.length - 1; index >= 0; index--) {
             if (this.hasChanged) {
                 this.lastWidth[index] = (graphics.getFont().stringWidth(this.stringArray[index]) >> 1);
             }
@@ -84,10 +84,10 @@ export class StartIntermissionPaintable extends InitUpdatePaintable {
         this.fontDebugFactory.setFont(existingFont, graphics);
     }
     update() {
-        var level = this.gameCanvas.getLayerManager().getGameInfo().getCurrentLevel();
+        let level = this.gameCanvas.getLayerManager().getGameInfo().getCurrentLevel();
         ;
         this.stringArray[0] = new StringMaker().append(this.BEGIN_LEVEL).appendint(level).toString();
-        for (var index = this.stringArray.length - 1; index >= 1; index--) {
+        for (let index = this.stringArray.length - 1; index >= 1; index--) {
             this.stringArray[index] = this.EMPTY_STRING;
         }
     }

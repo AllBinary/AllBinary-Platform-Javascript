@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DisplayInfoSingleton } from './DisplayInfoSingleton.js';
-//not GWT import - same folder const DisplayInfoSingleton
+//sameFolderImports - not GWT import - same folder const DisplayInfoSingleton
 export class GameTickDisplayInfoSingleton extends Object {
     constructor() {
         super(...arguments);

@@ -12,9 +12,9 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABCustomForm } from './ABCustomForm.js';
-//not GWT import - same folder const ABCustomForm
+//sameFolderImports - not GWT import - same folder const ABCustomForm
 import { FormTypeFactory } from './FormTypeFactory.js';
-//not GWT import - same folder const FormType
+//sameFolderImports - not GWT import - same folder const FormType
 export class PaintableForm extends ABCustomForm {
     static getNullPaintableForm() {
         if (PaintableForm.NULL_PAINTABLE_FORM == NullUtil.getInstance().NULL_OBJECT) {
@@ -36,7 +36,7 @@ export class PaintableForm extends ABCustomForm {
     //@Throws(Exception.constructor)
     init(rectangle, formType) {
         this.rectangle = rectangle;
-        var point = this.rectangle.getPoint();
+        let point = this.rectangle.getPoint();
         ;
         this.x = point.getX();
         this.y = point.getY();

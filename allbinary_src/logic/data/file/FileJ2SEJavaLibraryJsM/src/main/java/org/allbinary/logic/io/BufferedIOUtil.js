@@ -29,11 +29,11 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 export class BufferedIOUtil extends Object {
     //@Throws(Exception.constructor)
     static copy(backupFile, backupFileBak) {
-        var line = StringUtil.getInstance().EMPTY_STRING;
+        let line = StringUtil.getInstance().EMPTY_STRING;
         ;
-        var tmpOut = new BufferedWriter(new FileWriter(AbFileNativeUtil.get(backupFileBak)));
+        let tmpOut = new BufferedWriter(new FileWriter(AbFileNativeUtil.get(backupFileBak)));
         ;
-        var tmpIn = new BufferedReader(new FileReader(AbFileNativeUtil.get(backupFile)));
+        let tmpIn = new BufferedReader(new FileReader(AbFileNativeUtil.get(backupFile)));
         ;
         while (true) {
             line = tmpIn.readLine();

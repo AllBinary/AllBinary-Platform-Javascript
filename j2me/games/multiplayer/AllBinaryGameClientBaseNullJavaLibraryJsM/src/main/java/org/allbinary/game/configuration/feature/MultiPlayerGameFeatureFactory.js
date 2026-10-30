@@ -12,10 +12,10 @@ export class MultiPlayerGameFeatureFactory extends Object {
     constructor() {
         super();
     }
-    addCommands(anyType = {}) {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+    addCommands(anyType) {
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
-        var canvas = anyType;
+        let canvas = anyType;
         ;
         canvas.addCommand(gameCommandsFactory.QUIT_COMMAND);
     }

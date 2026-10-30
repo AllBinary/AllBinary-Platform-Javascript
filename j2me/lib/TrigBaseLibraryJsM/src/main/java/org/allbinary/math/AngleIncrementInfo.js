@@ -19,26 +19,26 @@ import { SmallIntegerSingletonFactory } from '../../../org/allbinary/logic/math/
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AngleFactory } from './AngleFactory.js';
-//not GWT import - same folder const AngleFactory
+//sameFolderImports - not GWT import - same folder const AngleFactory
 import { FrameUtil } from './FrameUtil.js';
-//not GWT import - same folder const FrameUtil
+//sameFolderImports - not GWT import - same folder const FrameUtil
 export class AngleIncrementInfo extends Object {
     constructor(angleIncrement) {
         super();
         this.frameUtil = FrameUtil.getInstance();
         this.angleIncrement = angleIncrement;
-        var angleFactory = AngleFactory.getInstance();
+        let angleFactory = AngleFactory.getInstance();
         ;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
         this.DOWN_FRAME = smallIntegerSingletonFactory.getAt(angleFactory.DOWN.getValue() / this.angleIncrement);
-        this.UP_FRAME = smallIntegerSingletonFactory.getAt(Math.round(angleFactory.UP.getValue()));
+        this.UP_FRAME = smallIntegerSingletonFactory.getAt(globalThis.Math.trunc(angleFactory.UP.getValue()));
         this.LEFT_FRAME = smallIntegerSingletonFactory.getAt(angleFactory.LEFT.getValue() / this.angleIncrement);
         this.RIGHT_FRAME = smallIntegerSingletonFactory.getAt(angleFactory.RIGHT.getValue() / this.angleIncrement);
     }
     getFrameAngle(frame) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.frameUtil.getFrameAngle(frame, Math.round(this.angleIncrement));
+        return this.frameUtil.getFrameAngle(frame, globalThis.Math.trunc(this.angleIncrement));
         ;
     }
     getAngleIncrement() {
@@ -51,7 +51,7 @@ export class AngleIncrementInfo extends Object {
         ;
     }
     getClosestGeneralDirection(angle) {
-        var closestDirection = SmallIntegerSingletonFactory.getInstance().getAt(360);
+        let closestDirection = SmallIntegerSingletonFactory.getInstance().getAt(360);
         ;
         if (this.UP_FRAME.intValue() - angle < closestDirection.intValue() - angle) {
             closestDirection = this.UP_FRAME;

@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const VehicleFrictionProperties
+//sameFolderImports - not GWT import - same folder const VehicleFrictionProperties
 export class VehicleProperties extends Object {
     constructor(velocityProperties, vehicleFrictionProperties) {
         super();

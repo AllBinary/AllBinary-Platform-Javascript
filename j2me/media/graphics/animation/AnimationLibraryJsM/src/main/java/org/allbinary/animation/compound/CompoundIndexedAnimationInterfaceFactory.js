@@ -16,9 +16,9 @@
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CompoundAnimationInterfaceFactory } from './CompoundAnimationInterfaceFactory.js';
-//not GWT import - same folder const CompoundAnimationInterfaceFactory
+//sameFolderImports - not GWT import - same folder const CompoundAnimationInterfaceFactory
 import { CompoundIndexedAnimation } from './CompoundIndexedAnimation.js';
-//not GWT import - same folder const CompoundIndexedAnimation
+//sameFolderImports - not GWT import - same folder const CompoundIndexedAnimation
 export class CompoundIndexedAnimationInterfaceFactory extends CompoundAnimationInterfaceFactory {
     constructor(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory) {
         super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory);

@@ -38,13 +38,13 @@ export class MotionGestureToMotionGestureActionAssociation extends Object {
         this.motionGestureAction = commandAction;
     }
     isMotionGestureArrayEquals(aList) {
-        var size = aList.size();
+        let size = aList.size();
         ;
         if (this.list.size() != size) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
-        for (var i = size - 1; i >= 0; i--) {
+        for (let i = size - 1; i >= 0; i--) {
             if (aList.objectArray[i] != this.list.objectArray[i]) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;

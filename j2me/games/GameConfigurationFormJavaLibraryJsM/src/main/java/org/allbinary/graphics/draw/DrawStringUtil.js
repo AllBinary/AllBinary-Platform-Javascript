@@ -36,37 +36,39 @@ export class DrawStringUtil extends Object {
         return DrawStringUtil.instance;
     }
     drawCenterString(graphics, string, offset, length, x, y) {
-        var width = (graphics.getFont().substringWidth(string, offset, length) >> 1);
+        let width = (graphics.getFont().substringWidth(string, offset, length) >> 1);
         ;
         try {
             graphics.drawSubstring(string, offset, length, x - width, y, this.anchor);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.put(new StringMaker().append("Exception: stringLength: ").appendint(string.length).append(" offset: ").appendint(offset).append(" currentLength: ").appendint(length).toString(), this, "drawCenterString");
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.put(new StringMaker().append("Exception: stringLength: ").appendint(string.length).append(" offset: ").appendint(offset).append(" currentLength: ").appendint(length).toString(), this, "drawCenterString");
+            }
         }
     }
     drawCenterStrings(graphics, stringArray, maxWidth, charHeight, x, y) {
-        var extraLines = 0;
+        let extraLines = 0;
         ;
-        for (var index = 0; index < stringArray.length; index++) {
-            var string = stringArray[index];
+        for (let index = 0; index < stringArray.length; index++) {
+            let string = stringArray[index];
             ;
             if (string != this.EMPTY_STRING) {
-                var width = graphics.getFont().stringWidth(string);
+                let width = graphics.getFont().stringWidth(string);
                 ;
-                var minTotalLines = 1;
+                let minTotalLines = 1;
                 ;
                 if (width > maxWidth) {
-                    minTotalLines = (width / maxWidth) + 1;
+                    minTotalLines = (globalThis.Math.trunc(width / maxWidth)) + 1;
                 }
-                var linePortion = string.length / minTotalLines;
+                let linePortion = string.length / minTotalLines;
                 ;
-                var offset = 0;
+                let offset = 0;
                 ;
-                var currentLength = linePortion;
+                let currentLength = linePortion;
                 ;
-                var size = string.length;
+                let size = string.length;
                 ;
                 while (offset < size) {
                     if (offset + currentLength > size) {

@@ -32,11 +32,11 @@ const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Features } from './Features.js';
-//not GWT import - same folder const Features
+//sameFolderImports - not GWT import - same folder const Features
 import { Feature } from './Feature.js';
-//not GWT import - same folder const Feature
+//sameFolderImports - not GWT import - same folder const Feature
 import { GameFeatureChoiceGroups } from './GameFeatureChoiceGroups.js';
-//not GWT import - same folder const GameFeatureChoiceGroups
+//sameFolderImports - not GWT import - same folder const GameFeatureChoiceGroups
 export class GameFeatureUtil extends Object {
     constructor() {
         super(...arguments);
@@ -52,25 +52,25 @@ export class GameFeatureUtil extends Object {
     }
     //@Throws(Exception.constructor)
     setDefault(choiceGroup) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var METHOD_NAME = "setDefault";
+        let METHOD_NAME = "setDefault";
         ;
-        var SELECTED_ARRAY_RETURN = "selectedArray_return[";
+        let SELECTED_ARRAY_RETURN = "selectedArray_return[";
         ;
-        var SELECTED_SEP = "] = ";
+        let SELECTED_SEP = "] = ";
         ;
-        var selectedArray_return = new Array(choiceGroup.size());
+        let selectedArray_return = new Array(choiceGroup.size());
         ;
-        var total = choiceGroup.getSelectedFlags(selectedArray_return);
+        let total = choiceGroup.getSelectedFlags(selectedArray_return);
         ;
         stringBuffer.append("Multiple Total Choices: ");
         stringBuffer.appendint(total);
         this.logUtil.putF(stringBuffer.toString(), this, METHOD_NAME);
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        for (var index = 0; index < selectedArray_return.length; index++) {
-            var isSelected = selectedArray_return[index];
+        for (let index = 0; index < selectedArray_return.length; index++) {
+            let isSelected = selectedArray_return[index];
             ;
             stringBuffer.delete(0, stringBuffer.length());
             stringBuffer.append(SELECTED_ARRAY_RETURN);
@@ -78,9 +78,9 @@ export class GameFeatureUtil extends Object {
             stringBuffer.append(SELECTED_SEP);
             stringBuffer.appendboolean(isSelected);
             this.logUtil.putF(stringBuffer.toString(), this, METHOD_NAME);
-            var selectedChoiceLabel = choiceGroup.getString(index);
+            let selectedChoiceLabel = choiceGroup.getString(index);
             ;
-            var gameFeature = Feature.getInstance(selectedChoiceLabel);
+            let gameFeature = Feature.getInstance(selectedChoiceLabel);
             ;
             if (features.isDefault(gameFeature)) {
                 features.add(gameFeature);
@@ -94,25 +94,25 @@ export class GameFeatureUtil extends Object {
     }
     //@Throws(Exception.constructor)
     updateMultiple(choiceGroup) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var METHOD_NAME = "updateMultiple";
+        let METHOD_NAME = "updateMultiple";
         ;
-        var SELECTED_ARRAY_RETURN = "selectedArray_return[";
+        let SELECTED_ARRAY_RETURN = "selectedArray_return[";
         ;
-        var SELECTED_SEP = "] = ";
+        let SELECTED_SEP = "] = ";
         ;
-        var selectedArray_return = new Array(choiceGroup.size());
+        let selectedArray_return = new Array(choiceGroup.size());
         ;
-        var total = choiceGroup.getSelectedFlags(selectedArray_return);
+        let total = choiceGroup.getSelectedFlags(selectedArray_return);
         ;
         stringBuffer.append("Multiple Total Choices: ");
         stringBuffer.appendint(total);
         this.logUtil.putF(stringBuffer.toString(), this, METHOD_NAME);
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        for (var index = 0; index < selectedArray_return.length; index++) {
-            var isSelected = selectedArray_return[index];
+        for (let index = 0; index < selectedArray_return.length; index++) {
+            let isSelected = selectedArray_return[index];
             ;
             stringBuffer.delete(0, stringBuffer.length());
             stringBuffer.append(SELECTED_ARRAY_RETURN);
@@ -120,9 +120,9 @@ export class GameFeatureUtil extends Object {
             stringBuffer.append(SELECTED_SEP);
             stringBuffer.appendboolean(isSelected);
             this.logUtil.putF(stringBuffer.toString(), this, METHOD_NAME);
-            var selectedChoiceLabel = choiceGroup.getString(index);
+            let selectedChoiceLabel = choiceGroup.getString(index);
             ;
-            var gameFeature = Feature.getInstance(selectedChoiceLabel);
+            let gameFeature = Feature.getInstance(selectedChoiceLabel);
             ;
             if (!isSelected && features.isFeature(gameFeature)) {
                 features.remove(gameFeature);
@@ -134,23 +134,23 @@ export class GameFeatureUtil extends Object {
     }
     //@Throws(Exception.constructor)
     updateExclusiveForChoiceGroup(choiceGroup) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var METHOD_NAME = "updateExclusive";
+        let METHOD_NAME = "updateExclusive";
         ;
-        var SELECTED_ARRAY_RETURN = "selectedArray_return[";
+        let SELECTED_ARRAY_RETURN = "selectedArray_return[";
         ;
-        var SELECTED_SEP = "] = ";
+        let SELECTED_SEP = "] = ";
         ;
-        var selectedArray_return = new Array(choiceGroup.size());
+        let selectedArray_return = new Array(choiceGroup.size());
         ;
-        var total = choiceGroup.getSelectedFlags(selectedArray_return);
+        let total = choiceGroup.getSelectedFlags(selectedArray_return);
         ;
         stringBuffer.append("Exclusive Total Choices: 1==");
         stringBuffer.appendint(total);
         this.logUtil.putF(stringBuffer.toString(), this, METHOD_NAME);
-        for (var index = 0; index < selectedArray_return.length; index++) {
-            var isSelected = selectedArray_return[index];
+        for (let index = 0; index < selectedArray_return.length; index++) {
+            let isSelected = selectedArray_return[index];
             ;
             stringBuffer.delete(0, stringBuffer.length());
             stringBuffer.append(SELECTED_ARRAY_RETURN);
@@ -159,16 +159,16 @@ export class GameFeatureUtil extends Object {
             stringBuffer.appendboolean(isSelected);
             this.logUtil.putF(stringBuffer.toString(), this, METHOD_NAME);
             if (isSelected) {
-                var selectedChoiceLabel = choiceGroup.getString(index);
+                let selectedChoiceLabel = choiceGroup.getString(index);
                 ;
                 this.updateExclusive(selectedChoiceLabel);
             }
         }
     }
     isExclusive(itemLabel) {
-        var enumeration = GameFeatureChoiceGroups.getExclusiveInstance().get().keys();
+        let enumeration = GameFeatureChoiceGroups.getExclusiveInstance().get().keys();
         ;
-        var name;
+        let name;
         ;
         while (this.enumerationUtil.hasMoreElements(enumeration)) {
             name = this.enumerationUtil.nextElement(enumeration);
@@ -183,19 +183,19 @@ export class GameFeatureUtil extends Object {
     //@Throws(Exception.constructor)
     updateExclusive(selectedChoiceLabel) {
         this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().ITEM_LABEL).append(selectedChoiceLabel).toString(), this, "updateExclusive");
-        var gameFeature = Feature.getInstance(selectedChoiceLabel);
+        let gameFeature = Feature.getInstance(selectedChoiceLabel);
         ;
-        var hashtable = GameFeatureChoiceGroups.getExclusiveInstance().get();
+        let hashtable = GameFeatureChoiceGroups.getExclusiveInstance().get();
         ;
-        var objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
+        let objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
         ;
-        var basicArrayList;
+        let basicArrayList;
         ;
-        var anyType;
+        let anyType;
         ;
-        var size = objectArray.length;
+        let size = objectArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             anyType = objectArray[index];
             basicArrayList = hashtable.get(anyType);
             this.updateExclusiveList(gameFeature, basicArrayList);
@@ -204,13 +204,13 @@ export class GameFeatureUtil extends Object {
     //@Throws(Exception.constructor)
     updateExclusiveList(gameFeature, list) {
         if (list.contains(gameFeature)) {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
-            var addIndex = list.indexOf(gameFeature);
+            let addIndex = list.indexOf(gameFeature);
             ;
-            var size = list.size();
+            let size = list.size();
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 if (addIndex != index) {
                     features.remove(list.objectArray[index]);
                 }

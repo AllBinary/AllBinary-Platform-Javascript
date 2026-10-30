@@ -15,20 +15,20 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfigurationCentral } from './GameConfigurationCentral.js';
-//not GWT import - same folder const GameConfiguration
+//sameFolderImports - not GWT import - same folder const GameConfiguration
 export class GameSpeed extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return GameSpeed.instance;
     }
     getSpeed() {
-        var speedGameConfiguration = GameConfigurationCentral.getInstance().SPEED;
+        let speedGameConfiguration = GameConfigurationCentral.getInstance().SPEED;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return (speedGameConfiguration.getMaxValue().intValue() - speedGameConfiguration.getValue().intValue() + 1);
     }
     getDelay() {
-        var speedGameConfiguration = GameConfigurationCentral.getInstance().SPEED;
+        let speedGameConfiguration = GameConfigurationCentral.getInstance().SPEED;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return 19 * (speedGameConfiguration.getMaxValue().intValue() - speedGameConfiguration.getValue().intValue());

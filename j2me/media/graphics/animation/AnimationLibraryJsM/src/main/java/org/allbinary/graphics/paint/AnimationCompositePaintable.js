@@ -14,7 +14,7 @@
 //not GWT import const Animation
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitUpdatePaintable } from './InitUpdatePaintable.js';
-//not GWT import - same folder const InitUpdatePaintable
+//sameFolderImports - not GWT import - same folder const InitUpdatePaintable
 export class AnimationCompositePaintable extends InitUpdatePaintable {
     constructor(animationInterface) {
         super();

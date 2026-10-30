@@ -25,7 +25,7 @@ const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapCellPositionAreaBase } from './GeographicMapCellPositionAreaBase.js';
-//not GWT import - same folder const GeographicMapCellPositionAreaBase
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPositionAreaBase
 export class GeographicMapCellPositionArea extends GeographicMapCellPositionAreaBase {
     constructor(layerInterface) {
         super();
@@ -54,7 +54,7 @@ export class GeographicMapCellPositionArea extends GeographicMapCellPositionArea
         return this.surroundingGeographicMapCellPositionList;
     }
     getNextSurroundingGeographicMapCellPosition() {
-        var geographicMapCellPosition = this.surroundingGeographicMapCellPositionList.get(this.surroundingCircularIndexUtil.getIndex());
+        let geographicMapCellPosition = this.surroundingGeographicMapCellPositionList.get(this.surroundingCircularIndexUtil.getIndex());
         ;
         this.surroundingCircularIndexUtil.next();
         //if statement needs to be on the same line and ternary does not work the same way.

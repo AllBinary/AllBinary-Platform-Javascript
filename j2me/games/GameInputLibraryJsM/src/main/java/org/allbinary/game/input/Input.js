@@ -41,7 +41,7 @@ export class Input extends Object {
         this.name = keyName;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Name: ");
         stringBuffer.append(this.getName());

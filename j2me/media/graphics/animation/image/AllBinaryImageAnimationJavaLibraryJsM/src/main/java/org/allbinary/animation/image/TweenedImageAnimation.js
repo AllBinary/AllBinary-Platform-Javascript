@@ -66,11 +66,11 @@ export class TweenedImageAnimation extends IndexedAnimation {
         ;
     }
     paintXY(graphics, x, y) {
-        var frame = this.getFrame();
+        let frame = this.getFrame();
         ;
-        var currentX = this.dx * frame;
+        let currentX = this.dx * frame;
         ;
-        var currentY = this.dy * frame;
+        let currentY = this.dy * frame;
         ;
         graphics.drawImage(this.image, x + currentX, y + currentY, this.anchor);
     }

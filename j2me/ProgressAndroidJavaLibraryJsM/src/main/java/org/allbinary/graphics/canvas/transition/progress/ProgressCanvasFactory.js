@@ -23,7 +23,7 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidBasicTitleProgressBar } from './AndroidBasicTitleProgressBar.js';
-//not GWT import - same folder const ProgressCanvas
+//sameFolderImports - not GWT import - same folder const ProgressCanvas
 export class ProgressCanvasFactory extends Object {
     static getInstance() {
         if (ProgressCanvasFactory.PROGRESS_FORM_SCREEN == NullUtil.getInstance().NULL_OBJECT) {

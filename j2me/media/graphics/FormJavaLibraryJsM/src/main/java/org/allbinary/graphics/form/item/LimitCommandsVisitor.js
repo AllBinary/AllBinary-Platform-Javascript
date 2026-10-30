@@ -26,14 +26,14 @@ import { Visitor } from '../../../../../org/allbinary/logic/util/visitor/Visitor
 export class LimitCommandsVisitor extends Visitor {
     constructor() {
         super();
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         this.isNotSmallDisplay = (displayInfo.isPortrait() && displayInfo.getLastHeight() > ScreenInfo.getInstance().SMALL_WIDTH) || (!displayInfo.isPortrait() && displayInfo.getLastHeight() > ScreenInfo.getInstance().SMALL_HEIGHT);
     }
-    visit(anyType = {}) {
-        var command = anyType;
+    visit(anyType) {
+        let command = anyType;
         ;
-        var booleanFactory = BooleanFactory.getInstance();
+        let booleanFactory = BooleanFactory.getInstance();
         ;
         if (this.isNotSmallDisplay || command.getPriority() == 1 || command == GameCommandsFactory.getInstance().EXIT_COMMAND || command == GameCommandsFactory.getInstance().EXIT_WITHOUT_PROGRESS_COMMAND) {
             //if statement needs to be on the same line and ternary does not work the same way.

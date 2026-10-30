@@ -30,13 +30,13 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not GWT import const Node
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomData } from './DomData.js';
-//not GWT import - same folder const DomData
+//sameFolderImports - not GWT import - same folder const DomData
 export class ModDomHelper extends Object {
     //@Throws(Exception.constructor)
     static createTextNode(document, name, text) {
-        var newValueNode = document.createElement(name);
+        let newValueNode = document.createElement(name);
         ;
-        var newValueTextNode = document.createTextNode(text);
+        let newValueTextNode = document.createTextNode(text);
         ;
         newValueNode.appendChild(newValueTextNode);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,9 +60,22 @@ export class ModDomHelper extends Object {
         return ModDomHelper.createTextNode(document, DomData.INDEX, new Integer(index).toString());
         ;
     }
+    static createNameValueNodes(...args) {
+        if (args.length === 4 && typeof args[1] === 'string' && typeof args[2] === 'string' && typeof args[3] === 'string')
+            return this.createNameValueNodes$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 3 && typeof args[1] === 'string' && typeof args[2] === 'string')
+            return this.createNameValueNodes$overload2(args[0], args[1], args[2]);
+        if (args.length === 3 && typeof args[1] === 'string')
+            return this.createNameValueNodes$overload3(args[0], args[1], args[2]);
+        if (args.length === 3)
+            return this.createNameValueNodes$overload4(args[0], args[1], args[2]);
+        if (args.length === 4 && typeof args[1] === 'string' && typeof args[2] === 'string')
+            return this.createNameValueNodes$overload5(args[0], args[1], args[2], args[3]);
+        throw new TypeError('No matching overload: createNameValueNodes');
+    }
     //@Throws(Exception.constructor)
-    static createNameValueNodes(document, elementName, nameText, valueText) {
-        var newNode = document.createElement(elementName);
+    static createNameValueNodes$overload1(document, elementName, nameText, valueText) {
+        let newNode = document.createElement(elementName);
         ;
         newNode.appendChild(ModDomHelper.createNameNode(document, nameText));
         newNode.appendChild(ModDomHelper.createValueNode(document, valueText));
@@ -70,53 +83,60 @@ export class ModDomHelper extends Object {
         return newNode;
     }
     //@Throws(Exception.constructor)
-    static createNameValueNodes(document, elementNameAndNameText, valueText) {
-        var newNode = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, elementNameAndNameText, valueText);
+    static createNameValueNodes$overload2(document, elementNameAndNameText, valueText) {
+        let newNode = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, elementNameAndNameText, valueText);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return newNode;
     }
+    static createNameValueIndexNodes(...args) {
+        if (args.length === 4 && typeof args[1] === 'string' && typeof args[2] === 'number' && typeof args[3] === 'string')
+            return this.createNameValueIndexNodes$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 4 && typeof args[1] === 'string' && typeof args[2] === 'string')
+            return this.createNameValueIndexNodes$overload2(args[0], args[1], args[2], args[3]);
+        throw new TypeError('No matching overload: createNameValueIndexNodes');
+    }
     //@Throws(Exception.constructor)
-    static createNameValueIndexNodes(document, elementNameAndNameText, index, valueText) {
-        var newNode = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, valueText);
+    static createNameValueIndexNodes$overload1(document, elementNameAndNameText, index, valueText) {
+        let newNode = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, valueText);
         ;
         newNode.appendChild(ModDomHelper.createIndexNode(document, index));
         //if statement needs to be on the same line and ternary does not work the same way.
         return newNode;
     }
     //@Throws(Exception.constructor)
-    static createNameValueNodes(document, rootNode, hashMap) {
-        var node = document.createElement(rootNode);
+    static createNameValueNodes$overload3(document, rootNode, hashMap) {
+        let node = document.createElement(rootNode);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return ModDomHelper.createNameValueNodes(document, node, hashMap);
         ;
     }
     //@Throws(Exception.constructor)
-    static createNameValueNodes(document, node, hashMap) {
-        var stringUtil = StringUtil.getInstance();
+    static createNameValueNodes$overload4(document, node, hashMap) {
+        let stringUtil = StringUtil.getInstance();
         ;
-        var keySet = hashMap.keys();
+        let keySet = hashMap.keys();
         ;
-        var keyArray = keySet.();
+        let keyArray = keySet.();
         ;
-        var size = keyArray.length;
+        let size = keyArray.length;
         ;
-        for (var i = 0; i < size; i++) {
-            var objectKey = keyArray[i];
+        for (let i = 0; i < size; i++) {
+            let objectKey = keyArray[i];
             ;
-            var name = objectKey;
+            let name = objectKey;
             ;
-            var anyType = hashMap.get(objectKey);
+            let anyType = hashMap.get(objectKey);
             ;
             if (anyType ==
                 null) {
-                var value = stringUtil.EMPTY_STRING;
+                let value = stringUtil.EMPTY_STRING;
                 ;
                 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value));
             }
-            else if (anyType instanceof String) {
-                var value = stringUtil.getNonNull(anyType);
+            else if (((value) => typeof value === 'string' || value instanceof String)(anyType)) {
+                let value = stringUtil.getNonNull(anyType);
                 ;
                 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value));
             }
@@ -131,15 +151,15 @@ export class ModDomHelper extends Object {
         return node;
     }
     //@Throws(Exception.constructor)
-    static createNameValueNodes(document, rootNodeName, duplicateNodeName, valueVector) {
-        var stringUtil = StringUtil.getInstance();
+    static createNameValueNodes$overload5(document, rootNodeName, duplicateNodeName, valueVector) {
+        let stringUtil = StringUtil.getInstance();
         ;
-        var node = document.createElement(rootNodeName);
+        let node = document.createElement(rootNodeName);
         ;
-        var size = valueVector.size();
+        let size = valueVector.size();
         ;
-        for (var i = 0; i < size; i++) {
-            var value = stringUtil.getNonNull(valueVector.get(i));
+        for (let i = 0; i < size; i++) {
+            let value = stringUtil.getNonNull(valueVector.get(i));
             ;
             node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, value));
         }
@@ -147,45 +167,52 @@ export class ModDomHelper extends Object {
         return node;
     }
     //@Throws(Exception.constructor)
-    static createNameValueIndexNodes(document, rootNodeName, duplicateNodeName, valueVector) {
-        var stringUtil = StringUtil.getInstance();
+    static createNameValueIndexNodes$overload2(document, rootNodeName, duplicateNodeName, valueVector) {
+        let stringUtil = StringUtil.getInstance();
         ;
-        var node = document.createElement(rootNodeName);
+        let node = document.createElement(rootNodeName);
         ;
-        var size = valueVector.size();
+        let size = valueVector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var value = stringUtil.getNonNull(valueVector.get(index));
+        for (let index = 0; index < size; index++) {
+            let value = stringUtil.getNonNull(valueVector.get(index));
             ;
             node.appendChild(ModDomHelper.createNameValueIndexNodes(document, duplicateNodeName, index, value));
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return node;
     }
+    static createNodeWithValueNodes(...args) {
+        if (args.length === 3 && typeof args[1] === 'string')
+            return this.createNodeWithValueNodes$overload1(args[0], args[1], args[2]);
+        if (args.length === 3)
+            return this.createNodeWithValueNodes$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: createNodeWithValueNodes');
+    }
     //@Throws(Exception.constructor)
-    static createNodeWithValueNodes(document, rootNode, hashMap) {
-        var node = document.createElement(rootNode);
+    static createNodeWithValueNodes$overload1(document, rootNode, hashMap) {
+        let node = document.createElement(rootNode);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return ModDomHelper.createNodeWithValueNodes(document, node, hashMap);
         ;
     }
     //@Throws(Exception.constructor)
-    static createNodeWithValueNodes(document, node, hashMap) {
-        var stringUtil = StringUtil.getInstance();
+    static createNodeWithValueNodes$overload2(document, node, hashMap) {
+        let stringUtil = StringUtil.getInstance();
         ;
-        var keySet = hashMap.keys();
+        let keySet = hashMap.keys();
         ;
-        var keyArray = keySet.();
+        let keyArray = keySet.();
         ;
-        var size = keyArray.length;
+        let size = keyArray.length;
         ;
-        for (var i = 0; i < size; i++) {
-            var name = keyArray[i];
+        for (let i = 0; i < size; i++) {
+            let name = keyArray[i];
             ;
-            var anyType = hashMap.get(name);
+            let anyType = hashMap.get(name);
             ;
-            var value = stringUtil.getNonNull(anyType);
+            let value = stringUtil.getNonNull(anyType);
             ;
             node.appendChild(ModDomHelper.createTextNode(document, name, value));
         }

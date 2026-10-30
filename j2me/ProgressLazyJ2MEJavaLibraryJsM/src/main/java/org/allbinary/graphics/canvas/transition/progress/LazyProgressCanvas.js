@@ -19,7 +19,7 @@ import { ImageCacheFactory } from '../../../../../../org/allbinary/image/ImageCa
 //not GWT import const ImageCacheFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressCanvas } from './ProgressCanvas.js';
-//not GWT import - same folder const ProgressCanvas
+//sameFolderImports - not GWT import - same folder const ProgressCanvas
 export class LazyProgressCanvas extends ProgressCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(title, backgroundBasicColor, foregroundBasicColor);
@@ -36,10 +36,12 @@ export class LazyProgressCanvas extends ProgressCanvas {
             this.paintable = this.GAUGE_PAINTABLE;
             ImageCacheFactory.getInstance().runTask();
             ImageCacheFactory.getInstance().progressEnded();
-            //: 
         }
-        catch (e) {
-            this.logUtil.putF(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.putF(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME);
+            }
         }
     }
     inGame() {

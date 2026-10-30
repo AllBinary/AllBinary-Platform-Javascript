@@ -28,7 +28,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not GWT import const Node
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LogConfigData } from './LogConfigData.js';
-//not GWT import - same folder const LogConfigData
+//sameFolderImports - not GWT import - same folder const LogConfigData
 export class LogConfig extends Object {
     constructor(aName, aDescription, aPath, aFileName) {
         super();
@@ -40,20 +40,20 @@ export class LogConfig extends Object {
     }
     constructor(node) {
         super();
-        var enabledValueNode = DomSearchHelper.getNode(EntryData.getInstance().ENABLE, node.getChildNodes());
+        let enabledValueNode = DomSearchHelper.getNode(EntryData.getInstance().ENABLE, node.getChildNodes());
         ;
-        var isEnabledString = DomNodeHelper.getTextNodeValue(enabledValueNode);
+        let isEnabledString = DomNodeHelper.getTextNodeValue(enabledValueNode);
         ;
         this.isEnabled = BooleanUtil.getInstance().getFromString(isEnabledString);
-        var logConfigData = LogConfigData.getInstance();
+        let logConfigData = LogConfigData.getInstance();
         ;
-        var nameValueNode = DomSearchHelper.getNode(logConfigData.NAME, node.getChildNodes());
+        let nameValueNode = DomSearchHelper.getNode(logConfigData.NAME, node.getChildNodes());
         ;
         this.name = DomNodeHelper.getTextNodeValue(nameValueNode);
-        var descriptionValueNode = DomSearchHelper.getNode(logConfigData.DESCRIPTION, node.getChildNodes());
+        let descriptionValueNode = DomSearchHelper.getNode(logConfigData.DESCRIPTION, node.getChildNodes());
         ;
         this.description = DomNodeHelper.getTextNodeValue(descriptionValueNode);
-        var fileValueNode = DomSearchHelper.getNode(logConfigData.FILE, node.getChildNodes());
+        let fileValueNode = DomSearchHelper.getNode(logConfigData.FILE, node.getChildNodes());
         ;
         this.fileName = DomNodeHelper.getTextNodeValue(fileValueNode);
     }
@@ -93,7 +93,7 @@ export class LogConfig extends Object {
     }
     //@Throws(Exception.constructor)
     getTypeVector() {
-        var logKeyVector = new BasicArrayListD();
+        let logKeyVector = new BasicArrayListD();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return logKeyVector;

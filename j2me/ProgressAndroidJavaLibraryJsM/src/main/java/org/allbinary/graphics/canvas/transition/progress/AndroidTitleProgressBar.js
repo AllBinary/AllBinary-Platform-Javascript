@@ -20,104 +20,115 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressCanvas } from './ProgressCanvas.js';
-//not GWT import - same folder const ProgressCanvas
-//import { ShowTitleProgressBarRunnable } from './ShowTitleProgressBarRunnable.js';
-//not GWT import - same folder const ShowTitleProgressBarRunnable
-//import { DismissTitleProgressBarRunnable } from './DismissTitleProgressBarRunnable.js';
-//not GWT import - same folder const DismissTitleProgressBarRunnable
-//import { TitleProgressBarPortionSetProgressRunnable } from './TitleProgressBarPortionSetProgressRunnable.js';
-//not GWT import - same folder const TitleProgressBarPortionSetProgressRunnable
-//import { TitleProgressBarSetProgressRunnable } from './TitleProgressBarSetProgressRunnable.js';
-//not GWT import - same folder const TitleProgressBarSetProgressRunnable
 export class AndroidTitleProgressBar extends ProgressCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(title, backgroundBasicColor, foregroundBasicColor);
         //inner= member=true isStatic=
-        this.TitleProgressBarSetProgressRunnable = class extends Object {
-            constructor(androidTitleProgressBar) {
-                super();
-                this.androidTitleProgressBar = androidTitleProgressBar;
-            }
-            run() {
-                var logUtil = LogUtil.getInstance();
-                ;
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                try {
-                    var value = Math.round(this.androidTitleProgressBar.getValue());
+        this.TitleProgressBarSetProgressRunnable = (() => {
+            const outer$AndroidTitleProgressBar = this;
+            return class extends Object {
+                constructor(androidTitleProgressBar) {
+                    super();
+                    this.androidTitleProgressBar = androidTitleProgressBar;
+                }
+                run() {
+                    let logUtil = LogUtil.getInstance();
                     ;
-                    this.androidTitleProgressBar.progressActivity.onTitleProgressBarSetProgress(value);
-                    //: 
-                }
-                catch (e) {
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-                }
-            }
-        };
-        //inner= member=true isStatic=
-        this.TitleProgressBarPortionSetProgressRunnable = class extends Object {
-            constructor(androidTitleProgressBar) {
-                super();
-                this.androidTitleProgressBar = androidTitleProgressBar;
-            }
-            run() {
-                var logUtil = LogUtil.getInstance();
-                ;
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                try {
-                    var value = Math.round((this.androidTitleProgressBar.getValue() + this.androidTitleProgressBar.getMaxValue() / this.androidTitleProgressBar.portion));
+                    let commonStrings = CommonStrings.getInstance();
                     ;
-                    this.androidTitleProgressBar.progressActivity.onTitleProgressBarSetProgress(value);
-                    //: 
+                    try {
+                        let value = globalThis.Math.trunc(this.androidTitleProgressBar.getValue());
+                        ;
+                        this.androidTitleProgressBar.progressActivity.onTitleProgressBarSetProgress(value);
+                    }
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
+                    }
                 }
-                catch (e) {
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-                }
-            }
-        };
+            };
+        })();
         //inner= member=true isStatic=
-        this.ShowTitleProgressBarRunnable = class extends Object {
-            constructor(androidTitleProgressBar) {
-                super();
-                this.androidTitleProgressBar = androidTitleProgressBar;
-            }
-            run() {
-                var logUtil = LogUtil.getInstance();
-                ;
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                try {
-                    var maxValue = Math.round(this.androidTitleProgressBar.getMaxValue());
+        this.TitleProgressBarPortionSetProgressRunnable = (() => {
+            const outer$AndroidTitleProgressBar = this;
+            return class extends Object {
+                constructor(androidTitleProgressBar) {
+                    super();
+                    this.androidTitleProgressBar = androidTitleProgressBar;
+                }
+                run() {
+                    let logUtil = LogUtil.getInstance();
                     ;
-                    this.androidTitleProgressBar.progressActivity.onShowTitleProgressBar(maxValue, false);
-                    //: 
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    try {
+                        let value = globalThis.Math.trunc((this.androidTitleProgressBar.getValue() + this.androidTitleProgressBar.getMaxValue() / this.androidTitleProgressBar.portion));
+                        ;
+                        this.androidTitleProgressBar.progressActivity.onTitleProgressBarSetProgress(value);
+                    }
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
+                    }
                 }
-                catch (e) {
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-                }
-            }
-        };
+            };
+        })();
         //inner= member=true isStatic=
-        this.DismissTitleProgressBarRunnable = class extends Object {
-            constructor(androidTitleProgressBar) {
-                super();
-                this.androidTitleProgressBar = androidTitleProgressBar;
-            }
-            run() {
-                var logUtil = LogUtil.getInstance();
-                ;
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                try {
-                    this.androidTitleProgressBar.progressActivity.onDismissTitleProgressBar();
-                    //: 
+        this.ShowTitleProgressBarRunnable = (() => {
+            const outer$AndroidTitleProgressBar = this;
+            return class extends Object {
+                constructor(androidTitleProgressBar) {
+                    super();
+                    this.androidTitleProgressBar = androidTitleProgressBar;
                 }
-                catch (e) {
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                run() {
+                    let logUtil = LogUtil.getInstance();
+                    ;
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    try {
+                        let maxValue = globalThis.Math.trunc(this.androidTitleProgressBar.getMaxValue());
+                        ;
+                        this.androidTitleProgressBar.progressActivity.onShowTitleProgressBar(maxValue, false);
+                    }
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
+                    }
                 }
-            }
-        };
+            };
+        })();
+        //inner= member=true isStatic=
+        this.DismissTitleProgressBarRunnable = (() => {
+            const outer$AndroidTitleProgressBar = this;
+            return class extends Object {
+                constructor(androidTitleProgressBar) {
+                    super();
+                    this.androidTitleProgressBar = androidTitleProgressBar;
+                }
+                run() {
+                    let logUtil = LogUtil.getInstance();
+                    ;
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    try {
+                        this.androidTitleProgressBar.progressActivity.onDismissTitleProgressBar();
+                    }
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
+                    }
+                }
+            };
+        })();
         this.showTitleProgressBarRunnable = new this.ShowTitleProgressBarRunnable(this);
         this.dismissTitleProgressBarRunnable = new this.DismissTitleProgressBarRunnable(this);
         this.progressDialogPortionSetProgressRunnable = new this.TitleProgressBarPortionSetProgressRunnable(this);
@@ -144,10 +155,12 @@ export class AndroidTitleProgressBar extends ProgressCanvas {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.START_METHOD_NAME);
             super.start();
             this.progressActivity.runOnUiThread(this.showTitleProgressBarRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+            }
         }
     }
     end() {
@@ -155,10 +168,12 @@ export class AndroidTitleProgressBar extends ProgressCanvas {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.END_METHOD_NAME);
             this.progressActivity.runOnUiThread(this.dismissTitleProgressBarRunnable);
             super.end();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME, e);
+            }
         }
     }
     addPortion(value, text, index) {
@@ -166,10 +181,12 @@ export class AndroidTitleProgressBar extends ProgressCanvas {
             super.addPortion(value, text, index);
             this.portion = value;
             this.progressActivity.runOnUiThread(this.progressDialogPortionSetProgressRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+            }
         }
     }
     addNormalPortion(value, text) {
@@ -177,20 +194,24 @@ export class AndroidTitleProgressBar extends ProgressCanvas {
             super.addNormalPortion(value, text);
             this.portion = value;
             this.progressActivity.runOnUiThread(this.progressDialogPortionSetProgressRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+            }
         }
     }
     setValue(value) {
         try {
             super.setValue(value);
             this.progressActivity.runOnUiThread(this.progressDialogSetProgressRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "setValue", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "setValue", e);
+            }
         }
     }
     waitUntilDisplayed() {

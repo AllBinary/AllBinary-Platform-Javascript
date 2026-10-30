@@ -18,7 +18,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
-//not GWT import - same folder const DamageableInterface
+//sameFolderImports - not GWT import - same folder const DamageableInterface
 export class DamageUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -35,12 +35,12 @@ export class DamageUtil extends Object {
     }
     //@Throws(Exception.constructor)
     debugDamage(collidableInterfaceCompositeInterface1, collidableInterfaceCompositeInterface) {
-        var collidableDestroyableDamageableLayer = collidableInterfaceCompositeInterface;
+        let collidableDestroyableDamageableLayer = collidableInterfaceCompositeInterface;
         ;
-        var damage = collidableDestroyableDamageableLayer.getDamage(0);
+        let damage = collidableDestroyableDamageableLayer.getDamage(0);
         ;
         if (damage > 20000) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append("Collision ");
             stringBuffer.append(collidableInterfaceCompositeInterface1.toString());

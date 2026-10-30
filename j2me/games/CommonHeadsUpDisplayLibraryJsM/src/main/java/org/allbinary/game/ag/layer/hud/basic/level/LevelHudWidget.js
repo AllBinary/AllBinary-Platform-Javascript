@@ -34,7 +34,7 @@ export class LevelHudWidget extends BasicHud {
         this.offset = 0;
         //For kotlin this is before the body of the constructor.
         this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(1000);
-        var LEVEL = "Lv ";
+        let LEVEL = "Lv ";
         ;
         this.levelString = LEVEL.split('');
         this.maxlevel = maxlevel;
@@ -43,7 +43,7 @@ export class LevelHudWidget extends BasicHud {
         this.updateMaxHeight = 14;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.updateMaxWidth = font.getSize() * 4;
         this.offset = font.charsWidth(this.levelString, 0, this.levelString.length) + font.getSize();

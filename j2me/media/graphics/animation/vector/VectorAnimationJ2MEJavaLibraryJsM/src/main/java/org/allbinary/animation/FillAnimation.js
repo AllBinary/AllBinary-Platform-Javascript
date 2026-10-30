@@ -2,7 +2,7 @@
 //not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IndexedAnimation } from './IndexedAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class FillAnimation extends IndexedAnimation {
     constructor(pixelBuffer, width, height, animationBehavior) {
         super(animationBehavior);
@@ -12,7 +12,7 @@ export class FillAnimation extends IndexedAnimation {
         this.pixelBuffer = pixelBuffer;
     }
     setBasicColorP(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getBasicColorP() ==
             null
@@ -25,7 +25,7 @@ export class FillAnimation extends IndexedAnimation {
         }
     }
     changeBasicColor(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getChangeBasicColor() ==
             null
@@ -38,7 +38,7 @@ export class FillAnimation extends IndexedAnimation {
         }
     }
     setAlpha(alpha) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.alphaP != alpha) {
             changed = true;

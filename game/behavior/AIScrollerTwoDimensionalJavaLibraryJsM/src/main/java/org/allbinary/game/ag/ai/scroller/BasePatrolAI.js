@@ -37,16 +37,16 @@ export class BasePatrolAI extends BasicAI {
         this.changeDirectionIfReachedPacingAreaMax();
     }
     updateTotalDistance() {
-        var velocityInterfaceCompositeInterface = this.getOwnerLayerInterface();
+        let velocityInterfaceCompositeInterface = this.getOwnerLayerInterface();
         ;
-        var velocityProperties = velocityInterfaceCompositeInterface.getVelocityProperties();
+        let velocityProperties = velocityInterfaceCompositeInterface.getVelocityProperties();
         ;
         this.xTotalDistance += velocityProperties.getVelocityXBasicDecimalP().getScaled();
     }
     changeDirectionIfReachedPacingAreaMax() {
-        var mathUtil = MathUtil.getInstance();
+        let mathUtil = MathUtil.getInstance();
         ;
-        var totalDistance = mathUtil.abs(this.xTotalDistance);
+        let totalDistance = mathUtil.abs(this.xTotalDistance);
         ;
         if (totalDistance > this.currentDistance) {
             this.nextDirection();

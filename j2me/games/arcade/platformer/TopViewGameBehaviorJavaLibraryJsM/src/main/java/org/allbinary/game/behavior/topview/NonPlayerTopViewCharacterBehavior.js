@@ -27,7 +27,7 @@ import { SimpleGeographicMapCellPositionFactory } from '../../../../../org/allbi
 //not GWT import const SimpleGeographicMapCellPositionFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TopViewCharacterBehavior } from './TopViewCharacterBehavior.js';
-//not GWT import - same folder const TopViewCharacterBehavior
+//sameFolderImports - not GWT import - same folder const TopViewCharacterBehavior
 export class NonPlayerTopViewCharacterBehavior extends TopViewCharacterBehavior {
     constructor() {
         super(...arguments);
@@ -36,12 +36,12 @@ export class NonPlayerTopViewCharacterBehavior extends TopViewCharacterBehavior 
     }
     //@Throws(Exception.constructor)
     terrainEvent(layer, direction, x, y, geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition) {
-        var maxColumns = geographicMapInterfaceArray[0].getAllBinaryTiledLayer().getColumns();
+        let maxColumns = geographicMapInterfaceArray[0].getAllBinaryTiledLayer().getColumns();
         ;
         if (geographicMapCellPosition.getColumn() > 0 && geographicMapCellPosition.getColumn() < maxColumns) {
-            var nextTerrainGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
+            let nextTerrainGeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
             ;
-            var geographicMapCellPositionFactory = geographicMapInterfaceArray[0].getGeographicMapCellPositionFactory();
+            let geographicMapCellPositionFactory = geographicMapInterfaceArray[0].getGeographicMapCellPositionFactory();
             ;
             if (direction == DirectionFactory.getInstance().LEFT) {
                 nextTerrainGeographicMapCellPosition = geographicMapCellPositionFactory.getAt(geographicMapCellPosition.getColumn() - 1, geographicMapCellPosition.getRow());
@@ -50,10 +50,10 @@ export class NonPlayerTopViewCharacterBehavior extends TopViewCharacterBehavior 
                 nextTerrainGeographicMapCellPosition = geographicMapCellPositionFactory.getAt(geographicMapCellPosition.getColumn() + 1, geographicMapCellPosition.getRow());
             }
             this.geographicMapBehavior.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, nextTerrainGeographicMapCellPosition);
-            var hasSolidBlock = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray);
+            let hasSolidBlock = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray);
             ;
             if (!hasSolidBlock) {
-                var terrainEvent = TerrainEventCircularStaticPool.getInstance().getNext(this.CLIFF);
+                let terrainEvent = TerrainEventCircularStaticPool.getInstance().getNext(this.CLIFF);
                 ;
                 TerrainEventHandler.getInstance(layer).fireEvent(terrainEvent);
             }

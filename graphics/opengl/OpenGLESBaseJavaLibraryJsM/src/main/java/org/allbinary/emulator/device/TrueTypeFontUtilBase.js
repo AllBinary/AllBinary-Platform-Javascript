@@ -31,15 +31,15 @@ export class TrueTypeFontUtilBase extends Object {
         this.size = this.pattern.length;
         this.lastCapIndex = this.pattern.indexOf('Z');
         this.currentFont = Font.getDefaultFont();
-        var shortPattern = StringUtil.getInstance().EMPTY_STRING;
+        let shortPattern = StringUtil.getInstance().EMPTY_STRING;
         ;
         if (AvianUtil.isAvian()) {
-            var shortPatterAsByteArray = [32, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 46, 63, 33, 36, 37, 96, -62, -84, -62, -84, 34, -62, -93, -62, -93, 94, 38, 42, 40, 41, 95, 43, 45, 61, 91, 93, 123, 125, 59, 39, 35, 58, 64, 126, 44, 47, 60, 62, 92, 124, -62, -82, -62, -82, -62, -87, -62, -87];
+            let shortPatterAsByteArray = [32, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 46, 63, 33, 36, 37, 96, -62, -84, -62, -84, 34, -62, -93, -62, -93, 94, 38, 42, 40, 41, 95, 43, 45, 61, 91, 93, 123, 125, 59, 39, 35, 58, 64, 126, 44, 47, 60, 62, 92, 124, -62, -82, -62, -82, -62, -87, -62, -87];
             ;
             shortPattern = String.fromCharCode(...shortPatterAsByteArray);
         }
         else {
-            var shortPatterAsByteArray = [32, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 46, 63, 33, 36, 37, 96, -62, -84, 34, -62, -93, 94, 38, 42, 40, 41, 95, 43, 45, 61, 91, 93, 123, 125, 59, 39, 35, 58, 64, 126, 44, 47, 60, 62, 92, 124, -62, -82, -62, -87];
+            let shortPatterAsByteArray = [32, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 46, 63, 33, 36, 37, 96, -62, -84, 34, -62, -93, 94, 38, 42, 40, 41, 95, 43, 45, 61, 91, 93, 123, 125, 59, 39, 35, 58, 64, 126, 44, 47, 60, 62, 92, 124, -62, -82, -62, -87];
             ;
             shortPattern = String.fromCharCode(...shortPatterAsByteArray);
         }
@@ -50,7 +50,7 @@ export class TrueTypeFontUtilBase extends Object {
         this.baseCharWidth = this.fontSize + (6 * this.scale);
         this.cellSize = this.fontSize + (6 * this.scale);
         this.textureSize = this.getAsTextureSize(this.CELLS_PER_ROW * this.cellSize);
-        this.actualCellsPerRow = this.textureSize / this.cellSize;
+        this.actualCellsPerRow = globalThis.Math.trunc(this.textureSize / this.cellSize);
     }
     getAsTextureSize(textureSize) {
         if (textureSize <= 64) {

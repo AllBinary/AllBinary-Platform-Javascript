@@ -24,13 +24,13 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const DemoGameMidlet
+//sameFolderImports - not GWT import - same folder const DemoGameMidlet
 import { DemoGameMidletEvent } from './DemoGameMidletEvent.js';
-//not GWT import - same folder const DemoGameMidletEvent
+//sameFolderImports - not GWT import - same folder const DemoGameMidletEvent
 import { DemoGameMidletStateFactory } from './DemoGameMidletStateFactory.js';
-//not GWT import - same folder const DemoGameMidletStateFactory
+//sameFolderImports - not GWT import - same folder const DemoGameMidletStateFactory
 import { DemoGameMidletEventHandler } from './DemoGameMidletEventHandler.js';
-//not GWT import - same folder const DemoGameMidletEventHandler
+//sameFolderImports - not GWT import - same folder const DemoGameMidletEventHandler
 export class CreateGameRunnable extends Object {
     constructor(demoGameMidlet, hashtable) {
         super();
@@ -43,7 +43,7 @@ export class CreateGameRunnable extends Object {
     run() {
         try {
             this.logUtil.putF(this.commonStrings.START_RUNNABLE, this, this.commonStrings.RUN);
-            var progressCanvas = ProgressCanvasFactory.getInstance();
+            let progressCanvas = ProgressCanvasFactory.getInstance();
             ;
             this.demoGameMidlet.commandAction(MyCommandsFactory.getInstance().SET_DISPLAYABLE, progressCanvas);
             this.demoGameMidlet.stopGameCanvasRunnableInterface();
@@ -52,10 +52,12 @@ export class CreateGameRunnable extends Object {
             this.demoGameMidlet.startGameCanvasRunnableInterface();
             DemoGameMidletEventHandler.getInstance().fireEvent(this.startGameMidletEvent);
             this.logUtil.putF(this.commonStrings.END_RUNNABLE, this, this.commonStrings.RUN);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+            }
         }
     }
 }

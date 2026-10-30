@@ -51,23 +51,25 @@ export class ApplicationConfiguration extends Object {
             else {
                 this.write();
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     read() {
-        var fileInputStreamFactory = FileStreamFactory.getInstance();
+        let fileInputStreamFactory = FileStreamFactory.getInstance();
         ;
-        var fileInputStream = fileInputStreamFactory.getFileInputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
+        let fileInputStream = fileInputStreamFactory.getFileInputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
         ;
-        var dataInputStream = new AbDataInputStream(fileInputStream);
+        let dataInputStream = new AbDataInputStream(fileInputStream);
         ;
-        var fullScreen = dataInputStream.readInt();
+        let fullScreen = dataInputStream.readInt();
         ;
         if (fullScreen == 0) {
             this.setFullscreen(false);
@@ -78,7 +80,7 @@ export class ApplicationConfiguration extends Object {
         else {
             throw new Exception("Invalid FullScreen ActivityConfiguration");
         }
-        var progressBarView = dataInputStream.readInt();
+        let progressBarView = dataInputStream.readInt();
         ;
         if (progressBarView == 0) {
             this.setProgressBarView(false);
@@ -89,7 +91,7 @@ export class ApplicationConfiguration extends Object {
         else {
             throw new Exception("Invalid ProgressBarView ActivityConfiguration");
         }
-        var showTitleBar = dataInputStream.readInt();
+        let showTitleBar = dataInputStream.readInt();
         ;
         if (showTitleBar == 0) {
             this.setShowTitleBar(false);
@@ -104,15 +106,15 @@ export class ApplicationConfiguration extends Object {
     }
     //@Throws(Exception.constructor)
     write() {
-        var closeable = NullCloseable.NULL_CLOSEABLE;
+        let closeable = NullCloseable.NULL_CLOSEABLE;
         ;
         try {
             this.logUtil.putF("Write Configuration: " + this.toString(), this, "write");
-            var fileInputStreamFactory = FileStreamFactory.getInstance();
+            let fileInputStreamFactory = FileStreamFactory.getInstance();
             ;
-            var fileOutputStream = fileInputStreamFactory.getFileOutputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
+            let fileOutputStream = fileInputStreamFactory.getFileOutputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
             ;
-            var dataOutputStream = new AbDataOutputStream(fileOutputStream);
+            let dataOutputStream = new AbDataOutputStream(fileOutputStream);
             ;
             closeable = dataOutputStream;
             if (this.isFullscreen()) {
@@ -134,10 +136,12 @@ export class ApplicationConfiguration extends Object {
                 dataOutputStream.writeInt(0);
             }
             dataOutputStream.flush();
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             StreamUtil.getInstance().close(closeable);
@@ -146,7 +150,7 @@ export class ApplicationConfiguration extends Object {
     //@Throws(Exception.constructor)
     update(gameFeature) {
         if (gameFeature == MainFeatureFactory.getInstance().FULL_SCREEN) {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
             if (features.isFeature(gameFeature)) {
                 if (!this.isFullscreen()) {
@@ -184,7 +188,7 @@ export class ApplicationConfiguration extends Object {
         return this.progressBarView;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("isFullscreen: ");
         stringBuffer.appendboolean(this.isFullscreen());

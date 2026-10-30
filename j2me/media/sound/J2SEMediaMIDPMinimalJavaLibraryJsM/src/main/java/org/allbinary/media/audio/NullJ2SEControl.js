@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Control } from '../../../../javax/sound/sampled/Control.js';
-//not GWT import - same folder const Type
+//sameFolderImports - not GWT import - same folder const Type
 export class NullJ2SEControl extends Control {
     constructor(type) {
         super(type);

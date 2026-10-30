@@ -52,16 +52,25 @@ export class AbFileOutputStream extends OutputStream {
         return this.fileOutputStream.getChannel();
         ;
     }
+    write(...args) {
+        if (args.length === 1)
+            return this.write$overload1(args[0]);
+        if (args.length === 3 && typeof args[1] === 'number' && typeof args[2] === 'number')
+            return this.write$overload2(args[0], args[1], args[2]);
+        if (args.length === 1 && typeof args[0] === 'number')
+            return this.write$overload3(args[0]);
+        throw new TypeError('No matching overload: write');
+    }
     //@Throws(IOException.constructor)
-    write(buffer) {
+    write$overload1(buffer) {
         this.fileOutputStream.write(buffer);
     }
     //@Throws(IOException.constructor)
-    write(buffer, offset, count) {
+    write$overload2(buffer, offset, count) {
         this.fileOutputStream.write(buffer, offset, count);
     }
     //@Throws(IOException.constructor)
-    write(b) {
+    write$overload3(b) {
         this.fileOutputStream.write(b);
     }
 }

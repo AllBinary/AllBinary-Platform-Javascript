@@ -15,7 +15,7 @@
 import { IndexedAnimation } from '../../../../org/allbinary/animation/IndexedAnimation.js';
 //not GWT import const IndexedAnimation
 import { IndexedAnimationBehavior } from '../../../../org/allbinary/animation/IndexedAnimationBehavior.js';
-//not GWT import - same folder const SpecialAnimationInterface
+//sameFolderImports - not GWT import - same folder const SpecialAnimationInterface
 export class SpecialAnimation extends IndexedAnimation {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -26,7 +26,7 @@ export class SpecialAnimation extends IndexedAnimation {
         //For kotlin this is before the body of the constructor.
     }
     nextFrame() {
-        var indexedAnimationBehavior = this.animationBehaviorP;
+        let indexedAnimationBehavior = this.animationBehaviorP;
         ;
         indexedAnimationBehavior.loopIndex++;
     }

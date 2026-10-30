@@ -15,24 +15,24 @@
 import { Object } from '../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AngleFactory } from './AngleFactory.js';
-//not GWT import - same folder const AngleFactory
+//sameFolderImports - not GWT import - same folder const AngleFactory
 import { AngleIncrementInfo } from './AngleIncrementInfo.js';
-//not GWT import - same folder const AngleIncrementInfo
+//sameFolderImports - not GWT import - same folder const AngleIncrementInfo
 export class AngleIncrementInfoFactory extends Object {
     constructor() {
         super(...arguments);
-        this.angleIncrementInfo = new Array(Math.round(AngleFactory.getInstance().TOTAL_ANGLE));
+        this.angleIncrementInfo = new Array(globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE));
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AngleIncrementInfoFactory.instance;
     }
     getAt(angleIncrement) {
-        var halfAngleIncrement = (Math.round(angleIncrement) >> 1);
+        let halfAngleIncrement = (globalThis.Math.trunc(angleIncrement) >> 1);
         ;
-        var angleIncrementInfo;
+        let angleIncrementInfo;
         ;
-        var angleIncrementInfoCanBeNull = this.angleIncrementInfo[halfAngleIncrement];
+        let angleIncrementInfoCanBeNull = this.angleIncrementInfo[halfAngleIncrement];
         ;
         if (angleIncrementInfoCanBeNull ==
             null) {

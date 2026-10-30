@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import - same folder const InputMappingEvent
+//sameFolderImports - not GWT import - same folder const InputMappingEvent
 export class NullInputMappingEventListener extends Object {
     //@Throws(Exception.constructor)
     onInputMappingEvent(inputMappingEvent) {

@@ -29,7 +29,7 @@ import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/ma
 //not GWT import const SmallIntegerSingletonFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SoundStrings } from './SoundStrings.js';
-//not GWT import - same folder const Sound
+//sameFolderImports - not GWT import - same folder const Sound
 export class Sounds extends Object {
     constructor(soundsFactoryInterface) {
         super();
@@ -41,23 +41,23 @@ export class Sounds extends Object {
     //@Throws(Exception.constructor)
     init() {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.INIT);
-        var commonLabels = CommonLabels.getInstance();
+        let commonLabels = CommonLabels.getInstance();
         ;
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         this.soundsFactoryInterface.init();
-        var soundInterfaceArray = this.soundsFactoryInterface.getSoundInterfaceArray();
+        let soundInterfaceArray = this.soundsFactoryInterface.getSoundInterfaceArray();
         ;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
-        var indexInteger;
+        let indexInteger;
         ;
-        var indexString;
+        let indexString;
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        for (var i = 0; i < soundInterfaceArray.length; i++) {
-            var soundInterfaceCanBeNull = soundInterfaceArray[i];
+        for (let i = 0; i < soundInterfaceArray.length; i++) {
+            let soundInterfaceCanBeNull = soundInterfaceArray[i];
             ;
             if (soundInterfaceCanBeNull !=
                 null) {
@@ -79,13 +79,13 @@ export class Sounds extends Object {
     //@Throws(Exception.constructor)
     stopAll() {
         this.logUtil.putF(this.commonStrings.START, this, this.soundStrings.STOP_ALL);
-        var soundInterfaceArray = this.soundsFactoryInterface.getSoundInterfaceArray();
+        let soundInterfaceArray = this.soundsFactoryInterface.getSoundInterfaceArray();
         ;
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
-        var player;
+        let player;
         ;
-        for (var index = 0; index < soundInterfaceArray.length; index++) {
+        for (let index = 0; index < soundInterfaceArray.length; index++) {
             if (soundInterfaceArray[index] !=
                 null) {
                 player = soundInterfaceArray[index].getPlayerP();
@@ -100,13 +100,13 @@ export class Sounds extends Object {
     //@Throws(Exception.constructor)
     closeAll() {
         this.logUtil.putF(this.commonStrings.START, this, this.soundStrings.CLOSE_ALL);
-        var soundInterfaceArray = this.soundsFactoryInterface.getSoundInterfaceArray();
+        let soundInterfaceArray = this.soundsFactoryInterface.getSoundInterfaceArray();
         ;
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
-        var player;
+        let player;
         ;
-        for (var index = 0; index < soundInterfaceArray.length; index++) {
+        for (let index = 0; index < soundInterfaceArray.length; index++) {
             if (soundInterfaceArray[index] !=
                 null) {
                 player = soundInterfaceArray[index].getPlayerP();

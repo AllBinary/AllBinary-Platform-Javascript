@@ -21,7 +21,7 @@ import { AbPath } from '../../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const AbFileInterface
+//sameFolderImports - not GWT import - same folder const AbFileInterface
 export class AbFile extends Object {
     //@Throws(Exception.constructor)
     static createAbFileWithChild(file, childPathName) {
@@ -213,7 +213,7 @@ export class AbFile extends Object {
         return this.file.compareTo(pathname);
         ;
     }
-    equals(obj = {}) {
+    equals(obj) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TsUtil.getInstance().equalsNotstring(this.file, obj);
         ;

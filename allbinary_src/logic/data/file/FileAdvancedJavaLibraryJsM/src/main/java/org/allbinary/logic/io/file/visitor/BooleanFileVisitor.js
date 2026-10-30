@@ -28,26 +28,35 @@ export class BooleanFileVisitor extends Object {
         this.setFilterStringBasicArrayList(filterStringBasicArrayList);
         PreLogUtil.put("Filter BasicArrayList: " + this.getFilterStringBasicArrayList().toString(), this, this.commonStrings.CONSTRUCTOR);
     }
-    visit(anyType = {}) {
+    visit(...args) {
+        if (args.length === 1)
+            return this.visit$overload1(args[0]);
+        if (args.length === 1)
+            return this.visit$overload2(args[0]);
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.visit$overload3(args[0], args[1]);
+        throw new TypeError('No matching overload: visit');
+    }
+    visit$overload1(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.visit(anyType);
     }
-    visit(file) {
-        var list = this.getFilterStringBasicArrayList();
+    visit$overload2(file) {
+        let list = this.getFilterStringBasicArrayList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var nextFileFilterString;
+        let nextFileFilterString;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             nextFileFilterString = list.get(index);
             if (this.visit(file, nextFileFilterString).valueOf()) {
                 //if statement needs to be on the same line and ternary does not work the same way.
-                return Boolean.TRUE;
+                return true;
             }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Boolean.FALSE;
+        return false;
     }
     getFilterStringBasicArrayList() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,8 +65,8 @@ export class BooleanFileVisitor extends Object {
     setFilterStringBasicArrayList(filterStringBasicArrayList) {
         this.filterStringBasicArrayList = filterStringBasicArrayList;
     }
-    visit(file, fileNameString) {
+    visit$overload3(file, fileNameString) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Boolean.FALSE;
+        return false;
     }
 }

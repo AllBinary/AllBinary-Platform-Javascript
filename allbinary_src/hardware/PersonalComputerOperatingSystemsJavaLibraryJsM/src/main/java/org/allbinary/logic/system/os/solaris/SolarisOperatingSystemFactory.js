@@ -30,7 +30,7 @@ const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperti
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SolarisOS } from './SolarisOS.js';
-//not GWT import - same folder const SolarisOS
+//sameFolderImports - not GWT import - same folder const SolarisOS
 export class SolarisOperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,11 +42,11 @@ export class SolarisOperatingSystemFactory extends Object {
     }
     getOperatingSystemInstance() {
         try {
-            var operatingSystems = OperatingSystems.getInstance();
+            let operatingSystems = OperatingSystems.getInstance();
             ;
-            var osName = SystemProperties.getInstance().getName();
+            let osName = SystemProperties.getInstance().getName();
             ;
-            var operatingSystemInterface;
+            let operatingSystemInterface;
             ;
             if (osName.compareTo(operatingSystems.SOLARIS) == 0) {
                 operatingSystemInterface = new SolarisOS();
@@ -61,16 +61,18 @@ export class SolarisOperatingSystemFactory extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return operatingSystemInterface;
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().FACTORYERROR)) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().FACTORYERROR)) {
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NoOperatingSystem.NO_OPERATING_SYSTEM;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NoOperatingSystem.NO_OPERATING_SYSTEM;
         }
     }
 }

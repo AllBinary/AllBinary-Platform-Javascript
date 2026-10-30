@@ -13,14 +13,14 @@
 */
 /* Generated Code Do Not Modify */
 import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event/AllBinaryEventObject.js';
-//not GWT import - same folder const DemoGameMidletState
+//sameFolderImports - not GWT import - same folder const DemoGameMidletState
 export class DemoGameMidletEvent extends AllBinaryEventObject {
-    constructor(anyType = {}, demoGameMidletState) {
+    constructor(anyType, demoGameMidletState) {
         super(anyType);
         //For kotlin this is before the body of the constructor.
         this.demoGameMidletState = demoGameMidletState;
     }
-    init(anyType = {}) {
+    init(anyType) {
         this.setSource(anyType);
     }
     setDemoGameMidletState(demoGameMidletState) {

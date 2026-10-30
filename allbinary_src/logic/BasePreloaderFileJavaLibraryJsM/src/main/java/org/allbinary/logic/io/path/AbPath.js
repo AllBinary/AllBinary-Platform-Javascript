@@ -31,18 +31,20 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //not plain js - same folder import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 import { PathUtil } from './PathUtil.js';
-//not GWT import - same folder const PathUtil
+//sameFolderImports - not GWT import - same folder const PathUtil
 export class AbPath extends Object {
     static createAbPath() {
         try {
-            var EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
+            let EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return new AbPath(EMPTY_STRING, EMPTY_STRING);
-            //: 
         }
-        catch (ex) {
-            throw new RuntimeException();
+        catch (caught) {
+            {
+                const ex = caught;
+                throw new RuntimeException();
+            }
         }
     }
     constructor(aPath, name) {
@@ -56,7 +58,7 @@ export class AbPath extends Object {
         this.nameP = this.EMPTY_STRING;
         this.hasSchemaP = false;
         this.numberOfSeps = 0;
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (!stringValidationUtil.isEmpty(aPath)) {
             this.schema = this.getSchema(aPath);
@@ -76,7 +78,7 @@ export class AbPath extends Object {
         this.nameP = this.EMPTY_STRING;
     }
     getSchema(aPath) {
-        var beginIndex = aPath.indexOf(this.commonSeps.COLON);
+        let beginIndex = aPath.indexOf(this.commonSeps.COLON);
         ;
         if (beginIndex >= 0) {
             this.hasSchemaP = true;
@@ -94,15 +96,15 @@ export class AbPath extends Object {
     }
     //@Throws(Exception.constructor)
     getPathFromPath(aPath) {
-        var filePathData = FilePathData.getInstance();
+        let filePathData = FilePathData.getInstance();
         ;
-        var tempPath = aPath;
+        let tempPath = aPath;
         ;
         if (!this.hasSchema()) {
             tempPath = this.abPathUtil.adjustStart(tempPath);
         }
         else {
-            var beginIndex = tempPath.indexOf(this.commonSeps.COLON);
+            let beginIndex = tempPath.indexOf(this.commonSeps.COLON);
             ;
             if (beginIndex >= 0) {
                 beginIndex++;
@@ -127,7 +129,7 @@ export class AbPath extends Object {
         return this.nameP;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         if (this.hasSchema()) {
             stringBuffer.append(this.schema);
@@ -141,9 +143,9 @@ export class AbPath extends Object {
     }
     toFileSystemString() {
         if (this.hasSchema()) {
-            var filePathData = FilePathData.getInstance();
+            let filePathData = FilePathData.getInstance();
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(this.schema);
             stringBuffer.append(this.commonSeps.COLON);

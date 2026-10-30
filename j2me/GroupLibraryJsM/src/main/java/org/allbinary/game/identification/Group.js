@@ -17,9 +17,9 @@ import { Object } from '../../../../java/lang/Object.js';
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const GroupInterface
+//sameFolderImports - not GWT import - same folder const GroupInterface
 import { GroupCommonFactory } from './GroupCommonFactory.js';
-//not GWT import - same folder const GroupCommonFactory
+//sameFolderImports - not GWT import - same folder const GroupCommonFactory
 export class Group extends Object {
     constructor(teamName, teamId) {
         super();
@@ -34,9 +34,9 @@ export class Group extends Object {
     }
     setName(name) {
         this.name = name;
-        var groupCommonFactory = GroupCommonFactory.getInstance();
+        let groupCommonFactory = GroupCommonFactory.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(groupCommonFactory.GROUP_NAME_LABEL);
         stringBuffer.append(this.name);

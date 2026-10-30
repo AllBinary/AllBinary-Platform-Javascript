@@ -48,18 +48,18 @@ export class AboutPaintable extends Paintable {
         this.developersBeginWidth = new Array(this.developers.length);
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.charHeight = font.getHeight();
         this.aboutBeginWidth = (font.stringWidth(this.ABOUT) >> 1);
-        var infoSize = this.info.length;
+        let infoSize = this.info.length;
         ;
-        for (var index = 0; index < infoSize; index++) {
+        for (let index = 0; index < infoSize; index++) {
             this.infoBeginWidth[index] = (font.stringWidth(this.info[index]) >> 1);
         }
-        var size = this.developers.length;
+        let size = this.developers.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.developersBeginWidth[index] = (font.stringWidth(this.developers[index]) >> 1);
         }
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -70,17 +70,17 @@ export class AboutPaintable extends Paintable {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var halfWidth = this.displayInfoSingleton.getLastHalfWidth();
+        let halfWidth = this.displayInfoSingleton.getLastHalfWidth();
         ;
         graphics.drawString(this.ABOUT, halfWidth - this.aboutBeginWidth, 2 * this.charHeight, this.anchor);
-        var infoSize = this.info.length;
+        let infoSize = this.info.length;
         ;
-        for (var index = 0; index < infoSize; index++) {
+        for (let index = 0; index < infoSize; index++) {
             graphics.drawString(this.info[index], halfWidth - this.infoBeginWidth[index], (4 + index) * this.charHeight, this.anchor);
         }
-        var size = this.developers.length;
+        let size = this.developers.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             graphics.drawString(this.developers[index], halfWidth - this.developersBeginWidth[index], (5 + infoSize + index) * this.charHeight, this.anchor);
         }
     }

@@ -25,9 +25,9 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const Sound
+//sameFolderImports - not GWT import - same folder const Sound
 import { NoSound } from './NoSound.js';
-//not GWT import - same folder const NoSound
+//sameFolderImports - not GWT import - same folder const NoSound
 export class PlayerQueue extends Object {
     constructor(max) {
         super();
@@ -40,17 +40,19 @@ export class PlayerQueue extends Object {
             if (!this.list.contains(sound)) {
                 this.list.add(sound);
             }
-            //: 
         }
-        catch (e) {
-            PreLogUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.ADD);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.ADD);
+            }
         }
     }
     process() {
-        var sound = NoSound.getInstance();
+        let sound = NoSound.getInstance();
         ;
         try {
-            var played = false;
+            let played = false;
             ;
             if (this.list.size() > 0) {
                 sound = this.list.removeAt(0);
@@ -65,18 +67,20 @@ export class PlayerQueue extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return played;
-            //: 
         }
-        catch (e) {
-            var resource = StringUtil.getInstance().EMPTY_STRING;
-            ;
-            if (sound !=
-                null) {
-                resource = sound.getResource();
+        catch (caught) {
+            {
+                const e = caught;
+                let resource = StringUtil.getInstance().EMPTY_STRING;
+                ;
+                if (sound !=
+                    null) {
+                    resource = sound.getResource();
+                }
+                PreLogUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(resource).toString(), this, this.commonStrings.PROCESS);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            PreLogUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(resource).toString(), this, this.commonStrings.PROCESS);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     clear() {

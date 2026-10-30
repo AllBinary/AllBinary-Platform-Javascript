@@ -70,7 +70,7 @@ import { ErrorSound } from '../../../../org/allbinary/media/audio/ErrorSound.js'
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSPlayerGameInput } from './RTSPlayerGameInput.js';
-//not GWT import - same folder const SelectRTSLayerVisitorFactoryInterface
+//sameFolderImports - not GWT import - same folder const SelectRTSLayerVisitorFactoryInterface
 export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
     constructor(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface, touchButtonsBuilderFactory) {
         super(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface);
@@ -91,42 +91,42 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
         this.multiSelectPaintable = new MultiSelectPaintable();
         //For kotlin this is before the body of the constructor.
         this.touchButtonsBuilderFactory = touchButtonsBuilderFactory;
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
         this.notYoursGameNotificationEvent = new GameNotificationEvent(this, RTSGameStrings.getInstance().NOT_YOURS, SmallIntegerSingletonFactory.getInstance().getAt(2), basicColorFactory.PINK, BooleanFactory.getInstance().FALSE);
         BasicMotionGesturesHandler.getInstance().addListenerInterface(this);
     }
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
-        var geographicMapCompositeInterface = allBinaryGameLayerManager;
+        let geographicMapCompositeInterface = allBinaryGameLayerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
         this.notYoursGameNotificationEvent.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
     }
     //@Throws(Exception.constructor)
     processDraggingMotionInput(layerManager) {
-        var motionGestureEvent = this.getMotionGestureInputList().get(this.getMotionGestureInputList().size() - 1);
+        let motionGestureEvent = this.getMotionGestureInputList().get(this.getMotionGestureInputList().size() - 1);
         ;
-        var motionGestureInput = motionGestureEvent.getMotionGesture();
+        let motionGestureInput = motionGestureEvent.getMotionGesture();
         ;
-        var rtsFormInput = this.getSelectedRtsFormInput();
+        let rtsFormInput = this.getSelectedRtsFormInput();
         ;
         if (motionGestureInput == this.PRESSED) {
-            var point = motionGestureEvent.getCurrentPoint();
+            let point = motionGestureEvent.getCurrentPoint();
             ;
             if (this.getRtsPlayerLayerInterface().getCurrentScrollSelectionForm().isInForm(point)) {
                 this.isDragging = rtsFormInput.processSticky(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point);
             }
         }
         else if (motionGestureInput == this.RELEASED) {
-            var point = motionGestureEvent.getCurrentPoint();
+            let point = motionGestureEvent.getCurrentPoint();
             ;
             if (this.getRtsPlayerLayerInterface().getCurrentScrollSelectionForm().isInForm(point)) {
                 rtsFormInput.processAtPoint(this.getSelectedRtsLayer(), this.getRtsPlayerLayerInterface(), layerManager, point);
             }
             else if (rtsFormInput.isStickyItemSelected()) {
-                var previousRtsFormInput = rtsFormInput;
+                let previousRtsFormInput = rtsFormInput;
                 ;
                 this.select(motionGestureEvent);
                 this.getSelectedBuildingPlayerGameInput().selectAllPreselected();
@@ -146,15 +146,15 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
         return false;
     }
     makeSelection() {
-        var rtsLayerList = this.getRtsPlayerLayerInterface().getPlayerOwnedRTSLayers().rtsLayerList;
+        let rtsLayerList = this.getRtsPlayerLayerInterface().getPlayerOwnedRTSLayers().rtsLayerList;
         ;
-        var rectX1 = this.startPoint.getX();
+        let rectX1 = this.startPoint.getX();
         ;
-        var rectY1 = this.startPoint.getY();
+        let rectY1 = this.startPoint.getY();
         ;
-        var rectX2 = this.endPoint.getX();
+        let rectX2 = this.endPoint.getX();
         ;
-        var rectY2 = this.endPoint.getY();
+        let rectY2 = this.endPoint.getY();
         ;
         if (rectX1 > rectX2) {
             rectX2 = rectX1;
@@ -164,7 +164,7 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
             rectY2 = rectY1;
             rectY1 = this.endPoint.getY();
         }
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.AT);
         stringBuffer.appendint(rectX1);
@@ -175,12 +175,12 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
         stringBuffer.append(this.SPACE);
         stringBuffer.appendint(rectY2);
         this.logUtil.putF(stringBuffer.toString(), this, this.METHOD);
-        var rtsLayer;
+        let rtsLayer;
         ;
-        for (var index = rtsLayerList.size() - 1; index >= 0; index--) {
+        for (let index = rtsLayerList.size() - 1; index >= 0; index--) {
             rtsLayer = rtsLayerList.get(index);
             stringBuffer.delete(0, stringBuffer.length());
-            var viewPosition = rtsLayer.getViewPosition();
+            let viewPosition = rtsLayer.getViewPosition();
             ;
             stringBuffer.append(this.POSSIBLE);
             stringBuffer.append(rtsLayer.getName());
@@ -196,10 +196,10 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
                 this.getSelectedBuildingPlayerGameInput().addSelectedRTSLayer(rtsLayer);
             }
         }
-        var gameLayer = this.getSelectedBuildingPlayerGameInput().getLastSelectedRtsLayer();
+        let gameLayer = this.getSelectedBuildingPlayerGameInput().getLastSelectedRtsLayer();
         ;
         if (gameLayer != CollidableDestroyableDamageableLayer.getNullInstance()) {
-            var lastRTSLayer = gameLayer;
+            let lastRTSLayer = gameLayer;
             ;
             if (lastRTSLayer.getScrollSelectionForm() != ScrollSelectionForm.getNullScrollSelectionForm()) {
                 this.updateForm(lastRTSLayer.getScrollSelectionForm(), lastRTSLayer.getRTSFormInput());
@@ -210,12 +210,12 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
     }
     //@Throws(Exception.constructor)
     processSelectionBoxMotionInput(layerManager) {
-        for (var index = this.getMotionGestureInputList().size() - 1; index >= 0; index--) {
-            var motionGestureEvent = this.getMotionGestureInputList().get(index);
+        for (let index = this.getMotionGestureInputList().size() - 1; index >= 0; index--) {
+            let motionGestureEvent = this.getMotionGestureInputList().get(index);
             ;
-            var motionGestureInput = motionGestureEvent.getMotionGesture();
+            let motionGestureInput = motionGestureEvent.getMotionGesture();
             ;
-            var point = motionGestureEvent.getCurrentPoint();
+            let point = motionGestureEvent.getCurrentPoint();
             ;
             if (motionGestureInput == this.touchMotionGestureFactory.PRESSED) {
                 this.startPoint = point;
@@ -235,7 +235,7 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
     //@Throws(Exception.constructor)
     processMotionInput(layerManager) {
         if (this.getMotionGestureInputList().size() > 0) {
-            var endDrag = this.processDraggingMotionInput(layerManager);
+            let endDrag = this.processDraggingMotionInput(layerManager);
             ;
             if (!this.isDragging) {
                 this.processSelectionBoxMotionInput(layerManager);
@@ -247,14 +247,14 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
         this.getMotionGestureInputList().clear();
     }
     setSelectedRtsFormInput(selectedRtsFormInput) {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
         this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().START).append(StringUtil.getInstance().toString(selectedRtsFormInput)).toString(), this, "setSelectedRtsFormInput");
         super.setSelectedRtsFormInput(selectedRtsFormInput);
         this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.getNullInstance());
     }
     updateFormForLayer(rtsLayer) {
-        var scrollSelectionForm = rtsLayer.getScrollSelectionForm();
+        let scrollSelectionForm = rtsLayer.getScrollSelectionForm();
         ;
         if (scrollSelectionForm != ScrollSelectionForm.getNullScrollSelectionForm() && this.getRtsPlayerLayerInterface().getGroupInterface()[0] == rtsLayer.getGroupInterface()[0]) {
             this.updateForm(scrollSelectionForm, rtsLayer.getRTSFormInput());
@@ -279,11 +279,11 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var gameCanvas = this.getGameCanvas();
+        let gameCanvas = this.getGameCanvas();
         ;
         if (rtSLayer != CollidableDestroyableDamageableLayer.getNullInstance()) {
             this.getRtsPlayerLayerInterface().add(SelectBuildingSound.getInstance());
-            var rtsLayer = rtSLayer;
+            let rtsLayer = rtSLayer;
             ;
             rtsLayer.select();
             this.updateFormForLayer(rtsLayer);
@@ -296,7 +296,7 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
                 }
             }
             else {
-                var endLevelTouchButtonsBuilder = new EndLevelTouchButtonsBuilder();
+                let endLevelTouchButtonsBuilder = new EndLevelTouchButtonsBuilder();
                 ;
                 if (this.touchButtonsBuilderFactory !=
                     null) {
@@ -314,7 +314,7 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
                 gameCanvas.updateCurrentTouchInputFactory(new NoBuildingSelectedTouchButtonsBuilder());
             }
             else {
-                var endLevelNoBuildingSelectedTouchButtonsBuilder = new EndLevelNoBuildingSelectedTouchButtonsBuilder();
+                let endLevelNoBuildingSelectedTouchButtonsBuilder = new EndLevelNoBuildingSelectedTouchButtonsBuilder();
                 ;
                 if (this.touchButtonsBuilderFactory !=
                     null) {
@@ -328,19 +328,19 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
         this.updatePaintable();
     }
     updatePaintable() {
-        var list = this.getSelectedBuildingPlayerGameInput().getSelectedBasicArrayList();
+        let list = this.getSelectedBuildingPlayerGameInput().getSelectedBasicArrayList();
         ;
         if (list.size() > 1) {
-            var geographicMapCompositeInterface = this.getGameCanvas();
+            let geographicMapCompositeInterface = this.getGameCanvas();
             ;
-            var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+            let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
             ;
             this.multiSelectPaintable.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
             this.multiSelectPaintable.update(list);
             this.getRTSLayerInfoPaintable().updateRTSLayerInfoSelection(this.multiSelectPaintable);
         }
         else if (list.size() == 1) {
-            var rtsLayer = list.get(0);
+            let rtsLayer = list.get(0);
             ;
             this.getRTSLayerInfoPaintable().updateRTSLayerInfoSelection(rtsLayer.createHudPaintable());
         }
@@ -352,13 +352,13 @@ export class HumanRTSPlayerGameInput extends RTSPlayerGameInput {
         super.paint(graphics);
         if (this.startPoint != PointFactory.getInstance().ZERO_ZERO && this.endPoint != PointFactory.getInstance().ZERO_ZERO) {
             graphics.setColor(BasicColorFactory.getInstance().RED.intValue());
-            var rectX1 = this.startPoint.getX();
+            let rectX1 = this.startPoint.getX();
             ;
-            var rectY1 = this.startPoint.getY();
+            let rectY1 = this.startPoint.getY();
             ;
-            var rectX2 = this.endPoint.getX();
+            let rectX2 = this.endPoint.getX();
             ;
-            var rectY2 = this.endPoint.getY();
+            let rectY2 = this.endPoint.getY();
             ;
             if (rectX1 > rectX2) {
                 rectX2 = rectX1;

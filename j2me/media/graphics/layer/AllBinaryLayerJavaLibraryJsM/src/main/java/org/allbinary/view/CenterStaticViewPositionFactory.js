@@ -17,13 +17,13 @@ import { DisplayInfoSingleton } from '../../../org/allbinary/graphics/displayabl
 //not GWT import const DisplayInfoSingleton
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { StaticViewPosition } from './StaticViewPosition.js';
-//not GWT import - same folder const ViewPositionBase
+//sameFolderImports - not GWT import - same folder const ViewPositionBase
 export class CenterStaticViewPositionFactory extends Object {
     constructor() {
         super();
     }
     getInstance(z) {
-        var displayInfoSingleton = DisplayInfoSingleton.getInstance();
+        let displayInfoSingleton = DisplayInfoSingleton.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new StaticViewPosition((displayInfoSingleton.getLastWidth() >> 1), (displayInfoSingleton.getLastHeight() >> 1), z);

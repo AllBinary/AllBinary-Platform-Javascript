@@ -20,7 +20,7 @@ import { BasicColorFactory } from '../../../../../../org/allbinary/graphics/colo
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapCellTypeFactory } from './GeographicMapCellTypeFactory.js';
-//not GWT import - same folder const GeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPosition
 export class SimpleGeographicMap extends Object {
     constructor(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor) {
         super();
@@ -51,11 +51,11 @@ export class SimpleGeographicMap extends Object {
     }
     //@Throws(Exception.constructor)
     getCellTypeAt(cellPosition) {
-        var i_column = cellPosition.getColumn();
+        let i_column = cellPosition.getColumn();
         ;
-        var i_row = cellPosition.getRow();
+        let i_row = cellPosition.getRow();
         ;
-        var cellTypeId = this.tiledLayer.getCell(i_column, i_row);
+        let cellTypeId = this.tiledLayer.getCell(i_column, i_row);
         ;
         if (cellTypeId < 0) {
             cellTypeId = this.tiledLayer.getAnimatedTile(cellTypeId);

@@ -21,7 +21,7 @@ import { LockedUtil } from '../../../../org/allbinary/logic/system/security/lice
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const AdvertisementProcessorInterface
+//sameFolderImports - not GWT import - same folder const AdvertisementProcessorInterface
 export class Advertisements extends Object {
     constructor() {
         super(...arguments);
@@ -35,32 +35,32 @@ export class Advertisements extends Object {
         }
     }
     startRandomPage() {
-        var size = this.pageList.size();
+        let size = this.pageList.size();
         ;
         if (size > 0) {
-            var random = this.myRandomFactory.getAbsoluteNextInt(size);
+            let random = this.myRandomFactory.getAbsoluteNextInt(size);
             ;
-            var advertisementProcessorInterface = this.pageList.objectArray[random];
+            let advertisementProcessorInterface = this.pageList.objectArray[random];
             ;
             advertisementProcessorInterface.start();
         }
     }
     processRandomPage() {
         if (LockedUtil.getInstance().isLocked()) {
-            var size = this.pageList.size();
+            let size = this.pageList.size();
             ;
             if (size > 0) {
-                var random = this.myRandomFactory.getAbsoluteNextInt(size);
+                let random = this.myRandomFactory.getAbsoluteNextInt(size);
                 ;
-                var advertisementProcessorInterface = this.pageList.objectArray[random];
+                let advertisementProcessorInterface = this.pageList.objectArray[random];
                 ;
                 advertisementProcessorInterface.process();
             }
         }
     }
     stopAllPage() {
-        for (var index = this.pageList.size(); --index >= 0;) {
-            var advertisementProcessorInterface = this.pageList.objectArray[index];
+        for (let index = this.pageList.size(); --index >= 0;) {
+            let advertisementProcessorInterface = this.pageList.objectArray[index];
             ;
             advertisementProcessorInterface.stop();
         }
@@ -71,21 +71,21 @@ export class Advertisements extends Object {
         }
     }
     startAll() {
-        for (var index = this.bannerList.size(); --index >= 0;) {
-            var advertisementProcessorInterface = this.bannerList.objectArray[index];
+        for (let index = this.bannerList.size(); --index >= 0;) {
+            let advertisementProcessorInterface = this.bannerList.objectArray[index];
             ;
             advertisementProcessorInterface.start();
         }
     }
     stopAllBanner() {
-        for (var index = this.bannerList.size(); --index >= 0;) {
-            var advertisementProcessorInterface = this.bannerList.objectArray[index];
+        for (let index = this.bannerList.size(); --index >= 0;) {
+            let advertisementProcessorInterface = this.bannerList.objectArray[index];
             ;
             advertisementProcessorInterface.stop();
         }
     }
     getBanner(index) {
-        var advertisementProcessorInterface = this.bannerList.objectArray[index];
+        let advertisementProcessorInterface = this.bannerList.objectArray[index];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return advertisementProcessorInterface;

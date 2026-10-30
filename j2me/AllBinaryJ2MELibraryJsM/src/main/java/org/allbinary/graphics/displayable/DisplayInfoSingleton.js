@@ -49,7 +49,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseScalable } from './BaseScalable.js';
-//not GWT import - same folder const ScalableListener
+//sameFolderImports - not GWT import - same folder const ScalableListener
 export class DisplayInfoSingleton extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -95,9 +95,9 @@ export class DisplayInfoSingleton extends Object {
         this.FULL = "full";
         this.LAST = "last";
         this.LAST_HALF = "lastHalf";
-        var size = this.last.length;
+        let size = this.last.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.last[index] = 0;
             this.lastHalf[index] = 0;
             this.full[index] = 0;
@@ -134,16 +134,16 @@ export class DisplayInfoSingleton extends Object {
         }
     }
     setLastSizeForce(aLastWidth, aLastHeight, reason) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         this.logUtil.putF(stringMaker.append(CommonLabels.getInstance().START_LABEL).append(reason).toString(), this, this.SET_LAST_SIZE_METHOD_NAME);
-        var aFullWidth = aLastWidth;
+        let aFullWidth = aLastWidth;
         ;
-        var aFullHeight = aLastHeight;
+        let aFullHeight = aLastHeight;
         ;
         stringMaker.delete(0, stringMaker.length());
         this.logUtil.putF(stringMaker.append(this.FULL_WIDTH).appendint(aFullWidth).append(this.FULL_HEIGHT).appendint(aFullHeight).append(this.toString()).toString(), this, this.SET_LAST_SIZE_METHOD_NAME);
-        var operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
+        let operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
         ;
         if (operatingSystemInterface.isOverScan()) {
             aLastWidth = aLastWidth * operatingSystemInterface.getOverScanXPercent() / 100;
@@ -156,8 +156,8 @@ export class DisplayInfoSingleton extends Object {
                     this.ratio = aLastHeight / this.scaleLargestTo;
                     stringMaker.delete(0, stringMaker.length());
                     this.logUtil.putF(stringMaker.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT).appendfloat(this.displayRatio).toString(), this, this.SET_LAST_SIZE_METHOD_NAME);
-                    aLastWidth = Math.round((aLastWidth * this.displayRatio));
-                    aLastHeight = Math.round((aLastHeight * this.displayRatio));
+                    aLastWidth = globalThis.Math.trunc((aLastWidth * this.displayRatio));
+                    aLastHeight = globalThis.Math.trunc((aLastHeight * this.displayRatio));
                     this.scalableListener.scale(this.ratio);
                 }
                 else {
@@ -171,8 +171,8 @@ export class DisplayInfoSingleton extends Object {
                     this.ratio = aLastWidth / this.scaleLargestTo;
                     stringMaker.delete(0, stringMaker.length());
                     this.logUtil.putF(stringMaker.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE).appendfloat(this.displayRatio).toString(), this, this.SET_LAST_SIZE_METHOD_NAME);
-                    aLastWidth = Math.round((aLastWidth * this.displayRatio));
-                    aLastHeight = Math.round((aLastHeight * this.displayRatio));
+                    aLastWidth = globalThis.Math.trunc((aLastWidth * this.displayRatio));
+                    aLastHeight = globalThis.Math.trunc((aLastHeight * this.displayRatio));
                     this.scalableListener.scale(this.ratio);
                 }
                 else {
@@ -212,7 +212,7 @@ export class DisplayInfoSingleton extends Object {
         ;
     }
     add(reason) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         this.logUtil.putF(stringMaker.append(this.REASON).append(reason).toString(), this, this.FIRE_METHOD_NAME);
         stringMaker.delete(0, stringMaker.length());
@@ -225,47 +225,51 @@ export class DisplayInfoSingleton extends Object {
                 this.processForced();
             }
             this.list.clear();
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.FIRE_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.FIRE_METHOD_NAME, e);
+            }
         }
     }
     processForced() {
         try {
-            var swtJOGLProcessor = SWTJOGLProcessor.getInstance();
+            let swtJOGLProcessor = SWTJOGLProcessor.getInstance();
             ;
             swtJOGLProcessor.clear();
             DisplayChangeEventHandler.getInstance().fireEvent(this.displayChangeEvent);
             LastDisplayChangeEventHandler.getInstance().fireEvent(this.displayChangeEvent);
             swtJOGLProcessor.onSurfaceChanged();
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.FIRE_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this, this.FIRE_METHOD_NAME, e);
+            }
         }
     }
     update(displayable, reason) {
-        var aLastWidth = displayable.getWidth();
+        let aLastWidth = displayable.getWidth();
         ;
-        var aLastHeight = displayable.getHeight();
+        let aLastHeight = displayable.getHeight();
         ;
-        var aFullWidth = aLastWidth;
+        let aFullWidth = aLastWidth;
         ;
-        var aFullHeight = aLastHeight;
+        let aFullHeight = aLastHeight;
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         this.logUtil.putF(stringMaker.append(CommonLabels.getInstance().START_LABEL).append(reason).append(this.LAST_WIDTH).appendint(aLastWidth).append(this.LAST_HEIGHT).appendint(aLastHeight).append(this.commonSeps.SPACE).append(this.toString()).toString(), this, this.commonStrings.UPDATE);
         if (aLastWidth > 0 && aLastHeight > 0) {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
-            var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+            let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
             ;
             if (!features.isDefault(openGLFeatureFactory.OPENGL) || this.last[this.WIDTH] != aLastWidth || this.last[this.HEIGHT] != aLastHeight) {
                 stringMaker.delete(0, stringMaker.length());
                 this.logUtil.putF(stringMaker.append(this.UPDATE_FROM_ORIENTATION_CHANGE).toString(), this, this.commonStrings.UPDATE);
-                var operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
+                let operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
                 ;
                 if (operatingSystemInterface.isOverScan()) {
                     aLastWidth = aLastWidth * operatingSystemInterface.getOverScanXPercent() / 100;
@@ -278,8 +282,8 @@ export class DisplayInfoSingleton extends Object {
                             this.ratio = aLastHeight / this.scaleLargestTo;
                             stringMaker.delete(0, stringMaker.length());
                             this.logUtil.putF(stringMaker.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT).appendfloat(this.displayRatio).toString(), this, this.commonStrings.UPDATE);
-                            aLastWidth = Math.round((aLastWidth * this.displayRatio));
-                            aLastHeight = Math.round((aLastHeight * this.displayRatio));
+                            aLastWidth = globalThis.Math.trunc((aLastWidth * this.displayRatio));
+                            aLastHeight = globalThis.Math.trunc((aLastHeight * this.displayRatio));
                             this.scalableListener.scale(this.ratio);
                         }
                         else {
@@ -293,8 +297,8 @@ export class DisplayInfoSingleton extends Object {
                             this.ratio = aLastWidth / this.scaleLargestTo;
                             stringMaker.delete(0, stringMaker.length());
                             this.logUtil.putF(stringMaker.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE).appendfloat(this.displayRatio).toString(), this, this.commonStrings.UPDATE);
-                            aLastWidth = Math.round((aLastWidth * this.displayRatio));
-                            aLastHeight = Math.round((aLastHeight * this.displayRatio));
+                            aLastWidth = globalThis.Math.trunc((aLastWidth * this.displayRatio));
+                            aLastHeight = globalThis.Math.trunc((aLastHeight * this.displayRatio));
                             this.scalableListener.scale(this.ratio);
                         }
                         else {
@@ -321,7 +325,7 @@ export class DisplayInfoSingleton extends Object {
         }
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.toStringAppend(stringBuffer);
@@ -353,12 +357,7 @@ export class DisplayInfoSingleton extends Object {
         stringBuffer.append(this.commonLabels.HEIGHT_LABEL);
         stringBuffer.appendint(this.lastHalf[this.HEIGHT]);
         stringBuffer.append(this.commonSeps.SPACE);
-        stringBuffer.append(this.isPortrait()
-            ?
-                this.PORTRAIT
-            :
-                this.LANDSCAPE);
-        ;
+        stringBuffer.append((this.isPortrait() ? this.PORTRAIT : this.LANDSCAPE));
         //if statement needs to be on the same line and ternary does not work the same way.
         return stringBuffer.toString();
         ;

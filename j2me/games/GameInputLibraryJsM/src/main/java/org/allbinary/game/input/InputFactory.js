@@ -25,7 +25,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Input } from './Input.js';
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 export class InputFactory extends Object {
     static getInstance() {
         if (InputFactory.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -43,9 +43,9 @@ export class InputFactory extends Object {
         this.MAX = SmallIntegerSingletonFactory.getInstance().getMin();
         this.inputIntegerArray = new Array(this.MAX);
         this.NO_INPUT = new Input(0, this.commonStrings.UNKNOWN);
-        var size = this.inputIntegerArray.length;
+        let size = this.inputIntegerArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.inputIntegerArray[index] = this.NO_INPUT;
         }
     }

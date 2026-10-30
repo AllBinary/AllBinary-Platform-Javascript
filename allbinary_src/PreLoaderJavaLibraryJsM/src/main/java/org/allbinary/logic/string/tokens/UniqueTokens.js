@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+//import { NumberFormatException } from '../../../../../java/lang/NumberFormatException.js';
+const NumberFormatException = globalThis.java.lang.NumberFormatException;
 import { Integer } from '../../../../../java/lang/Integer.js';
 import { HashSet } from '../../../../../java/util/HashSet.js';
 //not GWT import const HashSet
@@ -30,7 +32,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Tokenizer } from './Tokenizer.js';
-//not GWT import - same folder const Tokenizer
+//sameFolderImports - not GWT import - same folder const Tokenizer
 export class UniqueTokens extends Object {
     constructor() {
         super();
@@ -63,33 +65,33 @@ export class UniqueTokens extends Object {
     //@Throws(Exception.constructor)
     getWhithoutDashesAndSkipNumberOnlyTokens(stringVector) {
         try {
-            var hashSet = new HashSet();
+            let hashSet = new HashSet();
             ;
-            var index = 0;
+            let index = 0;
             ;
-            var commonSeps = CommonSeps.getInstance();
+            let commonSeps = CommonSeps.getInstance();
             ;
             while (index < stringVector.size()) {
-                var keywords = stringVector.get(index);
+                let keywords = stringVector.get(index);
                 ;
-                var tokenizer = new Tokenizer(commonSeps.COMMA);
+                let tokenizer = new Tokenizer(commonSeps.COMMA);
                 ;
-                var keywordVector = tokenizer.getTokensFromString(keywords, new BasicArrayListD());
+                let keywordVector = tokenizer.getTokensFromString(keywords, new BasicArrayListD());
                 ;
-                for (var forIndex = 0; forIndex < keywordVector.size(); forIndex++) {
-                    var cleanString = keywordVector.get(forIndex);
+                for (let forIndex = 0; forIndex < keywordVector.size(); forIndex++) {
+                    let cleanString = keywordVector.get(forIndex);
                     ;
                     cleanString = cleanString.trim();
                     if (cleanString.indexOf('-') != -1)
                         cleanString = new Replace("-", commonSeps.SPACE).all(cleanString);
                     hashSet.add(cleanString);
                     if (cleanString.indexOf(' ') != -1) {
-                        var spaceTokenizer = new Tokenizer(commonSeps.SPACE);
+                        let spaceTokenizer = new Tokenizer(commonSeps.SPACE);
                         ;
-                        var subKeywordVector = spaceTokenizer.getTokensFromString(cleanString, new BasicArrayListD());
+                        let subKeywordVector = spaceTokenizer.getTokensFromString(cleanString, new BasicArrayListD());
                         ;
-                        for (var spaceIndex = 0; spaceIndex < subKeywordVector.size(); spaceIndex++) {
-                            var subCleanString = subKeywordVector.get(spaceIndex);
+                        for (let spaceIndex = 0; spaceIndex < subKeywordVector.size(); spaceIndex++) {
+                            let subCleanString = subKeywordVector.get(spaceIndex);
                             ;
                             if (!isSpecialCharacter(subCleanString) && !numberOnly(subCleanString)) {
                                 hashSet.add(subCleanString);
@@ -101,10 +103,12 @@ export class UniqueTokens extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return hashSet;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     numberOnly(subCleaningString) {
@@ -112,15 +116,20 @@ export class UniqueTokens extends Object {
             Integer.parseInt(subCleaningString);
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            if (caught instanceof NumberFormatException) {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
+            else {
+                throw caught;
+            }
         }
     }
     isSpecialCharacter(subCleaningString) {
-        for (var index = 0; index < this.specialCharacters.size(); index++) {
+        for (let index = 0; index < this.specialCharacters.size(); index++) {
             if (subCleaningString.compareTo(this.specialCharacters.get(index)) == 0)
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;

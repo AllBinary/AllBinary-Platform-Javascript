@@ -39,7 +39,7 @@ export class ResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStream(resource) {
-        var inputStream = resource..javaClass.getResourceAsStream(resource);
+        let inputStream = resource..javaClass.getResourceAsStream(resource);
         ;
         if (inputStream ==
             null) {
@@ -49,11 +49,11 @@ export class ResourceUtil extends Object {
                 inputStream = this.getResourceAsStreamAtStart(resource, 1);
                 if (inputStream ==
                     null) {
-                    var stringMaker = new StringMaker();
+                    let stringMaker = new StringMaker();
                     ;
-                    var index = resource.lastIndexOf('/');
+                    let index = resource.lastIndexOf('/');
                     ;
-                    var resourcePath = resource.substring(index + 1);
+                    let resourcePath = resource.substring(index + 1);
                     ;
                     inputStream = resource..javaClass.getResourceAsStream(resourcePath);
                     if (inputStream ==
@@ -62,7 +62,7 @@ export class ResourceUtil extends Object {
                         inputStream = resource..javaClass.getResourceAsStream(resourcePath);
                         if (inputStream ==
                             null) {
-                            var RES = "res";
+                            let RES = "res";
                             ;
                             resourcePath = stringMaker.append(RES).append(resource.substring(index)).toString();
                             inputStream = resource..javaClass.getResourceAsStream(resourcePath);
@@ -71,7 +71,7 @@ export class ResourceUtil extends Object {
                                 stringMaker.delete(0, stringMaker.length());
                                 resourcePath = stringMaker.append("/").append(RES).append(resource.substring(index)).toString();
                                 inputStream = resource..javaClass.getResourceAsStream(resourcePath);
-                                var COLON = CommonSeps.getInstance().COLON;
+                                let COLON = CommonSeps.getInstance().COLON;
                                 ;
                                 if (inputStream ==
                                     null) {
@@ -85,7 +85,7 @@ export class ResourceUtil extends Object {
                                         inputStream = resource..javaClass.getResourceAsStream(resourcePath);
                                         if (inputStream ==
                                             null) {
-                                            var RESOURCE_STRING = "resource";
+                                            let RESOURCE_STRING = "resource";
                                             ;
                                             stringMaker.delete(0, stringMaker.length());
                                             resourcePath = stringMaker.append(RESOURCE_STRING).append(COLON).append(resource.substring(index)).toString();
@@ -115,13 +115,13 @@ export class ResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStreamAtStart(resource, startIndex) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var index = resource.indexOf(CommonSeps.getInstance().COLON);
+        let index = resource.indexOf(CommonSeps.getInstance().COLON);
         ;
-        var resourcePath = resource.substring(index + startIndex);
+        let resourcePath = resource.substring(index + startIndex);
         ;
-        var inputStream = resource..javaClass.getResourceAsStream(resourcePath);
+        let inputStream = resource..javaClass.getResourceAsStream(resourcePath);
         ;
         if (inputStream !=
             null) {

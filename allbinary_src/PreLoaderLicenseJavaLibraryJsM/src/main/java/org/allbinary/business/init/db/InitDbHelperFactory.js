@@ -14,25 +14,32 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { AbeFactory } from '../../../../../org/allbinary/logic/system/loader/AbeFactory.js';
-//not GWT import - same folder const DatabaseConnectionInfoInterface
+//sameFolderImports - not GWT import - same folder const DatabaseConnectionInfoInterface
 export class InitDbHelperFactory extends Object {
+    static getInstance(...args) {
+        if (args.length === 2)
+            return this.getInstance$overload1(args[0], args[1]);
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
     //@Throws(LicensingException.constructor)
-    static getInstance(abeClientInformation, databaseConnectionInfoInterface) {
-        var params = new Array(1);
+    static getInstance$overload1(abeClientInformation, databaseConnectionInfoInterface) {
+        let params = new Array(1);
         ;
-        var classes = new Array(1);
+        let classes = new Array(1);
         ;
         classes[0] =
         ;
         params[0] = databaseConnectionInfoInterface;
-        var anyType = AbeFactory.getInstance().getInstance(abeClientInformation, CLASSNAME, classes, params);
+        let anyType = AbeFactory.getInstance().getInstance(abeClientInformation, CLASSNAME, classes, params);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return anyType;
     }
     //@Throws(LicensingException.constructor)
-    static getInstance(abeClientInformation) {
-        var anyType = AbeFactory.getInstance().getInstance(abeClientInformation, CLASSNAME, null, null);
+    static getInstance$overload2(abeClientInformation) {
+        let anyType = AbeFactory.getInstance().getInstance(abeClientInformation, CLASSNAME, null, null);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return anyType;

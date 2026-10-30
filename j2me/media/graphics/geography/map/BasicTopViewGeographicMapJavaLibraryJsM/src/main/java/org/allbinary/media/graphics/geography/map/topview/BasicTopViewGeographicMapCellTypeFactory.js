@@ -29,23 +29,23 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicTopViewGeographicMapCellType } from './BasicTopViewGeographicMapCellType.js';
-//not GWT import - same folder const BasicTopViewGeographicMapCellType
+//sameFolderImports - not GWT import - same folder const BasicTopViewGeographicMapCellType
 import { BasicTopViewGeographicMapStrings } from './BasicTopViewGeographicMapStrings.js';
-//not GWT import - same folder const BasicTopViewGeographicMapStrings
+//sameFolderImports - not GWT import - same folder const BasicTopViewGeographicMapStrings
 export class BasicTopViewGeographicMapCellTypeFactory extends GeographicMapCellTypeFactory {
     constructor(tileTypeToTileIdsMap, maxTileId) {
         super();
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(commonStrings.START, this, commonStrings.CONSTRUCTOR);
         this.maxTileId = maxTileId;
-        var basicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance();
+        let basicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance();
         ;
-        var geographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance();
+        let geographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance();
         ;
-        var geographicMapCellTypeArray = geographicMapCellTypeFactory.getGeographicMapCellTypeArray();
+        let geographicMapCellTypeArray = geographicMapCellTypeFactory.getGeographicMapCellTypeArray();
         ;
-        var type = 0;
+        let type = 0;
         ;
         if (geographicMapCellTypeArray[type] ==
             null) {
@@ -53,58 +53,58 @@ export class BasicTopViewGeographicMapCellTypeFactory extends GeographicMapCellT
         }
         else {
         }
-        var BLOCK_CELL_TYPE = BasicTopViewGeographicMapCellType.createType(basicTopViewGeographicMapStrings.DEFAULT, 1, 1);
+        let BLOCK_CELL_TYPE = BasicTopViewGeographicMapCellType.createType(basicTopViewGeographicMapStrings.DEFAULT, 1, 1);
         ;
-        var OFF_MAP_CELL_TYPE = BLOCK_CELL_TYPE;
+        let OFF_MAP_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var FLOOR_CELL_TYPE = BLOCK_CELL_TYPE;
+        let FLOOR_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var DOOR_CELL_TYPE = BLOCK_CELL_TYPE;
+        let DOOR_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var STAIRS_UP_CELL_TYPE = BLOCK_CELL_TYPE;
+        let STAIRS_UP_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var STAIRS_DOWN_CELL_TYPE = BLOCK_CELL_TYPE;
+        let STAIRS_DOWN_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var OTHER_CELL_TYPE = BLOCK_CELL_TYPE;
+        let OTHER_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var keyArray = HashtableUtil.getInstance().getKeysAsArray(tileTypeToTileIdsMap);
+        let keyArray = HashtableUtil.getInstance().getKeysAsArray(tileTypeToTileIdsMap);
         ;
-        var size = keyArray.length;
+        let size = keyArray.length;
         ;
-        var idsWithTypeList;
+        let idsWithTypeList;
         ;
-        var key;
+        let key;
         ;
-        var basicPlatormGeographicMapCellType;
+        let basicPlatormGeographicMapCellType;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             key = keyArray[index];
             idsWithTypeList = tileTypeToTileIdsMap.get(key);
-            if (key === basicTopViewGeographicMapStrings.WALL) {
+            if ((key === basicTopViewGeographicMapStrings.WALL)) {
                 basicPlatormGeographicMapCellType = new BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings.WALL, idsWithTypeList, 1000);
                 BLOCK_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            else if (key === basicTopViewGeographicMapStrings.OFF_MAP) {
+            else if ((key === basicTopViewGeographicMapStrings.OFF_MAP)) {
                 basicPlatormGeographicMapCellType = new BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings.OFF_MAP, idsWithTypeList, 1001);
                 OFF_MAP_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            else if (key === basicTopViewGeographicMapStrings.FLOOR) {
+            else if ((key === basicTopViewGeographicMapStrings.FLOOR)) {
                 basicPlatormGeographicMapCellType = new BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings.FLOOR, idsWithTypeList, 1);
                 FLOOR_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            else if (key === basicTopViewGeographicMapStrings.DOOR) {
+            else if ((key === basicTopViewGeographicMapStrings.DOOR)) {
                 basicPlatormGeographicMapCellType = new BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings.DOOR, idsWithTypeList, 1);
                 DOOR_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            else if (key === basicTopViewGeographicMapStrings.STAIRS_UP) {
+            else if ((key === basicTopViewGeographicMapStrings.STAIRS_UP)) {
                 basicPlatormGeographicMapCellType = new BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings.STAIRS_UP, idsWithTypeList, 1);
                 STAIRS_UP_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            else if (key === basicTopViewGeographicMapStrings.STAIRS_DOWN) {
+            else if ((key === basicTopViewGeographicMapStrings.STAIRS_DOWN)) {
                 basicPlatormGeographicMapCellType = new BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings.STAIRS_DOWN, idsWithTypeList, 1);
                 STAIRS_DOWN_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            else if (key === basicTopViewGeographicMapStrings.OTHER) {
+            else if ((key === basicTopViewGeographicMapStrings.OTHER)) {
                 basicPlatormGeographicMapCellType = new BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings.OTHER, idsWithTypeList, 1);
                 OTHER_CELL_TYPE = basicPlatormGeographicMapCellType;
             }

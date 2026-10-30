@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RemoteHighScoresProcessor } from './RemoteHighScoresProcessor.js';
-//not GWT import - same folder const RemoteHighScoresProcessorInterface
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresProcessorInterface
 export class RemoteHighScoresProcessorFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

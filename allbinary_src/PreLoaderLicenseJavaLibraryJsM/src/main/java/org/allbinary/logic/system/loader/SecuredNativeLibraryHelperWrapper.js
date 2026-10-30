@@ -16,7 +16,7 @@ import { AbKeys } from '../../../../../org/allbinary/logic/system/security/AbKey
 //not GWT import const LicensingException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NativeLibraryHelperWrapper } from './NativeLibraryHelperWrapper.js';
-//not GWT import - same folder const SecuredNativeLibraryInterface
+//sameFolderImports - not GWT import - same folder const SecuredNativeLibraryInterface
 export class SecuredNativeLibraryHelperWrapper extends NativeLibraryHelperWrapper {
     constructor(securedNativeLibraryInterface) {
         super(securedNativeLibraryInterface.getLibraryName());

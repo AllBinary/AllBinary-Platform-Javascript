@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const SpecialGameInputInterface
+//sameFolderImports - not GWT import - same folder const SpecialGameInputInterface
 export class SpecialGameInput extends Object {
     //@Throws(Exception.constructor)
     up() {

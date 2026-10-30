@@ -21,11 +21,11 @@ export class GeographicMapCellPosition extends CellPosition {
     constructor(column, row, columns, rows, width, height) {
         super(column, row, columns, rows);
         //For kotlin this is before the body of the constructor.
-        var x = this.getColumn() * width;
+        let x = this.getColumn() * width;
         ;
-        var y = this.getRow() * height;
+        let y = this.getRow() * height;
         ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
         this.point = pointFactory.createXY(x, y);
         this.midPoint = pointFactory.createXY(x + (width >> 1), y + (height >> 1));

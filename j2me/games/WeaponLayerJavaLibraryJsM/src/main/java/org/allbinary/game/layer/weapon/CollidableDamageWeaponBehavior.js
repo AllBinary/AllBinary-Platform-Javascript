@@ -49,7 +49,7 @@ export class CollidableDamageWeaponBehavior extends CollidableDestroyableDamagea
     }
     isCollisionInterface(ownerLayer, collidableInterfaceCompositeInterface) {
         if (this.collisionHelper.isCollidable(collidableInterfaceCompositeInterface)) {
-            var layerInterface = collidableInterfaceCompositeInterface;
+            let layerInterface = collidableInterfaceCompositeInterface;
             ;
             if (ownerLayer.getGroupInterface()[0] != layerInterface.getGroupInterface()[0]) {
                 if (this.layerCollisionUtil.isCollision(ownerLayer, layerInterface)) {

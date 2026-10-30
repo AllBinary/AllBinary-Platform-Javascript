@@ -34,9 +34,9 @@ export class PrimitiveLongSingleton extends Object {
     }
     //@Throws(Exception.constructor)
     getNumberFromChar(numberAsChar) {
-        var size = this.NUMBER_CHAR_ARRAY.length;
+        let size = this.NUMBER_CHAR_ARRAY.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (this.NUMBER_CHAR_ARRAY[index] == numberAsChar) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.NUMBER_ARRAY[index];

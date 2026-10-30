@@ -26,12 +26,12 @@ export class DistanceUtil extends Object {
         return DistanceUtil.instance;
     }
     getDistance(x1, y1, x2, y2) {
-        var dx = x1 - x2;
+        let dx = x1 - x2;
         ;
-        var dy = y1 - y2;
+        let dy = y1 - y2;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(this.mathUtil.sqrt((dx * dx) + (dy * dy)));
+        return globalThis.Math.trunc(this.mathUtil.sqrt((dx * dx) + (dy * dy)));
     }
 }
 DistanceUtil.instance = new DistanceUtil();

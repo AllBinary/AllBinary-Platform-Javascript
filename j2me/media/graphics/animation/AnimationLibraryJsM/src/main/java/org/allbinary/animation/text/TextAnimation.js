@@ -32,7 +32,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TextChangeListener } from './TextChangeListener.js';
-//not GWT import - same folder const TextChangeListener
+//sameFolderImports - not GWT import - same folder const TextChangeListener
 export class TextAnimation extends IndexedAnimation {
     constructor(text, animationBehavior) {
         super(animationBehavior);
@@ -47,17 +47,12 @@ export class TextAnimation extends IndexedAnimation {
         this.setText(text);
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
-        var adjustedFontHeight = Math.round(-(this.fontHeight * 2.00));
+        let adjustedFontHeight = globalThis.Math.trunc(-(this.fontHeight * 2.00));
         ;
-        this.offsetY = SWTJOGLProcessor.getInstance().isJOGL()
-            ?
-                adjustedFontHeight
-            :
-                0;
-        ;
+        this.offsetY = (SWTJOGLProcessor.getInstance().isJOGL() ? adjustedFontHeight : 0);
         this.textChangeListener.onMeasure();
         this.textChangeListener = TextChangeListener.getInstance();
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -71,9 +66,9 @@ export class TextAnimation extends IndexedAnimation {
     }
     paintXYNoUpdate(graphics, x, y) {
         this.basicSetColorUtil.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor());
-        var size = this.textArrayP.length;
+        let size = this.textArrayP.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             graphics.drawString(this.textArrayP[index], x, y + this.offsetY + (index * this.fontHeight), this.anchor);
         }
     }
@@ -82,16 +77,16 @@ export class TextAnimation extends IndexedAnimation {
         this.textChangeListener = textChangeListener;
     }
     setText(text) {
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
         if (text !=
             null
             && text.length > 0) {
-            var index = 0;
+            let index = 0;
             ;
-            var startIndex = 0;
+            let startIndex = 0;
             ;
-            var endIndex = 0;
+            let endIndex = 0;
             ;
             while (index >= 0) {
                 startIndex = index;
@@ -108,11 +103,11 @@ export class TextAnimation extends IndexedAnimation {
             }
         }
         if (list.size() > 0) {
-            var textArray = new Array(list.size());
+            let textArray = new Array(list.size());
             ;
-            var size = list.size();
+            let size = list.size();
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 textArray[index] = list.get(index);
             }
             this.textArrayP = textArray;

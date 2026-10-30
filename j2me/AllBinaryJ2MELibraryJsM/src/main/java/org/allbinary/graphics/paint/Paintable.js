@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const PaintableInterface
+//sameFolderImports - not GWT import - same folder const PaintableInterface
 export class Paintable extends Object {
     setBasicColorP(basicColor) {
     }

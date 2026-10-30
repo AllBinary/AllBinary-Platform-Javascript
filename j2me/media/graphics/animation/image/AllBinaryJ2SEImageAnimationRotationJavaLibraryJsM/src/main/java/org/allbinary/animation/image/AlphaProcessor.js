@@ -14,7 +14,7 @@
 //not GWT import const ImageModifierUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ModifierBaseProcessor } from './ModifierBaseProcessor.js';
-//not GWT import - same folder const ModifierBaseProcessor
+//sameFolderImports - not GWT import - same folder const ModifierBaseProcessor
 export class AlphaProcessor extends ModifierBaseProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

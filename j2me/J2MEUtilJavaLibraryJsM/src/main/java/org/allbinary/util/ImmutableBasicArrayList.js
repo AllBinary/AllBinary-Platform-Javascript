@@ -23,12 +23,12 @@ export class ImmutableBasicArrayList extends BasicArrayListS {
         //For kotlin this is before the body of the constructor.
         this.name = name;
     }
-    add(e = {}) {
+    add(e) {
         ForcedLogUtil.log(this.name, this);
         //if statement needs to be on the same line and ternary does not work the same way.
         return true;
     }
-    addAt(index, element = {}) {
+    addAt(index, element) {
         ForcedLogUtil.log(this.name, this);
     }
     toString() {

@@ -31,7 +31,7 @@ const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 const CoreImage = globalThis.playn.core.CoreImage;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCompleteUtil } from './ImageCompleteUtil.js';
-//not GWT import - same folder const ImageCompleteUtil
+//sameFolderImports - not GWT import - same folder const ImageCompleteUtil
 export class ImageWaitCompleteUtil extends ImageCompleteUtil {
     constructor() {
         super();
@@ -52,9 +52,9 @@ export class ImageWaitCompleteUtil extends ImageCompleteUtil {
     }
     //@Throws(Exception.constructor)
     waitForATime(image, name, timeDelayHelper) {
-        var playnImage = image;
+        let playnImage = image;
         ;
-        var playnCoreImage = playnImage.getImage();
+        let playnCoreImage = playnImage.getImage();
         ;
         while (!playnCoreImage.isReady() || playnCoreImage.width() + playnCoreImage.height() <= 0) {
             if (timeDelayHelper.isTimeTNT()) {
@@ -68,14 +68,14 @@ export class ImageWaitCompleteUtil extends ImageCompleteUtil {
     //@Throws(Exception.constructor)
     waitForAll() {
         this.allTimeDelayHelper.setStartTimeTNT();
-        var hashtable = GameFeatureImageCacheFactory.getInstance().getHashtableP();
+        let hashtable = GameFeatureImageCacheFactory.getInstance().getHashtableP();
         ;
-        var objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
+        let objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
         ;
-        var size = objectArray.length;
+        let size = objectArray.length;
         ;
         PreLogUtil.put("Image Total: " + size, this, "waitForAll");
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.waitForATime(hashtable.get(objectArray[index]), objectArray[index], this.allTimeDelayHelper);
         }
     }

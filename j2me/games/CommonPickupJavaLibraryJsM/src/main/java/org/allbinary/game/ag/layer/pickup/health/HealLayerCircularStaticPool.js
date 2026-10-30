@@ -13,7 +13,7 @@
 */
 //not GWT import const AllBinaryLayer
 import { AllBinaryLayerCircularPool } from '../../../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
-//not GWT import - same folder const HealLayer
+//sameFolderImports - not GWT import - same folder const HealLayer
 export class HealLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     constructor(allbinaryLayerFactoryInterface, total) {
         super();
@@ -21,11 +21,11 @@ export class HealLayerCircularStaticPool extends AllBinaryLayerCircularPool {
     }
     //@Throws(Exception.constructor)
     visit(sourceLayerInterface) {
-        var healLayer = this.getNextInstance();
+        let healLayer = this.getNextInstance();
         ;
-        var healthInterfaceCompositeInterface = sourceLayerInterface;
+        let healthInterfaceCompositeInterface = sourceLayerInterface;
         ;
-        var healthInterface = healthInterfaceCompositeInterface.getHealthInterface();
+        let healthInterface = healthInterfaceCompositeInterface.getHealthInterface();
         ;
         healLayer.visit(healthInterface);
     }

@@ -18,9 +18,9 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PrimitiveArrayToString extends Object {
     static toString(floats) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        for (var index = 0; index < floats.length; index++) {
+        for (let index = 0; index < floats.length; index++) {
             stringBuffer.appendfloat(floats[index]);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

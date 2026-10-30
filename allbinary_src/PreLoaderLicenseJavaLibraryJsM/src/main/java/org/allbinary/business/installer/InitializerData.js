@@ -66,7 +66,7 @@ export class InitializerData extends Object {
         return InitializerData.instance;
     }
     getJdbcDriverSolutionInfo() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("The following describes the possible problems and solutions regarding the Jdbc Driver error(s):<p/>");
         stringBuffer.append("1. A JDBC driver you specified is not in your classpath.<br/>");

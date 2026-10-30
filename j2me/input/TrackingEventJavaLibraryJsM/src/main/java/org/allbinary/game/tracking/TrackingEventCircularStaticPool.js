@@ -18,7 +18,7 @@ import { AllBinaryEventCircularPool } from '../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventCircularPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackingEventFactory } from './TrackingEventFactory.js';
-//not GWT import - same folder const TrackingEvent
+//sameFolderImports - not GWT import - same folder const TrackingEvent
 export class TrackingEventCircularStaticPool extends Object {
     constructor() {
         super(...arguments);
@@ -34,7 +34,7 @@ export class TrackingEventCircularStaticPool extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getNextInstance(layerInterface) {
-        var trackingEvent = this.EVENT_POOL.getNextInstance();
+        let trackingEvent = this.EVENT_POOL.getNextInstance();
         ;
         trackingEvent.setLayerInterfaceForCircularStaticPool(layerInterface);
         //if statement needs to be on the same line and ternary does not work the same way.

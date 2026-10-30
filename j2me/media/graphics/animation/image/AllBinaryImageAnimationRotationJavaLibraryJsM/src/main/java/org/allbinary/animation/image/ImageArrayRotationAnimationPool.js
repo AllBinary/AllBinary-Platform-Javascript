@@ -15,7 +15,7 @@ import { BasicArrayListResetablePool } from '../../../../org/allbinary/logic/uti
 //not GWT import const PoolInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageArrayRotationAnimationCacheableInterfaceFactory } from './ImageArrayRotationAnimationCacheableInterfaceFactory.js';
-//not GWT import - same folder const ImageArrayRotationAnimationCacheable
+//sameFolderImports - not GWT import - same folder const ImageArrayRotationAnimationCacheable
 export class ImageArrayRotationAnimationPool extends BasicArrayListResetablePool {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -26,12 +26,12 @@ export class ImageArrayRotationAnimationPool extends BasicArrayListResetablePool
         //For kotlin this is before the body of the constructor.
     }
     //@Throws(Exception.constructor)
-    remove(key = {}) {
-        var cacheableInterface = super.remove(key);
+    remove(key) {
+        let cacheableInterface = super.remove(key);
         ;
-        var allBinaryImageRotationAnimationInfo = key;
+        let allBinaryImageRotationAnimationInfo = key;
         ;
-        var imageArrayRotationAnimationCacheable = cacheableInterface;
+        let imageArrayRotationAnimationCacheable = cacheableInterface;
         ;
         imageArrayRotationAnimationCacheable.setImageArray(allBinaryImageRotationAnimationInfo.getImageArray());
         //if statement needs to be on the same line and ternary does not work the same way.

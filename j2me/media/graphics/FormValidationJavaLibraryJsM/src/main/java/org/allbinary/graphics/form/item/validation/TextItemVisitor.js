@@ -21,8 +21,8 @@ export class TextItemVisitor extends Visitor {
     constructor() {
         super();
     }
-    visit(anyType = {}) {
-        var value = anyType;
+    visit(anyType) {
+        let value = anyType;
         ;
         if (value.length < 2) {
             //if statement needs to be on the same line and ternary does not work the same way.

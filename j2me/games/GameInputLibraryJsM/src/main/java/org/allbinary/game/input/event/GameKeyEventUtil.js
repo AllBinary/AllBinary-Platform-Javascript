@@ -13,10 +13,10 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const GameKeyEvent
+//sameFolderImports - not GWT import - same folder const GameKeyEvent
 export class GameKeyEventUtil extends Object {
-    static getKey(anyType = {}) {
-        var gameKeyEvent = anyType;
+    static getKey(anyType) {
+        let gameKeyEvent = anyType;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return gameKeyEvent.getKey();

@@ -36,15 +36,15 @@ export class BasicGraphicsPipeline extends Object {
     }
     //@Throws(Exception.constructor)
     translate(x, y) {
-        var newBasicArrayList = new BasicArrayListD();
+        let newBasicArrayList = new BasicArrayListD();
         ;
-        var size = this.pointBasicArrayList.size();
+        let size = this.pointBasicArrayList.size();
         ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var secondPoint;
+        let secondPoint;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             secondPoint = this.pointBasicArrayList.objectArray[index];
             if (secondPoint.getX() != 1000) {
                 newBasicArrayList.add(pointFactory.createXY(secondPoint.getX() + x, secondPoint.getY() + y));
@@ -57,31 +57,31 @@ export class BasicGraphicsPipeline extends Object {
     }
     //@Throws(Exception.constructor)
     rotateToAngle(angle) {
-        this.rotate(Math.round(angle.getValue()));
+        this.rotate(globalThis.Math.trunc(angle.getValue()));
     }
     //@Throws(Exception.constructor)
     rotate(angle) {
-        var newBasicArrayList = new BasicArrayListD();
+        let newBasicArrayList = new BasicArrayListD();
         ;
-        var secondPoint;
+        let secondPoint;
         ;
-        var y = 0;
+        let y = 0;
         ;
-        var secondX = 0;
+        let secondX = 0;
         ;
-        var secondY = 0;
+        let secondY = 0;
         ;
-        var point;
+        let point;
         ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var size = this.pointBasicArrayList.size();
+        let size = this.pointBasicArrayList.size();
         ;
-        var sin = 0;
+        let sin = 0;
         ;
-        var cos = 0;
+        let cos = 0;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             secondPoint = this.pointBasicArrayList.objectArray[index];
             if (secondPoint.getX() != 1000) {
                 sin = this.noDecimalTrigTable.sin(angle);
@@ -89,7 +89,7 @@ export class BasicGraphicsPipeline extends Object {
                 y = secondPoint.getY() * sin;
                 secondX = (secondPoint.getX() * cos) - y;
                 secondY = (secondPoint.getX() * sin) + (secondPoint.getY() * cos);
-                point = pointFactory.createXY(Math.round(secondX) / 10000, Math.round(secondY) / 10000);
+                point = pointFactory.createXY(globalThis.Math.trunc(globalThis.Math.trunc(secondX) / 10000), globalThis.Math.trunc(globalThis.Math.trunc(secondY) / 10000));
                 newBasicArrayList.add(point);
             }
             else {
@@ -100,21 +100,21 @@ export class BasicGraphicsPipeline extends Object {
     }
     //@Throws(Exception.constructor)
     mirror(width) {
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var halfWidth = (width >> 1);
+        let halfWidth = (width >> 1);
         ;
-        var newBasicArrayList = new BasicArrayListD();
+        let newBasicArrayList = new BasicArrayListD();
         ;
-        var secondPoint;
+        let secondPoint;
         ;
-        var newX = 0;
+        let newX = 0;
         ;
-        var point;
+        let point;
         ;
-        var size = this.pointBasicArrayList.size();
+        let size = this.pointBasicArrayList.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             secondPoint = this.pointBasicArrayList.objectArray[index];
             if (secondPoint.getX() != 1000) {
                 newX = 0;

@@ -30,7 +30,7 @@ const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSLayerLogHelper } from './RTSLayerLogHelper.js';
-//not GWT import - same folder const PathFindingLayerInterface
+//sameFolderImports - not GWT import - same folder const PathFindingLayerInterface
 export class RTSLayerSelectedLogHelper extends RTSLayerLogHelper {
     constructor() {
         super(...arguments);
@@ -44,7 +44,7 @@ export class RTSLayerSelectedLogHelper extends RTSLayerLogHelper {
         return RTSLayerSelectedLogHelper.instanceC;
     }
     setClosestGeographicMapCellHistory(associatedAdvancedRTSGameLayer, pathsList) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -55,7 +55,7 @@ export class RTSLayerSelectedLogHelper extends RTSLayerLogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: setClosestGeographicMapCellHistory");
     }
     trackTo(associatedAdvancedRTSGameLayer, nextUnvisitedPathGeographicMapCellPosition, dx, dy, reason) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -70,7 +70,7 @@ export class RTSLayerSelectedLogHelper extends RTSLayerLogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: trackTo");
     }
     turnTo(associatedAdvancedRTSGameLayer, dx, dy, angleInfo, angle, movementAngle, evading, targetAngle) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" steering - ");
@@ -87,7 +87,7 @@ export class RTSLayerSelectedLogHelper extends RTSLayerLogHelper {
         stringBuffer.appendshort(movementAngle.getValue());
         if (angleInfo !=
             null) {
-            var angleIncrement = angleInfo.getAngleIncrementInfo().getAngleIncrement();
+            let angleIncrement = angleInfo.getAngleIncrementInfo().getAngleIncrement();
             ;
             stringBuffer.append(" angleIncrement: ");
             stringBuffer.appendshort(angleIncrement);
@@ -133,7 +133,7 @@ export class RTSLayerSelectedLogHelper extends RTSLayerLogHelper {
         this.logUtil.putF(new StringMaker().append(associatedAdvancedRTSGameLayer.getName()).append(" steering - Do not rotate").toString(), this, this.TRACKTO_TURNTO);
     }
     notOnPath(associatedAdvancedRTSGameLayer, geographicMapCellHistory, currentGeographicMapCellPosition, pathList) {
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         this.logUtil.putF(new StringMaker().append(associatedAdvancedRTSGameLayer.getName()).append(CommonSeps.getInstance().SPACE).appendint(geographicMapCellHistory.getTotalVisited()).append(CommonSeps.getInstance().SPACE).append(stringUtil.toString(currentGeographicMapCellPosition)).append(" - trying to move but not on path: ").append(stringUtil.toString(pathList)).toString(), this, "turnTo");
     }

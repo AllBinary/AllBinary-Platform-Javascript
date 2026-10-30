@@ -19,7 +19,8 @@ import { OutputStream } from '../../../../../java/io/OutputStream.js';
 //not GWT import const OutputStream
 import { Reader } from '../../../../../java/io/Reader.js';
 //not GWT import const Reader
-import { Writer } from '../../../../../java/io/Writer.js';
+//not plain js import { Writer } 
+const Writer = globalThis.java.io.Writer;
 //not GWT import const CharBuffer
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
@@ -142,57 +143,55 @@ export class SimpleFileUtil extends Object {
         ;
     }
     loadFileAsListReturnLine(inputStream, max, byteArray1, includeReturnLine) {
-        var stringList = new BasicArrayListD();
+        let stringList = new BasicArrayListD();
         ;
         if (inputStream ==
             null) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return stringList;
         }
-        var byteArray = this.nullUtil.NULL_BYTE_ARRAY;
+        let byteArray = this.nullUtil.NULL_BYTE_ARRAY;
         ;
         try {
-            var outputStream2 = new ByteArrayOutputStream(max);
+            let outputStream2 = new ByteArrayOutputStream(max);
             ;
             byteArray = this.streamUtil.getByteArray(inputStream, outputStream2, byteArray1);
             this.streamUtil.close(inputStream);
-            //: 
         }
-        catch (e) {
-            this.streamUtil.close(inputStream);
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.ADD, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.streamUtil.close(inputStream);
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.ADD, e);
+            }
         }
         if (byteArray ==
             null) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return stringList;
         }
-        var size = byteArray.length;
+        let size = byteArray.length;
         ;
-        var index = 0;
+        let index = 0;
         ;
-        var startIndex = 0;
+        let startIndex = 0;
         ;
-        var returnLine = 0;
+        let returnLine = 0;
         ;
         while (index < size) {
             startIndex = index;
-            while (index < size - 1 && byteArray[index] != .code)
-                '\n'.code;
-            {
+            while (index < size - 1 && byteArray[index] != (('\n'.charCodeAt(0)) << 24 >> 24)) {
                 index++;
             }
             if (includeReturnLine == 0) {
-                if (index > 0 && byteArray[index - 1] == .code)
-                    '\r'.code;
-                {
+                if (index > 0 && byteArray[index - 1] == (('\r'.charCodeAt(0)) << 24 >> 24)) {
                     returnLine = 1;
                 }
-                {
+                else {
                     returnLine = 0;
                 }
             }
-            var s = String.fromCharCode(...byteArray);
+            let s = ((data, offset, count) => data.slice(offset, offset + count).map(value => typeof value === 'number' ? String.fromCharCode(value & 255) : value).join(''))(byteArray, startIndex, (index + includeReturnLine - returnLine - startIndex));
             ;
             stringList.add(s);
             index++;
@@ -201,11 +200,11 @@ export class SimpleFileUtil extends Object {
         return stringList;
     }
     createStringFromArrayOfStrings(stringArray) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var size = stringArray.length;
+        let size = stringArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             stringMaker.append(stringArray[index]);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

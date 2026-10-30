@@ -18,9 +18,9 @@ import { BasicColorFactory } from '../../../org/allbinary/graphics/color/BasicCo
 //not GWT import const BasicColorFactory
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const AnimationBehaviorFactory
+//sameFolderImports - not GWT import - same folder const AnimationBehaviorFactory
 import { VectorRotationAnimation } from './VectorRotationAnimation.js';
-//not GWT import - same folder const Animation
+//sameFolderImports - not GWT import - same folder const Animation
 export class VectorRotationAnimationInterfaceFactory extends Object {
     constructor(currentPoints, basicColor, animationBehaviorFactory) {
         super();

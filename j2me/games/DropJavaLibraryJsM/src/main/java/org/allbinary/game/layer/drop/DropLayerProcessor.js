@@ -16,7 +16,7 @@ import { BasicLayerProcessor } from '../../../../../org/allbinary/layer/BasicLay
 //not GWT import const BasicLayerProcessor
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const DropLayerInterface
+//sameFolderImports - not GWT import - same folder const DropLayerInterface
 export class DropLayerProcessor extends BasicLayerProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -27,15 +27,15 @@ export class DropLayerProcessor extends BasicLayerProcessor {
     }
     //@Throws(Exception.constructor)
     process(allBinaryLayerManager) {
-        var list = this.getList();
+        let list = this.getList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var layerInterface;
+        let layerInterface;
         ;
-        var dropLayerInterface;
+        let dropLayerInterface;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             layerInterface = list.objectArray[index];
             dropLayerInterface = layerInterface;
             layerInterface = dropLayerInterface.getDroppedLayer();

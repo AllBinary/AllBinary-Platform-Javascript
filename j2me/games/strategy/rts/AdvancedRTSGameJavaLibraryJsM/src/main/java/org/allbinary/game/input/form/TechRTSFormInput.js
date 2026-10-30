@@ -37,41 +37,41 @@ import { ErrorSound } from '../../../../../org/allbinary/media/audio/ErrorSound.
 //not GWT import const GeographicMapCompositeInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import - same folder const RTSFormInput
+//sameFolderImports - not GWT import - same folder const RTSFormInput
 export class TechRTSFormInput extends RTSFormInput {
     constructor(groupInterface) {
         super(groupInterface);
         this.EVENT = new AllBinaryEventObject(this);
         //For kotlin this is before the body of the constructor.
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
         this.noMoneyGameNotificationEvent = new GameNotificationEvent(this, RTSGameStrings.getInstance().NO_MONEY, SmallIntegerSingletonFactory.getInstance().getAt(2), basicColorFactory.WHITE, BooleanFactory.getInstance().FALSE);
     }
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
         super.setAllBinaryGameLayerManager(allBinaryGameLayerManager);
-        var geographicMapCompositeInterface = allBinaryGameLayerManager;
+        let geographicMapCompositeInterface = allBinaryGameLayerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
         this.noMoneyGameNotificationEvent.setBasicColorP(geographicMapInterface.getForegroundBasicColor());
     }
     //@Throws(Exception.constructor)
     processGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, itemIndex) {
         super.process(layerManager);
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var technologyRTSInterfaceImageItem = item;
+        let technologyRTSInterfaceImageItem = item;
         ;
-        var rtsInterface = technologyRTSInterfaceImageItem.getRtsInterface();
+        let rtsInterface = technologyRTSInterfaceImageItem.getRtsInterface();
         ;
         this.logUtil.putF(stringMaker.append("isUpgradeable: ").appendboolean(rtsInterface.isUpgradeable()).toString(), this, commonStrings.PROCESS);
         if (rtsInterface.isUpgradeable()) {
-            var cost = rtsInterface.getUpgradeCost();
+            let cost = rtsInterface.getUpgradeCost();
             ;
-            var capital = rtsPlayerLayerInterface.getCapital();
+            let capital = rtsPlayerLayerInterface.getCapital();
             ;
             stringMaker.delete(0, stringMaker.length());
             this.logUtil.putF(stringMaker.appendint(cost).append("<=").appendint(capital.getTotalMoney()).toString(), this, commonStrings.PROCESS);

@@ -16,7 +16,7 @@ import { LayerProcessor } from '../../../../org/allbinary/layer/LayerProcessor.j
 //not GWT import const LayerProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInputLayerManager } from './GameInputLayerManager.js';
-//not GWT import - same folder const GameInputInterface
+//sameFolderImports - not GWT import - same folder const GameInputInterface
 export class GameInputLayerProcessor extends LayerProcessor {
     constructor() {
         super(new GameInputLayerManager());
@@ -24,7 +24,7 @@ export class GameInputLayerProcessor extends LayerProcessor {
     }
     //@Throws(Exception.constructor)
     processAt(allBinaryLayerManager, layerInterface, index) {
-        var gameInputInterface = layerInterface;
+        let gameInputInterface = layerInterface;
         ;
         gameInputInterface.processInput(allBinaryLayerManager);
     }

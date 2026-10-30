@@ -34,11 +34,11 @@ export class GameLevelDisplayChangeEventListenersFactory extends Object {
         DisplayChangeEventHandler.getInstance().addListenerInterface(displayChangeEventListener);
     }
     clear() {
-        var displayChangeEventHandler = DisplayChangeEventHandler.getInstance();
+        let displayChangeEventHandler = DisplayChangeEventHandler.getInstance();
         ;
-        var displayChangeEventListener;
+        let displayChangeEventListener;
         ;
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             displayChangeEventListener = this.list.objectArray[index];
             displayChangeEventHandler.removeListener(displayChangeEventListener);
         }

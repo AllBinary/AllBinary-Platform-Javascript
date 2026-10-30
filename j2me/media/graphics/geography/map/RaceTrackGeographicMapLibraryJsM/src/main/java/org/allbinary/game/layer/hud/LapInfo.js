@@ -42,7 +42,7 @@ export class LapInfo extends Object {
         return false;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("isDone: ");
         stringBuffer.appendboolean(this.isDone());

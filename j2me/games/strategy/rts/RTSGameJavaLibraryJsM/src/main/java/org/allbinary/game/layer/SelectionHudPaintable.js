@@ -39,7 +39,7 @@ export class SelectionHudPaintable extends InitUpdatePaintable {
         super();
         this.y = CommonButtons.getInstance().STANDARD_BUTTON_SIZE + 17;
         this.updateMyFontProcessor = new UpdateMyFontProcessor(this);
-        this.myFontProcessor = updateMyFontProcessor;
+        this.myFontProcessor = this.updateMyFontProcessor;
         this.x = 0;
         this.textX = 0;
         this.imageX = 0;
@@ -54,19 +54,19 @@ export class SelectionHudPaintable extends InitUpdatePaintable {
         this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(10000);
     }
     updateMeasurement(graphics) {
-        var commonButtons = CommonButtons.getInstance();
+        let commonButtons = CommonButtons.getInstance();
         ;
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.setHeight(commonButtons.STANDARD_BUTTON_SIZE + font.getHeight());
         this.myFontProcessor = MyFontProcessor.getInstance();
     }
     update() {
-        var commonButtons = CommonButtons.getInstance();
+        let commonButtons = CommonButtons.getInstance();
         ;
-        var touchButtonLocationHelper = new TouchButtonLocationHelper();
+        let touchButtonLocationHelper = new TouchButtonLocationHelper();
         ;
-        var displayInfoSingleton = DisplayInfoSingleton.getInstance();
+        let displayInfoSingleton = DisplayInfoSingleton.getInstance();
         ;
         this.x = commonButtons.STANDARD_BUTTON_SIZE + touchButtonLocationHelper.getColumnsRemainderHalf();
         this.textX = this.getX() + 4;

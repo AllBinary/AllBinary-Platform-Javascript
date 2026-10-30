@@ -25,22 +25,22 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbeClientInformation } from './AbeClientInformation.js';
-//not GWT import - same folder const AbeClientInformation
+//sameFolderImports - not GWT import - same folder const AbeClientInformation
 import { PartnerIdentifierFileUtil } from './PartnerIdentifierFileUtil.js';
-//not GWT import - same folder const PartnerIdentifierFileUtil
+//sameFolderImports - not GWT import - same folder const PartnerIdentifierFileUtil
 export class MobileClientInformation extends AbeClientInformation {
     constructor(name, version, specialName, shortName) {
         super(name, version, new StringMaker().append(specialName).append(CommonSeps.getInstance().SPACE).append(PartnerIdentifierFileUtil.getInstance().get()).toString(), shortName);
         //For kotlin this is before the body of the constructor.
-        var string = this.getSpecialName();
+        let string = this.getSpecialName();
         ;
-        var number = string.substring(string.length - 1);
+        let number = string.substring(string.length - 1);
         ;
         if (Integer.getInteger(number) ==
             null) {
             this.setHardSale(false);
         }
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         if (this.isHardSale()) {
             this.logUtil.putF("Use Hard Coded Selling", this, commonStrings.CONSTRUCTOR);
@@ -50,9 +50,9 @@ export class MobileClientInformation extends AbeClientInformation {
         }
     }
     toHashtable() {
-        var hashtable = super.toHashtable();
+        let hashtable = super.toHashtable();
         ;
-        var registrationConfiguration = RegistrationConfiguration.getInstance();
+        let registrationConfiguration = RegistrationConfiguration.getInstance();
         ;
         hashtable.put(registrationConfiguration.NAME, registrationConfiguration.getRegistrationCode());
         //if statement needs to be on the same line and ternary does not work the same way.

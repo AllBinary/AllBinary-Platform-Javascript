@@ -25,29 +25,29 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const CompleteMotionGestureListenerInterface
+//sameFolderImports - not GWT import - same folder const CompleteMotionGestureListenerInterface
 export class ResolveCompleteMotionGestureListener extends Object {
     constructor() {
         super();
         this.logUtil = LogUtil.getInstance();
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF("MotionGesture to CompleteMotionGesture Reciever", this, commonStrings.CONSTRUCTOR);
         CompleteMotionGestureInputEventHandler.getInstance().addListener(new GameKeyFromMotionGestureEventListener());
     }
     //@Throws(Exception.constructor)
     onMotionGestureCompleted(list) {
-        var configuration = MotionGestureConfigurationFactory.getInstance();
+        let configuration = MotionGestureConfigurationFactory.getInstance();
         ;
-        var commandActionsList = configuration.getAssociateCommandActionsList();
+        let commandActionsList = configuration.getAssociateCommandActionsList();
         ;
-        var size = commandActionsList.size();
+        let size = commandActionsList.size();
         ;
-        for (var index = size - 1; index >= 0; index--) {
-            var association = commandActionsList.objectArray[index];
+        for (let index = size - 1; index >= 0; index--) {
+            let association = commandActionsList.objectArray[index];
             ;
             if (association.isMotionGestureArrayEquals(list) == true) {
-                var completeMotionGestureInputEvent = association.getCommandAction();
+                let completeMotionGestureInputEvent = association.getCommandAction();
                 ;
                 CompleteMotionGestureInputEventHandler.getInstance().fireEvent(completeMotionGestureInputEvent);
                 break;

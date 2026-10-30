@@ -49,7 +49,7 @@ export class ResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStream(resource) {
-        var inputStream = this.getResourceAsStreamAtStart(resource, 2);
+        let inputStream = this.getResourceAsStreamAtStart(resource, 2);
         ;
         if (inputStream ==
             null) {
@@ -64,11 +64,11 @@ export class ResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStreamAtStart(resource, startIndex) {
-        var inputStream = new FileInputStream(new StringMaker().append(this.path).append(resource).append(this.ext).toString());
+        let inputStream = new FileInputStream(new StringMaker().append(this.path).append(resource).append(this.ext).toString());
         ;
         if (inputStream !=
             null) {
-            var byteArray = new Array(inputStream.available());
+            let byteArray = new Array(inputStream.available());
             ;
             StreamUtil.getInstance().getByteArray(inputStream, new ByteArrayOutputStream(), byteArray);
             //if statement needs to be on the same line and ternary does not work the same way.

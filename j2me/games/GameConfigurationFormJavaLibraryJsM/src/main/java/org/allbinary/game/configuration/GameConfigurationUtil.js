@@ -24,11 +24,11 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfigurationSingleton } from './GameConfigurationSingleton.js';
-//not GWT import - same folder const GameOptionsForm
+//sameFolderImports - not GWT import - same folder const GameOptionsForm
 import { GameConfigurationGauge } from './GameConfigurationGauge.js';
-//not GWT import - same folder const GameConfigurationGauge
+//sameFolderImports - not GWT import - same folder const GameConfigurationGauge
 import { GameConfigurationCentral } from './GameConfigurationCentral.js';
-//not GWT import - same folder const GameConfigurationCentral
+//sameFolderImports - not GWT import - same folder const GameConfigurationCentral
 export class GameConfigurationUtil extends Object {
     constructor() {
         super(...arguments);
@@ -46,23 +46,23 @@ export class GameConfigurationUtil extends Object {
     //@Throws(Exception.constructor)
     change(gameOptionsForm, gauge) {
         this.update(gauge);
-        var gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
+        let gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
         ;
-        var gameConfiguration = gameConfigurationSingleton.getInstanceByName(gauge.getLabel());
+        let gameConfiguration = gameConfigurationSingleton.getInstanceByName(gauge.getLabel());
         ;
         this.updateChallange(gameOptionsForm, gameConfiguration);
     }
     //@Throws(Exception.constructor)
     update(gauge) {
-        var gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
+        let gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
         ;
-        var gameConfiguration = gameConfigurationSingleton.getInstanceByName(gauge.getLabel());
+        let gameConfiguration = gameConfigurationSingleton.getInstanceByName(gauge.getLabel());
         ;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
-        var value = smallIntegerSingletonFactory.getAt(gauge.getValue() + gameConfiguration.getMinValue().intValue());
+        let value = smallIntegerSingletonFactory.getAt(gauge.getValue() + gameConfiguration.getMinValue().intValue());
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.GAUGE_UPDATE);
         stringBuffer.append(gameConfiguration.getName());
@@ -75,11 +75,11 @@ export class GameConfigurationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     setDefault(gauge) {
-        var gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
+        let gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
         ;
-        var gameConfiguration = gameConfigurationSingleton.getInstanceByName(gauge.getLabel());
+        let gameConfiguration = gameConfigurationSingleton.getInstanceByName(gauge.getLabel());
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Gauge Default: ");
         stringBuffer.append(gameConfiguration.getName());
@@ -91,9 +91,9 @@ export class GameConfigurationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     updateChallange(gameOptionsForm, gameConfiguration) {
-        var gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
+        let gameConfigurationSingleton = GameConfigurationSingleton.getInstance();
         ;
-        var gameConfigurationCentral = GameConfigurationCentral.getInstance();
+        let gameConfigurationCentral = GameConfigurationCentral.getInstance();
         ;
         if (gameConfiguration == gameConfigurationCentral.CHALLENGE_LEVEL) {
             this.logUtil.putF(this.commonStrings.START, this, "updateChallange");
@@ -101,17 +101,17 @@ export class GameConfigurationUtil extends Object {
             gameConfigurationCentral.ATTACK_CHALLENGE_LEVEL.setValue(gameConfiguration.getValue());
             gameConfigurationCentral.DURABILITY_CHALLENGE_LEVEL.setValue(gameConfiguration.getValue());
             gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration.getValue());
-            var size = gameOptionsForm.size();
+            let size = gameOptionsForm.size();
             ;
-            for (var index = 0; index < size; index++) {
-                var item = gameOptionsForm.get(index);
+            for (let index = 0; index < size; index++) {
+                let item = gameOptionsForm.get(index);
                 ;
                 if (item instanceof GameConfigurationGauge) {
-                    var gauge = item;
+                    let gauge = item;
                     ;
-                    var name = item.getLabel();
+                    let name = item.getLabel();
                     ;
-                    var nextGameConfiguration = gameConfigurationSingleton.getInstanceByName(name);
+                    let nextGameConfiguration = gameConfigurationSingleton.getInstanceByName(name);
                     ;
                     if (nextGameConfiguration == gameConfigurationCentral.COLLIDE_DAMAGE) {
                         gauge.setValue(gameConfigurationCentral.COLLIDE_DAMAGE.getValue().intValue() - gameConfiguration.getMinValue().intValue());
@@ -131,7 +131,7 @@ export class GameConfigurationUtil extends Object {
     }
     updateCompetitionValue() {
         this.logUtil.putF(this.commonStrings.START, this, "updateCompetitionValue");
-        var gameConfigurationCentral = GameConfigurationCentral.getInstance();
+        let gameConfigurationCentral = GameConfigurationCentral.getInstance();
         ;
         this.COMPETITION_VALUE = gameConfigurationCentral.COLLIDE_DAMAGE.getValue().intValue() + gameConfigurationCentral.ATTACK_CHALLENGE_LEVEL.getValue().intValue() + gameConfigurationCentral.DURABILITY_CHALLENGE_LEVEL.getValue().intValue() + gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.getValue().intValue();
         this.COMPETITION_VALUE = (this.COMPETITION_VALUE >> 2);

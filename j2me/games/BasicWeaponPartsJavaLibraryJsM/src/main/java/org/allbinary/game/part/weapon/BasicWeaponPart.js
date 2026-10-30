@@ -27,7 +27,7 @@ import { AllBinaryLayer } from '../../../../../org/allbinary/layer/AllBinaryLaye
 //not GWT import const AllBinaryLayerManager
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const SalvoInterface
+//sameFolderImports - not GWT import - same folder const SalvoInterface
 export class BasicWeaponPart extends Object {
     static createBasicWeaponPart(animationInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,11 +72,11 @@ export class BasicWeaponPart extends Object {
         this.animationInterface = animationInterface;
     }
     paint(graphics) {
-        var viewPosition = this.getOwnerLayerInterface().getViewPosition();
+        let viewPosition = this.getOwnerLayerInterface().getViewPosition();
         ;
-        var viewX = viewPosition.getX();
+        let viewX = viewPosition.getX();
         ;
-        var viewY = viewPosition.getY();
+        let viewY = viewPosition.getY();
         ;
         this.animationInterface.paintXY(graphics, viewX, viewY);
     }

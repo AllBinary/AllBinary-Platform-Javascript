@@ -28,7 +28,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionEventProcessor } from './MotionEventProcessor.js';
-//not GWT import - same folder const MotionEventProcessor
+//sameFolderImports - not GWT import - same folder const MotionEventProcessor
 export class TrackballGameInputMotionEventProcessor extends MotionEventProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,9 +42,9 @@ export class TrackballGameInputMotionEventProcessor extends MotionEventProcessor
     }
     process(motionEvent) {
         try {
-            var x = motionEvent.getX();
+            let x = motionEvent.getX();
             ;
-            var y = motionEvent.getY();
+            let y = motionEvent.getY();
             ;
             if (x < 0) {
                 this.listener.onCompleteMotionGestureInputEvent(LeftTrackballInputToGameKeyEventAction.getInstance());
@@ -58,10 +58,12 @@ export class TrackballGameInputMotionEventProcessor extends MotionEventProcessor
             else if (y > 0) {
                 this.listener.onCompleteMotionGestureInputEvent(DownTrackballInputToGameKeyEventAction.getInstance());
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+            }
         }
     }
 }

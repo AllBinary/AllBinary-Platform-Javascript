@@ -20,7 +20,7 @@ import { LockedUtil } from '../../../../org/allbinary/logic/system/security/lice
 //not GWT import const LockedUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ItemPaintable } from './ItemPaintable.js';
-//not GWT import - same folder const ItemPaintable
+//sameFolderImports - not GWT import - same folder const ItemPaintable
 export class LockablePaintable extends ItemPaintable {
     constructor(lockedIndex) {
         super();

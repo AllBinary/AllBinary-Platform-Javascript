@@ -19,7 +19,7 @@ import { ProgressCanvasFactory } from '../../../../../org/allbinary/graphics/can
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class InitGameProcessor extends Processor {
     constructor(gameCanvas) {
         super();

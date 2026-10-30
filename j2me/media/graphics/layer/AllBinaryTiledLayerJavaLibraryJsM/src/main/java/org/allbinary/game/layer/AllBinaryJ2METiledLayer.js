@@ -19,7 +19,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryTiledLayer } from './AllBinaryTiledLayer.js';
-//not GWT import - same folder const AllBinaryTiledLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryTiledLayer
 export class AllBinaryJ2METiledLayer extends AllBinaryTiledLayer {
     constructor(dataId, tiledLayer, mapTwoDArray, debugColor) {
         super(dataId, tiledLayer.getWidth(), tiledLayer.getHeight(), tiledLayer.getCellWidth(), tiledLayer.getCellHeight());
@@ -33,37 +33,37 @@ export class AllBinaryJ2METiledLayer extends AllBinaryTiledLayer {
         this.tiledLayerP.paint(graphics);
     }
     paintDebug(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         graphics.setFont(this.font2);
         graphics.setColor(this.debugColor);
-        var x = this.tiledLayerP.getX();
+        let x = this.tiledLayerP.getX();
         ;
-        var y = this.tiledLayerP.getY();
+        let y = this.tiledLayerP.getY();
         ;
-        var firstColumn = 0;
+        let firstColumn = 0;
         ;
-        var firstRow = 0;
+        let firstRow = 0;
         ;
-        var totalColumns = this.tiledLayerP.getColumns();
+        let totalColumns = this.tiledLayerP.getColumns();
         ;
-        var totalRows = this.tiledLayerP.getRows();
+        let totalRows = this.tiledLayerP.getRows();
         ;
-        var x0 = x;
+        let x0 = x;
         ;
-        var tile = 0;
+        let tile = 0;
         ;
-        var tileHeight = this.tiledLayerP.getCellHeight();
+        let tileHeight = this.tiledLayerP.getCellHeight();
         ;
-        var tileWidth = this.tiledLayerP.getCellWidth();
+        let tileWidth = this.tiledLayerP.getCellWidth();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        for (var rowIndex = firstRow; rowIndex < totalRows; rowIndex++) {
+        for (let rowIndex = firstRow; rowIndex < totalRows; rowIndex++) {
             x = x0;
-            for (var columnIndex = firstColumn; columnIndex < totalColumns; columnIndex++) {
+            for (let columnIndex = firstColumn; columnIndex < totalColumns; columnIndex++) {
                 tile = this.tiledLayerP.getCell(columnIndex, rowIndex);
                 if (tile < 0) {
                     tile = this.tiledLayerP.getAnimatedTile(tile);

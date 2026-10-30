@@ -19,7 +19,7 @@ export class LurchRotationAI extends LurchAI {
     constructor(ownerLayerInterface, gameInput) {
         super(ownerLayerInterface, gameInput);
         //For kotlin this is before the body of the constructor.
-        var rotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface();
+        let rotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface();
         ;
         this.rotationAnimationInterface = rotationAnimationInterfaceCompositeInterface.getRotationAnimationInterface();
         this.update();
@@ -30,20 +30,20 @@ export class LurchRotationAI extends LurchAI {
     }
     update() {
         if (this.currentRelativeAngle == 0) {
-            var rotationAnimationInterface = this.rotationAnimationInterface;
+            let rotationAnimationInterface = this.rotationAnimationInterface;
             ;
-            var angleIncrementInfo = rotationAnimationInterface.getAngleInfoP().getAngleIncrementInfo();
+            let angleIncrementInfo = rotationAnimationInterface.getAngleInfoP().getAngleIncrementInfo();
             ;
-            var rotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface();
+            let rotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface();
             ;
             rotationAnimationInterfaceCompositeInterface.setFrame(angleIncrementInfo.RIGHT_FRAME.intValue());
         }
         else if (this.currentRelativeAngle == 180) {
-            var rotationAnimationInterface = this.rotationAnimationInterface;
+            let rotationAnimationInterface = this.rotationAnimationInterface;
             ;
-            var angleIncrementInfo = rotationAnimationInterface.getAngleInfoP().getAngleIncrementInfo();
+            let angleIncrementInfo = rotationAnimationInterface.getAngleInfoP().getAngleIncrementInfo();
             ;
-            var rotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface();
+            let rotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface();
             ;
             rotationAnimationInterfaceCompositeInterface.setFrame(angleIncrementInfo.LEFT_FRAME.intValue());
         }

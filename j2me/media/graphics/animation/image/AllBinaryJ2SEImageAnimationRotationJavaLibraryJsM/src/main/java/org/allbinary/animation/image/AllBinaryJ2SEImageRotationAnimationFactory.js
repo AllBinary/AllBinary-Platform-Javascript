@@ -28,15 +28,15 @@ import { ImageCopyUtil } from '../../../../org/allbinary/media/image/ImageCopyUt
 //not GWT import const ImageCopyUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { AllBinaryJ2SEImageRotationAnimation } from './AllBinaryJ2SEImageRotationAnimation.js';
-//not GWT import - same folder const AllBinaryJ2SEImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryJ2SEImageRotationAnimation
 import { AllBinaryAdjustedJ2SEImageRotationAnimation } from './AllBinaryAdjustedJ2SEImageRotationAnimation.js';
-//not GWT import - same folder const AllBinaryAdjustedJ2SEImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryAdjustedJ2SEImageRotationAnimation
 export class AllBinaryJ2SEImageRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createDXY(image, width, height, dx, dy, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation) {
-        var imageRotationAnimationFactory = new AllBinaryJ2SEImageRotationAnimationFactory(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation);
+        let imageRotationAnimationFactory = new AllBinaryJ2SEImageRotationAnimationFactory(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation);
         ;
         imageRotationAnimationFactory.animationFactoryInitializationVisitor.dx = dx;
         imageRotationAnimationFactory.animationFactoryInitializationVisitor.dy = dy;
@@ -53,7 +53,7 @@ export class AllBinaryJ2SEImageRotationAnimationFactory extends BaseImageAnimati
     }
     //@Throws(Exception.constructor)
     getCanvasImage() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (this.resizeCanvasForRotation && !features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL)) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,16 +68,16 @@ export class AllBinaryJ2SEImageRotationAnimationFactory extends BaseImageAnimati
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var imageCopyUtil = ImageCopyUtil.getInstance();
+        let imageCopyUtil = ImageCopyUtil.getInstance();
         ;
-        var canvasImage = this.getCanvasImage();
+        let canvasImage = this.getCanvasImage();
         ;
-        var scaledImage = this.animationFactoryImageScaleUtil.createImage(canvasImage, this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let scaledImage = this.animationFactoryImageScaleUtil.createImage(canvasImage, this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
-        var openGLUtil = OpenGLUtil.getInstance();
+        let openGLUtil = OpenGLUtil.getInstance();
         ;
         scaledImage = openGLUtil.addImage(scaledImage);
-        var copyOfScaledImage = imageCopyUtil.createImageForRotation(scaledImage);
+        let copyOfScaledImage = imageCopyUtil.createImageForRotation(scaledImage);
         ;
         if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
             this.animationFactoryImageScaleUtil.processAdjust(this);

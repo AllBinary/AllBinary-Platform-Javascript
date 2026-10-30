@@ -22,18 +22,25 @@ export class VisitorFileFilter extends Object {
         super();
         this.booleanVisitorInterface = booleanVisitorInterface;
     }
-    accept(file) {
-        var abFile = FileWrapperUtil.wrapFile(file);
+    accept(...args) {
+        if (args.length === 1)
+            return this.accept$overload1(args[0]);
+        if (args.length === 1)
+            return this.accept$overload2(args[0]);
+        throw new TypeError('No matching overload: accept');
+    }
+    accept$overload1(file) {
+        let abFile = FileWrapperUtil.wrapFile(file);
         ;
-        var isFileAcceptable = visit = this.booleanVisitorInterface.visit(abFile), visit, as, Boolean;
+        let isFileAcceptable = visit = this.booleanVisitorInterface.visit(abFile), visit, as, Boolean;
         visit.
             .valueOf();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return isFileAcceptable || file.isDirectory();
     }
-    accept(file) {
-        var isFileAcceptable = visit = this.booleanVisitorInterface.visit(file), visit, as, Boolean;
+    accept$overload2(file) {
+        let isFileAcceptable = visit = this.booleanVisitorInterface.visit(file), visit, as, Boolean;
         visit.
             .valueOf();
         ;

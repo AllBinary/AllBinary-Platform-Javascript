@@ -201,53 +201,53 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import - same folder const PopupMenuInterface
+//sameFolderImports - not GWT import - same folder const PopupMenuInterface
 import { GameCanvasRunnable } from './GameCanvasRunnable.js';
-//not GWT import - same folder const GameCanvasRunnable
+//sameFolderImports - not GWT import - same folder const GameCanvasRunnable
 import { GameCanvasPauseRunnable } from './GameCanvasPauseRunnable.js';
-//not GWT import - same folder const GameCanvasPauseRunnable
+//sameFolderImports - not GWT import - same folder const GameCanvasPauseRunnable
 import { FormUtil } from './FormUtil.js';
-//not GWT import - same folder const FormUtil
+//sameFolderImports - not GWT import - same folder const FormUtil
 import { MyFormUtil } from './MyFormUtil.js';
-//not GWT import - same folder const MyFormUtil
+//sameFolderImports - not GWT import - same folder const MyFormUtil
 import { EndGameInfo } from './EndGameInfo.js';
-//not GWT import - same folder const EndGameInfo
+//sameFolderImports - not GWT import - same folder const EndGameInfo
 import { NoMenuInputProcessor } from './NoMenuInputProcessor.js';
-//not GWT import - same folder const BasicMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const BasicMenuInputProcessor
 import { DemoGameBehavior } from './DemoGameBehavior.js';
-//not GWT import - same folder const DemoGameBehavior
+//sameFolderImports - not GWT import - same folder const DemoGameBehavior
 import { BaseMenuBehavior } from './BaseMenuBehavior.js';
-//not GWT import - same folder const BaseMenuBehavior
+//sameFolderImports - not GWT import - same folder const BaseMenuBehavior
 import { BaseGameBehavior } from './BaseGameBehavior.js';
-//not GWT import - same folder const BaseGameBehavior
+//sameFolderImports - not GWT import - same folder const BaseGameBehavior
 import { BasicPopupMenuPaintable } from './BasicPopupMenuPaintable.js';
-//not GWT import - same folder const BasicPopupMenuPaintable
+//sameFolderImports - not GWT import - same folder const BasicPopupMenuPaintable
 import { PopupMenuInputProcessor } from './PopupMenuInputProcessor.js';
-//not GWT import - same folder const PopupMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const PopupMenuInputProcessor
 import { InGameMenuBehavior } from './InGameMenuBehavior.js';
-//not GWT import - same folder const InGameMenuBehavior
+//sameFolderImports - not GWT import - same folder const InGameMenuBehavior
 import { GameLimitedCommandTextItemArrayFactory } from './GameLimitedCommandTextItemArrayFactory.js';
-//not GWT import - same folder const GameLimitedCommandTextItemArrayFactory
+//sameFolderImports - not GWT import - same folder const GameLimitedCommandTextItemArrayFactory
 import { PopupCommandFormInputProcessor } from './PopupCommandFormInputProcessor.js';
-//not GWT import - same folder const PopupCommandFormInputProcessor
+//sameFolderImports - not GWT import - same folder const PopupCommandFormInputProcessor
 import { NullWaitGameRunnable } from './NullWaitGameRunnable.js';
-//not GWT import - same folder const NullWaitGameRunnable
+//sameFolderImports - not GWT import - same folder const NullWaitGameRunnable
 import { GameProcessor } from './GameProcessor.js';
-//not GWT import - same folder const GameProcessor
+//sameFolderImports - not GWT import - same folder const GameProcessor
 import { CheatGameInputProcessor } from './CheatGameInputProcessor.js';
-//not GWT import - same folder const CheatGameInputProcessor
+//sameFolderImports - not GWT import - same folder const CheatGameInputProcessor
 import { EndGameProcessor } from './EndGameProcessor.js';
-//not GWT import - same folder const EndGameProcessor
+//sameFolderImports - not GWT import - same folder const EndGameProcessor
 import { StartIntermissionProcessor } from './StartIntermissionProcessor.js';
-//not GWT import - same folder const StartIntermissionProcessor
+//sameFolderImports - not GWT import - same folder const StartIntermissionProcessor
 import { EndGamePaintable } from './EndGamePaintable.js';
-//not GWT import - same folder const EndGamePaintable
+//sameFolderImports - not GWT import - same folder const EndGamePaintable
 import { NullDemoPaintable } from './NullDemoPaintable.js';
-//not GWT import - same folder const DemoPaintableInterface
+//sameFolderImports - not GWT import - same folder const DemoPaintableInterface
 import { GameCanvasInputProcessor } from './GameCanvasInputProcessor.js';
-//not GWT import - same folder const GameCanvasInputProcessor
+//sameFolderImports - not GWT import - same folder const GameCanvasInputProcessor
 import { FormInputProcessor } from './FormInputProcessor.js';
-//not GWT import - same folder const FormInputProcessor
+//sameFolderImports - not GWT import - same folder const FormInputProcessor
 export class AllBinaryGameCanvas extends RunnableCanvas {
     constructor(commandListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered) {
         super(commandListener, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, true);
@@ -346,26 +346,28 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     updateMeasurement(graphics) {
         try {
-            var font = graphics.getFont();
+            let font = graphics.getFont();
             ;
             this.logUtil.putF(new StringMaker().append(this.commonStrings.START).append(this.canvasStrings.FD_WIDTH).appendint(MyFontProcessor.defaultCharWidth(font)).append(this.canvasStrings.FD_HEIGHT).appendint(font.getHeight()).toString(), this, this.canvasStrings.UPDATE_MEASUREMENT);
             this.fontHeightP = font.getHeight();
             this.myFormUtil.updateMeasurement(graphics);
-            var popupMenuRectangle = this.myFormUtil.getPopupMenuRectangle();
+            let popupMenuRectangle = this.myFormUtil.getPopupMenuRectangle();
             ;
-            var basicPopupMenuPaintable = this.getOpenMenuPaintable();
+            let basicPopupMenuPaintable = this.getOpenMenuPaintable();
             ;
             basicPopupMenuPaintable.init(popupMenuRectangle);
             if (this.getPopupMenuInputProcessor() != NoMenuInputProcessor.getInstance()) {
-                var popupMenuInputProcessor = this.getPopupMenuInputProcessor();
+                let popupMenuInputProcessor = this.getPopupMenuInputProcessor();
                 ;
                 popupMenuInputProcessor.init(popupMenuRectangle);
             }
             this.myFontProcessor = MyFontProcessor.getInstance();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+            }
         }
     }
     getInGameMenuBehavior() {
@@ -389,17 +391,19 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
             this.logUtil.putF(new StringMaker().append(this.commonStrings.START).append(DisplayInfoSingleton.getInstance().toString()).toString(), this, this.canvasStrings.UPDATE_MEASUREMENT);
             this.myFontProcessor = this.updateMyFontProcessor;
             this.menuBehavior.onDisplayChangeEvent(this, displayChangeEvent);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     updateMenuFromEvent(displayChangeEvent) {
-        var formType = FormTypeFactory.getInstance().getFormType();
+        let formType = FormTypeFactory.getInstance().getFormType();
         ;
-        var rectangle = this.formUtil.createFormRectangle();
+        let rectangle = this.formUtil.createFormRectangle();
         ;
         this.menuForm.init(rectangle, formType);
         if (this.currentTouchInputFactory != NoButtonsTouchInputFactory.getInstance()) {
@@ -422,9 +426,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     //@Throws(Exception.constructor)
     initPopupMenu() {
         if (this.popupMenuInputProcessor == NoMenuInputProcessor.getInstance()) {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
-            var popupMenuRectangle = this.myFormUtil.getPopupMenuRectangle();
+            let popupMenuRectangle = this.myFormUtil.getPopupMenuRectangle();
             ;
             if (features.isFeature(this.touchFeatureFactory.TOUCH_ENABLED)) {
                 this.setOpenMenuPaintable(new BasicPopupMenuPaintable(popupMenuRectangle, this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor()));
@@ -437,29 +441,31 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     initMenu() {
         try {
             this.menuBehavior.initMenu(this);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "initMenu", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "initMenu", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     initMenu2() {
         this.closeMenu();
-        var formType = FormTypeFactory.getInstance().getFormType();
+        let formType = FormTypeFactory.getInstance().getFormType();
         ;
-        var gameLimitedCommandTextItemArrayFactory = GameLimitedCommandTextItemArrayFactory.getInstance();
+        let gameLimitedCommandTextItemArrayFactory = GameLimitedCommandTextItemArrayFactory.getInstance();
         ;
-        var commandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory.getCommandTextItemArrayFactory();
+        let commandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory.getCommandTextItemArrayFactory();
         ;
-        var items = commandTextItemArrayFactory.getInstance(this.getCommandStack(), this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor());
+        let items = commandTextItemArrayFactory.getInstance(this.getCommandStack(), this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor());
         ;
-        var rectangle = this.formUtil.createFormRectangle();
+        let rectangle = this.formUtil.createFormRectangle();
         ;
         this.setMenuForm(CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance().EMPTY_STRING, items, rectangle, formType, 25, false, this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor()));
-        var scrollSelectionForm = this.getMenuForm();
+        let scrollSelectionForm = this.getMenuForm();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(this.touchFeatureFactory.TOUCH_ENABLED)) {
             this.mainMenuInputProcessor = new PopupCommandFormInputProcessor(new BasicArrayListD(), -1, this, scrollSelectionForm, this.getPopupMenuInputProcessor());
@@ -477,31 +483,33 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     updateMenu() {
         try {
             this.menuBehavior.updateMenu(this);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "initMenu", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "initMenu", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     updateMenu2() {
-        var scrollSelectionForm = this.getMenuForm();
+        let scrollSelectionForm = this.getMenuForm();
         ;
         scrollSelectionForm.deleteAll();
-        var gameLimitedCommandTextItemArrayFactory = GameLimitedCommandTextItemArrayFactory.getInstance();
+        let gameLimitedCommandTextItemArrayFactory = GameLimitedCommandTextItemArrayFactory.getInstance();
         ;
-        var commandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory.getCommandTextItemArrayFactory();
+        let commandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory.getCommandTextItemArrayFactory();
         ;
-        var items = commandTextItemArrayFactory.getInstance(this.getCommandStack(), this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor());
+        let items = commandTextItemArrayFactory.getInstance(this.getCommandStack(), this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor());
         ;
-        var size = items.length;
+        let size = items.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             scrollSelectionForm.append(items[index]);
         }
-        var formType = FormTypeFactory.getInstance().getFormType();
+        let formType = FormTypeFactory.getInstance().getFormType();
         ;
-        var rectangle = this.formUtil.createFormRectangle();
+        let rectangle = this.formUtil.createFormRectangle();
         ;
         scrollSelectionForm.init(rectangle, formType);
     }
@@ -593,7 +601,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         this.setHighScoreSubmitted(false);
         this.setLayerManager(gameLayerManager);
         if (!buffered) {
-            var BUFF_MESSAGE = "XXX Not Buffering Causes Concurrency Issues XXX";
+            let BUFF_MESSAGE = "XXX Not Buffering Causes Concurrency Issues XXX";
             ;
             this.logUtil.putF(BUFF_MESSAGE, this, this.commonStrings.CONSTRUCTOR);
         }
@@ -601,7 +609,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
             throw new Exception("Buffering is disabled");
         }
         this.setGameInputProcessor(Processor.getInstance());
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(GameFeatureFactory.getInstance().CHEATING)) {
             this.isCheating = true;
@@ -642,29 +650,29 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     initConfigurable(abeClientInformation) {
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.addNormalPortion(50, "Setting Configurables");
         GameInitializationUtil.getInstance().initGame(abeClientInformation, this, this.gameInitializationInterfaceFactoryInterface);
-        var gameFeatureFactory = GameFeatureFactory.getInstance();
+        let gameFeatureFactory = GameFeatureFactory.getInstance();
         ;
-        var changedGameFeatureListener = ChangedGameFeatureListener.getInstance();
+        let changedGameFeatureListener = ChangedGameFeatureListener.getInstance();
         ;
         if (changedGameFeatureListener.isChangedFeature(gameFeatureFactory.SOUND)) {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
             this.logUtil.putF(new StringMaker().append("Sound Changing To: ").appendboolean(features.isFeature(gameFeatureFactory.SOUND)).toString(), this, "initConfigurable");
             this.mediaInit();
             changedGameFeatureListener.remove(gameFeatureFactory.SOUND);
         }
-        var sensorFeatureFactory = SensorFeatureFactory.getInstance();
+        let sensorFeatureFactory = SensorFeatureFactory.getInstance();
         ;
         if (changedGameFeatureListener.isChangedFeature(sensorFeatureFactory.ORIENTATION_SENSORS) || changedGameFeatureListener.isChangedFeature(sensorFeatureFactory.NO_ORIENTATION) || changedGameFeatureListener.isChangedFeature(sensorFeatureFactory.SIMULATED_ORIENTATION_SENSORS)) {
             changedGameFeatureListener.remove(sensorFeatureFactory.NO_ORIENTATION);
             changedGameFeatureListener.remove(sensorFeatureFactory.ORIENTATION_SENSORS);
             changedGameFeatureListener.remove(sensorFeatureFactory.SIMULATED_ORIENTATION_SENSORS);
         }
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         this.loadResourceLoadingLevel(resourceLoadingLevelFactory.LOAD_GAME);
     }
@@ -678,9 +686,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     //@Throws(Exception.constructor)
     initTouch() {
-        var gameInitializedEvent = GameInitializationUtil.getInstance().EVENT;
+        let gameInitializedEvent = GameInitializationUtil.getInstance().EVENT;
         ;
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         gameInitializedEvent.setResourceLoadingLevel(resourceLoadingLevelFactory.LOAD_TOUCH);
         GameInitializedEventHandler.getInstance().fireEvent(gameInitializedEvent);
@@ -702,7 +710,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     //@Throws(Exception.constructor)
     updateTouch2() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(this.touchFeatureFactory.AUTO_HIDE_SHOW_SCREEN_BUTTONS)) {
             if (this.gameLayerManager.getGameInfo().getCurrentLevel() - this.getStartLevel() == 1) {
@@ -721,9 +729,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         this.setCommandListener(cmdListener);
     }
     addCommands() {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
-        var myCommandsFactory = MyCommandsFactory.getInstance();
+        let myCommandsFactory = MyCommandsFactory.getInstance();
         ;
         if (DebugFactory.getInstance() != NoDebug.getInstance()) {
             this.addCommand(gameCommandsFactory.START_TRACE);
@@ -731,7 +739,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         this.addCommand(gameCommandsFactory.RESTART_COMMAND);
         this.addCommand(myCommandsFactory.PAUSE_COMMAND);
         this.addCommand(gameCommandsFactory.QUIT_COMMAND);
-        var isOverScan = OperatingSystemFactory.getInstance().getOperatingSystemInstance().isOverScan();
+        let isOverScan = OperatingSystemFactory.getInstance().getOperatingSystemInstance().isOverScan();
         ;
         if (J2MEUtil.isHTML()) {
         }
@@ -747,11 +755,11 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     itemStateChanged(item) {
         try {
-            var itemLabel = item.getLabel();
+            let itemLabel = item.getLabel();
             ;
             this.logUtil.putF(new StringMaker().append(this.commonLabels.ITEM_LABEL).append(itemLabel).toString(), this, "itemStateChanged");
             if (item instanceof ChoiceGroup) {
-                var gameFeatureUtil = GameFeatureUtil.getInstance();
+                let gameFeatureUtil = GameFeatureUtil.getInstance();
                 ;
                 if (gameFeatureUtil.isExclusive(itemLabel)) {
                     gameFeatureUtil.updateExclusiveForChoiceGroup(item);
@@ -764,10 +772,12 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
             this.updateTouch();
             this.updateScreenButtonPaintable();
             this.sensorGameUpdateProcessor.sendNotifications(this.gameLayerManager);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "itemStateChanged", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "itemStateChanged", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -775,7 +785,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         this.gameBehavior.updateScreenButtonPaintable(this);
     }
     updateScreenButtonPaintable2() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(this.touchFeatureFactory.AUTO_HIDE_SHOW_SCREEN_BUTTONS)) {
             this.setTouchPaintableP(this.getTouchButtonsPaintable());
@@ -842,7 +852,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     //@Throws(Exception.constructor)
     updateGameState() {
-        var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+        let gameAdState = this.gameAdStateFactory.getCurrentInstance();
         ;
         gameAdState.processAdState(this.gameState, this.gameLayerManager.getGameInfo().getGameType());
         if (this.gameState != this.gameStateFactory.PLAYING_GAME_STATE) {
@@ -863,8 +873,8 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     removeAllGameKeyInputListeners2() {
         this.logUtil.putF("Remove PlayerInput Listeners", this, "removeAllGameKeyInputListeners");
-        for (var index = this.localPlayerGameInputList.size() - 1; index >= 0; index--) {
-            var playerGameInput = this.localPlayerGameInputList.get(index);
+        for (let index = this.localPlayerGameInputList.size() - 1; index >= 0; index--) {
+            let playerGameInput = this.localPlayerGameInputList.get(index);
             ;
             this.removeKeyInputListener(playerGameInput);
             playerGameInput.removeNonAIInputGameKeyEvents();
@@ -892,7 +902,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     //@Throws(Exception.constructor)
     cleanupGame() {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CLEANUP);
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.addNormalPortion(10, "Cleaning Up");
         this.primaryPlayerQueue.clear();
@@ -901,14 +911,14 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     //@Throws(Exception.constructor)
     loadResourceLoadingLevel(resourceLoadingLevel) {
-        var gameInitializedEvent = GameInitializationUtil.getInstance().EVENT;
+        let gameInitializedEvent = GameInitializationUtil.getInstance().EVENT;
         ;
         gameInitializedEvent.setResourceLoadingLevel(resourceLoadingLevel);
         GameInitializedEventHandler.getInstance().fireEvent(gameInitializedEvent);
     }
     //@Throws(Exception.constructor)
     loadResources(level) {
-        var gameInitializedEvent = GameInitializationUtil.getInstance().EVENT;
+        let gameInitializedEvent = GameInitializationUtil.getInstance().EVENT;
         ;
         gameInitializedEvent.setLevel(level);
         GameInitializedEventHandler.getInstance().fireEvent(gameInitializedEvent);
@@ -920,9 +930,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     buildGame(portion) {
         this.screenCapture.endRecording();
         this.screenCapture.startRecording();
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         progressCanvas.addNormalPortion(portion, "Generic Build");
         this.removeAllGameKeyInputListenersOnBuild();
@@ -966,9 +976,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     buildGame2() {
         PreLogUtil.put(new StringMaker().append(this.gameInputStrings.ENABLE_PLAYER_GAME_INPUTS).appendint(this.localPlayerGameInputList.size()).toString(), this, this.BUILD_GAME);
-        var playerGameInput;
+        let playerGameInput;
         ;
-        for (var index = this.localPlayerGameInputList.size() - 1; index >= 0; index--) {
+        for (let index = this.localPlayerGameInputList.size() - 1; index >= 0; index--) {
             playerGameInput = this.localPlayerGameInputList.get(index);
             PreLogUtil.put(new StringMaker().append(this.gameInputStrings.ENABLE_PLAYER_GAME_INPUT).append(playerGameInput.toString()).toString(), this, this.BUILD_GAME);
             playerGameInput.removeNonAIInputGameKeyEvents();
@@ -984,16 +994,16 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     //@Throws(Exception.constructor)
     loadState() {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.LOAD);
-        var hashtable = this.getLoadStateHashtable();
+        let hashtable = this.getLoadStateHashtable();
         ;
         if (hashtable !=
             null
             && hashtable.size() > 0) {
-            var levelAsString = hashtable.get(GameInfo.LEVEL_NAME);
+            let levelAsString = hashtable.get(GameInfo.LEVEL_NAME);
             ;
-            var level = Integer.valueOf(levelAsString).intValue();
+            let level = Integer.valueOf(levelAsString).intValue();
             ;
-            var gameInfo = this.gameLayerManager.getGameInfo();
+            let gameInfo = this.gameLayerManager.getGameInfo();
             ;
             gameInfo.setCurrentLevel(level);
         }
@@ -1009,9 +1019,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         this.hashtable = hashtable;
     }
     getCurrentStateHashtable() {
-        var hashtable = this.stdUtil.createHashtable();
+        let hashtable = this.stdUtil.createHashtable();
         ;
-        var level = this.gameLayerManager.getGameInfo().getCurrentLevel();
+        let level = this.gameLayerManager.getGameInfo().getCurrentLevel();
         ;
         hashtable.put(GameInfo.LEVEL_NAME.toString(), level.toString());
         this.logUtil.putF(new StringMaker().append("End: ").append(this.stringUtil.toString(hashtable)).toString(), this, "getCurrentStateHashtable");
@@ -1073,12 +1083,12 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     handleRawKey(keyCode, deviceId, repeated) {
     }
     endProgress(isProgress) {
-        var portion = 30;
+        let portion = 30;
         ;
         if (isProgress && this.isMainCanvas()) {
-            var myCommandsFactory = MyCommandsFactory.getInstance();
+            let myCommandsFactory = MyCommandsFactory.getInstance();
             ;
-            var progressCanvas = ProgressCanvasFactory.getInstance();
+            let progressCanvas = ProgressCanvasFactory.getInstance();
             ;
             progressCanvas.start();
             this.getCustomCommandListener().commandAction(myCommandsFactory.SET_DISPLAYABLE, progressCanvas);
@@ -1119,7 +1129,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     //@Throws(Exception.constructor)
     shouldWait() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (AndroidUtil.isAndroid()) {
         }
@@ -1127,7 +1137,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         }
         else {
             if (features.isDefault(this.openGLFeatureFactory.OPENGL)) {
-                var openGLImageSpecificFactory = OpenGLImageSpecificFactory.getInstance();
+                let openGLImageSpecificFactory = OpenGLImageSpecificFactory.getInstance();
                 ;
                 while (openGLImageSpecificFactory.updating) {
                     Thread.sleep(this.YIELD_SLEEP);
@@ -1138,7 +1148,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     run() {
         try {
             this.logUtil.putF(this.commonStrings.START_RUNNABLE, this, this.commonStrings.RUN);
-            var progressCanvas = ProgressCanvasFactory.getInstance();
+            let progressCanvas = ProgressCanvasFactory.getInstance();
             ;
             progressCanvas.addNormalPortion(50, "Game Thread");
             this.setCurrentThread();
@@ -1152,21 +1162,23 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
                 Thread.sleep(this.YIELD_SLEEP);
             }
             this.open();
-            var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+            let gameAdState = this.gameAdStateFactory.getCurrentInstance();
             ;
             gameAdState.init();
             gameAdState.setGameIsReady(true);
             this.gameBehavior.run(this);
             this.logUtil.putF(this.commonStrings.END_RUNNABLE, this, this.commonStrings.RUN);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     run2() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isDefault(this.openGLFeatureFactory.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML()) {
             if (features.isDefault(this.openGLFeatureFactory.OPENGL_AS_GAME_THREAD)) {
@@ -1175,7 +1187,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
             if (J2MEUtil.isHTML()) {
                 this.logUtil.putF(GraphicsStrings.getInstance().HTML, this, this.commonStrings.RUN);
             }
-            var currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
+            let currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
             ;
             currentDisplayableFactory.setRunnable(this.gameRunnable);
             currentDisplayableFactory.setDisplayable(this);
@@ -1207,24 +1219,26 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     setRunning(running) {
         super.setRunning(running);
         try {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
             if (running) {
             }
             else {
                 if (features.isDefault(this.openGLFeatureFactory.OPENGL) || SWTUtil.isSWT) {
                     if (this.gameLayerManager.getGameInfo().getGameType() != this.gameTypeFactory.BOT) {
-                        var currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
+                        let currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
                         ;
                         currentDisplayableFactory.clearRunnable();
                     }
                     this.end();
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.SET_RUNNING, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.SET_RUNNING, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -1241,12 +1255,12 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     endGameThread() {
         DisplayChangeEventHandler.getInstance().removeListener(this);
         GameLevelDisplayChangeEventListenersFactory.getInstance().clear();
-        var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+        let gameAdState = this.gameAdStateFactory.getCurrentInstance();
         ;
         gameAdState.notPlayingAdState();
     }
     createHighScore(score) {
-        var gameInfo = this.gameLayerManager.getGameInfo();
+        let gameInfo = this.gameLayerManager.getGameInfo();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new HighScore(0, "NONE", new GameInfo(gameInfo.getGameType(), gameInfo.getGameMode(), PlayerTypesFactory.getInstance().PLAYER_TYPE_ONE, 0, 0), score);
@@ -1257,9 +1271,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
     }
     //@Throws(Exception.constructor)
     setHighScore2(abeClientInformation, name, score, autoSubmit, isLast) {
-        var highScore = this.createHighScore(score);
+        let highScore = this.createHighScore(score);
         ;
-        var textBox = new HighScoreTextBox(this.highScoresFactoryInterface, this.highScoresHelper, abeClientInformation, this.gameLayerManager.getGameInfo(), this.getCustomCommandListener(), name, highScore, this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor());
+        let textBox = new HighScoreTextBox(this.highScoresFactoryInterface, this.highScoresHelper, abeClientInformation, this.gameLayerManager.getGameInfo(), this.getCustomCommandListener(), name, highScore, this.gameLayerManager.getBackgroundBasicColor(), this.gameLayerManager.getForegroundBasicColor());
         ;
         if (isLast) {
             this.getCustomCommandListener().commandAction(GameCommandsFactory.getInstance().SET_MENU_DISPLAYABLE, textBox);
@@ -1272,7 +1286,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
                     this.progressCanvas = ProgressCanvasFactory.getInstance();
                 }
                 run() {
-                    var logUtil = LogUtil.getInstance();
+                    let logUtil = LogUtil.getInstance();
                     ;
                     try {
                         if (isLast) {
@@ -1281,13 +1295,15 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
                         else {
                             textBox.saveHighScore();
                         }
-                        //: 
                     }
-                    catch (e) {
-                        var commonStrings = CommonStrings.getInstance();
-                        ;
-                        logUtil.put(commonStrings.EXCEPTION, this, "run", e);
-                        this.progressCanvas.end();
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            let commonStrings = CommonStrings.getInstance();
+                            ;
+                            logUtil.put(commonStrings.EXCEPTION, this, "run", e);
+                            this.progressCanvas.end();
+                        }
                     }
                 }
             }
@@ -1357,9 +1373,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         return this.realHighScoresPaintable;
     }
     clearPlayerGameInputList() {
-        var playerGameInput;
+        let playerGameInput;
         ;
-        for (var index = this.localPlayerGameInputList.size() - 1; index >= 0; index--) {
+        for (let index = this.localPlayerGameInputList.size() - 1; index >= 0; index--) {
             playerGameInput = this.localPlayerGameInputList.get(index);
             this.gameKeyEventHandler.removeListener(playerGameInput);
         }
@@ -1504,9 +1520,9 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         return OpenGLFeatureUtil.getInstance().isAnyThreed() || SWTUtil.isSWT;
     }
     isRunningInAnotherThread() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
         if (features.isDefault(openGLFeatureFactory.OPENGL_AS_GAME_THREAD)) {
             //if statement needs to be on the same line and ternary does not work the same way.

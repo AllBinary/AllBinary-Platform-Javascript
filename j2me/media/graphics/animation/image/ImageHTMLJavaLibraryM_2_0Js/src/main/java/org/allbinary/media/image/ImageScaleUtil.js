@@ -25,7 +25,7 @@ const ImageImpl = globalThis.playn.core.ImageImpl;
 const HTMLPlaynUtil = globalThis.playn.html.HTMLPlaynUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageScaleUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -43,9 +43,9 @@ export class ImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, mutable) {
-        var scaleX = scaleNominatorX / scaleDenominatorX;
+        let scaleX = scaleNominatorX / scaleDenominatorX;
         ;
-        var scaleY = scaleNominatorY / scaleDenominatorY;
+        let scaleY = scaleNominatorY / scaleDenominatorY;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.createImage(imageCache, originalImage, scaleX, scaleY, cached);
@@ -59,26 +59,26 @@ export class ImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImageInternal(originalImage, scaleX, scaleY) {
-        var image = ImageCreationUtil.getInstance().createImageWH(Math.round((originalImage.getWidth() * scaleX)), Math.round((originalImage.getHeight() * scaleY)));
+        let image = ImageCreationUtil.getInstance().createImageWH(globalThis.Math.trunc((originalImage.getWidth() * scaleX)), globalThis.Math.trunc((originalImage.getHeight() * scaleY)));
         ;
         if (image.isMutable()) {
-            var originalPlayNImage = null;
+            let originalPlayNImage = null;
             ;
             if (originalImage.isMutable()) {
-                var originalHTMLImage = originalImage;
+                let originalHTMLImage = originalImage;
                 ;
                 originalPlayNImage = originalHTMLImage.getImage();
             }
             else {
-                var originalHTMLImage = originalImage;
+                let originalHTMLImage = originalImage;
                 ;
                 originalPlayNImage = originalHTMLImage.getImage();
             }
-            var htmlImage = image;
+            let htmlImage = image;
             ;
-            var canvasImage = htmlImage.getImage();
+            let canvasImage = htmlImage.getImage();
             ;
-            var canvas = this.playnUtil.getCanvas(canvasImage);
+            let canvas = this.playnUtil.getCanvas(canvasImage);
             ;
             canvas.drawScale(originalPlayNImage, 0, 0, image.getWidth(), image.getHeight(), 0, 0, originalImage.getWidth(), originalImage.getHeight());
             //if statement needs to be on the same line and ternary does not work the same way.

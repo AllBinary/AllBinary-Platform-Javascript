@@ -20,14 +20,14 @@ import { SmallIntegerSingletonFactory } from '../../../../org/allbinary/logic/ma
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSLayerUtil } from './RTSLayerUtil.js';
-//not GWT import - same folder const RTSLayerUtil
+//sameFolderImports - not GWT import - same folder const RTSLayerUtil
 export class AdvancedRTSLayerUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AdvancedRTSLayerUtil.instance;
     }
     createFakeRTSLayerHashtable(baseRaceTrackGeographicMap) {
-        var hashtable = RTSLayerUtil.getInstance().createFakeRTSLayerHashtable(baseRaceTrackGeographicMap);
+        let hashtable = RTSLayerUtil.getInstance().createFakeRTSLayerHashtable(baseRaceTrackGeographicMap);
         ;
         hashtable.put(WorkWaypoint.ID, SmallIntegerSingletonFactory.getInstance().getAt(50));
         //if statement needs to be on the same line and ternary does not work the same way.

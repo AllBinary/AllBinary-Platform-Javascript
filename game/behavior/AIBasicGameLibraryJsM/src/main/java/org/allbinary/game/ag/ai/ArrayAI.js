@@ -23,9 +23,9 @@ export class ArrayAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var size = this.artificialIntelligenceInterfaceArray.length;
+        let size = this.artificialIntelligenceInterfaceArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.artificialIntelligenceInterfaceArray[index].processAI(allBinaryLayerManager);
         }
     }

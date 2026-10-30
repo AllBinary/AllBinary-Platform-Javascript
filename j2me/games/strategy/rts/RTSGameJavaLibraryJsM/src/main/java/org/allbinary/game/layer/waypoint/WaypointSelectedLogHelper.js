@@ -27,7 +27,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointLogHelper } from './WaypointLogHelper.js';
-//not GWT import - same folder const WaypointLogHelper
+//sameFolderImports - not GWT import - same folder const WaypointLogHelper
 export class WaypointSelectedLogHelper extends WaypointLogHelper {
     constructor() {
         super(...arguments);
@@ -40,7 +40,7 @@ export class WaypointSelectedLogHelper extends WaypointLogHelper {
         return WaypointSelectedLogHelper.instanceC;
     }
     onWaypointEvent(associatedAdvancedRTSGameLayer, advancedRTSGameLayer) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" onWaypointEvent: ");
@@ -53,7 +53,7 @@ export class WaypointSelectedLogHelper extends WaypointLogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "onWaypointEvent");
     }
     addWaypointFromBuilding(associatedAdvancedRTSGameLayer, advancedRTSGameLayer) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" Adding Waypoint: ");
@@ -66,7 +66,7 @@ export class WaypointSelectedLogHelper extends WaypointLogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: onWaypointEvent");
     }
     addWaypointFromBuildingList(associatedAdvancedRTSGameLayer, advancedRTSGameLayer, list) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(" Waypoints: ");
@@ -74,7 +74,7 @@ export class WaypointSelectedLogHelper extends WaypointLogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: onWaypointEvent");
     }
     insertWaypoint(associatedAdvancedRTSGameLayer, index, rtsLayer, waypointName) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -85,7 +85,7 @@ export class WaypointSelectedLogHelper extends WaypointLogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: insertWaypoint");
     }
     insertWaypointList(associatedAdvancedRTSGameLayer, index, rtsLayer, waypointName, list) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);
@@ -97,9 +97,9 @@ export class WaypointSelectedLogHelper extends WaypointLogHelper {
         this.logUtil.putF(stringBuffer.toString(), this, "selected: insertWaypoint");
     }
     setRandomGeographicMapCellHistoryList(associatedAdvancedRTSGameLayer, pathsList) {
-        var size = pathsList.size();
+        let size = pathsList.size();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(associatedAdvancedRTSGameLayer.getName());
         stringBuffer.append(this.commonSeps.SPACE);

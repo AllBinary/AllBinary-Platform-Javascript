@@ -46,10 +46,12 @@ export class AllBinarySensorManager extends Object {
         try {
             GyroSensorFactory.init();
             AccelerometerSensorFactory.init();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     init() {

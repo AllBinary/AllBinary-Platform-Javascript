@@ -19,11 +19,11 @@ const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js - same folder import { Log } 
 const Log = globalThis.org.allbinary.logic.communication.log.Log;
 export class LogFactory extends Object {
-    /*actual*/ static getInstance(specialMessage, anyType = {}, functionName, exception = {}) {
+    /*actual*/ static getInstance(specialMessage, anyType, functionName, exception) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Log(specialMessage, anyType, functionName, exception);
     }
-    /*actual*/ static getInstanceF(specialMessage, anyType = {}, functionName) {
+    /*actual*/ static getInstanceF(specialMessage, anyType, functionName) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Log(specialMessage, anyType, functionName, NullUtil.getInstance().NULL_OBJECT);
     }

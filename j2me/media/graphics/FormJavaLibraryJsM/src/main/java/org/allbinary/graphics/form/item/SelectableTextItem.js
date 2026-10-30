@@ -14,7 +14,7 @@
 //not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABTextItem } from './ABTextItem.js';
-//not GWT import - same folder const ABStringComponent
+//sameFolderImports - not GWT import - same folder const ABStringComponent
 export class SelectableTextItem extends ABTextItem {
     constructor(label, layout, altText, backgroundBasicColor, foregroundBasicColor) {
         super(label, layout, altText, backgroundBasicColor, foregroundBasicColor);
@@ -26,7 +26,7 @@ export class SelectableTextItem extends ABTextItem {
     }
     paintXY(graphics, x, y) {
         this.myFontProcessor.process(graphics);
-        var stringComponent = this.getLabelStringComponent();
+        let stringComponent = this.getLabelStringComponent();
         ;
         if (stringComponent !=
             null) {

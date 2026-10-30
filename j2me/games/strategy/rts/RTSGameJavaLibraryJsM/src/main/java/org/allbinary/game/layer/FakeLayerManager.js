@@ -19,7 +19,7 @@ import { GeographicMapCellType } from '../../../../org/allbinary/media/graphics/
 //not GWT import const GeographicMapCompositeInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryGameLayerManager } from './AllBinaryGameLayerManager.js';
-//not GWT import - same folder const AllBinaryGameLayerManager
+//sameFolderImports - not GWT import - same folder const AllBinaryGameLayerManager
 export class FakeLayerManager extends AllBinaryGameLayerManager {
     constructor(gameInfo) {
         super(BasicColorFactory.getInstance().BLACK, BasicColorFactory.getInstance().WHITE, gameInfo);

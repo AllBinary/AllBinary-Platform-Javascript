@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SWTProcessor } from './SWTProcessor.js';
-//not GWT import - same folder const SWTProcessor
+//sameFolderImports - not GWT import - same folder const SWTProcessor
 export class SWTProcessorUtil extends Object {
     constructor() {
         super(...arguments);

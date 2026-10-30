@@ -23,12 +23,12 @@ import { ScaleProperties } from '../../../../org/allbinary/media/ScaleProperties
 //not GWT import const ScaleProperties
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomTextAnimation } from './CustomTextAnimation.js';
-//not GWT import - same folder const CustomTextAnimation
+//sameFolderImports - not GWT import - same folder const CustomTextAnimation
 import { AdjustCustomTextAnimation } from './AdjustCustomTextAnimation.js';
-//not GWT import - same folder const AdjustCustomTextAnimation
+//sameFolderImports - not GWT import - same folder const AdjustCustomTextAnimation
 export class CustomTextAnimationFactory extends Object {
     static createDXY(text, fontSize, dx, dy, animationBehaviorFactory) {
-        var customTextAnimationFactory = new CustomTextAnimationFactory(text, fontSize, animationBehaviorFactory);
+        let customTextAnimationFactory = new CustomTextAnimationFactory(text, fontSize, animationBehaviorFactory);
         ;
         customTextAnimationFactory.dx = dx;
         customTextAnimationFactory.dy = dy;
@@ -43,14 +43,14 @@ export class CustomTextAnimationFactory extends Object {
         this.dy = 0;
         this.scaleProperties = new ScaleProperties();
         this.text = text;
-        this.scaleProperties.scaleHeight = Math.round(fontSize) - (fontSize / 4);
+        this.scaleProperties.scaleHeight = globalThis.Math.trunc(fontSize) - (globalThis.Math.trunc(fontSize / 4));
         this.initScaleHeight = this.scaleProperties.scaleHeight;
         this.animationBehaviorFactory = animationBehaviorFactory;
         this.font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight);
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var customTextAnimation;
+        let customTextAnimation;
         ;
         if (this.dx != 0 || this.dy != 0) {
             customTextAnimation = new AdjustCustomTextAnimation(this.text, this.scaleProperties.scaleHeight, this.dx, this.dy, this.animationBehaviorFactory.getOrCreateInstance());

@@ -44,9 +44,9 @@ import { EventStrings } from '../../../../../org/allbinary/logic/util/event/Even
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HudGraphicsPosition } from './HudGraphicsPosition.js';
-//not GWT import - same folder const HudGraphicsPosition
+//sameFolderImports - not GWT import - same folder const HudGraphicsPosition
 import { BasicHudFactory } from './BasicHudFactory.js';
-//not GWT import - same folder const BasicHudFactory
+//sameFolderImports - not GWT import - same folder const BasicHudFactory
 export class BasicHud extends Object {
     constructor(location, direction, bufferZone, basicColor) {
         super();
@@ -80,12 +80,14 @@ export class BasicHud extends Object {
             this.hudGraphicsPosition = this.getHudGraphicsPositionWH(this.displayInfo.getLastWidth(), this.displayInfo.getLastHeight(), this.updateMaxWidth, this.updateMaxHeight);
             this.x = this.hudGraphicsPosition.getPoint().getX();
             this.setY(this.hudGraphicsPosition.getPoint().getY());
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+            }
         }
         this.myFontProcessor = MyFontProcessor.getInstance();
     }
@@ -99,13 +101,13 @@ export class BasicHud extends Object {
     }
     //@Throws(Exception.constructor)
     getHudGraphicsPositionWH(width, height, maxWidth, maxHeight) {
-        var x = 0;
+        let x = 0;
         ;
-        var y = 0;
+        let y = 0;
         ;
-        var anchor = 0;
+        let anchor = 0;
         ;
-        var basicHudFactory = BasicHudFactory.getInstance();
+        let basicHudFactory = BasicHudFactory.getInstance();
         ;
         if (basicHudFactory.BOTTOMLEFT == this.getLocation()) {
             x = this.bufferZone + 2;
@@ -128,12 +130,12 @@ export class BasicHud extends Object {
             anchor = Graphics.TOP & Graphics.RIGHT;
         }
         else if (basicHudFactory.TOPCENTER == this.getLocation()) {
-            x = ((width - maxWidth) / 2);
+            x = (globalThis.Math.trunc((width - maxWidth) / 2));
             y = this.bufferZoneY;
             anchor = Graphics.TOP & Graphics.HCENTER;
         }
         else if (basicHudFactory.BOTTOMCENTER == this.getLocation()) {
-            x = ((width - maxWidth) / 2);
+            x = (globalThis.Math.trunc((width - maxWidth) / 2));
             y = height - maxHeight - this.bufferZone;
             anchor = Graphics.BOTTOM & Graphics.HCENTER;
         }
@@ -219,7 +221,7 @@ export class BasicHud extends Object {
     paintDXY(graphics, charArray, offset, len, charArray2, offset2, len2, xOffset, xOffset2) {
         this.myFontProcessor.process(graphics);
         this.basicSetColorUtil.setBasicColorP(graphics, this.getBasicColorP());
-        var y = this.getY();
+        let y = this.getY();
         ;
         graphics.drawChars(charArray, offset, len, this.x + xOffset, y, this.hudGraphicsPosition.getAnchor());
         graphics.drawChars(charArray2, offset2, len2, this.x + xOffset2, y, this.hudGraphicsPosition.getAnchor());
@@ -227,7 +229,7 @@ export class BasicHud extends Object {
     paintDX(graphics, charArray, offset, len, charArray2, offset2, len2, xOffset) {
         this.myFontProcessor.process(graphics);
         this.basicSetColorUtil.setBasicColorP(graphics, this.getBasicColorP());
-        var y = this.getY();
+        let y = this.getY();
         ;
         graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition.getAnchor());
         graphics.drawChars(charArray2, offset2, len2, this.x + xOffset, y, this.hudGraphicsPosition.getAnchor());
@@ -235,14 +237,14 @@ export class BasicHud extends Object {
     paintOffsetAndLength(graphics, charArray, offset, len) {
         this.myFontProcessor.process(graphics);
         this.basicSetColorUtil.setBasicColorP(graphics, this.getBasicColorP());
-        var y = this.getY();
+        let y = this.getY();
         ;
         graphics.drawChars(charArray, offset, len, this.x, y, this.hudGraphicsPosition.getAnchor());
     }
     paintString(graphics, string) {
         this.myFontProcessor.process(graphics);
         this.basicSetColorUtil.setBasicColorP(graphics, this.getBasicColorP());
-        var y = this.getY() + this.offsetY;
+        let y = this.getY() + this.offsetY;
         ;
         graphics.drawString(string, this.x, y, this.hudGraphicsPosition.getAnchor());
     }

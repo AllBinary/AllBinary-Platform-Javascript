@@ -18,7 +18,7 @@ import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorBaseRotationAnimation } from './VectorBaseRotationAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class VectorRotationAnimation extends VectorBaseRotationAnimation {
     constructor(currentPoints, basicColor, animationBehavior) {
         super(AngleInfo.getInstance((AngleFactory.getInstance().TOTAL_ANGLE / currentPoints.length)), currentPoints, basicColor, animationBehavior);
@@ -26,7 +26,7 @@ export class VectorRotationAnimation extends VectorBaseRotationAnimation {
         this.angleInfo.adjustAngle(this.getFrame());
     }
     setFrameByDirection(direction) {
-        var angle = this.directionUtil.getFrameAngle(direction);
+        let angle = this.directionUtil.getFrameAngle(direction);
         ;
         this.adjustFrameToAngle(angle);
     }
@@ -38,7 +38,7 @@ export class VectorRotationAnimation extends VectorBaseRotationAnimation {
         this.angleInfo.adjustAngle(this.getFrame());
     }
     adjustFrame(newAngle) {
-        this.setFrame(this.frameUtil.getFrameForAngle(newAngle, Math.round(this.angleInfo.getAngleIncrementInfo().getAngleIncrement())));
+        this.setFrame(this.frameUtil.getFrameForAngle(newAngle, globalThis.Math.trunc(this.angleInfo.getAngleIncrementInfo().getAngleIncrement())));
     }
     adjustFrameToAngle(newAngle) {
         this.adjustFrame(newAngle.getValue());

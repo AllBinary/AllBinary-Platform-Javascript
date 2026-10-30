@@ -22,7 +22,7 @@ import { MotionGestureRecognizer } from '../../../../org/allbinary/input/motion/
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionRecognizer } from './MotionRecognizer.js';
-//not GWT import - same folder const MotionRecognizer
+//sameFolderImports - not GWT import - same folder const MotionRecognizer
 export class AllMotionRecognizer extends MotionRecognizer {
     constructor() {
         super();
@@ -40,7 +40,7 @@ export class AllMotionRecognizer extends MotionRecognizer {
             this.touchButtonProcessing = true;
         }
         if (!this.touchButtonProcessing) {
-            var point = AllMotionRecognizer.pointCircularPool.getNextInstance();
+            let point = AllMotionRecognizer.pointCircularPool.getNextInstance();
             ;
             point.setX(x);
             point.setY(y);
@@ -52,7 +52,7 @@ export class AllMotionRecognizer extends MotionRecognizer {
         if (this.touchButtonRecognizer.releaseTouchButtonInput(x, y, deviceId)) {
         }
         if (!this.touchButtonProcessing) {
-            var point = AllMotionRecognizer.pointCircularPool.getNextInstance();
+            let point = AllMotionRecognizer.pointCircularPool.getNextInstance();
             ;
             point.setX(x);
             point.setY(y);
@@ -68,7 +68,7 @@ export class AllMotionRecognizer extends MotionRecognizer {
             this.touchButtonRecognizer.pressTouchButtonInput(x, y, deviceId);
         }
         if (!this.touchButtonProcessing) {
-            var point = AllMotionRecognizer.pointCircularPool.getNextInstance();
+            let point = AllMotionRecognizer.pointCircularPool.getNextInstance();
             ;
             point.setX(x);
             point.setY(y);
@@ -80,7 +80,7 @@ export class AllMotionRecognizer extends MotionRecognizer {
         if (x != this.lastX || y != this.lastY) {
             this.lastX = x;
             this.lastY = y;
-            var point = AllMotionRecognizer.pointCircularPool.getNextInstance();
+            let point = AllMotionRecognizer.pointCircularPool.getNextInstance();
             ;
             point.setX(x);
             point.setY(y);
@@ -89,7 +89,7 @@ export class AllMotionRecognizer extends MotionRecognizer {
     }
     //@Throws(Exception.constructor)
     processScrolledMotionEvent(x, y, deviceId, modifiers) {
-        var point = AllMotionRecognizer.pointCircularPool.getNextInstance();
+        let point = AllMotionRecognizer.pointCircularPool.getNextInstance();
         ;
         point.setX(x);
         point.setY(y);

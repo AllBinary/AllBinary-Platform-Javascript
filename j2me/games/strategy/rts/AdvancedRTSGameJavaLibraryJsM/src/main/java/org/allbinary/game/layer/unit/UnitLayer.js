@@ -150,9 +150,9 @@ const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableUnitBehavior } from './CollidableUnitBehavior.js';
-//not GWT import - same folder const CollidableUnitBehavior
+//sameFolderImports - not GWT import - same folder const CollidableUnitBehavior
 import { UnitWaypointBehavior2 } from './UnitWaypointBehavior2.js';
-//not GWT import - same folder const UnitWaypointBehavior
+//sameFolderImports - not GWT import - same folder const UnitWaypointBehavior
 export class UnitLayer extends AdvancedRTSGameLayer {
     static getStaticType() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -219,20 +219,15 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     }
     //@Throws(Exception.constructor)
     updateWaypointBehavior(geographicMapInterface) {
-        var hashtable = StdUtil.getInstance().createHashtable();
+        let hashtable = StdUtil.getInstance().createHashtable();
         ;
         hashtable.put(this.groupCommonFactory.ID, this.getGroupInterface());
         hashtable.put(Layer.ID, this);
         hashtable.put(AllBinaryGameLayerManager.ID, this.allBinaryGameLayerManagerP);
         this.setWaypointBehavior(new UnitWaypointBehavior2(this, this.waypointLayerInterfaceFactoryInterface.getNextInstance(hashtable, this.x, this.y, this.z)));
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var waypoint = J2MEUtil.isHTML()
-            ?
-                new MultipassNoCacheWaypoint(this, AttackSound.getInstance())
-            :
-                new NoCacheWaypoint(this, AttackSound.getInstance());
-        ;
+        let waypoint = (J2MEUtil.isHTML() ? new MultipassNoCacheWaypoint(this, AttackSound.getInstance()) : new NoCacheWaypoint(this, AttackSound.getInstance()));
         ;
         this.getWaypointBehavior().setWaypoint(waypoint);
         super.updateWaypointBehavior(geographicMapInterface);
@@ -251,29 +246,29 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     //@Throws(Exception.constructor)
     updateSensorGeographicMapCellPositionList() {
         if (VisibleCellPositionsSingleton.getInstance().shouldProcess()) {
-            var currentGeographicMapCellPosition = this.getCurrentGeographicMapCellPosition();
+            let currentGeographicMapCellPosition = this.getCurrentGeographicMapCellPosition();
             ;
             this.sensorGeographicMapCellPositionList.clear();
             this.sensorGeographicMapCellPositionList.add(currentGeographicMapCellPosition);
-            var sensorRange = this.weaponRange * UnitLayer.SENSOR_RANGE_MULTIPLIER;
+            let sensorRange = this.weaponRange * UnitLayer.SENSOR_RANGE_MULTIPLIER;
             ;
-            var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+            let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
             ;
-            var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+            let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
             ;
-            var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+            let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
             ;
-            var totalCells = (sensorRange / tiledLayer.getCellHeight()) / 2;
+            let totalCells = (sensorRange / tiledLayer.getCellHeight()) / 2;
             ;
-            var geographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
+            let geographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
             ;
-            var column = currentGeographicMapCellPosition.getColumn();
+            let column = currentGeographicMapCellPosition.getColumn();
             ;
-            var row = currentGeographicMapCellPosition.getRow();
+            let row = currentGeographicMapCellPosition.getRow();
             ;
-            var lastColumn = column + totalCells;
+            let lastColumn = column + totalCells;
             ;
-            var lastRow = row + totalCells;
+            let lastRow = row + totalCells;
             ;
             if (lastColumn > tiledLayer.getColumns()) {
                 lastColumn = tiledLayer.getColumns();
@@ -281,9 +276,9 @@ export class UnitLayer extends AdvancedRTSGameLayer {
             if (lastRow > tiledLayer.getRows()) {
                 lastRow = tiledLayer.getRows();
             }
-            var firstColumn = column - totalCells;
+            let firstColumn = column - totalCells;
             ;
-            var firstRow = row - totalCells;
+            let firstRow = row - totalCells;
             ;
             if (firstColumn < 0) {
                 firstColumn = 0;
@@ -291,9 +286,9 @@ export class UnitLayer extends AdvancedRTSGameLayer {
             if (firstRow < 0) {
                 firstRow = 0;
             }
-            for (var index = lastColumn - 1; index >= firstColumn; index--) {
-                for (var index2 = lastRow - 1; index2 >= firstRow; index2--) {
-                    var geographicMapCellPosition = geographicMapCellPositionFactory.getAt(index, index2);
+            for (let index = lastColumn - 1; index >= firstColumn; index--) {
+                for (let index2 = lastRow - 1; index2 >= firstRow; index2--) {
+                    let geographicMapCellPosition = geographicMapCellPositionFactory.getAt(index, index2);
                     ;
                     if (!this.sensorGeographicMapCellPositionList.contains(geographicMapCellPosition)) {
                         this.sensorGeographicMapCellPositionList.add(geographicMapCellPosition);
@@ -332,16 +327,16 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     //@Throws(Exception.constructor)
     setClosestGeographicMapCellHistory(pathsList) {
         this.rtsLogHelper.setClosestGeographicMapCellHistory(this, pathsList);
-        var closestIndex = -1;
+        let closestIndex = -1;
         ;
-        var shortestDistance = Integer.MAX_VALUE;
+        let shortestDistance = Integer.MAX_VALUE;
         ;
-        var currentDistance = Integer.MAX_VALUE;
+        let currentDistance = Integer.MAX_VALUE;
         ;
-        for (var index = pathsList.size() - 1; index >= 0; index--) {
-            var geographicMapCellPositionBasicArrayList = pathsList.get(index);
+        for (let index = pathsList.size() - 1; index >= 0; index--) {
+            let geographicMapCellPositionBasicArrayList = pathsList.get(index);
             ;
-            var geographicMapCellPosition = geographicMapCellPositionBasicArrayList.get(geographicMapCellPositionBasicArrayList.size() - 1);
+            let geographicMapCellPosition = geographicMapCellPositionBasicArrayList.get(geographicMapCellPositionBasicArrayList.size() - 1);
             ;
             currentDistance = this.layerDistanceUtil.getDistanceAt(this, geographicMapCellPosition.getMidPoint());
             if (currentDistance < shortestDistance) {
@@ -350,9 +345,9 @@ export class UnitLayer extends AdvancedRTSGameLayer {
             }
         }
         if (closestIndex >= 0) {
-            var geographicMapCellPositionBasicArrayList = pathsList.get(closestIndex);
+            let geographicMapCellPositionBasicArrayList = pathsList.get(closestIndex);
             ;
-            var geographicMapCellPosition = geographicMapCellPositionBasicArrayList.get(0);
+            let geographicMapCellPosition = geographicMapCellPositionBasicArrayList.get(0);
             ;
             this.teleportTo(geographicMapCellPosition);
         }
@@ -363,46 +358,48 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     }
     onMovement(trackingEvent) {
         try {
-            var layerInterface = trackingEvent.getLayerInterface();
+            let layerInterface = trackingEvent.getLayerInterface();
             ;
             if (layerInterface.getGroupInterface()[0] != this.getGroupInterface()[0]) {
                 this.getUnitWaypointBehavior().getPossibleTargetList().add(layerInterface);
                 layerInterface.onMovementFound(this.getTrackingEvent());
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "onMovement", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "onMovement", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     onMovementFound(trackingEvent) {
-        var layerInterface = trackingEvent.getLayerInterface();
+        let layerInterface = trackingEvent.getLayerInterface();
         ;
         if (layerInterface.getGroupInterface()[0] != this.getGroupInterface()[0]) {
             this.getUnitWaypointBehavior().getPossibleTargetList().add(layerInterface);
         }
     }
     initRangeHack() {
-        var basicWeaponPart = this.getPartInterfaceArray()[0];
+        let basicWeaponPart = this.getPartInterfaceArray()[0];
         ;
-        var weaponProperties = basicWeaponPart.getWeaponProperties();
+        let weaponProperties = basicWeaponPart.getWeaponProperties();
         ;
         this.weaponRange = weaponProperties.getRange();
         this.initRangeAnimation = AdjustedCircleAnimation.createW(this.weaponRange, this.weaponRange, this.getWidth(), this.basicColorFactory.GREEN);
-        var sensorRange = this.weaponRange * UnitLayer.SENSOR_RANGE_MULTIPLIER;
+        let sensorRange = this.weaponRange * UnitLayer.SENSOR_RANGE_MULTIPLIER;
         ;
         this.initSensorRangeAnimation = AdjustedCircleAnimation.createW(sensorRange, sensorRange, this.getWidth(), this.basicColorFactory.RED);
         this.getUnitWaypointBehavior().initRange(this.weaponRange);
-        this.fireTimeHelper.delay = (Math.round(weaponProperties.getReloadTime()));
+        this.fireTimeHelper.delay = (globalThis.Math.trunc(weaponProperties.getReloadTime()));
     }
     //@Throws(Exception.constructor)
     processBuiltTick(allBinaryLayerManager) {
         if (!this.getHealthInterface().isAlive()) {
             if (this.isReadyForExplosion()) {
-                var currentFrame = this.destroyAnimationInterface.getFrame();
+                let currentFrame = this.destroyAnimationInterface.getFrame();
                 ;
-                var size = this.destroyAnimationInterface.getSize() - 1;
+                let size = this.destroyAnimationInterface.getSize() - 1;
                 ;
                 if (currentFrame == size) {
                     if (!this.getHealthInterface().isAlive()) {
@@ -428,19 +425,19 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         this.getUnitWaypointBehavior().processTick(allBinaryLayerManager);
     }
     teleportTo(geographicMapCellPosition) {
-        var point = geographicMapCellPosition.getMidPoint();
+        let point = geographicMapCellPosition.getMidPoint();
         ;
         this.setPosition(point.getX() - this.getHalfWidth(), point.getY() - this.getHalfHeight(), this.z);
     }
     //@Throws(Exception.constructor)
     getCurrentGeographicMapCellPosition() {
-        var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+        let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var geographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(this.x + this.getHalfWidth(), this.y + this.getHalfHeight());
+        let geographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(this.x + this.getHalfWidth(), this.y + this.getHalfHeight());
         ;
-        var raceTrackGeographicMap = geographicMapInterface;
+        let raceTrackGeographicMap = geographicMapInterface;
         ;
         if (!raceTrackGeographicMap.isValid(geographicMapCellPosition)) {
             throw new Exception("Position is not really on the map: " + geographicMapCellPosition);
@@ -470,14 +467,14 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         this.rotationAnimationInterfaceP.nextRotation();
     }
     down() {
-        var velocityProperties = this.getVehicleProperties().getVelocityProperties();
+        let velocityProperties = this.getVehicleProperties().getVelocityProperties();
         ;
         if (!velocityProperties.isOverXYMaxForwardVelocity()) {
             this.accelerate(this.decelerationBasicDecimal);
         }
     }
     up() {
-        var velocityProperties = this.getVehicleProperties().getVelocityProperties();
+        let velocityProperties = this.getVehicleProperties().getVelocityProperties();
         ;
         if (!velocityProperties.isOverXYMaxForwardVelocity()) {
             this.accelerate(this.accelerationBasicDecimal);
@@ -494,14 +491,14 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     }
     //@Throws(Exception.constructor)
     processInput(layerManager) {
-        var list = this.getGameKeyEventList();
+        let list = this.getGameKeyEventList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var anyType = list.get(index);
+        for (let index = 0; index < size; index++) {
+            let anyType = list.get(index);
             ;
-            var key = GameKeyEventUtil.getKey(anyType);
+            let key = GameKeyEventUtil.getKey(anyType);
             ;
             this.inputProcessorArray[key].processEvent(layerManager, GameKeyEvent.NONE);
         }
@@ -510,16 +507,16 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         this.move();
     }
     accelerate(accelerate) {
-        this.getVehicleProperties().getVelocityProperties().addVelocityi(accelerate.getUnscaled(), Math.round(this.rotationAnimationInterfaceP.getAngleInfoP().getAngle()), 90);
+        this.getVehicleProperties().getVelocityProperties().addVelocityi(accelerate.getUnscaled(), globalThis.Math.trunc(this.rotationAnimationInterfaceP.getAngleInfoP().getAngle()), 90);
     }
     //@Throws(Exception.constructor)
     fireAll(layerManager) {
-        var angleInfo = this.rotationAnimationInterfaceP.getAngleInfoP();
+        let angleInfo = this.rotationAnimationInterfaceP.getAngleInfoP();
         ;
-        var angle = Math.round((angleInfo.getAngle() + this.slightAngle));
+        let angle = globalThis.Math.trunc((angleInfo.getAngle() + this.slightAngle));
         ;
-        this.hashtable.put(SmallIntegerSingletonFactory.getInstance().getAt(1), SmallIntegerSingletonFactory.getInstance().getAt(Math.round(AngleFactory.getInstance().getAt(angle).getValue())));
-        var salvoInterface = this.getPartInterfaceArray()[0];
+        this.hashtable.put(SmallIntegerSingletonFactory.getInstance().getAt(1), SmallIntegerSingletonFactory.getInstance().getAt(globalThis.Math.trunc(AngleFactory.getInstance().getAt(angle).getValue())));
+        let salvoInterface = this.getPartInterfaceArray()[0];
         ;
         salvoInterface.process(layerManager, angle, 90);
     }
@@ -533,57 +530,57 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         this.initRangeHack();
     }
     groundFriction() {
-        var vehicleFrictionProperties = this.getVehicleProperties().getVehicleFrictionProperties();
+        let vehicleFrictionProperties = this.getVehicleProperties().getVehicleFrictionProperties();
         ;
         this.getVehicleProperties().getVehicleFrictionProperties().friction(this.getVehicleProperties().getVelocityProperties(), vehicleFrictionProperties.getTireFrictionNominator());
     }
     //@Throws(Exception.constructor)
     trackTo(reason) {
-        var waypointBehaviorBase = this.waypointBehaviorBase;
+        let waypointBehaviorBase = this.waypointBehaviorBase;
         ;
-        var nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
+        let nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
         ;
-        var point = nextUnvisitedPathGeographicMapCellPosition.getMidPoint();
+        let point = nextUnvisitedPathGeographicMapCellPosition.getMidPoint();
         ;
-        var dx = (this.getXP() + this.getHalfWidth()) - point.getX();
+        let dx = (this.getXP() + this.getHalfWidth()) - point.getX();
         ;
-        var dy = (this.getYP() + this.getHalfHeight()) - point.getY();
+        let dy = (this.getYP() + this.getHalfHeight()) - point.getY();
         ;
         this.rtsLogHelper.trackTo(this, nextUnvisitedPathGeographicMapCellPosition, dx, dy, reason);
         this.trackToDXY(dx, dy);
     }
     //@Throws(Exception.constructor)
     trackToDXY(dx, dy) {
-        var angleOfTarget = 0;
+        let angleOfTarget = 0;
         ;
         this.trackToDXYTargetAngle(dx, dy, angleOfTarget);
     }
     //@Throws(Exception.constructor)
     turnTo(dx, dy, targetAngle) {
-        var waypointBehaviorBase = this.waypointBehaviorBase;
+        let waypointBehaviorBase = this.waypointBehaviorBase;
         ;
-        var nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
+        let nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
         ;
-        var evading = false;
+        let evading = false;
         ;
         if (this.getUnitWaypointBehavior().getSensorAction() == SensorActionFactory.getInstance().EVADE) {
             this.rtsLogHelper.evade(this);
             evading = true;
             targetAngle += 180;
         }
-        var angleInfo = this.rotationAnimationInterfaceP.getAngleInfoP();
+        let angleInfo = this.rotationAnimationInterfaceP.getAngleInfoP();
         ;
-        var angle = FrameUtil.getInstance().adjustAngleToFrameAngle(angleInfo.getAngle() - 270);
+        let angle = FrameUtil.getInstance().adjustAngleToFrameAngle(angleInfo.getAngle() - 270);
         ;
         this.rtsLogHelper.turnTo(this, dx, dy, angleInfo, angle, this.movementAngle, evading, targetAngle);
-        var gameKeyEventFactory = GameKeyEventFactory.getInstance();
+        let gameKeyEventFactory = GameKeyEventFactory.getInstance();
         ;
         if (dx == 0 && dy == 0) {
             this.rtsLogHelper.doneMoving(this);
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
         }
-        else if ((Math.round(this.movementAngle.getValue())) == angle) {
+        else if ((globalThis.Math.trunc(this.movementAngle.getValue())) == angle) {
             if (dx > 0 && this.movementAngle == this.angleFactory.LEFT) {
                 this.rtsLogHelper.movingLeft(this);
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -627,7 +624,7 @@ export class UnitLayer extends AdvancedRTSGameLayer {
                         this.handleDeltalY(dx, dy);
                     }
                 }
-                var deltaAngle2 = this.movementAngle.getValue() - angle;
+                let deltaAngle2 = this.movementAngle.getValue() - angle;
                 ;
                 if (deltaAngle2 > 0) {
                     this.rtsLogHelper.rotateRight(this);
@@ -648,9 +645,9 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         }
     }
     handleDeltalX(dx, dy) {
-        var waypointBehaviorBase = this.waypointBehaviorBase;
+        let waypointBehaviorBase = this.waypointBehaviorBase;
         ;
-        var nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
+        let nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
         ;
         if (dx > 0) {
             this.movementAngle = this.angleFactory.LEFT;
@@ -663,9 +660,9 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         this.rtsLogHelper.handle(this, this.movementAngle);
     }
     handleDeltalY(dx, dy) {
-        var waypointBehaviorBase = this.waypointBehaviorBase;
+        let waypointBehaviorBase = this.waypointBehaviorBase;
         ;
-        var nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
+        let nextUnvisitedPathGeographicMapCellPosition = waypointBehaviorBase.getNextUnvisitedPathGeographicMapCellPosition();
         ;
         if (dy > 0) {
             this.movementAngle = this.angleFactory.UP;
@@ -679,13 +676,13 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     }
     //@Throws(Exception.constructor)
     trackToDXYTargetAngle(dx, dy, targetAngle) {
-        var list = this.getUnitWaypointBehavior().getSteeringVisitorList();
+        let list = this.getUnitWaypointBehavior().getSteeringVisitorList();
         ;
         if (list.size() > 0) {
-            for (var index = list.size() - 1; index >= 0; index--) {
-                var steeringVisitor = list.get(index);
+            for (let index = list.size() - 1; index >= 0; index--) {
+                let steeringVisitor = list.get(index);
                 ;
-                var anyType = steeringVisitor.visit(this);
+                let anyType = steeringVisitor.visit(this);
                 ;
                 if (anyType ==
                     null) {
@@ -700,7 +697,7 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     }
     //@Throws(Exception.constructor)
     fireOrMove() {
-        var gameKeyEventFactory = GameKeyEventFactory.getInstance();
+        let gameKeyEventFactory = GameKeyEventFactory.getInstance();
         ;
         if (this.getUnitWaypointBehavior().needToMove()) {
             this.rtsLayer2LogHelper.steeringUp(this);
@@ -719,37 +716,37 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     }
     move() {
         try {
-            var velocityProperties = this.getVehicleProperties().getVelocityProperties();
+            let velocityProperties = this.getVehicleProperties().getVelocityProperties();
             ;
-            var velocityXScaled = velocityProperties.getVelocityXBasicDecimalP().getScaled();
+            let velocityXScaled = velocityProperties.getVelocityXBasicDecimalP().getScaled();
             ;
-            var velocityYScaled = velocityProperties.getVelocityYBasicDecimalP().getScaled();
+            let velocityYScaled = velocityProperties.getVelocityYBasicDecimalP().getScaled();
             ;
             this.getUnitWaypointBehavior().move();
             if (velocityXScaled != 0 || velocityYScaled != 0) {
                 this.getUnitWaypointBehavior().setMoving(true);
-                var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+                let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
                 ;
-                var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+                let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
                 ;
-                this.layerPartialCellPositionsUtil.getAllDXY(geographicMapInterface, this, Math.round(velocityXScaled), Math.round(velocityYScaled), UnitLayer.getPartialpositionlist());
-                var cellPosition = DropCellPositionHistory.getInstance().getCellPositionWithDrop(UnitLayer.getPartialpositionlist());
+                this.layerPartialCellPositionsUtil.getAllDXY(geographicMapInterface, this, globalThis.Math.trunc(velocityXScaled), globalThis.Math.trunc(velocityYScaled), UnitLayer.getPartialpositionlist());
+                let cellPosition = DropCellPositionHistory.getInstance().getCellPositionWithDrop(UnitLayer.getPartialpositionlist());
                 ;
                 if (cellPosition == this.cellPositionFactory.NONE) {
-                    var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+                    let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
                     ;
-                    var tiledLayerUtil = TiledLayerUtil.getInstance();
+                    let tiledLayerUtil = TiledLayerUtil.getInstance();
                     ;
-                    var x = this.x + Math.round(velocityXScaled);
+                    let x = this.x + globalThis.Math.trunc(velocityXScaled);
                     ;
-                    var y = this.y + Math.round(velocityYScaled);
+                    let y = this.y + globalThis.Math.trunc(velocityYScaled);
                     ;
                     x = tiledLayerUtil.keepOnMapX(tiledLayer, x, this.getWidth());
                     y = tiledLayerUtil.keepOnMapY(tiledLayer, y, this.getHeight());
                     this.setPosition(x, y, this.z);
                 }
                 else {
-                    var allbinaryLayer = DropCellPositionHistory.getInstance().getLayerInterface(cellPosition);
+                    let allbinaryLayer = DropCellPositionHistory.getInstance().getLayerInterface(cellPosition);
                     ;
                     this.getUnitWaypointBehavior().setMovingFromStopped(false);
                     this.getUnitWaypointBehavior().addBuildingChase(allbinaryLayer, cellPosition);
@@ -764,14 +761,16 @@ export class UnitLayer extends AdvancedRTSGameLayer {
             if (this.getUnitWaypointBehavior().isMovingFromStopped() && this.isVisible()) {
                 SecondaryPlayerQueueFactory.getInstance().add(this.moveSoundInterface);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "move", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "move", e);
+            }
         }
     }
     allStop() {
-        var velocityProperties = this.getVehicleProperties().getVelocityProperties();
+        let velocityProperties = this.getVehicleProperties().getVelocityProperties();
         ;
         velocityProperties.getVelocityXBasicDecimalP().setint(0);
         velocityProperties.getVelocityYBasicDecimalP().setint(0);
@@ -779,11 +778,11 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     paint(graphics) {
         if (this.isVisible()) {
             super.paint(graphics);
-            var viewPosition = this.getViewPosition();
+            let viewPosition = this.getViewPosition();
             ;
-            var viewX = viewPosition.getX();
+            let viewX = viewPosition.getX();
             ;
-            var viewY = viewPosition.getY();
+            let viewY = viewPosition.getY();
             ;
             this.decalAnimation.paintXY(graphics, viewX, viewY);
             this.rangeAnimation.paintXY(graphics, viewX, viewY);
@@ -797,7 +796,7 @@ export class UnitLayer extends AdvancedRTSGameLayer {
     }
     //@Throws(Exception.constructor)
     onBuildingEvent(event) {
-        var buildingLayer = event.getRtsLayer();
+        let buildingLayer = event.getRtsLayer();
         ;
         this.getUnitWaypointBehavior().moveAwayFromBuilding(buildingLayer);
     }
@@ -827,7 +826,7 @@ export class UnitLayer extends AdvancedRTSGameLayer {
             TrackingEventHandler.getInstance().removeListener(this);
             BuildingEventHandler.getInstance().removeListener(this);
             if (!this.getHealthInterface().isAlive()) {
-                var damage = this.getHealthInterface().getMaxHealth();
+                let damage = this.getHealthInterface().getMaxHealth();
                 ;
                 if (damage > 10) {
                     SecondaryPlayerQueueFactory.getInstance().add(ExplosionBasicSound.getInstance());
@@ -877,7 +876,7 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         }
     }
     createHudPaintable() {
-        var rtsLayerHudPaintable = RTSLayerHudPaintable.getInstance();
+        let rtsLayerHudPaintable = RTSLayerHudPaintable.getInstance();
         ;
         rtsLayerHudPaintable.setBasicColorP(this.allBinaryGameLayerManagerP.getForegroundBasicColor());
         rtsLayerHudPaintable.setRtsLayer(this);
@@ -885,15 +884,14 @@ export class UnitLayer extends AdvancedRTSGameLayer {
         return rtsLayerHudPaintable;
     }
     getHudPaintable() {
-        var rtsLayerHudPaintable = RTSLayerHudPaintable.getInstance();
+        let rtsLayerHudPaintable = RTSLayerHudPaintable.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return rtsLayerHudPaintable;
     }
     getType() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return UnitLayer.getStaticType();
-        ;
+        return 1;
     }
     getUnitWaypointBehavior() {
         //if statement needs to be on the same line and ternary does not work the same way.

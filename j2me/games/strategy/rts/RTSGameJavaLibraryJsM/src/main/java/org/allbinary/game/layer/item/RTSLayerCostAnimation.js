@@ -48,7 +48,7 @@ export class RTSLayerCostAnimation extends Animation {
         this.update();
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
         this.adjustedCostX = font.stringWidth(this.DOLLAR);
@@ -60,12 +60,14 @@ export class RTSLayerCostAnimation extends Animation {
     onTechEvent(event) {
         try {
             this.update();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "onTechEvent", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "onTechEvent", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -77,9 +79,9 @@ export class RTSLayerCostAnimation extends Animation {
     paintXY(graphics, x, y) {
         this.myFontProcessor.process(graphics);
         super.paintXY(graphics, x, y);
-        var adjustedCostY = this.image.getHeight() - this.fontHeight;
+        let adjustedCostY = this.image.getHeight() - this.fontHeight;
         ;
-        var xa = x + 2;
+        let xa = x + 2;
         ;
         graphics.drawString(this.DOLLAR, xa, y + adjustedCostY, 0);
         graphics.drawChars(this.costString, 0, this.len, x + this.adjustedCostX, y + adjustedCostY, 0);

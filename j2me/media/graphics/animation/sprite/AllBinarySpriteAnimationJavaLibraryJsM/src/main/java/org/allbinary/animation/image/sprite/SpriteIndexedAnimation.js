@@ -42,7 +42,7 @@ export class SpriteIndexedAnimation extends IndexedAnimation {
         ;
     }
     setBasicColorP(basicColor) {
-        for (var index = 0; index < this.basicColorArray.length; index++) {
+        for (let index = 0; index < this.basicColorArray.length; index++) {
             if (basicColor == this.basicColorArray[index]) {
                 this.setFrame(index);
                 break;

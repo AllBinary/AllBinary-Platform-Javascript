@@ -21,7 +21,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionJ2MEGameInputMapping } from './MotionJ2MEGameInputMapping.js';
-//not GWT import - same folder const MotionJ2MEGameInputMapping
+//sameFolderImports - not GWT import - same folder const MotionJ2MEGameInputMapping
 export class PlatformInputMappingFactory extends Object {
     constructor() {
         super(...arguments);
@@ -37,12 +37,14 @@ export class PlatformInputMappingFactory extends Object {
             if (this.inputToGameKeyMapping == PersistentInputMapping.getNullInstance()) {
                 this.inputToGameKeyMapping = new MotionJ2MEGameInputMapping();
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.inputToGameKeyMapping;

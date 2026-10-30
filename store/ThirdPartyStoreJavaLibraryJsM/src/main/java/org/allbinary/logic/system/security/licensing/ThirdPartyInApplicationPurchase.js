@@ -15,21 +15,21 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const LockableFeature
+//sameFolderImports - not GWT import - same folder const LockableFeature
 export class ThirdPartyInApplicationPurchase extends Object {
     isPurchased(lockableFeature) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return false;
     }
-    onCreate(anyType = {}, stateObject = {}) {
+    onCreate(anyType, stateObject) {
     }
     onDestroy() {
     }
     onStart() {
     }
-    onActivityResult(requestCode, resultCode, dataObject = {}) {
+    onActivityResult(requestCode, resultCode, dataObject) {
     }
-    onSaveInstanceState(anyType = {}) {
+    onSaveInstanceState(anyType) {
     }
     onStop() {
     }

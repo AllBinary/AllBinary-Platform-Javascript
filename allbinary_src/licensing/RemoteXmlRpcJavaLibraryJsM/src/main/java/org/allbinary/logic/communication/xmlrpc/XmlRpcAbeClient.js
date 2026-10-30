@@ -67,7 +67,7 @@ export class XmlRpcAbeClient extends Object {
         }
         this.isDone = false;
         this.server = this.start;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.START_SERVER);
         stringBuffer.appendint(this.getServer());
@@ -76,13 +76,13 @@ export class XmlRpcAbeClient extends Object {
         this.logUtil.putF(stringBuffer.toString(), this, this.commonStrings.CONSTRUCTOR);
     }
     //@Throws(Exception.constructor)
-    get(anyType = {}) {
+    get(anyType) {
         ForcedLogUtil.log(this.commonStrings.NOT_IMPLEMENTED, this);
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullUtil.getInstance().NULL_OBJECT;
     }
     //@Throws(Exception.constructor)
-    tryAnother(anyType = {}) {
+    tryAnother(anyType) {
         if (getServer() < getMaxServers()) {
             this.setServer(getServer() + 1);
         }

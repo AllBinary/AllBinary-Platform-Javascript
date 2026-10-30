@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const HealthListenerInterface
+//sameFolderImports - not GWT import - same folder const HealthListenerInterface
 export class NullHealthListener extends Object {
     onHealthChange() {
     }

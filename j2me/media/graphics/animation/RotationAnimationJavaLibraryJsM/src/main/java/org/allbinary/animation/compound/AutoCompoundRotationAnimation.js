@@ -22,7 +22,7 @@ import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const AngleInfo
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const CompoundAnimationInterface
+//sameFolderImports - not GWT import - same folder const CompoundAnimationInterface
 export class AutoCompoundRotationAnimation extends RotationAnimation {
     constructor(animationInterfaceArray, animationBehavior) {
         super(AngleInfo.getInstance(AngleFactory.getInstance().QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), animationBehavior);
@@ -82,19 +82,19 @@ export class AutoCompoundRotationAnimation extends RotationAnimation {
         return this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
     }
     nextAnimation() {
-        var frame = this.getFrame();
+        let frame = this.getFrame();
         ;
         this.circularIndexUtil.next();
         this.setFrame(frame);
     }
     previousAnimation() {
-        var frame = this.getFrame();
+        let frame = this.getFrame();
         ;
         this.circularIndexUtil.previous();
         this.setFrame(frame);
     }
     setAnimation(index) {
-        var frame = this.getFrame();
+        let frame = this.getFrame();
         ;
         this.circularIndexUtil.setIndex(index);
         this.setFrame(frame);
@@ -125,7 +125,7 @@ export class AutoCompoundRotationAnimation extends RotationAnimation {
     }
     //@Throws(Exception.constructor)
     set(gl) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].set(gl);
         }
     }

@@ -16,32 +16,39 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const AbFile
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileOutputStream } from './AbFileOutputStream.js';
-//not GWT import - same folder const AbFileOutputStream
+//sameFolderImports - not GWT import - same folder const AbFileOutputStream
 import { AbDataOutputStream } from './AbDataOutputStream.js';
-//not GWT import - same folder const AbDataOutputStream
+//sameFolderImports - not GWT import - same folder const AbDataOutputStream
 import { FileStreamFactory } from './FileStreamFactory.js';
-//not GWT import - same folder const FileStreamFactory
+//sameFolderImports - not GWT import - same folder const FileStreamFactory
 export class DataOutputStreamFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return DataOutputStreamFactory.instance;
     }
     //@Throws(Exception.constructor)
     getInstanceForAbFile(file) {
-        var idFileOutputStream = AbFileOutputStream.createFromAbFile(file);
+        let idFileOutputStream = AbFileOutputStream.createFromAbFile(file);
         ;
-        var idOutData = new AbDataOutputStream(idFileOutputStream);
+        let idOutData = new AbDataOutputStream(idFileOutputStream);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return idOutData;
     }
     //@Throws(Exception.constructor)
-    getInstance(filePath, fileName) {
-        var fileStreamFactory = FileStreamFactory.getInstance();
+    getInstance$overload2(filePath, fileName) {
+        let fileStreamFactory = FileStreamFactory.getInstance();
         ;
-        var fileOutputStream = fileStreamFactory.getFileOutputStreamInstance(filePath, fileName);
+        let fileOutputStream = fileStreamFactory.getFileOutputStreamInstance(filePath, fileName);
         ;
-        var idOutData = new AbDataOutputStream(fileOutputStream);
+        let idOutData = new AbDataOutputStream(fileOutputStream);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return idOutData;

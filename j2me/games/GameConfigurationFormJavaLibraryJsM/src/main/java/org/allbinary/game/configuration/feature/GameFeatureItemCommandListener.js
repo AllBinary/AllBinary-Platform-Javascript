@@ -37,18 +37,20 @@ export class GameFeatureItemCommandListener extends Object {
     }
     commandAction(command, item) {
         try {
-            var itemLabel = item.getLabel();
+            let itemLabel = item.getLabel();
             ;
             this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().ITEM_LABEL).append(itemLabel).toString(), this, MidletStrings.getInstance().COMMAND_ACTION);
             if (item instanceof GameConfigurationGauge) {
                 GameConfigurationUtil.getInstance().change(this.gameOptionsForm, item);
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, MidletStrings.getInstance().COMMAND_ACTION, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, MidletStrings.getInstance().COMMAND_ACTION, e);
+            }
         }
     }
 }

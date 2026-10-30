@@ -27,7 +27,7 @@ import { SimpleGeographicMapCellPositionFactory } from '../../../../../../org/al
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PathFindingNode extends Object {
-    constructor(parent = {}, geographicMapCellPosition) {
+    constructor(parent, geographicMapCellPosition) {
         super();
         this.parent = NullUtil.getInstance().NULL_OBJECT;
         this.geographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION;
@@ -45,13 +45,13 @@ export class PathFindingNode extends Object {
         this.geographicMapCellPosition = geographicMapCellPosition;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.constructor.name.toString());
         stringBuffer.append(CommonLabels.getInstance().COLON_SEP);
         stringBuffer.append(" Path: ");
         stringBuffer.append(this.geographicMapCellPosition.toString());
-        var pathFindingNode = this.getParentP();
+        let pathFindingNode = this.getParentP();
         ;
         while (pathFindingNode !=
             null) {

@@ -21,11 +21,11 @@ import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbina
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSFormInput } from './RTSFormInput.js';
-//not GWT import - same folder const RTSFormInput
+//sameFolderImports - not GWT import - same folder const RTSFormInput
 import { WaypointRTSFormInput } from './WaypointRTSFormInput.js';
-//not GWT import - same folder const WaypointRTSFormInput
+//sameFolderImports - not GWT import - same folder const WaypointRTSFormInput
 import { UnitRTSFormInput } from './UnitRTSFormInput.js';
-//not GWT import - same folder const UnitRTSFormInput
+//sameFolderImports - not GWT import - same folder const UnitRTSFormInput
 export class CompositeRTSFormInput extends RTSFormInput {
     constructor(groupInterface, isPrimaryWaypointCreator, itemIndex) {
         super(groupInterface);
@@ -39,21 +39,21 @@ export class CompositeRTSFormInput extends RTSFormInput {
     //@Throws(Exception.constructor)
     setAllBinaryGameLayerManager(allBinaryGameLayerManager) {
         super.setAllBinaryGameLayerManager(allBinaryGameLayerManager);
-        var geographicMapCompositeInterface = allBinaryGameLayerManager;
+        let geographicMapCompositeInterface = allBinaryGameLayerManager;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var size = this.rtsFormInputArray.length;
+        let size = this.rtsFormInputArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.rtsFormInputArray[index].setAllBinaryGameLayerManager(allBinaryGameLayerManager);
         }
     }
     //@Throws(Exception.constructor)
     processAtPoint(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point) {
-        var scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
+        let scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
         ;
-        var index = scrollSelectionForm.getSelectedIndexForPoint(point);
+        let index = scrollSelectionForm.getSelectedIndexForPoint(point);
         ;
         if (this.isStickyItemSelected() && associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance()) {
             if (this.getSelectedStickyItemIndex() <= this.itemIndex[0]) {
@@ -66,7 +66,7 @@ export class CompositeRTSFormInput extends RTSFormInput {
     }
     //@Throws(Exception.constructor)
     processGameSpecific(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, index) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(CommonLabels.getInstance().INDEX_LABEL + index + " > " + this.itemIndex[0], this, commonStrings.PROCESS);
         if (this.isStickyItemSelected() && associatedRtsLayer == CollidableDestroyableDamageableLayer.getNullInstance()) {

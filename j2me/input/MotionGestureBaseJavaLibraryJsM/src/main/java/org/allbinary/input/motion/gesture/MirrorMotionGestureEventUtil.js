@@ -31,17 +31,17 @@ export class MirrorMotionGestureEventUtil extends Object {
     }
     //@Throws(Exception.constructor)
     mirrorVerticle(motionGestureEvent, halfWidth) {
-        var event = this.motionEventCircularPool.getInstance(motionGestureEvent.getMotionGesture());
+        let event = this.motionEventCircularPool.getInstance(motionGestureEvent.getMotionGesture());
         ;
-        var previousNewX = this.getNewX(motionGestureEvent.getPreviousPoint().getX(), halfWidth);
+        let previousNewX = this.getNewX(motionGestureEvent.getPreviousPoint().getX(), halfWidth);
         ;
-        var currentNewX = this.getNewX(motionGestureEvent.getCurrentPoint().getX(), halfWidth);
+        let currentNewX = this.getNewX(motionGestureEvent.getCurrentPoint().getX(), halfWidth);
         ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var mirroredPreviousPoint = pointFactory.createXY(previousNewX, motionGestureEvent.getPreviousPoint().getY());
+        let mirroredPreviousPoint = pointFactory.createXY(previousNewX, motionGestureEvent.getPreviousPoint().getY());
         ;
-        var mirroredCurrentPoint = pointFactory.createXY(currentNewX, motionGestureEvent.getCurrentPoint().getY());
+        let mirroredCurrentPoint = pointFactory.createXY(currentNewX, motionGestureEvent.getCurrentPoint().getY());
         ;
         event.setPreviousPoint(mirroredPreviousPoint);
         event.setCurrentPoint(mirroredCurrentPoint);
@@ -49,7 +49,7 @@ export class MirrorMotionGestureEventUtil extends Object {
         return event;
     }
     getNewX(x, halfWidth) {
-        var newX = 0;
+        let newX = 0;
         ;
         if (x > halfWidth) {
             newX = halfWidth - (x - halfWidth);

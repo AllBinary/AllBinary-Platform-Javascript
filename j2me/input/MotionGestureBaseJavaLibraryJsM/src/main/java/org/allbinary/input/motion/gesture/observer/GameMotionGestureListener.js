@@ -31,7 +31,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const MotionGestureEvent
+//sameFolderImports - not GWT import - same folder const MotionGestureEvent
 export class GameMotionGestureListener extends Object {
     constructor(signed) {
         super();
@@ -77,21 +77,23 @@ export class GameMotionGestureListener extends Object {
             this.touchGestureCollection.add(ev.getMotionGesture());
             this.signed.onMotionGestureCompleted(this.touchGestureCollection);
             this.touchGestureCollection.clear();
-            //: 
         }
-        catch (e) {
-            var stringBuffer = new StringMaker();
-            ;
-            stringBuffer.append(this.commonStrings.EXCEPTION_LABEL);
-            stringBuffer.append(StringUtil.getInstance().toString(ev.getMotionGesture()));
-            this.logUtil.put(stringBuffer.toString(), this, "release", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let stringBuffer = new StringMaker();
+                ;
+                stringBuffer.append(this.commonStrings.EXCEPTION_LABEL);
+                stringBuffer.append(StringUtil.getInstance().toString(ev.getMotionGesture()));
+                this.logUtil.put(stringBuffer.toString(), this, "release", e);
+            }
         }
     }
     onScrolledMotionGestureEvent(motionGestureEvent) {
     }
     onMotionGestureEvent(ev) {
         try {
-            var motionGestureInput = ev.getMotionGesture();
+            let motionGestureInput = ev.getMotionGesture();
             ;
             if (motionGestureInput == TouchMotionGestureFactory.getInstance().PRESSED) {
                 this.onPressedMotionGestureEvent(ev);
@@ -105,14 +107,16 @@ export class GameMotionGestureListener extends Object {
                 this.motionGestureCollection.clear();
                 this.touchGestureCollection.clear();
             }
-            //: 
         }
-        catch (e) {
-            var stringBuffer = new StringMaker();
-            ;
-            stringBuffer.append(this.commonStrings.EXCEPTION_LABEL);
-            stringBuffer.append(StringUtil.getInstance().toString(ev.getMotionGesture()));
-            this.logUtil.put(stringBuffer.toString(), this, "onMotionGestureEvent", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let stringBuffer = new StringMaker();
+                ;
+                stringBuffer.append(this.commonStrings.EXCEPTION_LABEL);
+                stringBuffer.append(StringUtil.getInstance().toString(ev.getMotionGesture()));
+                this.logUtil.put(stringBuffer.toString(), this, "onMotionGestureEvent", e);
+            }
         }
     }
 }

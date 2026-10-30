@@ -52,12 +52,12 @@ export class HorizontalScreenPatrolAI extends BasicAI {
     processAI(allBinaryLayerManager) {
         super.processKeyAI(this.keyDirection);
         if (this.timeDelayHelper.isTimeTNT()) {
-            var layerInterface = this.getOwnerLayerInterface();
+            let layerInterface = this.getOwnerLayerInterface();
             ;
-            var currentOwnerLayerX = layerInterface.getXP();
+            let currentOwnerLayerX = layerInterface.getXP();
             ;
             if (currentOwnerLayerX < -layerInterface.getWidth()) {
-                var y = MyRandomFactory.getInstance().getAbsoluteNextIntAllowZero(50);
+                let y = MyRandomFactory.getInstance().getAbsoluteNextIntAllowZero(50);
                 ;
                 layerInterface.setPosition(this.displayInfoSingleton.getLastWidth() + layerInterface.getWidth() + 50, y, layerInterface.getZP());
                 this.firedIndex = 0;
@@ -66,9 +66,9 @@ export class HorizontalScreenPatrolAI extends BasicAI {
             }
             if (currentOwnerLayerX < this.firingX && currentOwnerLayerX > -layerInterface.getWidth()) {
                 super.processKeyAI(Canvas.KEY_NUM1);
-                var gameLayerManager = allBinaryLayerManager;
+                let gameLayerManager = allBinaryLayerManager;
                 ;
-                var FIRE = (gameLayerManager.getGameInfo().getCurrentLevel() + 12) >> 2;
+                let FIRE = (gameLayerManager.getGameInfo().getCurrentLevel() + 12) >> 2;
                 ;
                 if (FIRE > this.MAX_FIRE) {
                     FIRE = this.MAX_FIRE;

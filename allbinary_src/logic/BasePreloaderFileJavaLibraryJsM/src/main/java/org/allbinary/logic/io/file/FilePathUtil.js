@@ -23,11 +23,11 @@ const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
 //Used to correct user input for paths
 export class FilePathUtil extends Object {
     static adjust(path) {
-        var abPathData = AbPathData.getInstance();
+        let abPathData = AbPathData.getInstance();
         ;
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
-        var filePathData = FilePathData.getInstance();
+        let filePathData = FilePathData.getInstance();
         ;
         if (stringValidationUtil.isEmpty(path)) {
             //if statement needs to be on the same line and ternary does not work the same way.

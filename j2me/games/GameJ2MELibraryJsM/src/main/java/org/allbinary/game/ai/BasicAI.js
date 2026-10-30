@@ -71,7 +71,7 @@ export class BasicAI extends ArtificialIntelligence {
         ;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(CommonSeps.getInstance().NEW_LINE);
         stringBuffer.append(this.getName());

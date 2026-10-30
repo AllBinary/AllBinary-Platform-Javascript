@@ -45,11 +45,11 @@ export class StringUtil extends Object {
         return this.stringArray;
     }
     count(string, aChar) {
-        var count = 0;
+        let count = 0;
         ;
-        var size = string.length;
+        let size = string.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (string[index] == aChar) {
                 count++;
             }
@@ -57,7 +57,7 @@ export class StringUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return count;
     }
-    toString(anyType = {}) {
+    toString(anyType) {
         if (anyType !=
             null) {
             //if statement needs to be on the same line and ternary does not work the same way.

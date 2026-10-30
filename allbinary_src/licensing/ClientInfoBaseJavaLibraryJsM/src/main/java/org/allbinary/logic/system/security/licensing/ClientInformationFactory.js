@@ -21,15 +21,15 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ClientInformation } from './ClientInformation.js';
-//not GWT import - same folder const ClientInformation
+//sameFolderImports - not GWT import - same folder const ClientInformation
 export class ClientInformationFactory extends Object {
     getInstance() {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         logUtil.putF(commonStrings.NOT_IMPLEMENTED, this, commonStrings.GET_INSTANCE);
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new ClientInformation(stringUtil.NULL_STRING, stringUtil.NULL_STRING, stringUtil.NULL_STRING, stringUtil.NULL_STRING);

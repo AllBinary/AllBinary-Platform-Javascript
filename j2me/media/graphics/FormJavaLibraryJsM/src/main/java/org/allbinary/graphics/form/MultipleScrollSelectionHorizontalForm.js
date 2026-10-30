@@ -19,21 +19,16 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollSelectionForm } from './ScrollSelectionForm.js';
-//not GWT import - same folder const ScrollSelectionForm
+//sameFolderImports - not GWT import - same folder const ScrollSelectionForm
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
-//not GWT import - same folder const FormType
+//sameFolderImports - not GWT import - same folder const FormType
 import { ItemIndexPaintable } from './ItemIndexPaintable.js';
-//not GWT import - same folder const ItemIndexPaintable
+//sameFolderImports - not GWT import - same folder const ItemIndexPaintable
 import { FormTypeFactory } from './FormTypeFactory.js';
-//not GWT import - same folder const FormTypeFactory
-//import { MultipleScrollSelectionFormVerticalPaintable } from './MultipleScrollSelectionFormVerticalPaintable.js';
-//not GWT import - same folder const MultipleScrollSelectionFormVerticalPaintable
-//import { MultipleScrollSelectionFormHorizontalPaintable } from './MultipleScrollSelectionFormHorizontalPaintable.js';
-//not GWT import - same folder const MultipleScrollSelectionFormHorizontalPaintable
 export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     //@Throws(Exception.constructor)
     static createForm(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor) {
-        var scrollSelectionForm = new MultipleScrollSelectionHorizontalForm(title, items, ItemPaintableFactory.getInstance(), border, backgroundBasicColor, foregroundBasicColor);
+        let scrollSelectionForm = new MultipleScrollSelectionHorizontalForm(title, items, ItemPaintableFactory.getInstance(), border, backgroundBasicColor, foregroundBasicColor);
         ;
         scrollSelectionForm.init(rectangle, formType);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,31 +37,37 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     constructor(title, items, formPaintableFactory, border, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, formPaintableFactory, border, 3, backgroundBasicColor, foregroundBasicColor);
         //inner= member=true isStatic=
-        this.MultipleScrollSelectionFormHorizontalPaintable = class extends ItemIndexPaintable {
-            constructor(multipleScrollSelectionForm) {
-                super();
-                this.multipleScrollSelectionForm = multipleScrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            paint(graphics, index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.multipleScrollSelectionForm.paintHorizontal(graphics, index, item, dx, dy);
-                ;
-            }
-        };
+        this.MultipleScrollSelectionFormHorizontalPaintable = (() => {
+            const outer$MultipleScrollSelectionHorizontalForm = this;
+            return class extends ItemIndexPaintable {
+                constructor(multipleScrollSelectionForm) {
+                    super();
+                    this.multipleScrollSelectionForm = multipleScrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                paint(graphics, index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.multipleScrollSelectionForm.paintHorizontal(graphics, index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         //inner= member=true isStatic=
-        this.MultipleScrollSelectionFormVerticalPaintable = class extends ItemIndexPaintable {
-            constructor(multipleScrollSelectionForm) {
-                super();
-                this.multipleScrollSelectionForm = multipleScrollSelectionForm;
-            }
-            //@Throws(Exception.constructor)
-            paint(graphics, index, item, dx, dy) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this.multipleScrollSelectionForm.paintVertical(graphics, index, item, dx, dy);
-                ;
-            }
-        };
+        this.MultipleScrollSelectionFormVerticalPaintable = (() => {
+            const outer$MultipleScrollSelectionHorizontalForm = this;
+            return class extends ItemIndexPaintable {
+                constructor(multipleScrollSelectionForm) {
+                    super();
+                    this.multipleScrollSelectionForm = multipleScrollSelectionForm;
+                }
+                //@Throws(Exception.constructor)
+                paint(graphics, index, item, dx, dy) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.multipleScrollSelectionForm.paintVertical(graphics, index, item, dx, dy);
+                    ;
+                }
+            };
+        })();
         this.rectPaintable = NullPaintable.getInstance();
         this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = ItemIndexPaintable.getInstance();
         this.backgroundColor = BasicColorFactory.getInstance().TRANSPARENT_GREY.intValue();
@@ -80,7 +81,7 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
             //inner=true member= isStatic=
             class MPaintable extends Paintable {
                 paint(graphics) {
-                    MultipleScrollSelectionHorizontalForm.prototype.fillRect(graphics);
+                    outer$MultipleScrollSelectionHorizontalForm.fillRect(graphics);
                 }
             }
             //Otherwise - statement - EmptyStmt
@@ -94,7 +95,7 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     //@Throws(Exception.constructor)
     init(rectangle, formType) {
         super.init(rectangle, formType);
-        var formTypeFactory = FormTypeFactory.getInstance();
+        let formTypeFactory = FormTypeFactory.getInstance();
         ;
         if (formType == formTypeFactory.HORIZONTAL_FORM) {
             this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = new this.MultipleScrollSelectionFormHorizontalPaintable(this);
@@ -109,14 +110,14 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
         }
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
         this.myFontProcessor = MyFontProcessor.getInstance();
     }
     //@Throws(Exception.constructor)
     paintHorizontal(graphics, index, item, dx, dy) {
-        var dx2 = this.paintItem(graphics, index, item, dx, dy) + this.border;
+        let dx2 = this.paintItem(graphics, index, item, dx, dy) + this.border;
         ;
         this.paintable.paint(graphics, index, dx, dy);
         dx = dx2;
@@ -138,19 +139,19 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     paint(graphics) {
         try {
             this.myFontProcessor.process(graphics);
-            var start = this.getStartIndex();
+            let start = this.getStartIndex();
             ;
-            var size = this.size();
+            let size = this.size();
             ;
-            var dx = this.x;
+            let dx = this.x;
             ;
-            var dy = this.y;
+            let dy = this.y;
             ;
             this.rectPaintable.paint(graphics);
             graphics.drawString(this.getTitle(), this.x, this.y - this.fontHeight, 0);
-            var item;
+            let item;
             ;
-            for (var index = start; index < size; index++) {
+            for (let index = start; index < size; index++) {
                 item = this.get(index);
                 if (dx >= this.rectangle.getMaxX()) {
                     if (this.logged) {
@@ -162,10 +163,12 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
                 }
                 dx = this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable.paint(graphics, index, item, dx, dy);
             }
-            //: 
         }
-        catch (e) {
-            PreLogUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.PAINT);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.PAINT);
+            }
         }
     }
 }

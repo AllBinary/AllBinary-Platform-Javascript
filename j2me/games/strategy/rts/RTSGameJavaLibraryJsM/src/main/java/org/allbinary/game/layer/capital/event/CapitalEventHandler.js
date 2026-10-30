@@ -12,14 +12,14 @@
 */
 //not GWT import const EventListenerInterface
 import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import - same folder const CapitalEvent
+//sameFolderImports - not GWT import - same folder const CapitalEvent
 export class CapitalEventHandler extends BasicEventHandler {
     constructor() {
         super();
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var capitalEventListenerInterface = eventListenerInterface;
+        let capitalEventListenerInterface = eventListenerInterface;
         ;
         capitalEventListenerInterface.onCapitalChangeEvent(eventObject);
     }

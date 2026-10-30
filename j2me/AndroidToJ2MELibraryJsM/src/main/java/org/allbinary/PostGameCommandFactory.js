@@ -26,9 +26,9 @@ export class PostGameCommandFactory extends Object {
         return PostGameCommandFactory.instance;
     }
     addCommands(canvas) {
-        var operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
+        let operatingSystemInterface = OperatingSystemFactory.getInstance().getOperatingSystemInstance();
         ;
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         if (!operatingSystemInterface.isOverScan()) {
             canvas.addCommand(gameCommandsFactory.TOGGLE_KEYBOARD);

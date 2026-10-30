@@ -50,9 +50,9 @@ export class RaceTrackDropCellPositionGenerator extends BaseDropCellPositionGene
     }
     //@Throws(Exception.constructor)
     isDropAllowedAt(geographicMapCellPosition) {
-        var raceTrackGeographicMapCellType = this.raceTrackGeographicMap.getCellTypeAt(geographicMapCellPosition);
+        let raceTrackGeographicMapCellType = this.raceTrackGeographicMap.getCellTypeAt(geographicMapCellPosition);
         ;
-        var raceTrackGeographicMapCellTypeFactory = this.raceTrackGeographicMapCellTypeFactory;
+        let raceTrackGeographicMapCellTypeFactory = this.raceTrackGeographicMapCellTypeFactory;
         ;
         if (raceTrackGeographicMapCellType == raceTrackGeographicMapCellTypeFactory.HORIZONTAL_STRAIGHT_ROAD_CELL_TYPE || raceTrackGeographicMapCellType == raceTrackGeographicMapCellTypeFactory.VERTICAL_STRAIGHT_ROAD_CELL_TYPE) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,23 +64,23 @@ export class RaceTrackDropCellPositionGenerator extends BaseDropCellPositionGene
     //@Throws(Exception.constructor)
     update(allBinaryGameLayerManager, geographicMapInterface) {
         this.init();
-        var baseRaceTrackGeographicMap = geographicMapInterface;
+        let baseRaceTrackGeographicMap = geographicMapInterface;
         ;
         this.raceTrackGeographicMap = baseRaceTrackGeographicMap;
         this.raceTrackGeographicMapCellTypeFactory = baseRaceTrackGeographicMap.getGeographicMapCellTypeFactory();
-        var roadGeographicMapCellHistory = RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance();
+        let roadGeographicMapCellHistory = RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance();
         ;
-        var trackedList = roadGeographicMapCellHistory.getTracked();
+        let trackedList = roadGeographicMapCellHistory.getTracked();
         ;
-        var geographicMapCellPosition;
+        let geographicMapCellPosition;
         ;
-        var lastIndex = trackedList.size() - 1;
+        let lastIndex = trackedList.size() - 1;
         ;
-        var total = 0;
+        let total = 0;
         ;
-        var ahead = 0;
+        let ahead = 0;
         ;
-        for (var index = lastIndex; index > 0; index--) {
+        for (let index = lastIndex; index > 0; index--) {
             geographicMapCellPosition = trackedList.get(index);
             total = 0;
             ahead = index;
@@ -96,16 +96,16 @@ export class RaceTrackDropCellPositionGenerator extends BaseDropCellPositionGene
                 }
             }
         }
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             this.drop(allBinaryGameLayerManager, index);
         }
     }
     //@Throws(Exception.constructor)
     processTick(allBinaryLayerManager) {
         if (this.timeDelayHelper.isTime(GameTickTimeDelayHelperFactory.getInstance().startTime)) {
-            var index = this.basicArrayListUtil.getRandomIndex(this.list);
+            let index = this.basicArrayListUtil.getRandomIndex(this.list);
             ;
             this.drop(allBinaryLayerManager, index);
         }

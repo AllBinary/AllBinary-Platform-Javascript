@@ -18,7 +18,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LurchRotationAI } from './LurchRotationAI.js';
-//not GWT import - same folder const LurchRotationAI
+//sameFolderImports - not GWT import - same folder const LurchRotationAI
 export class LurchRotationAIFactory extends Object {
     getInstance(hashtable, ownerLayerInterface, gameInput) {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -34,20 +34,22 @@ export class PartnerIdentifierFileUtil extends Object {
     }
     get() {
         try {
-            var resourceUtil = ResourceUtil.getInstance();
+            let resourceUtil = ResourceUtil.getInstance();
             ;
-            var partnerString = StringUtil.getInstance().EMPTY_STRING;
+            let partnerString = StringUtil.getInstance().EMPTY_STRING;
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return partnerString;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return StringUtil.getInstance().NULL_STRING;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return StringUtil.getInstance().NULL_STRING;
+            }
         }
     }
 }

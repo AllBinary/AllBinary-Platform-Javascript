@@ -14,7 +14,7 @@
 //not GWT import const AnimationBehavior
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinarySpriteRotationAnimation } from './AllBinarySpriteRotationAnimation.js';
-//not GWT import - same folder const AllBinarySpriteRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinarySpriteRotationAnimation
 export class AllBinaryAdjustedSpriteRotationAnimation extends AllBinarySpriteRotationAnimation {
     constructor(sprite, image, dx, dy, animationBehavior) {
         super(sprite, image, animationBehavior);

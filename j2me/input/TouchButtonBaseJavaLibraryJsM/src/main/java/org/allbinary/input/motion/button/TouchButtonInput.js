@@ -33,21 +33,23 @@ export class TouchButtonInput extends Input {
         this.TOUCH_BUTTON_SOURCE_ID = this.gameKeyEventFactory.TOUCH_BUTTON_SOURCE_ID;
         this.gameKeyEvent = GameKeyEvent.NONE;
         //For kotlin this is before the body of the constructor.
-        var inputFactory = InputFactory.getInstance();
+        let inputFactory = InputFactory.getInstance();
         ;
         inputFactory.add(this.getId(), this);
     }
     update(inputToGameKeyMapping) {
         try {
-            var gameKey = inputToGameKeyMapping.getInstance(this.getId());
+            let gameKey = inputToGameKeyMapping.getInstance(this.getId());
             ;
             this.gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+            }
         }
     }
     getSourceId() {

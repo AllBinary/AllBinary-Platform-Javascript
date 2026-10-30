@@ -14,7 +14,7 @@
 //not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialGameInputProcessor } from './SpecialGameInputProcessor.js';
-//not GWT import - same folder const CollidableDestroyableDamageableLayer
+//sameFolderImports - not GWT import - same folder const CollidableDestroyableDamageableLayer
 export class Special3GameInputProcessor extends SpecialGameInputProcessor {
     constructor(collidableDestroyableDamageableLayer) {
         super(collidableDestroyableDamageableLayer);

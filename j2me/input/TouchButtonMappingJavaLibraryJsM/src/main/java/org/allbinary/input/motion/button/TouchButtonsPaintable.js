@@ -20,7 +20,7 @@ import { Paintable } from '../../../../../org/allbinary/graphics/paint/Paintable
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonFactory } from './TouchButtonFactory.js';
-//not GWT import - same folder const TouchButton
+//sameFolderImports - not GWT import - same folder const TouchButton
 export class TouchButtonsPaintable extends Paintable {
     constructor(basicColor) {
         super();
@@ -30,16 +30,16 @@ export class TouchButtonsPaintable extends Paintable {
         this.foregroundColor = basicColor.intValue();
     }
     paint(graphics) {
-        var list = this.touchButtonFactory.getList();
+        let list = this.touchButtonFactory.getList();
         ;
         this.basicSetColorUtil.setBasicColorP3(graphics, this.foregroundBasicColor, this.foregroundColor);
-        var touchButton;
+        let touchButton;
         ;
-        for (var index = list.size(); --index >= 0;) {
+        for (let index = list.size(); --index >= 0;) {
             touchButton = list.objectArray[index];
             touchButton.paint(graphics);
         }
-        for (var index = list.size(); --index >= 0;) {
+        for (let index = list.size(); --index >= 0;) {
             touchButton = list.objectArray[index];
             touchButton.paintHint(graphics);
         }

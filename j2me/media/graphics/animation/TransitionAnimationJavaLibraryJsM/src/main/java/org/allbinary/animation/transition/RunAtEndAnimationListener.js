@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const AnimationListenerInterface
+//sameFolderImports - not GWT import - same folder const AnimationListenerInterface
 export class RunAtEndAnimationListener extends Object {
     constructor(runnable) {
         super();

@@ -20,13 +20,13 @@ import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/disp
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommonButtons } from './CommonButtons.js';
-//not GWT import - same folder const CommonButtons
+//sameFolderImports - not GWT import - same folder const CommonButtons
 export class TouchButtonLocationHelper extends Object {
     constructor() {
         super();
-        var buttonSize = CommonButtons.getInstance().STANDARD_BUTTON_SIZE;
+        let buttonSize = CommonButtons.getInstance().STANDARD_BUTTON_SIZE;
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         this.totalColumns = Math.round(displayInfo.getLastWidth() / buttonSize);
         this.totalRows = Math.round(displayInfo.getLastHeight() / buttonSize);
@@ -60,7 +60,7 @@ export class TouchButtonLocationHelper extends Object {
         return this.rowsRemainderHalf;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("totalColumns: ");
         stringBuffer.appendint(this.totalColumns);

@@ -33,8 +33,6 @@ import { NullRTSFormInputFactory } from '../../../../org/allbinary/game/input/fo
 //not GWT import const RTSFormInput
 import { BuildingEventHandler } from '../../../../org/allbinary/game/layer/building/event/BuildingEventHandler.js';
 //not GWT import const BuildingEventHandler
-import { UnitLayer } from '../../../../org/allbinary/game/layer/unit/UnitLayer.js';
-//not GWT import const UnitLayer
 import { Waypoint2LogHelper } from '../../../../org/allbinary/game/layer/waypoint/Waypoint2LogHelper.js';
 //not GWT import const Waypoint2LogHelper
 import { Waypoint2SelectedLogHelper } from '../../../../org/allbinary/game/layer/waypoint/Waypoint2SelectedLogHelper.js';
@@ -67,21 +65,21 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSLayer } from './RTSLayer.js';
-//not GWT import - same folder const RTSLayer
+//sameFolderImports - not GWT import - same folder const RTSLayer
 import { NullPathFindingLayer } from './NullPathFindingLayer.js';
-//not GWT import - same folder const NullPathFindingLayer
+//sameFolderImports - not GWT import - same folder const NullPathFindingLayer
 import { AdvancedRTSProperties } from './AdvancedRTSProperties.js';
-//not GWT import - same folder const PathFindingLayerInterface
+//sameFolderImports - not GWT import - same folder const PathFindingLayerInterface
 import { WaypointBehaviorBase } from './WaypointBehaviorBase.js';
-//not GWT import - same folder const RTSPlayerLayerInterface
+//sameFolderImports - not GWT import - same folder const RTSPlayerLayerInterface
 import { RTSLayerUtil } from './RTSLayerUtil.js';
-//not GWT import - same folder const RTSLayerUtil
+//sameFolderImports - not GWT import - same folder const RTSLayerUtil
 export class AdvancedRTSGameLayer extends RTSLayer {
     //@Throws(Exception.constructor)
     static createSimulated() {
-        var nullAnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance();
+        let nullAnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance();
         ;
-        var nullIndexedAnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance();
+        let nullIndexedAnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new AdvancedRTSGameLayer(RemoteInfo.REMOTE_INFO, NullPathFindingLayer.NULL_PATH_FINDING_LAYER, AdvancedRTSProperties.createPropertiesSimulated(), GroupFactory.getInstance().NULL_GROUP_ARRAY, StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0, new TileLayerPositionIntoViewPosition());
@@ -104,7 +102,7 @@ export class AdvancedRTSGameLayer extends RTSLayer {
         this.getWaypointBehavior().getWaypoint().setAllBinaryGameLayerManager(this.allBinaryGameLayerManagerP);
     }
     initVisibility(rtsPlayerLayerInterface) {
-        var advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
+        let advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
         ;
         if (advancedRTSPlayerLayerInterface.isLocalPlayer() || advancedRTSPlayerLayerInterface.getGameType() == GameTypeFactory.getInstance().BOT) {
             this.setVisible(true);
@@ -157,9 +155,9 @@ export class AdvancedRTSGameLayer extends RTSLayer {
     }
     shouldAddWaypointFromBuilding() {
         if (this.parentLayer != NullPathFindingLayer.NULL_PATH_FINDING_LAYER) {
-            var parentAdvancedRTSGameLayer = this.parentLayer;
+            let parentAdvancedRTSGameLayer = this.parentLayer;
             ;
-            if (parentAdvancedRTSGameLayer.getType() != UnitLayer.getStaticType()) {
+            if (parentAdvancedRTSGameLayer.getType() != 1) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
             }
@@ -168,7 +166,7 @@ export class AdvancedRTSGameLayer extends RTSLayer {
         return false;
     }
     isWaypointListEmptyOrOnlyTargets() {
-        if (this.getType() != UnitLayer.getStaticType()) {
+        if (this.getType() != 1) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
         }
@@ -177,15 +175,15 @@ export class AdvancedRTSGameLayer extends RTSLayer {
     }
     //@Throws(Exception.constructor)
     buildingChase(allbinaryLayer, cellPosition) {
-        var geographicMapCellPosition = this.getCurrentGeographicMapCellPosition();
+        let geographicMapCellPosition = this.getCurrentGeographicMapCellPosition();
         ;
-        var buildingDirection = GeographicMapDirectionUtil.getInstance().getDirectionFromCellPositionToAdjacentCellPosition(geographicMapCellPosition, cellPosition);
+        let buildingDirection = GeographicMapDirectionUtil.getInstance().getDirectionFromCellPositionToAdjacentCellPosition(geographicMapCellPosition, cellPosition);
         ;
-        var angleInfo = this.getRotationAnimationInterface().getAngleInfoP();
+        let angleInfo = this.getRotationAnimationInterface().getAngleInfoP();
         ;
-        var angle = FrameUtil.getInstance().adjustAngleToFrameAngle(angleInfo.getAngle() + 90);
+        let angle = FrameUtil.getInstance().adjustAngleToFrameAngle(angleInfo.getAngle() + 90);
         ;
-        var gameKeyEventFactory = GameKeyEventFactory.getInstance();
+        let gameKeyEventFactory = GameKeyEventFactory.getInstance();
         ;
         if (buildingDirection == DirectionFactory.getInstance().UP) {
             this.rtsLayer2LogHelper.buildingAbove(this);
@@ -272,9 +270,9 @@ export class AdvancedRTSGameLayer extends RTSLayer {
     }
     //@Throws(Exception.constructor)
     getSurroundingGeographicMapCellPositionList() {
-        var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+        let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
         this.geographicMapCellPositionAreaBase.update(geographicMapInterface);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -298,18 +296,20 @@ export class AdvancedRTSGameLayer extends RTSLayer {
     }
     onDestroyed(destroyedEvent) {
         try {
-            var layerInterface = destroyedEvent.getLayerInterface();
+            let layerInterface = destroyedEvent.getLayerInterface();
             ;
             if (layerInterface == this) {
                 DestroyedEventHandler.getInstance().removeListener(this);
-                var waypoint = this.getWaypointBehavior().getWaypoint();
+                let waypoint = this.getWaypointBehavior().getWaypoint();
                 ;
                 waypoint.reset();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "onDestroyed", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "onDestroyed", e);
+            }
         }
     }
 }

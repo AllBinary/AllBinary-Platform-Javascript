@@ -26,7 +26,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PrimaryWaypointHelper } from './PrimaryWaypointHelper.js';
-//not GWT import - same folder const PrimaryWaypointHelper
+//sameFolderImports - not GWT import - same folder const PrimaryWaypointHelper
 export class AssignWaypointsUtil extends Object {
     constructor() {
         super(...arguments);
@@ -39,28 +39,30 @@ export class AssignWaypointsUtil extends Object {
     }
     set(unitLayer, ownerAdvancedRTSGameLayer) {
         try {
-            var list = ownerAdvancedRTSGameLayer.getWaypointBehavior().getOwnedWaypointList();
+            let list = ownerAdvancedRTSGameLayer.getWaypointBehavior().getOwnedWaypointList();
             ;
-            var unitWaypointBehavior = unitLayer.getWaypointBehavior();
+            let unitWaypointBehavior = unitLayer.getWaypointBehavior();
             ;
-            for (var index = list.size() - 1; index >= 0; index--) {
-                var waypointLayer = list.get(index);
+            for (let index = list.size() - 1; index >= 0; index--) {
+                let waypointLayer = list.get(index);
                 ;
                 this.WAYPOINT_EVENT.setRtsLayer(waypointLayer);
                 unitWaypointBehavior.onWaypointEvent(this.WAYPOINT_EVENT);
             }
-            var waypointLayer = PrimaryWaypointHelper.getInstance().getWaypointLayer();
+            let waypointLayer = PrimaryWaypointHelper.getInstance().getWaypointLayer();
             ;
             if (waypointLayer != NullPathFindingLayer.NULL_PATH_FINDING_LAYER) {
                 this.WAYPOINT_EVENT.setRtsLayer(waypointLayer);
                 unitWaypointBehavior.onWaypointEvent(this.WAYPOINT_EVENT);
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "set", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "set", e);
+            }
         }
     }
 }

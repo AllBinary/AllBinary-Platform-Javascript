@@ -24,7 +24,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InGameOptionsForm } from './InGameOptionsForm.js';
-//not GWT import - same folder const InGameOptionsForm
+//sameFolderImports - not GWT import - same folder const InGameOptionsForm
 export class InGameOptionsFormFactory extends Object {
     constructor() {
         super(...arguments);
@@ -44,12 +44,14 @@ export class InGameOptionsFormFactory extends Object {
                 initInterface.init();
                 this.SINGLETON = new InGameOptionsForm(commandListener, title, backgrounBasicColor, foregroundBasicColor);
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+            }
         }
     }
     get() {

@@ -20,7 +20,7 @@ import { Rectangle } from '../../../../../org/allbinary/graphics/Rectangle.js';
 //not GWT import const Rectangle
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButton } from './TouchButton.js';
-//not GWT import - same folder const TouchButtonResource
+//sameFolderImports - not GWT import - same folder const TouchButtonResource
 export class FullTouchButton extends TouchButton {
     //@Throws(Exception.constructor)
     static createButton(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder) {
@@ -33,22 +33,24 @@ export class FullTouchButton extends TouchButton {
     }
     updateRectangle() {
         try {
-            var pointFactory = PointFactory.getInstance();
+            let pointFactory = PointFactory.getInstance();
             ;
-            var x = this.rawRectangle.getWidth() * this.cellPositionP.getColumn();
+            let x = this.rawRectangle.getWidth() * this.cellPositionP.getColumn();
             ;
-            var y = this.rawRectangle.getHeight() * this.cellPositionP.getRow();
+            let y = this.rawRectangle.getHeight() * this.cellPositionP.getRow();
             ;
             this.rectangleP = new Rectangle(pointFactory.createXY(x, y), this.rawRectangle.getWidth() + (2 * this.xBorder), this.rawRectangle.getHeight() + (2 * this.yBorder));
-            var point = this.rectangleP.getPoint();
+            let point = this.rectangleP.getPoint();
             ;
             this.animationX = point.getX() + this.xBorder;
             this.animationY = point.getY() + this.yBorder;
             this.hintAnimationY = this.animationY - this.rectangleP.getHeight() >> 1;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "updateRectangle", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "updateRectangle", e);
+            }
         }
     }
 }

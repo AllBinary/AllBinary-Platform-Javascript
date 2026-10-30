@@ -30,7 +30,7 @@ export class OrientationMotionGestureFactory extends Object {
     }
     constructor() {
         super();
-        var MAX = InputFactory.getInstance().MAX;
+        let MAX = InputFactory.getInstance().MAX;
         ;
         this.LEFT = new MotionGestureInput(MAX - 20, "Left Orient");
         this.RIGHT = new MotionGestureInput(MAX - 21, "Right Orient");

@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-//not GWT import - same folder const BasicColor
+//sameFolderImports - not GWT import - same folder const BasicColor
 export class BasicColorUtil extends Object {
     constructor() {
         super(...arguments);
         this.ZERO_ARRAY = [];
-        this.ALPHA = Math.round(0xFF000000);
+        this.ALPHA = globalThis.Math.trunc(0xFF000000);
         this.isAlpha = true;
         this.ffOpaque = true;
     }
@@ -27,7 +27,7 @@ export class BasicColorUtil extends Object {
         return BasicColorUtil.instance;
     }
     getRGB(red, green, blue) {
-        var value = 0;
+        let value = 0;
         ;
         if (this.isAlpha) {
             if (this.ffOpaque) {

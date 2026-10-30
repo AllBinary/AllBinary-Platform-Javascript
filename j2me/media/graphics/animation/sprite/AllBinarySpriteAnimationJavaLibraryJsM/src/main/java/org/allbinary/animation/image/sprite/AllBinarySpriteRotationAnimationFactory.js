@@ -24,13 +24,13 @@ import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/Primit
 //not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinarySpriteRotationAnimation } from './AllBinarySpriteRotationAnimation.js';
-//not GWT import - same folder const AllBinarySpriteRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinarySpriteRotationAnimation
 import { AllBinaryAdjustedSpriteRotationAnimation } from './AllBinaryAdjustedSpriteRotationAnimation.js';
-//not GWT import - same folder const AllBinaryAdjustedSpriteRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryAdjustedSpriteRotationAnimation
 export class AllBinarySpriteRotationAnimationFactory extends BaseImageAnimationFactory {
     //@Throws(Exception.constructor)
     static createWHDY(image, dx, dy, animationBehaviorFactory) {
-        var spriteRotationAnimationFactory = new AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), (image.getHeight() >> 2), (image.getHeight() >> 2), 0, 0, animationBehaviorFactory);
+        let spriteRotationAnimationFactory = new AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), (image.getHeight() >> 2), (image.getHeight() >> 2), 0, 0, animationBehaviorFactory);
         ;
         spriteRotationAnimationFactory.initWH(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,7 +44,7 @@ export class AllBinarySpriteRotationAnimationFactory extends BaseImageAnimationF
     }
     //@Throws(Exception.constructor)
     static createDXY(image, dx, dy, animationBehaviorFactory) {
-        var spriteRotationAnimationFactory = new AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory);
+        let spriteRotationAnimationFactory = new AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), image.getHeight(), image.getHeight(), 0, 0, animationBehaviorFactory);
         ;
         spriteRotationAnimationFactory.init(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,7 +52,7 @@ export class AllBinarySpriteRotationAnimationFactory extends BaseImageAnimationF
     }
     //@Throws(Exception.constructor)
     static createDXYQ(image, dx, dy, animationBehaviorFactory) {
-        var spriteRotationAnimationFactory = new AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), (image.getHeight() >> 2), (image.getHeight() >> 2), 0, 0, animationBehaviorFactory);
+        let spriteRotationAnimationFactory = new AllBinarySpriteRotationAnimationFactory(image, PrimitiveIntUtil.getArrayInstance(), (image.getHeight() >> 2), (image.getHeight() >> 2), 0, 0, animationBehaviorFactory);
         ;
         spriteRotationAnimationFactory.init(dx, dy);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,7 +87,7 @@ export class AllBinarySpriteRotationAnimationFactory extends BaseImageAnimationF
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var sprite = this.animationFactorySpriteScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let sprite = this.animationFactorySpriteScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
         if (this.animationFactoryInitializationVisitor.dx != 0 || this.animationFactoryInitializationVisitor.dy != 0) {
             //if statement needs to be on the same line and ternary does not work the same way.

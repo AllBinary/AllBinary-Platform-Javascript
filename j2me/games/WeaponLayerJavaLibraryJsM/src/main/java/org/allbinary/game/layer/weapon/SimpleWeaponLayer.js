@@ -20,9 +20,9 @@ import { ExplosionResources } from '../../../../../org/allbinary/game/combat/dam
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WeaponLayer } from './WeaponLayer.js';
-//not GWT import - same folder const WeaponLayer
+//sameFolderImports - not GWT import - same folder const WeaponLayer
 import { CollidableWeaponBehavior } from './CollidableWeaponBehavior.js';
-//not GWT import - same folder const CollidableWeaponBehavior
+//sameFolderImports - not GWT import - same folder const CollidableWeaponBehavior
 export class SimpleWeaponLayer extends WeaponLayer {
     //@Throws(Exception.constructor)
     static createDestroyed() {

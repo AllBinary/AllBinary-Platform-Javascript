@@ -16,9 +16,9 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not GWT import const GeographicMapCellTypeFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseRaceTrackGeographicMap } from './BaseRaceTrackGeographicMap.js';
-//not GWT import - same folder const CustomMapGeneratorBase
+//sameFolderImports - not GWT import - same folder const CustomMapGeneratorBase
 import { BasicGeographicMapFactory } from './BasicGeographicMapFactory.js';
-//not GWT import - same folder const CustomMapGeneratorBaseFactory
+//sameFolderImports - not GWT import - same folder const CustomMapGeneratorBaseFactory
 export class RaceTrackGeographicMap extends BaseRaceTrackGeographicMap {
     constructor(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory, customMapGeneratorBaseFactory) {
         super(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface.getInstance(raceTrackInfo, raceTrackData), new BasicGeographicMapFactory().getInstance(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory);
@@ -31,10 +31,10 @@ export class RaceTrackGeographicMap extends BaseRaceTrackGeographicMap {
     }
     //@Throws(Exception.constructor)
     isValid(geographicMapCellPosition) {
-        var customMapArray = this.customMapGenerator.getCustomMapArray();
+        let customMapArray = this.customMapGenerator.getCustomMapArray();
         ;
         if (geographicMapCellPosition.getColumn() >= customMapArray[0].length) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append("Column: ");
             stringBuffer.appendint(geographicMapCellPosition.getColumn());
@@ -51,7 +51,7 @@ export class RaceTrackGeographicMap extends BaseRaceTrackGeographicMap {
             }
         }
         else if (geographicMapCellPosition.getRow() > customMapArray.length) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append("Row: ");
             stringBuffer.appendint(geographicMapCellPosition.getRow());

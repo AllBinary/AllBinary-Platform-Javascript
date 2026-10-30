@@ -39,12 +39,12 @@ export class DropCellPositionHistory extends Object {
         this.layerList.add(layerInterface);
     }
     addAll(list, layerInterface) {
-        for (var index = list.size() - 1; index >= 0; index--) {
+        for (let index = list.size() - 1; index >= 0; index--) {
             this.add(list.get(index), layerInterface);
         }
     }
     remove(cellPosition) {
-        var index = this.positionList.indexOf(cellPosition);
+        let index = this.positionList.indexOf(cellPosition);
         ;
         if (index >= 0) {
             this.positionList.removeAt(index);
@@ -52,7 +52,7 @@ export class DropCellPositionHistory extends Object {
         }
     }
     removeAll(layerInterface) {
-        var index = 0;
+        let index = 0;
         ;
         while (index != -1) {
             index = this.layerList.indexOf(layerInterface);
@@ -72,7 +72,7 @@ export class DropCellPositionHistory extends Object {
         ;
     }
     anyCellPositionWithDrop(list) {
-        for (var index = list.size() - 1; index >= 0; index--) {
+        for (let index = list.size() - 1; index >= 0; index--) {
             if (this.isCellPositionWithDrop(list.get(index))) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
@@ -82,9 +82,9 @@ export class DropCellPositionHistory extends Object {
         return false;
     }
     getCellPositionWithDrop(list) {
-        var cellPosition;
+        let cellPosition;
         ;
-        for (var index = list.size() - 1; index >= 0; index--) {
+        for (let index = list.size() - 1; index >= 0; index--) {
             cellPosition = list.get(index);
             if (this.isCellPositionWithDrop(cellPosition)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -95,7 +95,7 @@ export class DropCellPositionHistory extends Object {
         return this.cellPositionFactory.NONE;
     }
     getLayerInterface(cellPosition) {
-        var index = this.positionList.indexOf(cellPosition);
+        let index = this.positionList.indexOf(cellPosition);
         ;
         if (index >= 0) {
             //if statement needs to be on the same line and ternary does not work the same way.

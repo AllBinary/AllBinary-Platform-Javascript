@@ -22,10 +22,10 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DomSearchHelper extends Object {
     static getNodeNoThrow(nodeName, nodeList) {
-        var numberOfNodes = nodeList.getLength();
+        let numberOfNodes = nodeList.getLength();
         ;
-        for (var index = 0; index < numberOfNodes; index++) {
-            var node = nodeList.item(index);
+        for (let index = 0; index < numberOfNodes; index++) {
+            let node = nodeList.item(index);
             ;
             if (node.getNodeName().compareTo(nodeName) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -37,7 +37,7 @@ export class DomSearchHelper extends Object {
     }
     //@Throws(Exception.constructor)
     static getNode(nodeName, nodeList) {
-        var node = DomSearchHelper.getNodeNoThrow(nodeName, nodeList);
+        let node = DomSearchHelper.getNodeNoThrow(nodeName, nodeList);
         ;
         if (node !=
             null) {
@@ -50,7 +50,7 @@ export class DomSearchHelper extends Object {
     }
     //@Throws(Exception.constructor)
     static getChildNodeList(nodeName, nodeList) {
-        var node = DomSearchHelper.getNode(nodeName, nodeList);
+        let node = DomSearchHelper.getNode(nodeName, nodeList);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return node.getChildNodes();
@@ -58,7 +58,7 @@ export class DomSearchHelper extends Object {
     }
     //@Throws(Exception.constructor)
     static getAllNodes(nodeName, nodeList) {
-        var vector = DomSearchHelper.getAllNodesNoThrow(nodeName, nodeList);
+        let vector = DomSearchHelper.getAllNodesNoThrow(nodeName, nodeList);
         ;
         if (vector ==
             null) {
@@ -70,12 +70,12 @@ export class DomSearchHelper extends Object {
         }
     }
     static getAllNodesNoThrow(nodeName, nodeList) {
-        var nodeVector = new BasicArrayListD();
+        let nodeVector = new BasicArrayListD();
         ;
-        var numberOfNodes = nodeList.getLength();
+        let numberOfNodes = nodeList.getLength();
         ;
-        for (var index = 0; index < numberOfNodes; index++) {
-            var node = nodeList.item(index);
+        for (let index = 0; index < numberOfNodes; index++) {
+            let node = nodeList.item(index);
             ;
             if (node.getNodeName().compareTo(nodeName) == 0) {
                 nodeVector.add(node);

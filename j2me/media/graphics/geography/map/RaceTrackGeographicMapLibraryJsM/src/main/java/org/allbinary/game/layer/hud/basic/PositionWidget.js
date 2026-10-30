@@ -22,7 +22,7 @@ import { BasicHud } from '../../../../../../org/allbinary/game/graphics/hud/Basi
 //super.paint(graphics, positionString, currentPostString, offset2, offset);
 export class PositionWidget extends BasicHud {
     static toString(position) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(position.toString());
         if (position == 1) {

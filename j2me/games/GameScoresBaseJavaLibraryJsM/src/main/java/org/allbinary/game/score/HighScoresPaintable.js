@@ -28,7 +28,7 @@ import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullHighScoresSingletonFactory } from './NullHighScoresSingletonFactory.js';
-//not GWT import - same folder const HighScore
+//sameFolderImports - not GWT import - same folder const HighScore
 export class HighScoresPaintable extends Paintable {
     constructor() {
         super();
@@ -40,51 +40,51 @@ export class HighScoresPaintable extends Paintable {
         this.charHeight = 0;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.charHeight = font.getHeight();
         this.myFontProcessor = MyFontProcessor.getInstance();
     }
     onEvent(eventObject) {
-        var colorChangeEvent = eventObject;
+        let colorChangeEvent = eventObject;
         ;
         this.basicColor = colorChangeEvent.getBasicColorP();
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var width = this.displayInfoSingleton.getLastWidth();
+        let width = this.displayInfoSingleton.getLastWidth();
         ;
-        var height = this.displayInfoSingleton.getLastHeight();
+        let height = this.displayInfoSingleton.getLastHeight();
         ;
         graphics.setColor(this.getBasicColorP().intValue());
-        var heading = this.highScores.getHeading();
+        let heading = this.highScores.getHeading();
         ;
-        var topScoresWidth = (graphics.getFont().stringWidth(heading) >> 1);
+        let topScoresWidth = (graphics.getFont().stringWidth(heading) >> 1);
         ;
-        var charHeight = this.charHeight;
+        let charHeight = this.charHeight;
         ;
         graphics.drawString(heading, (width >> 1) - topScoresWidth, charHeight, this.anchor);
         graphics.drawString(this.highScores.getColumnOneHeading(), 10, charHeight * 3, this.anchor);
-        var columnTwoHeading = this.highScores.getColumnTwoHeading();
+        let columnTwoHeading = this.highScores.getColumnTwoHeading();
         ;
-        var columnTwoHeadingWidth = graphics.getFont().stringWidth(columnTwoHeading);
+        let columnTwoHeadingWidth = graphics.getFont().stringWidth(columnTwoHeading);
         ;
         graphics.drawString(columnTwoHeading, width - 10 - columnTwoHeadingWidth, charHeight * 3, this.anchor);
-        var index = 4;
+        let index = 4;
         ;
-        var largestSecondColumnWidth = columnTwoHeadingWidth;
+        let largestSecondColumnWidth = columnTwoHeadingWidth;
         ;
-        var list = this.highScores.getList();
+        let list = this.highScores.getList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var vectorIndex = 0;
+        let vectorIndex = 0;
         ;
-        var highScore;
+        let highScore;
         ;
         while (vectorIndex < size && charHeight * index < height - (charHeight * 2)) {
             highScore = list.objectArray[vectorIndex];
-            var nextScoreWidth = graphics.getFont().stringWidth(highScore.getScoreString());
+            let nextScoreWidth = graphics.getFont().stringWidth(highScore.getScoreString());
             ;
             if (nextScoreWidth > largestSecondColumnWidth) {
                 largestSecondColumnWidth = nextScoreWidth;

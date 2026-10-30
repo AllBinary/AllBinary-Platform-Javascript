@@ -18,11 +18,11 @@ import { Object } from '../../../../../java/lang/Object.js';
 const Log = globalThis.org.allbinary.logic.communication.log.Log;
 //ActualPlatform
 /*actual*/ export class LogFactory extends Object {
-    /*actual*/ static getInstance(specialMessage, anyType = {}, functionName, exception = {}) {
+    /*actual*/ static getInstance(specialMessage, anyType, functionName, exception) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Log(specialMessage, anyType, functionName, exception);
     }
-    /*actual*/ static getInstanceF(specialMessage, anyType = {}, functionName) {
+    /*actual*/ static getInstanceF(specialMessage, anyType, functionName) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return null;
     }

@@ -37,20 +37,20 @@ export class AnimationFactoryImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImage(image, width, height, scaleWidth, scaleHeight) {
-        var scaledImage;
+        let scaledImage;
         ;
         if (scaleWidth != 0 && scaleHeight != 0) {
-            var scaleX = (scaleWidth) / (width);
+            let scaleX = (scaleWidth) / (width);
             ;
-            var scaleY = (scaleHeight) / (height);
+            let scaleY = (scaleHeight) / (height);
             ;
             if ((scaleX == 1.0 && scaleY == 1.0) || (scaleX == 0.0 || scaleY == 0.0)) {
                 scaledImage = image;
             }
             else {
-                var scaledWidth = Math.round((scaleX * width));
+                let scaledWidth = globalThis.Math.trunc((scaleX * width));
                 ;
-                var scaledHeight = Math.round((scaleY * height));
+                let scaledHeight = globalThis.Math.trunc((scaleY * height));
                 ;
                 scaledImage = this.imageScaleUtil.scale(image, scaledWidth, scaledHeight);
             }
@@ -63,20 +63,20 @@ export class AnimationFactoryImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     processAdjust(baseImageAnimationFactory) {
-        var scaleProperties = baseImageAnimationFactory.getScalePropertiesP();
+        let scaleProperties = baseImageAnimationFactory.getScalePropertiesP();
         ;
         if (scaleProperties.scaleWidth != 0 && scaleProperties.scaleHeight != 0) {
-            var animationFactoryInitializationVisitor = baseImageAnimationFactory.getAnimationFactoryInitializationVisitorP();
+            let animationFactoryInitializationVisitor = baseImageAnimationFactory.getAnimationFactoryInitializationVisitorP();
             ;
-            var scaleX = (scaleProperties.scaleWidth) / (animationFactoryInitializationVisitor.width);
+            let scaleX = (scaleProperties.scaleWidth) / (animationFactoryInitializationVisitor.width);
             ;
-            var scaleY = (scaleProperties.scaleHeight) / (animationFactoryInitializationVisitor.height);
+            let scaleY = (scaleProperties.scaleHeight) / (animationFactoryInitializationVisitor.height);
             ;
             if ((scaleX == 1.0 && scaleY == 1.0) || (scaleX == 0.0 || scaleY == 0.0)) {
             }
             else {
-                animationFactoryInitializationVisitor.dx = Math.round((animationFactoryInitializationVisitor.originalDx * scaleX));
-                animationFactoryInitializationVisitor.dy = Math.round((animationFactoryInitializationVisitor.originalDy * scaleY));
+                animationFactoryInitializationVisitor.dx = globalThis.Math.trunc((animationFactoryInitializationVisitor.originalDx * scaleX));
+                animationFactoryInitializationVisitor.dy = globalThis.Math.trunc((animationFactoryInitializationVisitor.originalDy * scaleY));
             }
         }
         else {

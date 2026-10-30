@@ -37,9 +37,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Features } from './Features.js';
-//not GWT import - same folder const Feature
+//sameFolderImports - not GWT import - same folder const Feature
 import { GameFeatureUtil } from './GameFeatureUtil.js';
-//not GWT import - same folder const GameFeatureUtil
+//sameFolderImports - not GWT import - same folder const GameFeatureUtil
 export class GameFeatureFormUtil extends Object {
     constructor() {
         super(...arguments);
@@ -51,22 +51,22 @@ export class GameFeatureFormUtil extends Object {
         return GameFeatureFormUtil.instance;
     }
     getChoiceGroup(hashtable, name, option) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var choiceGroup = new ChoiceGroup(name, option, StringUtil.getInstance().getArrayInstance(), NullImage.NULL_IMAGE_ARRAY);
+        let choiceGroup = new ChoiceGroup(name, option, StringUtil.getInstance().getArrayInstance(), NullImage.NULL_IMAGE_ARRAY);
         ;
-        var list = hashtable.get(name);
+        let list = hashtable.get(name);
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var ADD_CHOICE = ": Adding Choice: ";
+        let ADD_CHOICE = ": Adding Choice: ";
         ;
-        var GET_CHOICE_GROUP = "getChoiceGroup";
+        let GET_CHOICE_GROUP = "getChoiceGroup";
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var gameFeature = list.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let gameFeature = list.objectArray[index];
             ;
             stringMaker.delete(0, stringMaker.length());
             this.logUtil.putF(stringMaker.append(name).append(ADD_CHOICE).append(gameFeature.toString()).toString(), this, GET_CHOICE_GROUP);
@@ -79,19 +79,19 @@ export class GameFeatureFormUtil extends Object {
         return choiceGroup;
     }
     addChoiceGroup(form, hashtable, option) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var ADDING_CHOICE_GROUP = "Adding Choice Group: ";
+        let ADDING_CHOICE_GROUP = "Adding Choice Group: ";
         ;
-        var ADD_CHOICE_GROUP = "addChoiceGroup";
+        let ADD_CHOICE_GROUP = "addChoiceGroup";
         ;
-        var size = hashtable.size();
+        let size = hashtable.size();
         ;
-        var objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
+        let objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
         ;
-        var name;
+        let name;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             name = objectArray[index];
             stringMaker.delete(0, stringMaker.length());
             this.logUtil.putF(stringMaker.append(ADDING_CHOICE_GROUP).append(name).toString(), this, ADD_CHOICE_GROUP);
@@ -100,10 +100,10 @@ export class GameFeatureFormUtil extends Object {
     }
     //@Throws(Exception.constructor)
     setDefault(form) {
-        var size = form.size();
+        let size = form.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var item = form.get(index);
+        for (let index = 0; index < size; index++) {
+            let item = form.get(index);
             ;
             if (item instanceof GameConfigurationGauge) {
                 GameConfigurationUtil.getInstance().setDefault(item);

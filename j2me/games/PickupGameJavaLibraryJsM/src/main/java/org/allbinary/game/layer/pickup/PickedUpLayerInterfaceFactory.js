@@ -14,7 +14,7 @@
 //not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PickedUpLayerInterfaceFactoryBase } from './PickedUpLayerInterfaceFactoryBase.js';
-//not GWT import - same folder const IconLayer
+//sameFolderImports - not GWT import - same folder const IconLayer
 export class PickedUpLayerInterfaceFactory extends PickedUpLayerInterfaceFactoryBase {
     constructor(pickeUpLayerType, iconLayer, animationInterface) {
         super();

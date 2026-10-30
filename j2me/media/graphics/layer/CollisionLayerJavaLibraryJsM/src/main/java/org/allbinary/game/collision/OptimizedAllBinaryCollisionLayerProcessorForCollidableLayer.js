@@ -16,7 +16,7 @@ import { LayerProcessor } from '../../../../org/allbinary/layer/LayerProcessor.j
 //not GWT import const LayerProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OptimizedAllBinaryCollisionLayerManager } from './OptimizedAllBinaryCollisionLayerManager.js';
-//not GWT import - same folder const CollidableBaseBehavior
+//sameFolderImports - not GWT import - same folder const CollidableBaseBehavior
 export class OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer extends LayerProcessor {
     constructor() {
         super(new OptimizedAllBinaryCollisionLayerManager());
@@ -24,20 +24,20 @@ export class OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer extends
     }
     //@Throws(Exception.constructor)
     processAt(allBinaryLayerManager, layerInterface, startIndex) {
-        var collidableInterfaceCompositeInterface = layerInterface;
+        let collidableInterfaceCompositeInterface = layerInterface;
         ;
-        var collidableBase = collidableInterfaceCompositeInterface.getCollidableInferface();
+        let collidableBase = collidableInterfaceCompositeInterface.getCollidableInferface();
         ;
         if (collidableBase.isCollidable(collidableInterfaceCompositeInterface)) {
-            var layerManager = this.getLayerManager();
+            let layerManager = this.getLayerManager();
             ;
-            var size = layerManager.getSize();
+            let size = layerManager.getSize();
             ;
-            var collidableInterfaceCompositeInterface2;
+            let collidableInterfaceCompositeInterface2;
             ;
-            var collidableBase2;
+            let collidableBase2;
             ;
-            for (var index = startIndex + 1; index < size; index++) {
+            for (let index = startIndex + 1; index < size; index++) {
                 collidableInterfaceCompositeInterface2 = layerManager.getLayerAt(index);
                 collidableBase2 = collidableInterfaceCompositeInterface2.getCollidableInferface();
                 if (collidableBase2.isCollidable(collidableInterfaceCompositeInterface) && collidableBase.isCollision(collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2)) {

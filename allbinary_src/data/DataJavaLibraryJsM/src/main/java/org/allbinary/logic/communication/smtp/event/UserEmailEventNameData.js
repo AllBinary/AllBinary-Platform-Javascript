@@ -24,7 +24,7 @@ export class UserEmailEventNameData extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getInstance(userEmailEventNameString) {
-        var userEmailEventNameData = UserEmailEventNameData.userNameEvenNameHashMap.get(userEmailEventNameString);
+        let userEmailEventNameData = UserEmailEventNameData.userNameEvenNameHashMap.get(userEmailEventNameString);
         ;
         if (userEmailEventNameData ==
             null) {

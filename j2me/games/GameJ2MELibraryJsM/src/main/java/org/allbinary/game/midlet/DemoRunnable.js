@@ -25,13 +25,13 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const DemoGameMidlet
+//sameFolderImports - not GWT import - same folder const DemoGameMidlet
 import { DemoGameMidletEvent } from './DemoGameMidletEvent.js';
-//not GWT import - same folder const DemoGameMidletEvent
+//sameFolderImports - not GWT import - same folder const DemoGameMidletEvent
 import { DemoGameMidletStateFactory } from './DemoGameMidletStateFactory.js';
-//not GWT import - same folder const DemoGameMidletStateFactory
+//sameFolderImports - not GWT import - same folder const DemoGameMidletStateFactory
 import { DemoGameMidletEventHandler } from './DemoGameMidletEventHandler.js';
-//not GWT import - same folder const DemoGameMidletEventHandler
+//sameFolderImports - not GWT import - same folder const DemoGameMidletEventHandler
 export class DemoRunnable extends Object {
     constructor(demoGameMidlet) {
         super();
@@ -50,10 +50,12 @@ export class DemoRunnable extends Object {
             this.demoGameMidlet.startGameCanvasRunnableInterface();
             this.demoGameMidlet.postDemoSetup();
             this.logUtil.putF(this.commonStrings.END_RUNNABLE, this, this.commonStrings.RUN);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+            }
         }
     }
 }

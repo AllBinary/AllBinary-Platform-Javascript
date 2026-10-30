@@ -14,9 +14,9 @@
 //not GWT import const AllBinaryLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableNeverCollideBehavior } from './CollidableNeverCollideBehavior.js';
-//not GWT import - same folder const CollidableNeverCollideBehavior
+//sameFolderImports - not GWT import - same folder const CollidableNeverCollideBehavior
 import { CollisionTypeFactory } from './CollisionTypeFactory.js';
-//not GWT import - same folder const CollisionType
+//sameFolderImports - not GWT import - same folder const CollisionType
 export class CollidableAlwaysPickupNeverCollideBehavior extends CollidableNeverCollideBehavior {
     constructor() {
         super(true);

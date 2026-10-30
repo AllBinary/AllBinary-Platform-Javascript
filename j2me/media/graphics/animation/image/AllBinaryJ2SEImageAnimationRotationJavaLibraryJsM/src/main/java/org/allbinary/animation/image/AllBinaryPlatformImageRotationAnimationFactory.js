@@ -14,7 +14,7 @@
 //not GWT import const AnimationBehaviorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryJ2SEImageRotationAnimationFactory } from './AllBinaryJ2SEImageRotationAnimationFactory.js';
-//not GWT import - same folder const AllBinaryJ2SEImageRotationAnimationFactory
+//sameFolderImports - not GWT import - same folder const AllBinaryJ2SEImageRotationAnimationFactory
 export class AllBinaryPlatformImageRotationAnimationFactory extends AllBinaryJ2SEImageRotationAnimationFactory {
     constructor(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation) {
         super(image, width, height, angleIncrement, animationBehaviorFactory, resizeCanvasForRotation);

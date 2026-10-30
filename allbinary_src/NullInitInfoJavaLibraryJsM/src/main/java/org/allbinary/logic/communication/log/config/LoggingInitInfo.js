@@ -18,27 +18,30 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const LogConfig
+//sameFolderImports - not GWT import - same folder const LogConfig
 export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static write() {
         try {
             LoggingInitInfo.hasRead = false;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static read() {
-        try {
-            //: 
-        }
-        catch (e) {
-            throw e;
+        try { }
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
@@ -70,14 +73,14 @@ export class LoggingInitInfo extends Object {
     //@Throws(Exception.constructor)
     static getTypeList() {
         LoggingInitInfo.updateIfNeeded();
-        var allLogTypeVector = new BasicArrayListD();
+        let allLogTypeVector = new BasicArrayListD();
         ;
-        var size = LoggingInitInfo.logConfigInfoList.size();
+        let size = LoggingInitInfo.logConfigInfoList.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var logConfigInfo = LoggingInitInfo.logConfigInfoList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let logConfigInfo = LoggingInitInfo.logConfigInfoList.objectArray[index];
             ;
-            var logTypeVector = logConfigInfo.getTypeVector();
+            let logTypeVector = logConfigInfo.getTypeVector();
             ;
             if (logConfigInfo.isEnabled()) {
                 allLogTypeVector.addAllList(logTypeVector);
@@ -93,11 +96,13 @@ export class LoggingInitInfo extends Object {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -110,11 +115,13 @@ export class LoggingInitInfo extends Object {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return null;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return "Error";
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return "Error";
+            }
         }
     }
 }

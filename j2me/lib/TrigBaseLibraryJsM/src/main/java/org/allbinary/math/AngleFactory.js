@@ -26,22 +26,22 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Angle } from './Angle.js';
-//not GWT import - same folder const Angle
+//sameFolderImports - not GWT import - same folder const Angle
 import { NamedAngle } from './NamedAngle.js';
-//not GWT import - same folder const NamedAngle
+//sameFolderImports - not GWT import - same folder const NamedAngle
 import { FrameUtil } from './FrameUtil.js';
-//not GWT import - same folder const FrameUtil
+//sameFolderImports - not GWT import - same folder const FrameUtil
 export class AngleFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AngleFactory.instance;
     }
     static main(args) {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var angleFactory = AngleFactory.getInstance();
+        let angleFactory = AngleFactory.getInstance();
         ;
-        for (var index = 0; index < 360; index++) {
+        for (let index = 0; index < 360; index++) {
             stringMaker.appendint(index).append(CommonSeps.getInstance().FORWARD_SLASH).appendshort(angleFactory.getClosestDirection(index).getValue()).append(CommonSeps.getInstance().NEW_LINE);
         }
         LogUtil.getInstance().putF(stringMaker.toString(), "main", "main");
@@ -51,37 +51,37 @@ export class AngleFactory extends Object {
         this.logUtil = LogUtil.getInstance();
         this.TOTAL_ANGLE = 360;
         this.QUARTER_TOTAL_ANGLE = 90;
-        this.angleArray = new Array(Math.round(this.TOTAL_ANGLE));
+        this.angleArray = new Array(globalThis.Math.trunc(this.TOTAL_ANGLE));
         this.NEGATIVE_ONE = -1;
         this.NOT_ANGLE = new NamedAngle(this.NEGATIVE_ONE, CommonStrings.getInstance().EMPTY);
         this.frameUtil = FrameUtil.getInstance();
-        var commonPhoneStrings = CommonPhoneStrings.getInstance();
+        let commonPhoneStrings = CommonPhoneStrings.getInstance();
         ;
-        var total = this.angleArray.length;
+        let total = this.angleArray.length;
         ;
         this.UP = new NamedAngle(0, commonPhoneStrings.UP);
         this.angleArray[0] = this.UP;
-        for (var index = 1; index < 90; index++) {
+        for (let index = 1; index < 90; index++) {
             this.angleArray[index] = new Angle(index);
         }
         this.RIGHT = new NamedAngle(90, commonPhoneStrings.RIGHT);
         this.angleArray[90] = this.RIGHT;
-        for (var index = 91; index < 180; index++) {
+        for (let index = 91; index < 180; index++) {
             this.angleArray[index] = new Angle(index);
         }
         this.DOWN = new NamedAngle(180, commonPhoneStrings.DOWN);
         this.angleArray[180] = this.DOWN;
-        for (var index = 181; index < 270; index++) {
+        for (let index = 181; index < 270; index++) {
             this.angleArray[index] = new Angle(index);
         }
         this.LEFT = new NamedAngle(270, commonPhoneStrings.LEFT);
         this.angleArray[270] = this.LEFT;
-        for (var index = 271; index < total; index++) {
+        for (let index = 271; index < total; index++) {
             this.angleArray[index] = new Angle(index);
         }
     }
     getAt(index) {
-        var adjustedIndex = Math.round(this.frameUtil.adjustAngleToFrameAngle(index));
+        let adjustedIndex = globalThis.Math.trunc(this.frameUtil.adjustAngleToFrameAngle(index));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.angleArray[adjustedIndex];

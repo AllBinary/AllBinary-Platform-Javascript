@@ -24,7 +24,7 @@ import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DestroyedEventHandler } from './DestroyedEventHandler.js';
-//not GWT import - same folder const DestroyedEventHandler
+//sameFolderImports - not GWT import - same folder const DestroyedEventHandler
 export class DestroyedEvent extends AllBinaryEventObject {
     constructor(combatGameCanvas) {
         super(DestroyedEventHandler.getInstance());
@@ -48,7 +48,7 @@ export class DestroyedEvent extends AllBinaryEventObject {
         this.allBinaryLayerInterface = allBinaryLayerInterface;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("DestroyedEvent: \n");
         stringBuffer.append("AllBinaryLayerInterface: ");

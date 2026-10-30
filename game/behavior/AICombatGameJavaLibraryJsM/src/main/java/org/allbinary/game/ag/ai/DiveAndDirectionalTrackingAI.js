@@ -63,10 +63,10 @@ export class DiveAndDirectionalTrackingAI extends BasicAI {
         //For kotlin this is before the body of the constructor.
         this.aiVistor = visitor;
         this.artificialIntelligenceInterface = artificialIntelligenceInterface;
-        var directionalCompositeInterface = this.getOwnerLayerInterface();
+        let directionalCompositeInterface = this.getOwnerLayerInterface();
         ;
         this.directionalInterface = directionalCompositeInterface.getDirectionalInterface();
-        var velocityInterfaceCompositeInterface = this.getOwnerLayerInterface();
+        let velocityInterfaceCompositeInterface = this.getOwnerLayerInterface();
         ;
         this.velocityInterface = velocityInterfaceCompositeInterface.getVelocityProperties();
         DestroyedEventHandler.getInstance().addListenerInterface(this);
@@ -98,26 +98,26 @@ export class DiveAndDirectionalTrackingAI extends BasicAI {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var lastTrackingEvent = this.list.removeAt(0);
+        let lastTrackingEvent = this.list.removeAt(0);
         ;
         this.lastTrackingLayerInterface = lastTrackingEvent.getLayerInterface();
-        var layerInterface = this.lastTrackingLayerInterface;
+        let layerInterface = this.lastTrackingLayerInterface;
         ;
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
         if (layerInterface.getGroupInterface() == ownerLayerInterface.getGroupInterface()) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var x = this.lastTrackingLayerInterface.getXP();
+        let x = this.lastTrackingLayerInterface.getXP();
         ;
-        var y = this.lastTrackingLayerInterface.getYP();
+        let y = this.lastTrackingLayerInterface.getYP();
         ;
-        var yDistance = ownerLayerInterface.getYP() - y - ownerLayerInterface.getHeight();
+        let yDistance = ownerLayerInterface.getYP() - y - ownerLayerInterface.getHeight();
         ;
-        var xDistance = ownerLayerInterface.getXP() - x - ownerLayerInterface.getWidth();
+        let xDistance = ownerLayerInterface.getXP() - x - ownerLayerInterface.getWidth();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         if (this.mathUtil.abs(yDistance) > this.mathUtil.abs(xDistance)) {
             if (yDistance > this.MIN_DISTANCE) {
@@ -152,7 +152,7 @@ export class DiveAndDirectionalTrackingAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     verticalTargeting(x) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
         if (ownerLayerInterface.getXP() < x) {
             this.moveRight();
@@ -166,7 +166,7 @@ export class DiveAndDirectionalTrackingAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     horizontalTargeting(y) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
         if (ownerLayerInterface.getYP() < y) {
             this.moveDown();
@@ -283,7 +283,7 @@ export class DiveAndDirectionalTrackingAI extends BasicAI {
     }
     setLastDirection(lastDirection) {
         this.lastDirection = lastDirection;
-        var value = this.getLastDirection().getValue();
+        let value = this.getLastDirection().getValue();
         ;
         if (value < 4) {
             super.setLastKey(this.directionToKeyMap[value]);
@@ -309,7 +309,7 @@ export class DiveAndDirectionalTrackingAI extends BasicAI {
         return this.lastDirection;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(super.toString());
         stringBuffer.append(" LastDirection: ");

@@ -45,9 +45,9 @@ export class HighScore extends Object {
     }
     //@Throws(Exception.constructor)
     getAsBytes() {
-        var byteArrayOutputStream = new ByteArrayOutputStream();
+        let byteArrayOutputStream = new ByteArrayOutputStream();
         ;
-        var outputStream = new DataOutputStream(byteArrayOutputStream);
+        let outputStream = new DataOutputStream(byteArrayOutputStream);
         ;
         outputStream.writeUTF(this.getName());
         outputStream.writeLong(this.getScore());
@@ -67,7 +67,7 @@ export class HighScore extends Object {
         this.name = name;
     }
     toString() {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new StringMaker().append(this.name).append(commonSeps.COLON).appendlong(this.score).append(commonSeps.FORWARD_SLASH).append(this.scoreString).toString();

@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const LockableFeature
+//sameFolderImports - not GWT import - same folder const LockableFeature
 export class InApplicationPurchaseFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -24,15 +24,15 @@ export class InApplicationPurchaseFactory extends Object {
     constructor() {
         super();
     }
-    init(anyType = {}, stateObject = {}) {
+    init(anyType, stateObject) {
     }
-    onCreate(anyType = {}, stateObject = {}) {
+    onCreate(anyType, stateObject) {
     }
     onStart() {
     }
-    onResult(requestCode, resultCode, data = {}) {
+    onResult(requestCode, resultCode, data) {
     }
-    onSaveState(anyType = {}) {
+    onSaveState(anyType) {
     }
     onStop() {
     }

@@ -13,7 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-import { Character } from '../../../java/lang/Character.js';
+//not plain js import { Character }
+const Character = globalThis.java.lang.Character;
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
@@ -45,26 +46,21 @@ export class CamelCaseUtil extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return StringUtil.getInstance().EMPTY_STRING;
         }
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         stringBuilder.delete(0, stringBuilder.length());
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
-        var tokenizer = new Tokenizer(this.commonSeps.UNDERSCORE);
+        let tokenizer = new Tokenizer(this.commonSeps.UNDERSCORE);
         ;
         tokenizer.getTokensFromString(string, list);
-        var size = list.size();
+        let size = list.size();
         ;
-        var word;
+        let word;
         ;
-        for (var i = 0; i < size; i++) {
+        for (let i = 0; i < size; i++) {
             word = list.get(i);
-            word = stringValidationUtil.isEmpty(word)
-                ?
-                    word
-                :
-                    new StringMaker().appendchar(Character.toUpperCase(word[0])).append(word.substring(1).toLowerCase()).toString();
-            ;
+            word = (stringValidationUtil.isEmpty(word) ? word : new StringMaker().appendchar(Character.toUpperCase(word[0])).append(word.substring(1).toLowerCase()).toString());
             stringBuilder.append(word);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

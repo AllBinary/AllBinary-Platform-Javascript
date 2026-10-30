@@ -34,26 +34,28 @@ export class SmallInsert extends Object {
     }
     atBeginning(text) {
         try {
-            var idFile = new FileOutputStream(this.fileName);
+            let idFile = new FileOutputStream(this.fileName);
             ;
-            var idOutData = new DataOutputStream(idFile);
+            let idOutData = new DataOutputStream(idFile);
             ;
             idOutData.writeBytes(text + this.string);
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, "insertAtBeginning", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, "insertAtBeginning", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     after(text, after) {
         try {
-            var index = this.string.indexOf(after);
+            let index = this.string.indexOf(after);
             ;
             if (index < 0) {
                 console.log("No such start: " + after + " in: " + this.string);
@@ -61,46 +63,50 @@ export class SmallInsert extends Object {
                 return false;
             }
             index = index + after.length;
-            var start = this.string.substring(0, index);
+            let start = this.string.substring(0, index);
             ;
-            var end = this.string.substring(index + 1, this.string.length);
+            let end = this.string.substring(index + 1, this.string.length);
             ;
-            var idFile = new FileOutputStream(this.fileName);
+            let idFile = new FileOutputStream(this.fileName);
             ;
-            var idOutData = new DataOutputStream(idFile);
+            let idOutData = new DataOutputStream(idFile);
             ;
             idOutData.writeBytes(start + text + end);
             idOutData.close();
             idFile.close();
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, "after", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, "after", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     atEnd(text) {
         try {
-            var idFile = new FileOutputStream(this.fileName);
+            let idFile = new FileOutputStream(this.fileName);
             ;
-            var idOutData = new DataOutputStream(idFile);
+            let idOutData = new DataOutputStream(idFile);
             ;
             idOutData.writeBytes(this.string + text);
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, "insertAtEnd", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().IDLOGGING)) {
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, "insertAtEnd", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
 }

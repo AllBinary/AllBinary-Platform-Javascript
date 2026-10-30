@@ -35,7 +35,7 @@ import { NullPaintable } from '../../../../../org/allbinary/graphics/paint/NullP
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const BuildingLayer
+//sameFolderImports - not GWT import - same folder const BuildingLayer
 export class BuildingPropertiesFactory extends Object {
     constructor() {
         super(...arguments);
@@ -50,7 +50,7 @@ export class BuildingPropertiesFactory extends Object {
         return 10000 / buildingLayer.getMaxLevel() + 10000 % buildingLayer.getMaxLevel();
     }
     getDamageFloaters(buildingLayer) {
-        var damageFloaters = DamageFloaters.getInstance();
+        let damageFloaters = DamageFloaters.getInstance();
         ;
         if (Features.getInstance().isFeature(GameFeatureFactory.getInstance().DAMAGE_FLOATERS)) {
             damageFloaters = new PtsDamageFloaters(buildingLayer);
@@ -64,7 +64,7 @@ export class BuildingPropertiesFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getHealthBar(buildingLayer) {
-        var healthBar = NullPaintable.getInstance();
+        let healthBar = NullPaintable.getInstance();
         ;
         if (Features.getInstance().isFeature(GameFeatureFactory.getInstance().HEALTH_BARS)) {
             healthBar = new HealthBar(buildingLayer, buildingLayer.getHealthInterface(), new HealthBarTwodAnimation(buildingLayer, BasicHudFactory.getInstance().BOTTOMLEFT), -1);

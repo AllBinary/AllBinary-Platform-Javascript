@@ -25,7 +25,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const RawKeyEventListener
+//sameFolderImports - not GWT import - same folder const RawKeyEventListener
 export class RawKeyEventHandler extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,11 +40,11 @@ export class RawKeyEventHandler extends Object {
         this.eventListenerInterfaceList = new BasicArrayListD();
     }
     addListeners(vector) {
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var size = vector.size();
+        let size = vector.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             eventListenerInterface = vector.get(index);
             this.addListener(eventListenerInterface);
         }
@@ -67,20 +67,22 @@ export class RawKeyEventHandler extends Object {
     }
     //@Throws(Exception.constructor)
     fireEvent(keyCode, deviceId, repeated) {
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (index < this.eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = this.eventListenerInterfaceList.get(index);
                 this.process(keyCode, deviceId, repeated, eventListenerInterface);
-                //: 
             }
-            catch (e) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
             index++;
         }
@@ -94,25 +96,27 @@ export class RawKeyEventHandler extends Object {
         return this.eventListenerInterfaceList;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(RawKeyEventHandler.TOTAL_LISTENERS);
         stringBuffer.appendint(this.eventListenerInterfaceList.size());
-        var eventListenerInterface;
+        let eventListenerInterface;
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (index < this.eventListenerInterfaceList.size()) {
             try {
                 eventListenerInterface = this.eventListenerInterfaceList.get(index);
                 stringBuffer.append(RawKeyEventHandler.LISTENER_LABEL);
                 stringBuffer.append(eventListenerInterface.toString());
-                //: 
             }
-            catch (e) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.TOSTRING, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.TOSTRING, e);
+                }
             }
             index++;
         }

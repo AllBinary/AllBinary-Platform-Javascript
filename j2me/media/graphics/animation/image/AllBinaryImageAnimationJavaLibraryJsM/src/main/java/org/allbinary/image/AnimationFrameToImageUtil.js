@@ -16,7 +16,7 @@ import { Object } from '../../../java/lang/Object.js';
 //not GWT import const Animation
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameFeatureImageCacheFactory } from './GameFeatureImageCacheFactory.js';
-//not GWT import - same folder const GameFeatureImageCacheFactory
+//sameFolderImports - not GWT import - same folder const GameFeatureImageCacheFactory
 export class AnimationFrameToImageUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -24,13 +24,13 @@ export class AnimationFrameToImageUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getInstanceTranslate(width, height, animationInterface) {
-        var image = GameFeatureImageCacheFactory.getInstance().get(AnimationFrameToImageUtil.instance.constructor.name.toString(), ((width * 3) >> 1), ((height * 3) >> 1));
+        let image = GameFeatureImageCacheFactory.getInstance().get(AnimationFrameToImageUtil.instance.constructor.name.toString(), ((width * 3) >> 1), ((height * 3) >> 1));
         ;
-        var graphics = image.getGraphics();
+        let graphics = image.getGraphics();
         ;
-        var tranlateX = (width >> 2);
+        let tranlateX = (width >> 2);
         ;
-        var tranlateY = (height >> 2);
+        let tranlateY = (height >> 2);
         ;
         graphics.translate(tranlateX, tranlateY);
         animationInterface.paintXY(graphics, 0, 0);
@@ -40,9 +40,9 @@ export class AnimationFrameToImageUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getInstanceWH(width, height, animationInterface) {
-        var image = GameFeatureImageCacheFactory.getInstance().get(AnimationFrameToImageUtil.instance.constructor.name.toString(), width, height);
+        let image = GameFeatureImageCacheFactory.getInstance().get(AnimationFrameToImageUtil.instance.constructor.name.toString(), width, height);
         ;
-        var graphics = image.getGraphics();
+        let graphics = image.getGraphics();
         ;
         animationInterface.paintXY(graphics, 0, 0);
         //if statement needs to be on the same line and ternary does not work the same way.

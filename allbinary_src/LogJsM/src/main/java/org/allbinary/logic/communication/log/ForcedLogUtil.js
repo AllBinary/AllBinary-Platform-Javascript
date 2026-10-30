@@ -20,13 +20,15 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ForcedLogUtil extends Object {
-    static log(message, anyType = {}) {
+    static log(message, anyType) {
         try {
             throw new Exception(message);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE(CommonStrings.getInstance().EXCEPTION, anyType, "log", e);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE(CommonStrings.getInstance().EXCEPTION, anyType, "log", e);
+            }
         }
     }
 }

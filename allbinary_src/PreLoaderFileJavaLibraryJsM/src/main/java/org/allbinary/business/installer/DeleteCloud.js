@@ -42,28 +42,28 @@ export class DeleteCloud extends Object {
     delete(prePath, current, total) {
         try {
             if (AbIOSystem.getInstance().isType("com.vobject.appengine.java.io")) {
-                var stringBuffer = new StringMaker();
+                let stringBuffer = new StringMaker();
                 ;
                 stringBuffer.append(URLGLOBALS.getWebappPath());
                 stringBuffer.append(prePath);
-                var path = new AbPath(stringBuffer.toString(), StringUtil.getInstance().EMPTY_STRING);
+                let path = new AbPath(stringBuffer.toString(), StringUtil.getInstance().EMPTY_STRING);
                 ;
-                var file = AbFile.createAbFileFromAbPath(path);
+                let file = AbFile.createAbFileFromAbPath(path);
                 ;
-                var fileBasicArrayList = Directory.getInstance().search(file, true);
+                let fileBasicArrayList = Directory.getInstance().search(file, true);
                 ;
-                var size = fileBasicArrayList.size();
+                let size = fileBasicArrayList.size();
                 ;
                 stringBuffer.delete(0, stringBuffer.length());
                 stringBuffer.append("Searched: ");
                 stringBuffer.append(path.toFileSystemString());
                 stringBuffer.append(" BasicArrayList: ");
                 stringBuffer.appendint(size);
-                var portion = size / total + 1;
+                let portion = globalThis.Math.trunc(size / total) + 1;
                 ;
-                var start = portion * current;
+                let start = portion * current;
                 ;
-                var end = start + portion;
+                let end = start + portion;
                 ;
                 if (end > size) {
                     end = size;
@@ -73,29 +73,33 @@ export class DeleteCloud extends Object {
                 stringBuffer.append(" - ");
                 stringBuffer.appendint(end);
                 this.logUtil.putF(stringBuffer.toString(), this, "initialize()");
-                var nextFile;
+                let nextFile;
                 ;
-                for (var index = start; index < end; index++) {
+                for (let index = start; index < end; index++) {
                     nextFile = fileBasicArrayList.get(index);
                     try {
                         if (nextFile.getPath().indexOf(FileUploadData.getInstance().FILE) < 0) {
                             nextFile.delete();
                         }
-                        //: 
                     }
-                    catch (e) {
+                    catch (caught) {
+                        {
+                            const e = caught;
+                        }
                     }
                 }
                 this.logUtil.putF("Deleted Files From Cloud", this, "initialize()");
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Unable to copy installer files into cloud", this, "initialize()", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Unable to copy installer files into cloud", this, "initialize()", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
 }

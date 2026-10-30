@@ -30,19 +30,19 @@ export class MineWeaponResources extends BasicGameResources {
         this.DROP_TEXT_RESOURCE = "/mine_drop_text_20_by_20.png";
         this.DROP_RESOURCE = "/mine_drop_20_by_20.png";
         this.DROP_ICON_RESOURCE = "/mine_drop_icon_20_by_20.png";
-        var ROOT = "/mine";
+        let ROOT = "/mine";
         ;
-        var SMALL = "_20_by_20.png";
+        let SMALL = "_20_by_20.png";
         ;
-        var MEDIUM = SMALL;
+        let MEDIUM = SMALL;
         ;
-        var SIZE_FOUR = SMALL;
+        let SIZE_FOUR = SMALL;
         ;
-        var SIZE_FIVE = SMALL;
+        let SIZE_FIVE = SMALL;
         ;
-        var SIZE_SIX = SMALL;
+        let SIZE_SIX = SMALL;
         ;
-        var SIZE = [
+        let SIZE = [
             SMALL, MEDIUM, SIZE_FOUR, SIZE_FIVE, SIZE_SIX
         ];
         ;

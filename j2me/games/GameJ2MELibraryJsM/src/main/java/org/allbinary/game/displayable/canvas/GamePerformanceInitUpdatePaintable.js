@@ -36,7 +36,7 @@ export class GamePerformanceInitUpdatePaintable extends InitUpdatePaintable {
         this.RED = BasicColorFactory.getInstance().RED.intValue();
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.defaultStringWidth = MyFontProcessor.defaultStringWidth(font, 2);
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -49,17 +49,17 @@ export class GamePerformanceInitUpdatePaintable extends InitUpdatePaintable {
     paint(graphics) {
         this.myFontProcessor.process(graphics);
         graphics.setColor(this.RED);
-        var charArray;
+        let charArray;
         ;
-        var charArray2;
+        let charArray2;
         ;
-        var size2 = 0;
+        let size2 = 0;
         ;
-        var size3 = 0;
+        let size3 = 0;
         ;
-        var size = this.baseRefreshHelperCharArray.length - 2;
+        let size = this.baseRefreshHelperCharArray.length - 2;
         ;
-        for (var index = size; index >= 0;) {
+        for (let index = size; index >= 0;) {
             charArray = this.baseRefreshHelperCharArray[index];
             charArray2 = this.baseRefreshHelperCharArray[index + 1];
             size2 = charArray.length;

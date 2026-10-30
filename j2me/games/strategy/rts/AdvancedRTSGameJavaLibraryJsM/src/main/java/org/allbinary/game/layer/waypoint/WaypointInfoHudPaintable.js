@@ -28,12 +28,12 @@ export class WaypointInfoHudPaintable extends SelectionHudPaintable {
     }
     updateMeasurement(graphics) {
         super.updateMeasurement(graphics);
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.textLine2Y = (this.y + font.getHeight());
     }
     updateSelectionInfo() {
-        var rtsLayer = this.rtsLayerP;
+        let rtsLayer = this.rtsLayerP;
         ;
         this.setName(rtsLayer.getName());
         this.setAnimationInterface(rtsLayer.getVerticleBuildAnimationInterface());

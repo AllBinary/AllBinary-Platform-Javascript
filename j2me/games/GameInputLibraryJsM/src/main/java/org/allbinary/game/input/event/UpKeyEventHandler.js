@@ -16,14 +16,14 @@ import { LocalPlayerInputIdFactory } from '../../../../../org/allbinary/game/inp
 //not GWT import const EventListenerInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UpKeyEventHandlerBase } from './UpKeyEventHandlerBase.js';
-//not GWT import - same folder const UpKeyEventHandlerBase
+//sameFolderImports - not GWT import - same folder const UpKeyEventHandlerBase
 export class UpKeyEventHandler extends UpKeyEventHandlerBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return UpKeyEventHandler.instance;
     }
     getInstanceForDevice(deviceId) {
-        var playerInputId = this.playerInputIdFactory.getPlayerForDevice(deviceId);
+        let playerInputId = this.playerInputIdFactory.getPlayerForDevice(deviceId);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return UpKeyEventHandler.instanceArray[playerInputId];
@@ -38,19 +38,19 @@ export class UpKeyEventHandler extends UpKeyEventHandlerBase {
     }
     removeAllListeners() {
         super.removeAllListeners();
-        for (var index = UpKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = UpKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             UpKeyEventHandler.instanceArray[index].removeAllListeners();
         }
     }
     removeListenerSingleThreaded(eventListenerInterface) {
         super.removeListenerSingleThreaded(eventListenerInterface);
-        for (var index = UpKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = UpKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             UpKeyEventHandler.instanceArray[index].removeListenerSingleThreaded(eventListenerInterface);
         }
     }
     removeListener(eventListenerInterface) {
         super.removeListener(eventListenerInterface);
-        for (var index = UpKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
+        for (let index = UpKeyEventHandler.instanceArray.length - 1; index >= 0; index--) {
             UpKeyEventHandler.instanceArray[index].removeListener(eventListenerInterface);
         }
     }

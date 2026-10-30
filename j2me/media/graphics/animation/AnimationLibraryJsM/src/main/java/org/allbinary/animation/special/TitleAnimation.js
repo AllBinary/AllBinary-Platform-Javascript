@@ -26,7 +26,7 @@ import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/Primitive
 //not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpecialAnimation } from './SpecialAnimation.js';
-//not GWT import - same folder const SpecialAnimation
+//sameFolderImports - not GWT import - same folder const SpecialAnimation
 export class TitleAnimation extends SpecialAnimation {
     static createAnimation(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,11 +52,11 @@ export class TitleAnimation extends SpecialAnimation {
         this.reset();
     }
     nextFrame() {
-        var currentTime = this.systemWrapper.currentTimeMillis();
+        let currentTime = this.systemWrapper.currentTimeMillis();
         ;
-        var totalTimeElapsed = currentTime - this.lastFrameStartTime;
+        let totalTimeElapsed = currentTime - this.lastFrameStartTime;
         ;
-        var indexedAnimationBehavior = this.getAnimationBehavior();
+        let indexedAnimationBehavior = this.getAnimationBehavior();
         ;
         if (totalTimeElapsed > indexedAnimationBehavior.frameDelayTime) {
             this.previousFrame();
@@ -67,7 +67,7 @@ export class TitleAnimation extends SpecialAnimation {
         }
     }
     isComplete() {
-        var indexedAnimationBehavior = this.getAnimationBehavior();
+        let indexedAnimationBehavior = this.getAnimationBehavior();
         ;
         if (indexedAnimationBehavior.loopTotal == -1 || indexedAnimationBehavior.loopIndex < indexedAnimationBehavior.loopTotal || this.getFrame() != 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,7 +96,7 @@ export class TitleAnimation extends SpecialAnimation {
         ;
     }
     setFrame(frame) {
-        for (var index = 0; index < this.sizeP; index++) {
+        for (let index = 0; index < this.sizeP; index++) {
             this.animationInterfaceArray[index].setFrame(frame);
         }
     }
@@ -105,12 +105,12 @@ export class TitleAnimation extends SpecialAnimation {
     }
     reset() {
         this.setLastFrame();
-        var indexedAnimationBehavior = this.getAnimationBehavior();
+        let indexedAnimationBehavior = this.getAnimationBehavior();
         ;
         indexedAnimationBehavior.reset();
     }
     previousFrame() {
-        for (var index = 0; index < this.sizeP; index++) {
+        for (let index = 0; index < this.sizeP; index++) {
             this.animationInterfaceArray[index].previousFrame();
         }
     }
@@ -119,16 +119,16 @@ export class TitleAnimation extends SpecialAnimation {
         this.paintXY(graphics, x, y);
     }
     paintXY(graphics, ax, ay) {
-        var x = 0;
+        let x = 0;
         ;
         if (this.widthP != Integer.MIN_VALUE) {
             x = ((this.displayInfoSingleton.getLastWidth() - this.widthP) / 2);
         }
-        var deltaX = 0;
+        let deltaX = 0;
         ;
-        var deltaY = 0;
+        let deltaY = 0;
         ;
-        for (var index = 0; index < this.sizeP; index++) {
+        for (let index = 0; index < this.sizeP; index++) {
             deltaX = this.dxArray[index] + x;
             deltaY = this.dyArray[index] + this.y;
             if (this.basicColorArray[index] != this.CLEAR_COLOR) {

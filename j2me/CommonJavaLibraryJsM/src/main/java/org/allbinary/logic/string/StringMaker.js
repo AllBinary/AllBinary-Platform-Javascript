@@ -9,7 +9,7 @@ export class StringMaker extends Object {
         this.charArray = new Array(20);
     }
     append(string) {
-        var stringLength = string.length;
+        let stringLength = string.length;
         ;
         this.ensureCapacity(this.currentLength + stringLength);
         for (let i = 0; i < stringLength; i++) {
@@ -29,7 +29,7 @@ export class StringMaker extends Object {
     }
     appendCharArray(charArray, start, end) {
         this.ensureCapacity(this.currentLength + (end - start));
-        for (var index = start; index < end; index++) {
+        for (let index = start; index < end; index++) {
             this.charArray[this.currentLength++] = charArray[index];
         }
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,16 +80,16 @@ export class StringMaker extends Object {
         return this;
     }
     ensureCapacity(minSize) {
-        var oldCapacity = this.charArray.length;
+        let oldCapacity = this.charArray.length;
         ;
         if (minSize > oldCapacity) {
-            var newCapacity = oldCapacity * 3;
+            let newCapacity = oldCapacity * 3;
             ;
             if (newCapacity < minSize)
                 newCapacity = minSize;
-            var copy = new Array(newCapacity);
+            let copy = new Array(newCapacity);
             ;
-            var min = this.min(this.charArray.length, newCapacity);
+            let min = this.min(this.charArray.length, newCapacity);
             ;
             System.arraycopy(this.charArray, 0, copy, 0, min);
             this.charArray = copy;
@@ -97,12 +97,7 @@ export class StringMaker extends Object {
     }
     min(value, value2) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return (value <= value2)
-            ?
-                value
-            :
-                value2;
-        ;
+        return ((value <= value2) ? value : value2);
     }
     delete(start, end) {
         this.currentLength -= (end - start);
@@ -115,6 +110,6 @@ export class StringMaker extends Object {
     }
     toString() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.charArray.slice(0, this.currentLength).join('');
+        return ((data, offset, count) => data.slice(offset, offset + count).map(value => typeof value === 'number' ? String.fromCharCode(value & 255) : value).join(''))(this.charArray, 0, this.currentLength);
     }
 }

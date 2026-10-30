@@ -20,13 +20,13 @@ import { InputFeatureFactory } from '../../../../../org/allbinary/game/configura
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MultiKeyPressesAI } from './MultiKeyPressesAI.js';
-//not GWT import - same folder const MultiKeyPressesAI
+//sameFolderImports - not GWT import - same folder const MultiKeyPressesAI
 import { KeyPressesAI } from './KeyPressesAI.js';
-//not GWT import - same folder const KeyPressesAI
+//sameFolderImports - not GWT import - same folder const KeyPressesAI
 export class KeyPressesAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {
-        var isSingleKeyProcessing = InputFeatureFactory.getInstance().isSingleKeyProcessing();
+        let isSingleKeyProcessing = InputFeatureFactory.getInstance().isSingleKeyProcessing();
         ;
         if (isSingleKeyProcessing) {
             //if statement needs to be on the same line and ternary does not work the same way.

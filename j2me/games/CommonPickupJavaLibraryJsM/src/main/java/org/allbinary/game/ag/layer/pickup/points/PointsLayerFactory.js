@@ -16,7 +16,7 @@ import { Object } from '../../../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayerFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PointsLayer } from './PointsLayer.js';
-//not GWT import - same folder const PointsLayer
+//sameFolderImports - not GWT import - same folder const PointsLayer
 export class PointsLayerFactory extends Object {
     constructor(points) {
         super();

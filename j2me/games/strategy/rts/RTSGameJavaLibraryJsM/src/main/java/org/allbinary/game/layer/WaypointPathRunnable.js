@@ -21,7 +21,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const GeographicMapCellPosition
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointPathRunnableBase } from './WaypointPathRunnableBase.js';
-//not GWT import - same folder const WaypointBehaviorBase
+//sameFolderImports - not GWT import - same folder const WaypointBehaviorBase
 export class WaypointPathRunnable extends WaypointPathRunnableBase {
     constructor() {
         super();
@@ -30,9 +30,9 @@ export class WaypointPathRunnable extends WaypointPathRunnableBase {
     run() {
         try {
             this.pathFindingLayer.getWaypointRunnableLogHelper().start(this.pathFindingLayer);
-            var waypointBehavior = this.pathFindingLayer.getWaypointBehavior();
+            let waypointBehavior = this.pathFindingLayer.getWaypointBehavior();
             ;
-            var geographicMapCellPosition = this.pathFindingLayer.getCurrentGeographicMapCellPosition();
+            let geographicMapCellPosition = this.pathFindingLayer.getCurrentGeographicMapCellPosition();
             ;
             if (geographicMapCellPosition ==
                 null) {
@@ -41,13 +41,15 @@ export class WaypointPathRunnable extends WaypointPathRunnableBase {
             waypointBehavior.setWaypointPathsList(this.targetPathFindingLayer.getWaypointBehavior().getWaypoint().getPathsListRunnable(geographicMapCellPosition));
             this.pathFindingLayer.getWaypointRunnableLogHelper().end(this.pathFindingLayer);
             Thread.sleep(15 + (this.priorityP * 2));
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-            this.setRunning(false);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                this.setRunning(false);
+            }
         }
     }
     isDone() {

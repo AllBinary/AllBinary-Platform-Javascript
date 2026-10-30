@@ -29,11 +29,18 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorExplosionType } from './VectorExplosionType.js';
-//not GWT import - same folder const VectorExplosionType
+//sameFolderImports - not GWT import - same folder const VectorExplosionType
 import { VectorAnimationUtil } from './VectorAnimationUtil.js';
-//not GWT import - same folder const VectorAnimationUtil
+//sameFolderImports - not GWT import - same folder const VectorAnimationUtil
 export class VectorExplosionGenerator extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 3 && typeof args[1] === 'number')
+            return this.getInstance$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return VectorExplosionGenerator.instance;
     }
@@ -46,13 +53,13 @@ export class VectorExplosionGenerator extends Object {
     }
     //@Throws(Exception.constructor)
     createList(list, howMuch, type) {
-        var point;
+        let point;
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var points = new Array(size).fill(null).map(() => new Array(2).fill(null));
+        let points = new Array(size).fill(null).map(() => new Array(2).fill(null));
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             point = list.objectArray[index];
             points[index][0] = point.getX();
             points[index][1] = point.getY();
@@ -62,12 +69,12 @@ export class VectorExplosionGenerator extends Object {
         ;
     }
     //@Throws(Exception.constructor)
-    getInstance(points, howMuch, type) {
-        var pointsBasicArrayList = this.getInstanceStartFrame(points, howMuch, type, true);
+    getInstance$overload2(points, howMuch, type) {
+        let pointsBasicArrayList = this.getInstanceStartFrame(points, howMuch, type, true);
         ;
-        var tempBasicArrayList = pointsBasicArrayList.objectArray[0];
+        let tempBasicArrayList = pointsBasicArrayList.objectArray[0];
         ;
-        var newPoints = this.vectorAnimationUtil.toAnimationArrayFromListOfPointListWithPointsPerFrame(pointsBasicArrayList, tempBasicArrayList.size());
+        let newPoints = this.vectorAnimationUtil.toAnimationArrayFromListOfPointListWithPointsPerFrame(pointsBasicArrayList, tempBasicArrayList.size());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return newPoints;
@@ -75,14 +82,14 @@ export class VectorExplosionGenerator extends Object {
     //@Throws(Exception.constructor)
     getInstanceStartFrame(points, howMuch, type, startFrame) {
         try {
-            var pointsBasicArrayList = new BasicArrayListS(howMuch);
+            let pointsBasicArrayList = new BasicArrayListS(howMuch);
             ;
             pointsBasicArrayList.add(this.createPointsBasicArrayList(points));
-            var frameIndex = 0;
+            let frameIndex = 0;
             ;
-            var tempBasicArrayList;
+            let tempBasicArrayList;
             ;
-            var pointBasicArrayList;
+            let pointBasicArrayList;
             ;
             while (frameIndex < howMuch) {
                 tempBasicArrayList = pointsBasicArrayList.objectArray[frameIndex];
@@ -95,19 +102,21 @@ export class VectorExplosionGenerator extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return pointsBasicArrayList;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     //@Throws(Exception.constructor)
     createListFromPoints(tempBasicArrayList, points, howMuch, type) {
-        var index = 0;
+        let index = 0;
         ;
-        var pointBasicArrayList = new BasicArrayListD();
+        let pointBasicArrayList = new BasicArrayListD();
         ;
-        var sectionBasicArrayList;
+        let sectionBasicArrayList;
         ;
         while (index < points.length) {
             sectionBasicArrayList = new BasicArrayListD();
@@ -122,9 +131,9 @@ export class VectorExplosionGenerator extends Object {
             if (type == this.ROTATION) {
                 sectionBasicArrayList = this.randomRotationFactory.getInstanceList(sectionBasicArrayList, howMuch);
             }
-            var size = sectionBasicArrayList.size();
+            let size = sectionBasicArrayList.size();
             ;
-            for (var index2 = 0; index2 < size; index2++) {
+            for (let index2 = 0; index2 < size; index2++) {
                 pointBasicArrayList.add(sectionBasicArrayList.objectArray[index2]);
             }
             if (index >= points.length) {
@@ -143,11 +152,11 @@ export class VectorExplosionGenerator extends Object {
         if (points.length == 0) {
             throw new Exception("Not Points Provided");
         }
-        var firstPointBasicArrayList = new BasicArrayListS(points.length);
+        let firstPointBasicArrayList = new BasicArrayListS(points.length);
         ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        for (var index = 0; index < points.length; index++) {
+        for (let index = 0; index < points.length; index++) {
             firstPointBasicArrayList.add(pointFactory.createXY(points[index][0], points[index][1]));
         }
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -15,7 +15,7 @@
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbstractArrayListPool } from './AbstractArrayListPool.js';
-//not GWT import - same folder const BasicArrayListCacheable
+//sameFolderImports - not GWT import - same folder const BasicArrayListCacheable
 export class BasicArrayListPool extends AbstractArrayListPool {
     constructor(cacheableInterfaceFactoryInterface) {
         super(cacheableInterfaceFactoryInterface);
@@ -25,8 +25,8 @@ export class BasicArrayListPool extends AbstractArrayListPool {
         this.buffers.clear();
     }
     //@Throws(Exception.constructor)
-    remove(key = {}) {
-        var size = this.buffers.size();
+    remove(key) {
+        let size = this.buffers.size();
         ;
         if (size > 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,8 +40,8 @@ export class BasicArrayListPool extends AbstractArrayListPool {
     }
     //@Throws(Exception.constructor)
     addAll(usedList) {
-        for (var index = usedList.size(); --index >= 0;) {
-            var anyType = usedList.objectArray[index];
+        for (let index = usedList.size(); --index >= 0;) {
+            let anyType = usedList.objectArray[index];
             ;
             this.add(anyType);
         }
@@ -49,8 +49,8 @@ export class BasicArrayListPool extends AbstractArrayListPool {
     }
     //@Throws(Exception.constructor)
     releaseUsedBackToPool(usedList) {
-        for (var index = usedList.size(); --index >= 0;) {
-            var list = usedList.objectArray[index];
+        for (let index = usedList.size(); --index >= 0;) {
+            let list = usedList.objectArray[index];
             ;
             if (list.size() == 0) {
                 usedList.removeAt(index);

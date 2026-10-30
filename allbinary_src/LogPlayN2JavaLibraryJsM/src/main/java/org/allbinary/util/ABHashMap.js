@@ -26,12 +26,12 @@ export class ABHashMap extends HashMap {
         return super.isEmpty();
         ;
     }
-    get(key = {}) {
+    get(key) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return super.get(key);
         ;
     }
-    containsKey(key = {}) {
+    containsKey(key) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return super.containsKey(key);
         ;
@@ -44,7 +44,7 @@ export class ABHashMap extends HashMap {
     putAll(map) {
         super.putAll(map);
     }
-    remove(key = {}) {
+    remove(key) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return super.remove(key);
         ;
@@ -52,7 +52,7 @@ export class ABHashMap extends HashMap {
     clear() {
         super.clear();
     }
-    containsValue(value = {}) {
+    containsValue(value) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return super.containsValue(value);
         ;
@@ -67,7 +67,7 @@ export class ABHashMap extends HashMap {
         return super.entrySet();
         ;
     }
-    getOrDefault(key = {}, defaultValue) {
+    getOrDefault(key, defaultValue) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return super.getOrDefault(key, defaultValue);
         ;

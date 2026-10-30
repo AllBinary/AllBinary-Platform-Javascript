@@ -16,9 +16,9 @@ import { LayerProcessor } from '../../../../../org/allbinary/layer/LayerProcesso
 //not GWT import const LayerProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableInterfaceLayerManager } from './CollidableInterfaceLayerManager.js';
-//not GWT import - same folder const CollidableInterfaceLayerManager
+//sameFolderImports - not GWT import - same folder const CollidableInterfaceLayerManager
 import { AllBinaryCollisionManager } from './AllBinaryCollisionManager.js';
-//not GWT import - same folder const AllBinaryCollisionManager
+//sameFolderImports - not GWT import - same folder const AllBinaryCollisionManager
 export class CollidableInterfaceLayerProcessor extends LayerProcessor {
     constructor() {
         super(new CollidableInterfaceLayerManager());
@@ -26,7 +26,7 @@ export class CollidableInterfaceLayerProcessor extends LayerProcessor {
     }
     //@Throws(Exception.constructor)
     processAt(allBinaryLayerManager, layerInterface, index) {
-        var collidableInterfaceCompositeInterface = layerInterface;
+        let collidableInterfaceCompositeInterface = layerInterface;
         ;
         if (collidableInterfaceCompositeInterface.getCollidableInferface().isCollidable(collidableInterfaceCompositeInterface)) {
             AllBinaryCollisionManager.getInstance().process(this.getLayerManager(), collidableInterfaceCompositeInterface, index);

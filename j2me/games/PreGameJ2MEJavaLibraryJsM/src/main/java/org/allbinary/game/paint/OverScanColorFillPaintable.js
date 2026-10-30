@@ -14,7 +14,7 @@
 //not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ColorFillPaintable } from './ColorFillPaintable.js';
-//not GWT import - same folder const ColorFillPaintable
+//sameFolderImports - not GWT import - same folder const ColorFillPaintable
 export class OverScanColorFillPaintable extends ColorFillPaintable {
     constructor(basicColor) {
         super(basicColor);

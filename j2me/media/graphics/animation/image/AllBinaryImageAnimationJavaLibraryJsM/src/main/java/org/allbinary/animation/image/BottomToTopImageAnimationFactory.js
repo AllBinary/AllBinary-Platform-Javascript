@@ -16,9 +16,9 @@ import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/Primitive
 //not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { BottomToTopImageAnimation } from './BottomToTopImageAnimation.js';
-//not GWT import - same folder const BottomToTopImageAnimation
+//sameFolderImports - not GWT import - same folder const BottomToTopImageAnimation
 export class BottomToTopImageAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), image.getWidth(), image.getHeight(), 0, 0, animationBehaviorFactory);
@@ -26,7 +26,7 @@ export class BottomToTopImageAnimationFactory extends BaseImageAnimationFactory 
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var scaledImage = this.animationFactoryImageScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let scaledImage = this.animationFactoryImageScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new BottomToTopImageAnimation(scaledImage, this.animationBehaviorFactory.getOrCreateInstance());

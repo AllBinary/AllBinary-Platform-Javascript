@@ -41,7 +41,14 @@ import { Video } from '../../../../../../org/allbinary/logic/system/hardware/com
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class PCComponentFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return PCComponentFactory.instance;
     }
@@ -50,7 +57,7 @@ export class PCComponentFactory extends Object {
         this.logUtil = LogUtil.getInstance();
         this.componentFactory = ComponentFactory.getInstance();
     }
-    getInstance(component, componentData) {
+    getInstance$overload2(component, componentData) {
         try {
             if (component !=
                 null) {
@@ -89,16 +96,18 @@ export class PCComponentFactory extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return new Unknown(componentData);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().FACTORYERROR)) {
-                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().FACTORYERROR)) {
+                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return new Unknown(commonStrings.EXCEPTION);
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return new Unknown(commonStrings.EXCEPTION);
         }
     }
     getComponentType(component) {

@@ -26,11 +26,11 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class LayerUtil extends Object {
     static toString(hashtable, x, y, z) {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var positionStrings = PositionStrings.getInstance();
+        let positionStrings = PositionStrings.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(LayerUtil.HASHTABLE);
         stringBuffer.append(StringUtil.getInstance().toString(hashtable));

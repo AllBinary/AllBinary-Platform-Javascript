@@ -28,7 +28,7 @@ export class HealthBarAnimation extends Animation {
         this.thickness = 0;
         this.allbinaryLayer = layerInterface;
         this.location = location;
-        var basicHudFactory = BasicHudFactory.getInstance();
+        let basicHudFactory = BasicHudFactory.getInstance();
         ;
         if (this.location != basicHudFactory.TOPLEFT && this.location != basicHudFactory.BOTTOMLEFT) {
             throw new Exception("Location Not Valid");
@@ -45,7 +45,7 @@ export class HealthBarAnimation extends Animation {
     }
     onHealthChange(newX2) {
         this.x2 = newX2;
-        var quarter = (this.allbinaryLayer.getWidth() >> 2);
+        let quarter = (this.allbinaryLayer.getWidth() >> 2);
         ;
         if (this.x2 > quarter * 3) {
             this.basicColor = this.basicColorFactory.GREEN;
@@ -65,7 +65,7 @@ export class HealthBarAnimation extends Animation {
         }
     }
     getY() {
-        var basicHudFactory = BasicHudFactory.getInstance();
+        let basicHudFactory = BasicHudFactory.getInstance();
         ;
         if (this.location == basicHudFactory.TOPLEFT) {
             //if statement needs to be on the same line and ternary does not work the same way.

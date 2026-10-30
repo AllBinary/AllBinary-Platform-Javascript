@@ -14,7 +14,7 @@
 //not GWT import const BasicColorUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
-//not GWT import - same folder const SpriteIndexedAnimation
+//sameFolderImports - not GWT import - same folder const SpriteIndexedAnimation
 export class AdjustedSpriteIndexedAnimation extends SpriteIndexedAnimation {
     constructor(sprite, image, basicColorArray, dx, dy, animationBehavior) {
         super(sprite, image, basicColorArray, animationBehavior);

@@ -19,9 +19,9 @@ const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
 //not GWT import const GeographicMapCellPositionFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeologicalGeographicMapCellPosition } from './GeologicalGeographicMapCellPosition.js';
-//not GWT import - same folder const GeologicalGeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeologicalGeographicMapCellPosition
 import { GeologicalResource } from './GeologicalResource.js';
-//not GWT import - same folder const GeologicalResource
+//sameFolderImports - not GWT import - same folder const GeologicalResource
 export class GeologicalGeographicMapCellPositionFactory extends Object {
     constructor(resourcePerMapCellType) {
         super();
@@ -29,9 +29,9 @@ export class GeologicalGeographicMapCellPositionFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstance(geographicMapInterface, i_column, i_row, columns, rows, width, height) {
-        var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var resources = this.resourcePerMapCellType[tiledLayer.getCell(i_column, i_row)] + MyRandomFactory.getInstance().getAbsoluteNextInt(1000);
+        let resources = this.resourcePerMapCellType[tiledLayer.getCell(i_column, i_row)] + MyRandomFactory.getInstance().getAbsoluteNextInt(1000);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new GeologicalGeographicMapCellPosition(i_column, i_row, columns, rows, width, height, new GeologicalResource(resources));

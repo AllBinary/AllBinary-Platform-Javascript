@@ -20,7 +20,7 @@ import { BasicEventHandler } from '../../../../../../org/allbinary/logic/util/ev
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const DestroyedEventListenerInterface
+//sameFolderImports - not GWT import - same folder const DestroyedEventListenerInterface
 export class DestroyedEventHandler extends BasicEventHandler {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getInstance() {
@@ -48,22 +48,24 @@ export class DestroyedEventHandler extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var collidableDestroyableDamageableLayer = this.list.objectArray[index];
+                let collidableDestroyableDamageableLayer = this.list.objectArray[index];
                 ;
                 collidableDestroyableDamageableLayer.onDestroyed(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
         super.fireEvent(eventObject);
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var destroyedEventListenerInterface = eventListenerInterface;
+        let destroyedEventListenerInterface = eventListenerInterface;
         ;
         destroyedEventListenerInterface.onDestroyed(eventObject);
     }

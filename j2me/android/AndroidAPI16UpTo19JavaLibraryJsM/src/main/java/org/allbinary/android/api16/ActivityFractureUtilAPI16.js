@@ -23,9 +23,9 @@ export class ActivityFractureUtilAPI16 extends ActivityFractureUtilAPI5 {
         return ActivityFractureUtilAPI16.instance16;
     }
     setFullScreen(activity) {
-        var decorView = activity.getWindow().getDecorView();
+        let decorView = activity.getWindow().getDecorView();
         ;
-        var visibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        let visibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         ;
         decorView.setSystemUiVisibility(visibility);
     }

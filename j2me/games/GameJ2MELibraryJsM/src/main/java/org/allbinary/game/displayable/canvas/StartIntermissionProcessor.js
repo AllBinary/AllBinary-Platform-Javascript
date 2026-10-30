@@ -17,7 +17,7 @@ import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class StartIntermissionProcessor extends Processor {
     constructor(gameCanvas) {
         super();

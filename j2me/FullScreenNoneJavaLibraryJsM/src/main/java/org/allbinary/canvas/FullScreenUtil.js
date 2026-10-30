@@ -34,9 +34,9 @@ export class FullScreenUtil extends Object {
     init(fullScreenInterface) {
     }
     isScreenChange(isFullScreen) {
-        var mainFeatureFactory = MainFeatureFactory.getInstance();
+        let mainFeatureFactory = MainFeatureFactory.getInstance();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(mainFeatureFactory.FULL_SCREEN) != isFullScreen) {
             //if statement needs to be on the same line and ternary does not work the same way.

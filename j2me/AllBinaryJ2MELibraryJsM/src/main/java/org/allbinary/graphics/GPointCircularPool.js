@@ -18,13 +18,13 @@ import { BaseCircularPool } from '../../../org/allbinary/logic/util/cache/BaseCi
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomGPoint } from './CustomGPoint.js';
-//not GWT import - same folder const CustomGPoint
+//sameFolderImports - not GWT import - same folder const CustomGPoint
 export class GPointCircularPool extends BaseCircularPool {
     constructor(size) {
         super();
         this.circularIndexUtil = CircularIndexUtil.createInstance(size);
         this.OBJECT_ARRAY = new Array(size);
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             this.OBJECT_ARRAY[index] = CustomGPoint.getInstance3(0, 0);
         }
     }

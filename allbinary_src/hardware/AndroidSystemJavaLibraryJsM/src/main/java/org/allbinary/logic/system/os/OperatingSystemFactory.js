@@ -24,11 +24,11 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoOperatingSystem } from './NoOperatingSystem.js';
-//not GWT import - same folder const GenericOperatingSystem
+//sameFolderImports - not GWT import - same folder const GenericOperatingSystem
 //not plain js - same folder import { SystemProperties } 
 const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperties;
 import { OperatingSystems } from './OperatingSystems.js';
-//not GWT import - same folder const OperatingSystems
+//sameFolderImports - not GWT import - same folder const OperatingSystems
 export class OperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,12 +42,12 @@ export class OperatingSystemFactory extends Object {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getOperatingSystemInstance() {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         try {
-            var systemProperties = SystemProperties.getInstance();
+            let systemProperties = SystemProperties.getInstance();
             ;
-            var osName = systemProperties.getName();
+            let osName = systemProperties.getName();
             ;
             if (!this.hasDetected) {
                 this.hasDetected = true;
@@ -65,11 +65,13 @@ export class OperatingSystemFactory extends Object {
                     throw new Exception(new StringMaker().append("OS Not Supported: ").append(osName).toString());
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.genericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.genericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.genericOperatingSystem;

@@ -27,7 +27,14 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class KeySpecFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 2 && typeof args[0] === 'string')
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return KeySpecFactory.instance;
     }
@@ -37,9 +44,9 @@ export class KeySpecFactory extends Object {
         this.DESEDE = "DESede";
         this.BLOWFISH = "Blowfish";
     }
-    getInstance(algorithm, keyData) {
+    getInstance$overload2(algorithm, keyData) {
         try {
-            var tsUtil = TsUtil.getInstance();
+            let tsUtil = TsUtil.getInstance();
             ;
             if (tsUtil.compareTo(algorithm, this.DES) == 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,13 +59,15 @@ export class KeySpecFactory extends Object {
             else {
                 throw new RuntimeException();
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
-            throw new RuntimeException();
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+                throw new RuntimeException();
+            }
         }
     }
 }

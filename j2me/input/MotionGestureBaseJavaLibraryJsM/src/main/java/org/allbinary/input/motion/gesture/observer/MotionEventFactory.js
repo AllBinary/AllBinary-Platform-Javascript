@@ -20,18 +20,18 @@ import { TouchMotionGestureFactory } from '../../../../../../org/allbinary/input
 //not GWT import const AllBinaryEventObjectFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionGestureEvent } from './MotionGestureEvent.js';
-//not GWT import - same folder const MotionGestureEvent
+//sameFolderImports - not GWT import - same folder const MotionGestureEvent
 export class MotionEventFactory extends Object {
-    constructor(source = {}, id) {
+    constructor(source, id) {
         super();
         this.source = source;
         this.id = id;
         MotionEventFactory.index = TouchMotionGestureFactory.getInstance().LAST_MOTION.getId();
     }
     getInstance() {
-        var inputFactory = InputFactory.getInstance();
+        let inputFactory = InputFactory.getInstance();
         ;
-        var input = inputFactory.getInstanceById(MotionEventFactory.index++);
+        let input = inputFactory.getInstanceById(MotionEventFactory.index++);
         ;
         if (input == inputFactory.NO_INPUT) {
             //if statement needs to be on the same line and ternary does not work the same way.

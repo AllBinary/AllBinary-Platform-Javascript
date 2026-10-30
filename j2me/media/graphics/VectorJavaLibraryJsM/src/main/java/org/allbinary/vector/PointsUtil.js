@@ -20,15 +20,15 @@ export class PointsUtil extends Object {
         return PointsUtil.instance;
     }
     adjustXY(points, x, y) {
-        var size = points.length;
+        let size = points.length;
         ;
-        var newPoints = Array.from({ length: size }, () => Array.from({ length: 0 }, () => new Array(0).fill(0)));
+        let newPoints = Array.from({ length: size }, () => Array.from({ length: 0 }, () => new Array(0).fill(0)));
         ;
-        for (var index = 0; index < size; index++) {
-            var size2 = points[index].length;
+        for (let index = 0; index < size; index++) {
+            let size2 = points[index].length;
             ;
             newPoints[index] = new Array(size2).fill(null).map(() => new Array(2).fill(null));
-            for (var index2 = 0; index2 < size2; index2++) {
+            for (let index2 = 0; index2 < size2; index2++) {
                 if (points[index][index2][0] != 1000) {
                     newPoints[index][index2][0] = points[index][index2][0] + x;
                     newPoints[index][index2][1] = points[index][index2][1] + y;
@@ -42,15 +42,22 @@ export class PointsUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return newPoints;
     }
-    adjust(points, both) {
+    adjust(...args) {
+        if (args.length === 2 && typeof args[1] === 'number')
+            return this.adjust$overload1(args[0], args[1]);
+        if (args.length === 3 && typeof args[1] === 'number' && typeof args[2] === 'number')
+            return this.adjust$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: adjust');
+    }
+    adjust$overload1(points, both) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.adjust(points, both, both);
         ;
     }
-    adjust(points, x, y) {
-        var newPoints = new Array(points.length).fill(null).map(() => new Array(2).fill(null));
+    adjust$overload2(points, x, y) {
+        let newPoints = new Array(points.length).fill(null).map(() => new Array(2).fill(null));
         ;
-        for (var index2 = 0; index2 < points.length; index2++) {
+        for (let index2 = 0; index2 < points.length; index2++) {
             if (points[index2][0] != 1000) {
                 newPoints[index2][0] = points[index2][0] + x;
                 newPoints[index2][1] = points[index2][1] + y;

@@ -27,17 +27,17 @@ import { CellPositionFactory } from '../../../../../org/allbinary/graphics/CellP
 //not GWT import const CellPositionFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseTouchInput } from './BaseTouchInput.js';
-//not GWT import - same folder const BaseTouchInput
+//sameFolderImports - not GWT import - same folder const BaseTouchInput
 import { TouchButtonLocationHelper } from './TouchButtonLocationHelper.js';
-//not GWT import - same folder const TouchButtonLocationHelper
+//sameFolderImports - not GWT import - same folder const TouchButtonLocationHelper
 import { BasicTouchButtonCellPositionFactory } from './BasicTouchButtonCellPositionFactory.js';
-//not GWT import - same folder const BasicTouchButtonCellPositionFactory
+//sameFolderImports - not GWT import - same folder const BasicTouchButtonCellPositionFactory
 import { CommonButtons } from './CommonButtons.js';
-//not GWT import - same folder const CommonButtons
+//sameFolderImports - not GWT import - same folder const CommonButtons
 import { TouchButton } from './TouchButton.js';
-//not GWT import - same folder const TouchButton
+//sameFolderImports - not GWT import - same folder const TouchButton
 import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
-//not GWT import - same folder const BasicTouchInputFactory
+//sameFolderImports - not GWT import - same folder const BasicTouchInputFactory
 export class UpgradeDowngradeTouchButtonsBuilder extends BaseTouchInput {
     constructor() {
         super(...arguments);
@@ -46,33 +46,35 @@ export class UpgradeDowngradeTouchButtonsBuilder extends BaseTouchInput {
     getList() {
         try {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
-            var list = new BasicArrayListD();
+            let list = new BasicArrayListD();
             ;
-            var touchButtonLocationHelper = new TouchButtonLocationHelper();
+            let touchButtonLocationHelper = new TouchButtonLocationHelper();
             ;
-            var cellPositionFactory = CellPositionFactory.getInstance();
+            let cellPositionFactory = CellPositionFactory.getInstance();
             ;
-            var basicTouchButtonCellPositionFactory = new BasicTouchButtonCellPositionFactory();
+            let basicTouchButtonCellPositionFactory = new BasicTouchButtonCellPositionFactory();
             ;
             if (basicTouchButtonCellPositionFactory.SECOND_FROM_TOP_LEFT != cellPositionFactory.NONE && basicTouchButtonCellPositionFactory.SECOND_FROM_TOP_RIGHT != cellPositionFactory.NONE) {
-                var commonButtons = CommonButtons.getInstance();
+                let commonButtons = CommonButtons.getInstance();
                 ;
-                var UP = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_TWO, TouchButtonUpgradeResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.SECOND_FROM_TOP_LEFT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
+                let UP = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_TWO, TouchButtonUpgradeResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.SECOND_FROM_TOP_LEFT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
                 ;
-                var DOWN = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_ONE, TouchButtonDowngradeResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.SECOND_FROM_TOP_RIGHT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
+                let DOWN = TouchButton.createButton(BasicTouchInputFactory.getInstance().SPECIAL_BUTTON_ONE, TouchButtonDowngradeResource.getInstance(), commonButtons.NORMAL_BUTTON, basicTouchButtonCellPositionFactory.SECOND_FROM_TOP_RIGHT, touchButtonLocationHelper.getColumnsRemainderHalf(), touchButtonLocationHelper.getRowsRemainderHalf());
                 ;
                 list.add(UP);
                 list.add(DOWN);
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return list;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return BasicArrayListUtil.getInstance().getImmutableInstance();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return BasicArrayListUtil.getInstance().getImmutableInstance();
+                ;
+            }
         }
     }
 }

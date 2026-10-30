@@ -30,10 +30,10 @@ export class SensorGameUpdateProcessor extends Object {
         return this.inputSensor;
     }
     //@Throws(Exception.constructor)
-    process(anyType = {}) {
+    process(anyType) {
     }
     //@Throws(Exception.constructor)
-    sendNotifications(anyType = {}) {
+    sendNotifications(anyType) {
     }
     isAnySensor() {
         if (this.inputSensor == NoAllBinarySensor.getInstance()) {

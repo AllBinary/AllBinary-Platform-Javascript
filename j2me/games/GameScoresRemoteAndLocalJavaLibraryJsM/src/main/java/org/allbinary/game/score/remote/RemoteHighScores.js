@@ -11,7 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
-import { Long } from '../../../../../java/lang/Long.js';
 //not GWT import const Enumeration
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
@@ -39,11 +38,11 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RemoteHighScoresProcessorFactory } from './RemoteHighScoresProcessorFactory.js';
-//not GWT import - same folder const RemoteHighScoresProcessorFactory
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresProcessorFactory
 import { RemoteHighScoresSubmissionProcessorFactory } from './RemoteHighScoresSubmissionProcessorFactory.js';
-//not GWT import - same folder const RemoteHighScoresSubmissionProcessorFactory
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresSubmissionProcessorFactory
 import { RemoteHighScoresData } from './RemoteHighScoresData.js';
-//not GWT import - same folder const RemoteHighScoresData
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresData
 export class RemoteHighScores extends HighScores {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getInstance(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending) {
@@ -53,10 +52,10 @@ export class RemoteHighScores extends HighScores {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     static getInstancePreload(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending, preload) {
-        var logUtil = LogUtil.getInstance();
+        let logUtil = LogUtil.getInstance();
         ;
         try {
-            var highScores = RemoteHighScores.hashTable.get(gameInfo);
+            let highScores = RemoteHighScores.hashTable.get(gameInfo);
             ;
             if (highScores ==
                 null) {
@@ -65,15 +64,17 @@ export class RemoteHighScores extends HighScores {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return highScores;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            logUtil.put(commonStrings.EXCEPTION, RemoteErrorHighScoresSingletonFactory.getInstance(), commonStrings.GET_INSTANCE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return RemoteErrorHighScoresSingletonFactory.getInstance();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                logUtil.put(commonStrings.EXCEPTION, RemoteErrorHighScoresSingletonFactory.getInstance(), commonStrings.GET_INSTANCE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return RemoteErrorHighScoresSingletonFactory.getInstance();
+                ;
+            }
         }
     }
     constructor(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, ascending, preload) {
@@ -94,34 +95,34 @@ export class RemoteHighScores extends HighScores {
     }
     update(hashtable) {
         this.getList().clear();
-        var vector = hashtable.get(RemoteHighScoresData.getInstance().HIGH_SCORES);
+        let vector = hashtable.get(RemoteHighScoresData.getInstance().HIGH_SCORES);
         ;
         if (vector !=
             null) {
-            var size = vector.size();
+            let size = vector.size();
             ;
-            for (var index = 0; index < size; index++) {
-                var highScoreVector = vector.get(index);
+            for (let index = 0; index < size; index++) {
+                let highScoreVector = vector.get(index);
                 ;
-                var displayName = highScoreVector.get(0);
+                let displayName = highScoreVector.get(0);
                 ;
-                var score = highScoreVector.get(1);
+                let score = highScoreVector.get(1);
                 ;
-                var longScore = Long.parseLong(score);
+                let longScore = Number(score);
                 ;
-                var highScore = new HighScore(-1, displayName, null, longScore);
+                let highScore = new HighScore(-1, displayName, null, longScore);
                 ;
                 this.getList().add(highScore);
             }
         }
         else {
-            var NEXT_ELEMENT = new StringMaker().append(CommonLabels.getInstance().NEXT).append("Element: ").toString();
+            let NEXT_ELEMENT = new StringMaker().append(CommonLabels.getInstance().NEXT).append("Element: ").toString();
             ;
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
-            var enumeration = hashtable.elements();
+            let enumeration = hashtable.elements();
             ;
-            var nextElement;
+            let nextElement;
             ;
             while (this.enumerationUtil.hasMoreElements(enumeration)) {
                 nextElement = this.enumerationUtil.nextElement(enumeration);

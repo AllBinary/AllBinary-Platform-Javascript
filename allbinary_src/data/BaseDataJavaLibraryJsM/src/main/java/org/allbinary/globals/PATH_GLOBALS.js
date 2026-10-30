@@ -27,9 +27,9 @@ export class PATH_GLOBALS extends Object {
     }
     constructor() {
         super();
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var abPathData = AbPathData.getInstance();
+        let abPathData = AbPathData.getInstance();
         ;
         stringBuffer.append("data");
         stringBuffer.append(abPathData.SEPARATOR);

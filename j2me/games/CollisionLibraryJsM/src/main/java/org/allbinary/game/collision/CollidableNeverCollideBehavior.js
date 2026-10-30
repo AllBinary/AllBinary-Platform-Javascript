@@ -14,7 +14,7 @@
 //not GWT import const CollidableCompositeLayer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableBaseBehavior } from './CollidableBaseBehavior.js';
-//not GWT import - same folder const CollidableInterfaceCompositeInterface
+//sameFolderImports - not GWT import - same folder const CollidableInterfaceCompositeInterface
 export class CollidableNeverCollideBehavior extends CollidableBaseBehavior {
     constructor(isCollidable) {
         super(isCollidable);

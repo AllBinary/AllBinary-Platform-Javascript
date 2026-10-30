@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScaleFactorFactory } from './ScaleFactorFactory.js';
-//not GWT import - same folder const ScaleFactorFactory
+//sameFolderImports - not GWT import - same folder const ScaleFactorFactory
 export class BasicDecimal extends Object {
     static createBigDecimal(bigDecimal) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,11 +78,11 @@ export class BasicDecimal extends Object {
         this.updateScaled();
     }
     divideint(value) {
-        this.units = this.units / value;
+        this.units = globalThis.Math.trunc(this.units / value);
         this.updateScaled();
     }
     dividelong(value) {
-        this.units = this.units / value;
+        this.units = globalThis.Math.trunc(this.units / value);
         this.updateScaled();
     }
     divide(bigDecimal) {
@@ -94,7 +94,7 @@ export class BasicDecimal extends Object {
         return this.units;
     }
     updateScaled() {
-        this.scaled = Math.round((this.units / this.factorValue));
+        this.scaled = globalThis.Math.trunc((globalThis.Math.trunc(this.units / this.factorValue)));
     }
     getScaled() {
         //if statement needs to be on the same line and ternary does not work the same way.

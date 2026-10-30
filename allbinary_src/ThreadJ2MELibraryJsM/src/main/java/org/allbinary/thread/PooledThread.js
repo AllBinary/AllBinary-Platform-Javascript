@@ -11,6 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
+import { InterruptedException } from '../../../java/lang/InterruptedException.js';
 import { Thread } from '../../../java/lang/Thread.js';
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
@@ -22,7 +23,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ThreadObjectUtil } from './ThreadObjectUtil.js';
-//not GWT import - same folder const ThreadPool
+//sameFolderImports - not GWT import - same folder const ThreadPool
 export class PooledThread extends Thread {
     constructor(threadPool) {
         super(threadPool.createName());
@@ -37,19 +38,24 @@ export class PooledThread extends Thread {
     run() {
         this.threadPool.threadStarted();
         while (true) {
-            var task2 = this.threadObjectUtil.NULL_PRIORITY_RUNNABLE;
+            let task2 = this.threadObjectUtil.NULL_PRIORITY_RUNNABLE;
             ;
             try {
                 task2 = this.threadPool.getTask();
                 this.threadPool.runningTask = true;
                 this.threadPool.startTask(task2);
-                //: 
             }
-            catch (ex) {
-                var logUtil = LogUtil.getInstance();
-                ;
-                logUtil.putF(this.INTERRUPT_EXCEPTION, this, this.commonStrings.RUN);
-                break;
+            catch (caught) {
+                if (caught instanceof InterruptedException) {
+                    const ex = caught;
+                    let logUtil = LogUtil.getInstance();
+                    ;
+                    logUtil.putF(this.INTERRUPT_EXCEPTION, this, this.commonStrings.RUN);
+                    break;
+                }
+                else {
+                    throw caught;
+                }
             }
             if (task2 == this.threadObjectUtil.NULL_PRIORITY_RUNNABLE) {
                 break;
@@ -58,12 +64,14 @@ export class PooledThread extends Thread {
                 task2.run();
                 this.threadPool.completedTask(task2);
                 this.threadPool.runningTask = false;
-                //: 
             }
-            catch (e) {
-                var logUtil = LogUtil.getInstance();
-                ;
-                logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(StringUtil.getInstance().toString(task2)).toString(), this, this.commonStrings.RUN, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    let logUtil = LogUtil.getInstance();
+                    ;
+                    logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(StringUtil.getInstance().toString(task2)).toString(), this, this.commonStrings.RUN, e);
+                }
             }
         }
         this.threadPool.threadStopped();

@@ -28,7 +28,7 @@ import { StreamUtil } from '../../../../../../org/allbinary/logic/io/StreamUtil.
 //not GWT import const Document
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomDocumentHelper } from './DomDocumentHelper.js';
-//not GWT import - same folder const DomDocumentHelper
+//sameFolderImports - not GWT import - same folder const DomDocumentHelper
 export class DomDocumentFileHelper extends Object {
     //@Throws(Exception.constructor)
     static createDocument(xmlFile) {
@@ -36,36 +36,40 @@ export class DomDocumentFileHelper extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return DomDocumentHelper.create(new AbFileInputStream(xmlFile));
             ;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
     //@Throws(Exception.constructor)
     static save(file, document) {
-        var dataOutputStream = null;
+        let dataOutputStream = null;
         ;
         try {
-            var copyTransformerFactory = TransformerFactory.newInstance();
+            let copyTransformerFactory = TransformerFactory.newInstance();
             ;
-            var copyTransformer = copyTransformerFactory.newTransformer();
+            let copyTransformer = copyTransformerFactory.newTransformer();
             ;
-            var domSource = new DOMSource(document);
+            let domSource = new DOMSource(document);
             ;
             if (file.isFile()) {
                 file.delete();
             }
             file.createNewFile();
             dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(file);
-            var streamResult = new StreamResult(dataOutputStream);
+            let streamResult = new StreamResult(dataOutputStream);
             ;
             copyTransformer.transform(domSource, streamResult);
             dataOutputStream.flush();
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             StreamUtil.getInstance().close(dataOutputStream);

@@ -6,7 +6,7 @@ import { ScaleFactorFactory } from '../../../../org/allbinary/logic/math/ScaleFa
 //not GWT import const ScaleFactorFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicConstantVelocityMovement } from './BasicConstantVelocityMovement.js';
-//not GWT import - same folder const BasicConstantVelocityMovement
+//sameFolderImports - not GWT import - same folder const BasicConstantVelocityMovement
 export class PreciseConstantVelocityMovement extends BasicConstantVelocityMovement {
     constructor(basicDecimal, velocityProperties) {
         super(basicDecimal, velocityProperties);
@@ -20,14 +20,14 @@ export class PreciseConstantVelocityMovement extends BasicConstantVelocityMoveme
     }
     //@Throws(Exception.constructor)
     process(layer) {
-        var mathUtil = MathUtil.getInstance();
+        let mathUtil = MathUtil.getInstance();
         ;
-        var velocityProperties = this.getVelocityProperties();
+        let velocityProperties = this.getVelocityProperties();
         ;
-        this.accumulatedX = Math.round((this.accumulatedX + velocityProperties.getVelocityXBasicDecimalP().getUnscaled()));
-        this.accumulatedY = Math.round((this.accumulatedY + velocityProperties.getVelocityYBasicDecimalP().getUnscaled()));
-        this.accumulatedZ = Math.round((this.accumulatedZ + velocityProperties.getVelocityZBasicDecimalP().getUnscaled()));
-        layer.moveDXYZ(this.accumulatedX / this.factorValue, this.accumulatedY / this.factorValue, this.accumulatedZ / this.factorValue);
+        this.accumulatedX = globalThis.Math.trunc((this.accumulatedX + velocityProperties.getVelocityXBasicDecimalP().getUnscaled()));
+        this.accumulatedY = globalThis.Math.trunc((this.accumulatedY + velocityProperties.getVelocityYBasicDecimalP().getUnscaled()));
+        this.accumulatedZ = globalThis.Math.trunc((this.accumulatedZ + velocityProperties.getVelocityZBasicDecimalP().getUnscaled()));
+        layer.moveDXYZ(globalThis.Math.trunc(this.accumulatedX / this.factorValue), globalThis.Math.trunc(this.accumulatedY / this.factorValue), globalThis.Math.trunc(this.accumulatedZ / this.factorValue));
         if (mathUtil.abs(this.accumulatedX) > this.factorValue) {
             this.accumulatedX = 0;
         }

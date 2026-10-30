@@ -29,7 +29,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonInput } from './TouchButtonInput.js';
-//not GWT import - same folder const TouchButtonInput
+//sameFolderImports - not GWT import - same folder const TouchButtonInput
 export class BasicTouchInputFactory extends Object {
     constructor() {
         super(...arguments);
@@ -77,8 +77,8 @@ export class BasicTouchInputFactory extends Object {
     }
     updateAllList(list, inputToGameKeyMapping) {
         this.logUtil.putF(new StringMaker().append(CommonLabels.getInstance().START).appendint(list.size()).toString(), this, "updateAll");
-        for (var index = list.size() - 1; index >= 0; index--) {
-            var touchButtonInput = list.get(index);
+        for (let index = list.size() - 1; index >= 0; index--) {
+            let touchButtonInput = list.get(index);
             ;
             touchButtonInput.update(inputToGameKeyMapping);
         }

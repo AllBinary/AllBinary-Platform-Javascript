@@ -25,9 +25,9 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCKeyFactory } from './PCKeyFactory.js';
-//not GWT import - same folder const PCKeyFactory
+//sameFolderImports - not GWT import - same folder const PCKeyFactory
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import - same folder const GameKeyFactory
+//sameFolderImports - not GWT import - same folder const GameKeyFactory
 export class PlatformFormInputMappingFactory extends Object {
     constructor() {
         super(...arguments);
@@ -44,13 +44,13 @@ export class PlatformFormInputMappingFactory extends Object {
     getOrCreate() {
         try {
             if (this.inputToGameKeyMapping == InputToGameKeyMapping.getNullInstance()) {
-                var pcKeyFactory = PCKeyFactory.getInstance();
+                let pcKeyFactory = PCKeyFactory.getInstance();
                 ;
-                var inputToGameKeyMapping = new InputToGameKeyMapping();
+                let inputToGameKeyMapping = new InputToGameKeyMapping();
                 ;
-                var gameKeyFactory = GameKeyFactory.getInstance();
+                let gameKeyFactory = GameKeyFactory.getInstance();
                 ;
-                var basicTouchInputFactory = BasicTouchInputFactory.getInstance();
+                let basicTouchInputFactory = BasicTouchInputFactory.getInstance();
                 ;
                 inputToGameKeyMapping.add(gameKeyFactory.UP, pcKeyFactory.DPAD_UP);
                 inputToGameKeyMapping.add(gameKeyFactory.DOWN, pcKeyFactory.DPAD_DOWN);
@@ -63,12 +63,14 @@ export class PlatformFormInputMappingFactory extends Object {
                 inputToGameKeyMapping.add(gameKeyFactory.DOWN, basicTouchInputFactory.DOWN);
                 this.inputToGameKeyMapping = inputToGameKeyMapping;
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.inputToGameKeyMapping;

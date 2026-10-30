@@ -27,9 +27,9 @@ import { SmallIntegerSingletonFactory } from '../../../../../../../org/allbinary
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MineLayerCircularStaticPool } from './MineLayerCircularStaticPool.js';
-//not GWT import - same folder const MineLayerCircularStaticPool
+//sameFolderImports - not GWT import - same folder const MineLayerCircularStaticPool
 import { MineWeaponResources } from './MineWeaponResources.js';
-//not GWT import - same folder const MineWeaponResources
+//sameFolderImports - not GWT import - same folder const MineWeaponResources
 export class MineCountedPickedUpLayerInterfaceFactory extends CountedPickedUpLayerInterfaceFactory {
     //@Throws(Exception.constructor)
     static init() {
@@ -52,14 +52,14 @@ export class MineCountedPickedUpLayerInterfaceFactory extends CountedPickedUpLay
     }
     //@Throws(Exception.constructor)
     getNextInstance(hashtable, x, y, z) {
-        var sourceLayerInterface = hashtable.get(this.smallIntegerSingletonFactory.getAt(0));
+        let sourceLayerInterface = hashtable.get(this.smallIntegerSingletonFactory.getAt(0));
         ;
-        var angle = hashtable.get(this.smallIntegerSingletonFactory.getAt(1));
+        let angle = hashtable.get(this.smallIntegerSingletonFactory.getAt(1));
         ;
-        var scoreableInterface = sourceLayerInterface;
+        let scoreableInterface = sourceLayerInterface;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.weaponLayerCircularStaticPool.getInstanceWeaponLayer(sourceLayerInterface, x, y, z, Math.round(angle.intValue()), 0, this.weaponProperties, scoreableInterface);
+        return this.weaponLayerCircularStaticPool.getInstanceWeaponLayer(sourceLayerInterface, x, y, z, globalThis.Math.trunc(angle.intValue()), 0, this.weaponProperties, scoreableInterface);
         ;
     }
 }

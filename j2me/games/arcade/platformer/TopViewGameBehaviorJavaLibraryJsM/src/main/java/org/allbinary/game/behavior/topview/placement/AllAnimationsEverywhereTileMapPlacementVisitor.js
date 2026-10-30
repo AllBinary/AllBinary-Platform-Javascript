@@ -14,15 +14,15 @@
 //not GWT import const TiledMap
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TileMapPlacementVisitor } from './TileMapPlacementVisitor.js';
-//not GWT import - same folder const TileMapPlacementVisitor
+//sameFolderImports - not GWT import - same folder const TileMapPlacementVisitor
 export class AllAnimationsEverywhereTileMapPlacementVisitor extends TileMapPlacementVisitor {
     visit(lastMap, mapData) {
-        var size = mapData.length;
+        let size = mapData.length;
         ;
-        var size2 = mapData[0].length - 7;
+        let size2 = mapData[0].length - 7;
         ;
-        for (var index = 0; index < size; index++) {
-            for (var index2 = 0; index2 < size2;) {
+        for (let index = 0; index < size; index++) {
+            for (let index2 = 0; index2 < size2;) {
                 mapData[index][index2] = 1;
                 mapData[index][index2 + 1] = 17;
                 mapData[index][index2 + 2] = 33;

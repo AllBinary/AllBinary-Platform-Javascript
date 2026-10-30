@@ -42,21 +42,21 @@ export class Timer extends Object {
         return this.hundredthTime;
     }
     update() {
-        var lastLowerTime = this.hundredthTime;
+        let lastLowerTime = this.hundredthTime;
         ;
-        var currentTime = ((this.modifier + this.gameTickTimeDelayHelper.startTime) - this.startTime);
+        let currentTime = ((this.modifier + this.gameTickTimeDelayHelper.startTime) - this.startTime);
         ;
         if (currentTime < 0) {
             currentTime = 0;
         }
-        this.hundredthTime = currentTime / 100;
+        this.hundredthTime = globalThis.Math.trunc(currentTime / 100);
         if (this.hundredthTime >= this.maxTime) {
             if (this.startTime > 0) {
                 this.hundrethsString = this.MAX;
             }
         }
         else if (lastLowerTime != this.hundredthTime) {
-            this.hundrethsString = this.primitiveLongUtil.getCharArray(Math.round(this.hundredthTime));
+            this.hundrethsString = this.primitiveLongUtil.getCharArray(globalThis.Math.trunc(this.hundredthTime));
             this.totalDigits = this.primitiveLongUtil.getCurrentTotalDigits();
         }
     }

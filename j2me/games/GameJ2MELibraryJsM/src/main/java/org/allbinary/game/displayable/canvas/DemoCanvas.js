@@ -144,27 +144,27 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const DemoPaintableInterface
+//sameFolderImports - not GWT import - same folder const DemoPaintableInterface
 import { FormUtil } from './FormUtil.js';
-//not GWT import - same folder const FormUtil
+//sameFolderImports - not GWT import - same folder const FormUtil
 import { NullGameCanvas } from './NullGameCanvas.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 import { NoMenuInputProcessor } from './NoMenuInputProcessor.js';
-//not GWT import - same folder const BasicMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const BasicMenuInputProcessor
 import { DemoGameStartupRunnable } from './DemoGameStartupRunnable.js';
-//not GWT import - same folder const DemoGameStartupRunnable
+//sameFolderImports - not GWT import - same folder const DemoGameStartupRunnable
 import { NullWaitGameRunnable } from './NullWaitGameRunnable.js';
-//not GWT import - same folder const GameRunnable
+//sameFolderImports - not GWT import - same folder const GameRunnable
 import { GameInputMappingCanvas } from './GameInputMappingCanvas.js';
-//not GWT import - same folder const GameInputMappingCanvas
+//sameFolderImports - not GWT import - same folder const GameInputMappingCanvas
 import { DemoLimitedCommandTextItemArrayFactory } from './DemoLimitedCommandTextItemArrayFactory.js';
-//not GWT import - same folder const DemoLimitedCommandTextItemArrayFactory
+//sameFolderImports - not GWT import - same folder const DemoLimitedCommandTextItemArrayFactory
 import { CommandFormInputProcessor } from './CommandFormInputProcessor.js';
-//not GWT import - same folder const CommandFormInputProcessor
+//sameFolderImports - not GWT import - same folder const CommandFormInputProcessor
 import { DemoCanvasProgressUtil } from './DemoCanvasProgressUtil.js';
-//not GWT import - same folder const DemoCanvasProgressUtil
+//sameFolderImports - not GWT import - same folder const DemoCanvasProgressUtil
 import { DemoGameRunnable } from './DemoGameRunnable.js';
-//not GWT import - same folder const DemoGameRunnable
+//sameFolderImports - not GWT import - same folder const DemoGameRunnable
 export class DemoCanvas extends RunnableCanvas {
     constructor(abeClientInformation, commandListener, highScoresFactoryInterface, paintable, overlayPaintable, gameInitializationInterfaceFactoryInterface, isContinue) {
         super(commandListener, CurrentDisplayableFactory.getInstance().DEFAULT_CHILD_NAME_LIST, true);
@@ -228,28 +228,30 @@ export class DemoCanvas extends RunnableCanvas {
     onDisplayChangeEvent(displayChangeEvent) {
         try {
             this.logUtil.putF(new StringMaker().append(this.commonLabels.START_LABEL).append(this.displayInfo.toString()).toString(), this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT);
-            var scrollSelectionForm = this.getMenuForm();
+            let scrollSelectionForm = this.getMenuForm();
             ;
             if (scrollSelectionForm !=
                 null) {
-                var formType = FormTypeFactory.getInstance().getFormType();
+                let formType = FormTypeFactory.getInstance().getFormType();
                 ;
-                var rectangle = this.formUtil.createFormRectangle();
+                let rectangle = this.formUtil.createFormRectangle();
                 ;
                 scrollSelectionForm.init(rectangle, formType);
             }
             this.overlayPaintable.init();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT, e);
+            }
         }
     }
     getCustomCommands() {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         if (J2MEUtil.isHTML()) {
-            var commandArray = [
+            let commandArray = [
                 gameCommandsFactory.START_COMMAND, HighScoreCommands.getInstance().DISPLAY, GameInputMappingCanvas.DISPLAY, gameCommandsFactory.DISPLAY_ABOUT
             ];
             ;
@@ -257,13 +259,13 @@ export class DemoCanvas extends RunnableCanvas {
             return commandArray;
         }
         else {
-            var commandList = new BasicArrayListD();
+            let commandList = new BasicArrayListD();
             ;
             commandList.add(gameCommandsFactory.START_COMMAND);
-            var inApplicationPurchaseFactory = InApplicationPurchaseFactory.getInstance();
+            let inApplicationPurchaseFactory = InApplicationPurchaseFactory.getInstance();
             ;
             if (inApplicationPurchaseFactory.isEnabled()) {
-                var list = LockableFeatureFactory.getInstance().getList();
+                let list = LockableFeatureFactory.getInstance().getList();
                 ;
                 if (list.size() > 0 && !inApplicationPurchaseFactory.isPurchased(list.get(0))) {
                     commandList.add(gameCommandsFactory.BUY_COMMAND);
@@ -271,7 +273,7 @@ export class DemoCanvas extends RunnableCanvas {
             }
             commandList.add(HighScoreCommands.getInstance().DISPLAY);
             try {
-                var isOverScan = OperatingSystemFactory.getInstance().getOperatingSystemInstance().isOverScan();
+                let isOverScan = OperatingSystemFactory.getInstance().getOperatingSystemInstance().isOverScan();
                 ;
                 if (SWTUtil.isSWT) {
                     commandList.add(GameInputMappingCanvas.DISPLAY);
@@ -281,12 +283,14 @@ export class DemoCanvas extends RunnableCanvas {
                     commandList.add(gameCommandsFactory.DISPLAY_LOAD_FORM);
                     commandList.add(GameInputMappingCanvas.DISPLAY);
                 }
-                //: 
             }
-            catch (e) {
+            catch (caught) {
+                {
+                    const e = caught;
+                }
             }
             commandList.add(gameCommandsFactory.DISPLAY_ABOUT);
-            var commandArray = commandList.toArray();
+            let commandArray = commandList.toArray();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return commandArray;
@@ -294,11 +298,11 @@ export class DemoCanvas extends RunnableCanvas {
     }
     initCommands(cmdListener) {
         this.removeAllCommands();
-        var commandArray = this.getCustomCommands();
+        let commandArray = this.getCustomCommands();
         ;
-        var size = commandArray.length;
+        let size = commandArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.addCommand(commandArray[index]);
         }
         CustomGameMenuUtil.add(this);
@@ -317,21 +321,21 @@ export class DemoCanvas extends RunnableCanvas {
     //@Throws(Exception.constructor)
     initMenu() {
         this.close();
-        var commandTextItemArrayFactory = DemoLimitedCommandTextItemArrayFactory.getInstance().getCommandTextItemArrayFactory();
+        let commandTextItemArrayFactory = DemoLimitedCommandTextItemArrayFactory.getInstance().getCommandTextItemArrayFactory();
         ;
-        var items = commandTextItemArrayFactory.getInstance(this.getCommandStack(), this.basicColorFactory.BLACK, this.basicColorFactory.WHITE);
+        let items = commandTextItemArrayFactory.getInstance(this.getCommandStack(), this.basicColorFactory.BLACK, this.basicColorFactory.WHITE);
         ;
-        var formType = FormTypeFactory.getInstance().getFormType();
+        let formType = FormTypeFactory.getInstance().getFormType();
         ;
-        var rectangle = this.formUtil.createFormRectangle();
+        let rectangle = this.formUtil.createFormRectangle();
         ;
         PreLogUtil.put(new StringMaker().append(this.commonLabels.START_LABEL).append(this.displayInfo.toString()).toString(), this, "initMenu");
-        var scrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance().EMPTY_STRING, items, rectangle, formType, 15, true, this.basicColorFactory.BLACK, this.basicColorFactory.WHITE);
+        let scrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance().EMPTY_STRING, items, rectangle, formType, 15, true, this.basicColorFactory.BLACK, this.basicColorFactory.WHITE);
         ;
         this.setMenuForm(scrollSelectionForm);
-        var formType2 = FormTypeFactory.getInstance().getFormType();
+        let formType2 = FormTypeFactory.getInstance().getFormType();
         ;
-        var rectangle2 = this.formUtil.createFormRectangle();
+        let rectangle2 = this.formUtil.createFormRectangle();
         ;
         scrollSelectionForm.init(rectangle2, formType2);
         if (this.getMenuForm() != ScrollSelectionFormNoneFactory.getInstance()) {
@@ -373,10 +377,10 @@ export class DemoCanvas extends RunnableCanvas {
     }
     addGameKeyEvent(keyCode, repeated) {
         try {
-            var gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
+            let gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
             ;
             if (gameKey != this.NONE) {
-                var gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
+                let gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
                 ;
                 DownGameKeyEventHandler.getInstance().fireEvent(gameKeyEvent);
             }
@@ -386,28 +390,32 @@ export class DemoCanvas extends RunnableCanvas {
                     this.logUtil.putF(new StringMaker().append(this.gameInputStrings.NO_KEY).appendint(keyCode).toString(), this, this.gameInputStrings.ADD_KEY_EVENT);
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Key Event Error", this, this.gameInputStrings.ADD_KEY_EVENT, e);
+            }
         }
     }
     removeGameKeyEvent(keyCode, repeated) {
         try {
-            var gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
+            let gameKey = this.inputToGameKeyMapping.getInstanceForCanvas(this, keyCode);
             ;
             if (gameKey != this.NONE) {
-                var gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
+                let gameKeyEvent = this.gameKeyEventFactory.getInstanceForInput(this, gameKey);
                 ;
                 UpGameKeyEventHandler.getInstance().fireEvent(gameKeyEvent);
             }
             else {
                 this.logUtil.putF(new StringMaker().append(this.gameInputStrings.NO_KEY).appendint(keyCode).toString(), this, this.gameInputStrings.REMOVE_KEY_EVENT);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Key Event Error", this, this.gameInputStrings.REMOVE_KEY_EVENT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Key Event Error", this, this.gameInputStrings.REMOVE_KEY_EVENT, e);
+            }
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
@@ -475,7 +483,7 @@ export class DemoCanvas extends RunnableCanvas {
         this.logUtil.putF("Not Implemented since not a game", this, "setGameOver");
     }
     demoStateChange() {
-        var newState = this.state + 1;
+        let newState = this.state + 1;
         ;
         if (newState > 2) {
             newState = 0;
@@ -485,7 +493,7 @@ export class DemoCanvas extends RunnableCanvas {
                 newState = 0;
             }
             else {
-                var highScores = this.highScoresHelper.getNextHighScores();
+                let highScores = this.highScoresHelper.getNextHighScores();
                 ;
                 if (highScores == NullHighScoresSingletonFactory.getInstance()) {
                     newState = 0;
@@ -514,7 +522,7 @@ export class DemoCanvas extends RunnableCanvas {
         else if (this.state == 2) {
             this.highScoresPaintable = this.getRealHighScoresPaintable();
         }
-        var gameAdState = this.gameAdStateFactory.getCurrentInstance();
+        let gameAdState = this.gameAdStateFactory.getCurrentInstance();
         ;
         gameAdState.processPageAdState();
     }
@@ -534,19 +542,19 @@ export class DemoCanvas extends RunnableCanvas {
     create() {
         PreLogUtil.put(this.commonStrings.START, this, "create");
         this.highScoresPaintable = NullPaintable.getInstance();
-        var randomLevel = this.getNextRandom();
+        let randomLevel = this.getNextRandom();
         ;
         this.gameCanvas = this.createRunnable(randomLevel);
         this.basicColor = this.gameCanvas.getLayerManager().getForegroundBasicColor();
         this.getRealHighScoresPaintable().setBasicColorP(this.basicColor);
         this.gameCanvas.setGameCanvasStartListener(this);
-        var gameInfo = this.gameCanvas.getLayerManager().getGameInfo();
+        let gameInfo = this.gameCanvas.getLayerManager().getGameInfo();
         ;
         this.getHighScoresFactoryInterface().fetchHighScores(gameInfo, this.highScoresHelper);
     }
     //@Throws(Exception.constructor)
     start() {
-        var gameCanvas = this.gameCanvas;
+        let gameCanvas = this.gameCanvas;
         ;
         PreLogUtil.put(new StringMaker().append("Game Thread in DemoCanvas: ").append(this.stringUtil.toString(gameCanvas)).toString(), this, this.commonStrings.START);
         this.canvasThread = this.threadFactoryUtil.getInstanceGameCanvasRunnable(gameCanvas);
@@ -572,18 +580,18 @@ export class DemoCanvas extends RunnableCanvas {
         this.getMenuInputProcessor().processInputList();
         this.preDemoProcess();
         if (this.state == 0) {
-            var indexedAnimationBehavior = this.getSpecialAnimationInterface().getAnimationBehavior();
+            let indexedAnimationBehavior = this.getSpecialAnimationInterface().getAnimationBehavior();
             ;
             if (indexedAnimationBehavior.loopIndex < 1) {
                 this.timeDelayHelper.setStartTimeTNT();
             }
-            var demoGameMidlet = this.getCustomCommandListener();
+            let demoGameMidlet = this.getCustomCommandListener();
             ;
             if (this.gameCanvas != NullGameCanvas.getInstance() && this.gameCanvas.isGameOver()) {
                 this.stopGameDemo();
-                var randomLevel = this.getNextRandom();
+                let randomLevel = this.getNextRandom();
                 ;
-                var gameInfo = this.gameCanvas.getLayerManager().getGameInfo();
+                let gameInfo = this.gameCanvas.getLayerManager().getGameInfo();
                 ;
                 gameInfo.setCurrentLevel(randomLevel);
                 this.gameCanvas.setGameOver(false);
@@ -593,7 +601,7 @@ export class DemoCanvas extends RunnableCanvas {
                 if (!this.demoGameRunnable.isRunning()) {
                     this.startDemoGame();
                     this.demoGameRunnable.setRunning(true);
-                    var thread = this.threadFactoryUtil.getInstanceForRunnable(this.demoGameRunnable);
+                    let thread = this.threadFactoryUtil.getInstanceForRunnable(this.demoGameRunnable);
                     ;
                     this.demoGameRunnable.setThread(thread);
                     this.threadFactoryUtil.start(thread);
@@ -614,10 +622,10 @@ export class DemoCanvas extends RunnableCanvas {
         ThreadUtil.getInstance().join(this.canvasThread);
     }
     showGamePaintable() {
-        var METHOD_NAME = "showGamePaintable";
+        let METHOD_NAME = "showGamePaintable";
         ;
         PreLogUtil.put(this.commonStrings.START, this, METHOD_NAME);
-        var isDefault = J2MEUtil.isHTML();
+        let isDefault = J2MEUtil.isHTML();
         ;
         if (this.gameCanvas != NullGameCanvas.getInstance() && (this.gameCanvas.isRunning() || isDefault || SWTUtil.isSWT) && !(this.gameCanvas.getType() == NullGameCanvas.TYPE)) {
             this.gameRunnable = this.gameCanvas.gameRunnable;
@@ -650,11 +658,11 @@ export class DemoCanvas extends RunnableCanvas {
     run() {
         this.logUtil.putF(this.commonStrings.START_RUNNABLE, this, this.commonStrings.RUN);
         try {
-            var progressCanvas = ProgressCanvasFactory.getInstance();
+            let progressCanvas = ProgressCanvasFactory.getInstance();
             ;
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
-            var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+            let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
             ;
             progressCanvas.addNormalPortion(50, "Demo Thread");
             this.setCurrentThread();
@@ -675,18 +683,18 @@ export class DemoCanvas extends RunnableCanvas {
                     this.processGame();
                     this.processLoopSleep();
                 }
-                var demoGameRunnable = new DemoGameRunnable(this);
+                let demoGameRunnable = new DemoGameRunnable(this);
                 ;
-                var currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
+                let currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
                 ;
                 currentDisplayableFactory.setRunnable(demoGameRunnable);
                 currentDisplayableFactory.setMyCanvas(this);
                 OpenGLThreadUtil.getInstance().onResume();
             }
             if (features.isDefault(openGLFeatureFactory.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML()) {
-                var demoGameRunnable = new DemoGameRunnable(this);
+                let demoGameRunnable = new DemoGameRunnable(this);
                 ;
-                var currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
+                let currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
                 ;
                 currentDisplayableFactory.setRunnable(demoGameRunnable);
                 currentDisplayableFactory.setMyCanvas(this);
@@ -697,10 +705,12 @@ export class DemoCanvas extends RunnableCanvas {
                 }
                 this.end();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.RUN, e);
+            }
         }
         this.logUtil.putF(this.commonStrings.END_RUNNABLE, this, this.commonStrings.RUN);
     }
@@ -713,31 +723,33 @@ export class DemoCanvas extends RunnableCanvas {
     setRunning(running) {
         super.setRunning(running);
         try {
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
-            var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+            let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
             ;
             if (running) {
             }
             else {
                 if ((features.isDefault(openGLFeatureFactory.OPENGL) || J2MEUtil.isHTML()) || SWTUtil.isSWT) {
-                    var currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
+                    let currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
                     ;
                     currentDisplayableFactory.clearRunnable();
                     this.end();
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.SET_RUNNING, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.SET_RUNNING, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     end() {
-        var progressCanvas = ProgressCanvasFactory.getInstance();
+        let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         this.baseGameStatistics.add(new StringMaker().append(DemoCanvas.BOT_GAME_STATS).append(this.baseGameStatistics.toString()).append(CommonSeps.getInstance().NEW_LINE).toString());
         this.baseGameStatistics.init();
@@ -760,7 +772,7 @@ export class DemoCanvas extends RunnableCanvas {
         return this.gameCanvas;
     }
     isDemoLoading() {
-        var gameCanvas = this.gameCanvas;
+        let gameCanvas = this.gameCanvas;
         ;
         if (gameCanvas == NullGameCanvas.getInstance()) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -856,9 +868,9 @@ export class DemoCanvas extends RunnableCanvas {
         return OpenGLFeatureUtil.getInstance().isAnyThreed() || SWTUtil.isSWT;
     }
     isRunningInAnotherThread() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
         if (features.isDefault(openGLFeatureFactory.OPENGL_AS_GAME_THREAD)) {
             //if statement needs to be on the same line and ternary does not work the same way.

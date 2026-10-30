@@ -18,11 +18,11 @@ import { AffineTransform } from '../../../../java/awt/geom/AffineTransform.js';
 //not GWT import const ImageCache
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageUtil } from './ImageUtil.js';
-//not GWT import - same folder const ImageUtil
+//sameFolderImports - not GWT import - same folder const ImageUtil
 import { ImageJ2SEUtil } from './ImageJ2SEUtil.js';
-//not GWT import - same folder const ImageJ2SEUtil
+//sameFolderImports - not GWT import - same folder const ImageJ2SEUtil
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageScaleUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,21 +42,21 @@ export class ImageScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImage3(imageCache, originalImage, scaleNominatorX, scaleDenominatorX, scaleNominatorY, scaleDenominatorY, cached, mutable) {
-        var width = originalImage.getWidth();
+        let width = originalImage.getWidth();
         ;
-        var height = originalImage.getHeight();
+        let height = originalImage.getHeight();
         ;
-        var scaleX = scaleNominatorX / scaleDenominatorX;
+        let scaleX = scaleNominatorX / scaleDenominatorX;
         ;
-        var scaleY = scaleNominatorY / scaleDenominatorY;
+        let scaleY = scaleNominatorY / scaleDenominatorY;
         ;
-        var image;
+        let image;
         ;
         if (cached) {
-            image = imageCache.get(this.constructor.name.toString(), Math.round((width * scaleX)), Math.round((height * scaleY)));
+            image = imageCache.get(this.constructor.name.toString(), globalThis.Math.trunc((width * scaleX)), globalThis.Math.trunc((height * scaleY)));
         }
         else {
-            image = imageCache.get("createImage", Math.round((width * scaleX)), Math.round((height * scaleY)));
+            image = imageCache.get("createImage", globalThis.Math.trunc((width * scaleX)), globalThis.Math.trunc((height * scaleY)));
         }
         this.scale(originalImage, image, scaleX, scaleY, true);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,13 +70,13 @@ export class ImageScaleUtil extends Object {
         this.scale(originalImage, originalImageArray[0], scaleX, scaleY, false);
     }
     scale(originalImage, newMaxSizeImage, scaleX, scaleY, clear) {
-        var bufferedImage = this.imageUtil.getBufferedImage(originalImage);
+        let bufferedImage = this.imageUtil.getBufferedImage(originalImage);
         ;
-        var newBufferedImage = this.imageUtil.getBufferedImage(newMaxSizeImage);
+        let newBufferedImage = this.imageUtil.getBufferedImage(newMaxSizeImage);
         ;
-        var at = AffineTransform.getScaleInstance(scaleX, scaleY);
+        let at = AffineTransform.getScaleInstance(scaleX, scaleY);
         ;
-        var g = newBufferedImage.createGraphics();
+        let g = newBufferedImage.createGraphics();
         ;
         if (clear) {
             g.setBackground(this.imageJ2SEUtil.TRANSPARENT_COLOR);

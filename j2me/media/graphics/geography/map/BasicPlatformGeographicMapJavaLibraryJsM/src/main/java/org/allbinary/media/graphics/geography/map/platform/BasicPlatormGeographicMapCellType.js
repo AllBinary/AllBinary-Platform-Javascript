@@ -24,25 +24,25 @@ const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicPlatormGeographicMapCellType extends Object {
     static createType(type) {
-        var types = new BasicArrayListS(1);
+        let types = new BasicArrayListS(1);
         ;
         types.add(SmallIntegerSingletonFactory.getInstance().getAt(type));
-        var basicPlatormGeographicMapCellType = new BasicPlatormGeographicMapCellType(types);
+        let basicPlatormGeographicMapCellType = new BasicPlatormGeographicMapCellType(types);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return basicPlatormGeographicMapCellType;
     }
     constructor(types) {
         super();
-        var size = types.size();
+        let size = types.size();
         ;
-        var typeArray = new Array(size);
+        let typeArray = new Array(size);
         ;
-        var typeAsInteger;
+        let typeAsInteger;
         ;
-        var type = 0;
+        let type = 0;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             typeAsInteger = types.get(index);
             type = typeAsInteger.intValue();
             new GeographicMapCellType(type, 0);
@@ -56,9 +56,9 @@ export class BasicPlatormGeographicMapCellType extends Object {
         ;
     }
     hasType(type) {
-        var size = this.types.length;
+        let size = this.types.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (this.types[index] == type) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;

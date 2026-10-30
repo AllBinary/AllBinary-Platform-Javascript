@@ -24,29 +24,29 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormatUtil;
 //ActualPlatform
 /*actual*/ export class PreLogUtil extends Object {
-    /*actual*/ static put(specialMessage, anyType = {}, functionName) {
+    /*actual*/ static put(specialMessage, anyType, functionName) {
         PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance().NULL_OBJECT);
     }
-    /*actual*/ static putOE(specialMessage, anyType = {}, functionName, exception = {}) {
-        var className = CommonStrings.getInstance().EMPTY;
+    /*actual*/ static putOE(specialMessage, anyType, functionName, exception) {
+        let className = CommonStrings.getInstance().EMPTY;
         ;
         if (anyType.constructor.name.toString() !=
             null) {
             className = anyType.constructor.name.toString();
         }
-        var message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
+        let message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
         ;
         console.log(PreLogUtil.LOG_SUCCESS + message);
     }
     /*actual*/ static putS(specialMessage, className, functionName) {
         PreLogUtil.putSE(specialMessage, className, functionName, NullUtil.getInstance().NULL_OBJECT);
     }
-    /*actual*/ static putSE(specialMessage, className, functionName, exception = {}) {
-        var message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
+    /*actual*/ static putSE(specialMessage, className, functionName, exception) {
+        let message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
         ;
         console.log(PreLogUtil.LOG_SUCCESS + message);
     }
-    static getClassName(anyType = {}) {
+    static getClassName(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return anyType.constructor.name.toString();
         ;

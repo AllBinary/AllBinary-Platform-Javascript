@@ -24,11 +24,11 @@ const CanvasImage = globalThis.playn.core.CanvasImage;
 const CanvasSurface = globalThis.playn.core.CanvasSurface;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation
+//sameFolderImports - not GWT import - same folder const ImageBaseRotationAnimation
 import { AlphaBaseProcessor } from './AlphaBaseProcessor.js';
-//not GWT import - same folder const AlphaBaseProcessor
+//sameFolderImports - not GWT import - same folder const AlphaBaseProcessor
 import { AlphaProcessor } from './AlphaProcessor.js';
-//not GWT import - same folder const AlphaProcessor
+//sameFolderImports - not GWT import - same folder const AlphaProcessor
 export class AllBinaryHTMLImageRotationAnimation extends ImageBaseRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);
@@ -47,18 +47,18 @@ export class AllBinaryHTMLImageRotationAnimation extends ImageBaseRotationAnimat
         this.canvasSurfaceArray[1] = this.getCanvasSurface(this.twoImages[1]);
     }
     getCanvasSurface(image) {
-        var htmlImage = image;
+        let htmlImage = image;
         ;
-        var canvasImage = htmlImage.getImage();
+        let canvasImage = htmlImage.getImage();
         ;
-        var canvasSurface = htmlImage.getCanvasSurface(canvasImage);
+        let canvasSurface = htmlImage.getCanvasSurface(canvasImage);
         ;
         canvasSurface.translate(this.originalImage.getWidth() / 2, this.originalImage.getHeight() / 2);
         //if statement needs to be on the same line and ternary does not work the same way.
         return canvasSurface;
     }
     setBasicColorP(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getBasicColorP() ==
             null
@@ -71,7 +71,7 @@ export class AllBinaryHTMLImageRotationAnimation extends ImageBaseRotationAnimat
         }
     }
     setAlpha(alpha) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.alphaP != alpha) {
             changed = true;
@@ -91,7 +91,7 @@ export class AllBinaryHTMLImageRotationAnimation extends ImageBaseRotationAnimat
         this.updateImage();
     }
     updateImage() {
-        var canvasSurface = this.canvasSurfaceArray[this.bufferedImageIndex];
+        let canvasSurface = this.canvasSurfaceArray[this.bufferedImageIndex];
         ;
         canvasSurface.save();
         this.imageRotationUtil.rotateImageCanvasSurfaceClear(this.originalImage, this.twoImages[this.bufferedImageIndex], canvasSurface, this.angleInfo.getAngle() + 90);

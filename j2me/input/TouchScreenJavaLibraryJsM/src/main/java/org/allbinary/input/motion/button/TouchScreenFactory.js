@@ -23,7 +23,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchScreenTypesFactory } from './TouchScreenTypesFactory.js';
-//not GWT import - same folder const TouchScreenType
+//sameFolderImports - not GWT import - same folder const TouchScreenType
 export class TouchScreenFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -39,12 +39,14 @@ export class TouchScreenFactory extends Object {
         try {
             this.setTouch(true);
             this.setMultiTouch(false);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, TouchScreenFactory.SINGLETON, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, TouchScreenFactory.SINGLETON, commonStrings.GET_INSTANCE, e);
+            }
         }
     }
     setMultiTouch(multiTouch) {
@@ -76,7 +78,7 @@ export class TouchScreenFactory extends Object {
         return this.touchScreenType;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("TouchScreen: ");
         stringBuffer.appendboolean(this.isTouch());

@@ -20,11 +20,11 @@ import { AngleInfo } from '../../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageAnimationFactory } from './BaseImageAnimationFactory.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation
+//sameFolderImports - not GWT import - same folder const ImageBaseRotationAnimation
 import { AdjustedImageBaseRotationAnimation } from './AdjustedImageBaseRotationAnimation.js';
-//not GWT import - same folder const AdjustedImageBaseRotationAnimation
+//sameFolderImports - not GWT import - same folder const AdjustedImageBaseRotationAnimation
 export class ImageRotationAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, width, height, dx, dy, angleIncrement, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory);

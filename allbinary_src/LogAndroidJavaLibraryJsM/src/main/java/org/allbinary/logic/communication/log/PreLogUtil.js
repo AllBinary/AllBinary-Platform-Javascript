@@ -23,27 +23,27 @@ const LogFormatUtil = globalThis.org.allbinary.logic.communication.log.LogFormat
 const Log = globalThis.org.allbinary.logic.communication.log.Log;
 //ActualPlatform
 /*actual*/ export class PreLogUtil extends Object {
-    /*actual*/ static put(specialMessage, anyType = {}, functionName) {
+    /*actual*/ static put(specialMessage, anyType, functionName) {
         PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance().NULL_OBJECT);
     }
-    /*actual*/ static putOE(specialMessage, anyType = {}, functionName, exception = {}) {
-        var className = PreLogUtil.LABEL;
+    /*actual*/ static putOE(specialMessage, anyType, functionName, exception) {
+        let className = PreLogUtil.LABEL;
         ;
-        var actualClassName = anyType.constructor.name.toString();
+        let actualClassName = anyType.constructor.name.toString();
         ;
         if (actualClassName !=
             null) {
             className = actualClassName;
         }
-        var message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
+        let message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
         ;
         hilog.info(0x0000, className, PreLogUtil.PUBLIC, message);
     }
     /*actual*/ static putS(specialMessage, className, functionName) {
         PreLogUtil.putSE(specialMessage, className, functionName, NullUtil.getInstance().NULL_OBJECT);
     }
-    /*actual*/ static putSE(specialMessage, className, functionName, exception = {}) {
-        var message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
+    /*actual*/ static putSE(specialMessage, className, functionName, exception) {
+        let message = LogFormatUtil.getInstance().get(className, functionName, specialMessage, exception);
         ;
         hilog.info(0x0000, className, PreLogUtil.PUBLIC, message);
     }

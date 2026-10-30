@@ -12,8 +12,8 @@
         *  Created By: Travis Berthelot
 */
 /* Generated Code Do Not Modify */
-import { Stack } from '../../../java/util/Stack.js';
-//not GWT import const Stack
+//not plain js import { Stack } 
+const Stack = globalThis.java.util.Stack;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABStack extends Stack {
 }

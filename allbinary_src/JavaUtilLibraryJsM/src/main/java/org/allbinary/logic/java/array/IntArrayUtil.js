@@ -17,10 +17,19 @@ import { Object } from '../../../../../java/lang/Object.js';
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class IntArrayUtil extends Object {
-    static toString(array) {
-        var stringBuffer = new StringMaker();
+    static toString(...args) {
+        if (args.length === 1)
+            return this.toString$overload1(args[0]);
+        if (args.length === 1)
+            return this.toString$overload2(args[0]);
+        if (args.length === 1)
+            return this.toString$overload3(args[0]);
+        throw new TypeError('No matching overload: toString');
+    }
+    static toString$overload1(array) {
+        let stringBuffer = new StringMaker();
         ;
-        for (var index = 0; index < array.length; index++) {
+        for (let index = 0; index < array.length; index++) {
             stringBuffer.appendint(array[index]);
             if (index < array.length) {
                 stringBuffer.append(", ");
@@ -30,12 +39,12 @@ export class IntArrayUtil extends Object {
         return stringBuffer.toString();
         ;
     }
-    static toString(array) {
-        var stringBuffer = new StringMaker();
+    static toString$overload2(array) {
+        let stringBuffer = new StringMaker();
         ;
-        for (var index = 0; index < array.length; index++) {
+        for (let index = 0; index < array.length; index++) {
             stringBuffer.append("{");
-            for (var index2 = 0; index2 < array[index].length; index2++) {
+            for (let index2 = 0; index2 < array[index].length; index2++) {
                 stringBuffer.appendint(array[index][index2]);
                 if (index2 < array[index].length - 1) {
                     stringBuffer.append(", ");
@@ -50,14 +59,14 @@ export class IntArrayUtil extends Object {
         return stringBuffer.toString();
         ;
     }
-    static toString(array) {
-        var stringBuffer = new StringMaker();
+    static toString$overload3(array) {
+        let stringBuffer = new StringMaker();
         ;
-        for (var index = 0; index < array.length; index++) {
+        for (let index = 0; index < array.length; index++) {
             stringBuffer.append("{");
-            for (var index2 = 0; index2 < array[index].length; index2++) {
+            for (let index2 = 0; index2 < array[index].length; index2++) {
                 stringBuffer.append("{");
-                for (var index3 = 0; index3 < array[index][index2].length; index3++) {
+                for (let index3 = 0; index3 < array[index][index2].length; index3++) {
                     stringBuffer.appendint(array[index][index2][index3]);
                     if (index3 < array[index][index2].length - 1) {
                         stringBuffer.append(", ");

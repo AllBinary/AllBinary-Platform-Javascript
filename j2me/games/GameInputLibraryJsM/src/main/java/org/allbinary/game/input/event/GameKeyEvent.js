@@ -20,11 +20,11 @@ import { AllBinaryEventObject } from '../../../../../org/allbinary/logic/util/ev
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameKeyEvent extends AllBinaryEventObject {
-    static createEvent(anyType = {}, sourceId, key) {
+    static createEvent(anyType, sourceId, key) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new GameKeyEvent(anyType, sourceId, 0, 0, key, false);
     }
-    constructor(anyType = {}, sourceId, originalKey, gameActionKey, key, repeated) {
+    constructor(anyType, sourceId, originalKey, gameActionKey, key, repeated) {
         super(anyType);
         this.repeated = false;
         this.gameActionKey = 0;
@@ -36,7 +36,7 @@ export class GameKeyEvent extends AllBinaryEventObject {
         this.setGameActionKey(gameActionKey);
         this.setRepeatEvents(repeated);
     }
-    init(anyType = {}) {
+    init(anyType) {
         this.setSource(anyType);
     }
     setRepeatEvents(repeated) {
@@ -51,7 +51,7 @@ export class GameKeyEvent extends AllBinaryEventObject {
         return this.key;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("\nKey: ");
         stringBuffer.appendint(this.getKey());

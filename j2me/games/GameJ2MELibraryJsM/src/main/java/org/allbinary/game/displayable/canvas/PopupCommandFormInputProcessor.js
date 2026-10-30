@@ -16,7 +16,7 @@
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommandFormInputProcessor } from './CommandFormInputProcessor.js';
-//not GWT import - same folder const PopupMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const PopupMenuInputProcessor
 export class PopupCommandFormInputProcessor extends CommandFormInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCanvas, form, popupMenuInputProcessor) {
         super(gameKeyEventList, playerInputId, gameCanvas, form);

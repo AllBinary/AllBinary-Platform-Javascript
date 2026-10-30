@@ -16,7 +16,7 @@ import { ColorChangeEventHandler } from '../../../../org/allbinary/graphics/colo
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGameDemoPaintable } from './BasicGameDemoPaintable.js';
-//not GWT import - same folder const MainGameDemoStatePaintable
+//sameFolderImports - not GWT import - same folder const MainGameDemoStatePaintable
 export class GameScrollMenuPaintable extends BasicGameDemoPaintable {
     constructor(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface, basicColor) {
         super(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface);
@@ -30,19 +30,19 @@ export class GameScrollMenuPaintable extends BasicGameDemoPaintable {
     onEvent(eventObject) {
     }
     setColor(basicColor) {
-        var mainGameDemoStatePaintable = this.getMainDemoStatePaintable();
+        let mainGameDemoStatePaintable = this.getMainDemoStatePaintable();
         ;
-        var formPaintable = mainGameDemoStatePaintable.getMenuPaintableInterface();
+        let formPaintable = mainGameDemoStatePaintable.getMenuPaintableInterface();
         ;
-        var scrollSelectionForm = formPaintable.getForm();
+        let scrollSelectionForm = formPaintable.getForm();
         ;
         mainGameDemoStatePaintable.getOwnershipPaintableInterface().setBasicColorP(basicColor);
         scrollSelectionForm.setButtonBasicColor(basicColor);
-        var item;
+        let item;
         ;
-        var stringComponent;
+        let stringComponent;
         ;
-        for (var index = scrollSelectionForm.size() - 1; index >= 0; index--) {
+        for (let index = scrollSelectionForm.size() - 1; index >= 0; index--) {
             item = scrollSelectionForm.get(index);
             stringComponent = item.getLabelStringComponent();
             if (stringComponent !=

@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
-//not GWT import - same folder const GeologicalGeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeologicalGeographicMapCellPosition
 export class GeologicalGeographicMapCellPositionFactoryInitVisitor extends Object {
     //@Throws(Exception.constructor)
     visit(tiledLayer, cellPosition) {
-        var geologicalGeographicMapCellPosition = cellPosition;
+        let geologicalGeographicMapCellPosition = cellPosition;
         ;
         geologicalGeographicMapCellPosition.getGeologicalResource().init();
     }

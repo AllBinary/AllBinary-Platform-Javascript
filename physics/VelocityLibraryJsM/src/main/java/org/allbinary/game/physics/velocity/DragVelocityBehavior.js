@@ -14,24 +14,24 @@
 //not GWT import const BasicDecimal
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VelocityBehaviorBase } from './VelocityBehaviorBase.js';
-//not GWT import - same folder const BasicVelocityProperties
+//sameFolderImports - not GWT import - same folder const BasicVelocityProperties
 export class DragVelocityBehavior extends VelocityBehaviorBase {
     reduce(velocityProperties, nominator, denominator) {
         if (velocityProperties.getVelocityXBasicDecimalP().getUnscaled() != 0) {
-            var basicDecimal = velocityProperties.getVelocityXBasicDecimalP();
+            let basicDecimal = velocityProperties.getVelocityXBasicDecimalP();
             ;
             basicDecimal.multiplyint(nominator);
             basicDecimal.divideint(denominator);
         }
         if (velocityProperties.getVelocityYBasicDecimalP().getUnscaled() != 0) {
-            var basicDecimal = velocityProperties.getVelocityYBasicDecimalP();
+            let basicDecimal = velocityProperties.getVelocityYBasicDecimalP();
             ;
             basicDecimal.multiplyint(nominator);
             basicDecimal.divideint(denominator);
         }
     }
     reduceX(velocityProperties, nominator, denominator) {
-        var basicDecimal = velocityProperties.getVelocityXBasicDecimalP();
+        let basicDecimal = velocityProperties.getVelocityXBasicDecimalP();
         ;
         if (basicDecimal.getUnscaled() != 0) {
             basicDecimal.multiplyint(nominator);
@@ -40,7 +40,7 @@ export class DragVelocityBehavior extends VelocityBehaviorBase {
     }
     reduceY(velocityProperties, nominator, denominator) {
         if (velocityProperties.getVelocityYBasicDecimalP().getUnscaled() != 0) {
-            var basicDecimal = velocityProperties.getVelocityYBasicDecimalP();
+            let basicDecimal = velocityProperties.getVelocityYBasicDecimalP();
             ;
             basicDecimal.multiplyint(nominator);
             basicDecimal.divideint(denominator);

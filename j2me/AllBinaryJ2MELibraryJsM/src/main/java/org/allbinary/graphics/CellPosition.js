@@ -26,9 +26,9 @@ export class CellPosition extends V {
         ;
     }
     static toStringColRow(i_column, i_row) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         stringBuffer.append(commonSeps.PARENTHESIS_OPEN);
         stringBuffer.appendint(i_column);

@@ -13,7 +13,7 @@
 */
 //not GWT import const EventListenerInterface
 import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/handler/BasicEventHandler.js';
-//not GWT import - same folder const ScrollMapEvent
+//sameFolderImports - not GWT import - same folder const ScrollMapEvent
 export class ScrollMapEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -24,7 +24,7 @@ export class ScrollMapEventHandler extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var scrollMapEventListenerInterface = eventListenerInterface;
+        let scrollMapEventListenerInterface = eventListenerInterface;
         ;
         scrollMapEventListenerInterface.onMoveEvent(eventObject);
     }

@@ -34,7 +34,7 @@ export class UnitGameResources extends BasicGameResources {
     //@Throws(Exception.constructor)
     append(ROOT, sizeString) {
         super.append(ROOT, sizeString);
-        var string = GameGraphicsResourceUtil.getInstance().getName();
+        let string = GameGraphicsResourceUtil.getInstance().getName();
         ;
         BasicGameResources.stringBuffer.delete(0, BasicGameResources.stringBuffer.length());
         BasicGameResources.stringBuffer.append(ROOT);

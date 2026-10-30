@@ -28,7 +28,7 @@ import { GLUtil } from '../../../../org/allbinary/opengles/GLUtil.js';
 //not GWT import const PlatformTextureBaseFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLESImage } from './OpenGLESImage.js';
-//not GWT import - same folder const OpenGLESImage
+//sameFolderImports - not GWT import - same folder const OpenGLESImage
 //This is not actually VBO impl
 export class OpenGLESGL11VBOImage extends OpenGLESImage {
     constructor(image, bitmapFactory, textureFactory) {
@@ -69,7 +69,7 @@ export class OpenGLESGL11VBOImage extends OpenGLESImage {
         this.textureVertexFloatBuffer.rewind();
     }
     set(gl) {
-        var gl10 = gl;
+        let gl10 = gl;
         ;
         if (super.initTexture(gl10)) {
             this.textureFactory.load(gl10, GL10.GL_TEXTURE_2D, 0, this, 0, true);

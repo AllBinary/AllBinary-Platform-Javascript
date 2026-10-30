@@ -24,13 +24,13 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const TerrainEventListenerInterface
+//sameFolderImports - not GWT import - same folder const TerrainEventListenerInterface
 export class TerrainEventHandler extends BasicEventHandler {
     static init() {
         TerrainEventHandler.hashtable = StdUtil.getInstance().createHashtable();
     }
-    static getInstance(anyType = {}) {
-        var eventHandlerCanBeNull = TerrainEventHandler.hashtable.get(anyType);
+    static getInstance(anyType) {
+        let eventHandlerCanBeNull = TerrainEventHandler.hashtable.get(anyType);
         ;
         if (eventHandlerCanBeNull ==
             null) {
@@ -59,22 +59,24 @@ export class TerrainEventHandler extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var terrainEventListener = this.list.get(index);
+                let terrainEventListener = this.list.get(index);
                 ;
                 terrainEventListener.onTerrainEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
         super.fireEvent(eventObject);
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var terrainEventListenerInterface = eventListenerInterface;
+        let terrainEventListenerInterface = eventListenerInterface;
         ;
         terrainEventListenerInterface.onTerrainEvent(eventObject);
     }

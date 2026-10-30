@@ -24,7 +24,7 @@ import { NoDecimalTrigTable } from '../../../../../org/allbinary/math/NoDecimalT
 //not GWT import const NoDecimalTrigTable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicWeaponPart } from './BasicWeaponPart.js';
-//not GWT import - same folder const BasicWeaponPart
+//sameFolderImports - not GWT import - same folder const BasicWeaponPart
 export class StraightMultiProjectileWeaponPart extends BasicWeaponPart {
     static createStraightMultiProjectileWeaponPart(animationInterface, weaponLayerCircularStaticPool) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -39,36 +39,36 @@ export class StraightMultiProjectileWeaponPart extends BasicWeaponPart {
     }
     //@Throws(Exception.constructor)
     processScore(allbinaryLayerManager, angle, otherAngle, weaponProperties, scoreableInterface) {
-        var sourceLayerInterface = this.getOwnerLayerInterface();
+        let sourceLayerInterface = this.getOwnerLayerInterface();
         ;
-        var reducedWidth = (sourceLayerInterface.getWidth() * 8 / 10);
+        let reducedWidth = (sourceLayerInterface.getWidth() * 8 / 10);
         ;
-        var halfWidth = (reducedWidth >> 1);
+        let halfWidth = (reducedWidth >> 1);
         ;
-        var x = this.relativeRelationship.getX();
+        let x = this.relativeRelationship.getX();
         ;
-        var y = this.relativeRelationship.getY();
+        let y = this.relativeRelationship.getY();
         ;
-        var sine = 0;
+        let sine = 0;
         ;
-        var beamX = 0;
+        let beamX = 0;
         ;
-        var cosine = 0;
+        let cosine = 0;
         ;
-        var beamY = 0;
+        let beamY = 0;
         ;
-        var weaponLayer;
+        let weaponLayer;
         ;
-        var increment = reducedWidth / (this.total - 1);
+        let increment = globalThis.Math.trunc(reducedWidth / (this.total - 1));
         ;
-        var next = -halfWidth;
+        let next = -halfWidth;
         ;
-        for (var index = 0; index < this.total; index++) {
-            sine = (next * this.noDecimalTrigTable.sin(Math.round(angle)));
-            beamX = Math.round((sine / this.noDecimalTrigTable.SCALE));
-            cosine = (next * this.noDecimalTrigTable.cos(Math.round(angle)));
-            beamY = -Math.round((cosine / this.noDecimalTrigTable.SCALE));
-            weaponLayer = this.weaponLayerCircularStaticPool.getInstanceWeaponLayer(sourceLayerInterface, x + beamX, y + beamY, 0, Math.round(angle), Math.round(otherAngle), weaponProperties, scoreableInterface);
+        for (let index = 0; index < this.total; index++) {
+            sine = (next * this.noDecimalTrigTable.sin(globalThis.Math.trunc(angle)));
+            beamX = globalThis.Math.trunc((sine / this.noDecimalTrigTable.SCALE));
+            cosine = (next * this.noDecimalTrigTable.cos(globalThis.Math.trunc(angle)));
+            beamY = -globalThis.Math.trunc((cosine / this.noDecimalTrigTable.SCALE));
+            weaponLayer = this.weaponLayerCircularStaticPool.getInstanceWeaponLayer(sourceLayerInterface, x + beamX, y + beamY, 0, globalThis.Math.trunc(angle), globalThis.Math.trunc(otherAngle), weaponProperties, scoreableInterface);
             allbinaryLayerManager.append(weaponLayer);
             next += increment;
         }

@@ -17,7 +17,7 @@ import { RuntimeException } from '../../../../../../java/lang/RuntimeException.j
 //not GWT import const GeographicMapCellHistory
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const MultipassState
+//sameFolderImports - not GWT import - same folder const MultipassState
 export class PathGenerator extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -27,11 +27,11 @@ export class PathGenerator extends Object {
         super();
     }
     //@Throws(Exception.constructor)
-    init(geographicMapInterface = {}, totalPaths) {
+    init(geographicMapInterface, totalPaths) {
     }
     //@Throws(Exception.constructor)
     getInstanceNoCache(geographicMapInterface, pathFindingInfo, totalPaths) {
-        var geographicMapCellPositionBasicArrayList = this.create(geographicMapInterface, pathFindingInfo, totalPaths);
+        let geographicMapCellPositionBasicArrayList = this.create(geographicMapInterface, pathFindingInfo, totalPaths);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return geographicMapCellPositionBasicArrayList;
@@ -42,26 +42,26 @@ export class PathGenerator extends Object {
     }
     //@Throws(Exception.constructor)
     create(geographicMapInterface, pathFindingInfo, totalPaths) {
-        var startPathFindingNodeList = pathFindingInfo.getStartPathFindingNodeList();
+        let startPathFindingNodeList = pathFindingInfo.getStartPathFindingNodeList();
         ;
-        var endPathFindingNodeList = pathFindingInfo.getEndPathFindingNodeList();
+        let endPathFindingNodeList = pathFindingInfo.getEndPathFindingNodeList();
         ;
-        var geographicPathFinderInterface = pathFindingInfo.getPathFinder();
+        let geographicPathFinderInterface = pathFindingInfo.getPathFinder();
         ;
-        var geographicMapCellPositionBasicArrayList = geographicPathFinderInterface.searchTotalPath(startPathFindingNodeList, endPathFindingNodeList, totalPaths);
+        let geographicMapCellPositionBasicArrayList = geographicPathFinderInterface.searchTotalPath(startPathFindingNodeList, endPathFindingNodeList, totalPaths);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return geographicMapCellPositionBasicArrayList;
     }
     //@Throws(Exception.constructor)
     createN(geographicMapInterface, pathFindingInfo, totalPaths, multipassState) {
-        var startPathFindingNodeList = pathFindingInfo.getStartPathFindingNodeList();
+        let startPathFindingNodeList = pathFindingInfo.getStartPathFindingNodeList();
         ;
-        var endPathFindingNodeList = pathFindingInfo.getEndPathFindingNodeList();
+        let endPathFindingNodeList = pathFindingInfo.getEndPathFindingNodeList();
         ;
-        var geographicPathFinderInterface = pathFindingInfo.getPathFinder();
+        let geographicPathFinderInterface = pathFindingInfo.getPathFinder();
         ;
-        var geographicMapCellPositionBasicArrayList = geographicPathFinderInterface.searchTotalPathN(startPathFindingNodeList, endPathFindingNodeList, totalPaths, multipassState);
+        let geographicMapCellPositionBasicArrayList = geographicPathFinderInterface.searchTotalPathN(startPathFindingNodeList, endPathFindingNodeList, totalPaths, multipassState);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return geographicMapCellPositionBasicArrayList;

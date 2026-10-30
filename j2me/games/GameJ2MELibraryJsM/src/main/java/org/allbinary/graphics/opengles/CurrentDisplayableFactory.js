@@ -58,7 +58,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeatureFactory
+//sameFolderImports - not GWT import - same folder const OpenGLFeatureFactory
 export class CurrentDisplayableFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -126,11 +126,11 @@ export class CurrentDisplayableFactory extends Object {
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this) 
         //mutex.withLock
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         stringMaker.append(this.stringUtil.toString(this.openGlReadydisplayable));
         if (SWTUtil.isSWT && !features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL)) {
@@ -162,9 +162,8 @@ export class CurrentDisplayableFactory extends Object {
         PreLogUtil.put(new StringMaker().append(this.RUNNABLE).append(this.stringUtil.toString(this.runnable)).append(CommonSeps.getInstance().COLON_SEP).append(this.stringUtil.toString(usedRunnable)).toString(), this, this.SET_USED_RUNNABLE);
         this.usedRunnable = usedRunnable;
     }
-}
+} //JSNI Expose so JSNI can access this class *** 
 CurrentDisplayableFactory.instance = new CurrentDisplayableFactory();
-//JSNI Expose so JSNI can access this class *** 
 globalThis.org = globalThis.org || {};
 globalThis.org.allbinary = globalThis.org.allbinary || {};
 globalThis.org.allbinary.graphics = globalThis.org.allbinary.graphics || {};

@@ -71,15 +71,15 @@ import { RemoteInfo } from '../../../../../org/allbinary/game/multiplayer/layer/
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimulatedBuildingPropertiesFactory } from './SimulatedBuildingPropertiesFactory.js';
-//not GWT import - same folder const BuildingPropertiesFactory
+//sameFolderImports - not GWT import - same folder const BuildingPropertiesFactory
 import { BuildingInfoHudPaintable } from './BuildingInfoHudPaintable.js';
-//not GWT import - same folder const BuildingInfoHudPaintable
+//sameFolderImports - not GWT import - same folder const BuildingInfoHudPaintable
 export class BuildingLayer extends AdvancedRTSGameLayer {
     //@Throws(Exception.constructor)
     static createSimulated() {
-        var nullAnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance();
+        let nullAnimationInterfaceFactoryInterface = NullAnimationFactory.getFactoryInstance();
         ;
-        var nullIndexedAnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance();
+        let nullIndexedAnimationInterfaceFactoryInterface = NullIndexedAnimationFactory.getFactoryInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new BuildingLayer(RemoteInfo.REMOTE_INFO, SimulatedBuildingPropertiesFactory.getInstance(), AdvancedRTSProperties.createPropertiesSimulated(), GroupFactory.getInstance().NULL_GROUP_ARRAY, StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING, Health.NULL_HEALTH, NullRTSFormInputFactory.getInstance(), nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullAnimationInterfaceFactoryInterface, nullIndexedAnimationInterfaceFactoryInterface, NullIndexedAnimationFactory.getFactoryInstance(), RectangleFactory.SINGLETON, 0, 0);
@@ -110,7 +110,7 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         this.trackingEvent = buildingPropertiesFactory.getTrackingEvent(this);
     }
     initVisibility(rtsPlayerLayerInterface) {
-        var advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
+        let advancedRTSPlayerLayerInterface = rtsPlayerLayerInterface;
         ;
         if (advancedRTSPlayerLayerInterface.isLocalPlayer()) {
             this.local = true;
@@ -128,15 +128,17 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
     }
     onMovement(trackingEvent) {
         try {
-            var layerInterface = trackingEvent.getLayerInterface();
+            let layerInterface = trackingEvent.getLayerInterface();
             ;
             if (layerInterface.getGroupInterface()[0] != this.getGroupInterface()[0]) {
                 layerInterface.onMovementFound(this.trackingEvent);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "onMovement", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "onMovement", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -146,9 +148,9 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         }
         if (!this.getHealthInterface().isAlive()) {
             if (this.isReadyForExplosion()) {
-                var currentFrame = this.destroyAnimationInterface.getFrame();
+                let currentFrame = this.destroyAnimationInterface.getFrame();
                 ;
-                var size = this.destroyAnimationInterface.getSize() - 1;
+                let size = this.destroyAnimationInterface.getSize() - 1;
                 ;
                 if (currentFrame == size && !this.timeDelayHelper.isTimeTNT()) {
                     if (!this.getHealthInterface().isAlive()) {
@@ -178,23 +180,23 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         return this.efficiencyPerLevel;
     }
     getCost() {
-        var total = RTSLayerUtil.getInstance().getCostExponential((this.getLevel() * this.getBuildingLevelCost()));
+        let total = RTSLayerUtil.getInstance().getCostExponential((this.getLevel() * this.getBuildingLevelCost()));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(total);
+        return globalThis.Math.trunc(total);
     }
     getDowngradeCost() {
-        var downgradeCost = RTSLayerUtil.getInstance().getCostExponential(((this.getLevel() - 1) * this.getBuildingLevelCost()));
+        let downgradeCost = RTSLayerUtil.getInstance().getCostExponential(((this.getLevel() - 1) * this.getBuildingLevelCost()));
         ;
         this.logUtil.putF("Cost: " + downgradeCost, this, "getDowngradeCost");
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(downgradeCost) * 9 / 10;
+        return globalThis.Math.trunc(globalThis.Math.trunc(downgradeCost) * 9 / 10);
     }
     getUpgradeCost() {
-        var upgradeCost = RTSLayerUtil.getInstance().getCostExponential(((this.getLevel() + 1) * this.getBuildingLevelCost()));
+        let upgradeCost = RTSLayerUtil.getInstance().getCostExponential(((this.getLevel() + 1) * this.getBuildingLevelCost()));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(upgradeCost);
+        return globalThis.Math.trunc(upgradeCost);
     }
     downgrade() {
         super.downgrade();
@@ -231,26 +233,26 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
     }
     //@Throws(Exception.constructor)
     generateMoveOutOfBuildAreaPaths() {
-        var occupyList = this.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
+        let occupyList = this.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
         ;
-        var surroundList = this.geographicMapCellPositionAreaBase.getSurroundingGeographicMapCellPositionList();
+        let surroundList = this.geographicMapCellPositionAreaBase.getSurroundingGeographicMapCellPositionList();
         ;
-        var NO_DIRECTION = DirectionFactory.getInstance().NO_DIRECTION;
+        let NO_DIRECTION = DirectionFactory.getInstance().NO_DIRECTION;
         ;
-        var geographicMapDirectionUtil = GeographicMapDirectionUtil.getInstance();
+        let geographicMapDirectionUtil = GeographicMapDirectionUtil.getInstance();
         ;
-        var pathsList;
+        let pathsList;
         ;
-        var occupyGeographicMapCellPosition;
+        let occupyGeographicMapCellPosition;
         ;
-        var surroundGeographicMapCellPosition;
+        let surroundGeographicMapCellPosition;
         ;
-        var list;
+        let list;
         ;
-        for (var index2 = occupyList.size() - 1; index2 >= 0; index2--) {
+        for (let index2 = occupyList.size() - 1; index2 >= 0; index2--) {
             pathsList = new BasicArrayListD();
             occupyGeographicMapCellPosition = occupyList.get(index2);
-            for (var index = surroundList.size() - 1; index >= 0; index--) {
+            for (let index = surroundList.size() - 1; index >= 0; index--) {
                 surroundGeographicMapCellPosition = surroundList.get(index);
                 if (geographicMapDirectionUtil.getEightDirectionFromCellPositionToAdjacentCellPosition(surroundGeographicMapCellPosition, occupyGeographicMapCellPosition) != NO_DIRECTION) {
                     list = new BasicArrayListS(1);
@@ -262,7 +264,7 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         }
     }
     getMoveOutOfBuildAreaPath(geographicMapCellPosition) {
-        var pathsList = this.pathsHashtable.get(geographicMapCellPosition);
+        let pathsList = this.pathsHashtable.get(geographicMapCellPosition);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return pathsList;
@@ -296,20 +298,20 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         return 0;
     }
     addVisibility() {
-        var geographicMapCellPositionArea = this.geographicMapCellPositionAreaBase;
+        let geographicMapCellPositionArea = this.geographicMapCellPositionAreaBase;
         ;
-        var occupyList = geographicMapCellPositionArea.getOccupyingGeographicMapCellPositionList();
+        let occupyList = geographicMapCellPositionArea.getOccupyingGeographicMapCellPositionList();
         ;
         VisibleCellPositionsSingleton.getInstance().addStationaryCellPositions(occupyList);
-        var surroundList = geographicMapCellPositionArea.getSurroundingGeographicMapCellPositionList();
+        let surroundList = geographicMapCellPositionArea.getSurroundingGeographicMapCellPositionList();
         ;
         VisibleCellPositionsSingleton.getInstance().addStationaryCellPositions(surroundList);
     }
     removeVisibility() {
-        var occupyList = this.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
+        let occupyList = this.geographicMapCellPositionAreaBase.getOccupyingGeographicMapCellPositionList();
         ;
         VisibleCellPositionsSingleton.getInstance().removeStationaryCellPositions(occupyList);
-        var surroundList = this.geographicMapCellPositionAreaBase.getSurroundingGeographicMapCellPositionList();
+        let surroundList = this.geographicMapCellPositionAreaBase.getSurroundingGeographicMapCellPositionList();
         ;
         VisibleCellPositionsSingleton.getInstance().removeStationaryCellPositions(surroundList);
     }
@@ -323,7 +325,7 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
                 this.removeVisibility();
             }
             if (!this.getHealthInterface().isAlive()) {
-                var damage = this.getHealthInterface().getMaxHealth();
+                let damage = this.getHealthInterface().getMaxHealth();
                 ;
                 if (damage > 10) {
                     SecondaryPlayerQueueFactory.getInstance().add(ExplosionBasicSound.getInstance());
@@ -344,7 +346,7 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         }
     }
     createHudPaintable() {
-        var buildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance();
+        let buildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance();
         ;
         buildingInfoHudPaintable.setBasicColorP(this.allBinaryGameLayerManagerP.getForegroundBasicColor());
         buildingInfoHudPaintable.setRtsLayer(this);
@@ -352,7 +354,7 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         return buildingInfoHudPaintable;
     }
     getHudPaintable() {
-        var buildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance();
+        let buildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return buildingInfoHudPaintable;

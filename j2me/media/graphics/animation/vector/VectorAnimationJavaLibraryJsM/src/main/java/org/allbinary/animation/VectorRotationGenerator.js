@@ -33,9 +33,16 @@ const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //not GWT import const VectorInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimationUtil } from './VectorAnimationUtil.js';
-//not GWT import - same folder const VectorAnimationUtil
+//sameFolderImports - not GWT import - same folder const VectorAnimationUtil
 export class VectorRotationGenerator extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return VectorRotationGenerator.instance;
     }
@@ -45,51 +52,53 @@ export class VectorRotationGenerator extends Object {
         this.vectorAnimationUtil = VectorAnimationUtil.getInstance();
         this.angleFactory = AngleFactory.getInstance();
     }
-    getInstance(vectorRotationInfo) {
+    getInstance$overload2(vectorRotationInfo) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getInstanceFrames(vectorRotationInfo.getWidth(), vectorRotationInfo.getHeight(), vectorRotationInfo.getPoints(), vectorRotationInfo.getTotalFrames());
         ;
     }
     getInstanceFrames(width, height, points, frames) {
         try {
-            var totalAngle = this.angleFactory.TOTAL_ANGLE;
+            let totalAngle = this.angleFactory.TOTAL_ANGLE;
             ;
-            var angleIncrement = totalAngle / frames;
+            let angleIncrement = globalThis.Math.trunc(totalAngle / frames);
             ;
-            var pointsBasicArrayList = new BasicArrayListS(totalAngle / angleIncrement);
+            let pointsBasicArrayList = new BasicArrayListS(globalThis.Math.trunc(totalAngle / angleIncrement));
             ;
-            var pointBasicArrayList = new BasicArrayListS(points.length);
+            let pointBasicArrayList = new BasicArrayListS(points.length);
             ;
-            var pointFactory = PointFactory.getInstance();
+            let pointFactory = PointFactory.getInstance();
             ;
-            var size = points.length;
+            let size = points.length;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 pointBasicArrayList.add(pointFactory.createXY(points[index][0], points[index][1]));
             }
-            var index = 0;
+            let index = 0;
             ;
             while (index < totalAngle) {
                 pointsBasicArrayList.add(this.getListAtAngle(width, height, pointBasicArrayList, this.angleFactory.getAt(index)));
                 index += angleIncrement;
             }
-            var newPoints = this.vectorAnimationUtil.toAnimationArrayFromListOfPointListWithPointsPerFrame(pointsBasicArrayList, pointBasicArrayList.size());
+            let newPoints = this.vectorAnimationUtil.toAnimationArrayFromListOfPointListWithPointsPerFrame(pointsBasicArrayList, pointBasicArrayList.size());
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return newPoints;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NullUtil.getInstance().NULL_INT_ARRAY_ARRAY_ARRAY;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NullUtil.getInstance().NULL_INT_ARRAY_ARRAY_ARRAY;
+            }
         }
     }
     //@Throws(Exception.constructor)
     getListAtAngle(width, height, pointBasicArrayList, angle) {
-        var graphicsPipe = new BasicGraphicsPipeline(pointBasicArrayList);
+        let graphicsPipe = new BasicGraphicsPipeline(pointBasicArrayList);
         ;
         graphicsPipe.createMatrix();
         graphicsPipe.translate(-(width >> 1), -(height >> 1));

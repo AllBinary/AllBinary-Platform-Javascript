@@ -22,7 +22,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const AbeClientInformationInterface
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class DemoGameBehavior extends Object {
     constructor() {
         super(...arguments);
@@ -59,7 +59,7 @@ export class DemoGameBehavior extends Object {
     }
     //@Throws(Exception.constructor)
     run(allBinaryGameCanvas) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(GameTypeFactory.getInstance().BOT.toString(), this, commonStrings.RUN);
     }

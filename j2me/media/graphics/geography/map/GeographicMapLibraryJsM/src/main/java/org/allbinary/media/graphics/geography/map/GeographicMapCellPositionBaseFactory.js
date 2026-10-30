@@ -15,7 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGeographicMapCellPositionFactory } from './BasicGeographicMapCellPositionFactory.js';
-//not GWT import - same folder const BasicGeographicMap
+//sameFolderImports - not GWT import - same folder const BasicGeographicMap
 export class GeographicMapCellPositionBaseFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(geographicMapInterface) {

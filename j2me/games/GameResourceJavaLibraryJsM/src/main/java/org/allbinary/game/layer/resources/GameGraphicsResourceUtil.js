@@ -49,21 +49,23 @@ export class GameGraphicsResourceUtil extends Object {
         this.name = StringUtil.getInstance().EMPTY_STRING;
         try {
             this.name = this.getString();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     getString() {
-        var graphicsFeatureFactory = GraphicsFeatureFactory.getInstance();
+        let graphicsFeatureFactory = GraphicsFeatureFactory.getInstance();
         ;
-        var graphicsFeature = graphicsFeatureFactory.NONE;
+        let graphicsFeature = graphicsFeatureFactory.NONE;
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(graphicsFeatureFactory.IMAGE_TO_ARRAY_GRAPHICS)) {
             graphicsFeature = graphicsFeatureFactory.IMAGE_TO_ARRAY_GRAPHICS;
@@ -83,12 +85,12 @@ export class GameGraphicsResourceUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getStringForFeature(graphicsFeature) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var graphicsFeatureFactory = GraphicsFeatureFactory.getInstance();
+        let graphicsFeatureFactory = GraphicsFeatureFactory.getInstance();
         ;
         stringBuffer.delete(0, stringBuffer.length());
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(graphicsFeatureFactory.VECTOR_GRAPHICS)) {
         }

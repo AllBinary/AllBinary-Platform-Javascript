@@ -30,11 +30,11 @@ export class AboutPaintableFactory extends Object {
         this.paintableArray = [
             NullPaintable.getInstance()
         ];
-        var INFO = [
+        let INFO = [
             "Built with the", "AllBinary Platform", StringUtil.getInstance().EMPTY_STRING, "Comments or Questions:", "support@allbinary.com"
         ];
         ;
-        var DEVELOPERS = [
+        let DEVELOPERS = [
             "Developed By:", "Travis Berthelot"
         ];
         ;

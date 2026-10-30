@@ -16,23 +16,30 @@ export class ObjectPermutationVisitor extends Visitor {
         this.stringBuilder = new StringMaker();
         this.data = data;
     }
-    visit(anyType = {}) {
+    visit(anyType) {
         this.stringBuilder.delete(0, this.stringBuilder.length());
         this.print(this.data, stringBuilder);
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullUtil.getInstance().NULL_OBJECT;
     }
-    print(data) {
-        var stringBuilder = new StringMaker();
+    print(...args) {
+        if (args.length === 1)
+            return this.print$overload1(args[0]);
+        if (args.length === 2)
+            return this.print$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: print');
+    }
+    print$overload1(data) {
+        let stringBuilder = new StringMaker();
         ;
         this.print(data, stringBuilder);
     }
-    print(data, stringBuilder) {
-        var tsUtil = TsUtil.getInstance();
+    print$overload2(data, stringBuilder) {
+        let tsUtil = TsUtil.getInstance();
         ;
-        var size = data.length;
+        let size = data.length;
         ;
-        for (var i = 0; i < size; i++) {
+        for (let i = 0; i < size; i++) {
             stringBuilder.appendint(tsUtil.hashCode(data[i]));
             stringBuilder.append(CommonSeps.getInstance().SPACE);
         }

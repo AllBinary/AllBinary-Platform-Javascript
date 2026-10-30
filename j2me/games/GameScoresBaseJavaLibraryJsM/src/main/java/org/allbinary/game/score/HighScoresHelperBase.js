@@ -20,11 +20,11 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const HighScoresHelperBaseInterface
+//sameFolderImports - not GWT import - same folder const HighScoresHelperBaseInterface
 import { LastFetchHighScoresFactory } from './LastFetchHighScoresFactory.js';
-//not GWT import - same folder const HighScores
+//sameFolderImports - not GWT import - same folder const HighScores
 import { NullHighScoresSingletonFactory } from './NullHighScoresSingletonFactory.js';
-//not GWT import - same folder const NullHighScoresSingletonFactory
+//sameFolderImports - not GWT import - same folder const NullHighScoresSingletonFactory
 export class HighScoresHelperBase extends Object {
     constructor() {
         super(...arguments);
@@ -34,12 +34,12 @@ export class HighScoresHelperBase extends Object {
     setHighScoresArray(highScoresArrayP) {
         if (highScoresArrayP !=
             null) {
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             this.logUtil.putF(new StringMaker().append(commonStrings.START).appendint(highScoresArrayP.length).toString(), this, "setHighScoresArray");
         }
         else {
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             this.logUtil.putF(commonStrings.START, this, "setHighScoresArray");
         }

@@ -49,7 +49,7 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PCComponentFactory } from './PCComponentFactory.js';
-//not GWT import - same folder const PCComponentFactory
+//sameFolderImports - not GWT import - same folder const PCComponentFactory
 export class LinuxHardware extends Object {
     constructor(path) {
         super();
@@ -69,7 +69,7 @@ export class LinuxHardware extends Object {
         if (this.componentInterfaceVector.size() < this.MINHARDWARE) {
             throw new Exception("Not Enough Data For A Valid License On Linux");
         }
-        var cpu = new Cpu();
+        let cpu = new Cpu();
         ;
         if (cpu !=
             null) {
@@ -80,23 +80,32 @@ export class LinuxHardware extends Object {
             this.logUtil.putF("Hardware Data: " + this.toString(), this, this.commonStrings.CONSTRUCTOR);
         }
     }
+    init(...args) {
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.init$overload1(args[0]);
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.init$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: init');
+    }
     //@Throws(Exception.constructor)
-    init(filePath) {
-        var lineNumberReader = null;
+    init$overload1(filePath) {
+        let lineNumberReader = null;
         ;
         try {
             this.init(lineNumberReader, filePath);
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
-                this.logUtil.put("Hardware Data: " + this.toString(), this, this.commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
+                    this.logUtil.put("Hardware Data: " + this.toString(), this, this.commonStrings.CONSTRUCTOR, e);
+                }
+                throw e;
             }
-            throw e;
         }
     }
     //@Throws(Exception.constructor)
-    init(lineNumberReader, filePath) {
+    init$overload2(lineNumberReader, filePath) {
         try {
             this.componentInterfaceVector = new BasicArrayListD();
             this.videoInterfaceVector = new BasicArrayListD();
@@ -110,15 +119,15 @@ export class LinuxHardware extends Object {
             this.hardDriveInterfaceVector = new BasicArrayListD();
             this.macInterfaceVector = new BasicArrayListD();
             this.monitorInterfaceVector = new BasicArrayListD();
-            var pciFile = new FileReader(filePath);
+            let pciFile = new FileReader(filePath);
             ;
             lineNumberReader = new LineNumberReader(pciFile);
             if (lineNumberReader ==
                 null) {
-                var fileVector = SubDirectory.getInstance().search(filePath, AbFile.createAbFile(FilePathData.getInstance().PATH_START));
+                let fileVector = SubDirectory.getInstance().search(filePath, AbFile.createAbFile(FilePathData.getInstance().PATH_START));
                 ;
                 if (!fileVector.isEmpty()) {
-                    var file = fileVector.get(0);
+                    let file = fileVector.get(0);
                     ;
                     lineNumberReader = new LineNumberReader(new FileReader(file.getPath()));
                 }
@@ -132,7 +141,7 @@ export class LinuxHardware extends Object {
                 if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
                     this.logUtil.putF("PCI File Found", this, this.commonStrings.CONSTRUCTOR);
                 }
-                var nextLine = lineNumberReader.readLine();
+                let nextLine = lineNumberReader.readLine();
                 ;
                 while (lineNumberReader !=
                     null
@@ -144,7 +153,7 @@ export class LinuxHardware extends Object {
                     nextLine = lineNumberReader.readLine();
                 }
                 while (this.isNextHardware(nextLine)) {
-                    var componentData = new StringMaker();
+                    let componentData = new StringMaker();
                     ;
                     if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().OS)) {
                         this.logUtil.putF("Found Hardware Device: " + this.componentInterfaceVector.size(), this, this.commonStrings.CONSTRUCTOR);
@@ -152,7 +161,7 @@ export class LinuxHardware extends Object {
                     componentData.append(nextLine);
                     componentData.append(CommonSeps.getInstance().NEW_LINE);
                     nextLine = lineNumberReader.readLine();
-                    var componentType = PCComponentFactory.getInstance().java.componentType;
+                    let componentType = PCComponentFactory.getInstance().java.componentType;
                     ;
                     while (lineNumberReader !=
                         null) {
@@ -165,7 +174,7 @@ export class LinuxHardware extends Object {
                             break;
                         }
                     }
-                    var componentInterface = PCComponentFactory.getInstance().getInstance(componentType, componentData.toString());
+                    let componentInterface = PCComponentFactory.getInstance().getInstance(componentType, componentData.toString());
                     ;
                     if (componentInterface !=
                         null) {
@@ -179,15 +188,11 @@ export class LinuxHardware extends Object {
                 }
             }
             lineNumberReader.close();
-            try {
-            }
-            finally {
-                if (lineNumberReader !=
-                    null)
-                    lineNumberReader.close();
-            }
         }
         finally {
+            if (lineNumberReader !=
+                null)
+                lineNumberReader.close();
         }
     }
     getMultimedia(index) {
@@ -239,12 +244,12 @@ export class LinuxHardware extends Object {
         return this.componentInterfaceVector.get(index);
     }
     toString() {
-        var hardwareBuffer = new StringMaker();
+        let hardwareBuffer = new StringMaker();
         ;
-        var size = this.componentInterfaceVector.size();
+        let size = this.componentInterfaceVector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var componentInterface = this.componentInterfaceVector.get(index);
+        for (let index = 0; index < size; index++) {
+            let componentInterface = this.componentInterfaceVector.get(index);
             ;
             hardwareBuffer.append("Component ");
             hardwareBuffer.appendint(index);
@@ -267,7 +272,7 @@ export class LinuxHardware extends Object {
     isNextHardware(nextLine) {
         if (nextLine !=
             null) {
-            var index = nextLine.indexOf("Bus");
+            let index = nextLine.indexOf("Bus");
             ;
             if (index >= 0 && index < 4) {
                 //if statement needs to be on the same line and ternary does not work the same way.

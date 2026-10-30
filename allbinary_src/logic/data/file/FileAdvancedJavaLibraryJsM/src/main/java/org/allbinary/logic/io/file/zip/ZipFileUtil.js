@@ -53,28 +53,28 @@ export class ZipFileUtil extends Object {
     }
     create(outFilename, fileBasicArrayList) {
         try {
-            var zipFile = AbFile.createAbFile(outFilename);
+            let zipFile = AbFile.createAbFile(outFilename);
             ;
             if (zipFile.exists()) {
                 zipFile.delete();
             }
             zipFile.createNewFile();
-            var outputStream = new ZipOutputStream(AbFileOutputStream.createFromAbFile(zipFile));
+            let outputStream = new ZipOutputStream(AbFileOutputStream.createFromAbFile(zipFile));
             ;
-            var streamUtil = StreamUtil.getInstance();
+            let streamUtil = StreamUtil.getInstance();
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            var byteArray = new Array(16384);
+            let byteArray = new Array(16384);
             ;
-            var fileInputStream;
+            let fileInputStream;
             ;
-            var size = fileBasicArrayList.size();
+            let size = fileBasicArrayList.size();
             ;
-            var current = 0;
+            let current = 0;
             ;
-            for (var i = 0; i < size; i++) {
-                var file = fileBasicArrayList.get(i);
+            for (let i = 0; i < size; i++) {
+                let file = fileBasicArrayList.get(i);
                 ;
                 if (file.isDirectory()) {
                 }
@@ -90,43 +90,47 @@ export class ZipFileUtil extends Object {
                         streamUtil.get(fileInputStream, outputStream, byteArray);
                         outputStream.closeEntry();
                         streamUtil.close(fileInputStream);
-                        //: 
                     }
-                    catch (e) {
-                        this.logUtil.putF("Skipping File (Probably Local): " + file.getPath(), this, "create()");
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            this.logUtil.putF("Skipping File (Probably Local): " + file.getPath(), this, "create()");
+                        }
                     }
                 }
                 current++;
             }
             streamUtil.close(outputStream);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "create", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "create", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     unzip(path, zipFile, fileName) {
-        var buffer = new Array(16384);
+        let buffer = new Array(16384);
         ;
-        var inputStream = null;
+        let inputStream = null;
         ;
         try {
             inputStream = new ZipInputStream(new AbFileInputStream(zipFile));
-            var zipEntry;
+            let zipEntry;
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            var fileUtil = FileUtil.getInstance();
+            let fileUtil = FileUtil.getInstance();
             ;
             while ((zipEntry = inputStream.getNextEntry()) !=
                 null) {
-                var entryName = zipEntry.getName();
+                let entryName = zipEntry.getName();
                 ;
                 if (zipEntry.isDirectory()) {
                 }
                 else {
-                    var entryFile = AbFile.createAbFile(path + entryName);
+                    let entryFile = AbFile.createAbFile(path + entryName);
                     ;
                     stringBuffer.delete(0, stringBuffer.length());
                     stringBuffer.append("ZipEntry Name: ");
@@ -138,19 +142,15 @@ export class ZipFileUtil extends Object {
                     stringBuffer.append(" getParent: ");
                     stringBuffer.append(entryFile.getParent());
                     this.logUtil.putF(stringBuffer.toString(), this, "unzip");
-                    var dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(entryFile);
+                    let dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(entryFile);
                     ;
                     fileUtil.write(inputStream, dataOutputStream, buffer);
                 }
                 inputStream.closeEntry();
             }
-            try {
-            }
-            finally {
-                StreamUtil.getInstance().close(inputStream);
-            }
         }
         finally {
+            StreamUtil.getInstance().close(inputStream);
         }
     }
 }

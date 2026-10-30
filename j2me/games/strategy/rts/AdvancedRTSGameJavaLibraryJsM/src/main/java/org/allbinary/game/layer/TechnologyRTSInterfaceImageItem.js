@@ -23,7 +23,7 @@ import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontP
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
 //not GWT import const UpdateMyFontProcessor
 import { PrimitiveLongUtil } from '../../../../org/allbinary/logic/math/PrimitiveLongUtil.js';
-//not GWT import - same folder const RTSInterface
+//sameFolderImports - not GWT import - same folder const RTSInterface
 export class TechnologyRTSInterfaceImageItem extends ABCustomImageItem {
     constructor(label, img, layout, altText, basicColor, rtsInterface) {
         super(label, img, layout, altText, basicColor, 0);
@@ -46,13 +46,13 @@ export class TechnologyRTSInterfaceImageItem extends ABCustomImageItem {
         this.update();
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
-        var fontHeight = font.getHeight();
+        let fontHeight = font.getHeight();
         ;
-        var imageHeight = 0;
+        let imageHeight = 0;
         ;
-        var image = this.getImage();
+        let image = this.getImage();
         ;
         if (image != NullImage.NULL_IMAGE) {
             imageHeight = image.getHeight();
@@ -75,7 +75,7 @@ export class TechnologyRTSInterfaceImageItem extends ABCustomImageItem {
     paintXY(graphics, x, y) {
         this.myFontProcessor.process(graphics);
         super.paintXY(graphics, x, y);
-        var xa = x + 2;
+        let xa = x + 2;
         ;
         graphics.drawString(this.COST, xa, y + this.adjustedCostLabelY, 0);
         graphics.drawString(this.DOLLAR, xa, y + this.adjustedCostY, 0);

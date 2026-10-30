@@ -17,9 +17,9 @@ import { Object } from '../../../../java/lang/Object.js';
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicColor } from './BasicColor.js';
-//not GWT import - same folder const BasicColor
+//sameFolderImports - not GWT import - same folder const BasicColor
 import { BasicColorUtil } from './BasicColorUtil.js';
-//not GWT import - same folder const BasicColorUtil
+//sameFolderImports - not GWT import - same folder const BasicColorUtil
 export class BasicColorFactory extends Object {
     constructor() {
         super(...arguments);
@@ -70,7 +70,7 @@ export class BasicColorFactory extends Object {
         return new BasicColor(alphaValue, value, name);
     }
     createInstanceARGB(alphaValue, r, g, b, name) {
-        var ALPHA_MASK = Math.round(0xFF000000);
+        let ALPHA_MASK = globalThis.Math.trunc(0xFF000000);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new BasicColor(alphaValue, ((alphaValue << 24) & ALPHA_MASK) + ((r << 16) & 0x00FF0000) + ((g << 8) & 0x0000FF00) + (b & 0x000000FF), StringUtil.getInstance().EMPTY_STRING);

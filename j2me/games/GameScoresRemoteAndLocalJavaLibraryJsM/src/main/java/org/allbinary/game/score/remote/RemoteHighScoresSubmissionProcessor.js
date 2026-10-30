@@ -33,11 +33,11 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //not plain js import { HashtableUtil } 
 const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
-//not GWT import - same folder const RemoteHighScoresSubmissionProcessorInterface
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresSubmissionProcessorInterface
 import { RemoteHighScoresData } from './RemoteHighScoresData.js';
-//not GWT import - same folder const RemoteHighScoresData
+//sameFolderImports - not GWT import - same folder const RemoteHighScoresData
 import { XmlRpcRemoteHighScoresClient } from './XmlRpcRemoteHighScoresClient.js';
-//not GWT import - same folder const RemoteHighScores
+//sameFolderImports - not GWT import - same folder const RemoteHighScores
 export class RemoteHighScoresSubmissionProcessor extends Object {
     constructor() {
         super();
@@ -49,29 +49,31 @@ export class RemoteHighScoresSubmissionProcessor extends Object {
     process(remoteHighScores, abeClientInformation, highScore) {
         try {
             this.logUtil.putF("Begin Remote HighScores Submission", this, this.commonStrings.PROCESS);
-            var gameInfoData = GameInfoData.getInstance();
+            let gameInfoData = GameInfoData.getInstance();
             ;
-            var hashtable = abeClientInformation.toHashtable();
+            let hashtable = abeClientInformation.toHashtable();
             ;
             HashtableUtil.getInstance().putAll(highScore.getGameInfo().toHashtable(), hashtable);
             hashtable.put(RemoteHighScoresData.getInstance().CUSTOMER_USER_NAME, "None");
             hashtable.put(RemoteHighScoresData.getInstance().DISPLAY_NAME, highScore.getName());
             hashtable.put(gameInfoData.SOFTWARE_INFORMATION, remoteHighScores.getSoftwareInformation().toString());
             hashtable.put(remoteHighScores.ASCENDING, remoteHighScores.getAscending().toString());
-            var displayInfoSingleton = DisplayInfoSingleton.getInstance();
+            let displayInfoSingleton = DisplayInfoSingleton.getInstance();
             ;
             hashtable.put(displayInfoSingleton.ORIENTATION, BooleanFactory.getInstance().toStringb(displayInfoSingleton.isPortrait()));
             hashtable.put(RemoteHighScoresData.getInstance().GAME_CONFIGURATION, GameConfigurationCentral.getInstance().toString());
             hashtable.put(RemoteHighScoresData.getInstance().SCORE, (highScore.getScore()).toString());
             if (XmlRpcAbeClient.isOnline) {
-                var resultHashtable = new XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresubmissionservicessl.php", "HighScoreSubmissionService.process").get(hashtable, this.noCrypt);
+                let resultHashtable = new XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresubmissionservicessl.php", "HighScoreSubmissionService.process").get(hashtable, this.noCrypt);
                 ;
                 remoteHighScores.update(resultHashtable);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+            }
         }
     }
 }

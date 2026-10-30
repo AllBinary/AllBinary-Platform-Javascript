@@ -31,7 +31,7 @@ const BasicArrayListS = globalThis.org.allbinary.util.BasicArrayListS;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class BasicTopViewGeographicMapCellType extends Object {
     static createType(name, type, cost) {
-        var types = new BasicArrayListS(1);
+        let types = new BasicArrayListS(1);
         ;
         types.add(type);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,15 +40,15 @@ export class BasicTopViewGeographicMapCellType extends Object {
     constructor(name, types, cost) {
         super();
         this.logUtil = LogUtil.getInstance();
-        var size = types.size();
+        let size = types.size();
         ;
-        var typeArray = new Array(size);
+        let typeArray = new Array(size);
         ;
-        var typeAsInteger;
+        let typeAsInteger;
         ;
-        var type = 0;
+        let type = 0;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             typeAsInteger = types.get(index);
             type = typeAsInteger.intValue();
             if (GeographicMapCellTypeFactory.getInstance().getGeographicMapCellTypeArray()[type] ==
@@ -69,9 +69,9 @@ export class BasicTopViewGeographicMapCellType extends Object {
         ;
     }
     hasType(type) {
-        var size = this.types.length;
+        let size = this.types.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (this.types[index] == type) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return true;
@@ -85,11 +85,11 @@ export class BasicTopViewGeographicMapCellType extends Object {
         return this.types;
     }
     toString() {
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var size = this.types.length;
+        let size = this.types.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             stringMaker.appendint(this.types[index]).append(CommonSeps.getInstance().COMMA);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

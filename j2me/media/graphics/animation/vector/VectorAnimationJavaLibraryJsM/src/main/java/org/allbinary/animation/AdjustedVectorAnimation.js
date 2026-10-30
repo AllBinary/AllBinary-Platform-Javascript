@@ -14,7 +14,7 @@
 //not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { VectorAnimation } from './VectorAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class AdjustedVectorAnimation extends VectorAnimation {
     constructor(currentPoints, basicColor, dx, dy, animationBehavior) {
         super(currentPoints, basicColor, animationBehavior);

@@ -17,7 +17,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const AllBinaryObjectFactoryInterface
+//sameFolderImports - not GWT import - same folder const AllBinaryObjectFactoryInterface
 export class BaseCircularPool extends Object {
     constructor() {
         super(...arguments);
@@ -27,7 +27,7 @@ export class BaseCircularPool extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getNextInstance() {
-        var anyType = this.OBJECT_ARRAY[this.circularIndexUtil.getIndex()];
+        let anyType = this.OBJECT_ARRAY[this.circularIndexUtil.getIndex()];
         ;
         this.circularIndexUtil.next();
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -35,9 +35,9 @@ export class BaseCircularPool extends Object {
     }
     init(allBinaryObjectFactoryInterface) {
         this.circularIndexUtil.setIndex(0);
-        var size = this.circularIndexUtil.getSize();
+        let size = this.circularIndexUtil.getSize();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.OBJECT_ARRAY[index] = allBinaryObjectFactoryInterface.getInstance();
         }
     }

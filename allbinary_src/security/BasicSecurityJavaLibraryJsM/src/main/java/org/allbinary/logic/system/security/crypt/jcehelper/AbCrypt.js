@@ -31,11 +31,11 @@ import { BouncyCastleProvider } from '../../../../../../../org/bouncycastle/jce/
 //not GWT import const BouncyCastleProvider
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseSecretComposite } from './BaseSecretComposite.js';
-//not GWT import - same folder const BaseSecretComposite
+//sameFolderImports - not GWT import - same folder const BaseSecretComposite
 import { KeySpecFactory } from './KeySpecFactory.js';
-//not GWT import - same folder const KeySpecFactory
+//sameFolderImports - not GWT import - same folder const KeySpecFactory
 import { SecretComposite } from './SecretComposite.js';
-//not GWT import - same folder const SecretComposite
+//sameFolderImports - not GWT import - same folder const SecretComposite
 export class AbCrypt extends Object {
     constructor(algorithm) {
         super();
@@ -44,31 +44,35 @@ export class AbCrypt extends Object {
         this.algorithm = algorithm;
     }
     init(keyAsString) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         try {
             try {
                 Security.addProvider(new BouncyCastleProvider());
-                //: 
             }
-            catch (e) {
-                PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    PreLogUtil.putOE(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+                }
             }
-            var key = this.tsUtil.getByteArray(keyAsString);
+            let key = this.tsUtil.getByteArray(keyAsString);
             ;
-            var keySpec = KeySpecFactory.getInstance().getInstance(this.algorithm, key);
+            let keySpec = KeySpecFactory.getInstance().getInstance(this.algorithm, key);
             ;
-            var keyFactory = SecretKeyFactory.getInstance(this.algorithm);
+            let keyFactory = SecretKeyFactory.getInstance(this.algorithm);
             ;
-            var secretKey = keyFactory.generateSecret(keySpec);
+            let secretKey = keyFactory.generateSecret(keySpec);
             ;
-            var cipher = Cipher.getInstance(this.algorithm);
+            let cipher = Cipher.getInstance(this.algorithm);
             ;
             this.secretComposite = new SecretComposite(secretKey, cipher, key);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("init Failed", this, commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("init Failed", this, commonStrings.INIT, e);
+            }
         }
     }
     encrypt(array) {
@@ -76,12 +80,14 @@ export class AbCrypt extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.secretComposite.encrypt(array);
             ;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NullUtil.getInstance().NULL_BYTE_ARRAY;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NullUtil.getInstance().NULL_BYTE_ARRAY;
+            }
         }
     }
     decrypt(array) {
@@ -89,12 +95,14 @@ export class AbCrypt extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.secretComposite.decrypt(array);
             ;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NullUtil.getInstance().NULL_BYTE_ARRAY;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NullUtil.getInstance().NULL_BYTE_ARRAY;
+            }
         }
     }
 }

@@ -29,10 +29,10 @@ import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStr
         this.NONE = "No Stack Trace";
     }
     /*actual*/ getStackTrace(e) {
-        var bs = new ByteArrayOutputStream();
+        let bs = new ByteArrayOutputStream();
         ;
         e.printStackTrace();
-        var output = bs.toString();
+        let output = bs.toString();
         ;
         if (output !=
             null) {

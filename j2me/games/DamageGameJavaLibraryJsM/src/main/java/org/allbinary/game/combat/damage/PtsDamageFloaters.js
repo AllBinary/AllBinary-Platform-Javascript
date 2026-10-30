@@ -30,7 +30,7 @@ const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //not GWT import const ViewPositionBase
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DamageFloaters } from './DamageFloaters.js';
-//not GWT import - same folder const DamageFloaters
+//sameFolderImports - not GWT import - same folder const DamageFloaters
 export class PtsDamageFloaters extends DamageFloaters {
     constructor(layerInterface) {
         super();
@@ -42,14 +42,14 @@ export class PtsDamageFloaters extends DamageFloaters {
         this.myRandomFactory = MyRandomFactory.getInstance();
         this.primitiveLongUtil = PrimitiveLongUtil.createPowerOfTen(100000);
         this.layerInterface = layerInterface;
-        var CHAR_ARRAY = CharArrayFactory.getInstance().getZeroCharArray();
+        let CHAR_ARRAY = CharArrayFactory.getInstance().getZeroCharArray();
         ;
-        for (var index = this.lastDamageString.length - 1; index >= 0; index--) {
+        for (let index = this.lastDamageString.length - 1; index >= 0; index--) {
             this.lastDamageString[index] = CHAR_ARRAY;
         }
     }
     add(damage) {
-        var index = this.circularIndexUtil.getIndex();
+        let index = this.circularIndexUtil.getIndex();
         ;
         this.lastDamage[index] = damage;
         this.lastDamageString[index] = this.primitiveLongUtil.getCharArray(this.lastDamage[index]);
@@ -57,15 +57,15 @@ export class PtsDamageFloaters extends DamageFloaters {
         this.circularIndexUtil.next();
     }
     paint(graphics) {
-        var viewPosition = this.layerInterface.getViewPosition();
+        let viewPosition = this.layerInterface.getViewPosition();
         ;
-        var x = viewPosition.getX();
+        let x = viewPosition.getX();
         ;
-        var y = viewPosition.getY();
+        let y = viewPosition.getY();
         ;
-        for (var index = this.lastDamage.length - 1; index >= 0; index--) {
+        for (let index = this.lastDamage.length - 1; index >= 0; index--) {
             if (this.lastDamage[index] != 0) {
-                var delta = 10 * (index + 2);
+                let delta = 10 * (index + 2);
                 ;
                 this.basicSetColorUtil.setBasicColorP(graphics, PtsDamageFloaters.basicColorArrayIndexer.get());
                 graphics.drawChars(this.lastDamageString[index], 0, this.lastDamageStringSizeArray[index], x - this.myRandomFactory.getNextInt(delta), y - delta, 0);

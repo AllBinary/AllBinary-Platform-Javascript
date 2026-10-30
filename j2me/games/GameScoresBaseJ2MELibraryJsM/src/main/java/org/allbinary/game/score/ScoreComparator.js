@@ -17,6 +17,10 @@ import { Long } from '../../../../java/lang/Long.js';
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
 //not GWT import const ByteArrayInputStream
 import { DataInputStream } from '../../../../java/io/DataInputStream.js';
+//not GWT import const DataInputStream
+import { EOFException } from '../../../../java/io/EOFException.js';
+//not GWT import const EOFException
+import { IOException } from '../../../../java/io/IOException.js';
 //not GWT import const IOException
 import { RecordComparatorI } from '../../../../javax/microedition/rms/RecordComparator.js';
 //not GWT import const RecordComparator
@@ -33,58 +37,47 @@ export class ScoreComparator extends Object {
     }
     getBestScore() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.isHighestBest
-            ?
-                Long.MAX_VALUE
-            :
-                0;
-        ;
+        return (this.isHighestBest ? Long.MAX_VALUE : 0);
     }
     compare(recordOne, recordTwo) {
-        var byteArrayInputStreamOne = new ByteArrayInputStream(recordOne);
+        let byteArrayInputStreamOne = new ByteArrayInputStream(recordOne);
         ;
-        var inputStreamOne = new DataInputStream(byteArrayInputStreamOne);
+        let inputStreamOne = new DataInputStream(byteArrayInputStreamOne);
         ;
-        var byteArrayInputStreamTwo = new ByteArrayInputStream(recordTwo);
+        let byteArrayInputStreamTwo = new ByteArrayInputStream(recordTwo);
         ;
-        var inputStreamTwo = new DataInputStream(byteArrayInputStreamTwo);
+        let inputStreamTwo = new DataInputStream(byteArrayInputStreamTwo);
         ;
-        var scoreOne = 0;
+        let scoreOne = 0;
         ;
-        var scoreTwo = 0;
+        let scoreTwo = 0;
         ;
         try {
             inputStreamOne.readUTF();
             inputStreamTwo.readUTF();
             scoreOne = inputStreamOne.readLong();
             scoreTwo = inputStreamTwo.readLong();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "compare", e);
+        catch (caught) {
+            if (caught instanceof EOFException) {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "compare", e);
+            }
+            else if (caught instanceof IOException) {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "compare", e);
+            }
+            else {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "compare", e);
+            }
         }
-        //: 
-        /* catch(e)
-                    {
-        
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!;;
-            
-        this.logUtil!.put(commonStrings!.EXCEPTION, this, "compare", e);
-            
-        }
-        */
-        //: 
-        /* catch(e)
-                    {
-        
-            var commonStrings: CommonStrings = CommonStrings.getInstance()!;;
-            
-        this.logUtil!.put(commonStrings!.EXCEPTION, this, "compare", e);
-            
-        }
-        */
         if (this.isHighestBest) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.getHighTooLow(scoreOne, scoreTwo);

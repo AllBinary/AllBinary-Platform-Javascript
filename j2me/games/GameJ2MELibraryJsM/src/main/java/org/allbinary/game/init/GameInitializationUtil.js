@@ -25,7 +25,7 @@ import { Features } from '../../../../org/allbinary/game/configuration/feature/F
 import { MainFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/MainFeatureFactory.js';
 //not GWT import const MainFeatureFactory
 import { ResourceLoadingLevelFactory } from '../../../../org/allbinary/game/resource/ResourceLoadingLevelFactory.js';
-//not GWT import - same folder const BasicBuildGameInitializerFactory
+//sameFolderImports - not GWT import - same folder const BasicBuildGameInitializerFactory
 export class GameInitializationUtil extends Object {
     constructor() {
         super(...arguments);
@@ -37,18 +37,18 @@ export class GameInitializationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     initDemo(abeClientInformation, canvas, gameInitializationInterfaceFactoryInterface) {
-        var mainFeatureFactory = MainFeatureFactory.getInstance();
+        let mainFeatureFactory = MainFeatureFactory.getInstance();
         ;
         if (ChangedGameFeatureListener.getInstance().isChangedFeature(mainFeatureFactory.STATIC)) {
-            var gameInitializationInterface = gameInitializationInterfaceFactoryInterface.getInstance();
+            let gameInitializationInterface = gameInitializationInterfaceFactoryInterface.getInstance();
             ;
-            var features = Features.getInstance();
+            let features = Features.getInstance();
             ;
             if (features.isFeature(mainFeatureFactory.LOAD_ALL)) {
                 this.initGame(abeClientInformation, canvas, gameInitializationInterfaceFactoryInterface);
             }
             else if (features.isFeature(mainFeatureFactory.LOAD_ONDEMAND)) {
-                var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+                let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
                 ;
                 gameInitializationInterface.init(abeClientInformation, canvas.getCustomCommandListener(), resourceLoadingLevelFactory.LOAD_EARLY.getLevel());
                 this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory.LOAD_EARLY);
@@ -62,9 +62,9 @@ export class GameInitializationUtil extends Object {
     //@Throws(Exception.constructor)
     initGame(abeClientInformation, canvas, gameInitializationInterfaceFactoryInterface) {
         if (ChangedGameFeatureListener.getInstance().isChangedFeature(MainFeatureFactory.getInstance().STATIC)) {
-            var gameInitializationInterface = gameInitializationInterfaceFactoryInterface.getInstance();
+            let gameInitializationInterface = gameInitializationInterfaceFactoryInterface.getInstance();
             ;
-            var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+            let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
             ;
             gameInitializationInterface.init(abeClientInformation, canvas.getCustomCommandListener(), resourceLoadingLevelFactory.LOAD_ALL.getLevel());
             this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory.LOAD_ALL);

@@ -11,6 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
+//import { NumberFormatException } from '../../../../../../java/lang/NumberFormatException.js';
+const NumberFormatException = globalThis.java.lang.NumberFormatException;
 import { Integer } from '../../../../../../java/lang/Integer.js';
 //not GWT import const ABTextFieldItem
 import { ValidatorBase } from '../../../../../../org/allbinary/logic/control/validate/ValidatorBase.js';
@@ -43,19 +46,24 @@ export class NumberTextFieldItemValidator extends ValidatorBase {
         return new BasicArrayListD();
     }
     isValid() {
-        var result = BooleanFactory.getInstance().TRUE;
+        let result = BooleanFactory.getInstance().TRUE;
         ;
-        var string = this.textFieldItem.getString();
+        let string = this.textFieldItem.getString();
         ;
-        var textLength = string.length;
+        let textLength = string.length;
         ;
         if (textLength > 0 && textLength < this.maxChars) {
             try {
                 Integer.parseInt(this.textFieldItem.getString());
-                //: 
             }
-            catch (e) {
-                result = BooleanFactory.getInstance().FALSE;
+            catch (caught) {
+                if (caught instanceof NumberFormatException) {
+                    const e = caught;
+                    result = BooleanFactory.getInstance().FALSE;
+                }
+                else {
+                    throw caught;
+                }
             }
         }
         else {
@@ -70,23 +78,23 @@ export class NumberTextFieldItemValidator extends ValidatorBase {
         return result;
     }
     toList() {
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
-        var string = this.textFieldItem.getString();
+        let string = this.textFieldItem.getString();
         ;
-        var textLength = string.length;
+        let textLength = string.length;
         ;
-        var label = this.textFieldItem.getLabel();
+        let label = this.textFieldItem.getLabel();
         ;
-        var name = label.substring(0, label.length - 2);
+        let name = label.substring(0, label.length - 2);
         ;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         if (textLength > 0 && textLength < this.maxChars) {
             try {
-                var number = smallIntegerSingletonFactory.createInstance(Integer.parseInt(this.textFieldItem.getString()));
+                let number = smallIntegerSingletonFactory.createInstance(Integer.parseInt(this.textFieldItem.getString()));
                 ;
                 if (number.intValue() > this.min) {
                     stringMaker.delete(0, stringMaker.length());
@@ -96,11 +104,16 @@ export class NumberTextFieldItemValidator extends ValidatorBase {
                     stringMaker.delete(0, stringMaker.length());
                     list.add(stringMaker.append(name).append(" is to large").toString());
                 }
-                //: 
             }
-            catch (e) {
-                stringMaker.delete(0, stringMaker.length());
-                list.add(stringMaker.append(name).append(" is not a number").toString());
+            catch (caught) {
+                if (caught instanceof NumberFormatException) {
+                    const e = caught;
+                    stringMaker.delete(0, stringMaker.length());
+                    list.add(stringMaker.append(name).append(" is not a number").toString());
+                }
+                else {
+                    throw caught;
+                }
             }
         }
         else {

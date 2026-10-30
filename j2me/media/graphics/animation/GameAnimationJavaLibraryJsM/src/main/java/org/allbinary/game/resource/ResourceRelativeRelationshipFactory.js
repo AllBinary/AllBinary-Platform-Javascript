@@ -24,7 +24,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not plain js import { BasicArrayListUtil } 
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
-//not GWT import - same folder const ResourceRelativeRelationshipFactoryInterface
+//sameFolderImports - not GWT import - same folder const ResourceRelativeRelationshipFactoryInterface
 export class ResourceRelativeRelationshipFactory extends Object {
     constructor() {
         super(...arguments);
@@ -38,7 +38,7 @@ export class ResourceRelativeRelationshipFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceRelativeRelationshipList(resource) {
-        var listCanBeNull = this.hashtable.get(resource);
+        let listCanBeNull = this.hashtable.get(resource);
         ;
         if (listCanBeNull ==
             null) {
@@ -51,7 +51,7 @@ export class ResourceRelativeRelationshipFactory extends Object {
     }
     //@Throws(Exception.constructor)
     addResourceRelativeRelationship(resource, hardPoint) {
-        var list = this.getResourceRelativeRelationshipList(resource);
+        let list = this.getResourceRelativeRelationshipList(resource);
         ;
         if (list == this.basicArrayListUtil.getImmutableInstance()) {
             list = new BasicArrayListD();

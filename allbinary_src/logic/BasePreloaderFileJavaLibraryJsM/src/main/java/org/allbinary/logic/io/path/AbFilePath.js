@@ -15,18 +15,18 @@
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbPath } from './AbPath.js';
-//not GWT import - same folder const AbPath
+//sameFolderImports - not GWT import - same folder const AbPath
 //not plain js - same folder import { AbPathData } 
 const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 import { PathUtil } from './PathUtil.js';
-//not GWT import - same folder const PathUtil
+//sameFolderImports - not GWT import - same folder const PathUtil
 export class AbFilePath extends AbPath {
     constructor(aPath) {
         super(StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING);
         //For kotlin this is before the body of the constructor.
-        var pathData = AbPathData.getInstance();
+        let pathData = AbPathData.getInstance();
         ;
-        var abPathUtil = PathUtil.getInstance();
+        let abPathUtil = PathUtil.getInstance();
         ;
         this.schema = this.getSchema(aPath);
         this.setName(pathData.getNameFromPath(aPath));

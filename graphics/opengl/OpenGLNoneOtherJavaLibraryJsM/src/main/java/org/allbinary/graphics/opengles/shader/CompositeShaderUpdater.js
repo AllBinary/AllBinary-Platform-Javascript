@@ -20,7 +20,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderUpdater } from './ShaderUpdater.js';
-//not GWT import - same folder const ShaderUpdater
+//sameFolderImports - not GWT import - same folder const ShaderUpdater
 export class CompositeShaderUpdater extends ShaderUpdater {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

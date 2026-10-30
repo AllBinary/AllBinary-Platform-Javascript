@@ -29,9 +29,9 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NumberInSameGroupSequence } from './NumberInSameGroupSequence.js';
-//not GWT import - same folder const NumberInSameGroupSequence
+//sameFolderImports - not GWT import - same folder const NumberInSameGroupSequence
 import { NumberOnOwnGroupSequenceAI } from './NumberOnOwnGroupSequenceAI.js';
-//not GWT import - same folder const NumberOnOwnGroupSequenceAI
+//sameFolderImports - not GWT import - same folder const NumberOnOwnGroupSequenceAI
 export class NumberOnOwnGroupSequenceAIFactory extends Object {
     constructor() {
         super(...arguments);
@@ -39,12 +39,12 @@ export class NumberOnOwnGroupSequenceAIFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstance(hashtable, artificialIntelligenceInterface, ownerLayerInterface, gameInput) {
-        var integerArray = NumberInSameGroupSequence.getInstance().NUMBER_ON_SAME_TEAM_SEQUENCE;
+        let integerArray = NumberInSameGroupSequence.getInstance().NUMBER_ON_SAME_TEAM_SEQUENCE;
         ;
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
-        for (var index = 0; index < integerArray.length; index++) {
-            var integerCanBeNull = hashtable.get(integerArray[index]);
+        for (let index = 0; index < integerArray.length; index++) {
+            let integerCanBeNull = hashtable.get(integerArray[index]);
             ;
             if (integerCanBeNull ==
                 null) {
@@ -52,14 +52,14 @@ export class NumberOnOwnGroupSequenceAIFactory extends Object {
             }
             list.add(integerCanBeNull);
         }
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Total AI Properties: ");
         stringBuffer.appendint(list.size());
         stringBuffer.append(" == Total AI: ");
         stringBuffer.appendint(artificialIntelligenceInterface.length);
         stringBuffer.append(" + 1");
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(stringBuffer.toString(), this, commonStrings.GET_INSTANCE);
         if (artificialIntelligenceInterface.length - 1 > list.size()) {
@@ -68,9 +68,9 @@ export class NumberOnOwnGroupSequenceAIFactory extends Object {
         if (artificialIntelligenceInterface.length - 1 < list.size()) {
             throw new Exception("Too Many AI properties.");
         }
-        var numberOnSameTeam = new Array(list.size());
+        let numberOnSameTeam = new Array(list.size());
         ;
-        for (var index = 0; index < numberOnSameTeam.length; index++) {
+        for (let index = 0; index < numberOnSameTeam.length; index++) {
             numberOnSameTeam[index] = list.objectArray[index];
         }
         //if statement needs to be on the same line and ternary does not work the same way.

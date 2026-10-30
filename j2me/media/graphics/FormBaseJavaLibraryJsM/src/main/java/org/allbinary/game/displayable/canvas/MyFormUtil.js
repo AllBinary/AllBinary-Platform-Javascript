@@ -47,24 +47,19 @@ export class MyFormUtil extends Object {
         return MyFormUtil.instance;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var isOpenGL = features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL);
+        let isOpenGL = features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL);
         ;
-        var TOTAL_CHAR_WIDTH = SWTJOGLProcessor.getInstance().isJOGL() && isOpenGL
-            ?
-                2
-            :
-                3;
+        let TOTAL_CHAR_WIDTH = (SWTJOGLProcessor.getInstance().isJOGL() && isOpenGL ? 2 : 3);
         ;
+        let width = MyFontProcessor.defaultStringWidth(font, TOTAL_CHAR_WIDTH);
         ;
-        var width = MyFontProcessor.defaultStringWidth(font, TOTAL_CHAR_WIDTH);
-        ;
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
         if (displayInfo.getLastHeight() < 320) {
             this.popupMenuRectangle = new Rectangle(pointFactory.createXY(0, 25), width, (font.getHeight() * 4) + 2);

@@ -34,7 +34,7 @@ import { Memory } from '../../../org/allbinary/system/Memory.js';
 //not GWT import const Memory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageCacheBase } from './ImageCacheBase.js';
-//not GWT import - same folder const ImageCacheBase
+//sameFolderImports - not GWT import - same folder const ImageCacheBase
 export class ImageCache extends ImageCacheBase {
     constructor() {
         super();
@@ -42,16 +42,16 @@ export class ImageCache extends ImageCacheBase {
         this.systemWrapper = ABSystemWrapper.getInstance();
         this.tsUtil = TsUtil.getInstance();
     }
-    addListener(renderer = {}) {
+    addListener(renderer) {
     }
-    getIndex(key = {}) {
-        var gdResources = GDResources.getInstance();
+    getIndex(key) {
+        let gdResources = GDResources.getInstance();
         ;
-        var resourceStringArray = gdResources.resourceStringArray;
+        let resourceStringArray = gdResources.resourceStringArray;
         ;
-        var size = resourceStringArray.length;
+        let size = resourceStringArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (resourceStringArray[index] == key) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return index;
@@ -62,9 +62,9 @@ export class ImageCache extends ImageCacheBase {
     }
     //@Throws(Exception.constructor)
     get(caller, width, height) {
-        var foundIndex = this.getIndexWH(width, height);
+        let foundIndex = this.getIndexWH(width, height);
         ;
-        var image = this.getFromAvailable(foundIndex, width, height);
+        let image = this.getFromAvailable(foundIndex, width, height);
         ;
         if (image == NullImage.NULL_IMAGE) {
             this.volume += width * height;
@@ -85,29 +85,31 @@ export class ImageCache extends ImageCacheBase {
         return image;
     }
     //@Throws(Exception.constructor)
-    getWithKey(key = {}) {
-        var resourceUtil = ResourceUtil.getInstance();
+    getWithKey(key) {
+        let resourceUtil = ResourceUtil.getInstance();
         ;
-        var resourceId = resourceUtil.getResourceId(key);
+        let resourceId = resourceUtil.getResourceId(key);
         ;
-        var image = this.getImage(resourceId);
+        let image = this.getImage(resourceId);
         ;
         if (image == NullImage.NULL_IMAGE) {
-            var inputStream = resourceUtil.getResourceAsStream(key);
+            let inputStream = resourceUtil.getResourceAsStream(key);
             ;
             try {
                 this.logUtil.putF(Memory.getInfo(), this, this.commonStrings.GET);
                 image = this.createImageFromInputStream(key, inputStream);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put("Exception: Trying Again After GC", this, this.commonStrings.GET, e);
-                this.logUtil.putF(new StringMaker().append("InputStream: ").append(StringUtil.getInstance().toString(inputStream)).toString(), this, this.commonStrings.GET);
-                this.tsUtil.gc();
-                this.tsUtil.gc();
-                this.logUtil.putF(Memory.getInfo(), this, this.commonStrings.GET);
-                Thread.sleep(100);
-                image = this.createImageFromInputStream(key, inputStream);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put("Exception: Trying Again After GC", this, this.commonStrings.GET, e);
+                    this.logUtil.putF(new StringMaker().append("InputStream: ").append(StringUtil.getInstance().toString(inputStream)).toString(), this, this.commonStrings.GET);
+                    this.tsUtil.gc();
+                    this.tsUtil.gc();
+                    this.logUtil.putF(Memory.getInfo(), this, this.commonStrings.GET);
+                    Thread.sleep(100);
+                    image = this.createImageFromInputStream(key, inputStream);
+                }
             }
             inputStream.close();
             this.hashtable.put(resourceId, image);

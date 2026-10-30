@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const GL10
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const Shader
+//sameFolderImports - not GWT import - same folder const Shader
 export class ShaderInitializer extends Object {
     constructor() {
         super(...arguments);

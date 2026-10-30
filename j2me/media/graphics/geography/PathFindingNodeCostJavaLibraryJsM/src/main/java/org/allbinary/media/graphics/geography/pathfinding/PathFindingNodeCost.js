@@ -22,9 +22,9 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PathFindingNode } from './PathFindingNode.js';
-//not GWT import - same folder const PathFindingNodeCostInfo
+//sameFolderImports - not GWT import - same folder const PathFindingNodeCostInfo
 export class PathFindingNodeCost extends PathFindingNode {
-    constructor(parent = {}, geographicMapCellPosition, pathFindingNodeCostInfo) {
+    constructor(parent, geographicMapCellPosition, pathFindingNodeCostInfo) {
         super(parent, geographicMapCellPosition);
         this.commonSeps = CommonSeps.getInstance();
         //For kotlin this is before the body of the constructor.
@@ -51,14 +51,14 @@ export class PathFindingNodeCost extends PathFindingNode {
         ;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.constructor.name.toString());
         stringBuffer.append(CommonLabels.getInstance().COLON_SEP);
         stringBuffer.append(this.getPathFindingNodeCostInfo().toString());
         stringBuffer.append(" Path: ");
         stringBuffer.append(this.geographicMapCellPosition.toString());
-        var pathFindingNode = this.parent;
+        let pathFindingNode = this.parent;
         ;
         while (pathFindingNode !=
             null) {

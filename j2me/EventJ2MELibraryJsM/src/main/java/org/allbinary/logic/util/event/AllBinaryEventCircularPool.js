@@ -16,7 +16,7 @@ import { BaseCircularPool } from '../../../../../org/allbinary/logic/util/cache/
 //not GWT import const BaseCircularPool
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const AllBinaryEventObjectFactoryInterface
+//sameFolderImports - not GWT import - same folder const AllBinaryEventObjectFactoryInterface
 export class AllBinaryEventCircularPool extends BaseCircularPool {
     constructor(max) {
         super();
@@ -25,9 +25,9 @@ export class AllBinaryEventCircularPool extends BaseCircularPool {
     }
     initAllBinaryEventCircularPool(allBinaryEventObjectFactoryInterface) {
         this.circularIndexUtil.setIndex(0);
-        var size = this.circularIndexUtil.getSize();
+        let size = this.circularIndexUtil.getSize();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.OBJECT_ARRAY[index] = allBinaryEventObjectFactoryInterface.getInstance();
         }
     }

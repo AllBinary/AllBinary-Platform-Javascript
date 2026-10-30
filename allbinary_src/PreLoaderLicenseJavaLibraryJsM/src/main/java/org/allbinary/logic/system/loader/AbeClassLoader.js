@@ -14,6 +14,8 @@
 import { ClassLoader } from '../../../../../java/lang/ClassLoader.js';
 import { ClassNotFoundException } from '../../../../../java/lang/ClassNotFoundException.js';
 import { FileInputStream } from '../../../../../java/io/FileInputStream.js';
+//not GWT import const FileInputStream
+import { IOException } from '../../../../../java/io/IOException.js';
 //not GWT import const Map
 //not plain js import { StdUtil } 
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
@@ -30,7 +32,10 @@ const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { AbCryptUtil } from '../../../../../org/allbinary/logic/system/security/AbCryptUtil.js';
-//not GWT import - same folder const NoClassDefFoundError
+//not GWT import const AbCryptUtil
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { NoClassDefFoundError } from './NoClassDefFoundError.js';
+//sameFolderImports - not GWT import - same folder const NoClassDefFoundError
 export class AbeClassLoader extends ClassLoader {
     constructor(parent, key) {
         super(parent);
@@ -46,54 +51,60 @@ export class AbeClassLoader extends ClassLoader {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AbeClassLoader.classes.get(name);
     }
+    loadClass(...args) {
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.loadClass$overload1(args[0]);
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'boolean')
+            return this.loadClass$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: loadClass');
+    }
     //@Throws(ClassNotFoundException.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
-    loadClass(name) {
+    loadClass$overload1(name) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.loadClass(name, false);
         ;
     }
     //@Throws(ClassNotFoundException.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
-    loadClass(name, resolve) {
-        var loadedWith = "findLoadedClass1";
+    loadClass$overload2(name, resolve) {
+        let loadedWith = "findLoadedClass1";
         ;
-        var logBuffer = new LogBuffer();
+        let logBuffer = new LogBuffer();
         ;
         try {
-            var myClass = this.findLoadedClass1(name);
+            let myClass = this.findLoadedClass1(name);
             ;
             if (myClass ==
                 null) {
                 try {
                     loadedWith = "super.loadClass";
-                    var normalClass = super.loadClass(name, resolve);
+                    let normalClass = super.loadClass(name, resolve);
                     ;
                     if (normalClass !=
                         null) {
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return normalClass;
                     }
-                    //: 
                 }
-                catch (e) {
-                    logBuffer.add(LogFactory.getInstance("Failed to Load Class: " + name + "\nwith: " + loadedWith, this, this.LOAD_CLASS, e));
+                catch (caught) {
+                    if (caught instanceof ClassNotFoundException) {
+                        const e = caught;
+                        logBuffer.add(LogFactory.getInstance("Failed to Load Class: " + name + "\nwith: " + loadedWith, this, this.LOAD_CLASS, e));
+                    }
+                    else {
+                        const e = caught;
+                        logBuffer.add(LogFactory.getInstance("Failed to Load Class: " + name + "\nwith: " + loadedWith, this, this.LOAD_CLASS, e));
+                    }
+                    if (caught instanceof NoClassDefFoundError) {
+                        const e = caught;
+                        logBuffer.add(LogFactory.getInstanceF("NoClassDefFoundError Failed Loaded Class: " + name + "\nwith: " + loadedWith, this, this.LOAD_CLASS));
+                    }
+                    else {
+                        throw caught;
+                    }
                 }
-                //: 
-                /* catch(e)
-                            {
-                logBuffer!.add(LogFactory.getInstance("Failed to Load Class: " +name +"\nwith: " +loadedWith, this, this.LOAD_CLASS, e));
-                    
-                }
-                */
-                //: 
-                /* catch(e)
-                            {
-                logBuffer!.add(LogFactory.getInstanceF("NoClassDefFoundError Failed Loaded Class: " +name +"\nwith: " +loadedWith, this, this.LOAD_CLASS));
-                    
-                }
-                */
-                var classBytes = this.loadClassBytesFromFile(name);
+                let classBytes = this.loadClassBytesFromFile(name);
                 ;
                 if (classBytes ==
                     null) {
@@ -112,134 +123,111 @@ export class AbeClassLoader extends ClassLoader {
             resolveClass(myClass.prototype.constructor);
             //if statement needs to be on the same line and ternary does not work the same way.
             return myClass;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
-                logBuffer.logAll();
-                this.logUtil.put("Failure loading: " + name + "\nwith: " + loadedWith, this, this.LOAD_CLASS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
+                    logBuffer.logAll();
+                    this.logUtil.put("Failure loading: " + name + "\nwith: " + loadedWith, this, this.LOAD_CLASS, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
         }
     }
     loadClassBytesFromFile(name) {
-        var ;
-         in ;
+        let in ;
         FileInputStream =
             null;
         ;
-        var cname = StringUtil.getInstance().EMPTY_STRING;
+        let cname = StringUtil.getInstance().EMPTY_STRING;
         ;
         try {
             cname = AbeClassLoader.PATH + name.replace('.', AbPathData.getInstance().SEPARATORCHAR) + this.ENCRYPTED_EXTENSION;
                 in ;
             new FileInputStream(cname);
-            var decrypted = this.abCryptUtil.decrypt( in , this.key);
+            let decrypted = this.abCryptUtil.decrypt( in , this.key);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return decrypted;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
-                this.logUtil.put("(Before LogBuffer Output) Failure loading Encrypted: " + name + " File: " + cname, "AbeClassLoader", "loadClassBytes", e);
+        catch (caught) {
+            if (caught instanceof IOException) {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
+                    this.logUtil.put("(Before LogBuffer Output) Failure loading Encrypted: " + name + " File: " + cname, "AbeClassLoader", "loadClassBytes", e);
+                }
+                StreamUtil.getInstance().close( in );
             }
-            StreamUtil.getInstance().close( in );
+            else {
+                const e = caught;
+                let loadedWith = "loadClassBytes";
+                ;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
+                    this.logUtil.put("(Before LogBuffer Output) Failed to Loaded Class: " + name + " File: " + cname + "\nwith: " + loadedWith, this, "loadClassBytes", e);
+                }
+            }
+            if (caught instanceof NoClassDefFoundError) {
+                const e = caught;
+                let loadedWith = "loadClassBytes";
+                ;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
+                    this.logUtil.putF("(Before LogBuffer Output) NoClassDefFoundError Failed Loaded Class: " + name + " File: " + cname + "\nwith: " + loadedWith, this, "loadClassBytes");
+                }
+            }
+            else {
+                throw caught;
+            }
         }
-        //: 
-        /* catch(e)
-                    {
-        
-            var loadedWith: string = "loadClassBytes";;
-            
-        
-                                if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!.LOADERERROR))
-                                
-                                            {
-                                            this.logUtil!.put("(Before LogBuffer Output) Failed to Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes", e);
-            
-        
-                                            }
-                                        
-        }
-        */
-        //: 
-        /* catch(e)
-                    {
-        
-            var loadedWith: string = "loadClassBytes";;
-            
-        
-                                if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!.LOADERERROR))
-                                
-                                            {
-                                            this.logUtil!.putF("(Before LogBuffer Output) NoClassDefFoundError Failed Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes");
-            
-        
-                                            }
-                                        
-        }
-        */
         //if statement needs to be on the same line and ternary does not work the same way.
         return null;
     }
     //@Throws(ClassNotFoundException.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     oldLoadClass(name, resolve) {
-        var loadedWith = "findLoadedClass1";
+        let loadedWith = "findLoadedClass1";
         ;
         try {
-            var myClass = this.findLoadedClass1(name);
+            let myClass = this.findLoadedClass1(name);
             ;
             if (myClass ==
                 null) {
                 try {
                     loadedWith = "super.loadClass";
-                    var normalClass = super.loadClass(name, resolve);
+                    let normalClass = super.loadClass(name, resolve);
                     ;
                     if (normalClass !=
                         null) {
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return normalClass;
                     }
-                    //: 
                 }
-                catch (e) {
-                    if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADER)) {
-                        this.logUtil.putF("Failed Loaded Class: " + name + " with: " + loadedWith, this, this.LOAD_CLASS);
+                catch (caught) {
+                    if (caught instanceof ClassNotFoundException) {
+                        const e = caught;
+                        if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADER)) {
+                            this.logUtil.putF("Failed Loaded Class: " + name + " with: " + loadedWith, this, this.LOAD_CLASS);
+                        }
+                    }
+                    else {
+                        const e = caught;
+                        if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADER)) {
+                            this.logUtil.putF("Failed Loaded Class: " + name + " with: " + loadedWith, this, this.LOAD_CLASS);
+                        }
+                    }
+                    if (caught instanceof NoClassDefFoundError) {
+                        const e = caught;
+                        if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADER)) {
+                            this.logUtil.putF("Failed Loaded Class: " + name + " with: " + loadedWith, this, this.LOAD_CLASS);
+                        }
+                    }
+                    else {
+                        throw caught;
                     }
                 }
-                //: 
-                /* catch(e)
-                            {
-                
-                                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!.LOADER))
-                                        
-                                                    {
-                                                    this.logUtil!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS);
-                    
-                
-                                                    }
-                                                
-                }
-                */
-                //: 
-                /* catch(e)
-                            {
-                
-                                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!.LOADER))
-                                        
-                                                    {
-                                                    this.logUtil!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS);
-                    
-                
-                                                    }
-                                                
-                }
-                */
                 loadedWith = "loadClassBytes";
-                var classBytes = this.loadClassBytesFromFile(name);
+                let classBytes = this.loadClassBytesFromFile(name);
                 ;
                 if (classBytes ==
                     null) {
@@ -260,14 +248,16 @@ export class AbeClassLoader extends ClassLoader {
             resolveClass(myClass.prototype.constructor);
             //if statement needs to be on the same line and ternary does not work the same way.
             return myClass;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
-                this.logUtil.put("Failure loading: " + name, "AbeClassLoader", this.LOAD_CLASS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().LOADERERROR)) {
+                    this.logUtil.put("Failure loading: " + name, "AbeClassLoader", this.LOAD_CLASS, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
         }
     }
 }

@@ -11,7 +11,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CustomScreen } from './CustomScreen.js';
-//not GWT import - same folder const CustomScreen
+//sameFolderImports - not GWT import - same folder const CustomScreen
 export class ABCustomForm extends CustomScreen {
     constructor(title, items, backgroundBasicColor, foregroundBasicColor) {
         super();

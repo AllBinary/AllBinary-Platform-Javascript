@@ -17,7 +17,7 @@ import { Integer } from '../../../java/lang/Integer.js';
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidGameStatistics } from './AndroidGameStatistics.js';
-//not GWT import - same folder const AndroidGameStatistics
+//sameFolderImports - not GWT import - same folder const AndroidGameStatistics
 export class ProfilingRefreshHelper extends AndroidGameStatistics {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,9 +40,9 @@ export class ProfilingRefreshHelper extends AndroidGameStatistics {
         this.frameProcessingTimeElapsed = Date.now() - this.frameProcessingTimeElapsed;
         if (this.firstTime != true) {
             if (this.frameProcessingTimeElapsed > this.worstFrameProcessingTime)
-                this.worstFrameProcessingTime = Math.round(this.frameProcessingTimeElapsed);
+                this.worstFrameProcessingTime = globalThis.Math.trunc(this.frameProcessingTimeElapsed);
             if (this.frameProcessingTimeElapsed < this.bestFrameProcessingTime)
-                this.bestFrameProcessingTime = Math.round(this.frameProcessingTimeElapsed);
+                this.bestFrameProcessingTime = globalThis.Math.trunc(this.frameProcessingTimeElapsed);
         }
         else {
             this.firstTime = false;

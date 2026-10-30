@@ -20,7 +20,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const GeographicMapCellPositionFactoryInitVisitorInterface
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPositionFactoryInitVisitorInterface
 export class BasicGeographicMapCellPositionFactory extends Object {
     constructor(geographicMapInterface) {
         super();
@@ -35,46 +35,48 @@ export class BasicGeographicMapCellPositionFactory extends Object {
     }
     //@Throws(Exception.constructor)
     init() {
-        var tiledLayer = this.tiledLayer;
+        let tiledLayer = this.tiledLayer;
         ;
-        var columns = this.getColumns();
+        let columns = this.getColumns();
         ;
-        var rows = this.getRows();
+        let rows = this.getRows();
         ;
-        var width = tiledLayer.getCellWidth();
+        let width = tiledLayer.getCellWidth();
         ;
-        var height = tiledLayer.getCellHeight();
+        let height = tiledLayer.getCellHeight();
         ;
-        for (var column = 0; column < columns; column++) {
-            for (var row = 0; row < rows; row++) {
+        for (let column = 0; column < columns; column++) {
+            for (let row = 0; row < rows; row++) {
                 this.createInstance(column, row, width, height);
             }
         }
     }
     //@Throws(Exception.constructor)
     visit(geographicMapCelPositionFactoryInitVisitorInterface) {
-        var tiledLayer = this.tiledLayer;
+        let tiledLayer = this.tiledLayer;
         ;
-        var columns = this.getColumns();
+        let columns = this.getColumns();
         ;
-        var rows = this.getRows();
+        let rows = this.getRows();
         ;
         try {
-            var cellPosition;
+            let cellPosition;
             ;
-            for (var column = 0; column < columns; column++) {
-                for (var row = 0; row < rows; row++) {
+            for (let column = 0; column < columns; column++) {
+                for (let row = 0; row < rows; row++) {
                     cellPosition = this.getAt(column, row);
                     geographicMapCelPositionFactoryInitVisitorInterface.visit(tiledLayer, cellPosition);
                 }
             }
-            //: 
         }
-        catch (e) {
-            var commonSeps = CommonSeps.getInstance();
-            ;
-            this.logUtil.put(new StringMaker().append(commonSeps.BRACKET_OPEN).appendint(rows).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(columns).append(commonSeps.BRACKET_CLOSE).toString(), this, "visit", e);
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonSeps = CommonSeps.getInstance();
+                ;
+                this.logUtil.put(new StringMaker().append(commonSeps.BRACKET_OPEN).appendint(rows).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(columns).append(commonSeps.BRACKET_CLOSE).toString(), this, "visit", e);
+                throw e;
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -90,7 +92,7 @@ export class BasicGeographicMapCellPositionFactory extends Object {
     }
     //@Throws(Exception.constructor)
     createInstance(i_column, i_row, width, height) {
-        var cellPositionCanBeNull = this.geographicMapCellPositionArray[i_row][i_column];
+        let cellPositionCanBeNull = this.geographicMapCellPositionArray[i_row][i_column];
         ;
         if (cellPositionCanBeNull ==
             null) {

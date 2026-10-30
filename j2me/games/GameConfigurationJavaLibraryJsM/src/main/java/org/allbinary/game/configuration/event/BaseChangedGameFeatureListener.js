@@ -33,7 +33,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const GameFeatureEvent
+//sameFolderImports - not GWT import - same folder const GameFeatureEvent
 export class BaseChangedGameFeatureListener extends Object {
     constructor() {
         super(...arguments);
@@ -63,9 +63,9 @@ export class BaseChangedGameFeatureListener extends Object {
         }
     }
     isChangedFeature(gameFeature) {
-        var isChanged = this.list.contains(gameFeature);
+        let isChanged = this.list.contains(gameFeature);
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("GameFeature: ");
         stringBuffer.append(StringUtil.getInstance().toString(gameFeature));

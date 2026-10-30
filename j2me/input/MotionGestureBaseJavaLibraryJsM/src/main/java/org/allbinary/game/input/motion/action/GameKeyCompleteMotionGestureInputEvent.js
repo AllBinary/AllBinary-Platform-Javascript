@@ -23,7 +23,7 @@ import { GameKeyEventFactory } from '../../../../../../org/allbinary/game/input/
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKeyCompleteMotionGestureInputEventFactory } from './GameKeyCompleteMotionGestureInputEventFactory.js';
-//not GWT import - same folder const GameKeyCompleteMotionGestureInputEventFactory
+//sameFolderImports - not GWT import - same folder const GameKeyCompleteMotionGestureInputEventFactory
 export class GameKeyCompleteMotionGestureInputEvent extends CompleteMotionGestureInputEvent {
     constructor(name, motionGestureInput, inputToGameKeyMapping) {
         super(name, motionGestureInput);
@@ -44,12 +44,14 @@ export class GameKeyCompleteMotionGestureInputEvent extends CompleteMotionGestur
         try {
             this.setGameKey(this.inputToGameKeyMapping.getInstance(this.getMotionGestureInput().getId()));
             this.setGameKeyEvent(this.gameKeyEventFactory.getInstanceForInput(this, this.getGameKey()));
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.UPDATE, e);
+            }
         }
     }
     setGameKeyEvent(gameKeyEvent) {

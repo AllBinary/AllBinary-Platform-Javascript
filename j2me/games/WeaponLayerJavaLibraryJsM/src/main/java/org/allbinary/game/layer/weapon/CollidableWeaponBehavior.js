@@ -58,7 +58,7 @@ export class CollidableWeaponBehavior extends CollidableDestroyableDamageableBeh
     }
     isCollisionInterface(ownerLayer, collidableInterfaceCompositeInterface) {
         if (this.collisionHelper.isCollidable(collidableInterfaceCompositeInterface)) {
-            var layerInterface = collidableInterfaceCompositeInterface;
+            let layerInterface = collidableInterfaceCompositeInterface;
             ;
             if (ownerLayer.getGroupInterface()[0] != layerInterface.getGroupInterface()[0]) {
                 if (this.layerCollisionUtil.isCollision(ownerLayer, layerInterface)) {
@@ -72,9 +72,9 @@ export class CollidableWeaponBehavior extends CollidableDestroyableDamageableBeh
     }
     //@Throws(Exception.constructor)
     collideInterface(ownerLayer, collidableInterfaceCompositeInterface) {
-        var ownerDamageableInterface = ownerLayer;
+        let ownerDamageableInterface = ownerLayer;
         ;
-        var damageableInterface = collidableInterfaceCompositeInterface;
+        let damageableInterface = collidableInterfaceCompositeInterface;
         ;
         this.damageUtil.process(ownerDamageableInterface, damageableInterface);
         this.collided = true;

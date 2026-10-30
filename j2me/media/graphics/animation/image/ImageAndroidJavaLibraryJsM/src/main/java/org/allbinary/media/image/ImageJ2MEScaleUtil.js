@@ -18,7 +18,7 @@ import { GameFeatureImageCacheFactory } from '../../../../org/allbinary/image/Ga
 //not GWT import const GameFeatureImageCacheFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageScaleUtil } from './ImageScaleUtil.js';
-//not GWT import - same folder const ImageScaleUtil
+//sameFolderImports - not GWT import - same folder const ImageScaleUtil
 export class ImageJ2MEScaleUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -29,8 +29,8 @@ export class ImageJ2MEScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     scaleArray(images, width, height) {
-        for (var index = 0; index < images.length; index++) {
-            var image = images[index];
+        for (let index = 0; index < images.length; index++) {
+            let image = images[index];
             ;
             images[index] = ImageScaleUtil.getInstance().createImage2(GameFeatureImageCacheFactory.getInstance(), image, width / 2, image.getWidth(), height, image.getHeight(), false);
         }

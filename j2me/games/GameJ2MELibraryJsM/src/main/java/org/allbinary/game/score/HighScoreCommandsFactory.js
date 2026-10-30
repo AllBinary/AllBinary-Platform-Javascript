@@ -14,9 +14,9 @@
 //not GWT import const Command
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoreCommandsBaseFactory } from './HighScoreCommandsBaseFactory.js';
-//not GWT import - same folder const HighScoreCommandsBaseFactory
+//sameFolderImports - not GWT import - same folder const HighScoreCommandsBaseFactory
 import { HighScoreCommands } from './HighScoreCommands.js';
-//not GWT import - same folder const HighScoreCommands
+//sameFolderImports - not GWT import - same folder const HighScoreCommands
 export class HighScoreCommandsFactory extends HighScoreCommandsBaseFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

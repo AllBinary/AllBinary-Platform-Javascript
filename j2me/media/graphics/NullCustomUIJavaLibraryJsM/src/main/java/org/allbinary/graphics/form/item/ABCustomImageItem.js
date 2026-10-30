@@ -4,7 +4,7 @@ import { NullImage } from '../../../../../javax/microedition/lcdui/NullImage.js'
 //not GWT import const BasicColor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABCustomItem } from './ABCustomItem.js';
-//not GWT import - same folder const ABCustomItem
+//sameFolderImports - not GWT import - same folder const ABCustomItem
 export class ABCustomImageItem extends ABCustomItem {
     constructor(label, image, layout, altText, basicColor, yOffset) {
         super(label, basicColor, basicColor);

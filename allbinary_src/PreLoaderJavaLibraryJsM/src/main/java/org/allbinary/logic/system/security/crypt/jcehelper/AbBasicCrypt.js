@@ -24,93 +24,101 @@ import { SecretKeyFactory } from '../../../../../../../javax/crypto/SecretKeyFac
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const SunJCE
+//sameFolderImports - not GWT import - same folder const SunJCE
 import { KeySpecFactory } from './KeySpecFactory.js';
-//not GWT import - same folder const KeySpecFactory
+//sameFolderImports - not GWT import - same folder const KeySpecFactory
 export class AbBasicCrypt extends Object {
     constructor(algorithm, key) {
         super();
         try {
             this.algorithm = algorithm;
-            this.key = key.getBytes();
+            this.key = Array.from(new TextEncoder().encode(key), byte => (byte << 24) >> 24);
             this.init();
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, this, "AbCrypt(alg,key)", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, this, "AbCrypt(alg,key)", e);
+            }
         }
     }
     init() {
         try {
-            var sunJce = new com.sun.crypto.provider.SunJCE();
+            let sunJce = new com.sun.crypto.provider.SunJCE();
             ;
             Security.addProvider(sunJce);
-            var keySpec = KeySpecFactory.getInstance().getInstance(this.algorithm, this.key);
+            let keySpec = KeySpecFactory.getInstance().getInstance(this.algorithm, this.key);
             ;
-            var keyFactory = SecretKeyFactory.getInstance(this.algorithm);
+            let keyFactory = SecretKeyFactory.getInstance(this.algorithm);
             ;
             this.secretKey = keyFactory.generateSecret(keySpec);
             this.cipher = Cipher.getInstance(this.algorithm);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE("init Failed", this, commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE("init Failed", this, commonStrings.INIT, e);
+            }
         }
     }
     encrypt(array) {
         try {
             this.cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-            var ivArray = this.secretKey.getEncoded();
+            let ivArray = this.secretKey.getEncoded();
             ;
-            var encrypted = this.cipher.doFinal(array);
+            let encrypted = this.cipher.doFinal(array);
             ;
-            var result = new Array(ivArray.length + encrypted.length);
+            let result = new Array(ivArray.length + encrypted.length);
             ;
             PreLogUtil.put("ivArray Length: " + ivArray.length, this, "encrypt");
-            for (var index = 0; index < ivArray.length; index++) {
+            for (let index = 0; index < ivArray.length; index++) {
                 result[index] = ivArray[index];
             }
-            for (var index = 0; index < encrypted.length; index++) {
+            for (let index = 0; index < encrypted.length; index++) {
                 result[index + ivArray.length] = encrypted[index];
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return result;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
+            }
         }
     }
     decrypt(array) {
         try {
             this.cipher.init(Cipher.DECRYPT_MODE, secretKey);
-            var ivArray = new Array(8);
+            let ivArray = new Array(8);
             ;
-            for (var index = 0; index < 8; index++) {
+            for (let index = 0; index < 8; index++) {
                 ivArray[index] = array[index];
             }
             PreLogUtil.put("ivArray Length: " + ivArray.length, this, "encrypt");
-            var result = new Array(array.length - ivArray.length);
+            let result = new Array(array.length - ivArray.length);
             ;
-            for (var index = ivArray.length; index < array.length; index++) {
+            for (let index = ivArray.length; index < array.length; index++) {
                 result[index - ivArray.length] = array[index];
             }
-            var decrypted = this.cipher.doFinal(result);
+            let decrypted = this.cipher.doFinal(result);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
+            }
         }
     }
 }

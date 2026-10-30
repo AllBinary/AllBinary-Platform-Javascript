@@ -20,7 +20,7 @@ import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
 export class CircleAnimation extends Animation {
     constructor(width, height, basicColor) {
         super();
-        this.TOTAL_ANGLE = Math.round(AngleFactory.getInstance().TOTAL_ANGLE);
+        this.TOTAL_ANGLE = globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE);
         this.width = width;
         this.height = height;
         this.setBasicColorP(basicColor);

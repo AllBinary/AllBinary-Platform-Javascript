@@ -16,9 +16,16 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const OperatingSystemInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoHardware } from './NoHardware.js';
-//not GWT import - same folder const HardwareInterface
+//sameFolderImports - not GWT import - same folder const HardwareInterface
 export class HardwareFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return HardwareFactory.instance;
     }
@@ -27,14 +34,16 @@ export class HardwareFactory extends Object {
         this.SINGLETON = NoHardware.getInstance();
     }
     //@Throws(Exception.constructor)
-    getInstance(os) {
+    getInstance$overload2(os) {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.SINGLETON;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
 }

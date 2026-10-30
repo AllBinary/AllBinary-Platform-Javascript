@@ -15,9 +15,9 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputFeature } from './InputFeature.js';
-//not GWT import - same folder const InputFeature
+//sameFolderImports - not GWT import - same folder const InputFeature
 import { Features } from './Features.js';
-//not GWT import - same folder const Features
+//sameFolderImports - not GWT import - same folder const Features
 export class InputFeatureFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -32,7 +32,7 @@ export class InputFeatureFactory extends Object {
         this.SINGLE_KEY_PRESS = new InputFeature("Single Key Press");
     }
     isSingleKeyProcessing() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isFeature(this.SINGLE_KEY_REPEAT_PRESS) || features.isFeature(this.SINGLE_KEY_PRESS)) {
             //if statement needs to be on the same line and ternary does not work the same way.

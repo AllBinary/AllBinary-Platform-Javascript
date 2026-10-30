@@ -20,11 +20,11 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //ActualPlatform
 /*actual*/ export class Memory extends Object {
     /*actual*/ static getInfo() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var maxUtilizedMemoryAvailable = Runtime.getRuntime().maxMemory();
+        let maxUtilizedMemoryAvailable = Runtime.getRuntime().maxMemory();
         ;
-        var memoryUsed = Runtime.getRuntime().totalMemory();
+        let memoryUsed = Runtime.getRuntime().totalMemory();
         ;
         stringBuffer.append("APK Memory: Available: ");
         stringBuffer.appendlong(maxUtilizedMemoryAvailable);

@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+import { ClassNotFoundException } from '../../../../../java/lang/ClassNotFoundException.js';
 //not GWT import const CommandListener
 import { Intent } from '../../../../../android/content/Intent.js';
 //not GWT import const Intent
@@ -28,7 +29,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AboutCommandProcessor } from './AboutCommandProcessor.js';
-//not GWT import - same folder const AboutCommandProcessor
+//sameFolderImports - not GWT import - same folder const AboutCommandProcessor
 export class WebCommandProcessor extends Object {
     constructor() {
         super(...arguments);
@@ -43,19 +44,24 @@ export class WebCommandProcessor extends Object {
     }
     process(midletCommandListener, command, canvas) {
         try {
-            var context = this.aboutCommandProcessor.getContext();
+            let context = this.aboutCommandProcessor.getContext();
             ;
-            var intent = new Intent(context, TsUtil.getInstance().getClassClassLoader(this).loadClass(this.WEB_VIEW_ACTIVITY));
+            let intent = new Intent(context, TsUtil.getInstance().getClassClassLoader(this).loadClass(this.WEB_VIEW_ACTIVITY));
             ;
             intent.putExtra(this.aboutCommandProcessor.URL, this.list.removeAt(0));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "process", e);
+        catch (caught) {
+            if (caught instanceof ClassNotFoundException) {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "process", e);
+            }
+            else {
+                throw caught;
+            }
         }
     }
 }

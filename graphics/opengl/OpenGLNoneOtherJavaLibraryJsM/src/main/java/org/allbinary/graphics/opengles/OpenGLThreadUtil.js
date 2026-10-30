@@ -6,7 +6,7 @@ export class OpenGLThreadUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return OpenGLThreadUtil.instance;
     }
-    set(glSurfaceView = {}) {
+    set(glSurfaceView) {
     }
     onPause() {
     }

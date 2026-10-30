@@ -31,41 +31,47 @@ export class TouchJ2ME extends Object {
         this.logUtil = LogUtil.getInstance();
         this.DEVICE_ID = 0;
         this.motionRecognizer = new AllMotionRecognizer();
-        var motionGesturesHandler = this.motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
+        let motionGesturesHandler = this.motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
         ;
         motionGesturesHandler.addListenerInterface(new GameMotionGestureListener(MotionGestureReceiveInterfaceFactory.getInstance()));
     }
     pointerDragged(x, y) {
         try {
             this.motionRecognizer.processDraggedMotionEvent(x, y, DEVICE_ID, 0);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "pointerDragged", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "pointerDragged", e);
+            }
         }
     }
     pointerPressed(x, y) {
         try {
             this.motionRecognizer.processStartMotionEvent(x, y, DEVICE_ID, 0);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "pointerPressed", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "pointerPressed", e);
+            }
         }
     }
     pointerReleased(x, y) {
         try {
             this.motionRecognizer.processEndMotionEvent(x, y, DEVICE_ID, 0);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "pointerReleased", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "pointerReleased", e);
+            }
         }
     }
 }

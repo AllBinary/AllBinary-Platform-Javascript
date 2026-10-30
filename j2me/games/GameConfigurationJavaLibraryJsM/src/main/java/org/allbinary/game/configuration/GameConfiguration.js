@@ -28,7 +28,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfigurationSingleton } from './GameConfigurationSingleton.js';
-//not GWT import - same folder const GameConfigurationSingleton
+//sameFolderImports - not GWT import - same folder const GameConfigurationSingleton
 export class GameConfiguration extends Object {
     constructor(name, defaultValue, minValue, maxValue) {
         super();
@@ -48,7 +48,7 @@ export class GameConfiguration extends Object {
     //@Throws(Exception.constructor)
     setValue(value) {
         if (this.value != value) {
-            var oldValue = this.value;
+            let oldValue = this.value;
             ;
             this.value = value;
             GameFeatureEventHandler.getInstance().fireEvent(new GameFeatureEvent(this, new StringMaker().append(this.name).append(" value: from: ").appendint(oldValue.intValue()).append(" to ").appendint(this.value.intValue()).toString()));
@@ -91,7 +91,7 @@ export class GameConfiguration extends Object {
         this.setValue(this.getDefaultValue());
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Name: ");
         stringBuffer.append(this.name);

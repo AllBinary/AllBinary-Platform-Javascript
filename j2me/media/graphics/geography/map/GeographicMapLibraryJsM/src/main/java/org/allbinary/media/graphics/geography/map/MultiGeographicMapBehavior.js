@@ -15,15 +15,15 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapCellType } from './GeographicMapCellType.js';
-//not GWT import - same folder const GeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPosition
 export class MultiGeographicMapBehavior extends Object {
     //@Throws(Exception.constructor)
     getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition) {
-        var size = geographicMapInterfaceArray.length;
+        let size = geographicMapInterfaceArray.length;
         ;
-        var cellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE;
+        let cellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE;
         ;
-        for (var index = size; --index >= 0;) {
+        for (let index = size; --index >= 0;) {
             cellType = geographicMapInterfaceArray[index].getCellTypeAt(geographicMapCellPosition);
             geographicMapCellTypeArray[index] = cellType;
         }

@@ -27,9 +27,9 @@ export class HorizontalManeuverAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var x = ownerLayerInterface.getXP();
+        let x = ownerLayerInterface.getXP();
         ;
         if (ownerLayerInterface.getXP() - this.currentSpeed <= 0) {
             this.reverse();
@@ -68,9 +68,9 @@ export class HorizontalManeuverAI extends BasicAI {
         }
     }
     drop() {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var y = ownerLayerInterface.getYP();
+        let y = ownerLayerInterface.getYP();
         ;
         if (ownerLayerInterface.getY2() + ownerLayerInterface.getHeight() > DisplayInfoSingleton.getInstance().getLastHeight()) {
             y = 0;

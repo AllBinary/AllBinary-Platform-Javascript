@@ -19,7 +19,7 @@ import { System } from '../../../../../java/lang/System.js';
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NativeLibraryClassLoader } from './NativeLibraryClassLoader.js';
-//not GWT import - same folder const NativeLibraryClassLoader
+//sameFolderImports - not GWT import - same folder const NativeLibraryClassLoader
 export class NativeLibraryHelperWrapper extends Object {
     constructor(libraryName) {
         super();
@@ -27,21 +27,21 @@ export class NativeLibraryHelperWrapper extends Object {
     }
     //@Throws(Exception.constructor)
     load() {
-        var params = new Array(1);
+        let params = new Array(1);
         ;
         params[0] = this.getLibraryName();
-        var classes = new Array(1);
+        let classes = new Array(1);
         ;
         classes[0] = this.getLibraryName().constructor;
         this.loader = new NativeLibraryClassLoader(this.constructor.namegetClassLoader());
-        var myClass = this.loader.loadClass("dynamic.NativeLibraryHelper");
+        let myClass = this.loader.loadClass("dynamic.NativeLibraryHelper");
         ;
-        var constructor = myClass.getConstructor(classes);
+        let constructor = myClass.getConstructor(classes);
         ;
         this.anyType = constructor.newInstance(params);
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var method = this.anyType.constructor.name.getMethod(commonStrings.LOAD, null);
+        let method = this.anyType.constructor.name.getMethod(commonStrings.LOAD, null);
         ;
         method.invoke(this.anyType, null);
     }

@@ -16,11 +16,11 @@ import { PrimaryThreadPool } from '../../../org/allbinary/thread/PrimaryThreadPo
 //not GWT import const ThreadPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryMidlet } from './AllBinaryMidlet.js';
-//not GWT import - same folder const AllBinaryMidlet
+//sameFolderImports - not GWT import - same folder const AllBinaryMidlet
 import { MidletExitProcessorFactory } from './MidletExitProcessorFactory.js';
-//not GWT import - same folder const MidletExitProcessorFactory
+//sameFolderImports - not GWT import - same folder const MidletExitProcessorFactory
 import { ExitRunnable } from './ExitRunnable.js';
-//not GWT import - same folder const ExitRunnable
+//sameFolderImports - not GWT import - same folder const ExitRunnable
 //J2MEForJ2ME
 export class ProgressMidlet extends AllBinaryMidlet {
     constructor(clientInformationFactory) {
@@ -31,24 +31,28 @@ export class ProgressMidlet extends AllBinaryMidlet {
     preInit() {
     }
     exitProgress(isProgress) {
-        var processor = MidletExitProcessorFactory.getInstance().getExitInstance(this);
+        let processor = MidletExitProcessorFactory.getInstance().getExitInstance(this);
         ;
         try {
-            var primaryThreadPool = PrimaryThreadPool.getInstance();
+            let primaryThreadPool = PrimaryThreadPool.getInstance();
             ;
-            var runnable = new ExitRunnable(this, processor, isProgress);
+            let runnable = new ExitRunnable(this, processor, isProgress);
             ;
             primaryThreadPool.runTask(runnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "exit", e);
-            try {
-                processor.process();
-                //: 
-            }
-            catch (e2) {
+        catch (caught) {
+            {
+                const e = caught;
                 this.logUtil.put(this.commonStrings.EXCEPTION, this, "exit", e);
+                try {
+                    processor.process();
+                }
+                catch (caught) {
+                    {
+                        const e2 = caught;
+                        this.logUtil.put(this.commonStrings.EXCEPTION, this, "exit", e);
+                    }
+                }
             }
         }
     }

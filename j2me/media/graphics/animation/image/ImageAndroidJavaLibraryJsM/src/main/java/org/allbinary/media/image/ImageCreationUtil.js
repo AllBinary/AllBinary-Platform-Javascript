@@ -27,14 +27,14 @@ export class ImageCreationUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImageWH(width, height) {
-        var image = GameFeatureImageCacheFactory.getInstance().get(this.constructor.name.toString(), width, height);
+        let image = GameFeatureImageCacheFactory.getInstance().get(this.constructor.name.toString(), width, height);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return image;
     }
     //@Throws(Exception.constructor)
     createImage(width, height, maxScaleX, maxScaleY) {
-        var image = GameFeatureImageCacheFactory.getInstance().get(this.constructor.name.toString(), Math.round((width * maxScaleX)) + 1, Math.round((height * maxScaleY)) + 1);
+        let image = GameFeatureImageCacheFactory.getInstance().get(this.constructor.name.toString(), globalThis.Math.trunc((width * maxScaleX)) + 1, globalThis.Math.trunc((height * maxScaleY)) + 1);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return image;

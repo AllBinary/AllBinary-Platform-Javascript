@@ -21,7 +21,7 @@ import { OpenGLFeatureFactory } from '../../../../../org/allbinary/graphics/open
 //not GWT import const AbeClientInformationInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DemoGameBehavior } from './DemoGameBehavior.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class BaseGameBehavior extends DemoGameBehavior {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -29,22 +29,22 @@ export class BaseGameBehavior extends DemoGameBehavior {
     }
     //@Throws(Exception.constructor)
     init() {
-        var gameAdState = GameAdStateFactory.getInstance().getCurrentInstance();
+        let gameAdState = GameAdStateFactory.getInstance().getCurrentInstance();
         ;
         gameAdState.playingAdState();
     }
     pause(allBinaryGameCanvas) {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL_AS_GAME_THREAD)) {
-            var currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
+            let currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
             ;
             currentDisplayableFactory.setRunnable(allBinaryGameCanvas.gamePauseRunnable);
         }
     }
     unPause(allBinaryGameCanvas) {
         if (Features.getInstance().isDefault(OpenGLFeatureFactory.getInstance().OPENGL_AS_GAME_THREAD)) {
-            var currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
+            let currentDisplayableFactory = CurrentDisplayableFactory.getInstance();
             ;
             currentDisplayableFactory.setRunnable(allBinaryGameCanvas.gameRunnable);
             currentDisplayableFactory.setDisplayable(allBinaryGameCanvas);

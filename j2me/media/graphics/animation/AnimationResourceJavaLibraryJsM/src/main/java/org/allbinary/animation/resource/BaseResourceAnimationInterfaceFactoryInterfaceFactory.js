@@ -31,7 +31,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const FeatureResourceAnimationInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const FeatureResourceAnimationInterfaceFactoryInterface
 export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Object {
     constructor(name, hashtable, rectangleHashtable, rectangleArrayHashtable) {
         super();
@@ -49,7 +49,7 @@ export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Objec
     }
     //@Throws(Exception.constructor)
     init(level) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(new StringMaker().append("Available List of Animations: ").append(this.hashtable.toString()).toString(), this, commonStrings.INIT);
         this.setInitialized(true);
@@ -66,7 +66,7 @@ export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Objec
     }
     //@Throws(Exception.constructor)
     getBasicAnimationInterfaceFactoryInstance(resource) {
-        var basicAnimationInterfaceFactoryInterfaceCanBeNull = this.hashtable.get(resource);
+        let basicAnimationInterfaceFactoryInterfaceCanBeNull = this.hashtable.get(resource);
         ;
         if (basicAnimationInterfaceFactoryInterfaceCanBeNull ==
             null) {
@@ -78,7 +78,7 @@ export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Objec
     }
     //@Throws(Exception.constructor)
     getRectangle(resource) {
-        var rectangleCanBeNull = this.rectangleHashtable.get(resource);
+        let rectangleCanBeNull = this.rectangleHashtable.get(resource);
         ;
         if (rectangleCanBeNull ==
             null) {
@@ -94,11 +94,11 @@ export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Objec
     }
     //@Throws(Exception.constructor)
     getRectangleArrayOfArrays(resource) {
-        var valueCanBeNull = this.rectangleArrayOfArraysHashtable.get(resource);
+        let valueCanBeNull = this.rectangleArrayOfArraysHashtable.get(resource);
         ;
         if (valueCanBeNull !=
             null) {
-            var rectangleArrayOfArrays = valueCanBeNull;
+            let rectangleArrayOfArrays = valueCanBeNull;
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return rectangleArrayOfArrays;
@@ -117,7 +117,7 @@ export class BaseResourceAnimationInterfaceFactoryInterfaceFactory extends Objec
         return false;
     }
     isLoadingLevel(level) {
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         if (level == resourceLoadingLevelFactory.LOAD_ALL.getLevel()) {
             //if statement needs to be on the same line and ternary does not work the same way.

@@ -30,21 +30,21 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MusicStrings } from './MusicStrings.js';
-//not GWT import - same folder const MusicStrings
+//sameFolderImports - not GWT import - same folder const MusicStrings
 export class MusicManager extends Object {
     static pause(activity, musicServiceClass) {
-        var commonStateStrings = CommonStateStrings.getInstance();
+        let commonStateStrings = CommonStateStrings.getInstance();
         ;
-        var musicPauseIntent = new Intent(activity, musicServiceClass.prototype.constructor);
+        let musicPauseIntent = new Intent(activity, musicServiceClass.prototype.constructor);
         ;
         musicPauseIntent.putExtra(commonStateStrings.ON_START_COMMAND, 1);
         activity.startService(musicPauseIntent);
     }
     static resume(activity, musicServiceClass) {
         if (AndroidServicesUtil.getInstance().isServiceRunning(musicServiceClass.toString())) {
-            var commonStateStrings = CommonStateStrings.getInstance();
+            let commonStateStrings = CommonStateStrings.getInstance();
             ;
-            var musicResumeIntent = new Intent(activity, musicServiceClass.prototype.constructor);
+            let musicResumeIntent = new Intent(activity, musicServiceClass.prototype.constructor);
             ;
             musicResumeIntent.putExtra(commonStateStrings.ON_START_COMMAND, 2);
             activity.startService(musicResumeIntent);
@@ -104,10 +104,10 @@ export class MusicManager extends Object {
         }
     }
     show() {
-        for (var index = this.songList.size(); --index >= 0;) {
-            var sound = this.songList.get(index);
+        for (let index = this.songList.size(); --index >= 0;) {
+            let sound = this.songList.get(index);
             ;
-            var duration = sound.getDuration();
+            let duration = sound.getDuration();
             ;
             PreLogUtil.put(new StringMaker().append(this.PLAY).append(sound.getResource()).append(this.FOR).appendlong(duration).toString(), this, this.commonStrings.PROCESS);
         }
@@ -122,24 +122,26 @@ export class MusicManager extends Object {
                 this.currentSongSound = this.nextSongSound;
                 this.nextSongSound = NoSound.getInstance();
             }
-            var duration = this.currentSongSound.getDuration();
+            let duration = this.currentSongSound.getDuration();
             ;
             PreLogUtil.put(new StringMaker().append(this.PLAY).append(this.currentSongSound.getResource()).append(this.FOR).appendlong(duration).toString(), this, this.commonStrings.PROCESS);
-            this.timeDelayHelper.delay = Math.round(duration);
+            this.timeDelayHelper.delay = globalThis.Math.trunc(duration);
             this.currentIntent.putExtra(this.musicStrings.SONG_EXTRA, this.resourceUtil.getResourceId(this.currentSongSound.getResource()).intValue());
             this.currentIntent.putExtra(this.musicStrings.LEFT_VOLUME, this.leftVolume);
             this.currentIntent.putExtra(this.musicStrings.RIGHT_VOLUME, this.rightVolume);
             this.resourceUtil.getContext().startService(this.currentIntent);
-            //: 
         }
-        catch (e) {
-            var resource = StringUtil.getInstance().EMPTY_STRING;
-            ;
-            if (this.currentSongSound !=
-                null) {
-                resource = this.currentSongSound.getResource();
+        catch (caught) {
+            {
+                const e = caught;
+                let resource = StringUtil.getInstance().EMPTY_STRING;
+                ;
+                if (this.currentSongSound !=
+                    null) {
+                    resource = this.currentSongSound.getResource();
+                }
+                PreLogUtil.putOE(this.commonStrings.EXCEPTION_LABEL + resource, this, this.commonStrings.PROCESS, e);
             }
-            PreLogUtil.putOE(this.commonStrings.EXCEPTION_LABEL + resource, this, this.commonStrings.PROCESS, e);
         }
     }
     //@Throws(Exception.constructor)

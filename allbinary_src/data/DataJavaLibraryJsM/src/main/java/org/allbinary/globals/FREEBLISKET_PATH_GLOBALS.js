@@ -32,7 +32,7 @@ export class FREEBLISKET_PATH_GLOBALS extends Object {
         this.LINEDATAPATH = PATH_GLOBALS.getInstance().INIT_PATH + "lineData" + AbPathData.getInstance().SEPARATOR;
         this.LICENSEERRORPAGE = "LicensingError.jsp";
         this.ERRORPAGE = "Error.jsp";
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("install");
         stringBuffer.append(AbPathData.getInstance().SEPARATOR);

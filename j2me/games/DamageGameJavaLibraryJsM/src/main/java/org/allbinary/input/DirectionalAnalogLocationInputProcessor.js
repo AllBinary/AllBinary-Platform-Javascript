@@ -43,26 +43,28 @@ export class DirectionalAnalogLocationInputProcessor extends AnalogLocationInput
             this.downGameKeyEvent = GameKeyEventFactory.getInstance().getInstanceForInput(this, this.gameKeyFactory.DOWN);
             this.leftTriggerGameKeyEvent = GameKeyEventFactory.getInstance().getInstanceForInput(this, this.gameKeyFactory.KEY_NUM0);
             this.rightTriggerGameKeyEvent = GameKeyEventFactory.getInstance().getInstanceForInput(this, this.gameKeyFactory.KEY_NUM5);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     process(allbinaryLayerManager, analogLocationInput) {
         try {
-            var customGPoint;
+            let customGPoint;
             ;
             customGPoint = analogLocationInput.getCustomGPoint();
-            var x = customGPoint.getX();
+            let x = customGPoint.getX();
             ;
-            var y = customGPoint.getY();
+            let y = customGPoint.getY();
             ;
-            var leftTrigger = analogLocationInput.getLeftTrigger();
+            let leftTrigger = analogLocationInput.getLeftTrigger();
             ;
-            var rightTrigger = analogLocationInput.getRightTrigger();
+            let rightTrigger = analogLocationInput.getRightTrigger();
             ;
             if (x < 0) {
                 this.inputProcessorArray[this.leftGameKeyEvent.getKey()].processAnalog(allbinaryLayerManager, this.leftGameKeyEvent, x);
@@ -82,12 +84,14 @@ export class DirectionalAnalogLocationInputProcessor extends AnalogLocationInput
             if (rightTrigger > 0) {
                 this.inputProcessorArray[this.rightTriggerGameKeyEvent.getKey()].processAnalog(allbinaryLayerManager, this.rightTriggerGameKeyEvent, rightTrigger);
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put("Unable to process analog input", this, commonStrings.PROCESS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put("Unable to process analog input", this, commonStrings.PROCESS, e);
+            }
         }
     }
     getSourceId() {

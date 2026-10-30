@@ -17,7 +17,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageCacheable extends Object {
-    constructor(name, anyType = {}) {
+    constructor(name, anyType) {
         super();
         this.name = StringUtil.getInstance().EMPTY_STRING;
     }

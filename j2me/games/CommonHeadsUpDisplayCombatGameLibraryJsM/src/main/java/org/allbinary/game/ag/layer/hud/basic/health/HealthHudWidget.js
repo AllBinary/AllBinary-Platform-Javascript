@@ -46,7 +46,7 @@ export class HealthHudWidget extends BasicHud {
     update() {
         if (this.xArray !=
             null) {
-            for (var index = 0; index < this.xArray.length; index++) {
+            for (let index = 0; index < this.xArray.length; index++) {
                 this.xArray[index] = this.getX() + (index * 16);
             }
         }
@@ -60,10 +60,10 @@ export class HealthHudWidget extends BasicHud {
         this.timeDelayHelper = NoTimeDelayHelper.SINGLETON;
         if (this.max <= 1 && this.healthInterface.isAlive()) {
             this.max = 1;
-            if (this.healthScale - this.healthInterface.getHealth() > (this.healthScale * 2) / 3) {
+            if (this.healthScale - this.healthInterface.getHealth() > globalThis.Math.trunc((this.healthScale * 2) / 3)) {
                 this.timeDelayHelper = this.slowBeatTimeDelayHelper;
             }
-            else if (this.healthScale - this.healthInterface.getHealth() > this.healthScale / 3) {
+            else if (this.healthScale - this.healthInterface.getHealth() > globalThis.Math.trunc(this.healthScale / 3)) {
                 this.timeDelayHelper = this.mediumBeatTimeDelayHelper;
             }
             else {
@@ -73,7 +73,7 @@ export class HealthHudWidget extends BasicHud {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        for (var index = 0; index < this.max; index++) {
+        for (let index = 0; index < this.max; index++) {
             if (this.timeDelayHelper.isTime(this.gameTickTimeDelayHelper.startTime)) {
                 this.animationInterface.paintXY(graphics, this.xArray[index], this.getY());
             }

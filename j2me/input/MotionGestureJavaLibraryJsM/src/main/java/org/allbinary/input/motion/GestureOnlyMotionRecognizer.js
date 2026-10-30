@@ -18,7 +18,7 @@ import { MotionGestureRecognizer } from '../../../../org/allbinary/input/motion/
 //not GWT import const MotionGestureRecognizer
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MotionRecognizer } from './MotionRecognizer.js';
-//not GWT import - same folder const MotionRecognizer
+//sameFolderImports - not GWT import - same folder const MotionRecognizer
 export class GestureOnlyMotionRecognizer extends MotionRecognizer {
     constructor() {
         super();
@@ -27,7 +27,7 @@ export class GestureOnlyMotionRecognizer extends MotionRecognizer {
     }
     //@Throws(Exception.constructor)
     processStartMotionEvent(x, y, deviceId, modifiers) {
-        var point = GestureOnlyMotionRecognizer.pointCircularPool.getNextInstance();
+        let point = GestureOnlyMotionRecognizer.pointCircularPool.getNextInstance();
         ;
         point.setX(x);
         point.setY(y);
@@ -35,7 +35,7 @@ export class GestureOnlyMotionRecognizer extends MotionRecognizer {
     }
     //@Throws(Exception.constructor)
     processEndMotionEvent(x, y, deviceId, modifiers) {
-        var point = GestureOnlyMotionRecognizer.pointCircularPool.getNextInstance();
+        let point = GestureOnlyMotionRecognizer.pointCircularPool.getNextInstance();
         ;
         point.setX(x);
         point.setY(y);
@@ -43,7 +43,7 @@ export class GestureOnlyMotionRecognizer extends MotionRecognizer {
     }
     //@Throws(Exception.constructor)
     processDraggedMotionEvent(x, y, deviceId, modifiers) {
-        var point = GestureOnlyMotionRecognizer.pointCircularPool.getNextInstance();
+        let point = GestureOnlyMotionRecognizer.pointCircularPool.getNextInstance();
         ;
         point.setX(x);
         point.setY(y);

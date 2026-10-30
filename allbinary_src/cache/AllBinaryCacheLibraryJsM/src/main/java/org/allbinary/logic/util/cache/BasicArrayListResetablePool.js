@@ -13,7 +13,7 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbstractArrayListPool } from './AbstractArrayListPool.js';
-//not GWT import - same folder const CacheableInterface
+//sameFolderImports - not GWT import - same folder const CacheableInterface
 export class BasicArrayListResetablePool extends AbstractArrayListPool {
     constructor(cacheableInterfaceFactoryInterface) {
         super(cacheableInterfaceFactoryInterface);
@@ -22,8 +22,8 @@ export class BasicArrayListResetablePool extends AbstractArrayListPool {
     clear() {
     }
     //@Throws(Exception.constructor)
-    remove(key = {}) {
-        var size = this.buffers.size();
+    remove(key) {
+        let size = this.buffers.size();
         ;
         if (size > 0) {
             //if statement needs to be on the same line and ternary does not work the same way.

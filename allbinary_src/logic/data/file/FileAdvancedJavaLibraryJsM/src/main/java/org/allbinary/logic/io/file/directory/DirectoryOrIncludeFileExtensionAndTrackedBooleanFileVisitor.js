@@ -25,17 +25,17 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TrackedStrings } from './TrackedStrings.js';
-//not GWT import - same folder const TrackedStrings
+//sameFolderImports - not GWT import - same folder const TrackedStrings
 export class DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor extends IncludeFileExtensionsBooleanFileVisitor {
     static main(args) {
-        var commonFileStrings = CommonDataFileStrings.getInstance();
+        let commonFileStrings = CommonDataFileStrings.getInstance();
         ;
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
         list.add(commonFileStrings.JAVA);
-        var filePath = "G:\\mnt\\bc\\mydev\\games\\ZeptoRacer\\platform\\j2se\\ZeptoRacerStaticPathsJ2SEM\\target\\dependency\\org\\allbinary\\logic\\system\\security\\licensing\\ZeptoRacerPCClientInformation.java";
+        let filePath = "G:\\mnt\\bc\\mydev\\games\\ZeptoRacer\\platform\\j2se\\ZeptoRacerStaticPathsJ2SEM\\target\\dependency\\org\\allbinary\\logic\\system\\security\\licensing\\ZeptoRacerPCClientInformation.java";
         ;
-        var result = new DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor(list).visit(AbFile.createAbFileFromRawPath(filePath));
+        let result = new DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor(list).visit(AbFile.createAbFileFromRawPath(filePath));
         ;
         console.log(filePath + " is Tracked: " + result);
     }
@@ -54,10 +54,17 @@ export class DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor extends
         //For kotlin this is before the body of the constructor.
         this.includesString = includesString;
     }
-    visit(file) {
+    visit(...args) {
+        if (args.length === 1)
+            return this.visit$overload1(args[0]);
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.visit$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: visit');
+    }
+    visit$overload1(file) {
         if (file.isDirectory()) {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return Boolean.TRUE;
+            return true;
         }
         if (this.includesString ==
             null
@@ -68,18 +75,18 @@ export class DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor extends
         }
         else {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return Boolean.FALSE;
+            return false;
         }
     }
-    visit(file, fileNameString) {
-        var filePath = file.getPath();
+    visit$overload2(file, fileNameString) {
+        let filePath = file.getPath();
         ;
         if (super.visit(file, fileNameString)) {
             if (!(filePath.contains(this.trackedStrings.APPLICATION) || filePath.contains(this.trackedStrings.APP) || filePath.contains(this.trackedStrings.HTML_TEMP))) {
                 if (!(filePath.contains(this.trackedStrings.TARGET_PATH_WINDOWS) || filePath.contains(this.trackedStrings.TARGET_PATH_UNIX))) {
                     if (this.gitProcessHelper.isTracked(file)) {
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE;
+                        return true;
                     }
                     else {
                     }
@@ -91,6 +98,6 @@ export class DirectoryOrIncludeFileExtensionAndTrackedBooleanFileVisitor extends
             }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Boolean.FALSE;
+        return false;
     }
 }

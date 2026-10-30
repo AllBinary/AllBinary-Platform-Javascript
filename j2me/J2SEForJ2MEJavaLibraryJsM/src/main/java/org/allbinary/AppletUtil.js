@@ -19,7 +19,7 @@ export class AppletUtil extends Object {
     static setApplet() {
         AppletUtil.applet = true;
     }
-    static isAppletLoader(anyType = {}) {
+    static isAppletLoader(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AppletUtil.applet;
     }

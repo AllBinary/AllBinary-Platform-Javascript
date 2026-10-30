@@ -23,9 +23,9 @@ import { J2SEImmutableImage } from '../../../../org/microemu/device/j2se/J2SEImm
 //not GWT import const J2SEImmutableImage
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageUtil } from './ImageUtil.js';
-//not GWT import - same folder const ImageUtil
+//sameFolderImports - not GWT import - same folder const ImageUtil
 import { ImageCreationUtil } from './ImageCreationUtil.js';
-//not GWT import - same folder const ImageCreationUtil
+//sameFolderImports - not GWT import - same folder const ImageCreationUtil
 export class ImageCopyUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +46,7 @@ export class ImageCopyUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImage(originalImage) {
-        var image = this.imageCreationUtil.createImageWH(originalImage.getWidth(), originalImage.getHeight());
+        let image = this.imageCreationUtil.createImageWH(originalImage.getWidth(), originalImage.getHeight());
         ;
         if (image.isMutable()) {
             image.getGraphics().drawImage(originalImage, 0, 0, this.anchor);
@@ -59,9 +59,9 @@ export class ImageCopyUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImageScale(originalImage, canvasScale, resize) {
-        var newWidth = Math.round((originalImage.getWidth() * canvasScale));
+        let newWidth = globalThis.Math.trunc((originalImage.getWidth() * canvasScale));
         ;
-        var newHeight = Math.round((originalImage.getHeight() * canvasScale));
+        let newHeight = globalThis.Math.trunc((originalImage.getHeight() * canvasScale));
         ;
         if (resize) {
             if (newWidth < newHeight) {
@@ -71,11 +71,11 @@ export class ImageCopyUtil extends Object {
                 newHeight = newWidth;
             }
         }
-        var originalBufferedImage = this.imageUtil.getBufferedImage(originalImage);
+        let originalBufferedImage = this.imageUtil.getBufferedImage(originalImage);
         ;
-        var bufferedImage = this.imageUtil.createBufferedImageWithLargerCanvas(originalBufferedImage, newWidth, newHeight);
+        let bufferedImage = this.imageUtil.createBufferedImageWithLargerCanvas(originalBufferedImage, newWidth, newHeight);
         ;
-        var image = new J2SEImmutableImage(bufferedImage);
+        let image = new J2SEImmutableImage(bufferedImage);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return image;

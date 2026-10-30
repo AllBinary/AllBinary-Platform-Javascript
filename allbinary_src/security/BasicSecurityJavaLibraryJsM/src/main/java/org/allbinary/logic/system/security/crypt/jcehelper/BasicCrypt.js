@@ -28,16 +28,18 @@ export class BasicCrypt extends Object {
     constructor(keyAsString) {
         super();
         this.byteUtil = ByteUtil.getInstance();
-        var key = NullUtil.getInstance().NULL_BYTE_ARRAY;
+        let key = NullUtil.getInstance().NULL_BYTE_ARRAY;
         ;
         try {
             key = TsUtil.getInstance().getByteArray(keyAsString);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            PreLogUtil.putOE(commonStrings.EXCEPTION, this, "AbCrypt(alg,key)", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                PreLogUtil.putOE(commonStrings.EXCEPTION, this, "AbCrypt(alg,key)", e);
+            }
         }
         this.key = key;
     }
@@ -46,12 +48,14 @@ export class BasicCrypt extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.mutilate(array);
             ;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NullUtil.getInstance().NULL_BYTE_ARRAY;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NullUtil.getInstance().NULL_BYTE_ARRAY;
+            }
         }
     }
     decrypt(array) {
@@ -59,18 +63,20 @@ export class BasicCrypt extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.mutilate(array);
             ;
-            //: 
         }
-        catch (e) {
-            PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NullUtil.getInstance().NULL_BYTE_ARRAY;
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.putOE("decrypt Failed", this, "decrypt", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NullUtil.getInstance().NULL_BYTE_ARRAY;
+            }
         }
     }
     mutilate(array) {
-        var value;
+        let value;
         ;
-        for (var index = 0; index < this.key.length; index++) {
+        for (let index = 0; index < this.key.length; index++) {
             value = this.key[index];
             array = this.byteUtil.xor(array, value);
         }

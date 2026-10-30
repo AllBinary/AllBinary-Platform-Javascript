@@ -18,12 +18,12 @@ import { MotionGestureConfigurationFactory } from '../../../../../../org/allbina
 //not GWT import const MotionGestureConfigurationFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ResolveCompleteMotionGestureListener } from './ResolveCompleteMotionGestureListener.js';
-//not GWT import - same folder const ResolveCompleteMotionGestureListener
+//sameFolderImports - not GWT import - same folder const ResolveCompleteMotionGestureListener
 import { NullCompleteMotionGestureReceiver } from './NullCompleteMotionGestureReceiver.js';
-//not GWT import - same folder const CompleteMotionGestureListenerInterface
+//sameFolderImports - not GWT import - same folder const CompleteMotionGestureListenerInterface
 export class MotionGestureReceiveInterfaceFactory extends Object {
     static getInstance() {
-        var configuration = MotionGestureConfigurationFactory.getInstance();
+        let configuration = MotionGestureConfigurationFactory.getInstance();
         ;
         if (!configuration.isExecutingActionsAllowed()) {
             //if statement needs to be on the same line and ternary does not work the same way.

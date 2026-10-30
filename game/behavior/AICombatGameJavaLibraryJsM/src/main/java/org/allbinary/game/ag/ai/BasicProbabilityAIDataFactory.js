@@ -23,12 +23,12 @@ import { NoTimeDelayHelper } from '../../../../../org/allbinary/time/NoTimeDelay
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InputProbability } from './InputProbability.js';
-//not GWT import - same folder const InputProbability
+//sameFolderImports - not GWT import - same folder const InputProbability
 export class BasicProbabilityAIDataFactory extends Object {
     getInstance() {
-        var likelyhoodIntegerArray = new Array(Canvas.KEY_NUM9 + 1).fill(null).map(() => new Array(2).fill(null));
+        let likelyhoodIntegerArray = new Array(Canvas.KEY_NUM9 + 1).fill(null).map(() => new Array(2).fill(null));
         ;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
         likelyhoodIntegerArray[Canvas.UP][0] = smallIntegerSingletonFactory.getAt(0);
         likelyhoodIntegerArray[Canvas.UP][1] = smallIntegerSingletonFactory.getAt(10);
@@ -44,7 +44,7 @@ export class BasicProbabilityAIDataFactory extends Object {
         likelyhoodIntegerArray[Canvas.KEY_NUM9][1] = smallIntegerSingletonFactory.getAt(30);
         likelyhoodIntegerArray[Canvas.KEY_NUM1][0] = smallIntegerSingletonFactory.getAt(30);
         likelyhoodIntegerArray[Canvas.KEY_NUM1][1] = smallIntegerSingletonFactory.getAt(40);
-        var repeatLikelyhoodIntegerArray = new Array(Canvas.KEY_NUM9 + 1);
+        let repeatLikelyhoodIntegerArray = new Array(Canvas.KEY_NUM9 + 1);
         ;
         repeatLikelyhoodIntegerArray[Canvas.UP] = smallIntegerSingletonFactory.getAt(0);
         repeatLikelyhoodIntegerArray[Canvas.DOWN] = smallIntegerSingletonFactory.getAt(0);
@@ -53,7 +53,7 @@ export class BasicProbabilityAIDataFactory extends Object {
         repeatLikelyhoodIntegerArray[Canvas.KEY_NUM7] = smallIntegerSingletonFactory.getAt(0);
         repeatLikelyhoodIntegerArray[Canvas.KEY_NUM9] = smallIntegerSingletonFactory.getAt(0);
         repeatLikelyhoodIntegerArray[Canvas.KEY_NUM1] = smallIntegerSingletonFactory.getAt(10);
-        var inputProbability = new InputProbability(likelyhoodIntegerArray, repeatLikelyhoodIntegerArray, 42, NoTimeDelayHelper.SINGLETON);
+        let inputProbability = new InputProbability(likelyhoodIntegerArray, repeatLikelyhoodIntegerArray, 42, NoTimeDelayHelper.SINGLETON);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return inputProbability.toHashtable();

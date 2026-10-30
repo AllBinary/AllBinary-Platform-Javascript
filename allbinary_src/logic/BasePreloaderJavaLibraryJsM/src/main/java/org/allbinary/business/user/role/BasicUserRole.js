@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Serializable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicUserRoles } from './BasicUserRoles.js';
-//not GWT import - same folder const BasicUserRoles
+//sameFolderImports - not GWT import - same folder const BasicUserRoles
 export class BasicUserRole extends Object {
     constructor(aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout) {
         this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout);

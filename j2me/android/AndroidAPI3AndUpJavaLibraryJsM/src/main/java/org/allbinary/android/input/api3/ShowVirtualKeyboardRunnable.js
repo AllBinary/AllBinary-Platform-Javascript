@@ -33,23 +33,25 @@ export class ShowVirtualKeyboardRunnable extends Object {
     }
     run() {
         try {
-            var inputMethodManager = this.activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            let inputMethodManager = this.activity.getSystemService(Context.INPUT_METHOD_SERVICE);
             ;
-            var viewCompositeInterface = this.activity;
+            let viewCompositeInterface = this.activity;
             ;
             if (viewCompositeInterface ==
                 null) {
                 ForcedLogUtil.log("Activity Null", this);
             }
-            var view = viewCompositeInterface.getView();
+            let view = viewCompositeInterface.getView();
             ;
             inputMethodManager.toggleSoftInputFromWindow(view.getWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+            }
         }
     }
 }

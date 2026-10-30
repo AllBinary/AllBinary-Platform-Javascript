@@ -26,7 +26,7 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicStoreFront } from './BasicStoreFront.js';
-//not GWT import - same folder const BasicStoreFrontInterface
+//sameFolderImports - not GWT import - same folder const BasicStoreFrontInterface
 export class BasicStoreFrontsEntity extends InitSql {
     constructor() {
         super(new UserDbInitInfo());
@@ -37,10 +37,10 @@ export class BasicStoreFrontsEntity extends InitSql {
     }
     //@Throws(Exception.constructor)
     getStoreFrontInterface(name) {
-        var keysAndValues = StdUtil.getInstance().createHashMap();
+        let keysAndValues = StdUtil.getInstance().createHashMap();
         ;
         keysAndValues.put(StoreFrontData.getInstance().NAME, name);
-        var storeHashMap = super.getRow(keysAndValues);
+        let storeHashMap = super.getRow(keysAndValues);
         ;
         if (storeHashMap ==
             null)

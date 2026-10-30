@@ -30,7 +30,7 @@ export class StreamUtil extends Object {
     }
     //@Throws(Exception.constructor)
     get(inputStream, outputStream, buffer) {
-        var len = 0;
+        let len = 0;
         ;
         while (true) {
             len = inputStream.read(buffer, 0, buffer.length);
@@ -46,17 +46,19 @@ export class StreamUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getByteArray(inputStream, outputStream2, byteArray) {
-        var outputStream = outputStream2;
+        let outputStream = outputStream2;
         ;
         try {
             this.get(inputStream, outputStream, byteArray);
             //if statement needs to be on the same line and ternary does not work the same way.
             return outputStream.toByteArray();
             ;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             this.close(outputStream);
@@ -70,14 +72,16 @@ export class StreamUtil extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CLOSE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CLOSE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
 }

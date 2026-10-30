@@ -22,7 +22,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameOptionsForm } from './GameOptionsForm.js';
-//not GWT import - same folder const GameOptionsForm
+//sameFolderImports - not GWT import - same folder const GameOptionsForm
 export class GameOptionsFormFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,15 +36,17 @@ export class GameOptionsFormFactory extends Object {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return new GameOptionsForm(commandListener, title, backgrounBasicColor, foregroundBasicColor);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return CommandForm.getNullCommandForm();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return CommandForm.getNullCommandForm();
+                ;
+            }
         }
     }
 }

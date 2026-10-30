@@ -32,10 +32,10 @@ export class SequenceAI extends ArrayAI {
     }
     next() {
         this.index++;
-        var artificialIntelligenceInterface = this.getSelectedArtificialIntelligenceInterface();
+        let artificialIntelligenceInterface = this.getSelectedArtificialIntelligenceInterface();
         ;
         if (artificialIntelligenceInterface.getId() == ArtificialIntelligence.AI_ID) {
-            var artificialIntelligenceTransitionInterface = artificialIntelligenceInterface;
+            let artificialIntelligenceTransitionInterface = artificialIntelligenceInterface;
             ;
             artificialIntelligenceTransitionInterface.transition();
         }
@@ -56,7 +56,7 @@ export class SequenceAI extends ArrayAI {
         return SequenceAI.SEQUENCE_AI;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(super.toString());
         stringBuffer.append(" Selected AI: ");

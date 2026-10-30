@@ -14,9 +14,9 @@
 //not GWT import const GeographicMapCellPosition
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PathFindingNodeCostInfoFactoryBase } from './PathFindingNodeCostInfoFactoryBase.js';
-//not GWT import - same folder const PathFindingNodeCostInfoFactoryBase
+//sameFolderImports - not GWT import - same folder const PathFindingNodeCostInfoFactoryBase
 import { PathFindingNodeCostInfo } from './PathFindingNodeCostInfo.js';
-//not GWT import - same folder const PathFindingNodeCostInfo
+//sameFolderImports - not GWT import - same folder const PathFindingNodeCostInfo
 export class PathFindingNodeCostInfoFactory extends PathFindingNodeCostInfoFactoryBase {
     constructor(max) {
         super();
@@ -26,9 +26,16 @@ export class PathFindingNodeCostInfoFactory extends PathFindingNodeCostInfoFacto
     create(geographicMapInterface, goingToGeographicMapCellPosition, geographicMapCellPosition, costFromStart, costToEnd) {
         this.getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition, costFromStart, costToEnd);
     }
+    getInstance(...args) {
+        if (args.length === 4 && typeof args[2] === 'number' && typeof args[3] === 'number')
+            return this.getInstance$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 2)
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
+    }
     //@Throws(Exception.constructor)
-    getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition, costFromStart, costToEnd) {
-        var pathFindingNodeCostInfo = this.getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition);
+    getInstance$overload1(goingToGeographicMapCellPosition, geographicMapCellPosition, costFromStart, costToEnd) {
+        let pathFindingNodeCostInfo = this.getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition);
         ;
         if (pathFindingNodeCostInfo ==
             null) {
@@ -44,7 +51,7 @@ export class PathFindingNodeCostInfoFactory extends PathFindingNodeCostInfoFacto
         //if statement needs to be on the same line and ternary does not work the same way.
         return pathFindingNodeCostInfo;
     }
-    getInstance(goingToFromGeographicMapCellPosition, geographicMapCellPosition) {
+    getInstance$overload2(goingToFromGeographicMapCellPosition, geographicMapCellPosition) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.pathFindingNodeCostInfoAdjacencyList[geographicMapCellPosition.getId()][goingToFromGeographicMapCellPosition.getId()];
     }

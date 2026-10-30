@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const ProcessPaintable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonsPaintableComposite } from './TouchButtonsPaintableComposite.js';
-//not GWT import - same folder const TouchButtonsPaintableComposite
+//sameFolderImports - not GWT import - same folder const TouchButtonsPaintableComposite
 export class TouchButtonsPaintableCompositeFactory extends Object {
     static getInstance(inputMappingInterface, basicColor) {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const BasicColor
+//sameFolderImports - not GWT import - same folder const BasicColor
 export class BasicColorArrayIndexer extends Object {
     constructor(basicColorArray) {
         super();

@@ -27,7 +27,7 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameInputMotionInfoAPI5 } from './GameInputMotionInfoAPI5.js';
-//not GWT import - same folder const GameInputMotionInfoAPI5
+//sameFolderImports - not GWT import - same folder const GameInputMotionInfoAPI5
 export class GameInputMotionEventProcessorAPI5 extends BaseGameInputMotionEventProcessor {
     static getInstance() {
         if (GameInputMotionEventProcessorAPI5.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -40,17 +40,17 @@ export class GameInputMotionEventProcessorAPI5 extends BaseGameInputMotionEventP
         super();
         this.logUtil = LogUtil.getInstance();
         this.displayInfo = DisplayInfoSingleton.getInstance();
-        var size = GameInputMotionInfoAPI5.getInstance().MAX_POINTERS;
+        let size = GameInputMotionInfoAPI5.getInstance().MAX_POINTERS;
         ;
         this.motionRecognizerArray = new Array(size);
         this.TOTAL_MINUS_ONE = size;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.motionRecognizerArray[index] = new AllMotionRecognizer();
         }
     }
     isValid(pointerId) {
         if (pointerId > this.TOTAL_MINUS_ONE) {
-            var message = "Log that the pointer Ids are not what would be expected or Android has more than what I set my stuff to support pointerId: ";
+            let message = "Log that the pointer Ids are not what would be expected or Android has more than what I set my stuff to support pointerId: ";
             ;
             ForcedLogUtil.log(message + pointerId, this);
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,69 +63,71 @@ export class GameInputMotionEventProcessorAPI5 extends BaseGameInputMotionEventP
     }
     process(motionEvent) {
         try {
-            var action = motionEvent.getAction();
+            let action = motionEvent.getAction();
             ;
-            var total = this.motionRecognizerArray.length;
+            let total = this.motionRecognizerArray.length;
             ;
             if (total > motionEvent.getPointerCount()) {
                 total = motionEvent.getPointerCount();
             }
             else {
-                var message = "Log that Android has more pointers than I have expected so increase it motionEvent.getPointerCount(): ";
+                let message = "Log that Android has more pointers than I have expected so increase it motionEvent.getPointerCount(): ";
                 ;
                 ForcedLogUtil.log(message + motionEvent.getPointerCount(), this);
             }
-            var totalMinusOne = total - 1;
+            let totalMinusOne = total - 1;
             ;
             if (action == MotionEvent.ACTION_DOWN) {
-                for (var pointerIndex = totalMinusOne; pointerIndex >= 0; pointerIndex--) {
-                    var pointerId = motionEvent.getPointerId(pointerIndex);
+                for (let pointerIndex = totalMinusOne; pointerIndex >= 0; pointerIndex--) {
+                    let pointerId = motionEvent.getPointerId(pointerIndex);
                     ;
                     if (this.isValid(pointerId)) {
-                        var scalableListener = this.displayInfo.getScalableListener();
+                        let scalableListener = this.displayInfo.getScalableListener();
                         ;
-                        var x = Math.round(((motionEvent.getX(pointerIndex) - this.displayInfo.getLeft()) / scalableListener.getRatio(this.displayInfo.getRatio())));
+                        let x = globalThis.Math.trunc(((motionEvent.getX(pointerIndex) - this.displayInfo.getLeft()) / scalableListener.getRatio(this.displayInfo.getRatio())));
                         ;
-                        var y = Math.round(((motionEvent.getY(pointerIndex) - this.displayInfo.getTop()) / scalableListener.getRatio(this.displayInfo.getRatio())));
+                        let y = globalThis.Math.trunc(((motionEvent.getY(pointerIndex) - this.displayInfo.getTop()) / scalableListener.getRatio(this.displayInfo.getRatio())));
                         ;
                         this.motionRecognizerArray[pointerId].processStartMotionEvent(x, y, motionEvent.getDeviceId(), 0);
                     }
                 }
             }
             else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
-                for (var pointerIndex = totalMinusOne; pointerIndex >= 0; pointerIndex--) {
-                    var pointerId = motionEvent.getPointerId(pointerIndex);
+                for (let pointerIndex = totalMinusOne; pointerIndex >= 0; pointerIndex--) {
+                    let pointerId = motionEvent.getPointerId(pointerIndex);
                     ;
                     if (this.isValid(pointerId)) {
-                        var scalableListener = this.displayInfo.getScalableListener();
+                        let scalableListener = this.displayInfo.getScalableListener();
                         ;
-                        var x = Math.round(((motionEvent.getX(pointerIndex) - this.displayInfo.getLeft()) / scalableListener.getRatio(this.displayInfo.getRatio())));
+                        let x = globalThis.Math.trunc(((motionEvent.getX(pointerIndex) - this.displayInfo.getLeft()) / scalableListener.getRatio(this.displayInfo.getRatio())));
                         ;
-                        var y = Math.round(((motionEvent.getY(pointerIndex) - this.displayInfo.getTop()) / scalableListener.getRatio(this.displayInfo.getRatio())));
+                        let y = globalThis.Math.trunc(((motionEvent.getY(pointerIndex) - this.displayInfo.getTop()) / scalableListener.getRatio(this.displayInfo.getRatio())));
                         ;
                         this.motionRecognizerArray[pointerId].processEndMotionEvent(x, y, motionEvent.getDeviceId(), 0);
                     }
                 }
             }
             else if (action == MotionEvent.ACTION_MOVE) {
-                for (var pointerIndex = totalMinusOne; pointerIndex >= 0; pointerIndex--) {
-                    var pointerId = motionEvent.getPointerId(pointerIndex);
+                for (let pointerIndex = totalMinusOne; pointerIndex >= 0; pointerIndex--) {
+                    let pointerId = motionEvent.getPointerId(pointerIndex);
                     ;
                     if (this.isValid(pointerId)) {
-                        var scalableListener = this.displayInfo.getScalableListener();
+                        let scalableListener = this.displayInfo.getScalableListener();
                         ;
-                        var x = Math.round(((motionEvent.getX(pointerIndex) - this.displayInfo.getLeft()) / scalableListener.getRatio(this.displayInfo.getRatio())));
+                        let x = globalThis.Math.trunc(((motionEvent.getX(pointerIndex) - this.displayInfo.getLeft()) / scalableListener.getRatio(this.displayInfo.getRatio())));
                         ;
-                        var y = Math.round(((motionEvent.getY(pointerIndex) - this.displayInfo.getTop()) / scalableListener.getRatio(this.displayInfo.getRatio())));
+                        let y = globalThis.Math.trunc(((motionEvent.getY(pointerIndex) - this.displayInfo.getTop()) / scalableListener.getRatio(this.displayInfo.getRatio())));
                         ;
                         this.motionRecognizerArray[pointerId].processDraggedMotionEvent(x, y, motionEvent.getDeviceId(), 0);
                     }
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.PROCESS, e);
+            }
         }
     }
 }

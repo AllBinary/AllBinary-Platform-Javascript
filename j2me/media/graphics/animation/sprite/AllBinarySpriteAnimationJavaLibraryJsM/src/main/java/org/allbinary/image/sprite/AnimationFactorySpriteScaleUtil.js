@@ -50,16 +50,16 @@ export class AnimationFactorySpriteScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     createImage(image, width, height, scaleWidth, scaleHeight) {
-        var spriteFactory = SpriteFactory.getInstance();
+        let spriteFactory = SpriteFactory.getInstance();
         ;
-        var sprite;
+        let sprite;
         ;
-        var scaledImage;
+        let scaledImage;
         ;
         if (scaleWidth != 0 && scaleHeight != 0) {
-            var scaleX = (scaleWidth) / (width);
+            let scaleX = (scaleWidth) / (width);
             ;
-            var scaleY = (scaleHeight) / (height);
+            let scaleY = (scaleHeight) / (height);
             ;
             if ((scaleX == 1.0 && scaleY == 1.0) || (scaleX == 0.0 || scaleY == 0.0)) {
                 scaledImage = this.openGLUtil.addImage(image);
@@ -67,18 +67,18 @@ export class AnimationFactorySpriteScaleUtil extends Object {
             }
             else {
                 if (this.openGLESImageExclusionUtil.isCustomScaling(image)) {
-                    var width2 = this.j2seMath.round((scaleWidth) - 0.5);
+                    let width2 = this.j2seMath.round((scaleWidth) - 0.5);
                     ;
-                    var height2 = this.j2seMath.round((scaleHeight) - 0.5);
+                    let height2 = this.j2seMath.round((scaleHeight) - 0.5);
                     ;
-                    var multiplesOf16Width = width2 / 16;
+                    let multiplesOf16Width = globalThis.Math.trunc(width2 / 16);
                     ;
-                    var by16Width = multiplesOf16Width * 16;
+                    let by16Width = multiplesOf16Width * 16;
                     ;
                     scaleX = (by16Width) / width;
-                    var multiplesOf16Height = height2 / 16;
+                    let multiplesOf16Height = globalThis.Math.trunc(height2 / 16);
                     ;
-                    var by16Height = multiplesOf16Height * 16;
+                    let by16Height = multiplesOf16Height * 16;
                     ;
                     scaleY = (by16Height) / height;
                     if (scaleWidth < width) {
@@ -89,7 +89,7 @@ export class AnimationFactorySpriteScaleUtil extends Object {
                     }
                 }
                 scaledImage = this.imageScaleUtil.createImage2(this.imageCache, image, scaleX, 1.0, scaleY, 1.0, true);
-                sprite = spriteFactory.createSprite(scaledImage, Math.round((width * scaleX)), Math.round((height * scaleY)));
+                sprite = spriteFactory.createSprite(scaledImage, globalThis.Math.trunc((width * scaleX)), globalThis.Math.trunc((height * scaleY)));
             }
         }
         else {

@@ -49,7 +49,7 @@ import { NullCloseable } from '../../../../org/allbinary/logic/io/NullCloseable.
 //not GWT import const NullCloseable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OpenGLFeatureFactory } from './OpenGLFeatureFactory.js';
-//not GWT import - same folder const OpenGLFeature
+//sameFolderImports - not GWT import - same folder const OpenGLFeature
 export class OpenGLConfiguration extends Object {
     static getInstance() {
         if (OpenGLConfiguration.instance == NullUtil.getInstance().NULL_OBJECT) {
@@ -76,23 +76,25 @@ export class OpenGLConfiguration extends Object {
             else {
                 this.write();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
     //@Throws(Exception.constructor)
     read() {
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
-        var fileInputStreamFactory = FileStreamFactory.getInstance();
+        let fileInputStreamFactory = FileStreamFactory.getInstance();
         ;
-        var fileInputStream = fileInputStreamFactory.getFileInputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
+        let fileInputStream = fileInputStreamFactory.getFileInputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
         ;
-        var dataInputStream = new DataInputStream(fileInputStream);
+        let dataInputStream = new DataInputStream(fileInputStream);
         ;
-        var openGLValue = dataInputStream.readInt();
+        let openGLValue = dataInputStream.readInt();
         ;
         if (openGLValue == 0) {
             this.setOpenGL(false);
@@ -103,7 +105,7 @@ export class OpenGLConfiguration extends Object {
         else {
             throw new Exception("Invalid OpenGL Setting");
         }
-        var version = dataInputStream.readUTF();
+        let version = dataInputStream.readUTF();
         ;
         if (this.tsUtil.compareTo(version, openGLFeatureFactory.OPENGL_AUTO_SELECT.getName()) == 0) {
             this.setVersionSelector(openGLFeatureFactory.OPENGL_AUTO_SELECT);
@@ -114,7 +116,7 @@ export class OpenGLConfiguration extends Object {
         else {
             throw new Exception("OpenGLConfiguration: Error reading version selector: " + version);
         }
-        var type = dataInputStream.readUTF();
+        let type = dataInputStream.readUTF();
         ;
         if (this.tsUtil.compareTo(type, openGLFeatureFactory.OPENGL_AS_GAME_THREAD.getName()) == 0) {
             this.setType(openGLFeatureFactory.OPENGL_AS_GAME_THREAD);
@@ -125,7 +127,7 @@ export class OpenGLConfiguration extends Object {
         else {
             throw new Exception("OpenGLConfiguration: Error reading image color");
         }
-        var imageColor = dataInputStream.readUTF();
+        let imageColor = dataInputStream.readUTF();
         ;
         if (this.tsUtil.compareTo(imageColor, openGLFeatureFactory.IMAGE_COLOR_DEPTH_4444.getName()) == 0) {
             this.setImageColor(openGLFeatureFactory.IMAGE_COLOR_DEPTH_4444);
@@ -139,7 +141,7 @@ export class OpenGLConfiguration extends Object {
         else {
             throw new Exception("OpenGLConfiguration: Error reading image color: " + imageColor);
         }
-        var color = dataInputStream.readUTF();
+        let color = dataInputStream.readUTF();
         ;
         if (this.tsUtil.compareTo(color, openGLFeatureFactory.OPENGL_COLOR_DEPTH_4444.getName()) == 0) {
             this.setColor(openGLFeatureFactory.OPENGL_COLOR_DEPTH_4444);
@@ -157,15 +159,15 @@ export class OpenGLConfiguration extends Object {
     }
     //@Throws(Exception.constructor)
     write() {
-        var closeable = NullCloseable.NULL_CLOSEABLE;
+        let closeable = NullCloseable.NULL_CLOSEABLE;
         ;
         try {
             PreLogUtil.put("Write Configuration: " + this.toString(), this, "write");
-            var fileInputStreamFactory = FileStreamFactory.getInstance();
+            let fileInputStreamFactory = FileStreamFactory.getInstance();
             ;
-            var fileOutputStream = fileInputStreamFactory.getFileOutputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
+            let fileOutputStream = fileInputStreamFactory.getFileOutputStreamInstance(StringUtil.getInstance().EMPTY_STRING, this.FILE);
             ;
-            var dataOutputStream = new AbDataOutputStream(fileOutputStream);
+            let dataOutputStream = new AbDataOutputStream(fileOutputStream);
             ;
             closeable = dataOutputStream;
             if (this.isOpenGL()) {
@@ -179,10 +181,12 @@ export class OpenGLConfiguration extends Object {
             dataOutputStream.writeUTF(this.getImageColor().getName());
             dataOutputStream.writeUTF(this.getColor().getName());
             dataOutputStream.flush();
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             StreamUtil.getInstance().close(closeable);
@@ -190,10 +194,10 @@ export class OpenGLConfiguration extends Object {
     }
     //@Throws(Exception.constructor)
     init() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
         if (ChangedGameFeatureListener.getInstance().isChangedFeature(MainFeatureFactory.getInstance().STATIC)) {
-            var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+            let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
             ;
             if (this.isOpenGL()) {
                 if (features.isFeature(openGLFeatureFactory.OPENGL_2D) || features.isFeature(openGLFeatureFactory.OPENGL_3D) || features.isFeature(openGLFeatureFactory.OPENGL_2D_AND_3D)) {
@@ -227,11 +231,11 @@ export class OpenGLConfiguration extends Object {
     }
     //@Throws(Exception.constructor)
     update(gameFeature, colorLocked) {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
-        var modified = false;
+        let modified = false;
         ;
         if (gameFeature == openGLFeatureFactory.OPENGL) {
             if (features.isFeature(gameFeature)) {
@@ -328,9 +332,9 @@ export class OpenGLConfiguration extends Object {
         return this.type;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
         stringBuffer.append(" isOpenGL: ");
         stringBuffer.appendboolean(this.isOpenGL());

@@ -24,11 +24,18 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TransformInfoData } from './TransformInfoData.js';
-//not GWT import - same folder const TransformInfoData
+//sameFolderImports - not GWT import - same folder const TransformInfoData
 import { TransformInfoProperties } from './TransformInfoProperties.js';
-//not GWT import - same folder const TransformInfoProperties
+//sameFolderImports - not GWT import - same folder const TransformInfoProperties
 export class TransformInfoPropertiesFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TransformInfoPropertiesFactory.instance;
     }
@@ -37,45 +44,45 @@ export class TransformInfoPropertiesFactory extends Object {
         this.logUtil = LogUtil.getInstance();
     }
     //@Throws(Exception.constructor)
-    getInstance(node) {
-        var transformInfoChildNodeList = node.getChildNodes();
+    getInstance$overload2(node) {
+        let transformInfoChildNodeList = node.getChildNodes();
         ;
-        var transformInfoData = TransformInfoData.getInstance();
+        let transformInfoData = TransformInfoData.getInstance();
         ;
-        var attributes = node.getAttributes();
+        let attributes = node.getAttributes();
         ;
-        var attrNode = attributes.getNamedItem(transformInfoData.NAME);
+        let attrNode = attributes.getNamedItem(transformInfoData.NAME);
         ;
-        var name = attrNode.getValue();
+        let name = attrNode.getValue();
         ;
         if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEW)) {
             this.logUtil.putF(CommonLabels.getInstance().NEXT + " View Name: " + name, this, "toTransformInfoPropertiesHashMap()");
         }
-        var labelNode = DomSearchHelper.getNodeNoThrow(transformInfoData.LABEL, transformInfoChildNodeList);
+        let labelNode = DomSearchHelper.getNodeNoThrow(transformInfoData.LABEL, transformInfoChildNodeList);
         ;
-        var label = DomNodeHelper.getTextNodesValue(labelNode);
+        let label = DomNodeHelper.getTextNodesValue(labelNode);
         ;
         if (label ==
             null) {
             label = name;
         }
-        var descriptionNode = DomSearchHelper.getNode(transformInfoData.DESCRIPTION, transformInfoChildNodeList);
+        let descriptionNode = DomSearchHelper.getNode(transformInfoData.DESCRIPTION, transformInfoChildNodeList);
         ;
-        var description = DomNodeHelper.getTextNodesValue(descriptionNode);
+        let description = DomNodeHelper.getTextNodesValue(descriptionNode);
         ;
-        var objectFileNode = DomSearchHelper.getNode(transformInfoData.OBJECTFILENAME, transformInfoChildNodeList);
+        let objectFileNode = DomSearchHelper.getNode(transformInfoData.OBJECTFILENAME, transformInfoChildNodeList);
         ;
-        var objectFileName = DomNodeHelper.getTextNodeValue(objectFileNode);
+        let objectFileName = DomNodeHelper.getTextNodeValue(objectFileNode);
         ;
-        var objectConfigFileNode = DomSearchHelper.getNode(transformInfoData.OBJECTCONFIGFILENAME, transformInfoChildNodeList);
+        let objectConfigFileNode = DomSearchHelper.getNode(transformInfoData.OBJECTCONFIGFILENAME, transformInfoChildNodeList);
         ;
-        var objectConfigFileName = DomNodeHelper.getTextNodeValue(objectConfigFileNode);
+        let objectConfigFileName = DomNodeHelper.getTextNodeValue(objectConfigFileNode);
         ;
-        var templateFileNode = DomSearchHelper.getNode(transformInfoData.TEMPLATEFILENAME, transformInfoChildNodeList);
+        let templateFileNode = DomSearchHelper.getNode(transformInfoData.TEMPLATEFILENAME, transformInfoChildNodeList);
         ;
-        var templateFileName = DomNodeHelper.getTextNodeValue(templateFileNode);
+        let templateFileName = DomNodeHelper.getTextNodeValue(templateFileNode);
         ;
-        var transformInfoProperties = new TransformInfoProperties(name, label, description, objectFileName, objectConfigFileName, templateFileName);
+        let transformInfoProperties = new TransformInfoProperties(name, label, description, objectFileName, objectConfigFileName, templateFileName);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return transformInfoProperties;

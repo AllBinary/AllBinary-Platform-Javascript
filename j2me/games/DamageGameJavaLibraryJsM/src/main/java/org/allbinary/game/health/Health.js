@@ -19,9 +19,9 @@ const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLog
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const HealthInterface
+//sameFolderImports - not GWT import - same folder const HealthInterface
 import { NullHealthListener } from './NullHealthListener.js';
-//not GWT import - same folder const HealthListenerInterface
+//sameFolderImports - not GWT import - same folder const HealthListenerInterface
 export class Health extends Object {
     constructor(maxHealth) {
         super();
@@ -32,7 +32,7 @@ export class Health extends Object {
         this.setHealth(maxHealth);
     }
     heal(ahealth) {
-        var newHealth = this.getHealth() + ahealth;
+        let newHealth = this.getHealth() + ahealth;
         ;
         if (newHealth > this.getMaxHealth()) {
             this.setHealth(this.getMaxHealth());
@@ -56,7 +56,7 @@ export class Health extends Object {
     }
     damage(ahealth) {
         if (ahealth < 0) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append("******* Trying to heal when damaging. Damage: ");
             stringBuffer.appendint(ahealth);
@@ -66,7 +66,7 @@ export class Health extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var health = this.getHealth() - ahealth;
+        let health = this.getHealth() - ahealth;
         ;
         this.setHealth(health);
     }
@@ -110,7 +110,7 @@ export class Health extends Object {
         this.healthListenerInterface = healthGraphic;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(Health.HEALTH_LABEL);
         stringBuffer.appendint(this.health);

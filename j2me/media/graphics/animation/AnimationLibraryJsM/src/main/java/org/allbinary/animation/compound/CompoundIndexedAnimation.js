@@ -18,7 +18,7 @@ import { PrimitiveIntUtil } from '../../../../org/allbinary/logic/math/Primitive
 //not GWT import const PrimitiveIntUtil
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const CompoundAnimationInterface
+//sameFolderImports - not GWT import - same folder const CompoundAnimationInterface
 export class CompoundIndexedAnimation extends IndexedAnimation {
     constructor(animationInterfaceArray, animationBehavior) {
         super(animationBehavior);
@@ -27,26 +27,26 @@ export class CompoundIndexedAnimation extends IndexedAnimation {
         this.circularIndexUtil = CircularIndexUtil.createInstance(this.animationInterfaceArray.length);
     }
     setFrame(index) {
-        var indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
+        let indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
         ;
         indexedAnimation.setFrame(index);
     }
     getFrame() {
-        var indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
+        let indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return indexedAnimation.getFrame();
         ;
     }
     getSize() {
-        var indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
+        let indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return indexedAnimation.getSize();
         ;
     }
     previousFrame() {
-        var indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
+        let indexedAnimation = this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
         ;
         indexedAnimation.previousFrame();
     }
@@ -72,19 +72,19 @@ export class CompoundIndexedAnimation extends IndexedAnimation {
         return this.animationInterfaceArray[this.circularIndexUtil.getIndex()];
     }
     nextAnimation() {
-        var frame = this.getFrame();
+        let frame = this.getFrame();
         ;
         this.circularIndexUtil.next();
         this.setFrame(frame);
     }
     previousAnimation() {
-        var frame = this.getFrame();
+        let frame = this.getFrame();
         ;
         this.circularIndexUtil.previous();
         this.setFrame(frame);
     }
     setAnimation(index) {
-        var frame = this.getFrame();
+        let frame = this.getFrame();
         ;
         this.circularIndexUtil.setIndex(index);
         this.setFrame(frame);
@@ -98,7 +98,7 @@ export class CompoundIndexedAnimation extends IndexedAnimation {
     }
     //@Throws(Exception.constructor)
     set(gl) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].set(gl);
         }
     }

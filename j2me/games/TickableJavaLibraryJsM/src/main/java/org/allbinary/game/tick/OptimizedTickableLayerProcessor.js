@@ -16,7 +16,7 @@ import { LayerProcessor } from '../../../../org/allbinary/layer/LayerProcessor.j
 //not GWT import const LayerProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OptimizedTickableLayerManager } from './OptimizedTickableLayerManager.js';
-//not GWT import - same folder const OptimizedTickableLayerManager
+//sameFolderImports - not GWT import - same folder const OptimizedTickableLayerManager
 export class OptimizedTickableLayerProcessor extends LayerProcessor {
     constructor() {
         super(new OptimizedTickableLayerManager());
@@ -24,7 +24,7 @@ export class OptimizedTickableLayerProcessor extends LayerProcessor {
     }
     //@Throws(Exception.constructor)
     processAt(allBinaryLayerManager, layerInterface, index) {
-        var tickableInterface = layerInterface;
+        let tickableInterface = layerInterface;
         ;
         tickableInterface.processTick(allBinaryLayerManager);
     }

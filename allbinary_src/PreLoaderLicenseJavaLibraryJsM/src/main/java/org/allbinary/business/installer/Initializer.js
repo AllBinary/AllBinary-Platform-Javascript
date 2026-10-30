@@ -37,25 +37,25 @@ import { StringValidationUtil } from '../../../../org/allbinary/logic/string/Str
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitializerData } from './InitializerData.js';
-//not GWT import - same folder const InitializerData
+//sameFolderImports - not GWT import - same folder const InitializerData
 export class Initializer extends Object {
     constructor(map) {
         super();
         this.logUtil = LogUtil.getInstance();
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var hashMap = StdUtil.getInstance().createHashMap();
+        let hashMap = StdUtil.getInstance().createHashMap();
         ;
-        var keys = map.keySet();
+        let keys = map.keySet();
         ;
-        var keyArray = keys.toArray();
+        let keyArray = keys.toArray();
         ;
-        var size = keyArray.length;
+        let size = keyArray.length;
         ;
-        for (var index = 0; index < size; index++) {
-            var key = keyArray[index];
+        for (let index = 0; index < size; index++) {
+            let key = keyArray[index];
             ;
-            var values = map.get(key);
+            let values = map.get(key);
             ;
             hashMap.put(key.toCharArray().slice(0).join(''), toCharArray());
             stringBuffer.delete(0, stringBuffer.length());
@@ -74,7 +74,7 @@ export class Initializer extends Object {
     }
     getFormData(hashMap) {
         try {
-            var initializerData = InitializerData.getInstance();
+            let initializerData = InitializerData.getInstance();
             ;
             this.userJdbcDriver = hashMap.get(initializerData.CUSTOMERJDBCDRIVER);
             this.userName = hashMap.get(initializerData.CUSTOMERNAME);
@@ -111,10 +111,12 @@ export class Initializer extends Object {
             this.staticPagesSchema = hashMap.get(initializerData.STATICPAGESSCHEMA);
             this.staticPagesServer = hashMap.get(initializerData.STATICPAGESSERVER);
             this.staticPagesPort = hashMap.get(initializerData.STATICPAGESPORT);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Unable to get form data", this, "getFormData()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Unable to get form data", this, "getFormData()", e);
+            }
         }
     }
     isJdbcDriverValid(jdbcDriverClassPathString) {
@@ -122,25 +124,27 @@ export class Initializer extends Object {
             Class.forName(jdbcDriverClassPathString).newInstance();
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.IS_VALID, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.IS_VALID, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     isValid() {
-        var isValid = true;
+        let isValid = true;
         ;
         if (!this.isJdbcDriverValid(this.userJdbcDriver)) {
             isValid = false;
         }
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (!stringValidationUtil.isValidRequired(this.userName, Initializer.MIN, Initializer.MAXDB)) {
             isValid = false;
@@ -203,7 +207,7 @@ export class Initializer extends Object {
         return isValid;
     }
     getJdbcDriverValidationInfo(jdbcDriver) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("The JDBC driver (");
         stringBuffer.append(jdbcDriver);
@@ -213,7 +217,7 @@ export class Initializer extends Object {
         ;
     }
     getJdbcDriverSolutionInfo() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("The following describes the possible problems and solutions regarding the Jdbc Driver error(s):<p/>");
         stringBuffer.append("1. A JDBC driver you specified is not in your classpath.<br/>");
@@ -229,15 +233,15 @@ export class Initializer extends Object {
         ;
     }
     getInvalidInfo() {
-        var isJdbcDriversValid = true;
+        let isJdbcDriversValid = true;
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         if (!this.isJdbcDriverValid(this.userJdbcDriver)) {
             isJdbcDriversValid = false;
             stringBuffer.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver));
         }
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (!stringValidationUtil.isValidRequired(this.userName, Initializer.MIN, Initializer.MAXDB)) {
             stringBuffer.append("User db name should be < " + Initializer.MAXDB + " and > " + Initializer.MIN + " characters in length.<br />");
@@ -310,7 +314,7 @@ export class Initializer extends Object {
     //@Throws(Exception.constructor)
     set() {
         this.logUtil.putF("Creating DB connection files", this, "set()");
-        var userDbInitInfo = new UserDbInitInfo(false);
+        let userDbInitInfo = new UserDbInitInfo(false);
         ;
         userDbInitInfo.setJdbcDriver(this.userJdbcDriver);
         userDbInitInfo.setName(this.userName);
@@ -321,7 +325,7 @@ export class Initializer extends Object {
         userDbInitInfo.setPort(this.userPort);
         userDbInitInfo.setHasRead(true);
         userDbInitInfo.write();
-        var historyDbInitInfo = new HistoryDbInitInfo(false);
+        let historyDbInitInfo = new HistoryDbInitInfo(false);
         ;
         historyDbInitInfo.setJdbcDriver(this.historyJdbcDriver);
         historyDbInitInfo.setName(this.historyName);
@@ -332,7 +336,7 @@ export class Initializer extends Object {
         historyDbInitInfo.setPort(this.historyPort);
         historyDbInitInfo.setHasRead(true);
         historyDbInitInfo.write();
-        var logDbInitInfo = new LogDbInitInfo(false);
+        let logDbInitInfo = new LogDbInitInfo(false);
         ;
         logDbInitInfo.setJdbcDriver(this.logJdbcDriver);
         logDbInitInfo.setName(this.logName);
@@ -343,7 +347,7 @@ export class Initializer extends Object {
         logDbInitInfo.setPort(this.logPort);
         logDbInitInfo.setHasRead(true);
         logDbInitInfo.write();
-        var staticPagesDbInitInfo = new StaticPagesDbInitInfo(false);
+        let staticPagesDbInitInfo = new StaticPagesDbInitInfo(false);
         ;
         staticPagesDbInitInfo.setJdbcDriver(this.staticPagesJdbcDriver);
         staticPagesDbInitInfo.setName(this.staticPagesName);
@@ -354,7 +358,7 @@ export class Initializer extends Object {
         staticPagesDbInitInfo.setPort(this.staticPagesPort);
         staticPagesDbInitInfo.setHasRead(true);
         staticPagesDbInitInfo.write();
-        var inventoryDbInitInfo = new InventoryDbInitInfo(false);
+        let inventoryDbInitInfo = new InventoryDbInitInfo(false);
         ;
         inventoryDbInitInfo.setJdbcDriver(this.inventoryJdbcDriver);
         inventoryDbInitInfo.setName(this.inventoryName);

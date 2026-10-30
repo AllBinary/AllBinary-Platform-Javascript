@@ -25,7 +25,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { AbFileOutputStream } from '../../../../../org/allbinary/logic/io/AbFileOutputStream.js';
 //not GWT import const AbFileOutputStream
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
-//not GWT import - same folder const AbFile
+//sameFolderImports - not GWT import - same folder const AbFile
 export class FileLockUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -37,14 +37,14 @@ export class FileLockUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getAll(vector, isReturnOnFailure) {
-        var fileLockVector = new BasicArrayListD();
+        let fileLockVector = new BasicArrayListD();
         ;
-        var size = vector.size();
+        let size = vector.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var file = vector.get(index);
+        for (let index = 0; index < size; index++) {
+            let file = vector.get(index);
             ;
-            var fileLock = this.getLock(file);
+            let fileLock = this.getLock(file);
             ;
             if (fileLock !=
                 null) {
@@ -69,7 +69,7 @@ export class FileLockUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getAllOrNone(vector) {
-        var fileLockVector = this.getAll(vector, true);
+        let fileLockVector = this.getAll(vector, true);
         ;
         if (vector.size() != fileLockVector.size()) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,35 +80,47 @@ export class FileLockUtil extends Object {
             return fileLockVector;
         }
     }
+    getLock(...args) {
+        if (args.length === 1)
+            return this.getLock$overload1(args[0]);
+        if (args.length === 1)
+            return this.getLock$overload2(args[0]);
+        if (args.length === 1)
+            return this.getLock$overload3(args[0]);
+        throw new TypeError('No matching overload: getLock');
+    }
     //@Throws(Exception.constructor)
-    getLock(file) {
+    getLock$overload1(file) {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.getLock(AbFileOutputStream.createFromAbFileAppend(file, true));
             ;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Exception returns null", this, "getLock", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Exception returns null", this, "getLock", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
+            }
         }
-        finally {
-        }
+        finally { }
     }
     //@Throws(Exception.constructor)
-    getLock(fileOutputStream) {
+    getLock$overload2(fileOutputStream) {
         try {
-            var fileLock = this.getLock(fileOutputStream.getChannel());
+            let fileLock = this.getLock(fileOutputStream.getChannel());
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return fileLock;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Exception returns null", this, "getLock", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Exception returns null", this, "getLock", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
+            }
         }
         finally {
             this.logUtil.putF("Finally - Closing FileOutputStream", this, "getLock");
@@ -116,18 +128,20 @@ export class FileLockUtil extends Object {
         }
     }
     //@Throws(Exception.constructor)
-    getLock(fileChannel) {
+    getLock$overload3(fileChannel) {
         try {
-            var fileLock = fileChannel.tryLock();
+            let fileLock = fileChannel.tryLock();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return fileLock;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Exception returns null", this, "getLock", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Exception returns null", this, "getLock", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
+            }
         }
         finally {
             this.logUtil.putF("Finally - Closing FileChannel", this, "getLock");

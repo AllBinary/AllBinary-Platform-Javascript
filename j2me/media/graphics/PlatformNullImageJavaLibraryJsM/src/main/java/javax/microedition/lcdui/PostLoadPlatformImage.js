@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlatformImage } from './PlatformImage.js';
-//not GWT import - same folder const PlatformImage
+//sameFolderImports - not GWT import - same folder const PlatformImage
 //PlatformNullImageJavaLibrary
 export class PostLoadPlatformImage extends PlatformImage {
     static getInstance() {

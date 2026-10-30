@@ -29,13 +29,13 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 export class SpecialCharacterUtil extends Object {
     static getHashMap() {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var commonPhoneStrings = CommonPhoneStrings.getInstance();
+        let commonPhoneStrings = CommonPhoneStrings.getInstance();
         ;
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
-        var hashMap = StdUtil.getInstance().createHashMap();
+        let hashMap = StdUtil.getInstance().createHashMap();
         ;
         hashMap.put("!", stringUtil.EMPTY_STRING);
         hashMap.put("@", stringUtil.EMPTY_STRING);

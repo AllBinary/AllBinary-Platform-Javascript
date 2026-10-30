@@ -45,9 +45,9 @@ export class DrawVerticalStringUtil extends Object {
         return DrawVerticalStringUtil.instance;
     }
     updateMeasurement(graphics, string) {
-        var openGLFeatureUtil = OpenGLFeatureUtil.getInstance();
+        let openGLFeatureUtil = OpenGLFeatureUtil.getInstance();
         ;
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.charHeight = font.getHeight();
         this.offsetY = 0;
@@ -59,16 +59,16 @@ export class DrawVerticalStringUtil extends Object {
             if (AndroidUtil.isAndroid()) {
             }
             else {
-                this.offsetY = 2 + (this.charHeight * 2 / 3);
+                this.offsetY = 2 + (globalThis.Math.trunc(this.charHeight * 2 / 3));
             }
         }
-        var size = string.length;
+        let size = string.length;
         ;
-        var aChar;
+        let aChar;
         ;
-        var offsetXArray = new Array(size);
+        let offsetXArray = new Array(size);
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             aChar = string[index];
             if (openGLFeatureUtil.isAnyThreed()) {
                 offsetXArray[index] = font.charWidth(aChar) / 2;
@@ -77,47 +77,49 @@ export class DrawVerticalStringUtil extends Object {
         this.offsetXArray = offsetXArray;
     }
     paintVerticle(graphics, string, x, y, anchor) {
-        var size = string.length;
+        let size = string.length;
         ;
-        var aChar;
+        let aChar;
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             aChar = string[index];
             graphics.drawChar(aChar, x + this.offsetXArray[index], y + (this.charHeight * index) + this.offsetY, anchor);
         }
     }
     drawCenterString(graphics, string, offset, length, x, y) {
-        var width = (graphics.getFont().substringWidth(string, offset, length) >> 1);
+        let width = (graphics.getFont().substringWidth(string, offset, length) >> 1);
         ;
         try {
             graphics.drawSubstring(string, offset, length, x - width, y, this.anchor);
-            //: 
         }
-        catch (e) {
-            PreLogUtil.put(new StringMaker().append("Exception: stringLength: ").appendint(string.length).append(" offset: ").appendint(offset).append(" currentLength: ").appendint(length).toString(), this, "drawCenterString");
+        catch (caught) {
+            {
+                const e = caught;
+                PreLogUtil.put(new StringMaker().append("Exception: stringLength: ").appendint(string.length).append(" offset: ").appendint(offset).append(" currentLength: ").appendint(length).toString(), this, "drawCenterString");
+            }
         }
     }
     drawCenterStrings(graphics, stringArray, maxWidth, x, y) {
-        var extraLines = 0;
+        let extraLines = 0;
         ;
-        for (var index = 0; index < stringArray.length; index++) {
-            var string = stringArray[index];
+        for (let index = 0; index < stringArray.length; index++) {
+            let string = stringArray[index];
             ;
             if (string != this.EMPTY_STRING) {
-                var width = graphics.getFont().stringWidth(string);
+                let width = graphics.getFont().stringWidth(string);
                 ;
-                var minTotalLines = 1;
+                let minTotalLines = 1;
                 ;
                 if (width > maxWidth) {
-                    minTotalLines = (width / maxWidth) + 1;
+                    minTotalLines = (globalThis.Math.trunc(width / maxWidth)) + 1;
                 }
-                var linePortion = string.length / minTotalLines;
+                let linePortion = string.length / minTotalLines;
                 ;
-                var offset = 0;
+                let offset = 0;
                 ;
-                var currentLength = linePortion;
+                let currentLength = linePortion;
                 ;
-                var size = string.length;
+                let size = string.length;
                 ;
                 while (offset < size) {
                     if (offset + currentLength > size) {

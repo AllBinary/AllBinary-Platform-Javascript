@@ -20,7 +20,7 @@ export class AndroidNumberKeyToJ2MECanvasNumberKey extends Object {
     }
     static getKey(key) {
         if (key < AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap.length) {
-            var value = AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[key];
+            let value = AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap[key];
             ;
             if (value != 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.

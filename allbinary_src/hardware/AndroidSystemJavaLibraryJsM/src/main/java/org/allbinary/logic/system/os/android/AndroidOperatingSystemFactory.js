@@ -28,7 +28,7 @@ const SystemProperties = globalThis.org.allbinary.logic.system.os.SystemProperti
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidOS } from './AndroidOS.js';
-//not GWT import - same folder const AndroidOS
+//sameFolderImports - not GWT import - same folder const AndroidOS
 export class AndroidOperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,11 +42,11 @@ export class AndroidOperatingSystemFactory extends Object {
     //@Throws(Exception.constructor)
     getOperatingSystemInstance() {
         try {
-            var GenericOperatingSystem;
+            let GenericOperatingSystem;
             ;
-            var systemProperties = SystemProperties.getInstance();
+            let systemProperties = SystemProperties.getInstance();
             ;
-            var osName = systemProperties.getName();
+            let osName = systemProperties.getName();
             ;
             if (this.tsUtil.compareTo(osName, OperatingSystems.getInstance().ANDROID) == 0) {
                 GenericOperatingSystem = new AndroidOS();
@@ -61,14 +61,16 @@ export class AndroidOperatingSystemFactory extends Object {
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return GenericOperatingSystem;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put("Failed to get OperatingSystem returning NoOperatingSystem", this, commonStrings.GET_INSTANCE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return NoOperatingSystem.NO_OPERATING_SYSTEM;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put("Failed to get OperatingSystem returning NoOperatingSystem", this, commonStrings.GET_INSTANCE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return NoOperatingSystem.NO_OPERATING_SYSTEM;
+            }
         }
     }
 }

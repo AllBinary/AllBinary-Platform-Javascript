@@ -18,9 +18,9 @@ import { IndexedAnimation } from '../../../../org/allbinary/animation/IndexedAni
 //not GWT import const CustomTextBox
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const TextInterface
+//sameFolderImports - not GWT import - same folder const TextInterface
 import { TextChangeListener } from './TextChangeListener.js';
-//not GWT import - same folder const TextChangeListener
+//sameFolderImports - not GWT import - same folder const TextChangeListener
 export class CustomTextBoxIndexedAnimation extends IndexedAnimation {
     constructor(customTextBox) {
         super(AnimationBehavior.getInstance());
@@ -41,7 +41,7 @@ export class CustomTextBoxIndexedAnimation extends IndexedAnimation {
         this.textChangeListener = textChangeListener;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.textChangeListener.onMeasure();
         this.textChangeListener = TextChangeListener.getInstance();

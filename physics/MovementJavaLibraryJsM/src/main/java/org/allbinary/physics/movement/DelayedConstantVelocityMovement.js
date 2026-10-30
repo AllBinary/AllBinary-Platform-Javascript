@@ -18,7 +18,7 @@ import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.
 //not GWT import const TimeDelayHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicConstantVelocityMovement } from './BasicConstantVelocityMovement.js';
-//not GWT import - same folder const BasicConstantVelocityMovement
+//sameFolderImports - not GWT import - same folder const BasicConstantVelocityMovement
 export class DelayedConstantVelocityMovement extends BasicConstantVelocityMovement {
     constructor(basicDecimal, velocityProperties) {
         super(basicDecimal, velocityProperties);

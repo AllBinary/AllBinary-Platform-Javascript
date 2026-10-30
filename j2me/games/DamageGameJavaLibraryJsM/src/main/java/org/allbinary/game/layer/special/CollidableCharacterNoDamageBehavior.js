@@ -18,7 +18,7 @@ import { CollisionTypeFactory } from '../../../../../org/allbinary/game/collisio
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CollidableDestroyableDamageableBehavior } from './CollidableDestroyableDamageableBehavior.js';
-//not GWT import - same folder const CollidableDestroyableDamageableLayer
+//sameFolderImports - not GWT import - same folder const CollidableDestroyableDamageableLayer
 export class CollidableCharacterNoDamageBehavior extends CollidableDestroyableDamageableBehavior {
     constructor(collidable) {
         super(collidable);
@@ -26,12 +26,12 @@ export class CollidableCharacterNoDamageBehavior extends CollidableDestroyableDa
     }
     //@Throws(Exception.constructor)
     collide(ownerLayer, collidableInterfaceCompositeInterface) {
-        var collisionTypeFactory = CollisionTypeFactory.getInstance();
+        let collisionTypeFactory = CollisionTypeFactory.getInstance();
         ;
-        var collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
+        let collisionType = collidableInterfaceCompositeInterface.getCollidableInferface().getCollisionTypeWith(ownerLayer);
         ;
         if (collisionType == collisionTypeFactory.PICKUP) {
-            var collidableDestroyableDamageableLayer = ownerLayer;
+            let collidableDestroyableDamageableLayer = ownerLayer;
             ;
             collidableDestroyableDamageableLayer.getPickupBehavior().doPickupLayer(collidableInterfaceCompositeInterface);
         }

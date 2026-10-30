@@ -18,13 +18,20 @@ import { Object } from '../../../../../java/lang/Object.js';
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullAI } from './NullAI.js';
-//not GWT import - same folder const NullAI
+//sameFolderImports - not GWT import - same folder const NullAI
 export class NullAIFactory extends Object {
-    static getInstance() {
+    static getInstance$overload2() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullAIFactory.NULL_AI;
     }
-    getInstance(hashtable, ownerLayerInterface, gameInput) {
+    getInstance(...args) {
+        if (args.length === 3)
+            return this.getInstance$overload1(args[0], args[1], args[2]);
+        if (args.length === 0)
+            return this.getInstance$overload2();
+        throw new TypeError('No matching overload: getInstance');
+    }
+    getInstance$overload1(hashtable, ownerLayerInterface, gameInput) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullAIFactory.NULL_AI;
     }

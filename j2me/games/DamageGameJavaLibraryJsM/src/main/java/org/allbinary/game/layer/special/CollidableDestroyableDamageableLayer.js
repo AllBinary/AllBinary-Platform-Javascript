@@ -40,7 +40,7 @@ const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 import { ViewPositionBase } from '../../../../../org/allbinary/view/ViewPositionBase.js';
-//not GWT import - same folder const SpecialGameInputInterface
+//sameFolderImports - not GWT import - same folder const SpecialGameInputInterface
 export class CollidableDestroyableDamageableLayer extends CollidableCompositeLayer {
     static getNullInstance() {
         if (CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER == NullUtil.getInstance().NULL_OBJECT) {
@@ -203,21 +203,21 @@ export class CollidableDestroyableDamageableLayer extends CollidableCompositeLay
         return this.partInterfaceArrayP;
     }
     toStringAppend(stringBuffer) {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var positionStrings = PositionStrings.getInstance();
+        let positionStrings = PositionStrings.getInstance();
         ;
         super.toStringAppend(stringBuffer);
         stringBuffer.append(commonSeps.NEW_LINE);
-        var groupInterfaceArray = this.getGroupInterface();
+        let groupInterfaceArray = this.getGroupInterface();
         ;
-        var size = groupInterfaceArray.length;
+        let size = groupInterfaceArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             stringBuffer.append(groupInterfaceArray[index].toString());
             stringBuffer.append(commonSeps.COMMA);
         }
-        var pickupBehavior = this.getPickupBehavior();
+        let pickupBehavior = this.getPickupBehavior();
         ;
         if (pickupBehavior !=
             null) {
@@ -238,7 +238,7 @@ export class CollidableDestroyableDamageableLayer extends CollidableCompositeLay
         stringBuffer.appendint(this.initZ);
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         this.toStringAppend(stringBuffer);
         //if statement needs to be on the same line and ternary does not work the same way.

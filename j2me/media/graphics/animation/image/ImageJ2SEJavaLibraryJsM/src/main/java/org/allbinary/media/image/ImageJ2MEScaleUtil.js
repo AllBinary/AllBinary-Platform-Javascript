@@ -26,9 +26,9 @@ export class ImageJ2MEScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     scaleArray(images, width, height) {
-        var scaledImages = new Array(images.length);
+        let scaledImages = new Array(images.length);
         ;
-        for (var index = images.length; --index >= 0;) {
+        for (let index = images.length; --index >= 0;) {
             scaledImages[index] = this.scale(images[index], width, height);
         }
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,33 +36,33 @@ export class ImageJ2MEScaleUtil extends Object {
     }
     //@Throws(Exception.constructor)
     scale(image, width, height) {
-        var sourceWidth = image.getWidth();
+        let sourceWidth = image.getWidth();
         ;
-        var sourceHeight = image.getHeight();
+        let sourceHeight = image.getHeight();
         ;
-        var originalData = new Array(image.getWidth() * image.getHeight());
+        let originalData = new Array(image.getWidth() * image.getHeight());
         ;
         image.getRGB(originalData, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
-        var scaledData = new Array(width * height);
+        let scaledData = new Array(width * height);
         ;
-        var heightRatioFactor = (8 * sourceHeight) / height;
+        let heightRatioFactor = globalThis.Math.trunc((8 * sourceHeight) / height);
         ;
-        var widthRatioFactor = (8 * sourceWidth) / width;
+        let widthRatioFactor = globalThis.Math.trunc((8 * sourceWidth) / width);
         ;
-        var scaledIndex = scaledData.length - 1;
+        let scaledIndex = scaledData.length - 1;
         ;
-        var dx = 0;
+        let dx = 0;
         ;
-        var dy = 0;
+        let dy = 0;
         ;
-        for (var index = height; --index >= 0;) {
+        for (let index = height; --index >= 0;) {
             dy = (index * heightRatioFactor) >> 3;
-            for (var index2 = width; --index2 >= 0;) {
+            for (let index2 = width; --index2 >= 0;) {
                 dx = (index2 * widthRatioFactor) >> 3;
                 scaledData[scaledIndex--] = originalData[(sourceWidth * dy) + dx];
             }
         }
-        var scaledImage = Image.createRGBImage(scaledData, width, height, true);
+        let scaledImage = Image.createRGBImage(scaledData, width, height, true);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return scaledImage;

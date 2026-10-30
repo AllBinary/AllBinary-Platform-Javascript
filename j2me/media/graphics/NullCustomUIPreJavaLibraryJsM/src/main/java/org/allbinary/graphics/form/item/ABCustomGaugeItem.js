@@ -6,7 +6,7 @@ import { BasicColorFactory } from '../../../../../org/allbinary/graphics/color/B
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ABCustomItem } from './ABCustomItem.js';
-//not GWT import - same folder const ABCustomItem
+//sameFolderImports - not GWT import - same folder const ABCustomItem
 export class ABCustomGaugeItem extends ABCustomItem {
     constructor(label, maxValue, initialValue, backgroundBasicColor, foregroundBasicColor) {
         super(label, backgroundBasicColor, foregroundBasicColor);

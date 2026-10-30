@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { GameLayerBehavior } from '../../../../../org/allbinary/game/layer/behavior/GameLayerBehavior.js';
-//not GWT import - same folder const InitialJumpBehavior
+//sameFolderImports - not GWT import - same folder const InitialJumpBehavior
 export class TopViewGameLayerBehavior extends GameLayerBehavior {
     constructor(maxGravityActionIndex) {
         super();
@@ -42,7 +42,7 @@ export class TopViewGameLayerBehavior extends GameLayerBehavior {
     up(velocityProperties, acceleration, jumpBehavior, accelerationMultiplier) {
         if (!this.isJumpOver) {
             if (this.gravityActionIndex < this.maxGravityActionIndex) {
-                var acceleration2 = -acceleration.getForward() * accelerationMultiplier;
+                let acceleration2 = -acceleration.getForward() * accelerationMultiplier;
                 ;
                 velocityProperties.getVelocityYBasicDecimalP().addint(acceleration2);
                 velocityProperties.limitXYToForwardAndReverseMaxVelocity();

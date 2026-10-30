@@ -29,7 +29,7 @@ import { PrimaryPlayerQueueFactory } from '../../../../../../org/allbinary/media
 //not GWT import const PrimaryPlayerQueueFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LicenseStrings } from './LicenseStrings.js';
-//not GWT import - same folder const LicenseStrings
+//sameFolderImports - not GWT import - same folder const LicenseStrings
 export class LockedFeatureNotificationUtil extends Object {
     constructor() {
         super(...arguments);

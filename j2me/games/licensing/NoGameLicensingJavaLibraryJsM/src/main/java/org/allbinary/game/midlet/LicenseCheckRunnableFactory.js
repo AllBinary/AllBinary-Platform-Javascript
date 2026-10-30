@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const ABRunnable
 import { NullABRunnable } from '../../../../org/allbinary/thread/NullABRunnable.js';
-//not GWT import - same folder const SpecialDemoGameMidlet
+//sameFolderImports - not GWT import - same folder const SpecialDemoGameMidlet
 export class LicenseCheckRunnableFactory extends Object {
     getInstance(specialDemoGameMidlet) {
         //if statement needs to be on the same line and ternary does not work the same way.

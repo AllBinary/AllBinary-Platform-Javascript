@@ -18,7 +18,7 @@ import { AllBinaryEventObject } from '../../../../../../org/allbinary/logic/util
 //not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InputMappingEvent extends AllBinaryEventObject {
-    constructor(anyType = {}) {
+    constructor(anyType) {
         super(anyType);
         this.inputToGameKeyMapping = InputToGameKeyMapping.getNullInstance();
         //For kotlin this is before the body of the constructor.

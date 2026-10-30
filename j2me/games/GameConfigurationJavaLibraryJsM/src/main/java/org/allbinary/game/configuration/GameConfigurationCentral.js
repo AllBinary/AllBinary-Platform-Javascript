@@ -35,7 +35,7 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfiguration } from './GameConfiguration.js';
-//not GWT import - same folder const GameConfiguration
+//sameFolderImports - not GWT import - same folder const GameConfiguration
 export class GameConfigurationCentral extends Object {
     static getInstance() {
         if (GameConfigurationCentral.SINGLETON == NullUtil.getInstance().NULL_OBJECT) {
@@ -48,7 +48,7 @@ export class GameConfigurationCentral extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.gameControlFidelity = 36;
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
         this.SCALE = new GameConfiguration("Scale", smallIntegerSingletonFactory.getAt(2), smallIntegerSingletonFactory.getAt(2), smallIntegerSingletonFactory.getAt(3));
         this.ORIENTATION = new GameConfiguration("Orientation", smallIntegerSingletonFactory.getAt(0), smallIntegerSingletonFactory.getAt(0), smallIntegerSingletonFactory.getAt(8));
@@ -67,33 +67,35 @@ export class GameConfigurationCentral extends Object {
         this.MAX_LAYERS = new GameConfiguration("Max Layers", smallIntegerSingletonFactory.getAt(20), smallIntegerSingletonFactory.getAt(1), smallIntegerSingletonFactory.getAt(50));
     }
     load(abeClientInformation) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         try {
-            var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+            let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
             ;
-            var keyValuePersistance = GameConfigurationPersistanceSingleton.getInstance();
+            let keyValuePersistance = GameConfigurationPersistanceSingleton.getInstance();
             ;
             keyValuePersistance.clear();
             keyValuePersistance.loadAll(abeClientInformation);
-            var list = keyValuePersistance.getIds();
+            let list = keyValuePersistance.getIds();
             ;
             if (list.size() > 0) {
-                var hashtable = keyValuePersistance.get(0);
+                let hashtable = keyValuePersistance.get(0);
                 ;
-                var anyType = this.SCALE.getName();
+                let anyType = this.SCALE.getName();
                 ;
-                var value = hashtable.get(anyType);
+                let value = hashtable.get(anyType);
                 ;
                 this.SCALE.setValue(smallIntegerSingletonFactory.getAt(Integer.valueOf(value).intValue()));
             }
             else {
                 this.logUtil.putF("No Game Configuration To Load", this, commonStrings.LOAD);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.LOAD, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.LOAD, e);
+            }
         }
     }
     setGameControlFidelity(gameControlFidelity) {
@@ -104,9 +106,9 @@ export class GameConfigurationCentral extends Object {
         return this.gameControlFidelity;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var commonStrings = CommonSeps.getInstance();
+        let commonStrings = CommonSeps.getInstance();
         ;
         stringBuffer.append(commonStrings.COMMA_SEP);
         stringBuffer.append(this.SCALE.getName());

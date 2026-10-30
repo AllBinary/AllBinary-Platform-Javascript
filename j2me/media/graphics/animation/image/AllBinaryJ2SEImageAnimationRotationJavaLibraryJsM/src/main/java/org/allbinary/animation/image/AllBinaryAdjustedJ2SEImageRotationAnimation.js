@@ -14,7 +14,7 @@
 //not GWT import const AngleInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryJ2SEImageRotationAnimation } from './AllBinaryJ2SEImageRotationAnimation.js';
-//not GWT import - same folder const AllBinaryJ2SEImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const AllBinaryJ2SEImageRotationAnimation
 export class AllBinaryAdjustedJ2SEImageRotationAnimation extends AllBinaryJ2SEImageRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, dx, dy, animationBehavior) {
         super(originalImage, image, angleInfo, totalAngle, animationBehavior);

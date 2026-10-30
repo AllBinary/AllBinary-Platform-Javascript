@@ -49,8 +49,8 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
         this.exceptionUtil = ExceptionUtil.getInstance();
         this.nullUtil = NullUtil.getInstance();
     }
-    /*actual*/ get(className, functionName, specialMessage, exception = {}) {
-        var stringBuffer = this.getF(className, functionName);
+    /*actual*/ get(className, functionName, specialMessage, exception) {
+        let stringBuffer = this.getF(className, functionName);
         ;
         stringBuffer.append(this.getO(exception));
         stringBuffer.append(this.SPECIAL_MESSAGE);
@@ -61,7 +61,7 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
         ;
     }
     /*actual*/ getS(className, functionName, specialMessage) {
-        var stringBuffer = this.getF(className, functionName);
+        let stringBuffer = this.getF(className, functionName);
         ;
         stringBuffer.append(this.SPECIAL_MESSAGE);
         stringBuffer.append(specialMessage);
@@ -71,7 +71,7 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
         ;
     }
     getF(className, functionName) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.TIME);
         stringBuffer.append(this.timeStampUtil.getAsString());
@@ -82,12 +82,12 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
         //if statement needs to be on the same line and ternary does not work the same way.
         return stringBuffer;
     }
-    /*actual*/ getO(exception = {}) {
+    /*actual*/ getO(exception) {
         if (exception != this.nullUtil.NULL_OBJECT) {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(this.LOG_ERROR);
-            var exceptionAsString = exception.toString();
+            let exceptionAsString = exception.toString();
             ;
             if (exceptionAsString !=
                 null) {

@@ -22,14 +22,14 @@ import { TouchMotionGestureFactory } from '../../../../org/allbinary/input/motio
 //not GWT import const TouchMotionGestureFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameKeyFactory } from './GameKeyFactory.js';
-//not GWT import - same folder const GameKeyFactory
+//sameFolderImports - not GWT import - same folder const GameKeyFactory
 export class MotionJ2MEDefaultGameInputMapping extends PersistentInputMapping {
     constructor() {
         super(GamePersistanceStrings.getInstance().DEFAULT_INPUT_MAPPING_RECORD_ID);
         //For kotlin this is before the body of the constructor.
-        var inputToGameKeyMapping = this.getInputMapping();
+        let inputToGameKeyMapping = this.getInputMapping();
         ;
-        var gameKeyFactory = GameKeyFactory.getInstance();
+        let gameKeyFactory = GameKeyFactory.getInstance();
         ;
         inputToGameKeyMapping.add(gameKeyFactory.UP, gameKeyFactory.KEY_NUM2);
         inputToGameKeyMapping.add(gameKeyFactory.LEFT, gameKeyFactory.KEY_NUM4);
@@ -58,7 +58,7 @@ export class MotionJ2MEDefaultGameInputMapping extends PersistentInputMapping {
         inputToGameKeyMapping.add(gameKeyFactory.DOWN, TouchMotionGestureFactory.getInstance().DOWN);
         inputToGameKeyMapping.add(gameKeyFactory.LEFT, TouchMotionGestureFactory.getInstance().LEFT);
         inputToGameKeyMapping.add(gameKeyFactory.RIGHT, TouchMotionGestureFactory.getInstance().RIGHT);
-        var basicTouchInputFactory = BasicTouchInputFactory.getInstance();
+        let basicTouchInputFactory = BasicTouchInputFactory.getInstance();
         ;
         inputToGameKeyMapping.add(gameKeyFactory.UP, basicTouchInputFactory.UP);
         inputToGameKeyMapping.add(gameKeyFactory.LEFT, basicTouchInputFactory.LEFT);

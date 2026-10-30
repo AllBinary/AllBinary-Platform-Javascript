@@ -18,7 +18,7 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 //not GWT import const TimeDelayHelper
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnalogControllerConfigurationFactory } from './AnalogControllerConfigurationFactory.js';
-//not GWT import - same folder const AnalogControllerConfigurationFactory
+//sameFolderImports - not GWT import - same folder const AnalogControllerConfigurationFactory
 export class AnalogControllerHelper extends Object {
     constructor(reduceTimeFactor) {
         super();

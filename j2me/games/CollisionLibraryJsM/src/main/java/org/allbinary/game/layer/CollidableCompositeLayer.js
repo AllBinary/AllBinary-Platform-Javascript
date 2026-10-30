@@ -32,7 +32,7 @@ import { ViewPositionBase } from '../../../../org/allbinary/view/ViewPositionBas
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AllBinaryGameLayer } from './AllBinaryGameLayer.js';
-//not GWT import - same folder const AllBinaryGameLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryGameLayer
 export class CollidableCompositeLayer extends AllBinaryGameLayer {
     static getNullInstance() {
         if (CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER == NullUtil.getInstance().NULL_OBJECT) {
@@ -67,14 +67,14 @@ export class CollidableCompositeLayer extends AllBinaryGameLayer {
         return true;
     }
     toStringAppend(stringBuffer) {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         super.toStringAppend(stringBuffer);
         stringBuffer.append(commonSeps.NEW_LINE);
         stringBuffer.append(this.getCollidableInferface().toString());
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         this.toStringAppend(stringBuffer);
         //if statement needs to be on the same line and ternary does not work the same way.

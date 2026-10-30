@@ -16,15 +16,15 @@ import { Object } from '../../../java/lang/Object.js';
 //not GWT import const IndexedAnimation
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnimationFrameToImageUtil } from './AnimationFrameToImageUtil.js';
-//not GWT import - same folder const AnimationFrameToImageUtil
+//sameFolderImports - not GWT import - same folder const AnimationFrameToImageUtil
 export class IndexedAnimationToImageArrayUtil extends Object {
     //@Throws(Exception.constructor)
     static getInstance(width, height, sequentialAnimationInterface) {
-        var size = sequentialAnimationInterface.getAnimationSize();
+        let size = sequentialAnimationInterface.getAnimationSize();
         ;
-        var imageArray = new Array(size);
+        let imageArray = new Array(size);
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             sequentialAnimationInterface.setFrame(index);
             imageArray[index] = AnimationFrameToImageUtil.getInstance().getInstanceWH(width, height, sequentialAnimationInterface);
         }

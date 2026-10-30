@@ -16,9 +16,9 @@
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresBase } from './HighScoresBase.js';
-//not GWT import - same folder const HighScoresResultsListener
+//sameFolderImports - not GWT import - same folder const HighScoresResultsListener
 import { HighScoresHelperBase } from './HighScoresHelperBase.js';
-//not GWT import - same folder const HighScoresHelperBaseInterface
+//sameFolderImports - not GWT import - same folder const HighScoresHelperBaseInterface
 export class NoHighScoresFactory extends HighScoresBase {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

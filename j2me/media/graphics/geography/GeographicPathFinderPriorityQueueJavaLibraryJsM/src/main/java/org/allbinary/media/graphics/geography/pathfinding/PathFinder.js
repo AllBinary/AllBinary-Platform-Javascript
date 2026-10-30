@@ -12,9 +12,6 @@
         *  Created By: Travis Berthelot
 */
 import { RuntimeException } from '../../../../../../java/lang/RuntimeException.js';
-import { HashSet } from '../../../../../../java/util/HashSet.js';
-//not GWT import const HashSet
-import { PriorityQueue } from '../../../../../../java/util/PriorityQueue.js';
 //not GWT import const AllBinaryTiledLayer
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
@@ -25,6 +22,10 @@ const MathUtil = globalThis.org.allbinary.logic.math.MathUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const RaceTrackGeographicMapCellType
+//not plain js import { ABHashSet } 
+const ABHashSet = globalThis.org.allbinary.util.ABHashSet;
+//not plain js import { ABPriorityQueue } 
+const ABPriorityQueue = globalThis.org.allbinary.util.ABPriorityQueue;
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
@@ -33,41 +34,41 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicPathFinderBase } from './GeographicPathFinderBase.js';
-//not GWT import - same folder const GeographicPathFinderBase
+//sameFolderImports - not GWT import - same folder const GeographicPathFinderBase
 import { PathFindingNodeCost } from './PathFindingNodeCost.js';
-//not GWT import - same folder const PathFindingNodeCost
+//sameFolderImports - not GWT import - same folder const PathFindingNodeCost
 import { PathFindingNodeCostInfo } from './PathFindingNodeCostInfo.js';
-//not GWT import - same folder const MultipassState
+//sameFolderImports - not GWT import - same folder const MultipassState
 export class PathFinder extends GeographicPathFinderBase {
     constructor() {
         super(...arguments);
         this.logUtil = LogUtil.getInstance();
         this.basicArrayListUtil = BasicArrayListUtil.getInstance();
         this.mathUtil = MathUtil.getInstance();
-        this.openPriorityQueue = new PriorityQueue();
-        this.closedSet = new HashSet();
+        this.openPriorityQueue = new ABPriorityQueue();
+        this.closedSet = new ABHashSet();
         this.geographicMapInterface = NullUtil.getInstance().NULL_OBJECT;
         this.costArray = PathFindingNodeCost.NULL_PATH_FINDING_NODE_COST_ARRAY_ARRAY;
     }
     //@Throws(Exception.constructor)
     init(geographicMapInterface) {
         this.geographicMapInterface = geographicMapInterface;
-        var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
         this.costArray = new Array(tiledLayer.getColumns()).fill(null).map(() => new Array(tiledLayer.getRows()).fill(null));
-        var basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
+        let basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
         ;
-        var node;
+        let node;
         ;
-        var sizeX = this.costArray.length;
+        let sizeX = this.costArray.length;
         ;
-        var sizeY = this.costArray[0].length;
+        let sizeY = this.costArray[0].length;
         ;
-        for (var column = 0; column < sizeX; column++) {
-            for (var row = 0; row < sizeY; row++) {
-                var geographicMapCellType = geographicMapInterface.getCellTypeAt(basicGeographicMapCellPositionFactory.getAt(column, row));
+        for (let column = 0; column < sizeX; column++) {
+            for (let row = 0; row < sizeY; row++) {
+                let geographicMapCellType = geographicMapInterface.getCellTypeAt(basicGeographicMapCellPositionFactory.getAt(column, row));
                 ;
-                var raceTrackGeographicMapCellType = geographicMapCellType;
+                let raceTrackGeographicMapCellType = geographicMapCellType;
                 ;
                 node = new PathFindingNodeCost(NullUtil.getInstance().NULL_OBJECT, basicGeographicMapCellPositionFactory.getAt(column, row), new PathFindingNodeCostInfo(raceTrackGeographicMapCellType.getTravelCost(), -1));
                 this.costArray[column][row] = node;
@@ -79,15 +80,17 @@ export class PathFinder extends GeographicPathFinderBase {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.search(startPathFindingNodeList.get(0), endPathFindingNodeList.get(0));
             ;
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "search", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return this.basicArrayListUtil.getImmutableInstance();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "search", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return this.basicArrayListUtil.getImmutableInstance();
+                ;
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -109,9 +112,9 @@ export class PathFinder extends GeographicPathFinderBase {
     }
     //@Throws(Exception.constructor)
     search(startPathFindingNode, endPathFindingNode) {
-        var list = this.findPath(startPathFindingNode.geographicMapCellPosition, endPathFindingNode.geographicMapCellPosition);
+        let list = this.findPath(startPathFindingNode.geographicMapCellPosition, endPathFindingNode.geographicMapCellPosition);
         ;
-        var pathList = new BasicArrayListD();
+        let pathList = new BasicArrayListD();
         ;
         pathList.add(list);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,7 +126,7 @@ export class PathFinder extends GeographicPathFinderBase {
     }
     //@Throws(Exception.constructor)
     searchN(startPathFindingNode, endPathFindingNode, multipassState) {
-        var list = this.findPathEnd(startPathFindingNode.geographicMapCellPosition, endPathFindingNode.geographicMapCellPosition, multipassState);
+        let list = this.findPathEnd(startPathFindingNode.geographicMapCellPosition, endPathFindingNode.geographicMapCellPosition, multipassState);
         ;
         if (list ==
             null) {
@@ -131,7 +134,7 @@ export class PathFinder extends GeographicPathFinderBase {
             return this.basicArrayListUtil.getImmutableInstance();
             ;
         }
-        var pathList = new BasicArrayListD();
+        let pathList = new BasicArrayListD();
         ;
         pathList.add(list);
         multipassState.iteration = 0;
@@ -143,55 +146,55 @@ export class PathFinder extends GeographicPathFinderBase {
     findPath(start, target) {
         this.openPriorityQueue.clear();
         this.closedSet.clear();
-        var discoveryCalculation = 0;
+        let discoveryCalculation = 0;
         ;
-        var node;
+        let node;
         ;
-        var targetColumn = target.getColumn();
+        let targetColumn = target.getColumn();
         ;
-        var targetRow = target.getRow();
+        let targetRow = target.getRow();
         ;
-        var sizeX = this.costArray.length;
+        let sizeX = this.costArray.length;
         ;
-        var sizeY = this.costArray[0].length;
+        let sizeY = this.costArray[0].length;
         ;
-        for (var column = 0; column < sizeX; column++) {
-            for (var row = 0; row < sizeY; row++) {
+        for (let column = 0; column < sizeX; column++) {
+            for (let row = 0; row < sizeY; row++) {
                 discoveryCalculation = this.mathUtil.abs(column - targetColumn) + this.mathUtil.abs(row - targetRow);
                 node = this.costArray[column][row];
                 node.pathFindingNodeCostInfoP.totalCostP = 0;
                 node.pathFindingNodeCostInfoP.costToEndP = discoveryCalculation;
             }
         }
-        var startNode = this.costArray[start.getColumn()][start.getRow()];
+        let startNode = this.costArray[start.getColumn()][start.getRow()];
         ;
         this.openPriorityQueue.add(startNode);
-        var geographicMapInterface = this.geographicMapInterface;
+        let geographicMapInterface = this.geographicMapInterface;
         ;
-        var basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
+        let basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
         ;
-        var allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var targetNode = this.costArray[target.getColumn()][target.getRow()];
+        let targetNode = this.costArray[target.getColumn()][target.getRow()];
         ;
-        var current;
+        let current;
         ;
         do {
             current = this.openPriorityQueue.poll();
             this.closedSet.add(current);
-            if (current === targetNode) {
+            if ((current === targetNode)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.extractPath(start, current);
                 ;
             }
-            var neighbor;
+            let neighbor;
             ;
-            var neighborInfo;
+            let neighborInfo;
             ;
-            var calculatedCost = 0;
+            let calculatedCost = 0;
             ;
-            for (var column = current.geographicMapCellPosition.getColumn() - 1; column < current.geographicMapCellPosition.getColumn() + 2; column++) {
-                for (var row = current.geographicMapCellPosition.getRow() - 1; row < current.geographicMapCellPosition.getRow() + 2; row++) {
+            for (let column = current.geographicMapCellPosition.getColumn() - 1; column < current.geographicMapCellPosition.getColumn() + 2; column++) {
+                for (let row = current.geographicMapCellPosition.getRow() - 1; row < current.geographicMapCellPosition.getRow() + 2; row++) {
                     if (column > 0 && row > 0 && column < allBinaryTiledLayer.getColumns() && row < allBinaryTiledLayer.getRows() && geographicMapInterface.isOnMap(basicGeographicMapCellPositionFactory.getAt(column, row))) {
                         neighbor = this.costArray[column][row];
                         if (this.closedSet.contains(neighbor)) {
@@ -218,61 +221,61 @@ export class PathFinder extends GeographicPathFinderBase {
     findPathStart(start, target, multipassState) {
         this.openPriorityQueue.clear();
         this.closedSet.clear();
-        var discoveryCalculation = 0;
+        let discoveryCalculation = 0;
         ;
-        var node;
+        let node;
         ;
-        var targetColumn = target.getColumn();
+        let targetColumn = target.getColumn();
         ;
-        var targetRow = target.getRow();
+        let targetRow = target.getRow();
         ;
-        var sizeX = this.costArray.length;
+        let sizeX = this.costArray.length;
         ;
-        var sizeY = this.costArray[0].length;
+        let sizeY = this.costArray[0].length;
         ;
-        for (var column = 0; column < sizeX; column++) {
-            for (var row = 0; row < sizeY; row++) {
+        for (let column = 0; column < sizeX; column++) {
+            for (let row = 0; row < sizeY; row++) {
                 discoveryCalculation = this.mathUtil.abs(column - targetColumn) + this.mathUtil.abs(row - targetRow);
                 node = this.costArray[column][row];
                 node.pathFindingNodeCostInfoP.totalCostP = 0;
                 node.pathFindingNodeCostInfoP.costToEndP = discoveryCalculation;
             }
         }
-        var startNode = this.costArray[start.getColumn()][start.getRow()];
+        let startNode = this.costArray[start.getColumn()][start.getRow()];
         ;
         this.openPriorityQueue.add(startNode);
         multipassState.step++;
     }
     //@Throws(Exception.constructor)
     findPathEnd(start, target, multipassState) {
-        var geographicMapInterface = this.geographicMapInterface;
+        let geographicMapInterface = this.geographicMapInterface;
         ;
-        var basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
+        let basicGeographicMapCellPositionFactory = geographicMapInterface.getGeographicMapCellPositionFactory();
         ;
-        var allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let allBinaryTiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
-        var targetNode = this.costArray[target.getColumn()][target.getRow()];
+        let targetNode = this.costArray[target.getColumn()][target.getRow()];
         ;
-        var current;
+        let current;
         ;
-        var total = 0;
+        let total = 0;
         ;
         do {
             current = this.openPriorityQueue.poll();
             this.closedSet.add(current);
-            if (current === targetNode) {
+            if ((current === targetNode)) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.extractPath(start, current);
                 ;
             }
-            var neighbor;
+            let neighbor;
             ;
-            var neighborInfo;
+            let neighborInfo;
             ;
-            var calculatedCost = 0;
+            let calculatedCost = 0;
             ;
-            for (var column = current.geographicMapCellPosition.getColumn() - 1; column < current.geographicMapCellPosition.getColumn() + 2; column++) {
-                for (var row = current.geographicMapCellPosition.getRow() - 1; row < current.geographicMapCellPosition.getRow() + 2; row++) {
+            for (let column = current.geographicMapCellPosition.getColumn() - 1; column < current.geographicMapCellPosition.getColumn() + 2; column++) {
+                for (let row = current.geographicMapCellPosition.getRow() - 1; row < current.geographicMapCellPosition.getRow() + 2; row++) {
                     if (column > 0 && row > 0 && column < allBinaryTiledLayer.getColumns() && row < allBinaryTiledLayer.getRows() && geographicMapInterface.isOnMap(basicGeographicMapCellPositionFactory.getAt(column, row))) {
                         neighbor = this.costArray[column][row];
                         if (this.closedSet.contains(neighbor)) {
@@ -302,7 +305,7 @@ export class PathFinder extends GeographicPathFinderBase {
         throw new RuntimeException();
     }
     extractPath(start, current) {
-        var path = new BasicArrayListD();
+        let path = new BasicArrayListD();
         ;
         while (current.parent != NullUtil.getInstance().NULL_OBJECT) {
             path.add(current.geographicMapCellPosition);

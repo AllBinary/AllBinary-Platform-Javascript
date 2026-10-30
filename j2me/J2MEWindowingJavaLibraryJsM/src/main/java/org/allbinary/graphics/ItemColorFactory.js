@@ -17,8 +17,8 @@ import { Object } from '../../../java/lang/Object.js';
 export class ItemColorFactory extends Object {
     constructor() {
         super(...arguments);
-        this.INVERT_PAINT = Math.round(0xFF000000);
-        this.PAINT = Math.round(0xFFe07718);
+        this.INVERT_PAINT = globalThis.Math.trunc(0xFF000000);
+        this.PAINT = globalThis.Math.trunc(0xFFe07718);
         this.TEXT_FIELD_NO_FOCUS = 0x7F7F7F;
     }
     static getInstance() {

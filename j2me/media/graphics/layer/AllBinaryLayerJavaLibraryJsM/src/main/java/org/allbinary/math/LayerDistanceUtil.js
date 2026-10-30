@@ -27,30 +27,30 @@ export class LayerDistanceUtil extends Object {
         return LayerDistanceUtil.instance;
     }
     getDistance(layerInterface, layerInterface2) {
-        var dx = (layerInterface.getXP() + layerInterface.getHalfWidth()) - (layerInterface2.getXP() + layerInterface2.getHalfWidth());
+        let dx = (layerInterface.getXP() + layerInterface.getHalfWidth()) - (layerInterface2.getXP() + layerInterface2.getHalfWidth());
         ;
-        var dy = (layerInterface.getYP() + layerInterface.getHalfHeight()) - (layerInterface2.getYP() + layerInterface2.getHalfHeight());
+        let dy = (layerInterface.getYP() + layerInterface.getHalfHeight()) - (layerInterface2.getYP() + layerInterface2.getHalfHeight());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(this.mathUtil.sqrt((dx * dx) + (dy * dy)));
+        return globalThis.Math.trunc(this.mathUtil.sqrt((dx * dx) + (dy * dy)));
     }
     getDistance3D(layerInterface, layerInterface2) {
-        var dx = (layerInterface.getXP() + layerInterface.getHalfWidth()) - (layerInterface2.getXP() + layerInterface2.getHalfWidth());
+        let dx = (layerInterface.getXP() + layerInterface.getHalfWidth()) - (layerInterface2.getXP() + layerInterface2.getHalfWidth());
         ;
-        var dy = (layerInterface.getYP() + layerInterface.getHalfHeight()) - (layerInterface2.getYP() + layerInterface2.getHalfHeight());
+        let dy = (layerInterface.getYP() + layerInterface.getHalfHeight()) - (layerInterface2.getYP() + layerInterface2.getHalfHeight());
         ;
-        var dz = (layerInterface.getZP() + layerInterface.getHalfDepth()) - (layerInterface2.getZP() + layerInterface2.getHalfDepth());
+        let dz = (layerInterface.getZP() + layerInterface.getHalfDepth()) - (layerInterface2.getZP() + layerInterface2.getHalfDepth());
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(this.mathUtil.sqrt((dx * dx) + (dy * dy) + (dz * dz)));
+        return globalThis.Math.trunc(this.mathUtil.sqrt((dx * dx) + (dy * dy) + (dz * dz)));
     }
     getDistanceAt(layerInterface, point) {
-        var dx = layerInterface.getXP() - point.getX();
+        let dx = layerInterface.getXP() - point.getX();
         ;
-        var dy = layerInterface.getYP() - point.getY();
+        let dy = layerInterface.getYP() - point.getY();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(this.mathUtil.sqrt((dx * dx) + (dy * dy)));
+        return globalThis.Math.trunc(this.mathUtil.sqrt((dx * dx) + (dy * dy)));
     }
 }
 LayerDistanceUtil.instance = new LayerDistanceUtil();

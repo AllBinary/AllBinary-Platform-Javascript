@@ -31,11 +31,11 @@ const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //not plain js - same folder import { NullRunnable } 
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 import { ThreadPoolStrings } from './ThreadPoolStrings.js';
-//not GWT import - same folder const ThreadPoolStrings
+//sameFolderImports - not GWT import - same folder const ThreadPoolStrings
 import { ThreadObjectUtil } from './ThreadObjectUtil.js';
-//not GWT import - same folder const ThreadObjectUtil
+//sameFolderImports - not GWT import - same folder const ThreadObjectUtil
 import { PooledThread } from './PooledThread.js';
-//not GWT import - same folder const PriorityRunnable
+//sameFolderImports - not GWT import - same folder const PriorityRunnable
 export class ThreadPool extends Object {
     constructor(poolName, numThreads, priority) {
         super();
@@ -56,9 +56,9 @@ export class ThreadPool extends Object {
         if (!this.isAlive) {
             this.isAlive = true;
             this.taskQueue = new BasicArrayListD();
-            var pooledThread;
+            let pooledThread;
             ;
-            for (var i = 0; i < this.numThreads; i++) {
+            for (let i = 0; i < this.numThreads; i++) {
                 pooledThread = new PooledThread(this);
                 pooledThread.setPriority(this.priority);
                 pooledThread.start();
@@ -78,13 +78,13 @@ export class ThreadPool extends Object {
         }
         if (task !=
             null) {
-            var size = this.taskQueue.size();
+            let size = this.taskQueue.size();
             ;
-            var runnable;
+            let runnable;
             ;
-            var lowerPriorityRunnable = this.threadObjectUtil.NULL_PRIORITY_RUNNABLE;
+            let lowerPriorityRunnable = this.threadObjectUtil.NULL_PRIORITY_RUNNABLE;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 runnable = this.taskQueue.get(index);
                 if (runnable.getPriority() > task.getPriority()) {
                     lowerPriorityRunnable = runnable;
@@ -95,7 +95,7 @@ export class ThreadPool extends Object {
                 this.taskQueue.add(task);
             }
             else {
-                var index = this.taskQueue.indexOf(lowerPriorityRunnable);
+                let index = this.taskQueue.indexOf(lowerPriorityRunnable);
                 ;
                 this.taskQueue.addAt(index, task);
             }
@@ -127,7 +127,7 @@ export class ThreadPool extends Object {
             }
             this.wait();
         }
-        var runnable = this.taskQueue.removeAt(0);
+        let runnable = this.taskQueue.removeAt(0);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return runnable;

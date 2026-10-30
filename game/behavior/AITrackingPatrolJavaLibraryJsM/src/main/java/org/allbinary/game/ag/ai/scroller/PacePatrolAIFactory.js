@@ -20,9 +20,9 @@ import { SmallIntegerSingletonFactory } from '../../../../../../org/allbinary/lo
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasePatrolAI } from './BasePatrolAI.js';
-//not GWT import - same folder const BasePatrolAI
+//sameFolderImports - not GWT import - same folder const BasePatrolAI
 import { PacePatrolAI } from './PacePatrolAI.js';
-//not GWT import - same folder const PacePatrolAI
+//sameFolderImports - not GWT import - same folder const PacePatrolAI
 export class PacePatrolAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

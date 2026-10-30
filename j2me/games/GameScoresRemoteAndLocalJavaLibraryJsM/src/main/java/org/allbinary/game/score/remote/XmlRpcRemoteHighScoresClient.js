@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../java/lang/Exception.js';
+import { IOException } from '../../../../../java/io/IOException.js';
 //not GWT import const IOException
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
@@ -31,6 +32,8 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 import { XmlRpcClient } from '../../../../../org/apache/xmlrpc/XmlRpcClient.js';
+//not GWT import const XmlRpcClient
+import { XmlRpcException } from '../../../../../org/apache/xmlrpc/XmlRpcException.js';
 //not GWT import const XmlRpcException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class XmlRpcRemoteHighScoresClient extends XmlRpcAbeClient {
@@ -42,74 +45,64 @@ export class XmlRpcRemoteHighScoresClient extends XmlRpcAbeClient {
         this.setServer(0);
     }
     //@Throws(Exception.constructor)
-    get(anyType = {}, cryptInterface) {
+    get(anyType, cryptInterface) {
         try {
-            var param = new BasicArrayListD();
+            let param = new BasicArrayListD();
             ;
-            var serverUrl = getClientInfo().getLicenseServer(this.getServer());
+            let serverUrl = getClientInfo().getLicenseServer(this.getServer());
             ;
-            var index = serverUrl.lastIndexOf('/');
+            let index = serverUrl.lastIndexOf('/');
             ;
             serverUrl = serverUrl.substring(0, index + 1) + this.page;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(TRYING);
             stringBuffer.appendint(this.getServer());
             stringBuffer.append(SEP);
             stringBuffer.append(serverUrl);
             this.logUtil.putF(stringBuffer.toString(), this, this.commonStrings.GET);
-            var xmlRpcClient = new XmlRpcClient(serverUrl);
+            let xmlRpcClient = new XmlRpcClient(serverUrl);
             ;
             this.setClient(xmlRpcClient);
             xmlRpcClient.setBasicAuthentication(null, null);
-            var hashtable = anyType;
+            let hashtable = anyType;
             ;
             this.logUtil.putF(CLIENT_INFO + hashtable.toString(), this, this.commonStrings.GET);
             param.add(hashtable);
-            var result = xmlRpcClient.execute(this.getRemoteMethod(), param, cryptInterface);
+            let result = xmlRpcClient.execute(this.getRemoteMethod(), param, cryptInterface);
             ;
             this.logUtil.putF(RESULT + result.toString(), this, this.commonStrings.GET);
             isOnline = true;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(TRYING_OTHER_SERVERS + ExceptionUtil.getInstance().getStackTrace(e), this, this.commonStrings.GET, e);
-            if (!e.getMessage().startsWith(HOST_NOT_RESOLVED)) {
+        catch (caught) {
+            if (caught instanceof IOException) {
+                const e = caught;
+                this.logUtil.put(TRYING_OTHER_SERVERS + ExceptionUtil.getInstance().getStackTrace(e), this, this.commonStrings.GET, e);
+                if (!e.getMessage().startsWith(HOST_NOT_RESOLVED)) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.tryAnother(anyType);
+                    ;
+                }
+                else {
+                    throw new Exception(HOST_NOT_RESOLVED_MSG);
+                }
+            }
+            else if (caught instanceof XmlRpcException) {
+                const e = caught;
+                this.logUtil.put(SERVER_REPORTED_ERROR, this, this.commonStrings.GET, e);
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.tryAnother(anyType);
                 ;
             }
             else {
-                throw new Exception(HOST_NOT_RESOLVED_MSG);
+                const e = caught;
+                this.logUtil.put(UNKNOWN_ERROR, this, this.commonStrings.GET, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return this.tryAnother(anyType);
+                ;
             }
         }
-        //: 
-        /* catch(e)
-                    {
-        this.logUtil!.put(SERVER_REPORTED_ERROR, this, this.commonStrings!.GET, e);
-            
-        
-        
-        
-                                //if statement needs to be on the same line and ternary does not work the same way.
-                                return this.tryAnother(anyType);;
-            
-        }
-        */
-        //: 
-        /* catch(e)
-                    {
-        this.logUtil!.put(UNKNOWN_ERROR, this, this.commonStrings!.GET, e);
-            
-        
-        
-        
-                                //if statement needs to be on the same line and ternary does not work the same way.
-                                return this.tryAnother(anyType);;
-            
-        }
-        */
     }
 }

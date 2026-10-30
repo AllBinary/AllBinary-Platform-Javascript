@@ -19,7 +19,7 @@ import { StringValidationUtil } from '../../../org/allbinary/logic/string/String
 //not GWT import const StringValidationUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UrlGlobalsInterface } from './UrlGlobalsInterface.js';
-//not GWT import - same folder const UrlGlobalsInterface
+//sameFolderImports - not GWT import - same folder const UrlGlobalsInterface
 export class WebAppUrlGlobals extends UrlGlobalsInterface {
     constructor() {
         super(...arguments);
@@ -46,7 +46,7 @@ export class WebAppUrlGlobals extends UrlGlobalsInterface {
     }
     //@Throws(Exception.constructor)
     getMainPath() {
-        var mainPath = InitInfo.getInstance().getMainPath();
+        let mainPath = InitInfo.getInstance().getMainPath();
         ;
         if (!StringValidationUtil.getInstance().isEmpty(mainPath)) {
             //if statement needs to be on the same line and ternary does not work the same way.

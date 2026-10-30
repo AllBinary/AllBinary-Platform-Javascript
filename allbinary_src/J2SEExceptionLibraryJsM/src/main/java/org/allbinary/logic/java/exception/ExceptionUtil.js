@@ -32,12 +32,12 @@ import { PrintStream } from '../../../../../java/io/PrintStream.js';
     /*actual*/ getStackTrace(e) {
         if (e !=
             null) {
-            var byteArrayOutputStream = new ByteArrayOutputStream();
+            let byteArrayOutputStream = new ByteArrayOutputStream();
             ;
-            var printStream = new PrintStream(byteArrayOutputStream);
+            let printStream = new PrintStream(byteArrayOutputStream);
             ;
             e.printStackTrace(printStream);
-            var output = byteArrayOutputStream.toString();
+            let output = byteArrayOutputStream.toString();
             ;
             if (output !=
                 null) {

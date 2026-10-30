@@ -21,7 +21,7 @@ import { ImageModifierUtil } from '../../../../org/allbinary/media/image/ImageMo
 //not GWT import const ImageModifierUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageBaseRotationAnimation } from './ImageBaseRotationAnimation.js';
-//not GWT import - same folder const ImageBaseRotationAnimation
+//sameFolderImports - not GWT import - same folder const ImageBaseRotationAnimation
 export class AllBinaryNoFlickerAndroidImageRotationAnimation extends ImageBaseRotationAnimation {
     constructor(originalImage, image, angleInfo, totalAngle, animationBehavior) {
         super(image, angleInfo, totalAngle, animationBehavior);
@@ -40,7 +40,7 @@ export class AllBinaryNoFlickerAndroidImageRotationAnimation extends ImageBaseRo
         this.twoImages[1] = ImageCopyUtil.getInstance().createImage(image);
     }
     setBasicColorP(basicColor) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.getBasicColorP() ==
             null
@@ -58,7 +58,7 @@ export class AllBinaryNoFlickerAndroidImageRotationAnimation extends ImageBaseRo
         this.setBasicColorP(basicColor);
     }
     setAlpha(alpha) {
-        var changed = false;
+        let changed = false;
         ;
         if (this.alphaP != alpha) {
             changed = true;
@@ -85,10 +85,10 @@ export class AllBinaryNoFlickerAndroidImageRotationAnimation extends ImageBaseRo
         this.swap();
     }
     setFrame(index) {
-        var currentFrame = this.circularIndexUtil.getIndex();
+        let currentFrame = this.circularIndexUtil.getIndex();
         ;
         this.circularIndexUtil.setIndex(index);
-        var newFrame = this.circularIndexUtil.getIndex();
+        let newFrame = this.circularIndexUtil.getIndex();
         ;
         this.angleInfo.adjustAngle(newFrame);
         this.matrix.setRotate((newFrame - currentFrame) * this.increment, this.halfWidth, this.halfHeight);

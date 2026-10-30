@@ -45,7 +45,7 @@ export class InputProbability extends Object {
         return this.timeDelayHelper;
     }
     toHashtable() {
-        var hashtable = StdUtil.getInstance().createHashtable();
+        let hashtable = StdUtil.getInstance().createHashtable();
         ;
         hashtable.put(InputProbability.INPUT_PROBABILITY, this);
         //if statement needs to be on the same line and ternary does not work the same way.

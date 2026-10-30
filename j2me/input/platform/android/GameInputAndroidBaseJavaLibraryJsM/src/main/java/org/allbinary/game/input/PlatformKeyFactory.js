@@ -4,9 +4,9 @@ import { Object } from '../../../../java/lang/Object.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ActivityFractureControllerUtilFactory } from './ActivityFractureControllerUtilFactory.js';
-//not GWT import - same folder const AndroidKeyFactory
+//sameFolderImports - not GWT import - same folder const AndroidKeyFactory
 import { AndroidGameKey } from './AndroidGameKey.js';
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 export class PlatformKeyFactory extends Object {
     constructor() {
         super(...arguments);

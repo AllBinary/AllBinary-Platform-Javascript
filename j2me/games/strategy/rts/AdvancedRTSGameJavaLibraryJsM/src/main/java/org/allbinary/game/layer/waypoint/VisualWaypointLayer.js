@@ -13,16 +13,16 @@
 //not GWT import const RemoteInfo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointLayer } from './WaypointLayer.js';
-//not GWT import - same folder const WaypointLayer
+//sameFolderImports - not GWT import - same folder const WaypointLayer
 import { WaypointInfoHudPaintableSingleton } from './WaypointInfoHudPaintableSingleton.js';
-//not GWT import - same folder const WaypointInfoHudPaintable
+//sameFolderImports - not GWT import - same folder const WaypointInfoHudPaintable
 export class VisualWaypointLayer extends WaypointLayer {
     constructor(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y) {
         super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y);
         //For kotlin this is before the body of the constructor.
     }
     createHudPaintable() {
-        var rtsLayerHudPaintable = WaypointInfoHudPaintableSingleton.getInstance();
+        let rtsLayerHudPaintable = WaypointInfoHudPaintableSingleton.getInstance();
         ;
         rtsLayerHudPaintable.setBasicColorP(this.allBinaryGameLayerManagerP.getForegroundBasicColor());
         rtsLayerHudPaintable.setRtsLayer(this);
@@ -30,7 +30,7 @@ export class VisualWaypointLayer extends WaypointLayer {
         return rtsLayerHudPaintable;
     }
     getHudPaintable() {
-        var rtsLayerHudPaintable = WaypointInfoHudPaintableSingleton.getInstance();
+        let rtsLayerHudPaintable = WaypointInfoHudPaintableSingleton.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return rtsLayerHudPaintable;

@@ -16,7 +16,7 @@
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresHelperBase } from './HighScoresHelperBase.js';
-//not GWT import - same folder const HighScores
+//sameFolderImports - not GWT import - same folder const HighScores
 export class HighScoresHelper extends HighScoresHelperBase {
     constructor() {
         super(...arguments);
@@ -28,9 +28,9 @@ export class HighScoresHelper extends HighScoresHelperBase {
         this.circularIndexUtil.setSize(this.highScoresArrayP.length);
     }
     getNextHighScores() {
-        var highScores = this.highScoresArrayP[this.circularIndexUtil.getIndex()];
+        let highScores = this.highScoresArrayP[this.circularIndexUtil.getIndex()];
         ;
-        var index = 0;
+        let index = 0;
         ;
         while ((highScores.getTotal() < 1 || this.lastIndex == this.circularIndexUtil.getIndex()) && index < this.highScoresArrayP.length) {
             this.circularIndexUtil.next();
@@ -46,11 +46,11 @@ export class HighScoresHelper extends HighScoresHelperBase {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
-        var anyScores = false;
+        let anyScores = false;
         ;
-        var highScores;
+        let highScores;
         ;
-        for (var index = this.highScoresArrayP.length - 1; index >= 0; index--) {
+        for (let index = this.highScoresArrayP.length - 1; index >= 0; index--) {
             highScores = this.highScoresArrayP[index];
             if (highScores.getTotal() > 0) {
                 anyScores = true;

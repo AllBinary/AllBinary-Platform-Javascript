@@ -27,10 +27,10 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AngleFactory } from './AngleFactory.js';
-//not GWT import - same folder const AngleFactory
+//sameFolderImports - not GWT import - same folder const AngleFactory
 //not plain js - same folder import { PositionStrings } 
 const PositionStrings = globalThis.org.allbinary.math.PositionStrings;
-//not GWT import - same folder const Angle
+//sameFolderImports - not GWT import - same folder const Angle
 export class NoDecimalTrigTable extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,9 +40,9 @@ export class NoDecimalTrigTable extends Object {
         super();
         this.mathUtil = MathUtil.getInstance();
         this.SCALE = 10000;
-        var TOTAL_ANGLE = Math.round(AngleFactory.getInstance().TOTAL_ANGLE);
+        let TOTAL_ANGLE = globalThis.Math.trunc(AngleFactory.getInstance().TOTAL_ANGLE);
         ;
-        var MAX_VALUE = (Integer.MAX_VALUE);
+        let MAX_VALUE = (Integer.MAX_VALUE);
         ;
         this.noDecimalSin = new Array(TOTAL_ANGLE);
         this.noDecimalCos = new Array(TOTAL_ANGLE);
@@ -1143,22 +1143,22 @@ export class NoDecimalTrigTable extends Object {
     }
     //@Throws(Exception.constructor)
     antiTan(dx, dy) {
-        var MAX_VALUE = (Integer.MAX_VALUE);
+        let MAX_VALUE = (Integer.MAX_VALUE);
         ;
-        var MIN_VALUE = (Integer.MIN_VALUE);
+        let MIN_VALUE = (Integer.MIN_VALUE);
         ;
-        var ratio = (MAX_VALUE - 1);
+        let ratio = (MAX_VALUE - 1);
         ;
         if (dy != 0) {
-            var dxl = (dx);
+            let dxl = (dx);
             ;
-            ratio = this.SCALE * dxl / dy;
+            ratio = globalThis.Math.trunc(this.SCALE * dxl / dy);
             if (dx <= 0 && dy < 0) {
                 ratio = this.mathUtil.abslong(ratio);
             }
         }
         if ((dx >= 0 && dy < 0)) {
-            for (var index = 180; index > 90; index--) {
+            for (let index = 180; index > 90; index--) {
                 if (ratio <= this.noDecimalTan[index]) {
                     if (ratio > this.noDecimalTan[index - 1]) {
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1172,7 +1172,7 @@ export class NoDecimalTrigTable extends Object {
             }
         }
         else if ((dx < 0 && dy <= 0)) {
-            for (var index = 270; index > 180; index--) {
+            for (let index = 270; index > 180; index--) {
                 if (ratio < this.noDecimalTan[index] && ratio >= this.noDecimalTan[index - 1]) {
                     //if statement needs to be on the same line and ternary does not work the same way.
                     return (index);
@@ -1180,7 +1180,7 @@ export class NoDecimalTrigTable extends Object {
             }
         }
         else if ((dx < 0 && dy > 0)) {
-            for (var index = (this.noDecimalTan.length - 1); index > 270; index--) {
+            for (let index = (this.noDecimalTan.length - 1); index > 270; index--) {
                 if (ratio < this.noDecimalTan[index]) {
                     if (ratio >= this.noDecimalTan[index - 1]) {
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1194,14 +1194,14 @@ export class NoDecimalTrigTable extends Object {
             }
         }
         else if ((dx >= 0 && dy >= 0)) {
-            for (var index = 90; index > 0; index--) {
+            for (let index = 90; index > 0; index--) {
                 if (ratio < this.noDecimalTan[index] && ratio >= this.noDecimalTan[index - 1]) {
                     //if statement needs to be on the same line and ternary does not work the same way.
                     return (index);
                 }
             }
         }
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Invalid Ratio: ");
         stringBuffer.appendlong(ratio);
@@ -1215,43 +1215,43 @@ export class NoDecimalTrigTable extends Object {
     }
     //@Throws(Exception.constructor)
     antiTanDebug(screenX, screenY, targetX, targetY) {
-        var METHOD_NAME = "antiTanDebug";
+        let METHOD_NAME = "antiTanDebug";
         ;
-        var TARGET_ANGLE = " Targeting angle: ";
+        let TARGET_ANGLE = " Targeting angle: ";
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
         PreLogUtil.put(stringMaker.append("screenX: ").appendint(screenX).append(" screenY: ").appendint(screenY).append(" targetX: ").appendint(targetX).append(" targetY: ").appendint(targetY).toString(), this, METHOD_NAME);
-        var targetX2 = Math.round(-targetX);
+        let targetX2 = globalThis.Math.trunc(-targetX);
         ;
-        var targetY2 = Math.round(-targetY);
+        let targetY2 = globalThis.Math.trunc(-targetY);
         ;
-        var screenX2 = Math.round(-screenX);
+        let screenX2 = globalThis.Math.trunc(-screenX);
         ;
-        var screenY2 = Math.round(-screenY);
+        let screenY2 = globalThis.Math.trunc(-screenY);
         ;
-        var dx = new Array(4);
+        let dx = new Array(4);
         ;
         dx[0] = (screenX - targetX);
         dx[1] = (screenX - targetX2);
         dx[2] = (screenX2 - targetX);
         dx[3] = (screenX2 - targetX2);
-        var dy = new Array(4);
+        let dy = new Array(4);
         ;
         dy[0] = (screenY - targetY);
         dy[1] = (screenY - targetY2);
         dy[2] = (screenY2 - targetY);
         dy[3] = (screenY2 - targetY2);
-        var angleOfTarget = 0;
+        let angleOfTarget = 0;
         ;
-        var angleFactory = AngleFactory.getInstance();
+        let angleFactory = AngleFactory.getInstance();
         ;
-        var angle;
+        let angle;
         ;
-        for (var index = 0; index < dx.length; index++) {
-            for (var index2 = 0; index2 < dy.length; index2++) {
+        for (let index = 0; index < dx.length; index++) {
+            for (let index2 = 0; index2 < dy.length; index2++) {
                 angleOfTarget = this.antiTan(dx[index], dy[index2]);
-                angle = angleFactory.getAt(Math.round(angleOfTarget));
+                angle = angleFactory.getAt(globalThis.Math.trunc(angleOfTarget));
                 stringMaker.delete(0, stringMaker.length());
                 PreLogUtil.put(stringMaker.append(CommonLabels.getInstance().INDEX_LABEL).appendint(index).append(" index2: ").appendint(index2).append(PositionStrings.getInstance().DX_LABEL).appendint(dx[index]).append(PositionStrings.getInstance().DY_LABEL).appendint(dy[index2]).append(TARGET_ANGLE).appendshort(angleOfTarget).append(CommonSeps.getInstance().EQUALS).appendshort(angle.getValue()).toString(), this, METHOD_NAME);
             }

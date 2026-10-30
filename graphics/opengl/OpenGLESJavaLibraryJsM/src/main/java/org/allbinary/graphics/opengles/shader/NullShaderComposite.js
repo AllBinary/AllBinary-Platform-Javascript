@@ -16,7 +16,7 @@ import { NullOpenGLProcessorFactory } from '../../../../../org/allbinary/graphic
 //not GWT import const OpenGLProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ShaderComposite } from './ShaderComposite.js';
-//not GWT import - same folder const ModelViewProjection
+//sameFolderImports - not GWT import - same folder const ModelViewProjection
 export class NullShaderComposite extends ShaderComposite {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

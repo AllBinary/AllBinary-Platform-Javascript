@@ -16,11 +16,11 @@ import { Object } from '../../../java/lang/Object.js';
 //not GWT import const BasicColor
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const VectorAnimationFactoryInterface
+//sameFolderImports - not GWT import - same folder const VectorAnimationFactoryInterface
 import { VectorRotationGenerator } from './VectorRotationGenerator.js';
-//not GWT import - same folder const VectorRotationGenerator
+//sameFolderImports - not GWT import - same folder const VectorRotationGenerator
 import { VectorExplosionGenerator } from './VectorExplosionGenerator.js';
-//not GWT import - same folder const Animation
+//sameFolderImports - not GWT import - same folder const Animation
 export class IndependentVectorExplosionRotationAnimationFactory extends Object {
     constructor(vectorInfo, basicColor, vectorAnimationFactoryInterface) {
         super();
@@ -37,15 +37,15 @@ export class IndependentVectorExplosionRotationAnimationFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstanceAnimation(animationInterface) {
-        var frame = 0;
+        let frame = 0;
         ;
         if (animationInterface !=
             null) {
-            var rotationAnimationInterface = animationInterface;
+            let rotationAnimationInterface = animationInterface;
             ;
             frame = rotationAnimationInterface.getFrame();
         }
-        var points = this.vectorExplosionGenerator.getInstance(this.framePoints[frame], 6, this.vectorExplosionGenerator.ROTATION);
+        let points = this.vectorExplosionGenerator.getInstance(this.framePoints[frame], 6, this.vectorExplosionGenerator.ROTATION);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.vectorAnimationFactoryInterface.getInstance(points, this.basicColor);

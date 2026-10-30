@@ -28,7 +28,7 @@ import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/Basi
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SelectionHudPaintable } from './SelectionHudPaintable.js';
-//not GWT import - same folder const RTSLayer
+//sameFolderImports - not GWT import - same folder const RTSLayer
 export class MultiSelectPaintable extends SelectionHudPaintable {
     constructor() {
         super();
@@ -42,29 +42,29 @@ export class MultiSelectPaintable extends SelectionHudPaintable {
     }
     updateMeasurement(graphics) {
         super.updateMeasurement(graphics);
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.totalWidth = font.stringWidth(this.TOTAL);
         this.textLine2Y = (this.y + font.getHeight());
     }
     update(list) {
         this.clear();
-        var size = list.size();
+        let size = list.size();
         ;
         this.totalCharArray = this.getPrimitiveLongUtil().getCharArray(size);
-        for (var index = list.size() - 1; index >= 0; index--) {
-            var rtsLayer = list.get(index);
+        for (let index = list.size() - 1; index >= 0; index--) {
+            let rtsLayer = list.get(index);
             ;
             if (!this.rootNameList.contains(rtsLayer.getRootName())) {
                 this.rootNameList.add(rtsLayer.getRootName());
             }
         }
-        var COMMA_SEP = CommonSeps.getInstance().COMMA_SEP;
+        let COMMA_SEP = CommonSeps.getInstance().COMMA_SEP;
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        for (var index = this.rootNameList.size() - 1; index >= 0; index--) {
-            var rootName = this.rootNameList.get(index);
+        for (let index = this.rootNameList.size() - 1; index >= 0; index--) {
+            let rootName = this.rootNameList.get(index);
             ;
             stringBuffer.append(rootName);
             if (index != 0) {

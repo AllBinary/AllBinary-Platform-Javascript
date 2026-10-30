@@ -17,9 +17,9 @@ import { LayerManagerEventHandler } from '../../../org/allbinary/layer/event/Lay
 //not GWT import const LayerManagerEventHandler
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerManager } from './LayerManager.js';
-//not GWT import - same folder const LayerProcessor
+//sameFolderImports - not GWT import - same folder const LayerProcessor
 import { LayerManagerNoDebug } from './LayerManagerNoDebug.js';
-//not GWT import - same folder const AllBinaryLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryLayer
 export class AllBinaryLayerManager extends LayerManager {
     constructor() {
         super(LayerManagerNoDebug.getInstance());
@@ -37,10 +37,10 @@ export class AllBinaryLayerManager extends LayerManager {
         this.basicLayerProcessorArray = layerProcessorArray;
     }
     log() {
-        var size = this.basicLayerProcessorArray.length;
+        let size = this.basicLayerProcessorArray.length;
         ;
-        for (var index = 0; index < size; index++) {
-            var layerProcessorInterface = this.basicLayerProcessorArray[index];
+        for (let index = 0; index < size; index++) {
+            let layerProcessorInterface = this.basicLayerProcessorArray[index];
             ;
         }
     }
@@ -62,9 +62,9 @@ export class AllBinaryLayerManager extends LayerManager {
     appendProcessors(layerInterface) {
         this.createLayerManagerEvent.setLayerInterface(layerInterface);
         this.layerManagerEventHandler.fireEvent(this.createLayerManagerEvent);
-        var layerProcessorInterface;
+        let layerProcessorInterface;
         ;
-        for (var index = this.basicLayerProcessorArray.length; --index >= 0;) {
+        for (let index = this.basicLayerProcessorArray.length; --index >= 0;) {
             layerProcessorInterface = this.basicLayerProcessorArray[index];
             if (layerProcessorInterface.isProcessorLayer(layerInterface)) {
                 layerProcessorInterface.getLayerManager().append(layerInterface);
@@ -76,9 +76,9 @@ export class AllBinaryLayerManager extends LayerManager {
     remove(layerInterface) {
         this.deleteLayerManagerEvent.setLayerInterface(layerInterface);
         this.layerManagerEventHandler.fireDeleteEvent(this.deleteLayerManagerEvent);
-        var layerProcessorInterface;
+        let layerProcessorInterface;
         ;
-        for (var index = this.basicLayerProcessorArray.length; --index >= 0;) {
+        for (let index = this.basicLayerProcessorArray.length; --index >= 0;) {
             layerProcessorInterface = this.basicLayerProcessorArray[index];
             layerProcessorInterface.getLayerManager().remove(layerInterface);
         }
@@ -86,22 +86,22 @@ export class AllBinaryLayerManager extends LayerManager {
     }
     //@Throws(Exception.constructor)
     process() {
-        var layerProcessorInterface;
+        let layerProcessorInterface;
         ;
-        var size = this.basicLayerProcessorArray.length;
+        let size = this.basicLayerProcessorArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             layerProcessorInterface = this.basicLayerProcessorArray[index];
             layerProcessorInterface.process(this);
         }
     }
     //@Throws(Exception.constructor)
     cleanup() {
-        var layerProcessorInterface;
+        let layerProcessorInterface;
         ;
-        var size = this.basicLayerProcessorArray.length;
+        let size = this.basicLayerProcessorArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             layerProcessorInterface = this.basicLayerProcessorArray[index];
             layerProcessorInterface.getLayerManager().cleanup();
         }

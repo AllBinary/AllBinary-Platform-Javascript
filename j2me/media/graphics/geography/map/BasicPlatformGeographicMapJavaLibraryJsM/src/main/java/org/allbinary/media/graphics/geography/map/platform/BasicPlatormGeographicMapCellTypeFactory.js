@@ -26,48 +26,48 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const EnumerationUtil = globalThis.org.allbinary.util.EnumerationUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicPlatormGeographicMapCellType } from './BasicPlatormGeographicMapCellType.js';
-//not GWT import - same folder const BasicPlatormGeographicMapCellType
+//sameFolderImports - not GWT import - same folder const BasicPlatormGeographicMapCellType
 export class BasicPlatormGeographicMapCellTypeFactory extends GeographicMapCellTypeFactory {
     constructor(tileTypeToTileIdsMap, maxTileId) {
         super();
         this.enumerationUtil = EnumerationUtil.getInstance();
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(commonStrings.START, this, commonStrings.INIT);
         this.maxTileId = maxTileId;
         new GeographicMapCellType(0, 0);
-        var BLOCK_CELL_TYPE = BasicPlatormGeographicMapCellType.createType(1);
+        let BLOCK_CELL_TYPE = BasicPlatormGeographicMapCellType.createType(1);
         ;
-        var JUMP_THRU_CELL_TYPE = BLOCK_CELL_TYPE;
+        let JUMP_THRU_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var LADDER_CELL_TYPE = BLOCK_CELL_TYPE;
+        let LADDER_CELL_TYPE = BLOCK_CELL_TYPE;
         ;
-        var PLATFORM = "Platform";
+        let PLATFORM = "Platform";
         ;
-        var JUMP_TRHU = "JumpThru";
+        let JUMP_TRHU = "JumpThru";
         ;
-        var LADDER = "Ladder";
+        let LADDER = "Ladder";
         ;
-        var enumeration = tileTypeToTileIdsMap.keys();
+        let enumeration = tileTypeToTileIdsMap.keys();
         ;
-        var idsWithTypeList;
+        let idsWithTypeList;
         ;
-        var key;
+        let key;
         ;
-        var basicPlatormGeographicMapCellType;
+        let basicPlatormGeographicMapCellType;
         ;
         while (this.enumerationUtil.hasMoreElements(enumeration)) {
             key = this.enumerationUtil.nextElement(enumeration);
             this.logUtil.putF(key, this, commonStrings.INIT);
             idsWithTypeList = tileTypeToTileIdsMap.get(key);
             basicPlatormGeographicMapCellType = new BasicPlatormGeographicMapCellType(idsWithTypeList);
-            if (key === PLATFORM) {
+            if ((key === PLATFORM)) {
                 BLOCK_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            if (key === JUMP_TRHU) {
+            if ((key === JUMP_TRHU)) {
                 JUMP_THRU_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
-            if (key === LADDER) {
+            if ((key === LADDER)) {
                 LADDER_CELL_TYPE = basicPlatormGeographicMapCellType;
             }
         }

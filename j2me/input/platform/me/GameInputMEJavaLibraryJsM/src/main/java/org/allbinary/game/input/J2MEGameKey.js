@@ -18,12 +18,12 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Input } from './Input.js';
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const InputFactory
+//sameFolderImports - not GWT import - same folder const InputFactory
 export class J2MEGameKey extends Input {
     static getString(keyCode) {
-        var input = InputFactory.getInstance().getInstanceById(keyCode);
+        let input = InputFactory.getInstance().getInstanceById(keyCode);
         ;
         if (input !=
             null) {
@@ -39,10 +39,10 @@ export class J2MEGameKey extends Input {
     constructor(key, keyName) {
         super(key, keyName);
         //For kotlin this is before the body of the constructor.
-        var id = this.getId();
+        let id = this.getId();
         ;
         if (id >= 0) {
-            var inputFactory = InputFactory.getInstance();
+            let inputFactory = InputFactory.getInstance();
             ;
             inputFactory.add(id, this);
         }

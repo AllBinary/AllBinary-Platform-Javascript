@@ -18,18 +18,18 @@ import { RuntimeException } from '../../../java/lang/RuntimeException.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullImage } from './NullImage.js';
-//not GWT import - same folder const Graphics
+//sameFolderImports - not GWT import - same folder const Graphics
 //PlatformNullImageJavaLibrary
 export class PlatformImage extends Object {
-    getImage(graphicsSurface2 = {}) {
+    getImage(graphicsSurface2) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullImage.NULL_IMAGE;
     }
-    getSurfaceWidth(graphicsSurface2 = {}, width) {
+    getSurfaceWidth(graphicsSurface2, width) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return width;
     }
-    getSurfaceHeight(graphicsSurface2 = {}, height) {
+    getSurfaceHeight(graphicsSurface2, height) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return height;
     }
@@ -41,10 +41,10 @@ export class PlatformImage extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return height;
     }
-    getGraphics(graphicsSurface = {}, width, height, image) {
+    getGraphics(graphicsSurface, width, height, image) {
         throw new RuntimeException();
     }
-    drawImage(image, x, y, anchor, g2, g = {}) {
+    drawImage(image, x, y, anchor, g2, g) {
     }
     drawRegion(image, x_src, y_src, width, height, transform, x_dst, y_dst, anchor, g) {
     }

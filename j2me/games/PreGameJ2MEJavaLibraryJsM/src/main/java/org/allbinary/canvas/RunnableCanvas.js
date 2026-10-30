@@ -43,9 +43,9 @@ import { TimeDelayHelper } from '../../../org/allbinary/time/TimeDelayHelper.js'
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Processor } from './Processor.js';
-//not GWT import - same folder const Processor
+//sameFolderImports - not GWT import - same folder const Processor
 import { RunnableCanvasRefreshHelper } from './RunnableCanvasRefreshHelper.js';
-//not GWT import - same folder const RunnableCanvasRefreshHelper
+//sameFolderImports - not GWT import - same folder const RunnableCanvasRefreshHelper
 export class RunnableCanvas extends MyCanvas {
     constructor(commandListener, childNameList, hasParam) {
         super(CommonStrings.getInstance().UNKNOWN, childNameList);
@@ -116,7 +116,7 @@ export class RunnableCanvas extends MyCanvas {
             return this.running;
         }
         else {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(this.THREAD);
             if (this.thread !=
@@ -155,10 +155,12 @@ export class RunnableCanvas extends MyCanvas {
     showNotify() {
         try {
             this.stopWaiting();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "showNotify", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "showNotify", e);
+            }
         }
     }
     //@Throws(Exception.constructor)
@@ -198,11 +200,11 @@ export class RunnableCanvas extends MyCanvas {
     processLoopSleep() {
         this.runnableCanvasRefreshHelper.process();
         if (this.isPaused()) {
-            var stringMaker = new StringMaker();
+            let stringMaker = new StringMaker();
             ;
             if (this.isRunning() && !this.isSingleThread()) {
                 stringMaker.delete(0, stringMaker.length());
-                var currentTimeMillis = this.systemWrapper.currentTimeMillis();
+                let currentTimeMillis = this.systemWrapper.currentTimeMillis();
                 ;
                 this.logUtil.putF(stringMaker.append(this.START_PAUSE).appendlong(currentTimeMillis).append(this.PAUSE_SLEEP).appendlong(this.pauseWait).toString(), this, this.PROCESS_LOOP_SLEEP);
                 while (this.isPaused() && this.isRunning() && !this.isSingleThread()) {
@@ -216,9 +218,9 @@ export class RunnableCanvas extends MyCanvas {
                 }
             }
         }
-        var elapsedTime = this.loopTimeHelper.getElapsedTNT();
+        let elapsedTime = this.loopTimeHelper.getElapsedTNT();
         ;
-        var wait = this.loopTimeHelper.delay;
+        let wait = this.loopTimeHelper.delay;
         ;
         if (elapsedTime > wait) {
             elapsedTime = wait;

@@ -20,7 +20,7 @@ import { NoHardwareComponent } from '../../../../../org/allbinary/logic/system/h
 //not GWT import const NoHardwareComponent
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const HardwareInterface
+//sameFolderImports - not GWT import - same folder const HardwareInterface
 export class NoHardware extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

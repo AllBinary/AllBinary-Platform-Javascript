@@ -27,21 +27,11 @@ export class J2SEMath extends Object {
     }
     abs(value) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return (value < 0)
-            ?
-                -value
-            :
-                value;
-        ;
+        return ((value < 0) ? -value : value);
     }
     absdouble(value) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return (value < 0)
-            ?
-                -value
-            :
-                value;
-        ;
+        return ((value < 0) ? -value : value);
     }
 }
 J2SEMath.instance = new J2SEMath();

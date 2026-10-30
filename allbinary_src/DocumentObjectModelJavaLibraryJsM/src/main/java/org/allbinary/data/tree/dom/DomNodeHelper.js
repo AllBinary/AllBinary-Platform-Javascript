@@ -21,17 +21,17 @@ import { Node } from '../../../../../org/w3c/dom/Node.js';
 //not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomSearchHelper } from './DomSearchHelper.js';
-//not GWT import - same folder const DomSearchHelper
+//sameFolderImports - not GWT import - same folder const DomSearchHelper
 export class DomNodeHelper extends Object {
     static getFirstChildElement(parentNode) {
-        var node = parentNode.getFirstChild();
+        let node = parentNode.getFirstChild();
         ;
         if (node !=
             null
             && node.getNodeType() != Node.ELEMENT_NODE) {
-            var nodeList = parentNode.getChildNodes();
+            let nodeList = parentNode.getChildNodes();
             ;
-            for (var index = 0; index < nodeList.getLength(); index++) {
+            for (let index = 0; index < nodeList.getLength(); index++) {
                 node = nodeList.item(index);
                 if (node.getNodeType() == 1) {
                     break;
@@ -41,8 +41,15 @@ export class DomNodeHelper extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return node;
     }
-    static getTextNodeValue(node) {
-        var nodeTextNode = node.getFirstChild();
+    static getTextNodeValue(...args) {
+        if (args.length === 1)
+            return this.getTextNodeValue$overload1(args[0]);
+        if (args.length === 2 && typeof args[0] === 'string')
+            return this.getTextNodeValue$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getTextNodeValue');
+    }
+    static getTextNodeValue$overload1(node) {
+        let nodeTextNode = node.getFirstChild();
         ;
         if (nodeTextNode !=
             null) {
@@ -56,20 +63,20 @@ export class DomNodeHelper extends Object {
         }
     }
     //@Throws(Exception.constructor)
-    static getTextNodeValue(nodeName, nodeList) {
-        var node = DomSearchHelper.getNode(nodeName, nodeList);
+    static getTextNodeValue$overload2(nodeName, nodeList) {
+        let node = DomSearchHelper.getNode(nodeName, nodeList);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return DomNodeHelper.getTextNodeValue(node);
         ;
     }
     static getTextNodesValue(node) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var nodeList = node.getChildNodes();
+        let nodeList = node.getChildNodes();
         ;
-        for (var index = 0; index < nodeList.getLength(); index++) {
-            var nodeTextNode = nodeList.item(index);
+        for (let index = 0; index < nodeList.getLength(); index++) {
+            let nodeTextNode = nodeList.item(index);
             ;
             if (nodeTextNode.getNodeType() == Node.TEXT_NODE) {
                 if (nodeTextNode !=

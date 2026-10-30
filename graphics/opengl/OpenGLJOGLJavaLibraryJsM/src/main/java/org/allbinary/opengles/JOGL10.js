@@ -14,7 +14,7 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { GLU } from '../../../com/jogamp/opengl/glu/GLU.js';
-//not GWT import - same folder const FloatBuffer
+//sameFolderImports - not GWT import - same folder const FloatBuffer
 //JOGLEToKhronosGL10
 export class JOGL10 extends Object {
     constructor(gl, gl2) {
@@ -90,10 +90,17 @@ export class JOGL10 extends Object {
     glCullFace(mode) {
         this.gl10.glCullFace(mode);
     }
-    glDeleteTextures(n, textures, offset) {
+    glDeleteTextures(...args) {
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[2] === 'number')
+            return this.glDeleteTextures$overload1(args[0], args[1], args[2]);
+        if (args.length === 2 && typeof args[0] === 'number')
+            return this.glDeleteTextures$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: glDeleteTextures');
+    }
+    glDeleteTextures$overload1(n, textures, offset) {
         this.gl10.glDeleteTextures(n, textures, offset);
     }
-    glDeleteTextures(n, textures) {
+    glDeleteTextures$overload2(n, textures) {
         this.gl10.glDeleteTextures(n, textures);
     }
     glDepthFunc(func) {
@@ -132,10 +139,17 @@ export class JOGL10 extends Object {
     glFogf(pname, param) {
         this.gl10.glFogf(pname, param);
     }
-    glFogfv(pname, params, offset) {
+    glFogfv(...args) {
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[2] === 'number')
+            return this.glFogfv$overload1(args[0], args[1], args[2]);
+        if (args.length === 2 && typeof args[0] === 'number')
+            return this.glFogfv$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: glFogfv');
+    }
+    glFogfv$overload1(pname, params, offset) {
         this.gl10.glFogfv(pname, params, offset);
     }
-    glFogfv(pname, params) {
+    glFogfv$overload2(pname, params) {
         this.gl10.glFogfv(pname, params);
     }
     glFrontFace(mode) {
@@ -144,10 +158,17 @@ export class JOGL10 extends Object {
     glFrustumf(left, right, bottom, top, zNear, zFar) {
         this.gl10.glFrustumf(left, right, bottom, top, zNear, zFar);
     }
-    glGenTextures(n, textures, offset) {
+    glGenTextures(...args) {
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[2] === 'number')
+            return this.glGenTextures$overload1(args[0], args[1], args[2]);
+        if (args.length === 2 && typeof args[0] === 'number')
+            return this.glGenTextures$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: glGenTextures');
+    }
+    glGenTextures$overload1(n, textures, offset) {
         this.gl10.glGenTextures(n, textures, offset);
     }
-    glGenTextures(n, textures) {
+    glGenTextures$overload2(n, textures) {
         this.gl10.glGenTextures(n, textures);
     }
     glGetError() {
@@ -155,10 +176,17 @@ export class JOGL10 extends Object {
         return this.gl10.glGetError();
         ;
     }
-    glGetIntegerv(pname, params, offset) {
+    glGetIntegerv(...args) {
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[2] === 'number')
+            return this.glGetIntegerv$overload1(args[0], args[1], args[2]);
+        if (args.length === 2 && typeof args[0] === 'number')
+            return this.glGetIntegerv$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: glGetIntegerv');
+    }
+    glGetIntegerv$overload1(pname, params, offset) {
         this.gl10.glGetIntegerv(pname, params, offset);
     }
-    glGetIntegerv(pname, params) {
+    glGetIntegerv$overload2(pname, params) {
         this.gl10.glGetIntegerv(pname, params);
     }
     glGetString(name) {
@@ -172,19 +200,33 @@ export class JOGL10 extends Object {
     glLightModelf(pname, param) {
         this.gl10.glLightModelf(pname, param);
     }
-    glLightModelfv(pname, params, offset) {
+    glLightModelfv(...args) {
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[2] === 'number')
+            return this.glLightModelfv$overload1(args[0], args[1], args[2]);
+        if (args.length === 2 && typeof args[0] === 'number')
+            return this.glLightModelfv$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: glLightModelfv');
+    }
+    glLightModelfv$overload1(pname, params, offset) {
         this.gl10.glLightModelfv(pname, params, offset);
     }
-    glLightModelfv(pname, params) {
+    glLightModelfv$overload2(pname, params) {
         this.gl10.glLightModelfv(pname, params);
     }
     glLightf(light, pname, param) {
         this.gl10.glLightf(light, pname, param);
     }
-    glLightfv(light, pname, params, offset) {
+    glLightfv(...args) {
+        if (args.length === 4 && typeof args[0] === 'number' && typeof args[1] === 'number' && typeof args[3] === 'number')
+            return this.glLightfv$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[1] === 'number')
+            return this.glLightfv$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: glLightfv');
+    }
+    glLightfv$overload1(light, pname, params, offset) {
         this.gl10.glLightfv(light, pname, params, offset);
     }
-    glLightfv(light, pname, params) {
+    glLightfv$overload2(light, pname, params) {
         this.gl10.glLightfv(light, pname, params);
     }
     glLineWidth(width) {
@@ -193,10 +235,17 @@ export class JOGL10 extends Object {
     glLoadIdentity() {
         this.gl10.glLoadIdentity();
     }
-    glLoadMatrixf(m, offset) {
+    glLoadMatrixf(...args) {
+        if (args.length === 2 && typeof args[1] === 'number')
+            return this.glLoadMatrixf$overload1(args[0], args[1]);
+        if (args.length === 1)
+            return this.glLoadMatrixf$overload2(args[0]);
+        throw new TypeError('No matching overload: glLoadMatrixf');
+    }
+    glLoadMatrixf$overload1(m, offset) {
         this.gl10.glLoadMatrixf(m, offset);
     }
-    glLoadMatrixf(m) {
+    glLoadMatrixf$overload2(m) {
         this.gl10.glLoadMatrixf(m);
     }
     glLogicOp(opcode) {
@@ -205,19 +254,33 @@ export class JOGL10 extends Object {
     glMaterialf(face, pname, param) {
         this.gl10.glMaterialf(face, pname, param);
     }
-    glMaterialfv(face, pname, params, offset) {
+    glMaterialfv(...args) {
+        if (args.length === 4 && typeof args[0] === 'number' && typeof args[1] === 'number' && typeof args[3] === 'number')
+            return this.glMaterialfv$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[1] === 'number')
+            return this.glMaterialfv$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: glMaterialfv');
+    }
+    glMaterialfv$overload1(face, pname, params, offset) {
         this.gl10.glMaterialfv(face, pname, params, offset);
     }
-    glMaterialfv(face, pname, params) {
+    glMaterialfv$overload2(face, pname, params) {
         this.gl10.glMaterialfv(face, pname, params);
     }
     glMatrixMode(mode) {
         this.gl10.glMatrixMode(mode);
     }
-    glMultMatrixf(m, offset) {
+    glMultMatrixf(...args) {
+        if (args.length === 2 && typeof args[1] === 'number')
+            return this.glMultMatrixf$overload1(args[0], args[1]);
+        if (args.length === 1)
+            return this.glMultMatrixf$overload2(args[0]);
+        throw new TypeError('No matching overload: glMultMatrixf');
+    }
+    glMultMatrixf$overload1(m, offset) {
         this.gl10.glMultMatrixf(m, offset);
     }
-    glMultMatrixf(m) {
+    glMultMatrixf$overload2(m) {
         this.gl10.glMultMatrixf(m);
     }
     glMultiTexCoord4f(target, s, t, r, q) {
@@ -286,10 +349,17 @@ export class JOGL10 extends Object {
     glTexEnvf(target, pname, param) {
         this.gl10.glTexEnvf(target, pname, param);
     }
-    glTexEnvfv(target, pname, params, offset) {
+    glTexEnvfv(...args) {
+        if (args.length === 4 && typeof args[0] === 'number' && typeof args[1] === 'number' && typeof args[3] === 'number')
+            return this.glTexEnvfv$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 3 && typeof args[0] === 'number' && typeof args[1] === 'number')
+            return this.glTexEnvfv$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: glTexEnvfv');
+    }
+    glTexEnvfv$overload1(target, pname, params, offset) {
         this.gl10.glTexEnvfv(target, pname, params, offset);
     }
-    glTexEnvfv(target, pname, params) {
+    glTexEnvfv$overload2(target, pname, params) {
         this.gl10.glTexEnvfv(target, pname, params);
     }
     glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels) {

@@ -13,9 +13,9 @@
 */
 //not GWT import const Group
 import { CollidableDestroyableDamageableLayer } from '../../../../../org/allbinary/game/layer/special/CollidableDestroyableDamageableLayer.js';
-//not GWT import - same folder const RemoteInfo
+//sameFolderImports - not GWT import - same folder const RemoteInfo
 import { MultiplayerBehavior } from './MultiplayerBehavior.js';
-//not GWT import - same folder const MultiplayerBehavior
+//sameFolderImports - not GWT import - same folder const MultiplayerBehavior
 export class MultiPlayerGameLayer extends CollidableDestroyableDamageableLayer {
     constructor(remoteInfo, groupInterface, name, layerInfo, viewPosition) {
         super(groupInterface, name, layerInfo, viewPosition);

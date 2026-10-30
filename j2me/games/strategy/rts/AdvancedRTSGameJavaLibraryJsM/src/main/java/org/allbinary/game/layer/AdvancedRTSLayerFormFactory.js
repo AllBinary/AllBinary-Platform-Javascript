@@ -21,23 +21,25 @@ import { ScrollSelectionForm } from '../../../../org/allbinary/graphics/form/Scr
 //not GWT import const ItemArraySingletonFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSScrollSelectionFormFactory } from './RTSScrollSelectionFormFactory.js';
-//not GWT import - same folder const RTSLayer
+//sameFolderImports - not GWT import - same folder const RTSLayer
 export class AdvancedRTSLayerFormFactory extends RTSLayerFormFactory {
     constructor(label, itemArrayFactoryInterface) {
         super();
         this.logUtil = LogUtil.getInstance();
-        var scrollSelectionForm = ScrollSelectionForm.getNullScrollSelectionForm();
+        let scrollSelectionForm = ScrollSelectionForm.getNullScrollSelectionForm();
         ;
         try {
-            var items = itemArrayFactoryInterface.getItems();
+            let items = itemArrayFactoryInterface.getItems();
             ;
             scrollSelectionForm = RTSScrollSelectionFormFactory.getInstance(label, items);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
         this.scrollSelectionForm = scrollSelectionForm;
     }

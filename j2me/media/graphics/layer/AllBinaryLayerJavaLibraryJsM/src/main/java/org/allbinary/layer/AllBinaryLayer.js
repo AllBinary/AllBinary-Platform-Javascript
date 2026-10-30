@@ -37,7 +37,7 @@ import { ViewPositionEvent } from '../../../org/allbinary/view/event/ViewPositio
 //not GWT import const ViewPositionEvent
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Layer } from './Layer.js';
-//not GWT import - same folder const LayerInterface
+//sameFolderImports - not GWT import - same folder const LayerInterface
 export class AllBinaryLayer extends Layer {
     constructor(name, rectangle, viewPosition) {
         super(rectangle.getWidth(), rectangle.getHeight());
@@ -46,7 +46,7 @@ export class AllBinaryLayer extends Layer {
         this.halfHeight = 0;
         this.viewPosition = ViewPositionBase.NULL_VIEW_POSITION;
         //For kotlin this is before the body of the constructor.
-        var localName;
+        let localName;
         ;
         if (name ==
             null) {
@@ -56,7 +56,7 @@ export class AllBinaryLayer extends Layer {
             localName = new StringMaker().append(name).append(CommonSeps.getInstance().COLON).append(Integer.toHexString(TsUtil.getInstance().hashCode(this))).toString();
         }
         this.name = localName;
-        var point = rectangle.getPoint();
+        let point = rectangle.getPoint();
         ;
         this.setPosition(point.getX(), point.getY(), point.getZ());
         this.setHalfWidth((this.getWidth() >> 1));
@@ -79,7 +79,7 @@ export class AllBinaryLayer extends Layer {
     }
     getZ2() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round((this.getZP() + this.getDepth()));
+        return globalThis.Math.trunc((this.getZP() + this.getDepth()));
     }
     getName() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,7 +101,7 @@ export class AllBinaryLayer extends Layer {
     }
     getHalfDepth() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Math.round(this.getDepth()) / 2;
+        return globalThis.Math.trunc(globalThis.Math.trunc(this.getDepth()) / 2);
     }
     getViewPosition() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -144,11 +144,11 @@ export class AllBinaryLayer extends Layer {
         return -1;
     }
     toStringAppend(stringBuffer) {
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
-        var positionStrings = PositionStrings.getInstance();
+        let positionStrings = PositionStrings.getInstance();
         ;
-        var commonLabels = CommonLabels.getInstance();
+        let commonLabels = CommonLabels.getInstance();
         ;
         stringBuffer.append(this.getName());
         stringBuffer.append(commonSeps.COLON);
@@ -171,7 +171,7 @@ export class AllBinaryLayer extends Layer {
         stringBuffer.appendint(this.getHeight());
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         this.toStringAppend(stringBuffer);
         //if statement needs to be on the same line and ternary does not work the same way.

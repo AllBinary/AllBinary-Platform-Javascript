@@ -14,7 +14,7 @@
 //not GWT import const StateControlledInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import - same folder const Paintable
+//sameFolderImports - not GWT import - same folder const Paintable
 export class StatePaintable extends Paintable {
     constructor() {
         super();

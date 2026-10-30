@@ -37,17 +37,17 @@ export class LevelLayersFinder extends Object {
         return LevelLayersFinder.instance;
     }
     get(hashtable) {
-        var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+        let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
         ;
-        var list = new BasicArrayListD();
+        let list = new BasicArrayListD();
         ;
-        var enumeration = hashtable.keys();
+        let enumeration = hashtable.keys();
         ;
-        var layerHashtableCanBeNull;
+        let layerHashtableCanBeNull;
         ;
-        var integerCanBeNull;
+        let integerCanBeNull;
         ;
-        var cachedIntegerCanBeNull;
+        let cachedIntegerCanBeNull;
         ;
         while (this.enumerationUtil.hasMoreElements(enumeration)) {
             layerHashtableCanBeNull = hashtable.get(this.enumerationUtil.nextElement(enumeration));

@@ -24,9 +24,9 @@ export class PlatformAssetManager extends Object {
     }
     //@Throws(Exception.constructor)
     getResourceAsStream(resource) {
-        var resourceUtil = ResourceUtil.getInstance();
+        let resourceUtil = ResourceUtil.getInstance();
         ;
-        var inputStream = resourceUtil.getResourceAsStream(resource);
+        let inputStream = resourceUtil.getResourceAsStream(resource);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return inputStream;

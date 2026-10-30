@@ -20,7 +20,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PlayerOwnedRTSLayers } from './PlayerOwnedRTSLayers.js';
-//not GWT import - same folder const AllBinaryGameLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryGameLayer
 export class AdvancedPlayerOwnedRTSLayers extends PlayerOwnedRTSLayers {
     constructor() {
         super(...arguments);
@@ -125,7 +125,7 @@ export class AdvancedPlayerOwnedRTSLayers extends PlayerOwnedRTSLayers {
         }
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(super.toString());
         stringBuffer.append(" Bases: ");

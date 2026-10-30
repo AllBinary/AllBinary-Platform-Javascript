@@ -18,10 +18,10 @@ import { AndroidInfoFactory } from '../../../../../org/allbinary/android/Android
 import { GameInputMotionInfoAPI1 } from '../../../../../org/allbinary/android/input/motion/api1/GameInputMotionInfoAPI1.js';
 //not GWT import const GameInputMotionInfoAPI1
 import { GameInputMotionInfoAPI5 } from '../../../../../org/allbinary/android/input/motion/api5/GameInputMotionInfoAPI5.js';
-//not GWT import - same folder const GameInputMotionInfo
+//sameFolderImports - not GWT import - same folder const GameInputMotionInfo
 export class GameInputMotionInfoFactory extends Object {
     static getInstance() {
-        var SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
+        let SDK_VERSION = AndroidInfoFactory.getInstance().getVersion();
         ;
         if (SDK_VERSION <= 4) {
             //if statement needs to be on the same line and ternary does not work the same way.

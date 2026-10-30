@@ -20,13 +20,13 @@ import { ArrayAI } from '../../../../../../org/allbinary/game/ag/ai/ArrayAI.js';
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RandomPatrolAI } from './RandomPatrolAI.js';
-//not GWT import - same folder const RandomPatrolAI
+//sameFolderImports - not GWT import - same folder const RandomPatrolAI
 import { TimedFireAI } from './TimedFireAI.js';
-//not GWT import - same folder const TimedFireAI
+//sameFolderImports - not GWT import - same folder const TimedFireAI
 export class RandomPatrolFlockingFiringAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {
-        var artificialIntelligenceInterface = new Array(2);
+        let artificialIntelligenceInterface = new Array(2);
         ;
         artificialIntelligenceInterface[0] = new RandomPatrolAI(hashtable, ownerLayerInterface, gameInput);
         artificialIntelligenceInterface[1] = new TimedFireAI(1800, ownerLayerInterface, gameInput);

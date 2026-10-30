@@ -56,7 +56,7 @@ export class PressStartMenuPaintable extends Paintable {
         }
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.beginWidth = (graphics.getFont().stringWidth(this.startString) >> 1);
         this.line = (4 * MyFontProcessor.defaultCharWidth(font)) + (font.getHeight() >> 1);

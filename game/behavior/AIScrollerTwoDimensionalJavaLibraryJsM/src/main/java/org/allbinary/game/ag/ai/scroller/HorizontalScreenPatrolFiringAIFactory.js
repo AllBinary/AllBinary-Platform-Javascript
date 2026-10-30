@@ -18,7 +18,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HorizontalScreenPatrolAI } from './HorizontalScreenPatrolAI.js';
-//not GWT import - same folder const HorizontalScreenPatrolAI
+//sameFolderImports - not GWT import - same folder const HorizontalScreenPatrolAI
 export class HorizontalScreenPatrolFiringAIFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance(hashtable, ownerLayerInterface, gameInput) {

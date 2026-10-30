@@ -20,7 +20,7 @@ import { BasicEventHandler } from '../../../../org/allbinary/logic/util/event/ha
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const ViewPositionEventListenerInterface
+//sameFolderImports - not GWT import - same folder const ViewPositionEventListenerInterface
 export class ViewPositionEventHandler extends BasicEventHandler {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -45,22 +45,24 @@ export class ViewPositionEventHandler extends BasicEventHandler {
     }
     //@Throws(Exception.constructor)
     fireEvent(eventObject) {
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             try {
-                var layerInterface = this.list.objectArray[index];
+                let layerInterface = this.list.objectArray[index];
                 ;
                 layerInterface.onChangeEvent(eventObject);
-                //: 
             }
-            catch (e) {
-                this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+            catch (caught) {
+                {
+                    const e = caught;
+                    this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
+                }
             }
         }
         super.fireEvent(eventObject);
     }
     //@Throws(Exception.constructor)
     process(eventObject, eventListenerInterface) {
-        var viewPositionEventListenerInterface = eventListenerInterface;
+        let viewPositionEventListenerInterface = eventListenerInterface;
         ;
         viewPositionEventListenerInterface.onChangeEvent(eventObject);
     }

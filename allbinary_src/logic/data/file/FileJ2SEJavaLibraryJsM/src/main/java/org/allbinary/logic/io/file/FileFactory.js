@@ -15,27 +15,36 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFile } from './AbFile.js';
-//not GWT import - same folder const AbFile
+//sameFolderImports - not GWT import - same folder const AbFile
 export class FileFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getInstance$overload2(args[0]);
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.getInstance$overload3(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return FileFactory.instance;
     }
     //@Throws(Exception.constructor)
-    getInstance(filePath) {
+    getInstance$overload2(filePath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AbFile.createAbFileFromRawPath(filePath);
         ;
     }
     //@Throws(Exception.constructor)
-    getInstance(file, childFilePath) {
+    getInstance$overload3(file, childFilePath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AbFile.createAbFileWithChild(file, childFilePath);
         ;
     }
     //@Throws(Exception.constructor)
     isFile(path) {
-        var file = AbFile.createAbFile(path);
+        let file = AbFile.createAbFile(path);
         ;
         if (file.exists()) {
             //if statement needs to be on the same line and ternary does not work the same way.

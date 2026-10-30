@@ -58,9 +58,9 @@ export class MiniMapLayer extends AllBinaryLayer {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent) {
-        var colorCompositeInterface = geographicMapCellPositionEvent.getSource();
+        let colorCompositeInterface = geographicMapCellPositionEvent.getSource();
         ;
-        var index = this.list.indexOf(colorCompositeInterface);
+        let index = this.list.indexOf(colorCompositeInterface);
         ;
         if (index >= 0) {
             this.list.removeAt(index);
@@ -71,28 +71,28 @@ export class MiniMapLayer extends AllBinaryLayer {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     onGeographicMapCellPositionEvent(geographicMapCellPositionEvent) {
-        var colorCompositeInterface = geographicMapCellPositionEvent.getSource();
+        let colorCompositeInterface = geographicMapCellPositionEvent.getSource();
         ;
-        var layerIndex = -1;
+        let layerIndex = -1;
         ;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        var nextColorCompositeInterface;
+        let nextColorCompositeInterface;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             nextColorCompositeInterface = this.list.get(index);
             if (nextColorCompositeInterface == colorCompositeInterface) {
                 layerIndex = index;
                 break;
             }
         }
-        var geographicMapCellPosition = this.geographicMapCellPositionFactory.getInstance(geographicMapCellPositionEvent.getGeographicMapCellPosition());
+        let geographicMapCellPosition = this.geographicMapCellPositionFactory.getInstance(geographicMapCellPositionEvent.getGeographicMapCellPosition());
         ;
-        var point = geographicMapCellPosition.getPoint();
+        let point = geographicMapCellPosition.getPoint();
         ;
         if (layerIndex == -1) {
             this.list.add(colorCompositeInterface);
-            var basicColor = colorCompositeInterface.getBasicColorP();
+            let basicColor = colorCompositeInterface.getBasicColorP();
             ;
             this.basicColorList.add(basicColor);
             this.positionList.add(point);
@@ -103,17 +103,17 @@ export class MiniMapLayer extends AllBinaryLayer {
         }
     }
     paintDots(graphics) {
-        var localPositionList = this.positionList;
+        let localPositionList = this.positionList;
         ;
-        var localBasicColorList = this.basicColorList;
+        let localBasicColorList = this.basicColorList;
         ;
-        var length = localPositionList.size();
+        let length = localPositionList.size();
         ;
-        var point;
+        let point;
         ;
-        var basicColor;
+        let basicColor;
         ;
-        for (var index = length; --index >= 0;) {
+        for (let index = length; --index >= 0;) {
             point = localPositionList.get(index);
             basicColor = localBasicColorList.get(index);
             graphics.setColor(basicColor.intValue());

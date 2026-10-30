@@ -28,7 +28,7 @@ import { OperatingSystemFactory } from '../../../../../../org/allbinary/logic/sy
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ClientInformation } from './ClientInformation.js';
-//not GWT import - same folder const ClientInformation
+//sameFolderImports - not GWT import - same folder const ClientInformation
 // This is the information sent to the license server
 export class AbeClientInformation extends ClientInformation {
     constructor(name, version, specialName, shortName) {
@@ -39,28 +39,30 @@ export class AbeClientInformation extends ClientInformation {
     init() {
         try {
             this.setOperatingSystemInterface(OperatingSystemFactory.getInstance().getOperatingSystemInstance());
-            var licenseInitInfo = LicenseInitInfoUtil.getInstance().read();
+            let licenseInitInfo = LicenseInitInfoUtil.getInstance().read();
             ;
             this.setLicenseId(licenseInitInfo.getLicenseId());
             this.setLicenseServers(licenseInitInfo.getServerList());
-            var stringValidationUtil = StringValidationUtil.getInstance();
+            let stringValidationUtil = StringValidationUtil.getInstance();
             ;
             if (stringValidationUtil.isEmpty(this.getLicenseId())) {
-                var NONE = "No License Id";
+                let NONE = "No License Id";
                 ;
                 this.setLicenseId(NONE);
             }
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             PreLogUtil.put(new StringMaker().append("Special Name: ").append(this.getSpecialName()).toString(), this, commonStrings.CONSTRUCTOR);
-            //: 
         }
-        catch (e) {
-            var logUtil = LogUtil.getInstance();
-            ;
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let logUtil = LogUtil.getInstance();
+                ;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            }
         }
     }
 }

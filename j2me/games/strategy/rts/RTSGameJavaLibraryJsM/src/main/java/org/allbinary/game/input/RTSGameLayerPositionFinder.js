@@ -15,7 +15,7 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const GeographicMapCellPosition
 import { DropCellPositionHistory } from '../../../../org/allbinary/media/graphics/geography/map/drop/DropCellPositionHistory.js';
-//not GWT import - same folder const LayerPositionFinderInterface
+//sameFolderImports - not GWT import - same folder const LayerPositionFinderInterface
 export class RTSGameLayerPositionFinder extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

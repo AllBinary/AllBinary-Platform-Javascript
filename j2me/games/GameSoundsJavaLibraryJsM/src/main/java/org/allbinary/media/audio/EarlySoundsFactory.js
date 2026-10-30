@@ -13,11 +13,11 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseSoundsFactory } from './BaseSoundsFactory.js';
-//not GWT import - same folder const Sound
+//sameFolderImports - not GWT import - same folder const Sound
 import { SelectSound } from './SelectSound.js';
-//not GWT import - same folder const SelectSound
+//sameFolderImports - not GWT import - same folder const SelectSound
 import { ErrorSound } from './ErrorSound.js';
-//not GWT import - same folder const ErrorSound
+//sameFolderImports - not GWT import - same folder const ErrorSound
 export class EarlySoundsFactory extends BaseSoundsFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -25,9 +25,9 @@ export class EarlySoundsFactory extends BaseSoundsFactory {
     }
     //@Throws(Exception.constructor)
     getSoundInterfaceArray() {
-        var soundInterfaceArray = new Array(2);
+        let soundInterfaceArray = new Array(2);
         ;
-        var index = 0;
+        let index = 0;
         ;
         soundInterfaceArray[index++] = SelectSound.getInstance();
         soundInterfaceArray[index++] = ErrorSound.getInstance();

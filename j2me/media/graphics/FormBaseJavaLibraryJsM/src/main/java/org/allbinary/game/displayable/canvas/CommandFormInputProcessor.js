@@ -41,9 +41,9 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
-//not GWT import - same folder const BasicMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const BasicMenuInputProcessor
 import { CommandRunnable } from './CommandRunnable.js';
-//not GWT import - same folder const CommandRunnable
+//sameFolderImports - not GWT import - same folder const CommandRunnable
 //In general allow scrolling of the menu and selection the center item
 export class CommandFormInputProcessor extends BasicMenuInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCanvas, form) {
@@ -78,14 +78,14 @@ export class CommandFormInputProcessor extends BasicMenuInputProcessor {
         return 0;
     }
     processCommand() {
-        var commandCurrentSelectionForm = this.form;
+        let commandCurrentSelectionForm = this.form;
         ;
-        var command = commandCurrentSelectionForm.getSelectedCommand();
+        let command = commandCurrentSelectionForm.getSelectedCommand();
         ;
         this.logUtil.putF(command.toString(), this, this.PROCESS_COMMAND);
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
+        let openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
         ;
         if (SWTUtil.isSWT && features.isFeature(openGLFeatureFactory.OPENGL) && command != GameCommandsFactory.getInstance().EXIT_COMMAND) {
             new CommandRunnable(this, command).run();
@@ -105,17 +105,17 @@ export class CommandFormInputProcessor extends BasicMenuInputProcessor {
     //@Throws(Exception.constructor)
     processInputList() {
         try {
-            var motionInputsIndex = this.processMotionInputs();
+            let motionInputsIndex = this.processMotionInputs();
             ;
-            var list = this.getGameKeyEventList();
+            let list = this.getGameKeyEventList();
             ;
-            var size = list.size();
+            let size = list.size();
             ;
-            var key = 0;
+            let key = 0;
             ;
-            var gameKeyEvent;
+            let gameKeyEvent;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 gameKeyEvent = list.objectArray[index];
                 key = gameKeyEvent.getKey();
                 if (gameKeyEvent.getSourceId() != this.MOTION_GESTURE_SOURCE_ID) {
@@ -133,20 +133,22 @@ export class CommandFormInputProcessor extends BasicMenuInputProcessor {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return -1;
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.PROCESS_INPUT, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return -1;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.PROCESS_INPUT, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return -1;
+            }
         }
     }
     //@Throws(Exception.constructor)
     processMotionInputs() {
-        var lastIndex = this.motionGestureEventList.size() - 1;
+        let lastIndex = this.motionGestureEventList.size() - 1;
         ;
         if (lastIndex >= 0) {
-            var motionGestureEvent = this.motionGestureEventList.objectArray[lastIndex];
+            let motionGestureEvent = this.motionGestureEventList.objectArray[lastIndex];
             ;
             this.processMotionInput(motionGestureEvent);
         }
@@ -156,15 +158,15 @@ export class CommandFormInputProcessor extends BasicMenuInputProcessor {
     }
     //@Throws(Exception.constructor)
     processMotionInput(motionGestureEvent) {
-        var touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
+        let touchMotionGestureFactory = TouchMotionGestureFactory.getInstance();
         ;
-        var motionGestureInput = motionGestureEvent.getMotionGesture();
+        let motionGestureInput = motionGestureEvent.getMotionGesture();
         ;
         if (motionGestureInput == touchMotionGestureFactory.RELEASED) {
-            var point = motionGestureEvent.getCurrentPoint();
+            let point = motionGestureEvent.getCurrentPoint();
             ;
             if (this.form.isInForm(point)) {
-                var index = this.form.getSelectedIndexForPoint(point);
+                let index = this.form.getSelectedIndexForPoint(point);
                 ;
                 if (index != -1) {
                     PrimaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());

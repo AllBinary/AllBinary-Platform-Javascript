@@ -19,9 +19,9 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not GWT import const CacheableInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AdjustedImageArrayRotationAnimation } from './AdjustedImageArrayRotationAnimation.js';
-//not GWT import - same folder const ImageArrayRotationAnimationInfo
+//sameFolderImports - not GWT import - same folder const ImageArrayRotationAnimationInfo
 export class ImageArrayRotationAnimationCacheable extends AdjustedImageArrayRotationAnimation {
-    constructor(anyType = {}, animationBehavior) {
+    constructor(anyType, animationBehavior) {
         super(anyType.getImageArray(), anyType.getAngleInfoP(), anyType.getTotalAngle(), anyType.getDx(), anyType.getDy(), animationBehavior);
         //For kotlin this is before the body of the constructor.
     }

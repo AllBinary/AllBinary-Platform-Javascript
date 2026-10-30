@@ -41,7 +41,7 @@ import { CompleteMotionGestureInputToGameMotionGestureInput } from '../../../../
 import { BasicTouchInputFactory } from '../../../../org/allbinary/input/motion/button/BasicTouchInputFactory.js';
 //not GWT import const BasicTouchInputFactory
 import { CancelTouchButtonInputFactory } from '../../../../org/allbinary/input/motion/button/CancelTouchButtonInputFactory.js';
-//not GWT import - same folder const GameInitializationInterface
+//sameFolderImports - not GWT import - same folder const GameInitializationInterface
 export class BaseGameInitialization extends Object {
     constructor(resourceInitializationArray, portion) {
         super();
@@ -68,10 +68,10 @@ export class BaseGameInitialization extends Object {
     }
     //@Throws(Exception.constructor)
     init(abeClientInformation, commandListener, level) {
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         if (!this.isInitialized() && (level == resourceLoadingLevelFactory.LOAD_ALL.getLevel() || level == resourceLoadingLevelFactory.LOAD_EARLY.getLevel())) {
-            var localPortion = 40;
+            let localPortion = 40;
             ;
             if (level == resourceLoadingLevelFactory.LOAD_EARLY.getLevel()) {
                 localPortion = 8;
@@ -80,7 +80,7 @@ export class BaseGameInitialization extends Object {
             this.initKey(this.getPortion());
             this.initKeyMapping(abeClientInformation, this.getPortion());
             GameKeyEventFactory.getInstance().init();
-            var progressCanvas = ProgressCanvasFactory.getInstance();
+            let progressCanvas = ProgressCanvasFactory.getInstance();
             ;
             progressCanvas.addNormalPortion(localPortion, "Game Key Events");
             BasicTouchInputFactory.getInstance().init(PlatformInputMappingFactory.getInstance().getPersistentInputMappingInstance().getInputMapping());
@@ -95,7 +95,7 @@ export class BaseGameInitialization extends Object {
     }
     //@Throws(Exception.constructor)
     resourceInitialization(level) {
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         if (this.resourceAnimationChange() && level == resourceLoadingLevelFactory.LOAD_EARLY.getLevel()) {
             this.clearResources();
@@ -113,9 +113,9 @@ export class BaseGameInitialization extends Object {
         }
     }
     resourceAnimationChange() {
-        var changedGameFeatureListener = ChangedGameFeatureListener.getInstance();
+        let changedGameFeatureListener = ChangedGameFeatureListener.getInstance();
         ;
-        var gameConfigurationCentral = GameConfigurationCentral.getInstance();
+        let gameConfigurationCentral = GameConfigurationCentral.getInstance();
         ;
         if (changedGameFeatureListener.isChangedGameConfiguration(gameConfigurationCentral.SCALE)) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -131,7 +131,7 @@ export class BaseGameInitialization extends Object {
     clearResources() {
         this.allLoaded = false;
         GameFeatureImageCacheFactory.releaseAll();
-        var featuredAnimationInterfaceFactoryInterfaceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance();
+        let featuredAnimationInterfaceFactoryInterfaceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance();
         ;
         featuredAnimationInterfaceFactoryInterfaceFactory.clear();
         FeaturedResourceRelativeRelationshipFactory.getInstance().clear();

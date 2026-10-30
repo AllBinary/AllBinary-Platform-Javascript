@@ -25,19 +25,19 @@ export class AllBinaryCollisionManager extends Object {
     }
     //@Throws(Exception.constructor)
     process(layerManager, collidableInterfaceCompositeInterface, startIndex) {
-        var size = layerManager.getSize();
+        let size = layerManager.getSize();
         ;
-        for (var index = startIndex + 1; index < size; index++) {
-            var collidableInterfaceCompositeInterface2 = layerManager.getLayerAt(index);
+        for (let index = startIndex + 1; index < size; index++) {
+            let collidableInterfaceCompositeInterface2 = layerManager.getLayerAt(index);
             ;
             this.collide(layerManager, collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2);
         }
     }
     //@Throws(Exception.constructor)
     collide(layerManager, collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2) {
-        var collidableBase2 = collidableInterfaceCompositeInterface2.getCollidableInferface();
+        let collidableBase2 = collidableInterfaceCompositeInterface2.getCollidableInferface();
         ;
-        var collidableBase = collidableInterfaceCompositeInterface.getCollidableInferface();
+        let collidableBase = collidableInterfaceCompositeInterface.getCollidableInferface();
         ;
         if (collidableBase2.isCollidable(collidableInterfaceCompositeInterface)) {
             if (collidableBase.isCollisionInterface(collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2)) {

@@ -30,7 +30,7 @@ export class LayerCoveringCellPositionsUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getAllXY(geographicMapInterface, layerInterface, x, y, reusableList) {
-        var topLeftGeographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(x, y);
+        let topLeftGeographicMapCellPosition = geographicMapInterface.getCellPositionAtXY(x, y);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getAll(geographicMapInterface, topLeftGeographicMapCellPosition, layerInterface, reusableList);
@@ -39,9 +39,9 @@ export class LayerCoveringCellPositionsUtil extends Object {
     //@Throws(Exception.constructor)
     getAll(geographicMapInterface, topLeftGeographicMapCellPosition, layerInterface, reusableList) {
         reusableList.clear();
-        var columns = layerInterface.getWidth() / geographicMapInterface.getAllBinaryTiledLayer().getCellWidth();
+        let columns = layerInterface.getWidth() / geographicMapInterface.getAllBinaryTiledLayer().getCellWidth();
         ;
-        var rows = layerInterface.getHeight() / geographicMapInterface.getAllBinaryTiledLayer().getCellHeight();
+        let rows = layerInterface.getHeight() / geographicMapInterface.getAllBinaryTiledLayer().getCellHeight();
         ;
         if (columns == 0)
             columns = 1;

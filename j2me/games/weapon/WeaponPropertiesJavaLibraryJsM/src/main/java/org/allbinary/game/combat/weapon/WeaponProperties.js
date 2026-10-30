@@ -24,7 +24,7 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimpleWeaponProperties } from './SimpleWeaponProperties.js';
-//not GWT import - same folder const SimpleWeaponProperties
+//sameFolderImports - not GWT import - same folder const SimpleWeaponProperties
 export class WeaponProperties extends SimpleWeaponProperties {
     constructor(reloadTime, targetingTime, speed, damage, dissipation) {
         super();
@@ -34,9 +34,9 @@ export class WeaponProperties extends SimpleWeaponProperties {
         this.MAX = 10240;
         this.ZERO = 0;
         if (speed < this.MAX && speed != 0 && !WeaponProperties.messageSent) {
-            var MESSAGE = "Danger Danger Danger: Speed probably to slow if using 1 degree calculations as velocity for a single axis could be below 1024: ";
+            let MESSAGE = "Danger Danger Danger: Speed probably to slow if using 1 degree calculations as velocity for a single axis could be below 1024: ";
             ;
-            var commonStrings = CommonStrings.getInstance();
+            let commonStrings = CommonStrings.getInstance();
             ;
             PreLogUtil.put(new StringMaker().append(MESSAGE).appendlong(speed).toString(), this, commonStrings.CONSTRUCTOR);
             WeaponProperties.messageSent = true;
@@ -47,13 +47,13 @@ export class WeaponProperties extends SimpleWeaponProperties {
         this.setDissipation(dissipation);
         this.setSpeed(new BasicDecimal(speed));
         if (dissipation != this.ZERO) {
-            var unscaledDamage = this.speed.getUnscaled() * damage;
+            let unscaledDamage = this.speed.getUnscaled() * damage;
             ;
-            var scaledDissipation = dissipation * this.speed.getScaledFactorValue();
+            let scaledDissipation = dissipation * this.speed.getScaledFactorValue();
             ;
-            var value = (unscaledDamage / scaledDissipation);
+            let value = (globalThis.Math.trunc(unscaledDamage / scaledDissipation));
             ;
-            this.setRange(Math.round((value * 9)) / 10);
+            this.setRange(globalThis.Math.trunc(globalThis.Math.trunc((value * 9)) / 10));
         }
     }
     setReloadTime(reloadTime) {
@@ -82,11 +82,11 @@ export class WeaponProperties extends SimpleWeaponProperties {
         return this.getDamage() - ((this.getDissipation() * range) / this.speed.getScaled());
     }
     toStringArray() {
-        var index = 0;
+        let index = 0;
         ;
-        var stringArray = new Array(3);
+        let stringArray = new Array(3);
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringArray[index++] = stringBuffer.append(WeaponProperties.DAMAGE).appendint(this.getDamage()).toString();
         stringBuffer.delete(0, stringBuffer.length());
@@ -97,7 +97,7 @@ export class WeaponProperties extends SimpleWeaponProperties {
         return stringArray;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(WeaponProperties.DAMAGE).appendint(this.getDamage());
         stringBuffer.append(CommonSeps.getInstance().SPACE);

@@ -21,7 +21,7 @@ const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Direction } from './Direction.js';
-//not GWT import - same folder const Direction
+//sameFolderImports - not GWT import - same folder const Direction
 export class DirectionFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -39,9 +39,9 @@ export class DirectionFactory extends Object {
         this.TOP = new Direction("TOP", "TOP", 10, 0);
         this.BOTTOM = new Direction("BOTTOM", "BOTTOM", 11, 0);
         this.ALL_DIRECTION = new Direction("ALL_DIRECTION", "ALL_DIRECTION", 12, 0);
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         this.UP_LEFT = new Direction("UP LEFT", stringBuffer.append(this.UP.getOtherName()).append(commonSeps.SPACE).append(this.LEFT.getOtherName()).toString(), 4, 0);
         stringBuffer.delete(0, stringBuffer.length());

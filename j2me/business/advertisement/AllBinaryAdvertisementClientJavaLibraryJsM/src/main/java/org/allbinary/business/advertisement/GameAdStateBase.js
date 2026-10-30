@@ -18,9 +18,9 @@ import { Object } from '../../../../java/lang/Object.js';
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 //not GWT import const AllBinaryEventObject
 import { EventStrings } from '../../../../org/allbinary/logic/util/event/EventStrings.js';
-//not GWT import - same folder const AdConfiguration
+//sameFolderImports - not GWT import - same folder const AdConfiguration
 import { Advertisements } from './Advertisements.js';
-//not GWT import - same folder const Advertisements
+//sameFolderImports - not GWT import - same folder const Advertisements
 export class GameAdStateBase extends Object {
     constructor(adConfiguration) {
         super();
@@ -30,7 +30,7 @@ export class GameAdStateBase extends Object {
     }
     initViewArray(viewArray) {
     }
-    onStart(anyType = {}) {
+    onStart(anyType) {
         this.init();
     }
     init() {

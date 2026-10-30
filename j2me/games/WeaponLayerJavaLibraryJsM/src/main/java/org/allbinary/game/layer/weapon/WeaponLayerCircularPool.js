@@ -13,14 +13,14 @@
 */
 //not GWT import const AllBinaryLayer
 import { AllBinaryLayerCircularPool } from '../../../../../org/allbinary/layer/AllBinaryLayerCircularPool.js';
-//not GWT import - same folder const WeaponLayer
+//sameFolderImports - not GWT import - same folder const WeaponLayer
 export class WeaponLayerCircularPool extends AllBinaryLayerCircularPool {
     constructor() {
         super();
     }
     //@Throws(Exception.constructor)
     getInstanceWeaponLayer(sourceLayerInterface, x, y, z, angle, otherAngle, weaponProperties, scoreable) {
-        var weaponLayer = super.getNextInstance();
+        let weaponLayer = super.getNextInstance();
         ;
         weaponLayer.initXYZ(x, y, z);
         weaponLayer.init(sourceLayerInterface, angle, otherAngle, weaponProperties, scoreable);

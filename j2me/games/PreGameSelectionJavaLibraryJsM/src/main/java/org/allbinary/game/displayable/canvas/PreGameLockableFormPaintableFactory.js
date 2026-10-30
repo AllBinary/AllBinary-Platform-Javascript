@@ -16,7 +16,7 @@ import { ItemPaintableFactory } from '../../../../../org/allbinary/graphics/form
 //not GWT import const ScrollCurrentSelectionForm
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PreGameLockablePaintable } from './PreGameLockablePaintable.js';
-//not GWT import - same folder const PreGameLockablePaintable
+//sameFolderImports - not GWT import - same folder const PreGameLockablePaintable
 export class PreGameLockableFormPaintableFactory extends ItemPaintableFactory {
     constructor(lockedIndex) {
         super();

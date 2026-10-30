@@ -19,7 +19,7 @@ import { OpenGLImageCacheFactory } from '../../../../../org/allbinary/image/open
 //not GWT import const OpenGLImageCacheFactory
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory } from './TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory.js';
-//not GWT import - same folder const TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory
+//sameFolderImports - not GWT import - same folder const TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory
 export class TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory extends TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory {
     constructor() {
         super("OpenGL TouchButton Animations");

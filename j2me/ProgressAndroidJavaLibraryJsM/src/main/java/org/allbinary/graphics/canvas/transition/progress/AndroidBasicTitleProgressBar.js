@@ -11,6 +11,7 @@
         *
         *  Created By: Travis Berthelot
 */
+import { IllegalArgumentException } from '../../../../../../java/lang/IllegalArgumentException.js';
 import { Integer } from '../../../../../../java/lang/Integer.js';
 //not GWT import const Image
 import { NullImage } from '../../../../../../javax/microedition/lcdui/NullImage.js';
@@ -54,15 +55,15 @@ const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressCanvas } from './ProgressCanvas.js';
-//not GWT import - same folder const ProgressCanvas
+//sameFolderImports - not GWT import - same folder const ProgressCanvas
 import { ShowTitleProgressBarRunnable } from './ShowTitleProgressBarRunnable.js';
-//not GWT import - same folder const ShowTitleProgressBarRunnable
+//sameFolderImports - not GWT import - same folder const ShowTitleProgressBarRunnable
 import { DismissTitleProgressBarRunnable } from './DismissTitleProgressBarRunnable.js';
-//not GWT import - same folder const DismissTitleProgressBarRunnable
+//sameFolderImports - not GWT import - same folder const DismissTitleProgressBarRunnable
 import { TitleProgressBarSetProgressRunnable } from './TitleProgressBarSetProgressRunnable.js';
-//not GWT import - same folder const TitleProgressBarSetProgressRunnable
+//sameFolderImports - not GWT import - same folder const TitleProgressBarSetProgressRunnable
 import { TitleProgressBarPortionSetProgressRunnable } from './TitleProgressBarPortionSetProgressRunnable.js';
-//not GWT import - same folder const TitleProgressBarPortionSetProgressRunnable
+//sameFolderImports - not GWT import - same folder const TitleProgressBarPortionSetProgressRunnable
 export class AndroidBasicTitleProgressBar extends ProgressCanvas {
     static setBackgroundResource(background) {
         AndroidBasicTitleProgressBar.background = background;
@@ -81,9 +82,9 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
         //For kotlin this is before the body of the constructor.
         this.init();
         DisplayChangeEventHandler.getInstance().addListenerInterface(this);
-        var size = this.IMAGE.length;
+        let size = this.IMAGE.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.IMAGE[index] = NullImage.NULL_IMAGE;
         }
     }
@@ -94,10 +95,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
                 GameFeatureImageCacheFactory.init();
                 this.image = ImageCacheFactory.getInstance().getWithKey(AndroidBasicTitleProgressBar.RESOURCE);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+            }
         }
     }
     initActivity(activity) {
@@ -111,10 +114,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
                 this.loadProgressImages();
             }
             this.updateCurrent();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.INIT, e);
+            }
         }
     }
     updateCurrent() {
@@ -123,9 +128,9 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
                 this.animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
             }
             else if (AndroidBasicTitleProgressBar.background != 0) {
-                var displayInfo = DisplayInfoSingleton.getInstance();
+                let displayInfo = DisplayInfoSingleton.getInstance();
                 ;
-                var currentImage;
+                let currentImage;
                 ;
                 if (displayInfo.isPortrait()) {
                     currentImage = this.getImage(0);
@@ -141,10 +146,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
                     this.animation = new ImageAnimation(currentImage, AnimationBehavior.getInstance());
                 }
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+            }
         }
     }
     onEvent(eventObject) {
@@ -154,20 +161,22 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
         try {
             this.loadProgressImages();
             this.updateCurrent();
-            //: 
         }
-        catch (e) {
-            this.logUtil.putF(this.commonStrings.EXCEPTION_LABEL + ExceptionUtil.getInstance().getStackTrace(e), this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT);
-            this.animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.putF(this.commonStrings.EXCEPTION_LABEL + ExceptionUtil.getInstance().getStackTrace(e), this, this.canvasStrings.ON_DISPLAY_CHANGE_EVENT);
+                this.animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+            }
         }
     }
     loadProgressImages() {
         try {
-            var displayInfo = DisplayInfoSingleton.getInstance();
+            let displayInfo = DisplayInfoSingleton.getInstance();
             ;
-            var lastWidth = displayInfo.getLastWidth();
+            let lastWidth = displayInfo.getLastWidth();
             ;
-            var lastHeight = displayInfo.getLastHeight();
+            let lastHeight = displayInfo.getLastHeight();
             ;
             if (displayInfo.isPortraitWH(lastWidth, lastHeight)) {
                 this.setImages(0, lastWidth, lastHeight);
@@ -175,21 +184,19 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
             else {
                 this.setImages(2, lastWidth, lastHeight);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.putF("IllegalArgumentException " + ExceptionUtil.getInstance().getStackTrace(e), this, "loadProgressImages");
-            this.animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+        catch (caught) {
+            if (caught instanceof IllegalArgumentException) {
+                const e = caught;
+                this.logUtil.putF("IllegalArgumentException " + ExceptionUtil.getInstance().getStackTrace(e), this, "loadProgressImages");
+                this.animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+            }
+            else {
+                const e = caught;
+                this.logUtil.putF(this.commonStrings.EXCEPTION_LABEL + ExceptionUtil.getInstance().getStackTrace(e), this, "loadProgressImages");
+                this.animation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+            }
         }
-        //: 
-        /* catch(e)
-                    {
-        this.logUtil!.putF(this.commonStrings!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!.getStackTrace(e), this, "loadProgressImages");
-            
-        this.animation= NullAnimationFactory.getFactoryInstance()!.getInstance(0);
-            
-        }
-        */
     }
     isInitialized() {
         if (this.midletActivity != AndroidUtil.NULL_ACTIVITY) {
@@ -206,10 +213,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.START_METHOD_NAME);
             super.start();
             this.midletActivity.runOnUiThread(this.showTitleProgressBarRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.START_METHOD_NAME, e);
+            }
         }
     }
     end() {
@@ -217,10 +226,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.END_METHOD_NAME);
             this.midletActivity.runOnUiThread(this.dismissTitleProgressBarRunnable);
             super.end();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.END_METHOD_NAME, e);
+            }
         }
     }
     addEarlyPortion(value, text, index) {
@@ -230,10 +241,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
             if (this.midletActivity != AndroidUtil.NULL_ACTIVITY) {
                 this.midletActivity.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable);
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+            }
         }
     }
     addPortion(value, text, index) {
@@ -241,10 +254,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
             this.portion = value;
             super.addPortion(value, text, index);
             this.midletActivity.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+            }
         }
     }
     addNormalPortion(value, text) {
@@ -252,27 +267,31 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
             this.portion = value;
             super.addNormalPortion(value, text);
             this.midletActivity.runOnUiThread(this.titleProgressDialogPortionSetProgressRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.ADD_PORTION, e);
+            }
         }
     }
     setValue(value) {
         try {
             super.setValue(value);
             this.midletActivity.runOnUiThread(this.titleProgressDialogSetProgressRunnable);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "setValue", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "setValue", e);
+            }
         }
     }
     waitUntilDisplayed() {
     }
     //@Throws(Exception.constructor)
     setImages(index, lastWidth, lastHeight) {
-        var image = this.image;
+        let image = this.image;
         ;
         if (image != NullImage.NULL_IMAGE) {
             if (Features.getInstance().isFeature(MainFeatureFactory.getInstance().FULL_SCREEN)) {
@@ -281,7 +300,7 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
                 }
             }
             else {
-                var nextIndex = index + 1;
+                let nextIndex = index + 1;
                 ;
                 if (this.IMAGE[nextIndex] == NullImage.NULL_IMAGE) {
                     this.IMAGE[nextIndex] = ImageScaleUtil.getInstance().createImage2(ImageCacheFactory.getInstance(), image, lastWidth, image.getWidth(), lastHeight - 28, image.getHeight(), false);
@@ -293,11 +312,11 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
     initOpenGL(graphics) {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.INIT);
         this.image = GameFeatureImageCacheFactory.getInstance().getWithKey(AndroidBasicTitleProgressBar.RESOURCE);
-        var preResourceImageUtil = PreResourceImageUtil.getInstance();
+        let preResourceImageUtil = PreResourceImageUtil.getInstance();
         ;
-        var size = this.IMAGE.length;
+        let size = this.IMAGE.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (this.IMAGE[index] != NullImage.NULL_IMAGE) {
                 this.IMAGE[index] = preResourceImageUtil.encapsulate(this.IMAGE[index]);
             }
@@ -309,11 +328,11 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.UPDATE);
         this.initOpenGL(graphics);
         this.image = GameFeatureImageCacheFactory.getInstance().getWithKey(AndroidBasicTitleProgressBar.RESOURCE);
-        var preResourceImageUtil = PreResourceImageUtil.getInstance();
+        let preResourceImageUtil = PreResourceImageUtil.getInstance();
         ;
-        var size = this.IMAGE.length;
+        let size = this.IMAGE.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (this.IMAGE[index] != NullImage.NULL_IMAGE) {
                 preResourceImageUtil.update(graphics, this.IMAGE[index]);
             }
@@ -321,7 +340,7 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
     }
     //@Throws(Exception.constructor)
     getImage(index) {
-        var image = NullImage.NULL_IMAGE;
+        let image = NullImage.NULL_IMAGE;
         ;
         if (Features.getInstance().isFeature(MainFeatureFactory.getInstance().FULL_SCREEN)) {
             image = this.IMAGE[index];
@@ -336,10 +355,12 @@ export class AndroidBasicTitleProgressBar extends ProgressCanvas {
         try {
             this.animation.paintXY(graphics, 0, 20);
             super.paint2(graphics);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.PAINT, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.canvasStrings.PAINT, e);
+            }
         }
     }
     setBackground(background) {

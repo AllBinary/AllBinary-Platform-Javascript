@@ -26,7 +26,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const PlayN = globalThis.playn.core.PlayN;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AboutCommandProcessor } from './AboutCommandProcessor.js';
-//not GWT import - same folder const AboutCommandProcessor
+//sameFolderImports - not GWT import - same folder const AboutCommandProcessor
 export class WebCommandProcessor extends Object {
     constructor() {
         super(...arguments);
@@ -41,12 +41,14 @@ export class WebCommandProcessor extends Object {
     process(midletCommandListener, command, canvas) {
         try {
             PlayN.openURL(this.list.removeAt(0));
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.PROCESS, e);
+            }
         }
     }
 }

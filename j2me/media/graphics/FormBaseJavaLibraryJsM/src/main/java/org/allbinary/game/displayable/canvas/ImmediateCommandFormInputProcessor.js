@@ -18,7 +18,7 @@ import { TimeDelayHelper } from '../../../../../org/allbinary/time/TimeDelayHelp
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CommandFormInputProcessor } from './CommandFormInputProcessor.js';
-//not GWT import - same folder const GameCommandCanvas
+//sameFolderImports - not GWT import - same folder const GameCommandCanvas
 export class ImmediateCommandFormInputProcessor extends CommandFormInputProcessor {
     constructor(gameKeyEventList, playerInputId, gameCommandCanvas, form) {
         super(gameKeyEventList, playerInputId, gameCommandCanvas, form);
@@ -34,10 +34,12 @@ export class ImmediateCommandFormInputProcessor extends CommandFormInputProcesso
                 this.processInputList();
                 this.gameCommandCanvas.repaintBehavior.onChangeRepaint(this.getCanvas());
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.ON_PRESS_GAME_KEY, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.ON_PRESS_GAME_KEY, e);
+            }
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
@@ -48,10 +50,12 @@ export class ImmediateCommandFormInputProcessor extends CommandFormInputProcesso
                 this.processInputList();
                 this.gameCommandCanvas.repaintBehavior.onChangeRepaint(this.getCanvas());
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.ON_DOWN_GAME_KEY, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.ON_DOWN_GAME_KEY, e);
+            }
         }
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
@@ -62,10 +66,12 @@ export class ImmediateCommandFormInputProcessor extends CommandFormInputProcesso
                 this.processInputList();
                 this.gameCommandCanvas.repaintBehavior.onChangeRepaint(this.getCanvas());
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.ON_UP_GAME_KEY, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.gameInputStrings.ON_UP_GAME_KEY, e);
+            }
         }
     }
     onMotionGestureEvent(motionGestureEvent) {
@@ -75,10 +81,12 @@ export class ImmediateCommandFormInputProcessor extends CommandFormInputProcesso
                 this.processInputList();
                 this.gameCommandCanvas.repaintBehavior.onChangeRepaint(this.getCanvas());
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, "onMotionGestureEvent", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, "onMotionGestureEvent", e);
+            }
         }
     }
 }

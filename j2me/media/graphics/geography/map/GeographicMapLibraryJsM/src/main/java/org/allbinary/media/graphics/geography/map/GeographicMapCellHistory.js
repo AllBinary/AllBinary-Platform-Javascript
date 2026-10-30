@@ -33,7 +33,7 @@ import { BasicColorFactory } from '../../../../../../org/allbinary/graphics/colo
 import { MyFontProcessor } from '../../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const UpdateMyFontInterface
 import { UpdateMyFontProcessor } from '../../../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
-//not GWT import - same folder const BasicGeographicMap
+//sameFolderImports - not GWT import - same folder const BasicGeographicMap
 export class GeographicMapCellHistory extends Object {
     constructor() {
         super();
@@ -51,7 +51,7 @@ export class GeographicMapCellHistory extends Object {
         this.init();
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.fontHeight = font.getHeight();
         this.myFontProcessor = MyFontProcessor.getInstance();
@@ -70,13 +70,13 @@ export class GeographicMapCellHistory extends Object {
         ;
     }
     trackAll(list) {
-        var size = list.size();
+        let size = list.size();
         ;
         this.list.ensureCapacity(size);
         this.visitedList.ensureCapacity(size);
-        var geographicMapCellPosition;
+        let geographicMapCellPosition;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             geographicMapCellPosition = list.get(index);
             this.track(geographicMapCellPosition);
         }
@@ -96,9 +96,9 @@ export class GeographicMapCellHistory extends Object {
         return this.visitedList;
     }
     getAfterIfNotLast(geographicMapCellPosition) {
-        var localList = this.list;
+        let localList = this.list;
         ;
-        var index = localList.indexOf(geographicMapCellPosition);
+        let index = localList.indexOf(geographicMapCellPosition);
         ;
         if (localList.size() > index + 1) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -108,15 +108,15 @@ export class GeographicMapCellHistory extends Object {
         return geographicMapCellPosition;
     }
     getFirstUnvisited() {
-        var localList = this.list;
+        let localList = this.list;
         ;
-        var localVisitedList = this.visitedList;
+        let localVisitedList = this.visitedList;
         ;
-        var size = localVisitedList.size();
+        let size = localVisitedList.size();
         ;
-        var value;
+        let value;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             value = this.visitedList.get(index);
             if (value == this.booleanFactory.FALSE) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -127,13 +127,13 @@ export class GeographicMapCellHistory extends Object {
         return localList.get(0);
     }
     getFirstUnvisitedIndex() {
-        var localVisitedList = this.visitedList;
+        let localVisitedList = this.visitedList;
         ;
-        var size = localVisitedList.size();
+        let size = localVisitedList.size();
         ;
-        var value;
+        let value;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             value = this.visitedList.get(index);
             if (value == this.booleanFactory.FALSE) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -144,15 +144,15 @@ export class GeographicMapCellHistory extends Object {
         return 0;
     }
     getInPathButNotTracked(pathList) {
-        var inPathButNotTrackedList = new BasicArrayListD();
+        let inPathButNotTrackedList = new BasicArrayListD();
         ;
-        var localList = this.list;
+        let localList = this.list;
         ;
-        var size = pathList.size();
+        let size = pathList.size();
         ;
-        var geographicMapCellPosition;
+        let geographicMapCellPosition;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             geographicMapCellPosition = pathList.get(index);
             if (!localList.contains(geographicMapCellPosition)) {
                 inPathButNotTrackedList.add(geographicMapCellPosition);
@@ -162,10 +162,10 @@ export class GeographicMapCellHistory extends Object {
         return inPathButNotTrackedList;
     }
     isVisited(geographicMapCellPosition) {
-        var index = this.list.indexOf(geographicMapCellPosition);
+        let index = this.list.indexOf(geographicMapCellPosition);
         ;
         if (index != -1) {
-            var value = this.visitedList.get(index);
+            let value = this.visitedList.get(index);
             ;
             if (value == this.booleanFactory.TRUE) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -178,13 +178,13 @@ export class GeographicMapCellHistory extends Object {
         return false;
     }
     visit(geographicMapCellPosition) {
-        var index = this.list.indexOf(geographicMapCellPosition);
+        let index = this.list.indexOf(geographicMapCellPosition);
         ;
-        var value;
+        let value;
         ;
         if (index != -1) {
             value = this.visitedList.get(index);
-            var TRUE = this.booleanFactory.TRUE;
+            let TRUE = this.booleanFactory.TRUE;
             ;
             if (value != TRUE) {
                 this.visitedList.set(index, TRUE);
@@ -222,11 +222,11 @@ export class GeographicMapCellHistory extends Object {
     }
     //@Throws(Exception.constructor)
     isPortionVisited(basicDecimal) {
-        var size = this.getSize();
+        let size = this.getSize();
         ;
-        var numberRequired = (size << basicDecimal.getScaledFactor()) / Math.round(basicDecimal.getUnscaled());
+        let numberRequired = (size << basicDecimal.getScaledFactor()) / globalThis.Math.trunc(basicDecimal.getUnscaled());
         ;
-        var numberNotVisited = this.getSize() - 1 - this.totalVisited;
+        let numberNotVisited = this.getSize() - 1 - this.totalVisited;
         ;
         if (size - numberNotVisited > numberRequired) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -239,26 +239,26 @@ export class GeographicMapCellHistory extends Object {
     }
     //@Throws(Exception.constructor)
     reset() {
-        var localVisitedList = this.visitedList;
+        let localVisitedList = this.visitedList;
         ;
-        var localFalseBoolean = this.booleanFactory.FALSE;
+        let localFalseBoolean = this.booleanFactory.FALSE;
         ;
-        var size = localVisitedList.size();
+        let size = localVisitedList.size();
         ;
-        for (var index = size - 1; index >= 0; index--) {
+        for (let index = size - 1; index >= 0; index--) {
             localVisitedList.set(index, localFalseBoolean);
         }
         this.totalVisited = 0;
     }
     paintNotVisitedRelativeToPoint(graphics, tiledLayer, point) {
-        var x = point.getX() - tiledLayer.getXP();
+        let x = point.getX() - tiledLayer.getXP();
         ;
-        var y = point.getY() - tiledLayer.getYP();
+        let y = point.getY() - tiledLayer.getYP();
         ;
         if (this.halfWidth == 0) {
             this.halfWidth = (graphics.getFont().stringWidth(this.MISSED_INFO) >> 1);
         }
-        var height = 2 * this.fontHeight;
+        let height = 2 * this.fontHeight;
         ;
         this.animation.paintXY(graphics, x + this.halfWidth, y + (height));
     }
@@ -266,27 +266,29 @@ export class GeographicMapCellHistory extends Object {
         try {
             this.myFontProcessor.process(graphics);
             graphics.setColor(this.RED);
-            var localVisitedList = this.visitedList;
+            let localVisitedList = this.visitedList;
             ;
-            var size = localVisitedList.size();
+            let size = localVisitedList.size();
             ;
-            var geographicMapCellPosition;
+            let geographicMapCellPosition;
             ;
-            var isCellVisitedBoolean;
+            let isCellVisitedBoolean;
             ;
-            for (var index = size; --index >= 0;) {
+            for (let index = size; --index >= 0;) {
                 geographicMapCellPosition = this.list.get(index);
                 isCellVisitedBoolean = localVisitedList.get(index);
                 if (!isCellVisitedBoolean.valueOf()) {
                     this.paintNotVisitedRelativeToPoint(graphics, geographicMapInterface.getAllBinaryTiledLayer(), geographicMapCellPosition.getPoint());
                 }
             }
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "paintNotVisited", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "paintNotVisited", e);
+            }
         }
     }
     init() {

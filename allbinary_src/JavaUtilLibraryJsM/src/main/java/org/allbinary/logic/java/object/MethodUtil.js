@@ -18,16 +18,16 @@ import { Object } from '../../../../../java/lang/Object.js';
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ParamsUtil } from './ParamsUtil.js';
-//not GWT import - same folder const ParamsUtil
+//sameFolderImports - not GWT import - same folder const ParamsUtil
 export class MethodUtil extends Object {
     static viewAll(myClass, lineBreak) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var method = myClass.getMethods();
+        let method = myClass.getMethods();
         ;
         stringBuffer.append("Methods: ");
         stringBuffer.append(lineBreak);
-        for (var index = 0; index < method.length; index++) {
+        for (let index = 0; index < method.length; index++) {
             stringBuffer.append(method[index].getReturnType().getName());
             stringBuffer.append(" ");
             stringBuffer.append(method[index].getName());

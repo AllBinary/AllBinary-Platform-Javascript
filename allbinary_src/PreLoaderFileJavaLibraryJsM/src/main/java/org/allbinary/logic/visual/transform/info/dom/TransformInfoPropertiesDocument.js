@@ -42,46 +42,48 @@ export class TransformInfoPropertiesDocument extends Object {
     constructor(filePath) {
         super();
         this.logUtil = LogUtil.getInstance();
-        var xmlFile = AbFile.createAbFile(filePath);
+        let xmlFile = AbFile.createAbFile(filePath);
         ;
         this.document = DomDocumentFileHelper.createDocument(xmlFile);
     }
     toTransformInfoPropertiesHashMap() {
         try {
-            var transformInfoPropertiesHashMap = StdUtil.getInstance().createHashMap();
+            let transformInfoPropertiesHashMap = StdUtil.getInstance().createHashMap();
             ;
-            var transformInfosNode = this.document.getElementsByTagName(TransformInfosData.getInstance().NAME).item(0);
+            let transformInfosNode = this.document.getElementsByTagName(TransformInfosData.getInstance().NAME).item(0);
             ;
-            var transformInfosChildNodeList = transformInfosNode.getChildNodes();
+            let transformInfosChildNodeList = transformInfosNode.getChildNodes();
             ;
-            var transformInfoNodeVector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance().NAME, transformInfosChildNodeList);
+            let transformInfoNodeVector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance().NAME, transformInfosChildNodeList);
             ;
             if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEW)) {
                 this.logUtil.putF("Size: " + transformInfoNodeVector.size(), this, "toTransformInfoPropertiesHashMap()");
             }
-            var size = transformInfoNodeVector.size();
+            let size = transformInfoNodeVector.size();
             ;
-            var node;
+            let node;
             ;
-            var transformInfoProperties;
+            let transformInfoProperties;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 node = transformInfoNodeVector.get(index);
                 transformInfoProperties = TransformInfoPropertiesFactory.getInstance().getInstance(node);
                 transformInfoPropertiesHashMap.put(transformInfoProperties.getName(), transformInfoProperties);
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return transformInfoPropertiesHashMap;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEWERROR)) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, "toTransformInfoPropertiesHashMap()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEWERROR)) {
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, "toTransformInfoPropertiesHashMap()", e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
         }
     }
 }

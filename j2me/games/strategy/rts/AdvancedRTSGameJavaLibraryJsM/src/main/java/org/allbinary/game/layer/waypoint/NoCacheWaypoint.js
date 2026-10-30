@@ -29,7 +29,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointBase } from './WaypointBase.js';
-//not GWT import - same folder const WaypointBase
+//sameFolderImports - not GWT import - same folder const WaypointBase
 export class NoCacheWaypoint extends WaypointBase {
     constructor(ownerLayer, sound) {
         super(sound);
@@ -56,12 +56,12 @@ export class NoCacheWaypoint extends WaypointBase {
     }
     //@Throws(Exception.constructor)
     getEndGeographicMapCellPosition(startGeographicMapCellPosition) {
-        var endList = this.ownerLayer.getEndGeographicMapCellPositionList();
+        let endList = this.ownerLayer.getEndGeographicMapCellPositionList();
         ;
-        var endGeographicMapCellPosition = BasicArrayListUtil.getInstance().getRandom(endList);
+        let endGeographicMapCellPosition = BasicArrayListUtil.getInstance().getRandom(endList);
         ;
         if (startGeographicMapCellPosition == endGeographicMapCellPosition) {
-            for (var index = endList.size() - 1; index >= 0; index--) {
+            for (let index = endList.size() - 1; index >= 0; index--) {
                 endGeographicMapCellPosition = endList.get(index);
                 if (startGeographicMapCellPosition != endGeographicMapCellPosition) {
                     break;
@@ -73,7 +73,7 @@ export class NoCacheWaypoint extends WaypointBase {
     }
     //@Throws(Exception.constructor)
     createPaths(startGeographicMapCellPosition) {
-        var endGeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition);
+        let endGeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition);
         ;
         if (endGeographicMapCellPosition ==
             null) {
@@ -91,24 +91,24 @@ export class NoCacheWaypoint extends WaypointBase {
                 throw new Exception("Start should not be End: " + endGeographicMapCellPosition);
             }
         }
-        var geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
+        let geographicMapCompositeInterface = this.allBinaryGameLayerManagerP;
         ;
-        var geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
+        let geographicMapInterface = geographicMapCompositeInterface.getGeographicMapInterface()[0];
         ;
-        var raceTrackGeographicMap = geographicMapInterface;
+        let raceTrackGeographicMap = geographicMapInterface;
         ;
-        var raceTrackGeographicMapCellTypeFactory = raceTrackGeographicMap.getGeographicMapCellTypeFactory();
+        let raceTrackGeographicMapCellTypeFactory = raceTrackGeographicMap.getGeographicMapCellTypeFactory();
         ;
-        var customMapGenerator = raceTrackGeographicMap.getCustomMapGenerator();
+        let customMapGenerator = raceTrackGeographicMap.getCustomMapGenerator();
         ;
         customMapGenerator.copyMapIntoCustomMap();
-        var customMapArray = customMapGenerator.getCustomMapArray();
+        let customMapArray = customMapGenerator.getCustomMapArray();
         ;
         customMapArray[startGeographicMapCellPosition.getRow()][startGeographicMapCellPosition.getColumn()] = raceTrackGeographicMapCellTypeFactory.getStartType();
         customMapArray[endGeographicMapCellPosition.getRow()][endGeographicMapCellPosition.getColumn()] = raceTrackGeographicMapCellTypeFactory.getEndType();
-        var pathFindingInfo = PathFindingInfoFactory.getInstance().getInstancePathFindingInfo(raceTrackGeographicMap, customMapArray);
+        let pathFindingInfo = PathFindingInfoFactory.getInstance().getInstancePathFindingInfo(raceTrackGeographicMap, customMapArray);
         ;
-        var list = PathGenerator.getInstance().getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2);
+        let list = PathGenerator.getInstance().getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2);
         ;
         if (list.size() < 1) {
             throw new Exception("Path may have been cleared by clearing caching");
@@ -131,13 +131,13 @@ export class NoCacheWaypoint extends WaypointBase {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var size = this.getConnectedWaypointList().size();
+        let size = this.getConnectedWaypointList().size();
         ;
         if (size > 0) {
-            var unitWaypointBehavior = unitLayer.getWaypointBehavior();
+            let unitWaypointBehavior = unitLayer.getWaypointBehavior();
             ;
             while (this.getConnectedWaypointList().size() > 0) {
-                var rtsLayer = this.getConnectedWaypointList().get(0);
+                let rtsLayer = this.getConnectedWaypointList().get(0);
                 ;
                 if (rtsLayer.isDestroyed()) {
                     this.getConnectedWaypointList().remove(rtsLayer);

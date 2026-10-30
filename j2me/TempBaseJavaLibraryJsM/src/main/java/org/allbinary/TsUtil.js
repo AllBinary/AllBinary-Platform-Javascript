@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
+//import { Double } from '../../java/lang/Double.js';
+const Double = globalThis.java.lang.Double;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //TempBase
 export class TsUtil extends Object {
@@ -30,14 +32,14 @@ export class TsUtil extends Object {
         return java.lang.Float.intBitsToFloat(bits);
         ;
     }
-    hashCode(anyType = {}) {
+    hashCode(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return anyType.hashCode();
         ;
     }
     //@Throws(InterruptedException.constructor)
-    waitFor(any = {}, timeoutMillis) {
-        var anyType = any;
+    waitFor(any, timeoutMillis) {
+        let anyType = any;
         ;
         anyType.wait(timeoutMillis);
     }

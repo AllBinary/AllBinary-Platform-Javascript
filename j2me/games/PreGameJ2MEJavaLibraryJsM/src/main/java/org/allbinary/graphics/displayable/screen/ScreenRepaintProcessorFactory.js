@@ -20,7 +20,7 @@ import { Processor } from '../../../../../org/allbinary/canvas/Processor.js';
 //not GWT import const Processor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScreenRepaintProcessor } from './ScreenRepaintProcessor.js';
-//not GWT import - same folder const ScreenRepaintProcessor
+//sameFolderImports - not GWT import - same folder const ScreenRepaintProcessor
 export class ScreenRepaintProcessorFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

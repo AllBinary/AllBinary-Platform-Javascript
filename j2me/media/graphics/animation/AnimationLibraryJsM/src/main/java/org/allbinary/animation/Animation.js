@@ -17,7 +17,7 @@ import { Object } from '../../../java/lang/Object.js';
 import { BasicColorFactory } from '../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory
 import { BasicColorSetUtil } from '../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
-//not GWT import - same folder const AnimationInterface
+//sameFolderImports - not GWT import - same folder const AnimationInterface
 export class Animation extends Object {
     constructor() {
         super();

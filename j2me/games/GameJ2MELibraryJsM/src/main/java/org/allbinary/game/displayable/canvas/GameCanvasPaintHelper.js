@@ -13,7 +13,7 @@
 */
 //not GWT import const Graphics
 import { ProcessPaintable } from '../../../../../org/allbinary/graphics/paint/ProcessPaintable.js';
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class GameCanvasPaintHelper extends ProcessPaintable {
     constructor(gameCanvas) {
         super();

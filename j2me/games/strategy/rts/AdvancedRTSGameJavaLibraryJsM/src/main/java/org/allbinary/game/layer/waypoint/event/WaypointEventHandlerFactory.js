@@ -16,15 +16,16 @@ import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const Group
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { WaypointEventHandler } from './WaypointEventHandler.js';
-//not GWT import - same folder const WaypointEventHandler
+//sameFolderImports - not GWT import - same folder const WaypointEventHandler
 export class WaypointEventHandlerFactory extends Object {
     static getInstance(groupInterface) {
+        let groupId = globalThis.Math.trunc(groupInterface.getGroupId());
+        ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return WaypointEventHandlerFactory.eventHandlerArray[Math.round(groupInterface.getGroupId())];
-        !;
+        return WaypointEventHandlerFactory.eventHandlerArray[groupId];
     }
     static removeAll() {
-        for (var index = WaypointEventHandlerFactory.eventHandlerArray.length - 1; index >= 0; index--) {
+        for (let index = WaypointEventHandlerFactory.eventHandlerArray.length - 1; index >= 0; index--) {
             WaypointEventHandlerFactory.eventHandlerArray[index].removeAllListeners();
         }
     }

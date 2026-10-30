@@ -19,18 +19,18 @@ import { DisplayInfoSingleton } from '../../../../../org/allbinary/graphics/disp
 import { CanvasDrawLineString } from '../../../../../org/allbinary/graphics/draw/CanvasDrawLineString.js';
 //not GWT import const CanvasDrawLineString
 import { InitUpdatePaintable } from '../../../../../org/allbinary/graphics/paint/InitUpdatePaintable.js';
-//not GWT import - same folder const PreGameScrollSelectionForm
+//sameFolderImports - not GWT import - same folder const PreGameScrollSelectionForm
 export class PreGameSelectorPaintable extends InitUpdatePaintable {
     constructor(title, preGameScrollSelectionForm) {
         super();
         this.title = title;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         this.canvasDrawLineString = new CanvasDrawLineString(displayInfo.getLastHalfWidth(), 0);
         this.preGameScrollSelectionForm = preGameScrollSelectionForm;
     }
     update() {
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         this.canvasDrawLineString = new CanvasDrawLineString(displayInfo.getLastHalfWidth(), 0);
     }

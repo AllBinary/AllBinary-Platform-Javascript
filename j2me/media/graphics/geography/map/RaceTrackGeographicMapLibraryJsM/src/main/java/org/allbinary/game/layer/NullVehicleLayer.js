@@ -17,7 +17,7 @@ import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 //not GWT import const GeographicMapCellPositionTracking
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
-//not GWT import - same folder const VehicleProperties
+//sameFolderImports - not GWT import - same folder const VehicleProperties
 export class NullVehicleLayer extends Object {
     getName() {
         throw new RuntimeException();

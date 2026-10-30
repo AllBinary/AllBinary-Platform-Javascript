@@ -20,7 +20,7 @@ import { PrimitiveIntUtil } from '../../../../../org/allbinary/logic/math/Primit
 //not GWT import const PrimitiveIntUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SpriteIndexedAnimation } from './SpriteIndexedAnimation.js';
-//not GWT import - same folder const SpriteIndexedAnimation
+//sameFolderImports - not GWT import - same folder const SpriteIndexedAnimation
 export class ColorCompositeSpriteIndexedAnimationFactory extends BaseImageAnimationFactory {
     constructor(image, basicColorArray, width, height, animationBehaviorFactory) {
         super(image, PrimitiveIntUtil.getArrayInstance(), width, height, 0, 0, animationBehaviorFactory);
@@ -30,7 +30,7 @@ export class ColorCompositeSpriteIndexedAnimationFactory extends BaseImageAnimat
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {
-        var sprite = this.animationFactorySpriteScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
+        let sprite = this.animationFactorySpriteScaleUtil.createImage(this.getImage(), this.animationFactoryInitializationVisitor.width, this.animationFactoryInitializationVisitor.height, this.scaleProperties.scaleWidth, this.scaleProperties.scaleHeight);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new SpriteIndexedAnimation(sprite, this.getImage(), this.basicColorArray, this.animationBehaviorFactory.getOrCreateInstance());

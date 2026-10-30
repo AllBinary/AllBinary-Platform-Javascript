@@ -15,9 +15,9 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const OpenGLProcessor
 import { NullOpenGLProcessorFactory } from '../../../../../org/allbinary/graphics/opengles/NullOpenGLProcessorFactory.js';
-//not GWT import - same folder const ModelViewProjection
+//sameFolderImports - not GWT import - same folder const ModelViewProjection
 import { NullOpenGLTextureProcessor } from './NullOpenGLTextureProcessor.js';
-//not GWT import - same folder const OpenGLObject3dProcessor
+//sameFolderImports - not GWT import - same folder const OpenGLObject3dProcessor
 export class ShaderComposite extends Object {
     constructor(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor) {
         super();

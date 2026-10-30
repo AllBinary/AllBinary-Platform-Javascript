@@ -21,7 +21,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IndexedBasicArrayListCache } from './IndexedBasicArrayListCache.js';
-//not GWT import - same folder const IndexedBasicArrayListCache
+//sameFolderImports - not GWT import - same folder const IndexedBasicArrayListCache
 export class KeylessBasicArrayListCache extends IndexedBasicArrayListCache {
     constructor() {
         super();
@@ -33,38 +33,40 @@ export class KeylessBasicArrayListCache extends IndexedBasicArrayListCache {
             if (this.index >= this.list.size()) {
                 this.addDefault();
             }
-            var list = this.getAt(this.index++);
+            let list = this.getAt(this.index++);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return list;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return this.basicArrayListUtil.getImmutableInstance();
-            ;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.GET, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return this.basicArrayListUtil.getImmutableInstance();
+                ;
+            }
         }
     }
     clear() {
         super.clear();
-        var basicArrayList;
+        let basicArrayList;
         ;
-        for (var index = this.list.size() - 1; index >= 0; index--) {
+        for (let index = this.list.size() - 1; index >= 0; index--) {
             basicArrayList = this.list.objectArray[index];
             basicArrayList.clear();
         }
     }
     log() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("S: ");
         stringBuffer.appendint(this.list.size());
-        var S_LABEL = " s: ";
+        let S_LABEL = " s: ";
         ;
-        var basicArrayList;
+        let basicArrayList;
         ;
-        for (var index = this.list.size() - 1; index >= 0; index--) {
+        for (let index = this.list.size() - 1; index >= 0; index--) {
             stringBuffer.append(S_LABEL);
             basicArrayList = this.list.objectArray[index];
             stringBuffer.appendint(basicArrayList.size());

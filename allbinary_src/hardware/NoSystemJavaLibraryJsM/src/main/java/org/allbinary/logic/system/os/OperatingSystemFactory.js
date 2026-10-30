@@ -21,7 +21,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoOperatingSystem } from './NoOperatingSystem.js';
-//not GWT import - same folder const GenericOperatingSystem
+//sameFolderImports - not GWT import - same folder const GenericOperatingSystem
 export class OperatingSystemFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -34,17 +34,19 @@ export class OperatingSystemFactory extends Object {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getOperatingSystemInstance() {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         try {
-            var osString = new StringMaker().append("OperatingSystem Info: ").append(this.genericOperatingSystem.toString()).toString();
+            let osString = new StringMaker().append("OperatingSystem Info: ").append(this.genericOperatingSystem.toString()).toString();
             ;
             console.log(osString);
             this.logUtil.putF(osString, this, commonStrings.GET_INSTANCE);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.GET_INSTANCE, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.genericOperatingSystem;

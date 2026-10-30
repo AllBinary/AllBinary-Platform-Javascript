@@ -30,7 +30,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { CountedLayerInterfaceFactoryPart } from './CountedLayerInterfaceFactoryPart.js';
-//not GWT import - same folder const PartInterface
+//sameFolderImports - not GWT import - same folder const PartInterface
 export class MakeCountedPartsSingletonArrayFactory extends Object {
     constructor() {
         super(...arguments);
@@ -44,33 +44,33 @@ export class MakeCountedPartsSingletonArrayFactory extends Object {
     //@Throws(Exception.constructor)
     getUpdated(partInterfaceArray) {
         this.list = new BasicArrayListD();
-        for (var index = 0; index < partInterfaceArray.length; index++) {
+        for (let index = 0; index < partInterfaceArray.length; index++) {
             this.list.add(partInterfaceArray[index]);
         }
-        var countedBasicArrayList = CountedPickedUpLayerInterfaceFactoryPool.getInstance().getList();
+        let countedBasicArrayList = CountedPickedUpLayerInterfaceFactoryPool.getInstance().getList();
         ;
-        var layerInterfaceFactoryInterface;
+        let layerInterfaceFactoryInterface;
         ;
-        var size = countedBasicArrayList.size();
+        let size = countedBasicArrayList.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             layerInterfaceFactoryInterface = countedBasicArrayList.objectArray[index];
             this.list.add(new CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface));
         }
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("Total Parts: ");
         stringBuffer.appendint(this.list.size());
         stringBuffer.append(" Counted: ");
         stringBuffer.appendint(countedBasicArrayList.size());
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(stringBuffer.toString(), this, commonStrings.GET_INSTANCE);
-        var newPartInterfaceArray = new Array(this.list.size());
+        let newPartInterfaceArray = new Array(this.list.size());
         ;
-        var newSize = newPartInterfaceArray.length;
+        let newSize = newPartInterfaceArray.length;
         ;
-        for (var index = 0; index < newSize; index++) {
+        for (let index = 0; index < newSize; index++) {
             newPartInterfaceArray[index] = this.list.get(index);
         }
         //if statement needs to be on the same line and ternary does not work the same way.

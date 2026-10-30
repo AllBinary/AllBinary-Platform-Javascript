@@ -32,9 +32,9 @@ export class AbPathData extends Object {
         this.SEPARATOR = CommonSeps.getInstance().FORWARD_SLASH;
     }
     getExtensionIndex(filePath) {
-        var indexOfFileExtensionDelmiter = filePath.lastIndexOf(this.EXTENSION_SEP);
+        let indexOfFileExtensionDelmiter = filePath.lastIndexOf(this.EXTENSION_SEP);
         ;
-        var indexOfLatDelimiter = filePath.lastIndexOf(this.SEPARATORCHAR);
+        let indexOfLatDelimiter = filePath.lastIndexOf(this.SEPARATORCHAR);
         ;
         if (indexOfFileExtensionDelmiter < 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,9 +48,9 @@ export class AbPathData extends Object {
         return indexOfFileExtensionDelmiter;
     }
     getExtensionWithDot(filePath) {
-        var indexOfFileExtensionDelmiter = this.getExtensionIndex(filePath);
+        let indexOfFileExtensionDelmiter = this.getExtensionIndex(filePath);
         ;
-        var extension = StringUtil.getInstance().EMPTY_STRING;
+        let extension = StringUtil.getInstance().EMPTY_STRING;
         ;
         if (indexOfFileExtensionDelmiter >= 0) {
             extension = filePath.substring(indexOfFileExtensionDelmiter);
@@ -59,9 +59,9 @@ export class AbPathData extends Object {
         return extension;
     }
     getExtension(filePath) {
-        var indexOfFileExtensionDelmiter = this.getExtensionIndex(filePath);
+        let indexOfFileExtensionDelmiter = this.getExtensionIndex(filePath);
         ;
-        var extension = StringUtil.getInstance().EMPTY_STRING;
+        let extension = StringUtil.getInstance().EMPTY_STRING;
         ;
         if (indexOfFileExtensionDelmiter >= 0) {
             extension = filePath.substring(indexOfFileExtensionDelmiter + 1);
@@ -70,7 +70,7 @@ export class AbPathData extends Object {
         return extension;
     }
     getNameFromPath(path) {
-        var endIndex = path.lastIndexOf(this.SEPARATORCHAR);
+        let endIndex = path.lastIndexOf(this.SEPARATORCHAR);
         ;
         if (endIndex < 0) {
             endIndex = path.lastIndexOf(FilePathData.getInstance().SEPARATORCHAR);
@@ -80,21 +80,21 @@ export class AbPathData extends Object {
             return path;
         }
         if (path.length == endIndex + 1) {
-            var categoryName = path.substring(0, endIndex);
+            let categoryName = path.substring(0, endIndex);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.getNameFromPath(categoryName);
             ;
         }
         else {
-            var categoryName = path.substring(endIndex + 1);
+            let categoryName = path.substring(endIndex + 1);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return categoryName;
         }
     }
     removeNameFromPath(path) {
-        var endIndex = path.lastIndexOf(this.SEPARATORCHAR);
+        let endIndex = path.lastIndexOf(this.SEPARATORCHAR);
         ;
         if (endIndex < 0) {
             endIndex = path.lastIndexOf(FilePathData.getInstance().SEPARATORCHAR);
@@ -109,7 +109,7 @@ export class AbPathData extends Object {
             ;
         }
         else {
-            var pathWithoutName = path.substring(0, endIndex);
+            let pathWithoutName = path.substring(0, endIndex);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return pathWithoutName;

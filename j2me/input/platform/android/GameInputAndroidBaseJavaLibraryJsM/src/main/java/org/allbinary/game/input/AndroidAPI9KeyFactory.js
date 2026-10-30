@@ -5,9 +5,9 @@ import { KeyEvent } from '../../../../android/view/KeyEvent.js';
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AndroidKeyFactory } from './AndroidKeyFactory.js';
-//not GWT import - same folder const AndroidKeyFactory
+//sameFolderImports - not GWT import - same folder const AndroidKeyFactory
 import { AndroidGameKey } from './AndroidGameKey.js';
-//not GWT import - same folder const AndroidGameKey
+//sameFolderImports - not GWT import - same folder const AndroidGameKey
 export class AndroidAPI9KeyFactory extends AndroidKeyFactory {
     static getInstance() {
         if (AndroidAPI9KeyFactory.instance == NullUtil.getInstance().NULL_OBJECT) {

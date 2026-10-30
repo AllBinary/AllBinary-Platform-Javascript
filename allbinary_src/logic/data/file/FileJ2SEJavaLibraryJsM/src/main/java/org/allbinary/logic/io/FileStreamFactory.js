@@ -21,9 +21,9 @@ import { AbPath } from '../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AbFileInputStream } from './AbFileInputStream.js';
-//not GWT import - same folder const AbFileInputStream
+//sameFolderImports - not GWT import - same folder const AbFileInputStream
 import { AbFileOutputStream } from './AbFileOutputStream.js';
-//not GWT import - same folder const AbFileOutputStream
+//sameFolderImports - not GWT import - same folder const AbFileOutputStream
 export class FileStreamFactory extends Object {
     static getInstance() {
         if (FileStreamFactory.SINGLETON == NullUtil.getInstance().NULL_OBJECT) {
@@ -37,18 +37,18 @@ export class FileStreamFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getFileInputStreamInstance(path, fileName) {
-        var FILEABPATH = new AbPath(path, fileName);
+        let FILEABPATH = new AbPath(path, fileName);
         ;
-        var file = AbFile.createAbFileFromAbPath(FILEABPATH);
+        let file = AbFile.createAbFileFromAbPath(FILEABPATH);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new AbFileInputStream(file);
     }
     //@Throws(Exception.constructor)
     getFileOutputStreamInstance(path, fileName) {
-        var FILEABPATH = new AbPath(path, fileName);
+        let FILEABPATH = new AbPath(path, fileName);
         ;
-        var file = AbFile.createAbFileFromAbPath(FILEABPATH);
+        let file = AbFile.createAbFileFromAbPath(FILEABPATH);
         ;
         if (file.exists()) {
             file.delete();
@@ -60,9 +60,9 @@ export class FileStreamFactory extends Object {
     }
     //@Throws(Exception.constructor)
     delete(path, fileName) {
-        var FILEABPATH = new AbPath(path, fileName);
+        let FILEABPATH = new AbPath(path, fileName);
         ;
-        var file = AbFile.createAbFileFromAbPath(FILEABPATH);
+        let file = AbFile.createAbFileFromAbPath(FILEABPATH);
         ;
         file.delete();
     }

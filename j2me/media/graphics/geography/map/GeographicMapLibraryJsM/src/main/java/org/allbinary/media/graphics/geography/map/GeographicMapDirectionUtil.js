@@ -20,7 +20,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 import { DirectionFactory } from '../../../../../../org/allbinary/direction/DirectionFactory.js';
 //not GWT import const DirectionFactory
 import { CellPosition } from '../../../../../../org/allbinary/graphics/CellPosition.js';
-//not GWT import - same folder const GeographicMapCellPosition
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPosition
 export class GeographicMapDirectionUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -34,15 +34,15 @@ export class GeographicMapDirectionUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition, toGeographicMapCellPosition) {
-        var fromColumn = fromGeographicMapCellPosition.getColumn();
+        let fromColumn = fromGeographicMapCellPosition.getColumn();
         ;
-        var fromRow = fromGeographicMapCellPosition.getRow();
+        let fromRow = fromGeographicMapCellPosition.getRow();
         ;
-        var goColumn = toGeographicMapCellPosition.getColumn();
+        let goColumn = toGeographicMapCellPosition.getColumn();
         ;
-        var goRow = toGeographicMapCellPosition.getRow();
+        let goRow = toGeographicMapCellPosition.getRow();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         if (fromColumn - 1 == goColumn) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,15 +72,15 @@ export class GeographicMapDirectionUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getEightDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition, toGeographicMapCellPosition) {
-        var fromColumn = fromGeographicMapCellPosition.getColumn();
+        let fromColumn = fromGeographicMapCellPosition.getColumn();
         ;
-        var fromRow = fromGeographicMapCellPosition.getRow();
+        let fromRow = fromGeographicMapCellPosition.getRow();
         ;
-        var goColumn = toGeographicMapCellPosition.getColumn();
+        let goColumn = toGeographicMapCellPosition.getColumn();
         ;
-        var goRow = toGeographicMapCellPosition.getRow();
+        let goRow = toGeographicMapCellPosition.getRow();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         if (fromRow == goRow) {
             if (fromColumn - 1 == goColumn) {
@@ -132,15 +132,15 @@ export class GeographicMapDirectionUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition, toGeographicMapCellPosition) {
-        var fromColumn = fromGeographicMapCellPosition.getColumn();
+        let fromColumn = fromGeographicMapCellPosition.getColumn();
         ;
-        var fromRow = fromGeographicMapCellPosition.getRow();
+        let fromRow = fromGeographicMapCellPosition.getRow();
         ;
-        var goColumn = toGeographicMapCellPosition.getColumn();
+        let goColumn = toGeographicMapCellPosition.getColumn();
         ;
-        var goRow = toGeographicMapCellPosition.getRow();
+        let goRow = toGeographicMapCellPosition.getRow();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         if (fromColumn > goColumn) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -158,24 +158,24 @@ export class GeographicMapDirectionUtil extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return directionFactory.DOWN;
         }
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var string = stringMaker.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition)).append(" == ").append(CellPosition.toStringCellPosition(toGeographicMapCellPosition)).toString();
+        let string = stringMaker.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition)).append(" == ").append(CellPosition.toStringCellPosition(toGeographicMapCellPosition)).toString();
         ;
         stringMaker.delete(0, stringMaker.length());
         throw new Exception(stringMaker.append("Error: ").append(string).toString());
     }
     //@Throws(Exception.constructor)
     getEightDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition, toGeographicMapCellPosition) {
-        var fromColumn = fromGeographicMapCellPosition.getColumn();
+        let fromColumn = fromGeographicMapCellPosition.getColumn();
         ;
-        var fromRow = fromGeographicMapCellPosition.getRow();
+        let fromRow = fromGeographicMapCellPosition.getRow();
         ;
-        var goColumn = toGeographicMapCellPosition.getColumn();
+        let goColumn = toGeographicMapCellPosition.getColumn();
         ;
-        var goRow = toGeographicMapCellPosition.getRow();
+        let goRow = toGeographicMapCellPosition.getRow();
         ;
-        var directionFactory = DirectionFactory.getInstance();
+        let directionFactory = DirectionFactory.getInstance();
         ;
         if (fromGeographicMapCellPosition == toGeographicMapCellPosition) {
             //if statement needs to be on the same line and ternary does not work the same way.
@@ -219,7 +219,7 @@ export class GeographicMapDirectionUtil extends Object {
                 return directionFactory.DOWN;
             }
         }
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.ERROR);
         stringBuffer.append(CellPosition.toStringCellPosition(fromGeographicMapCellPosition));

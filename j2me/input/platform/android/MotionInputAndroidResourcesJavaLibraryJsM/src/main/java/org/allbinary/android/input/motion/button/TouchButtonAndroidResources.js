@@ -44,15 +44,15 @@ import { OperatingSystemFactory } from '../../../../../../org/allbinary/logic/sy
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class TouchButtonAndroidResources extends Init {
     init() {
-        var resourceUtil = ResourceUtil.getInstance();
+        let resourceUtil = ResourceUtil.getInstance();
         ;
-        var androidResources = AndroidResources.getInstance();
+        let androidResources = AndroidResources.getInstance();
         ;
-        var RESOURCE_STRING_ARRAY = [
+        let RESOURCE_STRING_ARRAY = [
             TouchButtonBlankResource.getInstance(), TouchButtonGenericActionResource.getInstance(), TouchButtonStartResource.getInstance(), TouchButtonUpResource.getInstance(), TouchButtonDownResource.getInstance(), TouchButtonTurnLeftResource.getInstance(), TouchButtonTurnRightResource.getInstance(), TouchButtonStrafeLeftResource.getInstance(), TouchButtonStrafeRightResource.getInstance()
         ];
         ;
-        var RESOURCE_ARRAY = new Array(RESOURCE_STRING_ARRAY.length);
+        let RESOURCE_ARRAY = new Array(RESOURCE_STRING_ARRAY.length);
         ;
         if (CommonButtons.getInstance().STANDARD_BUTTON_SIZE == 128) {
             RESOURCE_ARRAY[0] = androidResources.raw.touch_button_128_by_128;
@@ -79,7 +79,7 @@ export class TouchButtonAndroidResources extends Init {
             RESOURCE_ARRAY[7] = androidResources.raw.touch_button_strafe_left_arrow_64_by_64;
             RESOURCE_ARRAY[8] = androidResources.raw.touch_button_strafe_right_arrow_64_by_64;
         }
-        for (var index = 0; index < RESOURCE_ARRAY.length; index++) {
+        for (let index = 0; index < RESOURCE_ARRAY.length; index++) {
             resourceUtil.addResource(RESOURCE_STRING_ARRAY[index].RESOURCE, Integer.valueOf(RESOURCE_ARRAY[index]));
         }
     }

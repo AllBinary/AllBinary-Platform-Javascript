@@ -18,14 +18,14 @@ import { Object } from '../../../java/lang/Object.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RectangleCollisionUtil } from './RectangleCollisionUtil.js';
-//not GWT import - same folder const RectangleCollisionUtil
+//sameFolderImports - not GWT import - same folder const RectangleCollisionUtil
 export class RectangleCollisionPointUtil extends Object {
     static allPointsInside(rectX1, rectY1, rectX2, rectY2, list) {
-        var rectangleCollisionUtil = RectangleCollisionUtil.getInstance();
+        let rectangleCollisionUtil = RectangleCollisionUtil.getInstance();
         ;
-        var point;
+        let point;
         ;
-        for (var index = list.size(); --index >= 0;) {
+        for (let index = list.size(); --index >= 0;) {
             point = list.objectArray[index];
             if (!rectangleCollisionUtil.isInside(rectX1, rectY1, rectX2, rectY2, point.getX(), point.getY())) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,11 +36,11 @@ export class RectangleCollisionPointUtil extends Object {
         return true;
     }
     static allPointsInsideCell(rectX1, rectY1, rectX2, rectY2, list, xCellSize, yCellSize) {
-        var rectangleCollisionUtil = RectangleCollisionUtil.getInstance();
+        let rectangleCollisionUtil = RectangleCollisionUtil.getInstance();
         ;
-        var point;
+        let point;
         ;
-        for (var index = list.size(); --index >= 0;) {
+        for (let index = list.size(); --index >= 0;) {
             point = list.objectArray[index];
             if (!rectangleCollisionUtil.isInside(rectX1, rectY1, rectX2, rectY2, point.getX() * xCellSize, point.getY() * yCellSize)) {
                 //if statement needs to be on the same line and ternary does not work the same way.

@@ -32,11 +32,11 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABStack } 
 const ABStack = globalThis.org.allbinary.util.ABStack;
-//not GWT import - same folder const DisplayableInterface
+//sameFolderImports - not GWT import - same folder const DisplayableInterface
 import { CanvasStrings } from './CanvasStrings.js';
-//not GWT import - same folder const CanvasStrings
+//sameFolderImports - not GWT import - same folder const CanvasStrings
 import { DisplayInfoSingleton } from './DisplayInfoSingleton.js';
-//not GWT import - same folder const DisplayInfoSingleton
+//sameFolderImports - not GWT import - same folder const DisplayInfoSingleton
 export class MyCanvas extends Canvas {
     constructor(name, childNameList) {
         super();
@@ -85,9 +85,9 @@ export class MyCanvas extends Canvas {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     removeAllCommands() {
-        var size = this.commandStack.size();
+        let size = this.commandStack.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             super.removeCommand(this.commandStack.pop());
         }
     }

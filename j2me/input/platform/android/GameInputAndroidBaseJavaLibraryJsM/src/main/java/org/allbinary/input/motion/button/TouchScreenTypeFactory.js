@@ -22,24 +22,24 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TouchScreenFactory } from './TouchScreenFactory.js';
-//not GWT import - same folder const TouchScreenFactory
+//sameFolderImports - not GWT import - same folder const TouchScreenFactory
 import { TouchScreenTypesFactory } from './TouchScreenTypesFactory.js';
-//not GWT import - same folder const TouchScreenTypesFactory
+//sameFolderImports - not GWT import - same folder const TouchScreenTypesFactory
 export class TouchScreenTypeFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TouchScreenTypeFactory.instance;
     }
     update(activity) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var touchScreenFactory = TouchScreenFactory.getInstance();
+        let touchScreenFactory = TouchScreenFactory.getInstance();
         ;
-        var touchScreenTypesFactory = TouchScreenTypesFactory.getInstance();
+        let touchScreenTypesFactory = TouchScreenTypesFactory.getInstance();
         ;
-        var configuration = activity.getResources().getConfiguration();
+        let configuration = activity.getResources().getConfiguration();
         ;
-        var touchScreen = configuration.touchscreen;
+        let touchScreen = configuration.touchscreen;
         ;
         if (touchScreen == Configuration.TOUCHSCREEN_FINGER) {
             touchScreenFactory.setTouchScreenType(touchScreenTypesFactory.FINGER);

@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const RTSInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { UnitTechnologySingletonFactory } from './UnitTechnologySingletonFactory.js';
-//not GWT import - same folder const UnitTechnologySingletonFactory
+//sameFolderImports - not GWT import - same folder const UnitTechnologySingletonFactory
 export class ReloadTechnology extends Object {
     constructor(maxLevel) {
         super();
@@ -69,7 +69,7 @@ export class ReloadTechnology extends Object {
     }
     upgrade() {
         this.level++;
-        var unitTechnologySingletonFactory = UnitTechnologySingletonFactory.getInstance();
+        let unitTechnologySingletonFactory = UnitTechnologySingletonFactory.getInstance();
         ;
         unitTechnologySingletonFactory.setReload(unitTechnologySingletonFactory.getReload() + (this.getLevel() * 10));
     }

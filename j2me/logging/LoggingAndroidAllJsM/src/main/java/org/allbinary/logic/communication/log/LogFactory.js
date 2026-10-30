@@ -23,22 +23,22 @@ const Log = globalThis.org.allbinary.logic.communication.log.Log;
 //ActualPlatform
 /*actual*/ export class LogFactory extends Object {
     /*actual*/ static getInstanceD() {
-        var stringUtil = StringUtil.getInstance();
+        let stringUtil = StringUtil.getInstance();
         ;
-        var nullUtil = NullUtil.getInstance();
+        let nullUtil = NullUtil.getInstance();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Log(stringUtil.EMPTY_STRING, nullUtil.NULL_OBJECT, stringUtil.EMPTY_STRING, nullUtil.NULL_OBJECT);
     }
-    /*actual*/ static getInstanceNoF(specialMessage, anyType = {}, exception = {}) {
+    /*actual*/ static getInstanceNoF(specialMessage, anyType, exception) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Log(specialMessage, anyType, StringUtil.getInstance().EMPTY_STRING, exception);
     }
-    /*actual*/ static getInstance(specialMessage, anyType = {}, functionName, exception = {}) {
+    /*actual*/ static getInstance(specialMessage, anyType, functionName, exception) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Log(specialMessage, anyType, functionName, exception);
     }
-    /*actual*/ static getInstanceF(specialMessage, anyType = {}, functionName) {
+    /*actual*/ static getInstanceF(specialMessage, anyType, functionName) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new Log(specialMessage, anyType, functionName, NullUtil.getInstance().NULL_OBJECT);
     }

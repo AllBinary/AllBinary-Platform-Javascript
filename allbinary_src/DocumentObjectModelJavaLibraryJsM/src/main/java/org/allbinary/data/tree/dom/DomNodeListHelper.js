@@ -22,14 +22,14 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not GWT import const NodeList
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DomNodeHelper } from './DomNodeHelper.js';
-//not GWT import - same folder const DomNodeHelper
+//sameFolderImports - not GWT import - same folder const DomNodeHelper
 export class DomNodeListHelper extends Object {
     static getVector(nodeList) {
-        var vector = new BasicArrayListD();
+        let vector = new BasicArrayListD();
         ;
-        var size = nodeList.getLength();
+        let size = nodeList.getLength();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             vector.add(DomNodeHelper.getTextNodeValue(nodeList.item(index)));
         }
         //if statement needs to be on the same line and ternary does not work the same way.

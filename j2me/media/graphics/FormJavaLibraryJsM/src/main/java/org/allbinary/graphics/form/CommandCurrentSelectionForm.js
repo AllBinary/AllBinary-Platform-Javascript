@@ -24,9 +24,9 @@ import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/Basi
 //not GWT import const ABCustomItem
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScrollCurrentSelectionForm } from './ScrollCurrentSelectionForm.js';
-//not GWT import - same folder const ScrollCurrentSelectionForm
+//sameFolderImports - not GWT import - same folder const ScrollCurrentSelectionForm
 import { ItemPaintableFactory } from './ItemPaintableFactory.js';
-//not GWT import - same folder const ItemPaintableFactory
+//sameFolderImports - not GWT import - same folder const ItemPaintableFactory
 export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
     constructor(title, items, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, ItemPaintableFactory.getInstance(), border, -3, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor);
@@ -41,38 +41,38 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
         super.updateMeasurement(graphics);
     }
     initAnimations() {
-        var nullAnimation = NullAnimationFactory.getFactoryInstance().getInstance(0);
+        let nullAnimation = NullAnimationFactory.getFactoryInstance().getInstance(0);
         ;
-        for (var index = this.selectedAnimationArray.length; --index >= 0;) {
+        for (let index = this.selectedAnimationArray.length; --index >= 0;) {
             this.selectedAnimationArray[index] = nullAnimation;
         }
-        for (var index = this.unSelectedAnimationArray.length; --index >= 0;) {
+        for (let index = this.unSelectedAnimationArray.length; --index >= 0;) {
             this.unSelectedAnimationArray[index] = nullAnimation;
         }
     }
     addAll(items) {
-        for (var index = items.length; --index >= 0;) {
+        for (let index = items.length; --index >= 0;) {
             this.addAt(index, items[index]);
         }
     }
     addAt(index, item) {
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
-        var buttonColor = basicColorFactory.TRANSPARENT_GREY;
+        let buttonColor = basicColorFactory.TRANSPARENT_GREY;
         ;
-        var selectedButtonColor = basicColorFactory.TRANSPARENT_RED;
+        let selectedButtonColor = basicColorFactory.TRANSPARENT_RED;
         ;
-        var width = item.getMinimumWidth();
+        let width = item.getMinimumWidth();
         ;
-        var height = item.getMinimumHeight();
+        let height = item.getMinimumHeight();
         ;
-        var adjustedBorder = 3;
+        let adjustedBorder = 3;
         ;
-        var offset = -(this.halfBorder + adjustedBorder);
+        let offset = -(this.halfBorder + adjustedBorder);
         ;
-        var rectWidth = width + this.border - adjustedBorder;
+        let rectWidth = width + this.border - adjustedBorder;
         ;
-        var rectHeight = height + this.border - adjustedBorder;
+        let rectHeight = height + this.border - adjustedBorder;
         ;
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
             this.selectedAnimationArray[index] = new RectangleAdjustedAnimation(rectWidth, rectHeight, offset, offset, selectedButtonColor);
@@ -89,32 +89,32 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
         }
     }
     updateAll(graphics, items) {
-        for (var index = items.length; --index >= 0;) {
+        for (let index = items.length; --index >= 0;) {
             items[index].preMeasurement(graphics);
             this.updateAt(index, items[index]);
         }
     }
     updateAt(index, item) {
-        var basicColorFactory = BasicColorFactory.getInstance();
+        let basicColorFactory = BasicColorFactory.getInstance();
         ;
-        var buttonColor = basicColorFactory.TRANSPARENT_GREY;
+        let buttonColor = basicColorFactory.TRANSPARENT_GREY;
         ;
-        var selectedButtonColor = basicColorFactory.TRANSPARENT_RED;
+        let selectedButtonColor = basicColorFactory.TRANSPARENT_RED;
         ;
-        var width = item.getMinimumWidth();
+        let width = item.getMinimumWidth();
         ;
-        var height = item.getMinimumHeight();
+        let height = item.getMinimumHeight();
         ;
-        var adjustedBorder = 3;
+        let adjustedBorder = 3;
         ;
-        var offset = -(this.halfBorder + adjustedBorder);
+        let offset = -(this.halfBorder + adjustedBorder);
         ;
-        var rectWidth = width + this.border - adjustedBorder;
+        let rectWidth = width + this.border - adjustedBorder;
         ;
-        var rectHeight = height + this.border - adjustedBorder;
+        let rectHeight = height + this.border - adjustedBorder;
         ;
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
-            var rectangleAdjustedAnimation = this.selectedAnimationArray[index];
+            let rectangleAdjustedAnimation = this.selectedAnimationArray[index];
             ;
             rectangleAdjustedAnimation.setWidth(rectWidth);
             rectangleAdjustedAnimation.setHeight(rectHeight);
@@ -123,7 +123,7 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
             rectangleAdjustedAnimation.setBasicColorP(selectedButtonColor);
         }
         else {
-            var rectangleAdjustedAnimation = this.selectedAnimationArray[index];
+            let rectangleAdjustedAnimation = this.selectedAnimationArray[index];
             ;
             rectangleAdjustedAnimation.setWidth(rectWidth);
             rectangleAdjustedAnimation.setHeight(rectHeight);
@@ -133,7 +133,7 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
         }
         adjustedBorder = 4;
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
-            var rectangleAdjustedAnimation = this.unSelectedAnimationArray[index];
+            let rectangleAdjustedAnimation = this.unSelectedAnimationArray[index];
             ;
             rectangleAdjustedAnimation.setWidth(rectWidth);
             rectangleAdjustedAnimation.setHeight(rectHeight);
@@ -142,7 +142,7 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
             rectangleAdjustedAnimation.setBasicColorP(buttonColor);
         }
         else {
-            var rectangleAdjustedAnimation = this.unSelectedAnimationArray[index];
+            let rectangleAdjustedAnimation = this.unSelectedAnimationArray[index];
             ;
             rectangleAdjustedAnimation.setWidth(rectWidth);
             rectangleAdjustedAnimation.setHeight(rectHeight);
@@ -152,16 +152,16 @@ export class CommandCurrentSelectionForm extends ScrollCurrentSelectionForm {
         }
     }
     getSelectedCommand() {
-        var index = super.getSelectedIndex();
+        let index = super.getSelectedIndex();
         ;
-        var commandTextItem = this.get(index);
+        let commandTextItem = this.get(index);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return commandTextItem.getCommand();
         ;
     }
     append(item) {
-        var result = super.append(item);
+        let result = super.append(item);
         ;
         this.addAt(result, item);
         //if statement needs to be on the same line and ternary does not work the same way.

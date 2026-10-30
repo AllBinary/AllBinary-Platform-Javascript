@@ -38,9 +38,9 @@ import { ABRunnable } from '../../../../org/allbinary/thread/ABRunnable.js';
 import { ThreadObjectUtil } from '../../../../org/allbinary/thread/ThreadObjectUtil.js';
 //not GWT import const ThreadObjectUtil
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
-//not GWT import - same folder const PlayerGameInput
+//sameFolderImports - not GWT import - same folder const PlayerGameInput
 import { GameInputProcessorComposite } from './GameInputProcessorComposite.js';
-//not GWT import - same folder const GameInputProcessorComposite
+//sameFolderImports - not GWT import - same folder const GameInputProcessorComposite
 export class MapSelectionGameInputProcessor extends Processor {
     constructor(gameCanvas, raceTrackGeographicMapInterfaceFactoryInterface, mapSelectorPaintable, lockedIndex) {
         super();
@@ -51,23 +51,25 @@ export class MapSelectionGameInputProcessor extends Processor {
                 try {
                     this.setRunning(true);
                     SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
-                    var track = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
+                    let track = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
                     ;
-                    var wave = this.raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
+                    let wave = this.raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
                     ;
                     this.gameCanvas.getLayerManager().getGameInfo().setCurrentLevel(wave);
                     this.gameCanvas.buildGameInit(false);
                     GameKeyEventHandler.getInstance().removeListener(getPlayerGameInput());
                     this.setRunning(false);
-                    //: 
                 }
-                catch (e) {
-                    this.setRunning(false);
-                    var logUtil = LogUtil.getInstance();
-                    ;
-                    var commonStrings = CommonStrings.getInstance();
-                    ;
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                catch (caught) {
+                    {
+                        const e = caught;
+                        this.setRunning(false);
+                        let logUtil = LogUtil.getInstance();
+                        ;
+                        let commonStrings = CommonStrings.getInstance();
+                        ;
+                        logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                    }
                 }
             }
         };
@@ -83,12 +85,12 @@ export class MapSelectionGameInputProcessor extends Processor {
     }
     //@Throws(Exception.constructor)
     onInput(list) {
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var anyType = list.get(index);
+        for (let index = 0; index < size; index++) {
+            let anyType = list.get(index);
             ;
-            var key = GameKeyEventUtil.getKey(anyType);
+            let key = GameKeyEventUtil.getKey(anyType);
             ;
             if (key == Canvas.LEFT || key == Canvas.RIGHT || key == Canvas.UP || key == Canvas.DOWN) {
                 if (this.inputTimeHelper.isTimeTNT()) {
@@ -98,7 +100,7 @@ export class MapSelectionGameInputProcessor extends Processor {
                 }
             }
             else if (key == Canvas.KEY_NUM0) {
-                var selectedIndex = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex();
+                let selectedIndex = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex();
                 ;
                 if (selectedIndex < this.lockedIndex || !LockedUtil.getInstance().isLocked()) {
                     if (!this.abRunnable.isRunning()) {

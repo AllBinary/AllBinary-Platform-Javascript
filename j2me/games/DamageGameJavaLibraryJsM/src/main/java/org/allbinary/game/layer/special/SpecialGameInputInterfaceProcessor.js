@@ -13,7 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { GameInputProcessor } from '../../../../../org/allbinary/game/input/GameInputProcessor.js';
-//not GWT import - same folder const SpecialGameInputInterface
+//sameFolderImports - not GWT import - same folder const SpecialGameInputInterface
 export class SpecialGameInputInterfaceProcessor extends GameInputProcessor {
     constructor(collidableDestroyableDamageableLayer) {
         super();

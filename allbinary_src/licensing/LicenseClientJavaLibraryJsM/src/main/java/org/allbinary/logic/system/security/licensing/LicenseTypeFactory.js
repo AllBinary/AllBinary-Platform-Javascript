@@ -17,7 +17,7 @@ import { Object } from '../../../../../../java/lang/Object.js';
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LicenseType } from './LicenseType.js';
-//not GWT import - same folder const LicenseType
+//sameFolderImports - not GWT import - same folder const LicenseType
 export class LicenseTypeFactory extends Object {
     constructor() {
         super(...arguments);
@@ -25,11 +25,18 @@ export class LicenseTypeFactory extends Object {
         this.DEMO = new LicenseType("Demo");
         this.NORMAL = new LicenseType("Normal");
     }
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return LicenseTypeFactory.instance;
     }
-    getInstance(name) {
+    getInstance$overload2(name) {
         if (this.DEMO.getName().compareTo(name) == 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.DEMO;

@@ -15,7 +15,7 @@
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DbConnectionInfo } from './DbConnectionInfo.js';
-//not GWT import - same folder const DbConnectionInfo
+//sameFolderImports - not GWT import - same folder const DbConnectionInfo
 //import org.allbinary.logic.communication.log.config.type.LogConfigTypes;
 export class DbInitInfo extends DbConnectionInfo {
     constructor(initFileName, read) {
@@ -23,7 +23,7 @@ export class DbInitInfo extends DbConnectionInfo {
         //For kotlin this is before the body of the constructor.
     }
     getUrl() {
-        var url = super.getUrl();
+        let url = super.getUrl();
         ;
         PreLogUtil.put("Url: " + url, this, "getUrl");
         //if statement needs to be on the same line and ternary does not work the same way.

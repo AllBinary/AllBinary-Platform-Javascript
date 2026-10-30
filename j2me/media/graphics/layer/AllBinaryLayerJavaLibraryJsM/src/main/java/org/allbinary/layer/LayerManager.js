@@ -15,7 +15,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //not plain js import { ABSystemWrapper } 
 const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
-//not GWT import - same folder const Layer
+//sameFolderImports - not GWT import - same folder const Layer
 export class LayerManager extends Object {
     constructor(layerManagerLogging) {
         super();
@@ -35,14 +35,14 @@ export class LayerManager extends Object {
     }
     //@Throws(Exception.constructor)
     update(layerInterface) {
-        var had = this.list.remove(layerInterface);
+        let had = this.list.remove(layerInterface);
         ;
         if (had) {
-            var nextLayerInterface;
+            let nextLayerInterface;
             ;
-            var size = this.list.size();
+            let size = this.list.size();
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 nextLayerInterface = this.list.get(index);
                 if (layerInterface.getZP() > nextLayerInterface.getZP()) {
                     this.list.addAt(index, layerInterface);
@@ -55,11 +55,11 @@ export class LayerManager extends Object {
     }
     //@Throws(Exception.constructor)
     insert(layerInterface) {
-        var nextLayerInterface;
+        let nextLayerInterface;
         ;
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             nextLayerInterface = this.list.get(index);
             if (layerInterface.getZP() > nextLayerInterface.getZP()) {
                 this.appendAt(layerInterface, index);
@@ -85,7 +85,7 @@ export class LayerManager extends Object {
         //synchronized(this.anyType) 
         //mutex.withLock
         this.layerManagerLogging.remove(layerInterface);
-        var result = this.list.remove(layerInterface);
+        let result = this.list.remove(layerInterface);
         ;
         this.layerManagerLogging.removeResult(this, layerInterface, result);
     }
@@ -112,9 +112,9 @@ export class LayerManager extends Object {
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this.anyType) 
         //mutex.withLock
-        var comp;
+        let comp;
         ;
-        for (var index = this.list.size(); --index >= 0;) {
+        for (let index = this.list.size(); --index >= 0;) {
             comp = this.list.objectArray[index];
             if (comp !=
                 null

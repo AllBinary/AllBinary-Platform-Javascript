@@ -17,11 +17,11 @@ import { Exception } from '../../../../../java/lang/Exception.js';
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseBasicArrayListCache } from './BaseBasicArrayListCache.js';
-//not GWT import - same folder const CacheableInterface
+//sameFolderImports - not GWT import - same folder const CacheableInterface
 export class IndexedBasicArrayListCache extends BaseBasicArrayListCache {
     //@Throws(Exception.constructor)
     static createCache(size) {
-        var indexedBasicArrayListCache = new IndexedBasicArrayListCache();
+        let indexedBasicArrayListCache = new IndexedBasicArrayListCache();
         ;
         indexedBasicArrayListCache.init(size);
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -37,7 +37,7 @@ export class IndexedBasicArrayListCache extends BaseBasicArrayListCache {
     init(size) {
         if (this.size < size) {
             this.list.ensureCapacity(size);
-            for (var index = size - 1; index >= this.size; index--) {
+            for (let index = size - 1; index >= this.size; index--) {
                 this.addDefault();
             }
             this.size = size;

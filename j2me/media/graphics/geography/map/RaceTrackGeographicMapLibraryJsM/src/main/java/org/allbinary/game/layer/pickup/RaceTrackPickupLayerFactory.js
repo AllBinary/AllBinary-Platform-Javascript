@@ -16,7 +16,7 @@ import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const AllBinaryLayerFactoryInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackPickupLayer } from './RaceTrackPickupLayer.js';
-//not GWT import - same folder const RaceTrackPickupLayer
+//sameFolderImports - not GWT import - same folder const RaceTrackPickupLayer
 export class RaceTrackPickupLayerFactory extends Object {
     //@Throws(Exception.constructor)
     getInstance() {

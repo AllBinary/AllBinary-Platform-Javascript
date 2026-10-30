@@ -26,9 +26,9 @@ const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const OnDemandResourcesFactory
+//sameFolderImports - not GWT import - same folder const OnDemandResourcesFactory
 import { OnDemandResources } from './OnDemandResources.js';
-//not GWT import - same folder const OnDemandResources
+//sameFolderImports - not GWT import - same folder const OnDemandResources
 export class OnDemandLoader extends Object {
     constructor(onDemandResourcesFactory, gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory, resourceAnimationInterfaceFactoryInterfaceFactory) {
         super();
@@ -38,7 +38,7 @@ export class OnDemandLoader extends Object {
     }
     //@Throws(Exception.constructor)
     init(imageCache, level, loadingString) {
-        var resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
+        let resourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance();
         ;
         if (Features.getInstance().isFeature(MainFeatureFactory.getInstance().LOAD_ALL)) {
             if (this.resourceAnimationInterfaceFactoryInterfaceFactory.isInitialized()) {
@@ -48,20 +48,20 @@ export class OnDemandLoader extends Object {
             this.initAll(imageCache, loadingString);
         }
         else if (level != resourceLoadingLevelFactory.LOAD_ALL.getLevel()) {
-            var layerPlacementInterfaceBasicArrayListFactoryInterface = this.gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory.getInstance(level);
+            let layerPlacementInterfaceBasicArrayListFactoryInterface = this.gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory.getInstance(level);
             ;
             this.initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface, imageCache, level, loadingString);
         }
     }
     //@Throws(Exception.constructor)
     initAll(imageCache, loadingString) {
-        var index = 0;
+        let index = 0;
         ;
-        var portion = 120;
+        let portion = 120;
         ;
-        var onDemandResources;
+        let onDemandResources;
         ;
-        for (var onDemandIndex = this.onDemandResourcesFactory.size(); --onDemandIndex >= 0;) {
+        for (let onDemandIndex = this.onDemandResourcesFactory.size(); --onDemandIndex >= 0;) {
             onDemandResources = this.onDemandResourcesFactory.remove(onDemandIndex);
             if (onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES) {
                 index = onDemandResources.initAt(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index);
@@ -70,18 +70,18 @@ export class OnDemandLoader extends Object {
     }
     //@Throws(Exception.constructor)
     initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface, imageCache, level, loadingString) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var portion = 120;
+        let portion = 120;
         ;
-        var index = 0;
+        let index = 0;
         ;
-        var onDemandArray = layerPlacementInterfaceBasicArrayListFactoryInterface.getOnDemandResources();
+        let onDemandArray = layerPlacementInterfaceBasicArrayListFactoryInterface.getOnDemandResources();
         ;
         PreLogUtil.put(new StringMaker().append(commonStrings.START).appendint(onDemandArray.length).toString(), this, "initLevel");
-        var onDemandResources;
+        let onDemandResources;
         ;
-        for (var onDemandIndex = onDemandArray.length; --onDemandIndex >= 0;) {
+        for (let onDemandIndex = onDemandArray.length; --onDemandIndex >= 0;) {
             onDemandResources = this.onDemandResourcesFactory.remove(onDemandArray[onDemandIndex]);
             if (onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES) {
                 index = onDemandResources.initAt(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index);

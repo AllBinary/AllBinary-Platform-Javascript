@@ -22,61 +22,68 @@ import { Features } from '../../../org/allbinary/game/configuration/feature/Feat
 //not GWT import const Features
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PreResourceImageUtil } from './PreResourceImageUtil.js';
-//not GWT import - same folder const PreResourceImageUtil
+//sameFolderImports - not GWT import - same folder const PreResourceImageUtil
 export class ChoiceGroupImageUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return ChoiceGroupImageUtil.instance;
     }
     init() {
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var choiceGroupFactory = ChoiceGroupImageFactory.getInstance();
+        let choiceGroupFactory = ChoiceGroupImageFactory.getInstance();
         ;
-        var imageArray = choiceGroupFactory.getImageArray();
+        let imageArray = choiceGroupFactory.getImageArray();
         ;
         if (features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL)) {
-            var preResourceImageUtil = PreResourceImageUtil.getInstance();
+            let preResourceImageUtil = PreResourceImageUtil.getInstance();
             ;
-            var size = imageArray.length;
+            let size = imageArray.length;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 imageArray[index] = preResourceImageUtil.encapsulate(imageArray[index]);
             }
             choiceGroupFactory.init(imageArray);
         }
     }
-    update(gl) {
-        var features = Features.getInstance();
+    update(...args) {
+        if (args.length === 1)
+            return this.update$overload1(args[0]);
+        if (args.length === 1)
+            return this.update$overload2(args[0]);
+        throw new TypeError('No matching overload: update');
+    }
+    update$overload1(gl) {
+        let features = Features.getInstance();
         ;
-        var choiceGroupFactory = ChoiceGroupImageFactory.getInstance();
+        let choiceGroupFactory = ChoiceGroupImageFactory.getInstance();
         ;
-        var imageArray = choiceGroupFactory.getImageArray();
+        let imageArray = choiceGroupFactory.getImageArray();
         ;
         if (features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL)) {
-            var preResourceImageUtil = PreResourceImageUtil.getInstance();
+            let preResourceImageUtil = PreResourceImageUtil.getInstance();
             ;
-            var size = imageArray.length;
+            let size = imageArray.length;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 preResourceImageUtil.updateGL(gl, imageArray[index]);
             }
         }
         choiceGroupFactory.init(imageArray);
     }
-    update(graphics) {
-        var features = Features.getInstance();
+    update$overload2(graphics) {
+        let features = Features.getInstance();
         ;
-        var choiceGroupFactory = ChoiceGroupImageFactory.getInstance();
+        let choiceGroupFactory = ChoiceGroupImageFactory.getInstance();
         ;
-        var imageArray = choiceGroupFactory.getImageArray();
+        let imageArray = choiceGroupFactory.getImageArray();
         ;
         if (features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL)) {
-            var preResourceImageUtil = PreResourceImageUtil.getInstance();
+            let preResourceImageUtil = PreResourceImageUtil.getInstance();
             ;
-            var size = imageArray.length;
+            let size = imageArray.length;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 preResourceImageUtil.update(graphics, imageArray[index]);
             }
         }

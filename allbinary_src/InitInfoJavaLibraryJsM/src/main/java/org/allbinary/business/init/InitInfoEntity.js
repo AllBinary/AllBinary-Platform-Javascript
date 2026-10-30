@@ -32,9 +32,9 @@ const AbPathData = globalThis.org.allbinary.logic.io.path.AbPathData;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { InitSql } from './InitSql.js';
-//not GWT import - same folder const InitSql
+//sameFolderImports - not GWT import - same folder const InitSql
 import { InitInfo } from './InitInfo.js';
-//not GWT import - same folder const InitInfo
+//sameFolderImports - not GWT import - same folder const InitInfo
 export class InitInfoEntity extends InitSql {
     constructor() {
         super(new UserDbInitInfo());
@@ -48,7 +48,7 @@ export class InitInfoEntity extends InitSql {
         this.CREATED_SUCCESS = " Created Successfully";
         this.FAILED_TO_CREATE = "Failed to create ";
         //For kotlin this is before the body of the constructor.
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.sqlStrings.CREATE_TABLE);
         stringBuffer.append(this.tableName);
@@ -69,10 +69,10 @@ export class InitInfoEntity extends InitSql {
     }
     get() {
         try {
-            var keyAndValue = StdUtil.getInstance().createHashMap();
+            let keyAndValue = StdUtil.getInstance().createHashMap();
             ;
             keyAndValue.put(this.NOTHING, this.NOTHING);
-            var hashMap = getRow(keyAndValue);
+            let hashMap = getRow(keyAndValue);
             ;
             if (hashMap !=
                 null) {
@@ -87,22 +87,24 @@ export class InitInfoEntity extends InitSql {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;
             }
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this.NAME, this.METHOD_GET, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, this.NAME, this.METHOD_GET, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     is() {
         try {
-            var keyAndValue = StdUtil.getInstance().createHashMap();
+            let keyAndValue = StdUtil.getInstance().createHashMap();
             ;
             keyAndValue.put(this.NOTHING, this.NOTHING);
-            var hashMap = getRow(keyAndValue);
+            let hashMap = getRow(keyAndValue);
             ;
             if (hashMap !=
                 null) {
@@ -116,14 +118,16 @@ export class InitInfoEntity extends InitSql {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;
             }
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this.NAME, this.METHOD_IS, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, this.NAME, this.METHOD_IS, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     update() {
@@ -131,18 +135,20 @@ export class InitInfoEntity extends InitSql {
     }
     add() {
         try {
-            var values = new BasicArrayListD();
+            let values = new BasicArrayListD();
             ;
             values.add(this.NOTHING);
             values.add(InitInfo.getInstance().getTesting());
             values.add(InitInfo.getInstance().getTestHtmlPath());
             values.add(InitInfo.getInstance().getMainPath());
             insert(values);
-            //: 
         }
-        catch (e) {
-            if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                PreLogUtil.putOE(this.commonStrings.EXCEPTION, this.NAME, this.METHOD_ADD, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    PreLogUtil.putOE(this.commonStrings.EXCEPTION, this.NAME, this.METHOD_ADD, e);
+                }
             }
         }
     }
@@ -152,7 +158,7 @@ export class InitInfoEntity extends InitSql {
             return this.tableName + this.CREATED_SUCCESS;
         }
         else {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(this.FAILED_TO_CREATE);
             stringBuffer.append(this.tableData);

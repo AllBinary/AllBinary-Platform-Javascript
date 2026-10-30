@@ -32,7 +32,7 @@ export class OpenGLVersionValidator extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return false;
     }
-    setShaderComposite(shaderComposite, anyType = {}) {
+    setShaderComposite(shaderComposite, anyType) {
     }
 }
 OpenGLVersionValidator.instance = new OpenGLVersionValidator();

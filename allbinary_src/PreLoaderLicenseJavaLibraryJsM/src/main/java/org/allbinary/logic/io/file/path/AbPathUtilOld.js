@@ -40,26 +40,35 @@ export class AbPathUtilOld extends Object {
         this.abPathData = AbPathData.getInstance();
         this.filePathData = FilePathData.getInstance();
     }
+    getExtension(...args) {
+        if (args.length === 1)
+            return this.getExtension$overload1(args[0]);
+        if (args.length === 1)
+            return this.getExtension$overload2(args[0]);
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getExtension$overload3(args[0]);
+        throw new TypeError('No matching overload: getExtension');
+    }
     //@Throws(Exception.constructor)
-    getExtension(abFilePath) {
+    getExtension$overload1(abFilePath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getExtension(abFilePath.toString());
         ;
     }
     //@Throws(Exception.constructor)
-    getExtension(abPath) {
+    getExtension$overload2(abPath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getExtension(abPath.toString());
         ;
     }
     //@Throws(Exception.constructor)
-    getExtension(filePath) {
+    getExtension$overload3(filePath) {
         if (filePath.length < AbPathUtilOld.MIN) {
             throw new Exception("Could not be a file path since its less that 4 characters");
         }
-        var beginIndex = filePath.length - AbPathUtilOld.MIN;
+        let beginIndex = filePath.length - AbPathUtilOld.MIN;
         ;
-        var extension = filePath.substring(beginIndex + 1);
+        let extension = filePath.substring(beginIndex + 1);
         ;
         if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEW)) {
             this.logUtil.putF("FileExtension: " + extension, this, "getExtension()");
@@ -67,26 +76,35 @@ export class AbPathUtilOld extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return extension;
     }
+    getWithoutExtension(...args) {
+        if (args.length === 1)
+            return this.getWithoutExtension$overload1(args[0]);
+        if (args.length === 1)
+            return this.getWithoutExtension$overload2(args[0]);
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getWithoutExtension$overload3(args[0]);
+        throw new TypeError('No matching overload: getWithoutExtension');
+    }
     //@Throws(Exception.constructor)
-    getWithoutExtension(abFilePath) {
+    getWithoutExtension$overload1(abFilePath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getWithoutExtension(abFilePath.toString());
         ;
     }
     //@Throws(Exception.constructor)
-    getWithoutExtension(abPath) {
+    getWithoutExtension$overload2(abPath) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.getWithoutExtension(abPath.toString());
         ;
     }
     //@Throws(Exception.constructor)
-    getWithoutExtension(filePath) {
+    getWithoutExtension$overload3(filePath) {
         if (filePath.length < AbPathUtilOld.MIN) {
             throw new Exception("Could not be a file path since its less that 4 characters");
         }
-        var endIndex = filePath.length - AbPathUtilOld.MIN;
+        let endIndex = filePath.length - AbPathUtilOld.MIN;
         ;
-        var pathWithoutExtension = filePath.substring(0, endIndex);
+        let pathWithoutExtension = filePath.substring(0, endIndex);
         ;
         if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().VIEW)) {
             this.logUtil.putF("FileWithoutExtension: " + pathWithoutExtension, this, "getWithoutExtension()");
@@ -155,7 +173,7 @@ export class AbPathUtilOld extends Object {
     }
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getNameFromPath(categoryPath) {
-        var endIndex = categoryPath.lastIndexOf(this.abPathData.SEPARATOR);
+        let endIndex = categoryPath.lastIndexOf(this.abPathData.SEPARATOR);
         ;
         if (endIndex < 0) {
             endIndex = categoryPath.lastIndexOf(this.filePathData.SEPARATORCHAR);
@@ -164,14 +182,14 @@ export class AbPathUtilOld extends Object {
             //if statement needs to be on the same line and ternary does not work the same way.
             return categoryPath;
         if (categoryPath.length == endIndex + 1) {
-            var categoryName = categoryPath.substring(0, endIndex);
+            let categoryName = categoryPath.substring(0, endIndex);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return this.getNameFromPath(categoryName);
             ;
         }
         else {
-            var categoryName = categoryPath.substring(endIndex + 1);
+            let categoryName = categoryPath.substring(endIndex + 1);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return categoryName;
@@ -180,7 +198,7 @@ export class AbPathUtilOld extends Object {
     //@Throws(Exception.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     removeNameFromPath(categoryPath) {
-        var endIndex = categoryPath.lastIndexOf(this.abPathData.SEPARATOR);
+        let endIndex = categoryPath.lastIndexOf(this.abPathData.SEPARATOR);
         ;
         if (endIndex < 0) {
             endIndex = categoryPath.lastIndexOf(this.filePathData.SEPARATORCHAR);
@@ -196,7 +214,7 @@ export class AbPathUtilOld extends Object {
             ;
         }
         else {
-            var categoryName = categoryPath.substring(0, endIndex);
+            let categoryName = categoryPath.substring(0, endIndex);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return new AbPath(categoryName, StringUtil.getInstance().EMPTY_STRING);

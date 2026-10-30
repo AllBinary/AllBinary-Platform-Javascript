@@ -64,14 +64,14 @@ export class BasicPopupMenuPaintable extends Paintable {
         this.init(rectangle);
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var isOpenGL = features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL);
+        let isOpenGL = features.isDefault(OpenGLFeatureFactory.getInstance().OPENGL);
         ;
         this.drawStringUtil.updateMeasurement(graphics, this.label);
-        var BORDER = 0;
+        let BORDER = 0;
         ;
         if (J2MEUtil.isHTML() || isOpenGL) {
             BORDER = MyFontProcessor.defaultCharWidth(font) / 2;
@@ -93,25 +93,20 @@ export class BasicPopupMenuPaintable extends Paintable {
                 this.heightOffset -= font.getHeight() + 2;
             }
         }
-        this.offset = (this.heightOffset >> 1) + (SWTJOGLProcessor.getInstance().isJOGL()
-            ?
-                4
-            :
-                0);
-        ;
+        this.offset = (this.heightOffset >> 1) + ((SWTJOGLProcessor.getInstance().isJOGL() ? 4 : 0));
         this.myFontProcessor = MyFontProcessor.getInstance();
     }
     //@Throws(Exception.constructor)
     init(rectangle) {
         this.rectangle = rectangle;
-        var width = this.rectangle.getWidth();
+        let width = this.rectangle.getWidth();
         ;
-        var height = this.rectangle.getHeight();
+        let height = this.rectangle.getHeight();
         ;
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
         }
         else {
-            var rectangleFilledAnimation = this.animationInterface;
+            let rectangleFilledAnimation = this.animationInterface;
             ;
             rectangleFilledAnimation.setWidth(width);
             rectangleFilledAnimation.setHeight(height);
@@ -119,15 +114,15 @@ export class BasicPopupMenuPaintable extends Paintable {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var point = this.rectangle.getPoint();
+        let point = this.rectangle.getPoint();
         ;
-        var x = point.getX();
+        let x = point.getX();
         ;
-        var y = point.getY();
+        let y = point.getY();
         ;
-        var width = this.rectangle.getWidth();
+        let width = this.rectangle.getWidth();
         ;
-        var height = this.rectangle.getHeight();
+        let height = this.rectangle.getHeight();
         ;
         this.animationInterface.paintXY(graphics, x, y);
         this.basicSetColorUtil.setBasicColorP(graphics, this.foregroundBasicColor);

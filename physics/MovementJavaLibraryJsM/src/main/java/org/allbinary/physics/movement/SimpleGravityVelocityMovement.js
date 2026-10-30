@@ -18,10 +18,10 @@ import { VelocityProperties } from '../../../../org/allbinary/game/physics/veloc
 //not GWT import const BasicDecimal
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicConstantVelocityMovement } from './BasicConstantVelocityMovement.js';
-//not GWT import - same folder const BasicConstantVelocityMovement
+//sameFolderImports - not GWT import - same folder const BasicConstantVelocityMovement
 export class SimpleGravityVelocityMovement extends BasicConstantVelocityMovement {
     constructor(speedBasicDecimal) {
-        super(speedBasicDecimal, new VelocityProperties(Math.round(speedBasicDecimal.getUnscaled()), Math.round(speedBasicDecimal.getUnscaled())));
+        super(speedBasicDecimal, new VelocityProperties(globalThis.Math.trunc(speedBasicDecimal.getUnscaled()), globalThis.Math.trunc(speedBasicDecimal.getUnscaled())));
         this.gravityUtil = GravityUtil.getInstance();
         //For kotlin this is before the body of the constructor.
     }

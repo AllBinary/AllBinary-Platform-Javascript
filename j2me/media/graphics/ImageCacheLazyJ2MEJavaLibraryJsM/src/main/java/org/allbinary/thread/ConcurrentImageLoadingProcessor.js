@@ -20,47 +20,51 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BaseImageLoadingProcessor } from './BaseImageLoadingProcessor.js';
-//not GWT import - same folder const BaseImageLoadingProcessor
+//sameFolderImports - not GWT import - same folder const BaseImageLoadingProcessor
 import { ABRunnable } from './ABRunnable.js';
-//not GWT import - same folder const ABRunnable
+//sameFolderImports - not GWT import - same folder const ABRunnable
 //import { ImageCacheRunnable } from './ImageCacheRunnable.js';
-//not GWT import - same folder const ImageCacheRunnable
+//sameFolderImports - not GWT import - same folder const ImageCacheRunnable
 import { ImageThreadPool } from './ImageThreadPool.js';
-//not GWT import - same folder const ImageThreadPool
 export class ConcurrentImageLoadingProcessor extends BaseImageLoadingProcessor {
     constructor(imageCache) {
         super();
-        this.logUtil = LogUtil.getInstance();
         //inner= member=true isStatic=
-        this.ImageCacheRunnable = class extends ABRunnable {
-            constructor(imageCache) {
-                super();
-                this.imageCache = imageCache;
-            }
-            run() {
-                var logUtil = LogUtil.getInstance();
-                ;
-                try {
-                    this.setRunning(true);
-                    this.imageCache.waitForLoadNow();
-                    this.imageCache.loadImages();
-                    this.imageCache.loadRemainingAnimations();
-                    this.setRunning(false);
-                    var progressCanvas = ProgressCanvasFactory.getInstance();
+        this.ImageCacheRunnable = (() => {
+            const outer$ConcurrentImageLoadingProcessor = this;
+            return class extends ABRunnable {
+                constructor(imageCache) {
+                    super();
+                    this.imageCache = imageCache;
+                }
+                run() {
+                    let logUtil = LogUtil.getInstance();
                     ;
-                    if (!progressCanvas.inProgress) {
-                        progressCanvas.endFromInitialLazyLoadingComplete();
+                    try {
+                        this.setRunning(true);
+                        this.imageCache.waitForLoadNow();
+                        this.imageCache.loadImages();
+                        this.imageCache.loadRemainingAnimations();
+                        this.setRunning(false);
+                        let progressCanvas = ProgressCanvasFactory.getInstance();
+                        ;
+                        if (!progressCanvas.inProgress) {
+                            progressCanvas.endFromInitialLazyLoadingComplete();
+                        }
                     }
-                    //: 
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            this.setRunning(false);
+                            let commonStrings = CommonStrings.getInstance();
+                            ;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
+                    }
                 }
-                catch (e) {
-                    this.setRunning(false);
-                    var commonStrings = CommonStrings.getInstance();
-                    ;
-                    logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-                }
-            }
-        };
+            };
+        })();
+        this.logUtil = LogUtil.getInstance();
         this.runnable = new this.ImageCacheRunnable(imageCache);
     }
     runTask() {

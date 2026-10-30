@@ -48,9 +48,9 @@ export class RTSFormInput extends Object {
         this.stickyItemSelected = false;
         this.selectedStickyItemIndex = 0;
         this.selectedStickyItem = ABCustomItem.getNullInstance();
-        var size = this.newUnconstructedRTSLayerInterfaceArray.length;
+        let size = this.newUnconstructedRTSLayerInterfaceArray.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             this.newUnconstructedRTSLayerInterfaceArray[index] = CollidableDestroyableDamageableLayer.getNullInstance();
         }
         this.groupInterfaceArray = groupInterfaceArray;
@@ -65,15 +65,15 @@ export class RTSFormInput extends Object {
     }
     //@Throws(Exception.constructor)
     processAtPoint(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point) {
-        var index = this.getIndexAt(rtsPlayerLayerInterface, point);
+        let index = this.getIndexAt(rtsPlayerLayerInterface, point);
         ;
         if (index < 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }
-        var scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
+        let scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
         ;
-        var item = scrollSelectionForm.get(index);
+        let item = scrollSelectionForm.get(index);
         ;
         if (item ==
             null) {
@@ -91,15 +91,15 @@ export class RTSFormInput extends Object {
     }
     //@Throws(Exception.constructor)
     processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, point) {
-        var index = this.getIndexAt(rtsPlayerLayerInterface, point);
+        let index = this.getIndexAt(rtsPlayerLayerInterface, point);
         ;
         if (index < 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
-        var scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
+        let scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
         ;
-        var item = scrollSelectionForm.get(index);
+        let item = scrollSelectionForm.get(index);
         ;
         if (item ==
             null) {
@@ -116,7 +116,7 @@ export class RTSFormInput extends Object {
     //@Throws(Exception.constructor)
     getItemAt(rtsPlayerLayerInterface, point) {
         this.logUtil.putF(new StringMaker().append("Point: ").append(StringUtil.getInstance().toString(point)).toString(), this, "getItemAt");
-        var scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
+        let scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return scrollSelectionForm.getSelectedItem(point);
@@ -125,7 +125,7 @@ export class RTSFormInput extends Object {
     //@Throws(Exception.constructor)
     getIndexAt(rtsPlayerLayerInterface, point) {
         this.logUtil.putF(new StringMaker().append("Point: ").append(StringUtil.getInstance().toString(point)).toString(), this, "getItemAt");
-        var scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
+        let scrollSelectionForm = rtsPlayerLayerInterface.getCurrentScrollSelectionForm();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return scrollSelectionForm.getSelectedIndexForPoint(point);
@@ -133,11 +133,11 @@ export class RTSFormInput extends Object {
     }
     //@Throws(Exception.constructor)
     getInstance(layerManager, aItem, geographicMapCellPosition) {
-        var item = aItem;
+        let item = aItem;
         ;
-        var layerInterfaceFactoryInterface = item.getLayerInterfaceFactoryInterface();
+        let layerInterfaceFactoryInterface = item.getLayerInterfaceFactoryInterface();
         ;
-        var cellPoint = geographicMapCellPosition.getPoint();
+        let cellPoint = geographicMapCellPosition.getPoint();
         ;
         if (layerInterfaceFactoryInterface !=
             null) {

@@ -21,7 +21,7 @@ import { AngleFactory } from '../../../../org/allbinary/math/AngleFactory.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicGraphicsPipeline } from './BasicGraphicsPipeline.js';
-//not GWT import - same folder const BasicGraphicsPipeline
+//sameFolderImports - not GWT import - same folder const BasicGraphicsPipeline
 export class RandomRotationFactory extends Object {
     constructor() {
         super(...arguments);
@@ -34,7 +34,7 @@ export class RandomRotationFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getInstanceList(vector, howMuch) {
-        var graphicsPipe = new BasicGraphicsPipeline(vector);
+        let graphicsPipe = new BasicGraphicsPipeline(vector);
         ;
         graphicsPipe.createMatrix();
         graphicsPipe.rotateToAngle(this.angleFactory.getAt(this.getNextRandomAngle(howMuch)));

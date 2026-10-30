@@ -15,7 +15,7 @@ import { BaseCircularPool } from '../../../org/allbinary/logic/util/cache/BaseCi
 //not GWT import const BaseCircularPool
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const AllBinaryLayerFactoryInterface
+//sameFolderImports - not GWT import - same folder const AllBinaryLayerFactoryInterface
 export class AllBinaryLayerCircularPool extends BaseCircularPool {
     constructor() {
         super();
@@ -24,7 +24,7 @@ export class AllBinaryLayerCircularPool extends BaseCircularPool {
     initAllBinaryLayerCircularPool(allbinaryLayerFactoryInterface, total) {
         this.circularIndexUtil = CircularIndexUtil.createInstance(total);
         this.OBJECT_ARRAY = new Array(total);
-        for (var localIndex = 0; localIndex < total; localIndex++) {
+        for (let localIndex = 0; localIndex < total; localIndex++) {
             this.OBJECT_ARRAY[localIndex] = allbinaryLayerFactoryInterface.getInstance();
         }
     }

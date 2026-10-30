@@ -27,7 +27,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { XmlRpcAbeLicenseRetrievalClient } from './XmlRpcAbeLicenseRetrievalClient.js';
-//not GWT import - same folder const XmlRpcAbeLicenseRetrievalClient
+//sameFolderImports - not GWT import - same folder const XmlRpcAbeLicenseRetrievalClient
 export class AbeLicenseClient extends Object {
     constructor() {
         super();
@@ -40,19 +40,19 @@ export class AbeLicenseClient extends Object {
     get(abeClientInformation) {
         try {
             this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.GET);
-            var xmlRpcAbeLicenseClient = new XmlRpcAbeLicenseRetrievalClient(abeClientInformation);
+            let xmlRpcAbeLicenseClient = new XmlRpcAbeLicenseRetrievalClient(abeClientInformation);
             ;
-            var abeLicenseInterface = xmlRpcAbeLicenseClient.get(null);
+            let abeLicenseInterface = xmlRpcAbeLicenseClient.get(null);
             ;
-            var licenseId = abeLicenseInterface.getLicenseId();
+            let licenseId = abeLicenseInterface.getLicenseId();
             ;
-            var servers = abeLicenseInterface.getServers();
+            let servers = abeLicenseInterface.getServers();
             ;
-            var isNewLicenseId = false;
+            let isNewLicenseId = false;
             ;
-            var isBetterServerList = false;
+            let isBetterServerList = false;
             ;
-            var stringValidationUtil = StringValidationUtil.getInstance();
+            let stringValidationUtil = StringValidationUtil.getInstance();
             ;
             if (stringValidationUtil.isEmpty(abeClientInformation.getLicenseId()) && !abeClientInformation.isSameId(licenseId)) {
                 isNewLicenseId = true;
@@ -61,7 +61,7 @@ export class AbeLicenseClient extends Object {
                 isBetterServerList = true;
             }
             if (isBetterServerList || isNewLicenseId) {
-                var initInfo = LicenseInitInfoUtil.getInstance().read();
+                let initInfo = LicenseInitInfoUtil.getInstance().read();
                 ;
                 initInfo.setLicenseId(licenseId);
                 initInfo.setServerList(servers);
@@ -71,10 +71,12 @@ export class AbeLicenseClient extends Object {
             this.logUtil.putF(this.commonStrings.END, this, this.commonStrings.GET);
             //if statement needs to be on the same line and ternary does not work the same way.
             return abeLicenseInterface;
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
     }
 }

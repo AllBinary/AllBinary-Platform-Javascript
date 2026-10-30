@@ -23,7 +23,7 @@ import { FrameUtil } from '../../../org/allbinary/math/FrameUtil.js';
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IndexedAnimation } from './IndexedAnimation.js';
-//not GWT import - same folder const AnimationBehavior
+//sameFolderImports - not GWT import - same folder const AnimationBehavior
 export class RotationAnimation extends IndexedAnimation {
     constructor(angleInfo, circularIndexUtil, animationBehavior) {
         super(animationBehavior);
@@ -49,12 +49,12 @@ export class RotationAnimation extends IndexedAnimation {
     }
     setFrame(index) {
         this.circularIndexUtil.setIndex(index);
-        var newFrame = this.circularIndexUtil.getIndex();
+        let newFrame = this.circularIndexUtil.getIndex();
         ;
         this.angleInfo.adjustAngle(newFrame);
     }
     setFrameByDirection(direction) {
-        var angle = this.directionUtil.getFrameAngle(direction);
+        let angle = this.directionUtil.getFrameAngle(direction);
         ;
         this.adjustFrameToAngle(angle);
     }
@@ -65,7 +65,7 @@ export class RotationAnimation extends IndexedAnimation {
         this.adjustFrame(angle.getValue());
     }
     adjustFrame(angle) {
-        this.setFrame(this.frameUtil.getFrameForAngle(angle, Math.round(this.angleInfo.getAngleIncrementInfo().getAngleIncrement())));
+        this.setFrame(this.frameUtil.getFrameForAngle(angle, globalThis.Math.trunc(this.angleInfo.getAngleIncrementInfo().getAngleIncrement())));
     }
     getFrame() {
         //if statement needs to be on the same line and ternary does not work the same way.

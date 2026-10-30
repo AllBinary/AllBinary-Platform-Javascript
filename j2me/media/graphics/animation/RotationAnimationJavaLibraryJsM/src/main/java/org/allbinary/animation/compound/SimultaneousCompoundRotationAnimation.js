@@ -30,7 +30,7 @@ export class SimultaneousCompoundRotationAnimation extends RotationAnimation {
         this.animationInterfaceArray = animationInterfaceArray;
     }
     setFrame(frameIndex) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].setFrame(frameIndex);
         }
     }
@@ -51,23 +51,23 @@ export class SimultaneousCompoundRotationAnimation extends RotationAnimation {
         ;
     }
     previousFrame() {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].previousFrame();
         }
     }
     //@Throws(Exception.constructor)
     nextFrame() {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].nextFrame();
         }
     }
     previousRotation() {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].previousRotation();
         }
     }
     nextRotation() {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].nextRotation();
         }
     }
@@ -79,22 +79,22 @@ export class SimultaneousCompoundRotationAnimation extends RotationAnimation {
         ;
     }
     paintXY(graphics, x, y) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].paintXY(graphics, x, y);
         }
     }
     paintThreedXYZ(graphics, x, y, z) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].paintThreedXYZ(graphics, x, y, z);
         }
     }
     setFrameByDirection(direction) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].setFrameByDirection(direction);
         }
     }
     setFrameToAngle(angle) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].setFrameToAngle(angle);
         }
     }
@@ -102,7 +102,7 @@ export class SimultaneousCompoundRotationAnimation extends RotationAnimation {
         this.adjustFrame(newAngle.getValue());
     }
     adjustFrame(angle) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].adjustFrame(angle);
         }
     }
@@ -120,7 +120,7 @@ export class SimultaneousCompoundRotationAnimation extends RotationAnimation {
     }
     //@Throws(Exception.constructor)
     set(gl) {
-        for (var index = this.animationInterfaceArray.length; --index >= 0;) {
+        for (let index = this.animationInterfaceArray.length; --index >= 0;) {
             this.animationInterfaceArray[index].set(gl);
         }
     }

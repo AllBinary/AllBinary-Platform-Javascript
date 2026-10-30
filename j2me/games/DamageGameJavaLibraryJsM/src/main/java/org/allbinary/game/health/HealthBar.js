@@ -13,7 +13,7 @@
 */
 //not GWT import const Graphics
 import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
-//not GWT import - same folder const Health
+//sameFolderImports - not GWT import - same folder const Health
 export class HealthBar extends Paintable {
     constructor(layerInterface, healthInterface, animationInterface, direction) {
         super();

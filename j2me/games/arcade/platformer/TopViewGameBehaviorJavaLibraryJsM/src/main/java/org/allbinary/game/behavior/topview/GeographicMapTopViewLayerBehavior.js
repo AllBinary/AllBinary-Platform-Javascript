@@ -18,7 +18,7 @@ import { SimpleGeographicMapCellPositionFactory } from '../../../../../org/allbi
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TopViewGameLayerBehavior } from './TopViewGameLayerBehavior.js';
-//not GWT import - same folder const TopViewGameLayerBehavior
+//sameFolderImports - not GWT import - same folder const TopViewGameLayerBehavior
 export class GeographicMapTopViewLayerBehavior extends TopViewGameLayerBehavior {
     constructor(maxGravityActionIndex) {
         super(maxGravityActionIndex);
@@ -57,11 +57,11 @@ export class GeographicMapTopViewLayerBehavior extends TopViewGameLayerBehavior 
     right(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer) {
     }
     hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray) {
-        var size = geographicMapInterfaceArray.length;
+        let size = geographicMapInterfaceArray.length;
         ;
-        var basicTopViewGeographicMapCellTypeFactory;
+        let basicTopViewGeographicMapCellTypeFactory;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             basicTopViewGeographicMapCellTypeFactory = geographicMapInterfaceArray[index].getGeographicMapCellTypeFactory();
             if (basicTopViewGeographicMapCellTypeFactory.BLOCK_CELL_TYPE.isType(geographicMapCellTypeArray[index])) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,11 +72,11 @@ export class GeographicMapTopViewLayerBehavior extends TopViewGameLayerBehavior 
         return false;
     }
     isOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray) {
-        var size = geographicMapInterfaceArray.length;
+        let size = geographicMapInterfaceArray.length;
         ;
-        var basicTopViewGeographicMapCellTypeFactory;
+        let basicTopViewGeographicMapCellTypeFactory;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             basicTopViewGeographicMapCellTypeFactory = geographicMapInterfaceArray[index].getGeographicMapCellTypeFactory();
             if (basicTopViewGeographicMapCellTypeFactory.OFF_MAP_CELL_TYPE.isType(geographicMapCellTypeArray[index])) {
                 //if statement needs to be on the same line and ternary does not work the same way.

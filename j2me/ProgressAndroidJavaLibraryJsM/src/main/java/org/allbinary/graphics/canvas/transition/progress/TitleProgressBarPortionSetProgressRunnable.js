@@ -18,7 +18,7 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not GWT import const Activity
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ProgressRunnable } from './ProgressRunnable.js';
-//not GWT import - same folder const AndroidBasicTitleProgressBar
+//sameFolderImports - not GWT import - same folder const AndroidBasicTitleProgressBar
 export class TitleProgressBarPortionSetProgressRunnable extends ProgressRunnable {
     constructor(midletActivity, progressCanvas) {
         super(midletActivity, progressCanvas);
@@ -27,15 +27,17 @@ export class TitleProgressBarPortionSetProgressRunnable extends ProgressRunnable
     }
     run() {
         try {
-            var progressCanvas = this.progressCanvas;
+            let progressCanvas = this.progressCanvas;
             ;
-            this.midletActivity.onSetProgress(Math.round((this.progressCanvas.getValue() + this.progressCanvas.getMaxValue() / progressCanvas.getPortion())), this.progressCanvas.getText());
-            //: 
+            this.midletActivity.onSetProgress(globalThis.Math.trunc((this.progressCanvas.getValue() + this.progressCanvas.getMaxValue() / progressCanvas.getPortion())), this.progressCanvas.getText());
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+            }
         }
     }
 }

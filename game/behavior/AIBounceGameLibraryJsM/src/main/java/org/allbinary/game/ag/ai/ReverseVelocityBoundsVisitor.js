@@ -22,7 +22,7 @@ export class ReverseVelocityBoundsVisitor extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.layerInterface = layerInterface;
-        var velocityInterfaceCompositeInterface = layerInterface;
+        let velocityInterfaceCompositeInterface = layerInterface;
         ;
         this.velocityInterface = velocityInterfaceCompositeInterface.getVelocityProperties();
     }

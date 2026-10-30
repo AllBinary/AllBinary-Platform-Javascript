@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../../../java/lang/Exception.js';
+import { IOException } from '../../../../../../../java/io/IOException.js';
 //not GWT import const IOException
 //not plain js import { BasicArrayList } 
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
@@ -35,6 +36,8 @@ const CommonLabels = globalThis.org.allbinary.string.CommonLabels;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 import { XmlRpcClient } from '../../../../../../../org/apache/xmlrpc/XmlRpcClient.js';
+//not GWT import const XmlRpcClient
+import { XmlRpcException } from '../../../../../../../org/apache/xmlrpc/XmlRpcException.js';
 //not GWT import const XmlRpcException
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class XmlRpcAbeLicenseRetrievalClient extends XmlRpcAbeClient {
@@ -44,31 +47,31 @@ export class XmlRpcAbeLicenseRetrievalClient extends XmlRpcAbeClient {
         //For kotlin this is before the body of the constructor.
     }
     //@Throws(Exception.constructor)
-    get(anyType = {}, cryptInterface) {
+    get(anyType, cryptInterface) {
         try {
-            var server = getClientInfo().getLicenseServer(this.getServer());
+            let server = getClientInfo().getLicenseServer(this.getServer());
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(TRYING);
             stringBuffer.appendint(this.getServer());
             stringBuffer.append(SEP);
             stringBuffer.append(server);
             this.logUtil.putF(CommonLabels.getInstance().START_LABEL + stringBuffer.toString(), this, this.commonStrings.GET);
-            var param = new BasicArrayListD();
+            let param = new BasicArrayListD();
             ;
-            var xmlRpcClient = new XmlRpcClient(server);
+            let xmlRpcClient = new XmlRpcClient(server);
             ;
             this.setClient(xmlRpcClient);
             xmlRpcClient.setBasicAuthentication(null, null);
-            var hashtable = this.getClientInfo().toHashtable();
+            let hashtable = this.getClientInfo().toHashtable();
             ;
             this.logUtil.putF(CLIENT_INFO + hashtable.toString(), this, this.commonStrings.GET);
             param.add(hashtable);
-            var result = xmlRpcClient.execute(this.getRemoteMethod(), param, cryptInterface);
+            let result = xmlRpcClient.execute(this.getRemoteMethod(), param, cryptInterface);
             ;
             this.logUtil.putF(RESULT + result.toString(), this, this.commonStrings.GET);
-            var resultHashtable = result;
+            let resultHashtable = result;
             ;
             if (!AbeClientLicense.hasRequiredKeys(resultHashtable)) {
                 this.logUtil.putF(INVALID, this, this.commonStrings.GET);
@@ -76,52 +79,42 @@ export class XmlRpcAbeLicenseRetrievalClient extends XmlRpcAbeClient {
                 return this.tryAnother(anyType);
                 ;
             }
-            var abeLicenseInterface = new AbeClientLicense(resultHashtable);
+            let abeLicenseInterface = new AbeClientLicense(resultHashtable);
             ;
             this.logUtil.putF(this.commonStrings.END + stringBuffer.toString(), this, this.commonStrings.GET);
             isOnline = true;
             //if statement needs to be on the same line and ternary does not work the same way.
             return abeLicenseInterface;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(EXCEPTION_IN_CLIENT, this, this.commonStrings.GET, e);
-            this.logUtil.putF(TRYING_OTHER_SERVERS + ExceptionUtil.getInstance().getStackTrace(e), this, this.commonStrings.GET);
-            if (!e.getMessage().startsWith(HOST_NOT_RESOLVED)) {
+        catch (caught) {
+            if (caught instanceof IOException) {
+                const e = caught;
+                this.logUtil.put(EXCEPTION_IN_CLIENT, this, this.commonStrings.GET, e);
+                this.logUtil.putF(TRYING_OTHER_SERVERS + ExceptionUtil.getInstance().getStackTrace(e), this, this.commonStrings.GET);
+                if (!e.getMessage().startsWith(HOST_NOT_RESOLVED)) {
+                    //if statement needs to be on the same line and ternary does not work the same way.
+                    return this.tryAnother(anyType);
+                    ;
+                }
+                else {
+                    isOnline = false;
+                    throw new Exception(HOST_NOT_RESOLVED_MSG);
+                }
+            }
+            else if (caught instanceof XmlRpcException) {
+                const e = caught;
+                this.logUtil.put(SERVER_REPORTED_ERROR, this, this.commonStrings.GET, e);
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.tryAnother(anyType);
                 ;
             }
             else {
-                isOnline = false;
-                throw new Exception(HOST_NOT_RESOLVED_MSG);
+                const e = caught;
+                this.logUtil.put(UNKNOWN_ERROR, this, this.commonStrings.GET, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return this.tryAnother(anyType);
+                ;
             }
         }
-        //: 
-        /* catch(e)
-                    {
-        this.logUtil!.put(SERVER_REPORTED_ERROR, this, this.commonStrings!.GET, e);
-            
-        
-        
-        
-                                //if statement needs to be on the same line and ternary does not work the same way.
-                                return this.tryAnother(anyType);;
-            
-        }
-        */
-        //: 
-        /* catch(e)
-                    {
-        this.logUtil!.put(UNKNOWN_ERROR, this, this.commonStrings!.GET, e);
-            
-        
-        
-        
-                                //if statement needs to be on the same line and ternary does not work the same way.
-                                return this.tryAnother(anyType);;
-            
-        }
-        */
     }
 }

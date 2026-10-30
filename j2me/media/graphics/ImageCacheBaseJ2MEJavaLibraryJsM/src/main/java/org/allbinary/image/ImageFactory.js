@@ -35,15 +35,22 @@ export class ImageFactory extends Object {
         return Image.createImage(width, height);
         ;
     }
+    createImageFromInputStream(...args) {
+        if (args.length === 2)
+            return this.createImageFromInputStream$overload1(args[0], args[1]);
+        if (args.length === 1)
+            return this.createImageFromInputStream$overload2(args[0]);
+        throw new TypeError('No matching overload: createImageFromInputStream');
+    }
     //@Throws(Exception.constructor)
-    createImageFromInputStream(key = {}, inputStream) {
-        var image = Image.createImage(inputStream);
+    createImageFromInputStream$overload1(key, inputStream) {
+        let image = Image.createImage(inputStream);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return image;
     }
     //@Throws(Exception.constructor)
-    createImageFromInputStream(inputStream) {
+    createImageFromInputStream$overload2(inputStream) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return Image.createImage(inputStream);
         ;

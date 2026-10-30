@@ -18,9 +18,9 @@ import { PathFindingNodeCostInfoData } from '../../../../../../../org/allbinary/
 //not GWT import const PathFindingNodeCostInfoData
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackGeographicMapCellTypeFactory } from './RaceTrackGeographicMapCellTypeFactory.js';
-//not GWT import - same folder const RaceTrackGeographicMapCellTypeFactory
+//sameFolderImports - not GWT import - same folder const RaceTrackGeographicMapCellTypeFactory
 import { RaceTrackGeographicMapCellType } from './RaceTrackGeographicMapCellType.js';
-//not GWT import - same folder const RaceTrackGeographicMapCellType
+//sameFolderImports - not GWT import - same folder const RaceTrackGeographicMapCellType
 export class EmptyRaceRaceTrackGeographicMapCellTypeFactory extends RaceTrackGeographicMapCellTypeFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -28,7 +28,7 @@ export class EmptyRaceRaceTrackGeographicMapCellTypeFactory extends RaceTrackGeo
     }
     constructor() {
         super();
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.EMPTY_CELL_TYPE = new RaceTrackGeographicMapCellType(commonStrings.EMPTY, 0, PathFindingNodeCostInfoData.getInstance().MAX_NODE_COST, 1);
         this.EASY_CELL_TYPE = new RaceTrackGeographicMapCellType("Easy", 19, 1, 0);

@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
-//not GWT import - same folder const VisitorInterface
+//sameFolderImports - not GWT import - same folder const VisitorInterface
 export class Visitor extends Object {
     constructor() {
         super(...arguments);
@@ -25,7 +25,7 @@ export class Visitor extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return Visitor.instance;
     }
-    visit(anyType = {}) {
+    visit(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.nullUtil.NULL_OBJECT;
     }

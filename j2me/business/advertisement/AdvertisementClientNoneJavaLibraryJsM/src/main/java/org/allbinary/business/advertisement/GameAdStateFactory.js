@@ -1,9 +1,9 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
 import { GameAdState } from '../../../../org/allbinary/game/GameAdState.js';
-//not GWT import - same folder const GameAdStateFactoryInterface
+//sameFolderImports - not GWT import - same folder const GameAdStateFactoryInterface
 import { AppNameLicensingAdConfiguration } from './AppNameLicensingAdConfiguration.js';
-//not GWT import - same folder const GameAdStateBase
+//sameFolderImports - not GWT import - same folder const GameAdStateBase
 export class GameAdStateFactory extends Object {
     constructor() {
         super(...arguments);

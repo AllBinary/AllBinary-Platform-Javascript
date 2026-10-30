@@ -13,12 +13,12 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
-//not GWT import - same folder const CacheableInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const CacheableInterfaceFactoryInterface
 import { BasicArrayListCacheable } from './BasicArrayListCacheable.js';
-//not GWT import - same folder const CacheableInterface
+//sameFolderImports - not GWT import - same folder const CacheableInterface
 export class BasicArrayListCacheableInterfaceFactory extends Object {
     //@Throws(Exception.constructor)
-    getInstance(key = {}) {
+    getInstance(key) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return new BasicArrayListCacheable();
     }

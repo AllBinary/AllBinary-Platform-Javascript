@@ -24,7 +24,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerManagerLoggingBase } from './LayerManagerLoggingBase.js';
-//not GWT import - same folder const LayerManager
+//sameFolderImports - not GWT import - same folder const LayerManager
 export class LayerManagerLogging extends LayerManagerLoggingBase {
     constructor() {
         super(...arguments);
@@ -83,15 +83,15 @@ export class LayerManagerLogging extends LayerManagerLoggingBase {
     }
     log(layerManager) {
         this.stringBuilder.delete(0, this.stringBuilder.length());
-        var size = layerManager.getSize();
+        let size = layerManager.getSize();
         ;
-        var commonSeps = CommonSeps.getInstance();
+        let commonSeps = CommonSeps.getInstance();
         ;
         this.stringBuilder.append(Integer.toHexString(TsUtil.getInstance().hashCode(layerManager))).append(commonSeps.COLON_SEP);
         this.stringBuilder.appendint(size).append(commonSeps.COLON_SEP);
-        var allBinaryLayer;
+        let allBinaryLayer;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             allBinaryLayer = layerManager.getLayerAt(index);
             this.stringBuilder.append(allBinaryLayer.getName()).append(commonSeps.COMMA);
         }

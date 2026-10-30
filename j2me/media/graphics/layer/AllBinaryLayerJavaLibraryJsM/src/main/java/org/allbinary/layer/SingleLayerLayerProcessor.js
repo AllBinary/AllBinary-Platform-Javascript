@@ -13,9 +13,9 @@
 */
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { LayerProcessor } from './LayerProcessor.js';
-//not GWT import - same folder const LayerProcessor
+//sameFolderImports - not GWT import - same folder const LayerProcessor
 import { SingleLayerLayerManager } from './SingleLayerLayerManager.js';
-//not GWT import - same folder const AllBinaryLayerManager
+//sameFolderImports - not GWT import - same folder const AllBinaryLayerManager
 export class SingleLayerLayerProcessor extends LayerProcessor {
     constructor() {
         super(new SingleLayerLayerManager());
@@ -23,7 +23,7 @@ export class SingleLayerLayerProcessor extends LayerProcessor {
     }
     //@Throws(Exception.constructor)
     process(allBinaryLayerManager) {
-        var layerManager = this.getLayerManager();
+        let layerManager = this.getLayerManager();
         ;
         this.processAt(allBinaryLayerManager, layerManager.getLayerAt(0), 0);
     }

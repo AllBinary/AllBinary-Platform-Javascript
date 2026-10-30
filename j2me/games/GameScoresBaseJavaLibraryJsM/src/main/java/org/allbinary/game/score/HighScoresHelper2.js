@@ -16,9 +16,9 @@
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HighScoresHelperBase } from './HighScoresHelperBase.js';
-//not GWT import - same folder const HighScoresHelperBase
+//sameFolderImports - not GWT import - same folder const HighScoresHelperBase
 import { NullHighScoresSingletonFactory } from './NullHighScoresSingletonFactory.js';
-//not GWT import - same folder const HighScores
+//sameFolderImports - not GWT import - same folder const HighScores
 export class HighScoresHelper2 extends HighScoresHelperBase {
     constructor() {
         super(...arguments);
@@ -44,9 +44,9 @@ export class HighScoresHelper2 extends HighScoresHelperBase {
             return;
         }
         this.circularIndexUtil.next();
-        var highScores = this.highScoresArrayP[this.circularIndexUtil.getIndex()];
+        let highScores = this.highScoresArrayP[this.circularIndexUtil.getIndex()];
         ;
-        var index = 0;
+        let index = 0;
         ;
         while (highScores.getTotal() < 1 && index < this.highScoresArrayP.length) {
             highScores = this.highScoresArrayP[this.circularIndexUtil.next()];

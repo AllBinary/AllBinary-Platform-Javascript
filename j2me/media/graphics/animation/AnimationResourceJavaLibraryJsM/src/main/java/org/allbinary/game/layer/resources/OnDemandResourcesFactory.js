@@ -15,7 +15,7 @@
 import { Object } from '../../../../../java/lang/Object.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { OnDemandResources } from './OnDemandResources.js';
-//not GWT import - same folder const OnDemandResources
+//sameFolderImports - not GWT import - same folder const OnDemandResources
 export class OnDemandResourcesFactory extends Object {
     size() {
         //if statement needs to be on the same line and ternary does not work the same way.

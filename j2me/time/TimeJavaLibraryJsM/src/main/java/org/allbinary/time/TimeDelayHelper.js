@@ -30,7 +30,7 @@ export class TimeDelayHelper extends Object {
         this.setStartTimeTNT();
     }
     isTimeTNT() {
-        var currentTime = Date.now();
+        let currentTime = Date.now();
         ;
         if (currentTime - this.startTime > this.delay) {
             this.startTime = currentTime;
@@ -41,7 +41,7 @@ export class TimeDelayHelper extends Object {
         return false;
     }
     isTimeSinceTNT(delay) {
-        var currentTime = Date.now();
+        let currentTime = Date.now();
         ;
         if (currentTime - this.startTime > delay) {
             this.startTime = currentTime;
@@ -131,12 +131,12 @@ export class TimeDelayHelper extends Object {
         return false;
     }
     toStringAt(currentTime) {
-        var elapsed = this.getElapsed(currentTime);
+        let elapsed = this.getElapsed(currentTime);
         ;
         if (elapsed > 0) {
-            var commonLabels = CommonLabels.getInstance();
+            let commonLabels = CommonLabels.getInstance();
             ;
-            var elapsedAsString = (elapsed).toString();
+            let elapsedAsString = (elapsed).toString();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return new StringMaker().append(commonLabels.START).appendlong(this.startTime).append(commonLabels.CURRENT).appendlong(currentTime).append(commonLabels.ELAPSED).append(elapsedAsString).toString();
@@ -148,14 +148,14 @@ export class TimeDelayHelper extends Object {
         }
     }
     toString() {
-        var currentTime = Date.now();
+        let currentTime = Date.now();
         ;
-        var elapsed = this.getElapsed(currentTime);
+        let elapsed = this.getElapsed(currentTime);
         ;
         if (elapsed > 0) {
-            var commonLabels = CommonLabels.getInstance();
+            let commonLabels = CommonLabels.getInstance();
             ;
-            var elapsedAsString = (elapsed).toString();
+            let elapsedAsString = (elapsed).toString();
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return new StringMaker().append(commonLabels.START).appendlong(this.startTime).append(commonLabels.CURRENT).appendlong(currentTime).append(commonLabels.ELAPSED).append(elapsedAsString).toString();

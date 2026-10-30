@@ -24,18 +24,25 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NoHardware } from './NoHardware.js';
-//not GWT import - same folder const HardwareInterface
+//sameFolderImports - not GWT import - same folder const HardwareInterface
 import { HardwareFactory } from './HardwareFactory.js';
-//not GWT import - same folder const HardwareFactory
+//sameFolderImports - not GWT import - same folder const HardwareFactory
 export class SystemHardwareFactory extends Object {
-    static getInstance() {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload1();
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
+    }
+    static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return SystemHardwareFactory.instance;
     }
     static static_toString() {
-        var systemHardwareFactory = SystemHardwareFactory.getInstance();
+        let systemHardwareFactory = SystemHardwareFactory.getInstance();
         ;
-        var osBuffer = new StringMaker();
+        let osBuffer = new StringMaker();
         ;
         osBuffer.append("Hardware Info: \n");
         if (systemHardwareFactory.hardwareInterface !=
@@ -55,16 +62,18 @@ export class SystemHardwareFactory extends Object {
         this.commonStrings = CommonStrings.getInstance();
         this.hardwareInterface = NoHardware.getInstance();
     }
-    getInstance(operatingSystemInterface) {
+    getInstance$overload2(operatingSystemInterface) {
         try {
             if (this.hardwareInterface == NoHardware.getInstance()) {
                 this.hardwareInterface = HardwareFactory.getInstance().getInstance(operatingSystemInterface);
             }
             this.logUtil.putF("Found Hardware", this, this.commonStrings.CONSTRUCTOR);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
+            }
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.hardwareInterface;

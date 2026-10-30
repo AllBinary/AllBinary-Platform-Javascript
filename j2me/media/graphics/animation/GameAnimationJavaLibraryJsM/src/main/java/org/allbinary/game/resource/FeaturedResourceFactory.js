@@ -35,7 +35,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ResourceLoadingLevelFactory } from './ResourceLoadingLevelFactory.js';
-//not GWT import - same folder const ResourceLoadingLevelFactory
+//sameFolderImports - not GWT import - same folder const ResourceLoadingLevelFactory
 export class FeaturedResourceFactory extends Object {
     constructor() {
         super();
@@ -54,25 +54,25 @@ export class FeaturedResourceFactory extends Object {
     }
     //@Throws(Exception.constructor)
     init(level) {
-        var size = this.list.size();
+        let size = this.list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var featureInterface = this.list.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let featureInterface = this.list.objectArray[index];
             ;
-            var isLoadingLevel = featureInterface.isLoadingLevel(level);
+            let isLoadingLevel = featureInterface.isLoadingLevel(level);
             ;
-            var isFeature = featureInterface.isFeature();
+            let isFeature = featureInterface.isFeature();
             ;
             this.logUtil.putF(new StringMaker().append(this.GAME_FEATURE_CONTROLLED).append(featureInterface.toString()).append(this.IS_LOADING_LEVEL_LABEL).append(ResourceLoadingLevelFactory.getInstance().getLevelString(level)).append(CommonSeps.getInstance().COLON_SEP).appendboolean(isLoadingLevel).append(this.IS_FEATURE).appendboolean(isFeature).toString(), this, this.commonStrings.INIT);
             if (isLoadingLevel && isFeature) {
                 featureInterface.init(level);
             }
         }
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var graphicsFeatureFactory = GraphicsFeatureFactory.getInstance();
+        let graphicsFeatureFactory = GraphicsFeatureFactory.getInstance();
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.ANIMATION_FEATURES);
         stringBuffer.appendboolean(features.isFeature(graphicsFeatureFactory.VECTOR_GRAPHICS));

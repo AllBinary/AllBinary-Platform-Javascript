@@ -13,11 +13,11 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
-//not GWT import - same folder const EmulatorViewInterface
+//sameFolderImports - not GWT import - same folder const EmulatorViewInterface
 export class NullEmulatorView extends Object {
     setMidlet(midlet) {
     }
-    onEmulatorInitComplete(midletActivity = {}) {
+    onEmulatorInitComplete(midletActivity) {
     }
     onSetDisplayable(displayable) {
     }

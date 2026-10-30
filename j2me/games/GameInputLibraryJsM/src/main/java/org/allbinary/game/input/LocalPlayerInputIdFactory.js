@@ -34,7 +34,7 @@ export class LocalPlayerInputIdFactory extends Object {
         this.playerIdToDeviceId = new Array(this.MAX_NUMBER_OF_PLAYERS);
         this.playersInPlay = new Array(this.MAX_NUMBER_OF_PLAYERS);
         this.totalDevicesMapped = 0;
-        for (var index = this.deviceIdToplayerId.length - 1; index >= 0; index--) {
+        for (let index = this.deviceIdToplayerId.length - 1; index >= 0; index--) {
             this.deviceIdToplayerId[index] = -1;
         }
     }
@@ -43,10 +43,10 @@ export class LocalPlayerInputIdFactory extends Object {
         return this.playerIdToDeviceId[playerInputId];
     }
     getPlayerForDevice(deviceId) {
-        var index = 0;
+        let index = 0;
         ;
         if (deviceId < this.MAX_FAST_DEVICEID) {
-            var playerInputId = this.deviceIdToplayerId[deviceId];
+            let playerInputId = this.deviceIdToplayerId[deviceId];
             ;
             if (playerInputId != -1) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,9 +76,9 @@ export class LocalPlayerInputIdFactory extends Object {
         return index;
     }
     getTotalDevicesInPlay() {
-        var total = 0;
+        let total = 0;
         ;
-        for (var index = this.totalDevicesMapped - 1; index >= 0; index--) {
+        for (let index = this.totalDevicesMapped - 1; index >= 0; index--) {
             if (this.playersInPlay[index] == true) {
                 total++;
             }

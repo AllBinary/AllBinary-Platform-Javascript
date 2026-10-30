@@ -42,7 +42,7 @@ export class VelocityWidget extends BasicHud {
         this.updateMaxHeight = 14;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.updateMaxWidth = font.getSize() * (5 + MathUtil.getInstance().getTotalDigits(this.powerOfTenVelocity) + 1);
         super.updateMeasurement(graphics);
@@ -57,7 +57,7 @@ export class VelocityWidget extends BasicHud {
         this.set(this.velocity + value);
     }
     set(value) {
-        var lastVelocity = this.velocity;
+        let lastVelocity = this.velocity;
         ;
         this.velocity = value;
         if (this.velocity > this.maxVelocity) {

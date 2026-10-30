@@ -27,7 +27,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const AllBinaryGameCanvas
+//sameFolderImports - not GWT import - same folder const AllBinaryGameCanvas
 export class CheatGameInputProcessor extends PlayerGameInput {
     constructor(gameCanvas) {
         super(new BasicArrayListD(), new BasicArrayListD(), -1);
@@ -39,16 +39,16 @@ export class CheatGameInputProcessor extends PlayerGameInput {
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     update() {
         try {
-            var gameLayerManager = this.gameCanvas.getLayerManager();
+            let gameLayerManager = this.gameCanvas.getLayerManager();
             ;
-            var list = this.getGameKeyEventList();
+            let list = this.getGameKeyEventList();
             ;
-            var size = list.size();
+            let size = list.size();
             ;
-            for (var index = 0; index < size; index++) {
-                var anyType = list.objectArray[index];
+            for (let index = 0; index < size; index++) {
+                let anyType = list.objectArray[index];
                 ;
-                var key = GameKeyEventUtil.getKey(anyType);
+                let key = GameKeyEventUtil.getKey(anyType);
                 ;
                 if (key == this.gameKeyFactory.LEVEL_DOWN.getId()) {
                     CheatGameInputProcessor.inputProcessor.strafeLeft();
@@ -84,10 +84,12 @@ export class CheatGameInputProcessor extends PlayerGameInput {
                 }
             }
             list.clear();
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+            }
         }
     }
 }

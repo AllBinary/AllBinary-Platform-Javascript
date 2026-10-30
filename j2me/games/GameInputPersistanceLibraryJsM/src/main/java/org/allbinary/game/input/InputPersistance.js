@@ -51,11 +51,11 @@ const HashtableUtil = globalThis.org.allbinary.util.HashtableUtil;
 const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const Input
+//sameFolderImports - not GWT import - same folder const Input
 import { GameKeyMappingFactory } from './GameKeyMappingFactory.js';
-//not GWT import - same folder const GameKeyMappingFactory
+//sameFolderImports - not GWT import - same folder const GameKeyMappingFactory
 import { InputFactory } from './InputFactory.js';
-//not GWT import - same folder const InputFactory
+//sameFolderImports - not GWT import - same folder const InputFactory
 //GameInputPersistanceLibrary
 export class InputPersistance extends BasicPersitance {
     constructor(name) {
@@ -66,40 +66,40 @@ export class InputPersistance extends BasicPersitance {
     }
     //@Throws(Exception.constructor)
     loadAll(abeClientInformation) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
             recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
-            var recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
+            let recordEnum = recordStore.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true);
             ;
-            var gameActionInputId = 0;
+            let gameActionInputId = 0;
             ;
-            var inputId = 0;
+            let inputId = 0;
             ;
-            var gameActionInput;
+            let gameActionInput;
             ;
-            var input;
+            let input;
             ;
-            var hashtable;
+            let hashtable;
             ;
-            var gameKeyFactory = GameKeyMappingFactory.getInstance();
+            let gameKeyFactory = GameKeyMappingFactory.getInstance();
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            var inputFactory = InputFactory.getInstance();
+            let inputFactory = InputFactory.getInstance();
             ;
-            var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+            let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
             ;
-            var stdUtil = StdUtil.getInstance();
+            let stdUtil = StdUtil.getInstance();
             ;
-            var recordAsBytes;
+            let recordAsBytes;
             ;
-            var byteArrayInputStream;
+            let byteArrayInputStream;
             ;
-            var inputStream;
+            let inputStream;
             ;
             while (recordEnum.hasNextElement()) {
-                var id = recordEnum.nextRecordId();
+                let id = recordEnum.nextRecordId();
                 ;
                 stringBuffer.delete(0, stringBuffer.length());
                 this.logUtil.putF(stringBuffer.append(this.persistanceStrings.LOADING_ID).appendint(id).toString(), this, this.persistanceStrings.LOAD_ALL);
@@ -109,18 +109,18 @@ export class InputPersistance extends BasicPersitance {
                     byteArrayInputStream = new ByteArrayInputStream(recordAsBytes);
                     inputStream = new DataInputStream(byteArrayInputStream);
                     hashtable = stdUtil.createHashtable();
-                    var value = 0;
+                    let value = 0;
                     ;
                     while (inputStream.available() > 0) {
-                        var gameActionInputIdAsString = inputStream.readUTF();
+                        let gameActionInputIdAsString = inputStream.readUTF();
                         ;
                         value = Integer.parseInt(gameActionInputIdAsString);
                         gameActionInputId = value;
                         inputStream.readUTF();
                         value = Integer.parseInt(inputStream.readUTF());
                         inputId = value;
-                        gameActionInput = gameKeyFactory.getGameKey(Math.round(gameActionInputId));
-                        input = inputFactory.getInstanceById(Math.round(inputId));
+                        gameActionInput = gameKeyFactory.getGameKey(globalThis.Math.trunc(gameActionInputId));
+                        input = inputFactory.getInstanceById(globalThis.Math.trunc(inputId));
                         if (input == inputFactory.NO_INPUT || gameActionInput ==
                             null) {
                             stringBuffer.delete(0, stringBuffer.length());
@@ -151,10 +151,12 @@ export class InputPersistance extends BasicPersitance {
                 else {
                 }
             }
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             if (recordStore !=
@@ -166,53 +168,55 @@ export class InputPersistance extends BasicPersitance {
     }
     //@Throws(Exception.constructor)
     save(abeClientInformation, hashtable) {
-        var recordStore = NullRecordStore.NULL_RECORD_STORE;
+        let recordStore = NullRecordStore.NULL_RECORD_STORE;
         ;
         try {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             PreLogUtil.put(stringBuffer.append(this.persistanceStrings.SAVING).append(StringUtil.getInstance().toString(hashtable)).toString(), this, this.commonStrings.SAVE);
             recordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true);
-            var byteArrayOutputStream = new ByteArrayOutputStream();
+            let byteArrayOutputStream = new ByteArrayOutputStream();
             ;
-            var outputStream = new DataOutputStream(byteArrayOutputStream);
+            let outputStream = new DataOutputStream(byteArrayOutputStream);
             ;
-            var gameActionInput;
+            let gameActionInput;
             ;
-            var list;
+            let list;
             ;
-            var input;
+            let input;
             ;
-            var savedGameBytes;
+            let savedGameBytes;
             ;
-            var commonSeps = CommonSeps.getInstance();
+            let commonSeps = CommonSeps.getInstance();
             ;
-            var smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
+            let smallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance();
             ;
-            var inputObjectArray = this.hashtableUtil.getKeysAsArray(hashtable);
+            let inputObjectArray = this.hashtableUtil.getKeysAsArray(hashtable);
             ;
-            var size = inputObjectArray.length;
+            let size = inputObjectArray.length;
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 gameActionInput = inputObjectArray[index];
                 list = hashtable.get(inputObjectArray[index]);
-                for (var index2 = 0; index2 < list.size(); index2++) {
-                    var gameActionInputIdAsString = smallIntegerSingletonFactory.getAt(gameActionInput.getId()).toString();
+                for (let index2 = 0; index2 < list.size(); index2++) {
+                    let gameActionInputIdAsString = smallIntegerSingletonFactory.getAt(gameActionInput.getId()).toString();
                     ;
                     outputStream.writeUTF(gameActionInputIdAsString);
                     outputStream.writeUTF(commonSeps.EQUALS);
                     input = list.objectArray[index2];
-                    var inputIdAsString = smallIntegerSingletonFactory.getAt(input.getId()).toString();
+                    let inputIdAsString = smallIntegerSingletonFactory.getAt(input.getId()).toString();
                     ;
                     outputStream.writeUTF(inputIdAsString);
                 }
             }
             savedGameBytes = byteArrayOutputStream.toByteArray();
             recordStore.addRecord(savedGameBytes, 0, savedGameBytes.length);
-            //: 
         }
-        catch (e) {
-            throw e;
+        catch (caught) {
+            {
+                const e = caught;
+                throw e;
+            }
         }
         finally {
             if (recordStore !=

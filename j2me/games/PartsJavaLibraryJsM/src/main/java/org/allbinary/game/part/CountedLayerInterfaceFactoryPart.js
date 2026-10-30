@@ -29,7 +29,7 @@ import { PrimitiveLongUtil } from '../../../../org/allbinary/logic/math/Primitiv
 //not GWT import const PrimitiveLongUtil
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
-//not GWT import - same folder const PartInterface
+//sameFolderImports - not GWT import - same folder const PartInterface
 export class CountedLayerInterfaceFactoryPart extends Object {
     constructor(total, countedPickedUpLayerInterfaceFactory) {
         super();
@@ -44,7 +44,7 @@ export class CountedLayerInterfaceFactoryPart extends Object {
         this.init(total, countedPickedUpLayerInterfaceFactory);
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.setXOffset(font.charsWidth(this.totalString, 0, this.primitiveLongUtil.getCurrentTotalDigits()) + (font.getSize() >> 1));
         this.myFontProcessor = MyFontProcessor.getInstance();

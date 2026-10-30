@@ -21,7 +21,7 @@ const MyRandomFactory = globalThis.org.allbinary.game.rand.MyRandomFactory;
 //not GWT import const GeographicMapCellPosition
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RaceTrackDropCellPositionGenerator } from './RaceTrackDropCellPositionGenerator.js';
-//not GWT import - same folder const RaceTrackDropCellPositionGenerator
+//sameFolderImports - not GWT import - same folder const RaceTrackDropCellPositionGenerator
 export class RaceTrackRandomDropCellPositionGenerator extends RaceTrackDropCellPositionGenerator {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,32 +40,32 @@ export class RaceTrackRandomDropCellPositionGenerator extends RaceTrackDropCellP
     //@Throws(Exception.constructor)
     update(allBinaryGameLayerManager, geographicMapInterface) {
         super.update(allBinaryGameLayerManager, geographicMapInterface);
-        var tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
+        let tiledLayer = geographicMapInterface.getAllBinaryTiledLayer();
         ;
         this.cellWidth = tiledLayer.getCellWidth() / this.cellsPerRowOrColumn;
         this.cellHeight = tiledLayer.getCellHeight() / this.cellsPerRowOrColumn;
     }
     //@Throws(Exception.constructor)
     drop(allBinaryLayerManager, index) {
-        var geographicMapCellPosition = this.list.get(index);
+        let geographicMapCellPosition = this.list.get(index);
         ;
-        var point = geographicMapCellPosition.getPoint();
+        let point = geographicMapCellPosition.getPoint();
         ;
-        var randomCell = this.myRandomFactory.getAbsoluteNextInt(this.totalCells);
+        let randomCell = this.myRandomFactory.getAbsoluteNextInt(this.totalCells);
         ;
-        var row = this.rowArray[randomCell];
+        let row = this.rowArray[randomCell];
         ;
-        var column = this.columnArray[randomCell];
+        let column = this.columnArray[randomCell];
         ;
-        var x = point.getX() + (row * this.cellWidth);
+        let x = point.getX() + (row * this.cellWidth);
         ;
-        var y = point.getY() + (column * this.cellHeight);
+        let y = point.getY() + (column * this.cellHeight);
         ;
-        var pickedUpLayerInterfaceFactory = DropLayerFactory.getInstance().getRandomInstance();
+        let pickedUpLayerInterfaceFactory = DropLayerFactory.getInstance().getRandomInstance();
         ;
-        var tiledLayer = this.raceTrackGeographicMap.getAllBinaryTiledLayer();
+        let tiledLayer = this.raceTrackGeographicMap.getAllBinaryTiledLayer();
         ;
-        var pickupLayer = PickupLayerCircularStaticPool.getInstance().getInstanceXYZ(pickedUpLayerInterfaceFactory, x, y, tiledLayer.getZP() + 3);
+        let pickupLayer = PickupLayerCircularStaticPool.getInstance().getInstanceXYZ(pickedUpLayerInterfaceFactory, x, y, tiledLayer.getZP() + 3);
         ;
         pickupLayer.setTiledLayer(tiledLayer);
         allBinaryLayerManager.append(pickupLayer);

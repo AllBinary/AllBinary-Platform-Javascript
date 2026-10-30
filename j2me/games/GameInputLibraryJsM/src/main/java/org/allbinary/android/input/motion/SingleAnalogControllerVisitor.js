@@ -16,14 +16,14 @@ import { AnalogLocationInputFactory } from '../../../../../org/allbinary/game/in
 //not GWT import const AllBinaryLayerManager
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { AnalogControllerVisitor } from './AnalogControllerVisitor.js';
-//not GWT import - same folder const AnalogLocationInputProcessor
+//sameFolderImports - not GWT import - same folder const AnalogLocationInputProcessor
 export class SingleAnalogControllerVisitor extends AnalogControllerVisitor {
     constructor(playerInputId) {
         super();
         this.playerInputId = playerInputId;
     }
     process(allbinaryLayerManager, analogLocationInputProcessor) {
-        var analogLocationInput = AnalogLocationInputFactory.getInstance().getInstanceForPlayer(this.playerInputId);
+        let analogLocationInput = AnalogLocationInputFactory.getInstance().getInstanceForPlayer(this.playerInputId);
         ;
         analogLocationInputProcessor.process(allbinaryLayerManager, analogLocationInput);
     }

@@ -18,11 +18,11 @@ import { Features } from '../../../../org/allbinary/game/configuration/feature/F
 import { GameFeatureFactory } from '../../../../org/allbinary/game/configuration/feature/GameFeatureFactory.js';
 //not GWT import const GameFeatureFactory
 import { OpenGLFeatureUtil } from '../../../../org/allbinary/graphics/opengles/OpenGLFeatureUtil.js';
-//not GWT import - same folder const CollisionProcessor
+//sameFolderImports - not GWT import - same folder const CollisionProcessor
 import { Collision2DProcessor } from './Collision2DProcessor.js';
-//not GWT import - same folder const Collision2DProcessor
+//sameFolderImports - not GWT import - same folder const Collision2DProcessor
 import { CollisionThreedProcessor } from './CollisionThreedProcessor.js';
-//not GWT import - same folder const CollisionThreedProcessor
+//sameFolderImports - not GWT import - same folder const CollisionThreedProcessor
 export class LayerCollisionUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -30,9 +30,9 @@ export class LayerCollisionUtil extends Object {
     }
     constructor() {
         super();
-        var features = Features.getInstance();
+        let features = Features.getInstance();
         ;
-        var gameFeatureFactory = GameFeatureFactory.getInstance();
+        let gameFeatureFactory = GameFeatureFactory.getInstance();
         ;
         if (OpenGLFeatureUtil.getInstance().isAnyThreed() && !features.isFeature(gameFeatureFactory.COLLISIONS_FORCED_TWO_DIMENSIONAL)) {
             this.collisionProcessor = new CollisionThreedProcessor();

@@ -22,7 +22,7 @@ import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/U
 //not GWT import const UpdateMyFontProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Paintable } from './Paintable.js';
-//not GWT import - same folder const Paintable
+//sameFolderImports - not GWT import - same folder const Paintable
 export class SimpleTextPaintable extends Paintable {
     constructor(text, basicColor) {
         super();
@@ -36,7 +36,7 @@ export class SimpleTextPaintable extends Paintable {
         this.basicColor = basicColor;
     }
     updateMeasurement(graphics) {
-        var font = graphics.getFont();
+        let font = graphics.getFont();
         ;
         this.topScoresWidth = (font.stringWidth(this.text) >> 1);
         this.fontHeight = font.getHeight();
@@ -44,7 +44,7 @@ export class SimpleTextPaintable extends Paintable {
     }
     paint(graphics) {
         this.myFontProcessor.process(graphics);
-        var width = this.displayInfoSingleton.getLast()[this.displayInfoSingleton.WIDTH];
+        let width = this.displayInfoSingleton.getLast()[this.displayInfoSingleton.WIDTH];
         ;
         graphics.setColor(this.getBasicColorP().intValue());
         graphics.drawString(this.text, (width >> 1) - this.topScoresWidth, this.fontHeight, this.anchor);

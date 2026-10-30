@@ -21,7 +21,7 @@ export class MotionGestureInput extends Input {
     constructor(id, name) {
         super(id, name);
         //For kotlin this is before the body of the constructor.
-        var inputFactory = InputFactory.getInstance();
+        let inputFactory = InputFactory.getInstance();
         ;
         inputFactory.add(this.getId(), this);
     }

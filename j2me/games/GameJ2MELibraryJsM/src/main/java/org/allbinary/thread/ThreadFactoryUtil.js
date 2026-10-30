@@ -32,9 +32,9 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const ABRunnable
+//sameFolderImports - not GWT import - same folder const ABRunnable
 import { PrimaryThreadPool } from './PrimaryThreadPool.js';
-//not GWT import - same folder const ThreadPool
+//sameFolderImports - not GWT import - same folder const ThreadPool
 export class ThreadFactoryUtil extends Object {
     constructor() {
         super(...arguments);
@@ -55,25 +55,25 @@ export class ThreadFactoryUtil extends Object {
         ;
     }
     getInstanceType(runnable, type) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         if (J2MEUtil.isHTML()) {
             if (type == DemoCanvas.TYPE || type == AllBinaryGameCanvas.TYPE) {
-                var demoGameSingleThreadStartRunnable = new RunnableCanvasSingleThreadStartRunnable(runnable);
+                let demoGameSingleThreadStartRunnable = new RunnableCanvasSingleThreadStartRunnable(runnable);
                 ;
                 PreLogUtil.put(new StringMaker().append("Using Pseudo Thread for DemoCanvas/AllBinaryGameCanvas under PlayN/HTML5: ").append(StringUtil.getInstance().toString(runnable)).toString(), this, commonStrings.CONSTRUCTOR);
-                var primaryThreadPool = PrimaryThreadPool.getInstance();
+                let primaryThreadPool = PrimaryThreadPool.getInstance();
                 ;
                 primaryThreadPool.runTask(demoGameSingleThreadStartRunnable);
             }
             else {
                 PreLogUtil.put(new StringMaker().append("Using Pseudo Thread for Runnable under PlayN/HTML5: ").append(StringUtil.getInstance().toString(runnable)).toString(), this, commonStrings.CONSTRUCTOR);
-                var primaryThreadPool = PrimaryThreadPool.getInstance();
+                let primaryThreadPool = PrimaryThreadPool.getInstance();
                 ;
                 primaryThreadPool.runTask(runnable);
             }
         }
-        var thread = new Thread(runnable, runnable.toString());
+        let thread = new Thread(runnable, runnable.toString());
         ;
         this.logUtil.putF(thread.toString(), this, commonStrings.CONSTRUCTOR);
         //if statement needs to be on the same line and ternary does not work the same way.

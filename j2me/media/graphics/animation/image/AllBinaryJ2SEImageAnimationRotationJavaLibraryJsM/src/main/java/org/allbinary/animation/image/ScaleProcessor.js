@@ -20,7 +20,7 @@ import { ImageScaleUtil } from '../../../../org/allbinary/media/image/ImageScale
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ScaleBaseProcessor } from './ScaleBaseProcessor.js';
-//not GWT import - same folder const ScaleBaseProcessor
+//sameFolderImports - not GWT import - same folder const ScaleBaseProcessor
 export class ScaleProcessor extends ScaleBaseProcessor {
     constructor() {
         super(...arguments);
@@ -35,10 +35,12 @@ export class ScaleProcessor extends ScaleBaseProcessor {
     update(originalImage, originalImageArray, ximageToShowArray, unused, scaleX, scaleY, maxScaleX, maxScaleY) {
         try {
             this.imageScaleUtil.scale2(originalImage, originalImageArray, ximageToShowArray, unused, scaleX, scaleY, maxScaleX, maxScaleY);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.UPDATE, e);
+            }
         }
     }
 }

@@ -27,7 +27,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { FeaturedResourceFactory } from './FeaturedResourceFactory.js';
-//not GWT import - same folder const ResourceRelativeRelationshipFactoryInterface
+//sameFolderImports - not GWT import - same folder const ResourceRelativeRelationshipFactoryInterface
 export class FeaturedResourceRelativeRelationshipFactory extends FeaturedResourceFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -39,15 +39,15 @@ export class FeaturedResourceRelativeRelationshipFactory extends FeaturedResourc
     }
     //@Throws(Exception.constructor)
     getRelativeRelationshipList(resource, layer) {
-        var featureReleaseList = this.getList();
+        let featureReleaseList = this.getList();
         ;
-        var size = this.getList().size();
+        let size = this.getList().size();
         ;
-        for (var index = 0; index < size; index++) {
-            var featureInterface = featureReleaseList.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let featureInterface = featureReleaseList.objectArray[index];
             ;
             if (featureInterface.isFeature()) {
-                var list = featureInterface.getResourceRelativeRelationshipList(resource);
+                let list = featureInterface.getResourceRelativeRelationshipList(resource);
                 ;
                 if (list != this.basicArrayListUtil.getImmutableInstance()) {
                     //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,14 +60,14 @@ export class FeaturedResourceRelativeRelationshipFactory extends FeaturedResourc
     }
     //@Throws(Exception.constructor)
     duplicate(list, layer) {
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var newList = new BasicArrayListD();
+        let newList = new BasicArrayListD();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        for (var index = 0; index < size; index++) {
-            var relativeRelationship = list.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let relativeRelationship = list.objectArray[index];
             ;
             newList.add(new RelativeLayerRelationship(layer, pointFactory.createXY(relativeRelationship.getX(), relativeRelationship.getY()), BasicArrayListUtil.getInstance().getImmutableInstance()));
         }

@@ -35,23 +35,23 @@ export class BasicRandomAI extends BasicAI {
     processAI(allBinaryLayerManager) {
         if (this.inputProbability.getTimeDelayHelper().isTime(GameTickTimeDelayHelperFactory.getInstance().startTime)) {
             this.i_random = this.myRandomFactory.getAbsoluteNextInt(this.inputProbability.getMax());
-            var repeat = false;
+            let repeat = false;
             ;
-            var repeatLikelyhoodIntegerArray = this.inputProbability.getRepeatLikelyhoodIntegerArray();
+            let repeatLikelyhoodIntegerArray = this.inputProbability.getRepeatLikelyhoodIntegerArray();
             ;
             if (this.getLastKey() != -1 && repeatLikelyhoodIntegerArray[this.getLastKey()].intValue() >= this.i_random) {
                 repeat = true;
             }
             if (!repeat) {
-                var likelyhoodIntegerArray = this.inputProbability.getLikelyhoodIntegerArray();
+                let likelyhoodIntegerArray = this.inputProbability.getLikelyhoodIntegerArray();
                 ;
                 this.i_random = this.myRandomFactory.getAbsoluteNextInt(this.inputProbability.getMax());
-                var size = this.keyArray.length;
+                let size = this.keyArray.length;
                 ;
-                var likelyhoodIntegerKeyArray;
+                let likelyhoodIntegerKeyArray;
                 ;
-                for (var index = 0; index < size; index++) {
-                    var key = this.keyArray[index];
+                for (let index = 0; index < size; index++) {
+                    let key = this.keyArray[index];
                     ;
                     likelyhoodIntegerKeyArray = likelyhoodIntegerArray[key];
                     if (likelyhoodIntegerArray.length >= key && likelyhoodIntegerKeyArray[0] !=

@@ -31,7 +31,7 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { Layer } from './Layer.js';
-//not GWT import - same folder const AllBinaryLayer
+//sameFolderImports - not GWT import - same folder const AllBinaryLayer
 export class LayerInterfaceFactory extends Object {
     constructor() {
         super(...arguments);
@@ -48,12 +48,12 @@ export class LayerInterfaceFactory extends Object {
     }
     //@Throws(Exception.constructor)
     getNexInstance(hashtable, x, y, z) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         this.logUtil.putF(new StringMaker().append(this.HASHTABLE_LABEL).append(StringUtil.getInstance().toString(hashtable)).toString(), this, commonStrings.GET_INSTANCE);
-        var typeInteger = hashtable.get(Layer.ID);
+        let typeInteger = hashtable.get(Layer.ID);
         ;
-        var layerInterfaceFactoryInterface = this.list.objectArray[typeInteger.intValue() - 1];
+        let layerInterfaceFactoryInterface = this.list.objectArray[typeInteger.intValue() - 1];
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return layerInterfaceFactoryInterface.getNextInstance(hashtable, x, y, z);

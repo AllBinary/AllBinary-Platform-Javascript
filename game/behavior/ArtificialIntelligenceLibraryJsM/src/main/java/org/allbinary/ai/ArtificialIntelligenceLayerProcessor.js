@@ -16,7 +16,7 @@ import { LayerProcessor } from '../../../org/allbinary/layer/LayerProcessor.js';
 //not GWT import const LayerProcessor
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ArtificialIntelligenceLayerManager } from './ArtificialIntelligenceLayerManager.js';
-//not GWT import - same folder const ArtificialIntelligenceCompositeInterface
+//sameFolderImports - not GWT import - same folder const ArtificialIntelligenceCompositeInterface
 export class ArtificialIntelligenceLayerProcessor extends LayerProcessor {
     constructor() {
         super(new ArtificialIntelligenceLayerManager());
@@ -24,7 +24,7 @@ export class ArtificialIntelligenceLayerProcessor extends LayerProcessor {
     }
     //@Throws(Exception.constructor)
     processAt(allBinaryLayerManager, layerInterface, index) {
-        var artificialIntelligenceCompositeInterface = layerInterface;
+        let artificialIntelligenceCompositeInterface = layerInterface;
         ;
         artificialIntelligenceCompositeInterface.getArtificialIntelligenceInterface().processAI(allBinaryLayerManager);
     }

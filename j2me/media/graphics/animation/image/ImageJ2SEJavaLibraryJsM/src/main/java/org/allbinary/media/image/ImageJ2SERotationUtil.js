@@ -17,9 +17,9 @@ import { Math } from '../../../../java/lang/Math.js';
 //not GWT import const BufferedImage
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageUtil } from './ImageUtil.js';
-//not GWT import - same folder const ImageUtil
+//sameFolderImports - not GWT import - same folder const ImageUtil
 import { ImageJ2SEUtil } from './ImageJ2SEUtil.js';
-//not GWT import - same folder const ImageJ2SEUtil
+//sameFolderImports - not GWT import - same folder const ImageJ2SEUtil
 export class ImageJ2SERotationUtil extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -37,7 +37,7 @@ export class ImageJ2SERotationUtil extends Object {
         ;
     }
     getRotatedImageRadians(bufferedImage, radians) {
-        var newBufferedImage = this.imageUtil.create(bufferedImage.getWidth(null), bufferedImage.getHeight(null));
+        let newBufferedImage = this.imageUtil.create(bufferedImage.getWidth(null), bufferedImage.getHeight(null));
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.drawRotatedImageRadians(bufferedImage, newBufferedImage, newBufferedImage.createGraphics(), radians);
@@ -51,7 +51,7 @@ export class ImageJ2SERotationUtil extends Object {
         return newBufferedImage;
     }
     rotateImage(bufferedImage, newBufferedImage, totalAngle) {
-        var g = newBufferedImage.createGraphics();
+        let g = newBufferedImage.createGraphics();
         ;
         g.setBackground(this.imageJ2SEUtil.TRANSPARENT_COLOR);
         g.clearRect(0, 0, newBufferedImage.getWidth(), newBufferedImage.getHeight());
@@ -60,21 +60,21 @@ export class ImageJ2SERotationUtil extends Object {
         ;
     }
     createRotatedImage(bufferedImage, newBufferedImage, totalAngle) {
-        var g = newBufferedImage.createGraphics();
+        let g = newBufferedImage.createGraphics();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.drawRotatedImageRadians(bufferedImage, newBufferedImage, g, TWO_PIE * totalAngle / 360);
         ;
     }
     getRotatedImages(bufferedImage, numberOfFrames, totalAngle) {
-        var bufferedImageArray = new Array(numberOfFrames);
+        let bufferedImageArray = new Array(numberOfFrames);
         ;
-        var arc = () * totalAngle / 360;
+        let arc = () * totalAngle / 360;
         ;
-        var size = bufferedImageArray.length;
+        let size = bufferedImageArray.length;
         ;
-        for (var index = 0; index < size; index++) {
-            var radians = (arc / size) * index;
+        for (let index = 0; index < size; index++) {
+            let radians = (arc / size) * index;
             ;
             bufferedImageArray[index] = this.getRotatedImageRadians(bufferedImage, radians);
         }
@@ -82,33 +82,33 @@ export class ImageJ2SERotationUtil extends Object {
         return bufferedImageArray;
     }
     createSpriteImage(bufferedImageArray) {
-        var columns = 9;
+        let columns = 9;
         ;
-        var rows = 0;
+        let rows = 0;
         ;
-        var size = bufferedImageArray.length;
+        let size = bufferedImageArray.length;
         ;
         if (size < columns) {
             columns = size;
         }
-        rows = (size / columns);
+        rows = (globalThis.Math.trunc(size / columns));
         if (size % columns != 0) {
             rows++;
         }
-        var firstBufferedImage = bufferedImageArray[0];
+        let firstBufferedImage = bufferedImageArray[0];
         ;
-        var bufferedImage = this.imageUtil.create(firstBufferedImage.getWidth(null) * columns, firstBufferedImage.getHeight(null) * rows);
+        let bufferedImage = this.imageUtil.create(firstBufferedImage.getWidth(null) * columns, firstBufferedImage.getHeight(null) * rows);
         ;
-        var g = bufferedImage.createGraphics();
+        let g = bufferedImage.createGraphics();
         ;
-        var columnIndex = 0;
+        let columnIndex = 0;
         ;
-        var rowIndex = 0;
+        let rowIndex = 0;
         ;
-        var nextBufferedImage;
+        let nextBufferedImage;
         ;
-        for (var index = 0; index < size; index++) {
-            if (index / 9 != 0 && index % 9 == 0) {
+        for (let index = 0; index < size; index++) {
+            if (globalThis.Math.trunc(index / 9) != 0 && index % 9 == 0) {
                 rowIndex++;
                 columnIndex = 0;
             }

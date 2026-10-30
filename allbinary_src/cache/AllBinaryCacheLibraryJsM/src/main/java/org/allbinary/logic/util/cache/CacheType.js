@@ -31,7 +31,7 @@ export class CacheType extends Object {
         return this.type;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("CacheType: Vendor: ");
         stringBuffer.append(this.getVendor());

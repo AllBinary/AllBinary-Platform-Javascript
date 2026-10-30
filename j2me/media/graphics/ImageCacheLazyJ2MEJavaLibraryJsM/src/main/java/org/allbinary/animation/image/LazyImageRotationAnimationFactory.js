@@ -21,9 +21,9 @@ import { ImageCacheFactory } from '../../../../org/allbinary/image/ImageCacheFac
 //not plain js import { ForcedLogUtil } 
 const ForcedLogUtil = globalThis.org.allbinary.logic.communication.log.ForcedLogUtil;
 import { ScaleProperties } from '../../../../org/allbinary/media/ScaleProperties.js';
-//not GWT import - same folder const BaseImageAnimationFactory
+//sameFolderImports - not GWT import - same folder const BaseImageAnimationFactory
 import { LazyImageRotationAnimation } from './LazyImageRotationAnimation.js';
-//not GWT import - same folder const LazyImageRotationAnimation
+//sameFolderImports - not GWT import - same folder const LazyImageRotationAnimation
 export class LazyImageRotationAnimationFactory extends Object {
     constructor(layoutIndex, associatedLazyAnimationId, animationInterfaceFactoryInterface) {
         super();

@@ -34,9 +34,9 @@ const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //not plain js import { BasicArrayListD } 
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
-//not GWT import - same folder const BasicAnimationInterfaceFactoryInterface
+//sameFolderImports - not GWT import - same folder const BasicAnimationInterfaceFactoryInterface
 import { NullAnimationFactory } from './NullAnimationFactory.js';
-//not GWT import - same folder const NullAnimationFactory
+//sameFolderImports - not GWT import - same folder const NullAnimationFactory
 export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedResourceFactory {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,19 +53,19 @@ export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedR
     }
     //@Throws(Exception.constructor)
     getRectangleXY(resource, x, y) {
-        var pointFactory = PointFactory.getInstance();
+        let pointFactory = PointFactory.getInstance();
         ;
-        var list = this.getList();
+        let list = this.getList();
         ;
-        var scale = GameConfigurationCentral.getInstance().SCALE.getValue().intValue();
+        let scale = GameConfigurationCentral.getInstance().SCALE.getValue().intValue();
         ;
-        var size = this.getList().size();
+        let size = this.getList().size();
         ;
-        for (var index = 0; index < size; index++) {
-            var featureInterface = list.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let featureInterface = list.objectArray[index];
             ;
             if (featureInterface.isFeature()) {
-                var rectangle = featureInterface.getRectangle(resource);
+                let rectangle = featureInterface.getRectangle(resource);
                 ;
                 if (rectangle != RectangleFactory.SINGLETON) {
                     //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,17 +87,17 @@ export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedR
     }
     //@Throws(Exception.constructor)
     getBasicAnimationInterfaceFactoryInstance(resource) {
-        var list = this.getList();
+        let list = this.getList();
         ;
-        var resourceTypeAvailableList = new BasicArrayListD();
+        let resourceTypeAvailableList = new BasicArrayListD();
         ;
-        var size = this.getList().size();
+        let size = this.getList().size();
         ;
-        var featureInterface;
+        let featureInterface;
         ;
-        var animationInterfaceFactoryInterface;
+        let animationInterfaceFactoryInterface;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             featureInterface = list.objectArray[index];
             if (featureInterface.isFeature()) {
                 resourceTypeAvailableList.add(featureInterface);
@@ -109,32 +109,32 @@ export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedR
             }
         }
         if (resourceTypeAvailableList.size() > 0) {
-            var NO_ANIMATION_AVAILABLE_FROM = "No animation available from: ";
+            let NO_ANIMATION_AVAILABLE_FROM = "No animation available from: ";
             ;
-            var FOR_FACTORIES = " factories: ";
+            let FOR_FACTORIES = " factories: ";
             ;
-            var FOR_RESOURCE = " for Resource: ";
+            let FOR_RESOURCE = " for Resource: ";
             ;
-            var HAS_KEY = " has: ";
+            let HAS_KEY = " has: ";
             ;
-            var RESOURCES_LABEL = " resources ";
+            let RESOURCES_LABEL = " resources ";
             ;
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
             stringBuffer.append(NO_ANIMATION_AVAILABLE_FROM);
             stringBuffer.appendint(resourceTypeAvailableList.size());
             stringBuffer.append(CommonSeps.getInstance().FORWARD_SLASH);
             stringBuffer.appendint(size);
             stringBuffer.append(FOR_FACTORIES);
-            var size2 = resourceTypeAvailableList.size();
+            let size2 = resourceTypeAvailableList.size();
             ;
-            for (var index = 0; index < size2; index++) {
+            for (let index = 0; index < size2; index++) {
                 stringBuffer.append(resourceTypeAvailableList.get(index).toString());
                 stringBuffer.append(CommonSeps.getInstance().COMMA_SEP);
             }
             stringBuffer.append(FOR_RESOURCE);
             stringBuffer.append(resource);
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 stringBuffer.append(CommonSeps.getInstance().NEW_LINE);
                 featureInterface = list.objectArray[index];
                 if (featureInterface.isFeature()) {
@@ -147,14 +147,14 @@ export class FeaturedAnimationInterfaceFactoryInterfaceFactory extends FeaturedR
             throw new Exception(stringBuffer.toString());
         }
         else {
-            var stringBuffer = new StringMaker();
+            let stringBuffer = new StringMaker();
             ;
-            for (var index = 0; index < size; index++) {
+            for (let index = 0; index < size; index++) {
                 featureInterface = list.objectArray[index];
                 stringBuffer.append(featureInterface.toString());
                 stringBuffer.append(CommonSeps.getInstance().SPACE);
             }
-            var result = stringBuffer.toString();
+            let result = stringBuffer.toString();
             ;
             stringBuffer.delete(0, stringBuffer.length());
             throw new Exception(stringBuffer.append("No feature resource type available for Resource: ").append(resource).append(" Resource Factories Available: ").append(result).toString());

@@ -20,11 +20,10 @@ import { AngleInfo } from '../../../org/allbinary/math/AngleInfo.js';
 //not GWT import const ScaleProperties
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
-//not GWT import - same folder const RotationAnimation
+//sameFolderImports - not GWT import - same folder const RotationAnimation
 import { NullRotationAnimation } from './NullRotationAnimation.js';
-//not GWT import - same folder const NullRotationAnimation
+//sameFolderImports - not GWT import - same folder const NullRotationAnimation
 import { IndexedAnimationBehavior } from './IndexedAnimationBehavior.js';
-//not GWT import - same folder const Animation
 export class NullRotationAnimationFactory extends Object {
     static getFactoryInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -32,17 +31,20 @@ export class NullRotationAnimationFactory extends Object {
     }
     constructor() {
         super();
-        this.NULL_ROTATION_ANIMATION_ARRAY = [];
         //inner= member=true isStatic=
-        this.NullRotationAnimation2 = class extends NullRotationAnimation {
-            /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-            constructor() {
-                super(AngleInfo.getInstance(AngleFactory.getInstance().QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), new IndexedAnimationBehavior(1, 250));
-                //For kotlin this is before the body of the constructor.
-            }
-            paintXY(graphics, x, y) {
-            }
-        };
+        this.NullRotationAnimation2 = (() => {
+            const outer$NullRotationAnimationFactory = this;
+            return class extends NullRotationAnimation {
+                /*Static stuff is not allowed for TypeScript inner classes*/ /**/
+                constructor() {
+                    super(AngleInfo.getInstance(AngleFactory.getInstance().QUARTER_TOTAL_ANGLE), CircularIndexUtil.createInstance(4), new IndexedAnimationBehavior(1, 250));
+                    //For kotlin this is before the body of the constructor.
+                }
+                paintXY(graphics, x, y) {
+                }
+            };
+        })();
+        this.NULL_ROTATION_ANIMATION_ARRAY = [];
         this.NULL_ANIMATION = new this.NullRotationAnimation2();
     }
     getInstance(instanceId) {

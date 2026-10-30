@@ -15,9 +15,9 @@
 import { Object } from '../../../../java/lang/Object.js';
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
-//not GWT import - same folder const BasicColor
+//sameFolderImports - not GWT import - same folder const BasicColor
 import { BasicColorFactory } from './BasicColorFactory.js';
-//not GWT import - same folder const BasicColorFactory
+//sameFolderImports - not GWT import - same folder const BasicColorFactory
 export class SmallBasicColorCacheFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,15 +36,15 @@ export class SmallBasicColorCacheFactory extends Object {
         this.colorIndex++;
     }
     getAndOrCreate(colorAsInt) {
-        var basicColor;
+        let basicColor;
         ;
-        for (var index = 0; index < this.SIZE; index++) {
+        for (let index = 0; index < this.SIZE; index++) {
             if (this.INDEX_TO_COLOR[index] == colorAsInt) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return this.BASIC_COLOR_ARRAY[index];
             }
         }
-        var ALPHA_MASK = Math.round(0xFF000000);
+        let ALPHA_MASK = globalThis.Math.trunc(0xFF000000);
         ;
         basicColor = BasicColorFactory.getInstance().createInstanceAN(colorAsInt & ALPHA_MASK, colorAsInt & 0x00FFFFFF, StringUtil.getInstance().EMPTY_STRING);
         this.add(basicColor);

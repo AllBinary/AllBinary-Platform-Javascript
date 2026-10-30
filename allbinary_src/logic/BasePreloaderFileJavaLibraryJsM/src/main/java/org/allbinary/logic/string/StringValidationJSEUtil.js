@@ -13,14 +13,15 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Character } from '../../../../java/lang/Character.js';
+//not plain js import { Character }
+const Character = globalThis.java.lang.Character;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class StringValidationJSEUtil extends Object {
     static isBlank(string) {
-        var len = string.length;
+        let len = string.length;
         ;
-        for (var i = 0; i < len; i++) {
-            var c = string[i];
+        for (let i = 0; i < len; i++) {
+            let c = string[i];
             ;
             if (Character.isWhitespace(c) == false) {
                 //if statement needs to be on the same line and ternary does not work the same way.

@@ -31,27 +31,27 @@ import { StringValidationUtil } from '../../../../org/allbinary/logic/string/Str
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { DynamicInitDb } from './DynamicInitDb.js';
-//not GWT import - same folder const DynamicInitDb
+//sameFolderImports - not GWT import - same folder const DynamicInitDb
 import { InitializerData } from './InitializerData.js';
-//not GWT import - same folder const InitializerData
+//sameFolderImports - not GWT import - same folder const InitializerData
 export class InitializerDatabase extends Object {
     constructor(abeClientInformation, map) {
         super();
         this.logUtil = LogUtil.getInstance();
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        var hashMap = StdUtil.getInstance().createHashMap();
+        let hashMap = StdUtil.getInstance().createHashMap();
         ;
-        var keys = map.keySet();
+        let keys = map.keySet();
         ;
-        var keyArray = keys.toArray();
+        let keyArray = keys.toArray();
         ;
-        var size = keyArray.length;
+        let size = keyArray.length;
         ;
-        for (var index = 0; index < size; index++) {
-            var key = keyArray[index];
+        for (let index = 0; index < size; index++) {
+            let key = keyArray[index];
             ;
-            var values = map.get(key);
+            let values = map.get(key);
             ;
             hashMap.put(key.toCharArray().slice(0).join(''), toCharArray());
             stringBuffer.delete(0, stringBuffer.length());
@@ -70,7 +70,7 @@ export class InitializerDatabase extends Object {
     }
     getFormData(abeClientInformation, hashMap) {
         try {
-            var initializerData = InitializerData.getInstance();
+            let initializerData = InitializerData.getInstance();
             ;
             this.setAdminDbUserName(hashMap.get(initializerData.DBUSER));
             this.setAdminDbPassword(hashMap.get(initializerData.DBPASSWORD));
@@ -78,9 +78,9 @@ export class InitializerDatabase extends Object {
             this.setAdminSchema(hashMap.get(initializerData.ADMINSCHEMA));
             this.setAdminServer(hashMap.get(initializerData.ADMINSERVER));
             this.setAdminPort(hashMap.get(initializerData.ADMINPORT));
-            var dbConnectionInfo = new DbConnectionInfo();
+            let dbConnectionInfo = new DbConnectionInfo();
             ;
-            var adminDbName = StringUtil.getInstance().EMPTY_STRING;
+            let adminDbName = StringUtil.getInstance().EMPTY_STRING;
             ;
             dbConnectionInfo.setJdbcDriver(getAdminJdbcDriver());
             dbConnectionInfo.setName(adminDbName);
@@ -90,10 +90,12 @@ export class InitializerDatabase extends Object {
             dbConnectionInfo.setServer(getAdminServer());
             dbConnectionInfo.setPort(getAdminPort());
             this.initDb = new DynamicInitDb(abeClientInformation, dbConnectionInfo);
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Unable to get form data", this, "getFormData()", e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Unable to get form data", this, "getFormData()", e);
+            }
         }
     }
     isJdbcDriverValid(jdbcDriverClassPathString) {
@@ -101,25 +103,27 @@ export class InitializerDatabase extends Object {
             Class.forName(jdbcDriverClassPathString).newInstance();
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
-                var commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.IS_VALID, e);
+        catch (caught) {
+            {
+                const e = caught;
+                if (org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance().PRELOADERERROR)) {
+                    let commonStrings = CommonStrings.getInstance();
+                    ;
+                    this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.IS_VALID, e);
+                }
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
             }
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
         }
     }
     isValid() {
-        var isValid = true;
+        let isValid = true;
         ;
         if (!this.isJdbcDriverValid(this.adminJdbcDriver)) {
             isValid = false;
         }
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (!stringValidationUtil.isValidRequired(this.adminDbUserName, InitializerDatabase.MIN, InitializerDatabase.MAX)) {
             isValid = false;
@@ -131,7 +135,7 @@ export class InitializerDatabase extends Object {
         return isValid;
     }
     getJdbcDriverValidationInfo(jdbcDriver) {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append("The JDBC driver (");
         stringBuffer.append(jdbcDriver);
@@ -141,17 +145,17 @@ export class InitializerDatabase extends Object {
         ;
     }
     getInvalidInfo() {
-        var isValid = true;
+        let isValid = true;
         ;
-        var isJdbcDriversValid = true;
+        let isJdbcDriversValid = true;
         ;
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         if (!this.isJdbcDriverValid(this.adminJdbcDriver)) {
             isJdbcDriversValid = false;
             stringBuffer.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()));
         }
-        var stringValidationUtil = StringValidationUtil.getInstance();
+        let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         if (!stringValidationUtil.isValidRequired(this.adminDbUserName, InitializerDatabase.MIN, InitializerDatabase.MAX)) {
             stringBuffer.append("Admin username should be < " + InitializerDatabase.MAX + " and > " + InitializerDatabase.MIN + " characters in length.<br />");
@@ -171,12 +175,14 @@ export class InitializerDatabase extends Object {
             this.initDb.addUsers();
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Unable to Create Users", this, "createUsers()", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Unable to Create Users", this, "createUsers()", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     createDatabases() {
@@ -184,12 +190,14 @@ export class InitializerDatabase extends Object {
             this.initDb.addDatabases();
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Unable to Create Databases", this, "createDatabases()", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Unable to Create Databases", this, "createDatabases()", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     createTables() {
@@ -197,12 +205,14 @@ export class InitializerDatabase extends Object {
             this.initDb.addTables();
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put("Unable to Create Tables", this, "createTables()", e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put("Unable to Create Tables", this, "createTables()", e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     getAdminDbUserName() {

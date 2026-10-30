@@ -35,7 +35,7 @@ export class InitDb extends Object {
         this.METHOD_CALL_TEMP_MAIN_PATH = "useTemporaryMainPath";
         this.METHOD_CALL_MAIN_PATH = "useNormalMainPath";
     }
-    setHelper(anyType = {}) {
+    setHelper(anyType) {
         this.anyType = anyType;
     }
     getHelper() {
@@ -44,109 +44,121 @@ export class InitDb extends Object {
     }
     getHostName() {
         try {
-            var dynamicClass = this.anyType.constructor;
+            let dynamicClass = this.anyType.constructor;
             ;
-            var method = dynamicClass.getMethod(this.METHOD_CALL_GET_HOST_NAME, null);
+            let method = dynamicClass.getMethod(this.METHOD_CALL_GET_HOST_NAME, null);
             ;
-            var result = method.invoke(this.anyType, null);
+            let result = method.invoke(this.anyType, null);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return null;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return null;
+            }
         }
     }
     addUsers() {
         try {
-            var dynamicClass = this.anyType.constructor;
+            let dynamicClass = this.anyType.constructor;
             ;
-            var method = dynamicClass.getMethod(this.METHOD_CALL_ADD_USERS, null);
+            let method = dynamicClass.getMethod(this.METHOD_CALL_ADD_USERS, null);
             ;
-            var result = method.invoke(this.anyType, null);
+            let result = method.invoke(this.anyType, null);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result.valueOf();
             ;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     addDatabases() {
         try {
-            var dynamicClass = this.anyType.constructor;
+            let dynamicClass = this.anyType.constructor;
             ;
-            var method = dynamicClass.getMethod(this.METHOD_CALL_ADD_DATABASES, null);
+            let method = dynamicClass.getMethod(this.METHOD_CALL_ADD_DATABASES, null);
             ;
-            var result = method.invoke(this.anyType, null);
+            let result = method.invoke(this.anyType, null);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result.valueOf();
             ;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     addTables() {
         try {
-            var dynamicClass = this.anyType.constructor;
+            let dynamicClass = this.anyType.constructor;
             ;
-            var method = dynamicClass.getMethod(this.METHOD_CALL_ADD_TABLES, null);
+            let method = dynamicClass.getMethod(this.METHOD_CALL_ADD_TABLES, null);
             ;
-            var result = method.invoke(this.anyType, null);
+            let result = method.invoke(this.anyType, null);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result.valueOf();
             ;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     useTemporaryMainPath() {
         try {
-            var dynamicClass = this.anyType.constructor;
+            let dynamicClass = this.anyType.constructor;
             ;
-            var method = dynamicClass.getMethod(this.METHOD_CALL_TEMP_MAIN_PATH, null);
+            let method = dynamicClass.getMethod(this.METHOD_CALL_TEMP_MAIN_PATH, null);
             ;
-            var result = method.invoke(this.anyType, null);
+            let result = method.invoke(this.anyType, null);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result.valueOf();
             ;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
     useNormalMainPath() {
         try {
-            var dynamicClass = this.anyType.constructor;
+            let dynamicClass = this.anyType.constructor;
             ;
-            var method = dynamicClass.getMethod(this.METHOD_CALL_MAIN_PATH, null);
+            let method = dynamicClass.getMethod(this.METHOD_CALL_MAIN_PATH, null);
             ;
-            var result = method.invoke(this.anyType, null);
+            let result = method.invoke(this.anyType, null);
             ;
             //if statement needs to be on the same line and ternary does not work the same way.
             return result.valueOf();
             ;
-            //: 
         }
-        catch (e) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
 }

@@ -19,27 +19,32 @@ import { AndroidUtil } from '../../../../../org/allbinary/AndroidUtil.js';
 //not GWT import const AndroidUtil
 import { GraphicsFeatureFactory } from '../../../../../org/allbinary/game/configuration/feature/GraphicsFeatureFactory.js';
 //not GWT import const GraphicsFeatureFactory
+//not plain js import { NullUtil } 
+const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class Unit2DecalGameResources extends BasicGameResources {
     static getInstance() {
+        if (Unit2DecalGameResources.instance == NullUtil.getInstance().NULL_OBJECT) {
+            Unit2DecalGameResources.instance = new Unit2DecalGameResources();
+        }
         //if statement needs to be on the same line and ternary does not work the same way.
         return Unit2DecalGameResources.instance;
     }
     constructor() {
         super();
-        var ROOT = "/unit_decal";
+        let ROOT = "/unit_decal";
         ;
-        var SMALL = "_30_by_30.png";
+        let SMALL = "_30_by_30.png";
         ;
-        var MEDIUM = SMALL;
+        let MEDIUM = SMALL;
         ;
-        var SIZE_FOUR = SMALL;
+        let SIZE_FOUR = SMALL;
         ;
-        var SIZE_FIVE = SMALL;
+        let SIZE_FIVE = SMALL;
         ;
-        var SIZE_SIX = SMALL;
+        let SIZE_SIX = SMALL;
         ;
-        var SIZE = [
+        let SIZE = [
             SMALL, MEDIUM, SIZE_FOUR, SIZE_FIVE, SIZE_SIX
         ];
         ;
@@ -63,4 +68,4 @@ export class Unit2DecalGameResources extends BasicGameResources {
         }
     }
 }
-Unit2DecalGameResources.instance = new Unit2DecalGameResources();
+Unit2DecalGameResources.instance = NullUtil.getInstance().NULL_OBJECT;

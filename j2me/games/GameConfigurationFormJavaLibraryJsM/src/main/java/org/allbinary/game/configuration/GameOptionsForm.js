@@ -50,15 +50,15 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameConfigurationTextInput } from './GameConfigurationTextInput.js';
-//not GWT import - same folder const GameConfigurationTextInput
+//sameFolderImports - not GWT import - same folder const GameConfigurationTextInput
 import { GameConfigurationSingleton } from './GameConfigurationSingleton.js';
-//not GWT import - same folder const GameConfiguration
+//sameFolderImports - not GWT import - same folder const GameConfiguration
 import { GameConfigurationGauge } from './GameConfigurationGauge.js';
-//not GWT import - same folder const GameConfigurationGauge
+//sameFolderImports - not GWT import - same folder const GameConfigurationGauge
 import { GameConfigurationUtil } from './GameConfigurationUtil.js';
-//not GWT import - same folder const GameConfigurationUtil
+//sameFolderImports - not GWT import - same folder const GameConfigurationUtil
 import { GameConfigurationCentral } from './GameConfigurationCentral.js';
-//not GWT import - same folder const GameConfigurationCentral
+//sameFolderImports - not GWT import - same folder const GameConfigurationCentral
 export class GameOptionsForm extends CommandForm {
     constructor(commandListener, title, backgrounBasicColor, foregroundBasicColor) {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
@@ -66,7 +66,7 @@ export class GameOptionsForm extends CommandForm {
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
         this.addConfiguration();
-        var gameFeatureFormUtil = GameFeatureFormUtil.getInstance();
+        let gameFeatureFormUtil = GameFeatureFormUtil.getInstance();
         ;
         gameFeatureFormUtil.addChoiceGroup(this, GameFeatureChoiceGroups.getExclusiveInstance().get(), ChoiceI.EXCLUSIVE);
         gameFeatureFormUtil.addChoiceGroup(this, GameFeatureChoiceGroups.getMultipleInstance().get(), ChoiceI.MULTIPLE);
@@ -80,17 +80,17 @@ export class GameOptionsForm extends CommandForm {
         this.save(abeClientInformation);
     }
     addTextFieldsIfSimulated() {
-        var key = OrientationData.getInstance().ORIENTATION_SENSOR_INPUT;
+        let key = OrientationData.getInstance().ORIENTATION_SENSOR_INPUT;
         ;
-        var hashtable = GameFeatureChoiceGroups.getExclusiveInstance().get();
+        let hashtable = GameFeatureChoiceGroups.getExclusiveInstance().get();
         ;
         if (hashtable !=
             null) {
-            var listCanBeNull = hashtable.get(key);
+            let listCanBeNull = hashtable.get(key);
             ;
             if (listCanBeNull !=
                 null) {
-                var list = listCanBeNull;
+                let list = listCanBeNull;
                 ;
                 if (list.contains(SensorFeatureFactory.getInstance().SIMULATED_ORIENTATION_SENSORS)) {
                     this.addTextFields();
@@ -99,40 +99,40 @@ export class GameOptionsForm extends CommandForm {
         }
     }
     addTextFields() {
-        var hashtable = GameConfigurationTextInput.getHashtable();
+        let hashtable = GameConfigurationTextInput.getHashtable();
         ;
-        var size = hashtable.size();
+        let size = hashtable.size();
         ;
-        var objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
+        let objectArray = HashtableUtil.getInstance().getKeysAsArray(hashtable);
         ;
-        var gameConfigurationTextInput;
+        let gameConfigurationTextInput;
         ;
-        var textField;
+        let textField;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             gameConfigurationTextInput = hashtable.get(objectArray[index]);
             textField = new TextField(gameConfigurationTextInput.getLabel(), gameConfigurationTextInput.getText(), 30, TextField.ANY);
             this.meUtil.appendItem(this, textField);
         }
     }
     addConfiguration() {
-        var METHOD_NAME = "addConfiguration";
+        let METHOD_NAME = "addConfiguration";
         ;
-        var NAME = "Name: ";
+        let NAME = "Name: ";
         ;
-        var list = GameConfigurationSingleton.getInstance().getOptionsBasicArrayList();
+        let list = GameConfigurationSingleton.getInstance().getOptionsBasicArrayList();
         ;
-        var GAUGE_CHANGE = MyCommandsFactory.getInstance().GAUGE_CHANGE;
+        let GAUGE_CHANGE = MyCommandsFactory.getInstance().GAUGE_CHANGE;
         ;
-        var stringMaker = new StringMaker();
+        let stringMaker = new StringMaker();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var gameConfiguration;
+        let gameConfiguration;
         ;
-        var gauge;
+        let gauge;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             gameConfiguration = list.objectArray[index];
             stringMaker.delete(0, stringMaker.length());
             this.logUtil.putF(stringMaker.append(NAME).append(gameConfiguration.toString()).toString(), this, METHOD_NAME);
@@ -143,7 +143,7 @@ export class GameOptionsForm extends CommandForm {
         }
     }
     initCommands(cmdListener) {
-        var gameCommandsFactory = GameCommandsFactory.getInstance();
+        let gameCommandsFactory = GameCommandsFactory.getInstance();
         ;
         this.removeAllCommands();
         this.addCommand(gameCommandsFactory.CLOSE_OPTIONS);
@@ -152,11 +152,11 @@ export class GameOptionsForm extends CommandForm {
     }
     //@Throws(Exception.constructor)
     save(abeClientInformation) {
-        var size = this.size();
+        let size = this.size();
         ;
-        var item;
+        let item;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             item = this.get(index);
             if (item instanceof GameConfigurationGauge) {
                 GameConfigurationUtil.getInstance().update(item);
@@ -166,23 +166,23 @@ export class GameOptionsForm extends CommandForm {
             }
         }
         GameConfigurationUtil.getInstance().updateCompetitionValue();
-        var hashtable = StdUtil.getInstance().createHashtable();
+        let hashtable = StdUtil.getInstance().createHashtable();
         ;
-        var SCALE = GameConfigurationCentral.getInstance().SCALE;
+        let SCALE = GameConfigurationCentral.getInstance().SCALE;
         ;
         hashtable.put(SCALE.getName(), SCALE.getValue().toString());
-        var keyValuePersistance = GameConfigurationPersistanceSingleton.getInstance();
+        let keyValuePersistance = GameConfigurationPersistanceSingleton.getInstance();
         ;
         keyValuePersistance.clear();
         keyValuePersistance.loadAll(abeClientInformation);
-        var list = keyValuePersistance.getIds();
+        let list = keyValuePersistance.getIds();
         ;
         keyValuePersistance.save(abeClientInformation, hashtable);
-        var size2 = list.size();
+        let size2 = list.size();
         ;
-        var integer;
+        let integer;
         ;
-        for (var index = 0; index < size2; index++) {
+        for (let index = 0; index < size2; index++) {
             integer = list.objectArray[index];
             keyValuePersistance.delete(abeClientInformation, integer.intValue());
         }

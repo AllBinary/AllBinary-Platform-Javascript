@@ -21,7 +21,7 @@ export class AllCommandsVisitor extends Visitor {
     constructor() {
         super();
     }
-    visit(anyType = {}) {
+    visit(anyType) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return BooleanFactory.getInstance().TRUE;
     }

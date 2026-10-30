@@ -14,7 +14,7 @@
 //not GWT import const RaceTrackGeographicMapCellType
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { PathFindingNodeCostInfoFactoryBase } from './PathFindingNodeCostInfoFactoryBase.js';
-//not GWT import - same folder const PathFindingNodeCostInfoFactoryBase
+//sameFolderImports - not GWT import - same folder const PathFindingNodeCostInfoFactoryBase
 export class PathFindingNodeCostInfoFactory extends PathFindingNodeCostInfoFactoryBase {
     constructor(max) {
         super();
@@ -24,13 +24,13 @@ export class PathFindingNodeCostInfoFactory extends PathFindingNodeCostInfoFacto
     }
     //@Throws(Exception.constructor)
     getTotalCost(geographicMapInterface, comingFromGeographicMapCellPosition, geographicMapCellPosition) {
-        var geographicMapCellType = geographicMapInterface.getCellTypeAt(comingFromGeographicMapCellPosition);
+        let geographicMapCellType = geographicMapInterface.getCellTypeAt(comingFromGeographicMapCellPosition);
         ;
-        var geographicMapCellType2 = geographicMapInterface.getCellTypeAt(geographicMapCellPosition);
+        let geographicMapCellType2 = geographicMapInterface.getCellTypeAt(geographicMapCellPosition);
         ;
-        var raceTrackGeographicMapCellType = geographicMapCellType;
+        let raceTrackGeographicMapCellType = geographicMapCellType;
         ;
-        var raceTrackGeographicMapCellType2 = geographicMapCellType2;
+        let raceTrackGeographicMapCellType2 = geographicMapCellType2;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return raceTrackGeographicMapCellType.getTravelCost() + raceTrackGeographicMapCellType2.getTravelCost();

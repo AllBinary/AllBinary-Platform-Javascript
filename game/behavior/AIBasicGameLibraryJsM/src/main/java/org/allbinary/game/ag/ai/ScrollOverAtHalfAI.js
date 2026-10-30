@@ -23,17 +23,17 @@ export class ScrollOverAtHalfAI extends BasicAI {
     }
     //@Throws(Exception.constructor)
     processAI(allBinaryLayerManager) {
-        var ownerLayerInterface = this.getOwnerLayerInterface();
+        let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        var x = ownerLayerInterface.getXP();
+        let x = ownerLayerInterface.getXP();
         ;
-        var y = ownerLayerInterface.getYP();
+        let y = ownerLayerInterface.getYP();
         ;
-        var halfWidth = ownerLayerInterface.getHalfWidth();
+        let halfWidth = ownerLayerInterface.getHalfWidth();
         ;
-        var halfHeight = ownerLayerInterface.getHalfHeight();
+        let halfHeight = ownerLayerInterface.getHalfHeight();
         ;
-        var displayInfo = DisplayInfoSingleton.getInstance();
+        let displayInfo = DisplayInfoSingleton.getInstance();
         ;
         if (x > displayInfo.getLastWidth() - halfWidth) {
             ownerLayerInterface.setPosition(halfWidth + 1, y, ownerLayerInterface.getZP());

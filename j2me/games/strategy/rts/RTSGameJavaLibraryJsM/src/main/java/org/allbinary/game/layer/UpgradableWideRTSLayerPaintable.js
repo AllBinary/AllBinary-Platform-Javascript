@@ -20,7 +20,7 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RTSLayerCompositePaintable } from './RTSLayerCompositePaintable.js';
-//not GWT import - same folder const RTSLayer
+//sameFolderImports - not GWT import - same folder const RTSLayer
 export class UpgradableWideRTSLayerPaintable extends RTSLayerCompositePaintable {
     constructor(upgradableRTSLayerHudPaintable) {
         super(upgradableRTSLayerHudPaintable);

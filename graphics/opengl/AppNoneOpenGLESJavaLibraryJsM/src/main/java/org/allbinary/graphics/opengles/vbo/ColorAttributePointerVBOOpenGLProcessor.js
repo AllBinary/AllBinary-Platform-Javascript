@@ -25,7 +25,7 @@ export class ColorAttributePointerVBOOpenGLProcessor extends ObjectThreedOpenGLP
     constructor() {
         super();
     }
-    process(gl, anyType = {}) {
+    process(gl, anyType) {
         throw new RuntimeException();
     }
 }

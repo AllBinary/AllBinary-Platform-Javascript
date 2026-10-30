@@ -18,7 +18,7 @@ import { NullCanvas } from '../../../../../javax/microedition/lcdui/NullCanvas.j
 const BasicArrayListUtil = globalThis.org.allbinary.util.BasicArrayListUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicMenuInputProcessor } from './BasicMenuInputProcessor.js';
-//not GWT import - same folder const BasicMenuInputProcessor
+//sameFolderImports - not GWT import - same folder const BasicMenuInputProcessor
 export class NoMenuInputProcessor extends BasicMenuInputProcessor {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

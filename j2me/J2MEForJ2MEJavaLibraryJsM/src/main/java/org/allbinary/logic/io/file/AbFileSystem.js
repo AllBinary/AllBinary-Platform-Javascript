@@ -47,33 +47,42 @@ export class AbFileSystem extends Object {
         return StringUtil.getInstance().getArrayInstance();
         ;
     }
-    readAsString(fileName) {
-        var bytes = new Array(1000000);
+    readAsString(...args) {
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.readAsString$overload1(args[0]);
+        if (args.length === 2 && typeof args[0] === 'string')
+            return this.readAsString$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: readAsString');
+    }
+    readAsString$overload1(fileName) {
+        let bytes = new Array(1000000);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.readAsString(fileName, bytes);
         ;
     }
-    readAsString(fileName, bytes) {
+    readAsString$overload2(fileName, bytes) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return StringUtil.getInstance().EMPTY_STRING;
     }
-    close(closeable = {}) {
+    close(closeable) {
         try {
             if (closeable !=
                 null) {
-                var inputStream = closeable;
+                let inputStream = closeable;
                 ;
                 inputStream.close();
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return true;
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CLOSE, e);
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return false;
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CLOSE, e);
+                //if statement needs to be on the same line and ternary does not work the same way.
+                return false;
+            }
         }
     }
 }

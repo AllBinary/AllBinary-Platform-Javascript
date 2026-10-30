@@ -19,7 +19,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { BasicUserRoleFactory } from './BasicUserRoleFactory.js';
-//not GWT import - same folder const BasicUserRoleFactory
+//sameFolderImports - not GWT import - same folder const BasicUserRoleFactory
 export class StoreRoleFactory extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -30,7 +30,7 @@ export class StoreRoleFactory extends Object {
         this.roles = new BasicArrayListD();
         this.subscriberRoles = new BasicArrayListD();
         this.wholesaleRoles = new BasicArrayListD();
-        var basicUserRoleFactory = BasicUserRoleFactory.getInstance();
+        let basicUserRoleFactory = BasicUserRoleFactory.getInstance();
         ;
         this.roles.add(basicUserRoleFactory.CUSTOMER);
         this.roles.add(basicUserRoleFactory.SUBSCRIBERCUSTOMER);

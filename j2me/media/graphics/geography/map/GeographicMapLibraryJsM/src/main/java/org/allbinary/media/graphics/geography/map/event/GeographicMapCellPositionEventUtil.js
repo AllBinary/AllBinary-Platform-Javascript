@@ -17,11 +17,11 @@ import { CellPositionFactory } from '../../../../../../../org/allbinary/graphics
 //not GWT import const GeographicMapCellPositionTracking
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GeographicMapCellPositionEvent } from './GeographicMapCellPositionEvent.js';
-//not GWT import - same folder const GeographicMapCellPositionEvent
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPositionEvent
 import { GeographicMapCellPositionEventHandler } from './GeographicMapCellPositionEventHandler.js';
-//not GWT import - same folder const GeographicMapCellPositionEventHandler
+//sameFolderImports - not GWT import - same folder const GeographicMapCellPositionEventHandler
 export class GeographicMapCellPositionEventUtil extends Object {
-    constructor(anyType = {}) {
+    constructor(anyType) {
         super();
         this.geographicMapCellPositionEventHandler = GeographicMapCellPositionEventHandler.getInstance();
         this.geographicMapCellPositionEvent = new GeographicMapCellPositionEvent(anyType, CellPositionFactory.getInstance().NONE);

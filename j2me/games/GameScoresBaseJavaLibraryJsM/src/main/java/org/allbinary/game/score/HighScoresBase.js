@@ -17,7 +17,7 @@ import { RuntimeException } from '../../../../java/lang/RuntimeException.js';
 //not GWT import const GameInfo
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const HighScoresHelperBaseInterface
+//sameFolderImports - not GWT import - same folder const HighScoresHelperBaseInterface
 export class HighScoresBase extends Object {
     constructor() {
         super();

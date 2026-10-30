@@ -37,7 +37,7 @@ export class DefaultGameInitializationListener extends Object {
         this.logUtil = LogUtil.getInstance();
         this.swtJOGLProcessor = SWTJOGLProcessor.getInstance();
         this.firstTime = true;
-        var gameInitializedEventHandler = GameInitializedEventHandler.getInstance();
+        let gameInitializedEventHandler = GameInitializedEventHandler.getInstance();
         ;
         gameInitializedEventHandler.removeAllListeners();
         gameInitializedEventHandler.addListenerInterface(this);
@@ -46,9 +46,9 @@ export class DefaultGameInitializationListener extends Object {
         ForcedLogUtil.log(EventStrings.getInstance().PERFORMANCE_MESSAGE, this);
     }
     onGameInitialized(gameInitializedEvent) {
-        var ON_GAME_INITIALIZED = "onGameInitialized";
+        let ON_GAME_INITIALIZED = "onGameInitialized";
         ;
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
         try {
             this.logUtil.putF(commonStrings.START, this, ON_GAME_INITIALIZED);
@@ -63,10 +63,12 @@ export class DefaultGameInitializationListener extends Object {
             else {
                 this.swtJOGLProcessor.onSurfaceChanged();
             }
-            //: 
         }
-        catch (e) {
-            this.logUtil.put(commonStrings.EXCEPTION, this, ON_GAME_INITIALIZED, e);
+        catch (caught) {
+            {
+                const e = caught;
+                this.logUtil.put(commonStrings.EXCEPTION, this, ON_GAME_INITIALIZED, e);
+            }
         }
     }
 }

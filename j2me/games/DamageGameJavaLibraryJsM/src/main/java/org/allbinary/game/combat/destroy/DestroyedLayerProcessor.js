@@ -39,20 +39,20 @@ export class DestroyedLayerProcessor extends BasicLayerProcessor {
     }
     //@Throws(Exception.constructor)
     process(allBinaryLayerManager) {
-        var list = this.getList();
+        let list = this.getList();
         ;
-        var size = list.size();
+        let size = list.size();
         ;
-        var destroyedEventHandler = DestroyedEventHandler.getInstance();
+        let destroyedEventHandler = DestroyedEventHandler.getInstance();
         ;
-        var destroyEventCircularStaticPool = DestroyEventCircularStaticPool.getInstance();
+        let destroyEventCircularStaticPool = DestroyEventCircularStaticPool.getInstance();
         ;
-        var destroyedEvent;
+        let destroyedEvent;
         ;
-        var layerInterface;
+        let layerInterface;
         ;
-        for (var index = 0; index < size; index++) {
-            var layerInterfaceCanBeNull = list.objectArray[index];
+        for (let index = 0; index < size; index++) {
+            let layerInterfaceCanBeNull = list.objectArray[index];
             ;
             if (layerInterfaceCanBeNull !=
                 null) {
@@ -62,7 +62,7 @@ export class DestroyedLayerProcessor extends BasicLayerProcessor {
                 destroyedEventHandler.fireEvent(destroyedEvent);
             }
             else {
-                var commonStrings = CommonStrings.getInstance();
+                let commonStrings = CommonStrings.getInstance();
                 ;
             }
         }

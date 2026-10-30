@@ -22,7 +22,7 @@ import { AllBinaryEventObject } from '../../../../org/allbinary/logic/util/event
 //not GWT import const AllBinaryEventObject
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not GWT import - same folder const CompleteMotionGestureInputInterface
+//sameFolderImports - not GWT import - same folder const CompleteMotionGestureInputInterface
 export class CompleteMotionGestureInputEvent extends AllBinaryEventObject {
     constructor(name, motionGestureInput) {
         super(motionGestureInput);
@@ -33,12 +33,14 @@ export class CompleteMotionGestureInputEvent extends AllBinaryEventObject {
         this.setName(name);
         try {
             this.setMotionGestureInput(motionGestureInput);
-            //: 
         }
-        catch (e) {
-            var commonStrings = CommonStrings.getInstance();
-            ;
-            this.logUtil.put(commonStrings.EXCEPTION, this, "InputToGameKeyEventAction", e);
+        catch (caught) {
+            {
+                const e = caught;
+                let commonStrings = CommonStrings.getInstance();
+                ;
+                this.logUtil.put(commonStrings.EXCEPTION, this, "InputToGameKeyEventAction", e);
+            }
         }
     }
     setName(name) {

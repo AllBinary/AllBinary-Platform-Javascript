@@ -14,10 +14,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
-//not GWT import - same folder const ArtificialIntelligence
+//sameFolderImports - not GWT import - same folder const ArtificialIntelligence
 export class ArtificialIntelligenceFactory extends Object {
     //@Throws(Exception.constructor)
-    getInstance(anyType = {}) {
+    getInstance(anyType) {
         throw new RuntimeException();
     }
 }

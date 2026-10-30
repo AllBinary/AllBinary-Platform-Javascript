@@ -21,7 +21,7 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const TiledMap
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TileMapPlacementVisitor } from './TileMapPlacementVisitor.js';
-//not GWT import - same folder const TileMapPlacementVisitor
+//sameFolderImports - not GWT import - same folder const TileMapPlacementVisitor
 export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
     constructor() {
         super(...arguments);
@@ -29,18 +29,18 @@ export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
         this.randomFactory = MyRandomFactory.getInstance();
     }
     visit(lastMap, mapData) {
-        var layerIndex = 0;
+        let layerIndex = 0;
         ;
-        var tileLayer = lastMap.getLayer(layerIndex);
+        let tileLayer = lastMap.getLayer(layerIndex);
         ;
-        var mapArray = tileLayer.getMapArray();
+        let mapArray = tileLayer.getMapArray();
         ;
-        var size = mapData.length;
+        let size = mapData.length;
         ;
-        var size2 = mapData[0].length;
+        let size2 = mapData[0].length;
         ;
-        for (var index = 0; index < size; index++) {
-            for (var index2 = 0; index2 < size2; index2++) {
+        for (let index = 0; index < size; index++) {
+            for (let index2 = 0; index2 < size2; index2++) {
                 if (mapArray[index][index2] == 14) {
                 }
                 else {
@@ -48,7 +48,7 @@ export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
                 }
                 if (index % 7 == 0) {
                     if (mapArray[index][index2] == 19) {
-                        var randomInt = this.randomFactory.getAbsoluteNextIntAllowZero(3);
+                        let randomInt = this.randomFactory.getAbsoluteNextIntAllowZero(3);
                         ;
                         if (randomInt == 0) {
                             mapData[index][index2] = 1;
@@ -61,7 +61,7 @@ export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
                         }
                     }
                     else if (mapArray[index][index2] == 17) {
-                        var randomInt = this.randomFactory.getAbsoluteNextIntAllowZero(3);
+                        let randomInt = this.randomFactory.getAbsoluteNextIntAllowZero(3);
                         ;
                         if (randomInt == 0) {
                             mapData[index][index2] = 17;
@@ -76,7 +76,7 @@ export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
                 }
                 if (index2 % 7 == 0) {
                     if (mapArray[index][index2] == 34) {
-                        var randomInt = this.randomFactory.getAbsoluteNextIntAllowZero(4);
+                        let randomInt = this.randomFactory.getAbsoluteNextIntAllowZero(4);
                         ;
                         if (randomInt == 0) {
                             mapData[index][index2] = 33;
@@ -96,15 +96,15 @@ export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
         }
     }
     visit2(mapArray, mapData, index, index2) {
-        var commonStrings = CommonStrings.getInstance();
+        let commonStrings = CommonStrings.getInstance();
         ;
-        var countX = 0;
+        let countX = 0;
         ;
-        var countY = 0;
+        let countY = 0;
         ;
-        var index3 = index - 1;
+        let index3 = index - 1;
         ;
-        for (var index4 = index2 - 1; index4 > 0; index4--) {
+        for (let index4 = index2 - 1; index4 > 0; index4--) {
             index3--;
             if (index3 < 0 || index4 < 0) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,17 +112,17 @@ export class PropsTileMapPlacementVisitor extends TileMapPlacementVisitor {
             }
             if (mapArray[index3][index4] != 14 || mapData[index3][index4] != 0) {
                 if (countX > 10 && countY > 10) {
-                    for (var index5 = index3 + 1; index5 < index - 1; index5++) {
-                        for (var index6 = index4 + 1; index6 < index2 - 1; index6++) {
+                    for (let index5 = index3 + 1; index5 < index - 1; index5++) {
+                        for (let index6 = index4 + 1; index6 < index2 - 1; index6++) {
                             if (mapArray[index5][index6] != 14 || mapData[index5][index6] != 0) {
                                 //if statement needs to be on the same line and ternary does not work the same way.
                                 return;
                             }
                         }
                     }
-                    var x = index - (countX / 2);
+                    let x = index - (globalThis.Math.trunc(countX / 2));
                     ;
-                    var y = index2 - (countY / 2);
+                    let y = index2 - (globalThis.Math.trunc(countY / 2));
                     ;
                     if (x >= 0 && y >= 0 && x < mapData.length && y < mapData[0].length) {
                     }

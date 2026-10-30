@@ -20,15 +20,15 @@ export class VectorUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return VectorUtil.instance;
     }
-    getSize(anyType = {}) {
-        var vector = anyType;
+    getSize(anyType) {
+        let vector = anyType;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return vector.length;
         ;
     }
-    elementAt(anyType = {}, index) {
-        var vector = anyType;
+    elementAt(anyType, index) {
+        let vector = anyType;
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return vector.elementAt(index);

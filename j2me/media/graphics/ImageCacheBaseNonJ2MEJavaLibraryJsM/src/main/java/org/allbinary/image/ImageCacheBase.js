@@ -35,7 +35,7 @@ const StdUtil = globalThis.org.allbinary.logic.StdUtil;
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { ImageFactory } from './ImageFactory.js';
-//not GWT import - same folder const ImageFactory
+//sameFolderImports - not GWT import - same folder const ImageFactory
 export class ImageCacheBase extends Object {
     constructor() {
         super();
@@ -49,15 +49,15 @@ export class ImageCacheBase extends Object {
         this.availableListOfList = new Array(this.SIZE);
         this.volume = 0;
         this.nextIndex = 0;
-        for (var index = this.listOfList.length - 1; index >= 0; index--) {
+        for (let index = this.listOfList.length - 1; index >= 0; index--) {
             this.listOfList[index] = new BasicArrayListD();
         }
-        for (var index = this.availableListOfList.length - 1; index >= 0; index--) {
+        for (let index = this.availableListOfList.length - 1; index >= 0; index--) {
             this.availableListOfList[index] = new BasicArrayListD();
         }
     }
-    getImage(resourceId = {}) {
-        var imageCanBeNull = this.hashtable.get(resourceId);
+    getImage(resourceId) {
+        let imageCanBeNull = this.hashtable.get(resourceId);
         ;
         if (imageCanBeNull ==
             null) {
@@ -68,18 +68,18 @@ export class ImageCacheBase extends Object {
         return imageCanBeNull;
     }
     releaseAll() {
-        for (var index = this.listOfList.length - 1; index >= 0; index--) {
+        for (let index = this.listOfList.length - 1; index >= 0; index--) {
             this.availableListOfList[index].clear();
             this.availableListOfList[index].addAllList(this.listOfList[index]);
         }
         this.logUtil.putF(new StringMaker().append("ImageCache: ").append(this.toString()).toString(), this, "releaseAll");
     }
     getIndexWH(width, height) {
-        var foundIndex = -1;
+        let foundIndex = -1;
         ;
-        var size = this.widths.length;
+        let size = this.widths.length;
         ;
-        for (var index = 0; index < size; index++) {
+        for (let index = 0; index < size; index++) {
             if (this.widths[index] == width && this.heights[index] == height) {
                 foundIndex = index;
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +92,7 @@ export class ImageCacheBase extends Object {
     getFromAvailable(foundIndex, width, height) {
         if (foundIndex != -1) {
             if (this.availableListOfList[foundIndex].size() > 0) {
-                var list = this.availableListOfList[foundIndex];
+                let list = this.availableListOfList[foundIndex];
                 ;
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return list.removeAt(list.size() - 1);
@@ -106,7 +106,7 @@ export class ImageCacheBase extends Object {
         throw new RuntimeException();
     }
     //@Throws(Exception.constructor)
-    getWithKey(key = {}) {
+    getWithKey(key) {
         throw new RuntimeException();
     }
     //@Throws(Exception.constructor)
@@ -116,22 +116,22 @@ export class ImageCacheBase extends Object {
         ;
     }
     //@Throws(Exception.constructor)
-    createImageFromInputStream(key = {}, inputStream) {
+    createImageFromInputStream(key, inputStream) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.imageFactory.createImageFromInputStream(key, inputStream);
         ;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
-        for (var index = this.nextIndex - 1; index >= 0; index--) {
-            var width = this.widths[index];
+        for (let index = this.nextIndex - 1; index >= 0; index--) {
+            let width = this.widths[index];
             ;
-            var height = this.heights[index];
+            let height = this.heights[index];
             ;
-            var total = this.listOfList[index].size();
+            let total = this.listOfList[index].size();
             ;
-            var totalAvailable = this.availableListOfList[index].size();
+            let totalAvailable = this.availableListOfList[index].size();
             ;
             stringBuffer.append(" w: ");
             stringBuffer.appendint(width);

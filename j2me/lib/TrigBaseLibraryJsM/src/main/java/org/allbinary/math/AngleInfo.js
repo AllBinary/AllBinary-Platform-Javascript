@@ -19,11 +19,11 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
-//not GWT import - same folder const AngleIncrementInfo
+//sameFolderImports - not GWT import - same folder const AngleIncrementInfo
 import { AngleIncrementInfoFactory } from './AngleIncrementInfoFactory.js';
-//not GWT import - same folder const AngleIncrementInfoFactory
+//sameFolderImports - not GWT import - same folder const AngleIncrementInfoFactory
 import { FrameUtil } from './FrameUtil.js';
-//not GWT import - same folder const FrameUtil
+//sameFolderImports - not GWT import - same folder const FrameUtil
 export class AngleInfo extends Object {
     static getInstance(angleIncrement) {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,7 +36,7 @@ export class AngleInfo extends Object {
         this.angleIncrementInfo = angleIncrementInfo;
     }
     adjustAngle(frame) {
-        var newAngle = this.angleIncrementInfo.getAngleIncrement() * frame - 90;
+        let newAngle = this.angleIncrementInfo.getAngleIncrement() * frame - 90;
         ;
         this.setAngle(this.frameUtil.adjustAngleToFrameAngle(newAngle));
     }
@@ -52,7 +52,7 @@ export class AngleInfo extends Object {
         return this.angleIncrementInfo;
     }
     toString() {
-        var stringBuffer = new StringMaker();
+        let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(AngleInfo.ANGLE);
         stringBuffer.appendshort(this.angle);

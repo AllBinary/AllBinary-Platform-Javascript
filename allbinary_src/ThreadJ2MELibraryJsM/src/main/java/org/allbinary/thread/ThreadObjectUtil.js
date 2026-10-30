@@ -5,7 +5,7 @@ import { TsUtil } from '../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { NullPriorityRunnable } from './NullPriorityRunnable.js';
-//not GWT import - same folder const PriorityRunnable
+//sameFolderImports - not GWT import - same folder const PriorityRunnable
 export class ThreadObjectUtil extends Object {
     constructor() {
         super(...arguments);
@@ -27,7 +27,7 @@ export class ThreadObjectUtil extends Object {
         TsUtil.getInstance().waitFor(anyType, delay);
     }
     processThread(runnable) {
-        var thread = new Thread(runnable);
+        let thread = new Thread(runnable);
         ;
         thread.start();
     }

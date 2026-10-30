@@ -31,7 +31,7 @@ export class InGameOptionsForm extends CommandForm {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
-        var gameFeatureFormUtil = GameFeatureFormUtil.getInstance();
+        let gameFeatureFormUtil = GameFeatureFormUtil.getInstance();
         ;
         gameFeatureFormUtil.addChoiceGroup(this, InGameFeatureChoiceGroups.getExclusiveInstance().get(), ChoiceI.EXCLUSIVE);
         gameFeatureFormUtil.addChoiceGroup(this, InGameFeatureChoiceGroups.getMultipleInstance().get(), ChoiceI.MULTIPLE);
