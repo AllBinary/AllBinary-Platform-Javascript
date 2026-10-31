@@ -18,14 +18,25 @@ import { IncludeFileExtensionsBooleanFileVisitor } from '../../../../../../org/a
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DirectoryOrIncludeFileExtensionBooleanFileVisitor extends IncludeFileExtensionsBooleanFileVisitor {
-    constructor(filterStringBasicArrayList) {
-        super(filterStringBasicArrayList);
+    constructor(...args) {
+        if (args.length === 1) {
+            const filterStringBasicArrayList = args[0];
+            super(filterStringBasicArrayList);
+            this.constructor$0(filterStringBasicArrayList);
+        }
+        else if (args.length === 2) {
+            const filterStringBasicArrayList = args[0];
+            const includesString = args[1];
+            super(filterStringBasicArrayList);
+            this.constructor$1(filterStringBasicArrayList, includesString);
+        }
+    }
+    constructor$0(filterStringBasicArrayList) {
         //For kotlin this is before the body of the constructor.
         this.includesString =
             null;
     }
-    constructor(filterStringBasicArrayList, includesString) {
-        super(filterStringBasicArrayList);
+    constructor$1(filterStringBasicArrayList, includesString) {
         //For kotlin this is before the body of the constructor.
         this.includesString = includesString;
     }

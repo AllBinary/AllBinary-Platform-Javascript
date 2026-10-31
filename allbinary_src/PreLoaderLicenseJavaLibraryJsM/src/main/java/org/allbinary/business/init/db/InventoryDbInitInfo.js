@@ -16,12 +16,21 @@
 import { DbInitInfo } from './DbInitInfo.js';
 //sameFolderImports - not GWT import - same folder const DbInitInfo
 export class InventoryDbInitInfo extends DbInitInfo {
-    constructor() {
-        super(INITFILE, true);
+    constructor(...args) {
+        if (args.length === 0) {
+            super(INITFILE, true);
+            this.constructor$0();
+        }
+        else if (args.length === 1) {
+            const read = args[0];
+            super(INITFILE, read);
+            this.constructor$1(read);
+        }
+    }
+    constructor$0() {
         //For kotlin this is before the body of the constructor.
     }
-    constructor(read) {
-        super(INITFILE, read);
+    constructor$1(read) {
         //For kotlin this is before the body of the constructor.
     }
 }

@@ -15,11 +15,20 @@
 import { Exception } from '../../../../java/lang/Exception.js';
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class InitException extends Exception {
-    constructor() {
-        super();
+    constructor(...args) {
+        if (args.length === 0) {
+            super();
+            this.constructor$0();
+        }
+        else if (args.length === 1) {
+            const msg = args[0];
+            super(msg);
+            this.constructor$1(msg);
+        }
     }
-    constructor(msg) {
-        super(msg);
+    constructor$0() {
+    }
+    constructor$1(msg) {
         //For kotlin this is before the body of the constructor.
     }
 }

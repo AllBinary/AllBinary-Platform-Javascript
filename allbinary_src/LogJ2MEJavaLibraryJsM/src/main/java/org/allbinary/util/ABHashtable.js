@@ -16,12 +16,21 @@ import { Hashtable } from '../../../java/util/Hashtable.js';
 //not GWT import const Hashtable
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABHashtable extends Hashtable {
-    constructor(initialCapacity) {
-        super(initialCapacity);
+    constructor(...args) {
+        if (args.length === 1) {
+            const initialCapacity = args[0];
+            super(initialCapacity);
+            this.constructor$0(initialCapacity);
+        }
+        else if (args.length === 0) {
+            super();
+            this.constructor$1();
+        }
+    }
+    constructor$0(initialCapacity) {
         //For kotlin this is before the body of the constructor.
     }
-    constructor() {
-        super();
+    constructor$1() {
         //For kotlin this is before the body of the constructor.
     }
 }

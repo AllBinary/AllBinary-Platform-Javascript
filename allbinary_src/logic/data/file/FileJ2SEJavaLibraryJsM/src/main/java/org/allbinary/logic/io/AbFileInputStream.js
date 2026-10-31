@@ -13,21 +13,37 @@
 */
 //not GWT import const File
 import { FileInputStream } from '../../../../java/io/FileInputStream.js';
+//not GWT import const FileNotFoundException
+import { AbFile } from '../../../../org/allbinary/logic/io/file/AbFile.js';
 //not GWT import const AbFile
 import { AbFileNativeUtil } from '../../../../org/allbinary/logic/io/file/AbFileNativeUtil.js';
 //not GWT import const AbFileNativeUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class AbFileInputStream extends FileInputStream {
-    constructor(name) {
-        super(name);
+    constructor(...args) {
+        if (args.length === 1 && typeof args[0] === 'string') {
+            const name = args[0];
+            super(name);
+            this.constructor$0(name);
+        }
+        else if (args.length === 1 && args[0] instanceof AbFile) {
+            const file = args[0];
+            super(AbFileNativeUtil.get(file));
+            this.constructor$1(file);
+        }
+        else if (args.length === 1) {
+            const file = args[0];
+            super(file);
+            this.constructor$2(file);
+        }
+    }
+    constructor$0(name) {
         //For kotlin this is before the body of the constructor.
     }
-    constructor(file) {
-        super(AbFileNativeUtil.get(file));
+    constructor$1(file) {
         //For kotlin this is before the body of the constructor.
     }
-    constructor(file) {
-        super(file);
+    constructor$2(file) {
         //For kotlin this is before the body of the constructor.
     }
 }
