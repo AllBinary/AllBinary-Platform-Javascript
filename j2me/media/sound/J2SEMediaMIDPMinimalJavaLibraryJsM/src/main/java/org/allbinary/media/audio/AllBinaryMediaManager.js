@@ -11,10 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { BufferedInputStream } from '../../../../java/io/BufferedInputStream.js';
-//not GWT import const BufferedInputStream
+//not plain js import { BufferedInputStream } 
+const BufferedInputStream = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.io) === null || _b === void 0 ? void 0 : _b.BufferedInputStream) !== null && _c !== void 0 ? _c : class {
+});
 import { ByteArrayInputStream } from '../../../../java/io/ByteArrayInputStream.js';
 //not GWT import const InputStream
 import { Manager } from '../../../../javax/microedition/media/Manager.js';
