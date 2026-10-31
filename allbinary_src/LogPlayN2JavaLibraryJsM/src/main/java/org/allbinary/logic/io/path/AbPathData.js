@@ -20,6 +20,7 @@ const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //not plain js import { CommonSeps } 
 const CommonSeps = globalThis.org.allbinary.string.CommonSeps;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+//Used to correct user input for paths
 export class AbPathData extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

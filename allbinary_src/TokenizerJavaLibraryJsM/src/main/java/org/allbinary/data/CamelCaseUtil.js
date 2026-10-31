@@ -11,10 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 //not plain js import { Character }
-const Character = globalThis.java.lang.Character;
+const Character = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.lang) === null || _b === void 0 ? void 0 : _b.Character) !== null && _c !== void 0 ? _c : class {
+});
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 

@@ -11,11 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 import { Object } from '../../java/lang/Object.js';
 import { System } from '../../java/lang/System.js';
 //import { Double } from '../../java/lang/Double.js';
-const Double = globalThis.java.lang.Double;
+const Double = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.lang) === null || _b === void 0 ? void 0 : _b.Double) !== null && _c !== void 0 ? _c : class {
+});
 //not GWT import const Displayable
 import { Form } from '../../javax/microedition/lcdui/Form.js';
 //not GWT import const RecordStoreNotOpenException

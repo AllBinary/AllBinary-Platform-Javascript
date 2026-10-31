@@ -11,11 +11,14 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 //not GWT import const InputStream
 //not plain js import { InputStreamReader } 
-const InputStreamReader = globalThis.java.io.InputStreamReader;
+const InputStreamReader = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.io) === null || _b === void 0 ? void 0 : _b.InputStreamReader) !== null && _c !== void 0 ? _c : class {
+});
 //not plain js import { ResourceUtil } 
 const ResourceUtil = globalThis.org.allbinary.data.resource.ResourceUtil;
 //not plain js import { LogUtil } 

@@ -11,6 +11,8 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b, _c, _d, _e;
+var _f, _g;
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
 import { ByteArrayOutputStream } from '../../../../../../java/io/ByteArrayOutputStream.js';
@@ -20,7 +22,8 @@ import { StringReader } from '../../../../../../java/io/StringReader.js';
 import { StringWriter } from '../../../../../../java/io/StringWriter.js';
 //not GWT import const StringWriter
 //not plain js import { Writer } 
-const Writer = globalThis.java.io.Writer;
+const Writer = ((_f = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.io) === null || _b === void 0 ? void 0 : _b.Writer) !== null && _f !== void 0 ? _f : class {
+});
 import { DocumentBuilderFactory } from '../../../../../../javax/xml/parsers/DocumentBuilderFactory.js';
 //not GWT import const DocumentBuilderFactory
 import { OutputKeys } from '../../../../../../javax/xml/transform/OutputKeys.js';
@@ -40,8 +43,9 @@ import { CharacterSetData } from '../../../../../../org/allbinary/logic/java/cha
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const Document
-import { InputSource } from '../../../../../../org/xml/sax/InputSource.js';
-//not GWT import const InputSource
+//not plain js import { InputSource } 
+const InputSource = ((_g = (_e = (_d = (_c = globalThis.org) === null || _c === void 0 ? void 0 : _c.xml) === null || _d === void 0 ? void 0 : _d.sax) === null || _e === void 0 ? void 0 : _e.InputSource) !== null && _g !== void 0 ? _g : class {
+});
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class XmlDocumentHelper extends Object {
     static getInstance() {

@@ -11,9 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../java/lang/Object.js';
-import { Class } from '../../../../java/lang/Class.js';
+//import { Class } from '../../../../java/lang/Class.js';
+const Class = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.lang) === null || _b === void 0 ? void 0 : _b.Class) !== null && _c !== void 0 ? _c : class {
+});
 //not GWT import const Set
 import { HistoryDbInitInfo } from '../../../../org/allbinary/business/init/db/HistoryDbInitInfo.js';
 //not GWT import const HistoryDbInitInfo

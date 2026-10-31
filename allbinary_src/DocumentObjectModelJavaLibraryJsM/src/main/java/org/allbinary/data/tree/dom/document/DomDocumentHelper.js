@@ -18,13 +18,18 @@ import { System } from '../../../../../../java/lang/System.js';
 import { StringBufferInputStream } from '../../../../../../java/io/StringBufferInputStream.js';
 //not GWT import const DocumentBuilder
 import { DocumentBuilderFactory } from '../../../../../../javax/xml/parsers/DocumentBuilderFactory.js';
+//not GWT import const DocumentBuilderFactory
+//not plain js import { CommonPhoneStrings } 
+const CommonPhoneStrings = globalThis.org.allbinary.string.CommonPhoneStrings;
 //not GWT import const Document
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DomDocumentHelper extends Object {
     static init() {
-        System.setProperty("jdk.xml.maxElementDepth", "0");
-        System.setProperty("jdk.xml.xpathExprOpLimit", "0");
-        System.setProperty("jdk.xml.xpathTotalOpLimit", "0");
+        let commonPhoneStrings = CommonPhoneStrings.getInstance();
+        ;
+        System.setProperty("jdk.xml.maxElementDepth", commonPhoneStrings.ZERO);
+        System.setProperty("jdk.xml.xpathExprOpLimit", commonPhoneStrings.ZERO);
+        System.setProperty("jdk.xml.xpathTotalOpLimit", commonPhoneStrings.ZERO);
         let LIMIT = "500000";
         ;
         System.setProperty("jdk.xml.maxGeneralEntitySizeLimit", LIMIT);

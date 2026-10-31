@@ -11,13 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { System } from '../../../../../java/lang/System.js';
 import { IOException } from '../../../../../java/io/IOException.js';
 //not GWT import const IOException
 //not plain js import { URL } 
-const URL = globalThis.java.net.URL;
+const URL = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.net) === null || _b === void 0 ? void 0 : _b.URL) !== null && _c !== void 0 ? _c : class {
+});
 //not GWT import const JarEntry
 import { JarInputStream } from '../../../../../java/util/jar/JarInputStream.js';
 //not GWT import const JarInputStream

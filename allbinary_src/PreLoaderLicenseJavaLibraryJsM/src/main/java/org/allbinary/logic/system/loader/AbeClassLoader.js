@@ -11,8 +11,16 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b, _c, _d;
+var _e, _f;
+/* Generated Code Do Not Modify */
+//import { Class } from '../../../../../java/lang/Class.js';
+const Class = ((_e = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.lang) === null || _b === void 0 ? void 0 : _b.Class) !== null && _e !== void 0 ? _e : class {
+});
 import { ClassLoader } from '../../../../../java/lang/ClassLoader.js';
-import { ClassNotFoundException } from '../../../../../java/lang/ClassNotFoundException.js';
+//import { ClassNotFoundException } from '../../../../../java/lang/ClassNotFoundException.js';
+const ClassNotFoundException = ((_f = (_d = (_c = globalThis.java) === null || _c === void 0 ? void 0 : _c.lang) === null || _d === void 0 ? void 0 : _d.ClassNotFoundException) !== null && _f !== void 0 ? _f : class {
+});
 import { FileInputStream } from '../../../../../java/io/FileInputStream.js';
 //not GWT import const FileInputStream
 import { IOException } from '../../../../../java/io/IOException.js';

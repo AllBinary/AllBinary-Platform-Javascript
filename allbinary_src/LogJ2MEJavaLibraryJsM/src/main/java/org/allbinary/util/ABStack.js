@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 //not plain js import { Stack } 
-const Stack = globalThis.java.util.Stack;
+const Stack = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.util) === null || _b === void 0 ? void 0 : _b.Stack) !== null && _c !== void 0 ? _c : class {
+});
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class ABStack extends Stack {
 }

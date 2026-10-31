@@ -11,9 +11,12 @@
         *
         *  Created By: Travis Berthelot
 */
+var _a, _b;
+var _c;
 /* Generated Code Do Not Modify */
 //import { NumberFormatException } from '../../../../../../java/lang/NumberFormatException.js';
-const NumberFormatException = globalThis.java.lang.NumberFormatException;
+const NumberFormatException = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.lang) === null || _b === void 0 ? void 0 : _b.NumberFormatException) !== null && _c !== void 0 ? _c : class {
+});
 import { Integer } from '../../../../../../java/lang/Integer.js';
 //not GWT import const ABTextFieldItem
 import { ValidatorBase } from '../../../../../../org/allbinary/logic/control/validate/ValidatorBase.js';
