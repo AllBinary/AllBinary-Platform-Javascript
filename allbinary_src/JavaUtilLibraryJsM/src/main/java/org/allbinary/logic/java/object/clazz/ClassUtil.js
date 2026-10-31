@@ -42,8 +42,10 @@ export class ClassUtil extends Object {
             return ClassUtil.viewAll(anyType.constructor, lineBreak);
             ;
         }
-        else if ()
-            ;
+        else {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return "Object Null";
+        }
     }
     static viewAll$overload2(myClass, lineBreak) {
         if (myClass !=
@@ -76,8 +78,10 @@ export class ClassUtil extends Object {
             return stringBuffer.toString();
             ;
         }
-        else if ()
-            ;
+        else {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return "Class Null";
+        }
     }
     constructor() {
         super();

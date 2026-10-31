@@ -18,6 +18,8 @@ import { Object } from '../../../../java/lang/Object.js';
 //import { Class } from '../../../../java/lang/Class.js';
 const Class = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.lang) === null || _b === void 0 ? void 0 : _b.Class) !== null && _c !== void 0 ? _c : class {
 });
+//not GWT import const HashMap
+import { Map } from '../../../../java/util/Map.js';
 //not GWT import const DatabaseConnectionInfoInterface
 import { DbConnectionInfo } from '../../../../org/allbinary/business/init/db/DbConnectionInfo.js';
 //not GWT import const DbConnectionInfo
@@ -30,6 +32,8 @@ const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { StringValidationUtil } from '../../../../org/allbinary/logic/string/StringValidationUtil.js';
+//not GWT import const StringValidationUtil
+import { AbeClientInformationInterface } from '../../../../org/allbinary/logic/system/security/licensing/AbeClientInformationInterface.js';
 //not GWT import const AbeClientInformationInterface
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
@@ -39,9 +43,17 @@ import { DynamicInitDb } from './DynamicInitDb.js';
 import { InitializerData } from './InitializerData.js';
 //sameFolderImports - not GWT import - same folder const InitializerData
 export class InitializerDatabase extends Object {
-    constructor(abeClientInformation, map) {
+    constructor(...args) {
         super();
         this.logUtil = LogUtil.getInstance();
+        if (args.length === 2 && args[0] instanceof AbeClientInformationInterface && args[1] instanceof Map) {
+            this.constructor$0(args[0], args[1]);
+        }
+        else if (args.length === 2) {
+            this.constructor$1(args[0], args[1]);
+        }
+    }
+    constructor$0(abeClientInformation, map) {
         let stringBuffer = new StringMaker();
         ;
         let hashMap = StdUtil.getInstance().createHashMap();
@@ -67,9 +79,7 @@ export class InitializerDatabase extends Object {
         }
         this.getFormData(abeClientInformation, hashMap);
     }
-    constructor(abeClientInformation, initHashMap) {
-        super();
-        this.logUtil = LogUtil.getInstance();
+    constructor$1(abeClientInformation, initHashMap) {
         this.getFormData(abeClientInformation, initHashMap);
     }
     getFormData(abeClientInformation, hashMap) {

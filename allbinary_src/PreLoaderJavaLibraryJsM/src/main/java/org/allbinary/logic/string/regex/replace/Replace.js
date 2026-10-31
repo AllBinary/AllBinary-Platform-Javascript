@@ -59,13 +59,24 @@ export class Replace extends Object {
             }
         }
     }
-    constructor(key, value) {
+    constructor(...args) {
         super();
         this.logUtil = LogUtil.getInstance();
         this.j2seUtil = J2SEUtil.getInstance();
         this.REPLACERS_ = "Replacers: ";
         this.ALL = "all";
         this.FOUND_KEY = "found key total: ";
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string') {
+            this.constructor$0(args[0], args[1]);
+        }
+        else if (args.length === 2) {
+            this.constructor$1(args[0], args[1]);
+        }
+        else if (args.length === 1) {
+            this.constructor$2(args[0]);
+        }
+    }
+    constructor$0(key, value) {
         this.hashMap = StdUtil.getInstance().createHashMap();
         this.hashMap.put([
             key
@@ -73,23 +84,11 @@ export class Replace extends Object {
             value
         ]);
     }
-    constructor(keys, values) {
-        super();
-        this.logUtil = LogUtil.getInstance();
-        this.j2seUtil = J2SEUtil.getInstance();
-        this.REPLACERS_ = "Replacers: ";
-        this.ALL = "all";
-        this.FOUND_KEY = "found key total: ";
+    constructor$1(keys, values) {
         this.hashMap = StdUtil.getInstance().createHashMap();
         this.hashMap.put(keys, values);
     }
-    constructor(hashMap) {
-        super();
-        this.logUtil = LogUtil.getInstance();
-        this.j2seUtil = J2SEUtil.getInstance();
-        this.REPLACERS_ = "Replacers: ";
-        this.ALL = "all";
-        this.FOUND_KEY = "found key total: ";
+    constructor$2(hashMap) {
         this.hashMap = hashMap;
     }
     all(replace) {

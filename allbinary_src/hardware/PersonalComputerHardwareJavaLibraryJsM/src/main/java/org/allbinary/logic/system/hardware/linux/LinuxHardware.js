@@ -51,20 +51,23 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { PCComponentFactory } from './PCComponentFactory.js';
 //sameFolderImports - not GWT import - same folder const PCComponentFactory
 export class LinuxHardware extends Object {
-    constructor(path) {
+    constructor(...args) {
         super();
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.NAME = "Linux Hardware Profile";
         this.MINHARDWARE = 5;
+        if (args.length === 1) {
+            this.constructor$0(args[0]);
+        }
+        else if (args.length === 0) {
+            this.constructor$1();
+        }
+    }
+    constructor$0(path) {
         this.init(path);
     }
-    constructor() {
-        super();
-        this.logUtil = LogUtil.getInstance();
-        this.commonStrings = CommonStrings.getInstance();
-        this.NAME = "Linux Hardware Profile";
-        this.MINHARDWARE = 5;
+    constructor$1() {
         this.init(PCIFILE);
         if (this.componentInterfaceVector.size() < this.MINHARDWARE) {
             throw new Exception("Not Enough Data For A Valid License On Linux");

@@ -160,26 +160,6 @@
                 <version>3.6.3</version>
                 <executions>
                     <execution>
-                        <id>npm-install-typescript</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>cmd</executable>
-                            <workingDirectory>${basedir}</workingDirectory>
-                            <arguments>
-                                <argument>/c</argument>
-                                <argument>npm</argument>
-                                <argument>install</argument>
-                                <argument>typescript</argument>
-                                <argument>--no-save</argument>
-                                <argument>--no-audit</argument>
-                                <argument>--no-fund</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>tsc-compile</id>
                         <phase>generate-sources</phase>
                         <goals>
@@ -201,6 +181,48 @@
         </plugins>
         
     </build>
+
+    <profiles>
+        <profile>
+            <id>npm-install-typescript-when-missing</id>
+            <activation>
+                <file>
+                    <missing>${basedir}/node_modules/typescript/package.json</missing>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>3.6.3</version>
+                        <executions>
+                            <execution>
+                                <id>npm-install-typescript</id>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>cmd</executable>
+                                    <workingDirectory>${basedir}</workingDirectory>
+                                    <arguments>
+                                        <argument>/c</argument>
+                                        <argument>npm</argument>
+                                        <argument>install</argument>
+                                        <argument>typescript</argument>
+                                        <argument>--no-save</argument>
+                                        <argument>--no-audit</argument>
+                                        <argument>--no-fund</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
 

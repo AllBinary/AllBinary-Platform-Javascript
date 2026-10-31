@@ -46,18 +46,22 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 import { CpuInfo } from './CpuInfo.js';
 //sameFolderImports - not GWT import - same folder const CpuInfo
 export class Cpu extends Object {
-    constructor(filePath) {
+    constructor(...args) {
         super();
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.CPUFILE = "/proc/cpuinfo";
+        if (args.length === 1) {
+            this.constructor$0(args[0]);
+        }
+        else if (args.length === 0) {
+            this.constructor$1();
+        }
+    }
+    constructor$0(filePath) {
         this.init(filePath);
     }
-    constructor() {
-        super();
-        this.logUtil = LogUtil.getInstance();
-        this.commonStrings = CommonStrings.getInstance();
-        this.CPUFILE = "/proc/cpuinfo";
+    constructor$1() {
         this.init(this.CPUFILE);
     }
     init(...args) {

@@ -48,16 +48,23 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 import { LogConfigData } from './LogConfigData.js';
 //sameFolderImports - not GWT import - same folder const LogConfigData
 export class LogConfig extends Object {
-    constructor(aName, aDescription, aPath, aFileName) {
+    constructor(...args) {
         super();
+        if (args.length === 4) {
+            this.constructor$0(args[0], args[1], args[2], args[3]);
+        }
+        else if (args.length === 1) {
+            this.constructor$1(args[0]);
+        }
+    }
+    constructor$0(aName, aDescription, aPath, aFileName) {
         this.isEnabled = false;
         this.name = aName;
         this.description = aDescription;
         this.path = aPath;
         this.fileName = aFileName;
     }
-    constructor(node) {
-        super();
+    constructor$1(node) {
         let enabledValueNode = DomSearchHelper.getNode(EntryData.getInstance().ENABLE, node.getChildNodes());
         ;
         let isEnabledString = DomNodeHelper.getTextNodeValue(enabledValueNode);

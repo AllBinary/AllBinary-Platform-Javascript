@@ -200,7 +200,7 @@ export class InitSql extends Object {
         stringBuffer.append(this.tableName);
         stringBuffer.append(this.sqlStrings.SET);
         try {
-            let columnArray = updatedKeyValuePairs.keySet().();
+            let columnArray = updatedKeyValuePairs.keySet().toArray();
             ;
             let size = columnArray.length;
             ;

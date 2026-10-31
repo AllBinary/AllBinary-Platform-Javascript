@@ -118,7 +118,7 @@ export class ModDomHelper extends Object {
         ;
         let keySet = hashMap.keys();
         ;
-        let keyArray = keySet.();
+        let keyArray = keySet.toArray();
         ;
         let size = keyArray.length;
         ;
@@ -203,7 +203,7 @@ export class ModDomHelper extends Object {
         ;
         let keySet = hashMap.keys();
         ;
-        let keyArray = keySet.();
+        let keyArray = keySet.toArray();
         ;
         let size = keyArray.length;
         ;

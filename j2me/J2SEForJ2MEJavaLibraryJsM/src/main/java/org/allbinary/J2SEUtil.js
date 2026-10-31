@@ -22,13 +22,13 @@ export class J2SEUtil extends Object {
         return J2SEUtil.instance;
     }
     getHashMapAsArray(hashMap) {
-        let objectArray = hashMap.keys().();
+        let objectArray = hashMap.keys().toArray();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return objectArray;
     }
     getMapAsArray(map) {
-        let objectArray = map.keySet().();
+        let objectArray = map.keySet().toArray();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return objectArray;

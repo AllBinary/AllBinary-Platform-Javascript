@@ -19,12 +19,19 @@ import { InitDb } from './InitDb.js';
 //sameFolderImports - not GWT import - same folder const InitDb
 //Warning you must have sql root access
 export class DynamicInitDb extends InitDb {
-    constructor(abeClientInformation) {
+    constructor(...args) {
         super();
+        if (args.length === 1) {
+            this.constructor$0(args[0]);
+        }
+        else if (args.length === 2) {
+            this.constructor$1(args[0], args[1]);
+        }
+    }
+    constructor$0(abeClientInformation) {
         this.setHelper(InitDbHelperFactory.getInstance(abeClientInformation));
     }
-    constructor(abeClientInformation, databaseConnectionInfoInterface) {
-        super();
+    constructor$1(abeClientInformation, databaseConnectionInfoInterface) {
         this.setHelper(InitDbHelperFactory.getInstance(abeClientInformation, databaseConnectionInfoInterface));
     }
 }

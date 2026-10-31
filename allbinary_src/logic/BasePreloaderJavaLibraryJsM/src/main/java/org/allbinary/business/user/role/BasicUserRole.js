@@ -18,12 +18,20 @@ import { Object } from '../../../../../java/lang/Object.js';
 import { BasicUserRoles } from './BasicUserRoles.js';
 //sameFolderImports - not GWT import - same folder const BasicUserRoles
 export class BasicUserRole extends Object {
-    constructor(aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout) {
-        this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout);
+    constructor(...args) {
+        super();
+        if (args.length === 4) {
+            this.constructor$0(args[0], args[1], args[2], args[3]);
+        }
+        else if (args.length === 5) {
+            this.constructor$1(args[0], args[1], args[2], args[3], args[4]);
+        }
+    }
+    constructor$0(aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout) {
+        this.constructor$1(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout);
         //For kotlin this is before the body of the constructor.
     }
-    constructor(aRole, aDisplayValue, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout) {
-        super();
+    constructor$1(aRole, aDisplayValue, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout) {
         this.m_int_RoleId = a_int_RoleId;
         this.role = aRole;
         this.displayValue = aDisplayValue;

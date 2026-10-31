@@ -22,7 +22,7 @@ const Class = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? vo
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //Warning you must have sql root access
 export class InitDb extends Object {
-    constructor() {
+    constructor(...args) {
         super();
         this.METHOD_CALL_GET_HOST_NAME = "getHostName";
         this.METHOD_CALL_ADD_USERS = "addUsers";
@@ -30,15 +30,16 @@ export class InitDb extends Object {
         this.METHOD_CALL_ADD_TABLES = "addTables";
         this.METHOD_CALL_TEMP_MAIN_PATH = "useTemporaryMainPath";
         this.METHOD_CALL_MAIN_PATH = "useNormalMainPath";
+        if (args.length === 0) {
+            this.constructor$0();
+        }
+        else if (args.length === 1) {
+            this.constructor$1(args[0]);
+        }
     }
-    constructor(dbConnectionInfo) {
-        super();
-        this.METHOD_CALL_GET_HOST_NAME = "getHostName";
-        this.METHOD_CALL_ADD_USERS = "addUsers";
-        this.METHOD_CALL_ADD_DATABASES = "addDatabases";
-        this.METHOD_CALL_ADD_TABLES = "addTables";
-        this.METHOD_CALL_TEMP_MAIN_PATH = "useTemporaryMainPath";
-        this.METHOD_CALL_MAIN_PATH = "useNormalMainPath";
+    constructor$0() {
+    }
+    constructor$1(dbConnectionInfo) {
     }
     setHelper(anyType) {
         this.anyType = anyType;

@@ -30,11 +30,18 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //sameFolderImports - not GWT import - same folder const BasicStoreFrontInterface
 export class BasicStoreFront extends Object {
-    constructor() {
+    constructor(...args) {
         super();
+        if (args.length === 0) {
+            this.constructor$0();
+        }
+        else if (args.length === 1) {
+            this.constructor$1(args[0]);
+        }
     }
-    constructor(storeHashMap) {
-        super();
+    constructor$0() {
+    }
+    constructor$1(storeHashMap) {
         let storeFrontData = StoreFrontData.getInstance();
         ;
         this.name = storeHashMap.get(storeFrontData.NAME);
