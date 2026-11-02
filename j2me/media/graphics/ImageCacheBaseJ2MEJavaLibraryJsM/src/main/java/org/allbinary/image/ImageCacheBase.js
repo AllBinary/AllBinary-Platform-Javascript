@@ -43,8 +43,8 @@ export class ImageCacheBase extends Object {
         this.imageFactory = ImageFactory.getInstance();
         this.hashtable = StdUtil.getInstance().createHashtable();
         this.SIZE = 128;
-        this.widths = new Array(this.SIZE);
-        this.heights = new Array(this.SIZE);
+        this.widths = new Array(this.SIZE).fill(0);
+        this.heights = new Array(this.SIZE).fill(0);
         this.listOfList = new Array(this.SIZE);
         this.availableListOfList = new Array(this.SIZE);
         this.volume = 0;

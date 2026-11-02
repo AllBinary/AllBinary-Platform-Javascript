@@ -22,7 +22,7 @@ export class AllAnimationsEverywhereTileMapPlacementVisitor extends TileMapPlace
         let size2 = mapData[0].length - 7;
         ;
         for (let index = 0; index < size; index++) {
-            for (let index2 = 0; index2 < size2;) {
+            for (let index2 = 0; index2 < size2; index2 += 7) {
                 mapData[index][index2] = 1;
                 mapData[index][index2 + 1] = 17;
                 mapData[index][index2 + 2] = 33;

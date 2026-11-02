@@ -52,7 +52,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
                     this.keymappingBeginWidthArray = NullUtil.getInstance().NULL_INT_ARRAY;
                     this.actionStringDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY;
                     this.inputDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
-                    this.sepArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
+                    this.sepArray = StringUtil.getInstance().ONE_EMPTY_STRING_ARRAY_OF_ARRAYS;
                     this.sepWidthArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
                     this.charHeight = 0;
                 }
@@ -92,11 +92,11 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         let size = inputInfo.length;
         ;
         updateMyFontProperties.actionStringArray = new Array(size);
-        updateMyFontProperties.keymappingBeginWidthArray = new Array(size);
-        updateMyFontProperties.actionStringDeltaXArray = new Array(size);
-        updateMyFontProperties.inputDeltaXArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
+        updateMyFontProperties.keymappingBeginWidthArray = new Array(size).fill(0);
+        updateMyFontProperties.actionStringDeltaXArray = new Array(size).fill(0);
+        updateMyFontProperties.inputDeltaXArray = new Array(size).fill(null).map(() => new Array(0).fill(0));
         updateMyFontProperties.sepArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
-        updateMyFontProperties.sepWidthArray = new Array(size).fill(null).map(() => new Array(0).fill(null));
+        updateMyFontProperties.sepWidthArray = new Array(size).fill(null).map(() => new Array(0).fill(0));
         let list;
         ;
         let keyMappings;
@@ -117,9 +117,9 @@ export class InputMappingHelpPaintable extends HelpPaintable {
             updateMyFontProperties.keymappingBeginWidthArray[index] = (font.stringWidth(stringMaker.append(updateMyFontProperties.actionStringArray[index]).append(keyMappings).toString()) >> 1);
             updateMyFontProperties.actionStringDeltaXArray[index] = font.stringWidth(actionString);
             size2 = list.size();
-            updateMyFontProperties.inputDeltaXArray[index] = new Array(size2);
+            updateMyFontProperties.inputDeltaXArray[index] = new Array(size2).fill(0);
             updateMyFontProperties.sepArray[index] = new Array(size2);
-            updateMyFontProperties.sepWidthArray[index] = new Array(size2);
+            updateMyFontProperties.sepWidthArray[index] = new Array(size2).fill(0);
             for (let index2 = 0; index2 < size2; index2++) {
                 input = list.objectArray[index2];
                 updateMyFontProperties.inputDeltaXArray[index][index2] = font.stringWidth(input.getName());

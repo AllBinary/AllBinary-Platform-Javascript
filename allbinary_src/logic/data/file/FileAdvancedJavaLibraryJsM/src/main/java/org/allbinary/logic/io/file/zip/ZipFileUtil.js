@@ -65,7 +65,7 @@ export class ZipFileUtil extends Object {
             ;
             let stringBuffer = new StringMaker();
             ;
-            let byteArray = new Array(16384);
+            let byteArray = new Array(16384).fill(0);
             ;
             let fileInputStream;
             ;
@@ -111,7 +111,7 @@ export class ZipFileUtil extends Object {
     }
     //@Throws(Exception.constructor)
     unzip(path, zipFile, fileName) {
-        let buffer = new Array(16384);
+        let buffer = new Array(16384).fill(0);
         ;
         let inputStream = null;
         ;

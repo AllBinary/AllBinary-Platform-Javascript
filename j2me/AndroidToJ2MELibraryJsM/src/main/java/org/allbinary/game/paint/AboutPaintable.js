@@ -43,9 +43,9 @@ export class AboutPaintable extends Paintable {
         this.aboutBeginWidth = 0;
         this.anchor = Anchor.TOP_LEFT;
         this.info = info;
-        this.infoBeginWidth = new Array(this.info.length);
+        this.infoBeginWidth = new Array(this.info.length).fill(0);
         this.developers = developers;
-        this.developersBeginWidth = new Array(this.developers.length);
+        this.developersBeginWidth = new Array(this.developers.length).fill(0);
     }
     updateMeasurement(graphics) {
         let font = graphics.getFont();

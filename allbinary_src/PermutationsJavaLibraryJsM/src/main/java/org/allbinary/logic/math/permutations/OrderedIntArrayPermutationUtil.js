@@ -25,7 +25,7 @@ export class OrderedIntArrayPermutationUtil extends Object {
     static main(args) {
         let TOTAL = 3;
         ;
-        let data = new Array(TOTAL);
+        let data = new Array(TOTAL).fill(0);
         ;
         for (let i = 0; i < TOTAL; i++) {
             data[i] = i;

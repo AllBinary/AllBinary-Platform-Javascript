@@ -39,7 +39,7 @@ export class OpenGLESGL10Image extends OpenGLESImage {
                 this.glUtil = GLUtil.getInstance();
                 this.displayInfoSingleton = DisplayInfoSingleton.getInstance();
                 this.textureVertexFloatBuffer = outer$OpenGLESGL10Image.textureVertexFloatBuffer;
-                this.regionTextureRectangleFloatArray = new Array(8);
+                this.regionTextureRectangleFloatArray = new Array(8).fill(0);
                 this.regionTextureVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder()).asFloatBuffer();
                 this.regionRectangleFloatArray = [
                 //Otherwise - values - DoubleLiteralExpr

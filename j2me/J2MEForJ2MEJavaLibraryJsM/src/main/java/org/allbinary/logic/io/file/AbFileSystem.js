@@ -55,7 +55,7 @@ export class AbFileSystem extends Object {
         throw new TypeError('No matching overload: readAsString');
     }
     readAsString$overload1(fileName) {
-        let bytes = new Array(1000000);
+        let bytes = new Array(1000000).fill(0);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.readAsString(fileName, bytes);

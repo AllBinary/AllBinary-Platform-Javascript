@@ -80,7 +80,7 @@ export class DatabaseEncoder extends Object {
                 byteOfData = vector.objectArray[index];
                 byteVector.add(Number(byteOfData));
             }
-            let decode = new Array(byteVector.size());
+            let decode = new Array(byteVector.size()).fill(0);
             ;
             let decodeIndex = 0;
             ;

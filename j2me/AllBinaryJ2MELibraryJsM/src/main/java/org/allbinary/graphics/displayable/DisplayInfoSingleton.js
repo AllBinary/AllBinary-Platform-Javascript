@@ -64,9 +64,9 @@ export class DisplayInfoSingleton extends Object {
         this.ORIENTATION = "ORIENTATION";
         this.ADJUSTING_FOR_SCALING_IN_PORTRAIT = "Adjusting for Scaling in portrait display ratio: ";
         this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE = "Adjusting for Scaling in landscape display ratio: ";
-        this.last = new Array(4);
-        this.lastHalf = new Array(4);
-        this.full = new Array(4);
+        this.last = new Array(4).fill(0);
+        this.lastHalf = new Array(4).fill(0);
+        this.full = new Array(4).fill(0);
         this.top = 0;
         this.left = 0;
         this.xOffset = 0;

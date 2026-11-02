@@ -42,7 +42,7 @@ export class BasicTopViewGeographicMapCellType extends Object {
         this.logUtil = LogUtil.getInstance();
         let size = types.size();
         ;
-        let typeArray = new Array(size);
+        let typeArray = new Array(size).fill(0);
         ;
         let typeAsInteger;
         ;

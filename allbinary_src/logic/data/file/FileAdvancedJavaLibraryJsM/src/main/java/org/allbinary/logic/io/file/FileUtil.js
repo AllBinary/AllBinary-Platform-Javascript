@@ -117,7 +117,7 @@ export class FileUtil extends Object {
     //@Throws(Exception.constructor)
     write$overload2(inputStream, dataOutputStream) {
         try {
-            dataOutputStream = StreamUtil.getInstance().get(inputStream, dataOutputStream, new Array(16384));
+            dataOutputStream = StreamUtil.getInstance().get(inputStream, dataOutputStream, new Array(16384).fill(0));
             dataOutputStream.flush();
         }
         finally {
@@ -144,7 +144,7 @@ export class FileUtil extends Object {
     //@Throws(Exception.constructor)
     copy$overload1(dataInputStream, dataOutputStream) {
         try {
-            dataOutputStream = StreamUtil.getInstance().get(dataInputStream, dataOutputStream, new Array(16384));
+            dataOutputStream = StreamUtil.getInstance().get(dataInputStream, dataOutputStream, new Array(16384).fill(0));
             dataOutputStream.flush();
         }
         finally {

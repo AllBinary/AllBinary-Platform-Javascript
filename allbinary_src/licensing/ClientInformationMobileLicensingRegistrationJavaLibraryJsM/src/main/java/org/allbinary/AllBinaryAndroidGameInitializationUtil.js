@@ -33,5 +33,6 @@ export class AllBinaryAndroidGameInitializationUtil extends Object {
         ;
         resourceUtil.addResource(licenseInitInfoUtil.INITFILENAME, Integer.valueOf(androidResources.raw.licenseinitdata));
         resourceUtil.addResource(PartnerIdentifierFileUtil.getInstance().FILE_NAME, Integer.valueOf(androidResources.raw.partner));
+        resourceUtil.addResource(licenseInitInfoUtil.ABOUT, Integer.valueOf(androidResources.raw.about));
     }
 }

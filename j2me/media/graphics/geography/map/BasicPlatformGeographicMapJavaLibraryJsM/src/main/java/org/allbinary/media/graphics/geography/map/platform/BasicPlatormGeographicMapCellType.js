@@ -36,7 +36,7 @@ export class BasicPlatormGeographicMapCellType extends Object {
         super();
         let size = types.size();
         ;
-        let typeArray = new Array(size);
+        let typeArray = new Array(size).fill(0);
         ;
         let typeAsInteger;
         ;

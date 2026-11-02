@@ -57,7 +57,7 @@ export class VectorExplosionGenerator extends Object {
         ;
         let size = list.size();
         ;
-        let points = new Array(size).fill(null).map(() => new Array(2).fill(null));
+        let points = new Array(size).fill(null).map(() => new Array(2).fill(0));
         ;
         for (let index = 0; index < size; index++) {
             point = list.objectArray[index];

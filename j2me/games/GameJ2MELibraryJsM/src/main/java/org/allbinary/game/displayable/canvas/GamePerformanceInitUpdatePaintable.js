@@ -59,7 +59,7 @@ export class GamePerformanceInitUpdatePaintable extends InitUpdatePaintable {
         ;
         let size = this.baseRefreshHelperCharArray.length - 2;
         ;
-        for (let index = size; index >= 0;) {
+        for (let index = size; index >= 0; index -= 2) {
             charArray = this.baseRefreshHelperCharArray[index];
             charArray2 = this.baseRefreshHelperCharArray[index + 1];
             size2 = charArray.length;

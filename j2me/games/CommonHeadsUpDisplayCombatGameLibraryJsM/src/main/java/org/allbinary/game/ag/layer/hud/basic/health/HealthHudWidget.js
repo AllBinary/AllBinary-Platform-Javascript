@@ -40,7 +40,7 @@ export class HealthHudWidget extends BasicHud {
         this.onHealthChange();
         this.updateMaxWidth = healthInterface.getMaxHealth() * 16;
         this.updateMaxHeight = 16;
-        this.xArray = new Array(30);
+        this.xArray = new Array(30).fill(0);
         this.update();
     }
     update() {

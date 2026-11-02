@@ -29,7 +29,7 @@ export class ImageModifierUtil extends Object {
     constructor() {
         super(...arguments);
         this.imageUtil = ImageUtil.getInstance();
-        this.colorArray = new Array(1);
+        this.colorArray = new Array(1).fill(0);
     }
     static getInstanceOrCreate() {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -52,7 +52,7 @@ export class TouchButtonAndroidResources extends Init {
             TouchButtonBlankResource.getInstance(), TouchButtonGenericActionResource.getInstance(), TouchButtonStartResource.getInstance(), TouchButtonUpResource.getInstance(), TouchButtonDownResource.getInstance(), TouchButtonTurnLeftResource.getInstance(), TouchButtonTurnRightResource.getInstance(), TouchButtonStrafeLeftResource.getInstance(), TouchButtonStrafeRightResource.getInstance()
         ];
         ;
-        let RESOURCE_ARRAY = new Array(RESOURCE_STRING_ARRAY.length);
+        let RESOURCE_ARRAY = new Array(RESOURCE_STRING_ARRAY.length).fill(0);
         ;
         if (CommonButtons.getInstance().STANDARD_BUTTON_SIZE == 128) {
             RESOURCE_ARRAY[0] = androidResources.raw.touch_button_128_by_128;

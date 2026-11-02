@@ -51,7 +51,7 @@ export class StartIntermissionPaintable extends InitUpdatePaintable {
         this.EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
         this.gameCanvas = gameCanvas;
         this.stringArray = stringArray;
-        this.lastWidth = new Array(this.stringArray.length);
+        this.lastWidth = new Array(this.stringArray.length).fill(0);
         this.setBasicColorP(basicColor);
         this.color = basicColor.intValue();
         this.fontSize = font.getSize();

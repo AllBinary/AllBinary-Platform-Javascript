@@ -24,7 +24,7 @@ export class LivesHudWidget extends BasicHud {
         this.lifeInterface = lifeInterface;
         let size = globalThis.Math.trunc(this.getLifeInterface().getMaxlives());
         ;
-        this.xArray = new Array(size);
+        this.xArray = new Array(size).fill(0);
         this.animationInterface = animationInterface;
         this.updateMaxWidth = this.lifeInterface.getMaxlives() * 16;
         this.updateMaxHeight = 16;

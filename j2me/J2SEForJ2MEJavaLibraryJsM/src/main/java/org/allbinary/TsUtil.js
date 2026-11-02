@@ -61,7 +61,7 @@ export class TsUtil extends Object {
         //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
         //synchronized(this) 
         //mutex.withLock
-        data = new Array(recordStore.getRecordSize(recordId));
+        data = new Array(recordStore.getRecordSize(recordId)).fill(0);
         recordStore.getRecord(recordId, data, 0);
         //if statement needs to be on the same line and ternary does not work the same way.
         return (data.length < 1 ? NullUtil.getInstance().NULL_BYTE_ARRAY : data);

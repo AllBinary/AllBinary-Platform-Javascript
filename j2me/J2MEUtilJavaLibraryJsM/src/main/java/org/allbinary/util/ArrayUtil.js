@@ -37,28 +37,28 @@ export class ArrayUtil extends Object {
         return copy;
     }
     copyOfbyte(original, newLength) {
-        let copy = new Array(newLength);
+        let copy = new Array(newLength).fill(0);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfshort(original, newLength) {
-        let copy = new Array(newLength);
+        let copy = new Array(newLength).fill(0);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfint(original, newLength) {
-        let copy = new Array(newLength);
+        let copy = new Array(newLength).fill(0);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOflong(original, newLength) {
-        let copy = new Array(newLength);
+        let copy = new Array(newLength).fill(0);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,21 +72,21 @@ export class ArrayUtil extends Object {
         return copy;
     }
     copyOffloat(original, newLength) {
-        let copy = new Array(newLength);
+        let copy = new Array(newLength).fill(0);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfdouble(original, newLength) {
-        let copy = new Array(newLength);
+        let copy = new Array(newLength).fill(0);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.
         return copy;
     }
     copyOfboolean(original, newLength) {
-        let copy = new Array(newLength);
+        let copy = new Array(newLength).fill(false);
         ;
         System.arraycopy(original, 0, copy, 0, this.mathUtil.min(original.length, newLength));
         //if statement needs to be on the same line and ternary does not work the same way.

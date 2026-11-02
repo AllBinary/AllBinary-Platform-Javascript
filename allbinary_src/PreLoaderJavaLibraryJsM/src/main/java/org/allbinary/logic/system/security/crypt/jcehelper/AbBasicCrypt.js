@@ -72,7 +72,7 @@ export class AbBasicCrypt extends Object {
             ;
             let encrypted = this.cipher.doFinal(array);
             ;
-            let result = new Array(ivArray.length + encrypted.length);
+            let result = new Array(ivArray.length + encrypted.length).fill(0);
             ;
             PreLogUtil.put("ivArray Length: " + ivArray.length, this, "encrypt");
             for (let index = 0; index < ivArray.length; index++) {
@@ -96,13 +96,13 @@ export class AbBasicCrypt extends Object {
     decrypt(array) {
         try {
             this.cipher.init(Cipher.DECRYPT_MODE, secretKey);
-            let ivArray = new Array(8);
+            let ivArray = new Array(8).fill(0);
             ;
             for (let index = 0; index < 8; index++) {
                 ivArray[index] = array[index];
             }
             PreLogUtil.put("ivArray Length: " + ivArray.length, this, "encrypt");
-            let result = new Array(array.length - ivArray.length);
+            let result = new Array(array.length - ivArray.length).fill(0);
             ;
             for (let index = ivArray.length; index < array.length; index++) {
                 result[index - ivArray.length] = array[index];

@@ -36,7 +36,7 @@ export class AbCryptUtil extends Object {
         let outputStream = null;
         ;
         try {
-            outputStream = this.streamUtil.get(inputStream, new ByteArrayOutputStream(), new Array(16384));
+            outputStream = this.streamUtil.get(inputStream, new ByteArrayOutputStream(), new Array(16384).fill(0));
             let abCrypt = new AbCrypt(KeySpecFactory.getInstance().DESEDE);
             ;
             abCrypt.init(key);

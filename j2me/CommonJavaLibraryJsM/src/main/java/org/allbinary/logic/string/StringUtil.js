@@ -27,6 +27,7 @@ export class StringUtil extends Object {
         this.ONE_EMPTY_STRING_ARRAY = [
             this.EMPTY_STRING
         ];
+        this.ONE_EMPTY_STRING_ARRAY_OF_ARRAYS = new Array(0).fill(null).map(() => new Array(0).fill(null));
         this.stringArray = [];
     }
     getNonNull(string) {

@@ -30,9 +30,9 @@ export class LocalPlayerInputIdFactory extends Object {
         this.logUtil = LogUtil.getInstance();
         this.MAX_NUMBER_OF_PLAYERS = 6;
         this.MAX_FAST_DEVICEID = 65;
-        this.deviceIdToplayerId = new Array(this.MAX_FAST_DEVICEID);
-        this.playerIdToDeviceId = new Array(this.MAX_NUMBER_OF_PLAYERS);
-        this.playersInPlay = new Array(this.MAX_NUMBER_OF_PLAYERS);
+        this.deviceIdToplayerId = new Array(this.MAX_FAST_DEVICEID).fill(0);
+        this.playerIdToDeviceId = new Array(this.MAX_NUMBER_OF_PLAYERS).fill(0);
+        this.playersInPlay = new Array(this.MAX_NUMBER_OF_PLAYERS).fill(false);
         this.totalDevicesMapped = 0;
         for (let index = this.deviceIdToplayerId.length - 1; index >= 0; index--) {
             this.deviceIdToplayerId[index] = -1;

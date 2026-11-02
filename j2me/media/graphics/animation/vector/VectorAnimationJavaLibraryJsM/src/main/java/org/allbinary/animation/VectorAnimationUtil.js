@@ -57,7 +57,7 @@ export class VectorAnimationUtil extends Object {
         for (let index = 0; index < size; index++) {
             nextBasicArrayList = vector.objectArray[index];
             framePoints = this.toFrameArrayFromPointBasicArrayList(nextBasicArrayList);
-            points[index] = new Array(framePoints.length).fill(null).map(() => new Array(2).fill(null));
+            points[index] = new Array(framePoints.length).fill(null).map(() => new Array(2).fill(0));
             for (let pointIndex = 0; pointIndex < framePoints.length; pointIndex++) {
                 points[index][pointIndex][0] = framePoints[pointIndex][0];
                 points[index][pointIndex][1] = framePoints[pointIndex][1];
@@ -67,7 +67,7 @@ export class VectorAnimationUtil extends Object {
         return points;
     }
     toFrameArrayFromPointBasicArrayList(list) {
-        let points = new Array(list.size()).fill(null).map(() => new Array(2).fill(null));
+        let points = new Array(list.size()).fill(null).map(() => new Array(2).fill(0));
         ;
         let size = list.size();
         ;

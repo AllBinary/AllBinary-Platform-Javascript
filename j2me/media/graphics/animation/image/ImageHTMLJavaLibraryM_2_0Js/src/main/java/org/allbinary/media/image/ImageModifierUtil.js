@@ -96,7 +96,7 @@ export class ImageModifierUtil extends Object {
     getImageArray(originalImageArray) {
         let size = originalImageArray.length;
         ;
-        this.alphaArray = new Array(size);
+        this.alphaArray = new Array(size).fill(false);
         let imageArray = new Array(size);
         ;
         for (let index = 0; index < size; index++) {

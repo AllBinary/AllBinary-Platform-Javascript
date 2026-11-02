@@ -61,9 +61,9 @@ export class AllBinaryJ2METiledLayer extends AllBinaryTiledLayer {
         ;
         let stringMaker = new StringMaker();
         ;
-        for (let rowIndex = firstRow; rowIndex < totalRows; rowIndex++) {
+        for (let rowIndex = firstRow; rowIndex < totalRows; rowIndex++, y += tileHeight) {
             x = x0;
-            for (let columnIndex = firstColumn; columnIndex < totalColumns; columnIndex++) {
+            for (let columnIndex = firstColumn; columnIndex < totalColumns; columnIndex++, x += tileWidth) {
                 tile = this.tiledLayerP.getCell(columnIndex, rowIndex);
                 if (tile < 0) {
                     tile = this.tiledLayerP.getAnimatedTile(tile);

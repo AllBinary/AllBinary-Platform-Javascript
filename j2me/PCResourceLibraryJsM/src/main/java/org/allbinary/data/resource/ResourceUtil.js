@@ -68,7 +68,7 @@ export class ResourceUtil extends Object {
         ;
         if (inputStream !=
             null) {
-            let byteArray = new Array(inputStream.available());
+            let byteArray = new Array(inputStream.available()).fill(0);
             ;
             StreamUtil.getInstance().getByteArray(inputStream, new ByteArrayOutputStream(), byteArray);
             //if statement needs to be on the same line and ternary does not work the same way.

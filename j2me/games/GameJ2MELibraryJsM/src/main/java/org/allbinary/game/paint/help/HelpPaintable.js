@@ -55,7 +55,7 @@ export class HelpPaintable extends Paintable {
     }
     setInputInfoP(inputInfo) {
         this.inputInfo = inputInfo;
-        this.beginWidthArray = new Array(this.inputInfo.length);
+        this.beginWidthArray = new Array(this.inputInfo.length).fill(0);
         this.myFontProcessor = this.updateMyFontProcessor;
     }
     paint(graphics) {

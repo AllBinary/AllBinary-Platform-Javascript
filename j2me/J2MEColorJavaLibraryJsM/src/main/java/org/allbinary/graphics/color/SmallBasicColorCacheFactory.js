@@ -26,7 +26,7 @@ export class SmallBasicColorCacheFactory extends Object {
     constructor() {
         super();
         this.SIZE = 255;
-        this.INDEX_TO_COLOR = new Array(this.SIZE);
+        this.INDEX_TO_COLOR = new Array(this.SIZE).fill(0);
         this.BASIC_COLOR_ARRAY = new Array(this.SIZE);
         this.colorIndex = 0;
     }

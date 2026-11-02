@@ -60,7 +60,7 @@ export class GameFeatureUtil extends Object {
         ;
         let SELECTED_SEP = "] = ";
         ;
-        let selectedArray_return = new Array(choiceGroup.size());
+        let selectedArray_return = new Array(choiceGroup.size()).fill(false);
         ;
         let total = choiceGroup.getSelectedFlags(selectedArray_return);
         ;
@@ -102,7 +102,7 @@ export class GameFeatureUtil extends Object {
         ;
         let SELECTED_SEP = "] = ";
         ;
-        let selectedArray_return = new Array(choiceGroup.size());
+        let selectedArray_return = new Array(choiceGroup.size()).fill(false);
         ;
         let total = choiceGroup.getSelectedFlags(selectedArray_return);
         ;
@@ -142,7 +142,7 @@ export class GameFeatureUtil extends Object {
         ;
         let SELECTED_SEP = "] = ";
         ;
-        let selectedArray_return = new Array(choiceGroup.size());
+        let selectedArray_return = new Array(choiceGroup.size()).fill(false);
         ;
         let total = choiceGroup.getSelectedFlags(selectedArray_return);
         ;

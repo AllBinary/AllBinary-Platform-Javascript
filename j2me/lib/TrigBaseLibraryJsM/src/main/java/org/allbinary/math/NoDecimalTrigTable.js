@@ -44,9 +44,9 @@ export class NoDecimalTrigTable extends Object {
         ;
         let MAX_VALUE = (Integer.MAX_VALUE);
         ;
-        this.noDecimalSin = new Array(TOTAL_ANGLE);
-        this.noDecimalCos = new Array(TOTAL_ANGLE);
-        this.noDecimalTan = new Array(TOTAL_ANGLE + 1);
+        this.noDecimalSin = new Array(TOTAL_ANGLE).fill(0);
+        this.noDecimalCos = new Array(TOTAL_ANGLE).fill(0);
+        this.noDecimalTan = new Array(TOTAL_ANGLE + 1).fill(0);
         this.noDecimalSin[0] = 0;
         this.noDecimalSin[1] = 174;
         this.noDecimalSin[2] = 348;
@@ -1230,13 +1230,13 @@ export class NoDecimalTrigTable extends Object {
         ;
         let screenY2 = globalThis.Math.trunc(-screenY);
         ;
-        let dx = new Array(4);
+        let dx = new Array(4).fill(0);
         ;
         dx[0] = (screenX - targetX);
         dx[1] = (screenX - targetX2);
         dx[2] = (screenX2 - targetX);
         dx[3] = (screenX2 - targetX2);
-        let dy = new Array(4);
+        let dy = new Array(4).fill(0);
         ;
         dy[0] = (screenY - targetY);
         dy[1] = (screenY - targetY2);

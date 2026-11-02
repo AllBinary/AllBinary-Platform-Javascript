@@ -23,7 +23,7 @@ export class ByteUtil extends Object {
         super();
     }
     xor(array, mask) {
-        let bytes = new Array(array.length);
+        let bytes = new Array(array.length).fill(0);
         ;
         let size = array.length;
         ;
@@ -40,7 +40,7 @@ export class ByteUtil extends Object {
         return bytes;
     }
     not(array) {
-        let bytes = new Array(array.length);
+        let bytes = new Array(array.length).fill(0);
         ;
         let size = array.length;
         ;

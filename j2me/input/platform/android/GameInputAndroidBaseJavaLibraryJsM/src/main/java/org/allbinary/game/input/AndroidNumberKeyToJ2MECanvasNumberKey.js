@@ -34,4 +34,4 @@ export class AndroidNumberKeyToJ2MECanvasNumberKey extends Object {
         super();
     }
 }
-AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap = new Array(17);
+AndroidNumberKeyToJ2MECanvasNumberKey.androidtoJavaMicroEditionKeyMap = new Array(17).fill(0);

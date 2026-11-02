@@ -50,7 +50,7 @@ export class OpenGLESGL11VBOImage extends OpenGLESImage {
         //Otherwise - values - DoubleLiteralExpr
         ];
         this.regionRectangleVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 3).order(ByteOrder.nativeOrder()).asFloatBuffer();
-        this.regionTextureRectangleFloatArray = new Array(8);
+        this.regionTextureRectangleFloatArray = new Array(8).fill(0);
         this.regionTextureVertexFloatBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder()).asFloatBuffer();
         //For kotlin this is before the body of the constructor.
         this.initVertices();

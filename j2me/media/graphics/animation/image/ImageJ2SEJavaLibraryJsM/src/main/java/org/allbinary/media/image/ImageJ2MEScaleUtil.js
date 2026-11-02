@@ -40,10 +40,10 @@ export class ImageJ2MEScaleUtil extends Object {
         ;
         let sourceHeight = image.getHeight();
         ;
-        let originalData = new Array(image.getWidth() * image.getHeight());
+        let originalData = new Array(image.getWidth() * image.getHeight()).fill(0);
         ;
         image.getRGB(originalData, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
-        let scaledData = new Array(width * height);
+        let scaledData = new Array(width * height).fill(0);
         ;
         let heightRatioFactor = globalThis.Math.trunc((8 * sourceHeight) / height);
         ;

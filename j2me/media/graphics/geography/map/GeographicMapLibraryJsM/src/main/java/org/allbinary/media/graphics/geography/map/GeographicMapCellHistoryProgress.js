@@ -28,7 +28,7 @@ export class GeographicMapCellHistoryProgress extends GeographicMapCellHistoryPr
         this.init();
     }
     init() {
-        this.totalVisitedArray = new Array(this.geographicMapCellHistoryArray.length);
+        this.totalVisitedArray = new Array(this.geographicMapCellHistoryArray.length).fill(0);
     }
     isAnyProgress() {
         let isProgressing = false;

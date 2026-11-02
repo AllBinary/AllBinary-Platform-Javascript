@@ -66,7 +66,7 @@ export class DrawVerticalStringUtil extends Object {
         ;
         let aChar;
         ;
-        let offsetXArray = new Array(size);
+        let offsetXArray = new Array(size).fill(0);
         ;
         for (let index = size - 1; index >= 0; index--) {
             aChar = string[index];

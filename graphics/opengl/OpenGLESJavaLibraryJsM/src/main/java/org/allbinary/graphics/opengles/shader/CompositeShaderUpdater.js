@@ -33,9 +33,9 @@ export class CompositeShaderUpdater extends ShaderUpdater {
         this.commonSeps = CommonSeps.getInstance();
         this.shaderStrings = ShaderStrings.getInstance();
         this.uniformBlockArray = uniformBlockArray;
-        this.uniformBlockHandleArray = new Array(this.uniformBlockArray.length);
+        this.uniformBlockHandleArray = new Array(this.uniformBlockArray.length).fill(0);
         this.uniformArray = uniformArray;
-        this.uniformHandleArray = new Array(this.uniformArray.length);
+        this.uniformHandleArray = new Array(this.uniformArray.length).fill(0);
         this.attributeArray = attributeArray;
         this.attributeHandleArray = attributeHandleArray;
     }

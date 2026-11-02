@@ -88,7 +88,7 @@ export class GLUtil extends Object {
         ;
         let sinA = Math.sin(angleRad);
         ;
-        for (let i = 0; i < uvs.length;) {
+        for (let i = 0; i < uvs.length; i += 2) {
             let u = uvs[i];
             ;
             let v = uvs[i + 1];

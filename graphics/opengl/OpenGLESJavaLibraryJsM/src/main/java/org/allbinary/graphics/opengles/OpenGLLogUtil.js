@@ -39,7 +39,7 @@ export class OpenGLLogUtil extends Object {
             stringBuffer.appendint(error);
             if (error == 1281) {
                 stringBuffer.append(this.MAX_TEXTURE);
-                let maxTextureSize = new Array(1);
+                let maxTextureSize = new Array(1).fill(0);
                 ;
                 gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0);
                 stringBuffer.appendint(maxTextureSize[0]);
@@ -62,7 +62,7 @@ export class OpenGLLogUtil extends Object {
             stringBuffer.appendint(error);
             if (error == 1281) {
                 stringBuffer.append(this.MAX_TEXTURE);
-                let maxTextureSize = new Array(1);
+                let maxTextureSize = new Array(1).fill(0);
                 ;
                 gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0);
                 stringBuffer.appendint(maxTextureSize[0]);

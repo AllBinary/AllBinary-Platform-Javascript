@@ -35,7 +35,7 @@ export class JarUtil extends Object {
         this.jarURL = jarURL;
     }
     show() {
-        let cache = new Array(1024);
+        let cache = new Array(1024).fill(0);
         ;
         try {
             let conn = this.jarURL.openConnection();
@@ -55,13 +55,13 @@ export class JarUtil extends Object {
                         while ((i = jis.read(cache, offset, cache.length - offset)) != -1) {
                             offset += i;
                             if (offset >= cache.length) {
-                                let newcache = new Array(cache.length + 1024);
+                                let newcache = new Array(cache.length + 1024).fill(0);
                                 ;
                                 System.arraycopy(cache, 0, newcache, 0, cache.length);
                                 cache = newcache;
                             }
                         }
-                        let tmp = new Array(offset);
+                        let tmp = new Array(offset).fill(0);
                         ;
                         System.arraycopy(cache, 0, tmp, 0, offset);
                         console.log(entry.getName());

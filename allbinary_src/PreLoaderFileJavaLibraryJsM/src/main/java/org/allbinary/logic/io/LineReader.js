@@ -31,7 +31,7 @@ export class LineReader extends Object {
         this.commonStrings = CommonStrings.getInstance();
         this.index = 0;
         try {
-            let bytes = new Array(100000);
+            let bytes = new Array(100000).fill(0);
             ;
             this.fileName = fileName;
             this.idFile = new AbFileInputStream(fileName);
