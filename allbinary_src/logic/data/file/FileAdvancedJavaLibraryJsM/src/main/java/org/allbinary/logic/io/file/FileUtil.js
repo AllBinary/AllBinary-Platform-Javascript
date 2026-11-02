@@ -98,14 +98,18 @@ export class FileUtil extends Object {
         this.WRITE_METHOD = "write";
     }
     write(...args) {
+        if (args.length === 2 && args[1] instanceof AbDataOutputStream)
+            return this.write$overload2(args[0], args[1]);
         if (args.length === 2)
             return this.write$overload1(args[0], args[1]);
-        if (args.length === 2)
+        if (args.length === 2 && args[1] == null)
             return this.write$overload2(args[0], args[1]);
         if (args.length === 3)
             return this.write$overload3(args[0], args[1], args[2]);
         if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
             return this.write$overload4(args[0], args[1]);
+        if (args.length === 2)
+            return this.write$overload2(args[0], args[1]);
         throw new TypeError('No matching overload: write');
     }
     //@Throws(Exception.constructor)
@@ -135,6 +139,14 @@ export class FileUtil extends Object {
         }
     }
     copy(...args) {
+        if (args.length === 2 && args[0] instanceof AbFileInputStream && args[1] instanceof AbDataOutputStream)
+            return this.copy$overload1(args[0], args[1]);
+        if (args.length === 2 && args[0] instanceof AbPath && args[1] instanceof AbPath)
+            return this.copy$overload2(args[0], args[1]);
+        if (args.length === 2 && args[0] == null && args[1] == null)
+            return this.copy$overload1(args[0], args[1]);
+        if (args.length === 2 && args[0] == null && args[1] == null)
+            return this.copy$overload2(args[0], args[1]);
         if (args.length === 2)
             return this.copy$overload1(args[0], args[1]);
         if (args.length === 2)
@@ -174,7 +186,9 @@ export class FileUtil extends Object {
         return outPath;
     }
     copyToCloud(...args) {
-        if (args.length === 4 && typeof args[3] === 'string')
+        if (args.length === 4 && typeof args[3] === 'string' && args[1] instanceof AbPath)
+            return this.copyToCloud$overload1(args[0], args[1], args[2], args[3]);
+        if (args.length === 4 && typeof args[3] === 'string' && args[1] == null)
             return this.copyToCloud$overload1(args[0], args[1], args[2], args[3]);
         if (args.length === 6 && typeof args[3] === 'string' && typeof args[4] === 'boolean' && typeof args[5] === 'boolean')
             return this.copyToCloud$overload2(args[0], args[1], args[2], args[3], args[4], args[5]);
@@ -182,6 +196,8 @@ export class FileUtil extends Object {
             return this.copyToCloud$overload3(args[0], args[1]);
         if (args.length === 4 && typeof args[2] === 'boolean' && typeof args[3] === 'boolean')
             return this.copyToCloud$overload4(args[0], args[1], args[2], args[3]);
+        if (args.length === 4 && typeof args[3] === 'string')
+            return this.copyToCloud$overload1(args[0], args[1], args[2], args[3]);
         throw new TypeError('No matching overload: copyToCloud');
     }
     //@Throws(Exception.constructor)

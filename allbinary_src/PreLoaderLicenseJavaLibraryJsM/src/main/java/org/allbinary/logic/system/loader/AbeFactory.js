@@ -40,10 +40,6 @@ export class AbeFactory extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 2 && typeof args[1] === 'string')
-            return this.getInstance$overload2(args[0], args[1]);
-        if (args.length === 4 && typeof args[1] === 'string')
-            return this.getInstance$overload3(args[0], args[1], args[2], args[3]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
@@ -54,6 +50,13 @@ export class AbeFactory extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.useCustomLoader = false;
+    }
+    getInstance(...args) {
+        if (args.length === 2 && typeof args[1] === 'string')
+            return this.getInstance$overload2(args[0], args[1]);
+        if (args.length === 4 && typeof args[1] === 'string')
+            return this.getInstance$overload3(args[0], args[1], args[2], args[3]);
+        throw new TypeError('No matching overload: getInstance');
     }
     //@Throws(LicensingException.constructor)
     //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.

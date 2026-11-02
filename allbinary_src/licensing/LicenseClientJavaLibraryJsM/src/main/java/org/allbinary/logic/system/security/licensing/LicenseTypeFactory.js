@@ -28,13 +28,16 @@ export class LicenseTypeFactory extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 1 && typeof args[0] === 'string')
-            return this.getInstance$overload2(args[0]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return LicenseTypeFactory.instance;
+    }
+    getInstance(...args) {
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
     }
     getInstance$overload2(name) {
         if (this.DEMO.getName().compareTo(name) == 0) {

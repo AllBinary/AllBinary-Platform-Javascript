@@ -30,8 +30,6 @@ export class KeySpecFactory extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 2 && typeof args[0] === 'string')
-            return this.getInstance$overload2(args[0], args[1]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
@@ -43,6 +41,11 @@ export class KeySpecFactory extends Object {
         this.DES = "DES";
         this.DESEDE = "DESede";
         this.BLOWFISH = "Blowfish";
+    }
+    getInstance(...args) {
+        if (args.length === 2 && typeof args[0] === 'string')
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
     }
     getInstance$overload2(algorithm, keyData) {
         try {

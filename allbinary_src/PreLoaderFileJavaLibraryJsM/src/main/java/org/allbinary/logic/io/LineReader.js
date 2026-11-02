@@ -79,7 +79,7 @@ export class LineReader extends Object {
             }
             let temp = this.string.substring(index, nextIndex);
             ;
-            index = nextIndex + 1;
+            this.index = nextIndex + 1;
             //if statement needs to be on the same line and ternary does not work the same way.
             return temp;
         }

@@ -38,8 +38,6 @@ export class VectorRotationGenerator extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 1)
-            return this.getInstance$overload2(args[0]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
@@ -51,6 +49,11 @@ export class VectorRotationGenerator extends Object {
         this.logUtil = LogUtil.getInstance();
         this.vectorAnimationUtil = VectorAnimationUtil.getInstance();
         this.angleFactory = AngleFactory.getInstance();
+    }
+    getInstance(...args) {
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
     }
     getInstance$overload2(vectorRotationInfo) {
         //if statement needs to be on the same line and ternary does not work the same way.

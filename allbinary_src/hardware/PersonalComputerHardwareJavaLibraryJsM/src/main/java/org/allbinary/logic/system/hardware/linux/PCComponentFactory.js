@@ -44,8 +44,6 @@ export class PCComponentFactory extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
-            return this.getInstance$overload2(args[0], args[1]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
@@ -56,6 +54,11 @@ export class PCComponentFactory extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.componentFactory = ComponentFactory.getInstance();
+    }
+    getInstance(...args) {
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
     }
     getInstance$overload2(component, componentData) {
         try {

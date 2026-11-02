@@ -25,13 +25,16 @@ export class ColorFillPaintableFactory extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 2 && typeof args[1] === 'boolean')
-            return this.getInstance$overload2(args[0], args[1]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return ColorFillPaintableFactory.instance;
+    }
+    getInstance(...args) {
+        if (args.length === 2 && typeof args[1] === 'boolean')
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
     }
     getInstance$overload2(basicColor, forThreedCanvas) {
         let operatingSystem = OperatingSystemFactory.getInstance().getOperatingSystemInstance();

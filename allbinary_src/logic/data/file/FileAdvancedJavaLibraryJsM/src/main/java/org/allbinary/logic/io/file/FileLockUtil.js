@@ -81,12 +81,16 @@ export class FileLockUtil extends Object {
         }
     }
     getLock(...args) {
+        if (args.length === 1 && args[0] instanceof AbFileOutputStream)
+            return this.getLock$overload2(args[0]);
         if (args.length === 1)
             return this.getLock$overload1(args[0]);
-        if (args.length === 1)
+        if (args.length === 1 && args[0] == null)
             return this.getLock$overload2(args[0]);
         if (args.length === 1)
             return this.getLock$overload3(args[0]);
+        if (args.length === 1)
+            return this.getLock$overload2(args[0]);
         throw new TypeError('No matching overload: getLock');
     }
     //@Throws(Exception.constructor)

@@ -31,8 +31,6 @@ export class SystemHardwareFactory extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 1)
-            return this.getInstance$overload2(args[0]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
@@ -61,6 +59,11 @@ export class SystemHardwareFactory extends Object {
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.hardwareInterface = NoHardware.getInstance();
+    }
+    getInstance(...args) {
+        if (args.length === 1)
+            return this.getInstance$overload2(args[0]);
+        throw new TypeError('No matching overload: getInstance');
     }
     getInstance$overload2(operatingSystemInterface) {
         try {

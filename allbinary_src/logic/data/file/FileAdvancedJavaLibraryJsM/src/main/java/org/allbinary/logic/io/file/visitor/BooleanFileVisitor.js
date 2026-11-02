@@ -15,6 +15,7 @@
 import { Object } from '../../../../../../java/lang/Object.js';
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
 //not GWT import const VisitorInterface
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
@@ -29,12 +30,16 @@ export class BooleanFileVisitor extends Object {
         PreLogUtil.put("Filter BasicArrayList: " + this.getFilterStringBasicArrayList().toString(), this, this.commonStrings.CONSTRUCTOR);
     }
     visit(...args) {
+        if (args.length === 1 && args[0] instanceof AbFile)
+            return this.visit$overload2(args[0]);
         if (args.length === 1)
             return this.visit$overload1(args[0]);
-        if (args.length === 1)
+        if (args.length === 1 && args[0] == null)
             return this.visit$overload2(args[0]);
         if (args.length === 2 && typeof args[1] === 'string')
             return this.visit$overload3(args[0], args[1]);
+        if (args.length === 1)
+            return this.visit$overload2(args[0]);
         throw new TypeError('No matching overload: visit');
     }
     visit$overload1(anyType) {

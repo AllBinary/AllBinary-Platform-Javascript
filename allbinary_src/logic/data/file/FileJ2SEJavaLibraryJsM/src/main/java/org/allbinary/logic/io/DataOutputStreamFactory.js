@@ -25,8 +25,6 @@ export class DataOutputStreamFactory extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
-            return this.getInstance$overload2(args[0], args[1]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
@@ -41,6 +39,11 @@ export class DataOutputStreamFactory extends Object {
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return idOutData;
+    }
+    getInstance(...args) {
+        if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'string')
+            return this.getInstance$overload2(args[0], args[1]);
+        throw new TypeError('No matching overload: getInstance');
     }
     //@Throws(Exception.constructor)
     getInstance$overload2(filePath, fileName) {

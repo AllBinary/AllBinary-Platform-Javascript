@@ -18,6 +18,7 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { FilePathData } 
 const FilePathData = globalThis.org.allbinary.logic.io.file.FilePathData;
+import { AbFilePath } from '../../../../../../org/allbinary/logic/io/path/AbFilePath.js';
 //not GWT import const AbFilePath
 import { AbPath } from '../../../../../../org/allbinary/logic/io/path/AbPath.js';
 //not GWT import const AbPath
@@ -41,12 +42,20 @@ export class AbPathUtilOld extends Object {
         this.filePathData = FilePathData.getInstance();
     }
     getExtension(...args) {
+        if (args.length === 1 && args[0] instanceof AbFilePath)
+            return this.getExtension$overload1(args[0]);
+        if (args.length === 1 && args[0] instanceof AbPath)
+            return this.getExtension$overload2(args[0]);
+        if (args.length === 1 && args[0] == null)
+            return this.getExtension$overload1(args[0]);
+        if (args.length === 1 && args[0] == null)
+            return this.getExtension$overload2(args[0]);
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getExtension$overload3(args[0]);
         if (args.length === 1)
             return this.getExtension$overload1(args[0]);
         if (args.length === 1)
             return this.getExtension$overload2(args[0]);
-        if (args.length === 1 && typeof args[0] === 'string')
-            return this.getExtension$overload3(args[0]);
         throw new TypeError('No matching overload: getExtension');
     }
     //@Throws(Exception.constructor)
@@ -77,12 +86,20 @@ export class AbPathUtilOld extends Object {
         return extension;
     }
     getWithoutExtension(...args) {
+        if (args.length === 1 && args[0] instanceof AbFilePath)
+            return this.getWithoutExtension$overload1(args[0]);
+        if (args.length === 1 && args[0] instanceof AbPath)
+            return this.getWithoutExtension$overload2(args[0]);
+        if (args.length === 1 && args[0] == null)
+            return this.getWithoutExtension$overload1(args[0]);
+        if (args.length === 1 && args[0] == null)
+            return this.getWithoutExtension$overload2(args[0]);
+        if (args.length === 1 && typeof args[0] === 'string')
+            return this.getWithoutExtension$overload3(args[0]);
         if (args.length === 1)
             return this.getWithoutExtension$overload1(args[0]);
         if (args.length === 1)
             return this.getWithoutExtension$overload2(args[0]);
-        if (args.length === 1 && typeof args[0] === 'string')
-            return this.getWithoutExtension$overload3(args[0]);
         throw new TypeError('No matching overload: getWithoutExtension');
     }
     //@Throws(Exception.constructor)

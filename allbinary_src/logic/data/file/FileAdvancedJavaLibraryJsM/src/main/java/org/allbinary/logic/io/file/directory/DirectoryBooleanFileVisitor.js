@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../java/lang/Object.js';
+import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
 //not GWT import const VisitorInterface
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class DirectoryBooleanFileVisitor extends Object {
@@ -20,8 +21,12 @@ export class DirectoryBooleanFileVisitor extends Object {
         super();
     }
     visit(...args) {
+        if (args.length === 1 && args[0] instanceof AbFile)
+            return this.visit$overload2(args[0]);
         if (args.length === 1)
             return this.visit$overload1(args[0]);
+        if (args.length === 1 && args[0] == null)
+            return this.visit$overload2(args[0]);
         if (args.length === 1)
             return this.visit$overload2(args[0]);
         throw new TypeError('No matching overload: visit');

@@ -565,7 +565,7 @@ export class DemoCanvas extends RunnableCanvas {
         }
     }
     preDemoProcess() {
-        if (!this.gameCanvas.isInitialized() || this.gameCanvas.getTitle() == NullGameCanvas.NO_GAME) {
+        if (!this.gameCanvas.isInitialized() || this.gameCanvas.getTitle() == "No Background Game") {
             if (AllBinaryMediaManager.update()) {
                 if (!PrimaryPlayerQueueFactory.getInstance().process()) {
                     SecondaryPlayerQueueFactory.getInstance().process();
@@ -627,7 +627,7 @@ export class DemoCanvas extends RunnableCanvas {
         PreLogUtil.put(this.commonStrings.START, this, METHOD_NAME);
         let isDefault = J2MEUtil.isHTML();
         ;
-        if (this.gameCanvas != NullGameCanvas.getInstance() && (this.gameCanvas.isRunning() || isDefault || SWTUtil.isSWT) && !(this.gameCanvas.getType() == NullGameCanvas.TYPE)) {
+        if (this.gameCanvas != NullGameCanvas.getInstance() && (this.gameCanvas.isRunning() || isDefault || SWTUtil.isSWT) && !(this.gameCanvas.getType() == 1)) {
             this.gameRunnable = this.gameCanvas.gameRunnable;
             PreLogUtil.put("Showing Game", this, METHOD_NAME);
             this.setPaintableInterface(this.gameCanvas);

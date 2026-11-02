@@ -20,6 +20,11 @@ const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
 import { NullAI } from './NullAI.js';
 //sameFolderImports - not GWT import - same folder const NullAI
 export class NullAIFactory extends Object {
+    static getInstance(...args) {
+        if (args.length === 0)
+            return this.getInstance$overload2();
+        throw new TypeError('No matching overload: getInstance');
+    }
     static getInstance$overload2() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullAIFactory.NULL_AI;
@@ -27,8 +32,6 @@ export class NullAIFactory extends Object {
     getInstance(...args) {
         if (args.length === 3)
             return this.getInstance$overload1(args[0], args[1], args[2]);
-        if (args.length === 0)
-            return this.getInstance$overload2();
         throw new TypeError('No matching overload: getInstance');
     }
     getInstance$overload1(hashtable, ownerLayerInterface, gameInput) {

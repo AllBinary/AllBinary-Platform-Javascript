@@ -11,6 +11,9 @@
         *
         *  Created By: Travis Berthelot
 */
+//not GWT import const GL2
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { JOGL10 } from './JOGL10.js';
 //sameFolderImports - not GWT import - same folder const IntBuffer
 //JOGLEToKhronosGL11
 export class JOGL11 extends JOGL10 {

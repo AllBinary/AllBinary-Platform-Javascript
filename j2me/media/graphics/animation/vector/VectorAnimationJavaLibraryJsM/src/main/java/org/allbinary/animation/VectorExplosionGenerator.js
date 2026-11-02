@@ -36,8 +36,6 @@ export class VectorExplosionGenerator extends Object {
     static getInstance(...args) {
         if (args.length === 0)
             return this.getInstance$overload1();
-        if (args.length === 3 && typeof args[1] === 'number')
-            return this.getInstance$overload2(args[0], args[1], args[2]);
         throw new TypeError('No matching overload: getInstance');
     }
     static getInstance$overload1() {
@@ -67,6 +65,11 @@ export class VectorExplosionGenerator extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.createListFromPoints(list, points, howMuch, type);
         ;
+    }
+    getInstance(...args) {
+        if (args.length === 3 && typeof args[1] === 'number')
+            return this.getInstance$overload2(args[0], args[1], args[2]);
+        throw new TypeError('No matching overload: getInstance');
     }
     //@Throws(Exception.constructor)
     getInstance$overload2(points, howMuch, type) {

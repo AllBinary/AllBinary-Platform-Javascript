@@ -17,10 +17,12 @@ import { Object } from '../../../../../java/lang/Object.js';
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { MusicManager } from './MusicManager.js';
+//sameFolderImports - not GWT import - same folder const MusicManager
+import { MusicService } from './MusicService.js';
 //sameFolderImports - not GWT import - same folder const MusicService
 export class MusicManagerFactory extends Object {
     static createMusicManager(soundList) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new MusicManager(MusicServicesoundList);
+        return new MusicManager(MusicService, soundList);
     }
 }
