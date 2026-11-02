@@ -15,6 +15,8 @@
 import { Object } from '../../../java/lang/Object.js';
 //not GWT import const GL
 import { ChoiceGroupImageFactory } from '../../../javax/microedition/lcdui/ChoiceGroupImageFactory.js';
+//not GWT import const ChoiceGroupImageFactory
+import { Graphics } from '../../../javax/microedition/lcdui/Graphics.js';
 //not GWT import const Image
 import { OpenGLFeatureFactory } from '../../../org/allbinary/graphics/opengles/OpenGLFeatureFactory.js';
 //not GWT import const OpenGLFeatureFactory
@@ -47,8 +49,12 @@ export class ChoiceGroupImageUtil extends Object {
         }
     }
     update(...args) {
+        if (args.length === 1 && args[0] instanceof Graphics)
+            return this.update$overload2(args[0]);
         if (args.length === 1)
             return this.update$overload1(args[0]);
+        if (args.length === 1 && args[0] == null)
+            return this.update$overload2(args[0]);
         if (args.length === 1)
             return this.update$overload2(args[0]);
         throw new TypeError('No matching overload: update');

@@ -1,6 +1,10 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 import { RuntimeException } from '../../../java/lang/RuntimeException.js';
+//not GWT import const GL10
+import { OpenGLBitmap } from '../../../org/allbinary/graphics/OpenGLBitmap.js';
+//not GWT import const OpenGLBitmap
+import { OpenGLESImage } from '../../../org/allbinary/image/opengles/OpenGLESImage.js';
 //not GWT import const OpenGLESImage
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class OpenGLGLUUtils extends Object {
@@ -12,6 +16,14 @@ export class OpenGLGLUUtils extends Object {
         throw new RuntimeException();
     }
     texImage2D(...args) {
+        if (args.length === 8 && typeof args[1] === 'string' && typeof args[2] === 'number' && typeof args[3] === 'number' && typeof args[4] === 'boolean' && typeof args[6] === 'number' && typeof args[7] === 'boolean' && args[5] instanceof OpenGLESImage)
+            return this.texImage2D$overload1(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
+        if (args.length === 8 && typeof args[1] === 'string' && typeof args[2] === 'number' && typeof args[3] === 'number' && typeof args[4] === 'boolean' && typeof args[6] === 'number' && typeof args[7] === 'boolean' && args[5] instanceof OpenGLBitmap)
+            return this.texImage2D$overload2(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
+        if (args.length === 8 && typeof args[1] === 'string' && typeof args[2] === 'number' && typeof args[3] === 'number' && typeof args[4] === 'boolean' && typeof args[6] === 'number' && typeof args[7] === 'boolean' && args[5] == null)
+            return this.texImage2D$overload1(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
+        if (args.length === 8 && typeof args[1] === 'string' && typeof args[2] === 'number' && typeof args[3] === 'number' && typeof args[4] === 'boolean' && typeof args[6] === 'number' && typeof args[7] === 'boolean' && args[5] == null)
+            return this.texImage2D$overload2(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
         if (args.length === 8 && typeof args[1] === 'string' && typeof args[2] === 'number' && typeof args[3] === 'number' && typeof args[4] === 'boolean' && typeof args[6] === 'number' && typeof args[7] === 'boolean')
             return this.texImage2D$overload1(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
         if (args.length === 8 && typeof args[1] === 'string' && typeof args[2] === 'number' && typeof args[3] === 'number' && typeof args[4] === 'boolean' && typeof args[6] === 'number' && typeof args[7] === 'boolean')
