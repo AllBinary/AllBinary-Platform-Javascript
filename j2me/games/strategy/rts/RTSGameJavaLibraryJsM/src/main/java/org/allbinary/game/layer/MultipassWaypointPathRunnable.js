@@ -86,7 +86,7 @@ export class MultipassWaypointPathRunnable extends WaypointPathRunnableBase {
             run() {
                 throw new RuntimeException();
             }
-        };
+        }();
         this.currentPassRunnable = this.FIRST_RUNNABLE;
     }
     setRunning(isRunning) {

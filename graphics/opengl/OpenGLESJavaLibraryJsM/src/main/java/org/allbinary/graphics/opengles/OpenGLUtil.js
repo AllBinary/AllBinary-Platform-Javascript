@@ -95,10 +95,7 @@ export class OpenGLUtil extends Object {
         let progressCanvas = ProgressCanvasFactory.getInstance();
         ;
         progressCanvas.update(graphics);
-        getInstance = OpenGLImageCacheFactory.getInstance();
-        getInstance;
-        getInstance.
-            update(gl);
+        OpenGLImageCacheFactory.getInstance().update(gl);
         this.processRunnables();
         this.set(gl);
     }

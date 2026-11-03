@@ -47,7 +47,7 @@ export class TouchButton extends Paintable {
         this.logUtil.putF(new StringMaker().append("Created: ").append(this.toString()).toString(), this, this.commonStrings.CONSTRUCTOR);
     }
     paint(graphics) {
-        this.animationInterface.paintXY(graphics, animationX, this.animationY);
+        this.animationInterface.paintXY(graphics, this.animationX, this.animationY);
     }
     updateRectangle() {
         try {

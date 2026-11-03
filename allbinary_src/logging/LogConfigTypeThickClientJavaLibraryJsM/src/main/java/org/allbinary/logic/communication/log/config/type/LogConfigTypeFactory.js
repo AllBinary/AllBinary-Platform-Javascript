@@ -34,7 +34,7 @@ export class LogConfigTypeFactory extends Object {
         this.REPLACE = new LogConfigType("Replace", this.NO_DESCRIPTION);
         this.REPLACE_INFO = new LogConfigType("Replace Info", this.NO_DESCRIPTION);
         this.REPLACEERROR = new LogConfigType("Replace Error", this.NO_DESCRIPTION);
-        LogConfigTypes.LOGGING.add(OS);
+        LogConfigTypes.LOGGING.add(this.OS);
         LogConfigTypes.LOGGING.add(this.FACTORYERROR);
     }
 }

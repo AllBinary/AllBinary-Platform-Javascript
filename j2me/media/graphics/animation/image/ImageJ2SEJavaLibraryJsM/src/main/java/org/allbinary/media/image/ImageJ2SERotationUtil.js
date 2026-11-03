@@ -33,7 +33,7 @@ export class ImageJ2SERotationUtil extends Object {
     }
     getRotatedImage(bufferedImage, totalAngle) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.getRotatedImageRadians(bufferedImage, TWO_PIE * totalAngle / 360);
+        return this.getRotatedImageRadians(bufferedImage, this.TWO_PIE * totalAngle / 360);
         ;
     }
     getRotatedImageRadians(bufferedImage, radians) {
@@ -56,14 +56,14 @@ export class ImageJ2SERotationUtil extends Object {
         g.setBackground(this.imageJ2SEUtil.TRANSPARENT_COLOR);
         g.clearRect(0, 0, newBufferedImage.getWidth(), newBufferedImage.getHeight());
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.drawRotatedImageRadians(bufferedImage, newBufferedImage, g, TWO_PIE * totalAngle / 360);
+        return this.drawRotatedImageRadians(bufferedImage, newBufferedImage, g, this.TWO_PIE * totalAngle / 360);
         ;
     }
     createRotatedImage(bufferedImage, newBufferedImage, totalAngle) {
         let g = newBufferedImage.createGraphics();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.drawRotatedImageRadians(bufferedImage, newBufferedImage, g, TWO_PIE * totalAngle / 360);
+        return this.drawRotatedImageRadians(bufferedImage, newBufferedImage, g, this.TWO_PIE * totalAngle / 360);
         ;
     }
     getRotatedImages(bufferedImage, numberOfFrames, totalAngle) {

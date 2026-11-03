@@ -25,7 +25,7 @@ export class SWTJOGLProcessor extends Object {
         this.glHolder = new class extends GLHolder {
             run(renderer) {
             }
-        };
+        }();
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

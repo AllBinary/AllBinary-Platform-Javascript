@@ -36,7 +36,7 @@ export class PreGameSelectorPaintable extends InitUpdatePaintable {
     }
     paint(graphics) {
         graphics.setColor(BasicColorFactory.getInstance().WHITE.intValue());
-        this.canvasDrawLineString.paint(graphics, title, 0);
+        this.canvasDrawLineString.paint(graphics, this.title, 0);
         this.getPreGameSelectionForm().paint(graphics);
     }
     getPreGameSelectionForm() {

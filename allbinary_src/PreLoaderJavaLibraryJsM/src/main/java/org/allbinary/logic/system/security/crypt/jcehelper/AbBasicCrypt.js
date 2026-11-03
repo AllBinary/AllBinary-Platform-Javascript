@@ -67,7 +67,7 @@ export class AbBasicCrypt extends Object {
     }
     encrypt(array) {
         try {
-            this.cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            this.cipher.init(Cipher.ENCRYPT_MODE, this.secretKey);
             let ivArray = this.secretKey.getEncoded();
             ;
             let encrypted = this.cipher.doFinal(array);
@@ -95,7 +95,7 @@ export class AbBasicCrypt extends Object {
     }
     decrypt(array) {
         try {
-            this.cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            this.cipher.init(Cipher.DECRYPT_MODE, this.secretKey);
             let ivArray = new Array(8).fill(0);
             ;
             for (let index = 0; index < 8; index++) {

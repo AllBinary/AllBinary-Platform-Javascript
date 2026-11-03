@@ -65,7 +65,7 @@ export class AlwaysRepaintBehavior extends RepaintBehavior {
                         }
                     }
                 }
-            }, this.NAME);
+            }(), this.NAME);
             ;
             thread.start();
         }

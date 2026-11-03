@@ -18,7 +18,7 @@ export class ObjectPermutationVisitor extends Visitor {
     }
     visit(anyType) {
         this.stringBuilder.delete(0, this.stringBuilder.length());
-        this.print(this.data, stringBuilder);
+        this.print(this.data, this.stringBuilder);
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullUtil.getInstance().NULL_OBJECT;
     }

@@ -122,7 +122,7 @@ export class RaceTrackAdjacentDropCellPositionGenerator extends RaceTrackDropCel
             ;
             let z = point.getZ();
             ;
-            let layerInterface = RaceTrackAdjacentDropLayerFactory.getInstance().getRandomInstance().getNextInstance(hashtable, x, y, z);
+            let layerInterface = RaceTrackAdjacentDropLayerFactory.getInstance().getRandomInstance().getNextInstance(this.hashtable, x, y, z);
             ;
             let baseRaceTrackGeographicMap = this.raceTrackGeographicMap;
             ;

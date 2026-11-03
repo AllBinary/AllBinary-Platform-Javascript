@@ -79,7 +79,7 @@ export class ImageCache extends ImageCacheBase {
             return class extends Processor {
                 /*Static stuff is not allowed for TypeScript inner classes*/ /**/
                 process() {
-                    this.concurrentImageLoadingProcessor.runTask();
+                    concurrentImageLoadingProcessor.runTask();
                 }
             };
         })();
@@ -101,7 +101,7 @@ export class ImageCache extends ImageCacheBase {
             return class extends Processor {
                 /*Static stuff is not allowed for TypeScript inner classes*/ /**/
                 process() {
-                    let size = this.gdResources.currentLayoutRequiredTotal;
+                    let size = gdResources.currentLayoutRequiredTotal;
                     ;
                     //Otherwise - statement - EmptyStmt
                     if (size == 0) {

@@ -82,7 +82,7 @@ export class InitInfoEntity extends InitSql {
             }
             else {
                 if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADER)) {
-                    PreLogUtil.put(this.NOT_IN_DB, NAME, this.METHOD_GET);
+                    PreLogUtil.put(this.NOT_IN_DB, this.NAME, this.METHOD_GET);
                 }
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;
@@ -131,7 +131,7 @@ export class InitInfoEntity extends InitSql {
         }
     }
     update() {
-        updateWhere(NOTHING, NOTHING, InitInfo.getInstance().toHashMap());
+        updateWhere(this.NOTHING, this.NOTHING, InitInfo.getInstance().toHashMap());
     }
     add() {
         try {

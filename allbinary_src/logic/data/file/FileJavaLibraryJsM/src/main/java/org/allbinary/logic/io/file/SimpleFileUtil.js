@@ -65,7 +65,7 @@ export class SimpleFileUtil extends Object {
             }
             close() {
             }
-        };
+        }();
     }
     static nullWriter() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -106,7 +106,7 @@ export class SimpleFileUtil extends Object {
             }
             close() {
             }
-        };
+        }();
     }
     static nullReader() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -138,7 +138,7 @@ export class SimpleFileUtil extends Object {
             }
             close() {
             }
-        };
+        }();
     }
     loadFileAsList(inputStream, max, byteArray1) {
         //if statement needs to be on the same line and ternary does not work the same way.

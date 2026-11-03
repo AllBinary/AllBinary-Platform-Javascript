@@ -56,8 +56,7 @@ export class AllBinaryGameLayer extends AllBinaryLayer {
             paint(graphics) {
                 this.basicSetColorUtil.setBasicColorP(graphics, this.BLACK);
             }
-        }
-            : NullPaintable.getInstance());
+        }() : NullPaintable.getInstance());
         this.gameKeyEventList = new BasicArrayListD();
         //For kotlin this is before the body of the constructor.
     }

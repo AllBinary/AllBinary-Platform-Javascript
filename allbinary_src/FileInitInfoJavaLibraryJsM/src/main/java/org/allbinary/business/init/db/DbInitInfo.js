@@ -70,7 +70,7 @@ export class DbInitInfo extends DbConnectionInfo {
         let url = super.getUrl();
         ;
         if (LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance().PRELOADER)) {
-            PreLogUtil.put(this.httpData.URL_LABEL + url, this, GET_URL);
+            PreLogUtil.put(this.httpData.URL_LABEL + url, this, this.GET_URL);
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return url;

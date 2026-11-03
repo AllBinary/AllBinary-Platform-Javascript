@@ -28,7 +28,7 @@ export class LogConfigTypeFactory extends Object {
         this.NO_DESCRIPTION = "No Description";
         this.OS = new LogConfigType("Operating System", this.NO_DESCRIPTION);
         this.FACTORYERROR = new LogConfigType("Factory Error", this.NO_DESCRIPTION);
-        LogConfigTypes.LOGGING.add(OS);
+        LogConfigTypes.LOGGING.add(this.OS);
         LogConfigTypes.LOGGING.add(this.FACTORYERROR);
     }
 }

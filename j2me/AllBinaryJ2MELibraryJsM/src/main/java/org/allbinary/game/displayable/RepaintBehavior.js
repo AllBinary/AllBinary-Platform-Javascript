@@ -68,7 +68,7 @@ export class RepaintBehavior extends Object {
                         }
                     }
                 }
-            }, this.NAME);
+            }(), this.NAME);
             ;
             thread.start();
         }

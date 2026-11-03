@@ -93,7 +93,7 @@ export class BasicHighScoresFactory extends HighScoresBase {
                     }
                 }
             }
-        });
+        }());
     }
     createHighScoresHelper() {
         //if statement needs to be on the same line and ternary does not work the same way.

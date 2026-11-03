@@ -38,17 +38,13 @@ export class VisitorFileFilter extends Object {
     accept$overload1(file) {
         let abFile = FileWrapperUtil.wrapFile(file);
         ;
-        let isFileAcceptable = visit = this.booleanVisitorInterface.visit(abFile), visit, as, Boolean;
-        visit.
-            .valueOf();
+        let isFileAcceptable = this.booleanVisitorInterface.visit(abFile)..valueOf();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return isFileAcceptable || file.isDirectory();
     }
     accept$overload2(file) {
-        let isFileAcceptable = visit = this.booleanVisitorInterface.visit(file), visit, as, Boolean;
-        visit.
-            .valueOf();
+        let isFileAcceptable = this.booleanVisitorInterface.visit(file)..valueOf();
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return isFileAcceptable || file.isDirectory();

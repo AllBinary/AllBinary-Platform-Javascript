@@ -73,7 +73,7 @@ export class PressStartMenuPaintable extends Paintable {
         }
         if (this.isFlash()) {
             this.myFontProcessor.process(graphics);
-            graphics.drawString(this.startString, this.displayInfo.getLastHalfWidth() - beginWidth, this.displayInfo.getLastHeight() - line, this.anchor);
+            graphics.drawString(this.startString, this.displayInfo.getLastHalfWidth() - this.beginWidth, this.displayInfo.getLastHeight() - this.line, this.anchor);
         }
     }
     setFlash(flash) {

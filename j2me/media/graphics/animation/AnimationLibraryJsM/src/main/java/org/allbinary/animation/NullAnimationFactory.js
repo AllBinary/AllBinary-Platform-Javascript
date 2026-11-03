@@ -26,7 +26,7 @@ export class NullAnimationFactory extends Object {
         this.NULL_ANIMATION = new class extends Animation {
             paintXY(graphics, x, y) {
             }
-        };
+        }();
         this.EMPTY_ARRAY = [];
     }
     getInstance(instanceId) {

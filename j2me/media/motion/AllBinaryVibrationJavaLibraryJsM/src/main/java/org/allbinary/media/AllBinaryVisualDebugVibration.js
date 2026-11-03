@@ -50,7 +50,7 @@ export class AllBinaryVisualDebugVibration extends AllBinaryVibrationME {
         if (this.timeDelayHelper.isTimeTNT()) {
             this.timeDelayHelper.delay = Integer.MAX_VALUE;
             this.myFontProcessor.process(graphics);
-            graphics.drawString(this.VIBRATING, this.displayInfoSingleton.getLastHalfWidth() - (width >> 1), 0, this.anchor);
+            graphics.drawString(this.VIBRATING, this.displayInfoSingleton.getLastHalfWidth() - (this.width >> 1), 0, this.anchor);
         }
     }
 }

@@ -17,6 +17,7 @@ import { Exception } from '../../../../../../java/lang/Exception.js';
 //not GWT import const FileFilter
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
+import { AbFile } from '../../../../../../org/allbinary/logic/io/file/AbFile.js';
 //not GWT import const AbFile
 import { FileFactory } from '../../../../../../org/allbinary/logic/io/file/FileFactory.js';
 //not GWT import const FileFactory
@@ -98,13 +99,15 @@ export class Directory extends Object {
         }
     }
     search(...args) {
+        if (args.length === 2 && typeof args[1] === 'boolean' && args[0] instanceof AbFile)
+            return this.search$overload4(args[0], args[1]);
         if (args.length === 2)
             return this.search$overload1(args[0], args[1]);
         if (args.length === 3 && typeof args[2] === 'boolean')
             return this.search$overload2(args[0], args[1], args[2]);
         if (args.length === 1)
             return this.search$overload3(args[0]);
-        if (args.length === 2 && typeof args[1] === 'boolean')
+        if (args.length === 2 && typeof args[1] === 'boolean' && args[0] == null)
             return this.search$overload4(args[0], args[1]);
         if (args.length === 2 && typeof args[0] === 'string')
             return this.search$overload5(args[0], args[1]);
@@ -114,6 +117,8 @@ export class Directory extends Object {
             return this.search$overload7(args[0], args[1]);
         if (args.length === 3 && typeof args[0] === 'number' && typeof args[2] === 'boolean')
             return this.search$overload8(args[0], args[1], args[2]);
+        if (args.length === 2 && typeof args[1] === 'boolean')
+            return this.search$overload4(args[0], args[1]);
         throw new TypeError('No matching overload: search');
     }
     search$overload1(fileFilter, file) {

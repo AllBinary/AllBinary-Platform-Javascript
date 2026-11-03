@@ -87,7 +87,7 @@ export class ProgressCanvas extends RunnableCanvas {
             process() {
                 this.pathFindingThreadPool.runAPriorityTask();
             }
-        };
+        }();
         this.inGameProcessor = Processor.getInstance();
         this.progressEndListener = ProgressEndListener.instance;
         this.backgroundLabel = "Background AI Game Loading...";

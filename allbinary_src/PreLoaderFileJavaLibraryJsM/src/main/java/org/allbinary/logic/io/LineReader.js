@@ -49,7 +49,7 @@ export class LineReader extends Object {
     }
     hasNext() {
         try {
-            let nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, index);
+            let nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, this.index);
             ;
             if (nextIndex == -1) {
                 //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,12 +72,12 @@ export class LineReader extends Object {
     //@Throws(Exception.constructor)
     next() {
         try {
-            let nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, index);
+            let nextIndex = this.string.indexOf(CommonSeps.getInstance().NEW_LINE, this.index);
             ;
             if (nextIndex == -1) {
                 throw new Exception("next() should have been called first");
             }
-            let temp = this.string.substring(index, nextIndex);
+            let temp = this.string.substring(this.index, nextIndex);
             ;
             this.index = nextIndex + 1;
             //if statement needs to be on the same line and ternary does not work the same way.

@@ -51,12 +51,12 @@ export class MapSelectionGameInputProcessor extends Processor {
                 try {
                     this.setRunning(true);
                     SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
-                    let track = this.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
+                    let track = preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
                     ;
-                    let wave = this.raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
+                    let wave = raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
                     ;
-                    this.gameCanvas.getLayerManager().getGameInfo().setCurrentLevel(wave);
-                    this.gameCanvas.buildGameInit(false);
+                    gameCanvas.getLayerManager().getGameInfo().setCurrentLevel(wave);
+                    gameCanvas.buildGameInit(false);
                     GameKeyEventHandler.getInstance().removeListener(getPlayerGameInput());
                     this.setRunning(false);
                 }
@@ -72,7 +72,7 @@ export class MapSelectionGameInputProcessor extends Processor {
                     }
                 }
             }
-        };
+        }();
         this.gameCanvas = gameCanvas;
         this.raceTrackGeographicMapInterfaceFactoryInterface = raceTrackGeographicMapInterfaceFactoryInterface;
         this.preGameSelectorPaintable = mapSelectorPaintable;
@@ -105,7 +105,7 @@ export class MapSelectionGameInputProcessor extends Processor {
                 if (selectedIndex < this.lockedIndex || !LockedUtil.getInstance().isLocked()) {
                     if (!this.abRunnable.isRunning()) {
                         this.abRunnable.setRunning(true);
-                        ThreadObjectUtil.getInstance().processThread(abRunnable);
+                        ThreadObjectUtil.getInstance().processThread(this.abRunnable);
                     }
                     break;
                 }

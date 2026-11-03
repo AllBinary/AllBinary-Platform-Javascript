@@ -63,12 +63,12 @@ export class BasicTouchInputFactory extends Object {
             this.list.add(this.LEFT);
             this.list.add(this.RIGHT);
             this.list.add(this.DOWN);
-            this.list.add(SPECIAL_BUTTON_TWO);
-            this.list.add(SPECIAL_BUTTON_FOUR);
-            this.list.add(SPECIAL_BUTTON_THREE);
-            this.list.add(SPECIAL_BUTTON_ONE);
-            this.list.add(SPECIAL_BUTTON_FIVE);
-            this.list.add(SPECIAL_BUTTON_SIX);
+            this.list.add(this.SPECIAL_BUTTON_TWO);
+            this.list.add(this.SPECIAL_BUTTON_FOUR);
+            this.list.add(this.SPECIAL_BUTTON_THREE);
+            this.list.add(this.SPECIAL_BUTTON_ONE);
+            this.list.add(this.SPECIAL_BUTTON_FIVE);
+            this.list.add(this.SPECIAL_BUTTON_SIX);
             this.updateAllList(this.list, inputToGameKeyMapping);
         }
     }

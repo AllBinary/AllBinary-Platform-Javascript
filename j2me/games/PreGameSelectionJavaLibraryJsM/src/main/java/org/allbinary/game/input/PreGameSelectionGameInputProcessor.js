@@ -51,7 +51,7 @@ export class PreGameSelectionGameInputProcessor extends Processor {
                 try {
                     this.setRunning(true);
                     SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
-                    this.gameCanvas.setGameState(nextGameState);
+                    gameCanvas.setGameState(nextGameState);
                     GameKeyEventHandler.getInstance().removeListener(getPlayerGameInput());
                     this.setRunning(false);
                 }
@@ -67,7 +67,7 @@ export class PreGameSelectionGameInputProcessor extends Processor {
                     }
                 }
             }
-        };
+        }();
         this.gameCanvas = gameCanvas;
         this.preGameSelectorPaintable = preGameSelectorPaintable;
         this.nextGameState = nextGameState;
@@ -100,7 +100,7 @@ export class PreGameSelectionGameInputProcessor extends Processor {
                 if (selectedIndex < this.lockedIndex || !LockedUtil.getInstance().isLocked()) {
                     if (!this.abRunnable.isRunning()) {
                         this.abRunnable.setRunning(true);
-                        ThreadObjectUtil.getInstance().processThread(abRunnable);
+                        ThreadObjectUtil.getInstance().processThread(this.abRunnable);
                     }
                     break;
                 }

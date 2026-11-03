@@ -24,9 +24,9 @@ export class OpenGLESDeviceImageTranslate extends OpenGLESImageTranslate {
         this.translateY2 = 0.0;
     }
     translate(gl, openGLESImage, x, y) {
-        openGLESImage.imageProcessor.translate(gl, translateX + (openGLESImage.openGLESImageProperties.scaleX * x), translateY + (openGLESImage.openGLESImageProperties.scaleY * y));
+        openGLESImage.imageProcessor.translate(gl, this.translateX + (openGLESImage.openGLESImageProperties.scaleX * x), this.translateY + (openGLESImage.openGLESImageProperties.scaleY * y));
     }
     translate2(gl, openGLESImage) {
-        openGLESImage.imageProcessor.translate(gl, translateX2, translateY2);
+        openGLESImage.imageProcessor.translate(gl, this.translateX2, this.translateY2);
     }
 }

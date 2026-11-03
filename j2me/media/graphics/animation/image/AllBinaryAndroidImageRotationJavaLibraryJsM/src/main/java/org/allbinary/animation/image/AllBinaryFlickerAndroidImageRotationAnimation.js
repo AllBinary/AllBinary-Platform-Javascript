@@ -74,7 +74,7 @@ export class AllBinaryFlickerAndroidImageRotationAnimation extends ImageBaseRota
         this.updateImage();
     }
     updateImage() {
-        this.androidImageUtil.rotate(this.getImage(), originalImage, matrix, this.imageModifierUtil.paint);
+        this.androidImageUtil.rotate(this.getImage(), this.originalImage, this.matrix, this.imageModifierUtil.paint);
     }
     setFrame(index) {
         let currentFrame = this.circularIndexUtil.getIndex();

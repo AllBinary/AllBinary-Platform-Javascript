@@ -126,7 +126,7 @@ export class BaseMusicService extends Service {
                         let commonStateStrings = CommonStateStrings.getInstance();
                         ;
                         try {
-                            while (this.player.isPlaying()) {
+                            while (player.isPlaying()) {
                                 logUtil.putF(this.baseMusicService.WAITING_FOR_MUSIC_TO_END, this, commonStateStrings.ON_START_COMMAND);
                                 Thread.sleep(1200);
                             }

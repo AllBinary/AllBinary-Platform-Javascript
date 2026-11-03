@@ -149,7 +149,7 @@ export class OpenGLESGL10Image extends OpenGLESImage {
                 gl.glDisable(GL10.GL_TEXTURE_2D);
                 gl.glPopMatrix();
             }
-        };
+        }();
         this.openGLESImageDraw = OpenGLESImageDraw.getInstance();
         //For kotlin this is before the body of the constructor.
         this.initVertices();

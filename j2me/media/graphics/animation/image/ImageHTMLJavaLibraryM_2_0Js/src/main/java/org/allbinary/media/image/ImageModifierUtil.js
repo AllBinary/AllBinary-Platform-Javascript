@@ -119,15 +119,15 @@ export class ImageModifierUtil extends Object {
                     onSuccess(resource) {
                         let logUtil = LogUtil.getInstance();
                         ;
-                        logUtil.putF(this.resourceCallbackStrings.DONE + image.getName(), this, this.resourceCallbackStrings.HANDLE_IMAGE);
+                        logUtil.putF(resourceCallbackStrings.DONE + image.getName(), this, resourceCallbackStrings.HANDLE_IMAGE);
                         copy(imageArray, index, image, image3);
                     }
                     onFailure(e) {
                         let logUtil = LogUtil.getInstance();
                         ;
-                        logUtil.put(new StringMaker().append(this.commonStrings.EXCEPTION_LABEL).append(this.resourceCallbackStrings.ERROR).append(image.getName()).toString(), this, this.resourceCallbackStrings.HANDLE_IMAGE, e);
+                        logUtil.put(new StringMaker().append(commonStrings.EXCEPTION_LABEL).append(resourceCallbackStrings.ERROR).append(image.getName()).toString(), this, resourceCallbackStrings.HANDLE_IMAGE, e);
                     }
-                };
+                }();
                 ;
                 image3.addCallback(callback);
             }

@@ -55,6 +55,6 @@ export class FillAnimation extends IndexedAnimation {
     updateModifiers() {
     }
     paint(g) {
-        g.drawRGB(pixelBuffer, 0, width, 0, 0, width, height, true);
+        g.drawRGB(this.pixelBuffer, 0, this.width, 0, 0, this.width, this.height, true);
     }
 }

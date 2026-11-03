@@ -37,7 +37,7 @@ export class TouchJ2ME extends Object {
     }
     pointerDragged(x, y) {
         try {
-            this.motionRecognizer.processDraggedMotionEvent(x, y, DEVICE_ID, 0);
+            this.motionRecognizer.processDraggedMotionEvent(x, y, this.DEVICE_ID, 0);
         }
         catch (caught) {
             {
@@ -50,7 +50,7 @@ export class TouchJ2ME extends Object {
     }
     pointerPressed(x, y) {
         try {
-            this.motionRecognizer.processStartMotionEvent(x, y, DEVICE_ID, 0);
+            this.motionRecognizer.processStartMotionEvent(x, y, this.DEVICE_ID, 0);
         }
         catch (caught) {
             {
@@ -63,7 +63,7 @@ export class TouchJ2ME extends Object {
     }
     pointerReleased(x, y) {
         try {
-            this.motionRecognizer.processEndMotionEvent(x, y, DEVICE_ID, 0);
+            this.motionRecognizer.processEndMotionEvent(x, y, this.DEVICE_ID, 0);
         }
         catch (caught) {
             {

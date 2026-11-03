@@ -91,7 +91,7 @@ export class AbeLicenseInterfaceFactory extends Object {
         ;
         if (this.abeLicenseInterface ==
             null
-            || this.abeLicenseInterface == AbeNoLicense.getInstance() || !this.abeLicenseInterface.hasKey() || isCheck() || currentTime - checkPeriod > time) {
+            || this.abeLicenseInterface == AbeNoLicense.getInstance() || !this.abeLicenseInterface.hasKey() || isCheck() || currentTime - this.checkPeriod > this.time) {
             this.abeLicenseInterface =
                 null;
             this.time = currentTime;

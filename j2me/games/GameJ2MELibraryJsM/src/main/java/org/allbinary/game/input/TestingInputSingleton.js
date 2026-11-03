@@ -56,37 +56,37 @@ export class TestingInputSingleton extends AllBinaryGameLayer {
             processEvent(allbinaryLayerManager, gameKeyEvent) {
                 testInputInterface.up();
             }
-        };
+        }();
         this.inputProcessorArray[Canvas.DOWN] = new class extends GameInputProcessor {
             //@Throws(Exception.constructor)
             processEvent(allbinaryLayerManager, gameKeyEvent) {
                 testInputInterface.down();
             }
-        };
+        }();
         this.inputProcessorArray[Canvas.LEFT] = new class extends GameInputProcessor {
             //@Throws(Exception.constructor)
             processEvent(allbinaryLayerManager, gameKeyEvent) {
                 testInputInterface.left();
             }
-        };
+        }();
         this.inputProcessorArray[Canvas.RIGHT] = new class extends GameInputProcessor {
             //@Throws(Exception.constructor)
             processEvent(allbinaryLayerManager, gameKeyEvent) {
                 testInputInterface.right();
             }
-        };
+        }();
         this.inputProcessorArray[Canvas.KEY_NUM7] = new class extends GameInputProcessor {
             //@Throws(Exception.constructor)
             processEvent(allbinaryLayerManager, gameKeyEvent) {
                 testInputInterface.strafeLeft();
             }
-        };
+        }();
         this.inputProcessorArray[Canvas.KEY_NUM9] = new class extends GameInputProcessor {
             //@Throws(Exception.constructor)
             processEvent(allbinaryLayerManager, gameKeyEvent) {
                 testInputInterface.strafeRight();
             }
-        };
+        }();
         GameInputProcessorUtil.init(this.inputProcessorArray);
     }
     //@Throws(Exception.constructor)

@@ -89,7 +89,7 @@ export class PCClipWavPlayer extends BasicPlayer {
                     }
                 }
             }
-        });
+        }());
     }
     //@Throws(Exception.constructor)
     close2() {
@@ -116,7 +116,7 @@ export class PCClipWavPlayer extends BasicPlayer {
                     }
                 }
             }
-        });
+        }());
     }
     //@Throws(Exception.constructor)
     start2() {
@@ -149,7 +149,7 @@ export class PCClipWavPlayer extends BasicPlayer {
                     }
                 }
             }
-        });
+        }());
     }
     //@Throws(Exception.constructor)
     stop2() {
