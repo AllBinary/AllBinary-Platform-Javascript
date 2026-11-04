@@ -72,7 +72,7 @@ export class ImageJ2MEScaleUtil extends Object {
         ;
         let canvas = PlayN.getInstance().graphics().get(scaledPlayNImage);
         ;
-        originalPlayNImage.draw(canvas.gc(), 0, 0, scaledImage.getWidth(), scaledImage.getHeight(), 0, 0, image.getWidth(), image.getHeight());
+        canvas.drawScale(originalPlayNImage, 0, 0, scaledImage.getWidth(), scaledImage.getHeight(), 0, 0, image.getWidth(), image.getHeight());
         //if statement needs to be on the same line and ternary does not work the same way.
         return scaledImage;
     }
