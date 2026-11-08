@@ -18,4 +18,22 @@ export class ABTextItem extends CustomCustomItem {
         //if statement needs to be on the same line and ternary does not work the same way.
         return ABStringComponent.NULL_STRING_COMPONENT;
     }
+    getMinimumWidth() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getMinimumWidth();
+        ;
+    }
+    getMinimumHeight() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getMinimumHeight();
+        ;
+    }
+    getLabel() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getLabel();
+        ;
+    }
+    paintXY(graphics, x, y) {
+        super.paintXY(graphics, x, y);
+    }
 }

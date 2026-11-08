@@ -39,40 +39,50 @@ import { ThreadObjectUtil } from '../../../../org/allbinary/thread/ThreadObjectU
 //not GWT import const ThreadObjectUtil
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
 //sameFolderImports - not GWT import - same folder const PlayerGameInput
+//import { MapSelectionRunnable } from './MapSelectionRunnable.js';
+//sameFolderImports - not GWT import - same folder const MapSelectionRunnable
 import { GameInputProcessorComposite } from './GameInputProcessorComposite.js';
-//sameFolderImports - not GWT import - same folder const GameInputProcessorComposite
 export class MapSelectionGameInputProcessor extends Processor {
     constructor(gameCanvas, raceTrackGeographicMapInterfaceFactoryInterface, mapSelectorPaintable, lockedIndex) {
         super();
-        this.logUtil = LogUtil.getInstance();
-        this.inputTimeHelper = new TimeDelayHelper(650);
-        this.abRunnable = new class extends ABRunnable {
-            run() {
-                try {
-                    this.setRunning(true);
-                    SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
-                    let track = preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
-                    ;
-                    let wave = raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
-                    ;
-                    gameCanvas.getLayerManager().getGameInfo().setCurrentLevel(wave);
-                    gameCanvas.buildGameInit(false);
-                    GameKeyEventHandler.getInstance().removeListener(getPlayerGameInput());
-                    this.setRunning(false);
+        //inner= member=true isStatic=
+        this.MapSelectionRunnable = (() => {
+            const outer$MapSelectionGameInputProcessor = this;
+            return class extends ABRunnable {
+                constructor(inputProcessor) {
+                    super();
+                    this.inputProcessor = inputProcessor;
                 }
-                catch (caught) {
-                    {
-                        const e = caught;
+                run() {
+                    try {
+                        this.setRunning(true);
+                        SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
+                        let track = this.inputProcessor.preGameSelectorPaintable.getPreGameSelectionForm().getSelectedIndex() + 1;
+                        ;
+                        let wave = this.inputProcessor.raceTrackGeographicMapInterfaceFactoryInterface.getFirstWaveWithTrack(track);
+                        ;
+                        this.inputProcessor.gameCanvas.getLayerManager().getGameInfo().setCurrentLevel(wave);
+                        this.inputProcessor.gameCanvas.buildGameInit(false);
+                        GameKeyEventHandler.getInstance().removeListener(this.inputProcessor.getPlayerGameInput());
                         this.setRunning(false);
-                        let logUtil = LogUtil.getInstance();
-                        ;
-                        let commonStrings = CommonStrings.getInstance();
-                        ;
-                        logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                    }
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            this.setRunning(false);
+                            let logUtil = LogUtil.getInstance();
+                            ;
+                            let commonStrings = CommonStrings.getInstance();
+                            ;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
                     }
                 }
-            }
-        }();
+            };
+        })();
+        this.logUtil = LogUtil.getInstance();
+        this.inputTimeHelper = new TimeDelayHelper(650);
+        this.abRunnable = new this.MapSelectionRunnable(this);
         this.gameCanvas = gameCanvas;
         this.raceTrackGeographicMapInterfaceFactoryInterface = raceTrackGeographicMapInterfaceFactoryInterface;
         this.preGameSelectorPaintable = mapSelectorPaintable;

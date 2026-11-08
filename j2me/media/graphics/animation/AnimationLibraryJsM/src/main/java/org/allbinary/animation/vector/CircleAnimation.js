@@ -31,4 +31,12 @@ export class CircleAnimation extends Animation {
         this.basicSetColorUtil.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor());
         graphics.drawArc(x, y, this.width, this.height, 0, this.TOTAL_ANGLE);
     }
+    getBasicColorP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBasicColorP();
+        ;
+    }
+    setBasicColorP(basicColor) {
+        super.setBasicColorP(basicColor);
+    }
 }

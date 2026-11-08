@@ -64,6 +64,48 @@ export class AllBinaryLayer extends Layer {
         this.viewPosition = viewPosition;
         this.viewPosition.setAllbinaryLayer(this);
     }
+    setPosition(x, y, z) {
+        super.setPosition(x, y, z);
+    }
+    moveDXYZ(dx, dy, dz) {
+        super.moveDXYZ(dx, dy, dz);
+    }
+    getXP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getXP();
+        ;
+    }
+    getYP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getYP();
+        ;
+    }
+    getZP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getZP();
+        ;
+    }
+    getWidth() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getWidth();
+        ;
+    }
+    getHeight() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getHeight();
+        ;
+    }
+    setVisible(visible) {
+        super.setVisible(visible);
+    }
+    isVisible() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.isVisible();
+        ;
+    }
+    paint(graphics) {
+        super.paint(graphics);
+    }
     //@Throws(Exception.constructor)
     onChangeEvent(layerManagerEvent) {
     }

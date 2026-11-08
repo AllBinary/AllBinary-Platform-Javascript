@@ -13,11 +13,17 @@
 */
 /* Generated Code Do Not Modify */
 import { VirtualKeyboard } from '../../../../../org/allbinary/android/input/VirtualKeyboard.js';
-//not GWT import const Activity
+//not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class VirtualKeyboardAPI1 extends VirtualKeyboard {
     constructor(activity) {
         super();
+    }
+    onVirtualKeyboardEvent(virtualKeyboardEvent) {
+        super.onVirtualKeyboardEvent(virtualKeyboardEvent);
+    }
+    onEvent(eventObject) {
+        super.onEvent(eventObject);
     }
 }
 VirtualKeyboardAPI1.MIN_API = 1;

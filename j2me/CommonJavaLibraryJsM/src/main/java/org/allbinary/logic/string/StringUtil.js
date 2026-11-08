@@ -21,7 +21,7 @@ export class StringUtil extends Object {
     }
     constructor() {
         super();
-        this.INIT_STRING = .toCharArray();
+        this.INIT_STRING = "";
         this.NULL_STRING = "null";
         this.EMPTY_STRING = "";
         this.ONE_EMPTY_STRING_ARRAY = [

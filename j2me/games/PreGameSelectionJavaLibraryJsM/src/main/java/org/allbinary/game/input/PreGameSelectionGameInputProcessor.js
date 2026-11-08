@@ -39,35 +39,45 @@ import { ThreadObjectUtil } from '../../../../org/allbinary/thread/ThreadObjectU
 //not GWT import const ThreadObjectUtil
 import { TimeDelayHelper } from '../../../../org/allbinary/time/TimeDelayHelper.js';
 //sameFolderImports - not GWT import - same folder const PlayerGameInput
+//import { PreGameSelectionRunnable } from './PreGameSelectionRunnable.js';
+//sameFolderImports - not GWT import - same folder const PreGameSelectionRunnable
 import { GameInputProcessorComposite } from './GameInputProcessorComposite.js';
-//sameFolderImports - not GWT import - same folder const GameInputProcessorComposite
 export class PreGameSelectionGameInputProcessor extends Processor {
     constructor(gameCanvas, preGameSelectorPaintable, nextGameState, lockedIndex) {
         super();
-        this.logUtil = LogUtil.getInstance();
-        this.inputTimeHelper = new TimeDelayHelper(650);
-        this.abRunnable = new class extends ABRunnable {
-            run() {
-                try {
-                    this.setRunning(true);
-                    SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
-                    gameCanvas.setGameState(nextGameState);
-                    GameKeyEventHandler.getInstance().removeListener(getPlayerGameInput());
-                    this.setRunning(false);
+        //inner= member=true isStatic=
+        this.PreGameSelectionRunnable = (() => {
+            const outer$PreGameSelectionGameInputProcessor = this;
+            return class extends ABRunnable {
+                constructor(inputProcessor) {
+                    super();
+                    this.inputProcessor = inputProcessor;
                 }
-                catch (caught) {
-                    {
-                        const e = caught;
+                run() {
+                    try {
+                        this.setRunning(true);
+                        SecondaryPlayerQueueFactory.getInstance().add(SelectSound.getInstance());
+                        this.inputProcessor.gameCanvas.setGameState(this.inputProcessor.nextGameState);
+                        GameKeyEventHandler.getInstance().removeListener(this.inputProcessor.getPlayerGameInput());
                         this.setRunning(false);
-                        let logUtil = LogUtil.getInstance();
-                        ;
-                        let commonStrings = CommonStrings.getInstance();
-                        ;
-                        logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                    }
+                    catch (caught) {
+                        {
+                            const e = caught;
+                            this.setRunning(false);
+                            let logUtil = LogUtil.getInstance();
+                            ;
+                            let commonStrings = CommonStrings.getInstance();
+                            ;
+                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
+                        }
                     }
                 }
-            }
-        }();
+            };
+        })();
+        this.logUtil = LogUtil.getInstance();
+        this.inputTimeHelper = new TimeDelayHelper(650);
+        this.abRunnable = new this.PreGameSelectionRunnable(this);
         this.gameCanvas = gameCanvas;
         this.preGameSelectorPaintable = preGameSelectorPaintable;
         this.nextGameState = nextGameState;

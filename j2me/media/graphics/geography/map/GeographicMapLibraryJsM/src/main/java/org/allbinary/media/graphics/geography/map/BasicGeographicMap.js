@@ -249,5 +249,44 @@ export class BasicGeographicMap extends SimpleGeographicMap {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.geographicMapCellTypeFactory;
     }
+    getId() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getId();
+        ;
+    }
+    getName() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getName();
+        ;
+    }
+    reset() {
+        super.reset();
+    }
+    getAllBinaryTiledLayer() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getAllBinaryTiledLayer();
+        ;
+    }
+    getCellTypeFromMapCellTypeInt(cellTypeId) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getCellTypeFromMapCellTypeInt(cellTypeId);
+        ;
+    }
+    //@Throws(Exception.constructor)
+    getCellTypeAt(cellPosition) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getCellTypeAt(cellPosition);
+        ;
+    }
+    getForegroundBasicColor() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getForegroundBasicColor();
+        ;
+    }
+    getBackgroundBasicColor() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBackgroundBasicColor();
+        ;
+    }
 }
 BasicGeographicMap.NULL_BASIC_GEOGRAPHIC_MAP_ARRAY = [];

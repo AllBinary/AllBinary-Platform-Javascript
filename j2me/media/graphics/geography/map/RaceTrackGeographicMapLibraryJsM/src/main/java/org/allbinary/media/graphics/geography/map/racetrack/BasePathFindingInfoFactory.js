@@ -40,8 +40,9 @@ export class BasePathFindingInfoFactory extends Object {
     init(geographicMapInterface, pathFindingInfo, mapArray) {
         //inner=true member= isStatic=
         class RaceTrackGeographicMapCellPositionFactoryInitVisitor extends Object {
-            constructor() {
+            constructor(pathFindingInfoFactory) {
                 super();
+                this.pathFindingInfoFactory = pathFindingInfoFactory;
                 let raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
                 ;
                 this.startLineId = raceTrackGeographicMapCellTypeFactory.getStartType();
@@ -59,14 +60,14 @@ export class BasePathFindingInfoFactory extends Object {
                     let geographicCellType = geographicMapInterface.getCellTypeFromMapCellTypeInt(cellTypeId);
                     ;
                     if (geographicCellType == this.startLineId) {
-                        outer$BasePathFindingInfoFactory.addStartPathFindingNode(pathFindingInfo, cellPosition);
+                        this.pathFindingInfoFactory.addStartPathFindingNode(pathFindingInfo, cellPosition);
                     }
                     if (geographicCellType == this.finishLineId) {
                         if (geographicCellType == this.startLineId) {
-                            outer$BasePathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, geographicMapInterface.getGeographicMapCellPositionFactoryInterface().getInstance(geographicMapInterface, cellPosition.getColumn(), cellPosition.getRow(), tiledLayer.getColumns(), tiledLayer.getRows(), tiledLayer.getCellWidth(), tiledLayer.getCellHeight()));
+                            this.pathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, geographicMapInterface.getGeographicMapCellPositionFactoryInterface().getInstance(geographicMapInterface, cellPosition.getColumn(), cellPosition.getRow(), tiledLayer.getColumns(), tiledLayer.getRows(), tiledLayer.getCellWidth(), tiledLayer.getCellHeight()));
                         }
                         else {
-                            outer$BasePathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, cellPosition);
+                            this.pathFindingInfoFactory.addEndPathFindingNode(pathFindingInfo, cellPosition);
                         }
                     }
                     let raceTrackGeographicMapCellTypeFactory = geographicMapInterface.getGeographicMapCellTypeFactory();
@@ -84,13 +85,13 @@ export class BasePathFindingInfoFactory extends Object {
                         const e = caught;
                         let commonSeps = CommonSeps.getInstance();
                         ;
-                        logUtil.put(new StringMaker().append(commonSeps.BRACKET_OPEN).appendint(row).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(column).append("] in [").appendint(mapArray.length).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(mapArray[0].length).append(commonSeps.BRACKET_CLOSE).toString(), this, "visit", e);
+                        this.pathFindingInfoFactory.logUtil.put(new StringMaker().append(commonSeps.BRACKET_OPEN).appendint(row).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(column).append("] in [").appendint(mapArray.length).append(commonSeps.BRACKET_CLOSE).append(commonSeps.BRACKET_OPEN).appendint(mapArray[0].length).append(commonSeps.BRACKET_CLOSE).toString(), this, "visit", e);
                         throw e;
                     }
                 }
             }
         }
-        geographicMapInterface.getGeographicMapCellPositionFactory().visit(new RaceTrackGeographicMapCellPositionFactoryInitVisitor());
+        geographicMapInterface.getGeographicMapCellPositionFactory().visit(new RaceTrackGeographicMapCellPositionFactoryInitVisitor(this));
     }
     //@Throws(Exception.constructor)
     addStartPathFindingNode(pathFindingInfo, startGeographicMapCellPosition) {

@@ -40,7 +40,7 @@ export class LayerManagerEvent extends AllBinaryEventObject {
         stringBuffer.append("LayerInterface: ");
         stringBuffer.append(this.getLayerInterface().toString());
         stringBuffer.append("\nCRUD: ");
-        stringBuffer.append(this.crud.toString());
+        stringBuffer.append(this.crud);
         //if statement needs to be on the same line and ternary does not work the same way.
         return stringBuffer.toString();
         ;

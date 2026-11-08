@@ -54,6 +54,16 @@ export class MyCanvas extends Canvas {
         this.childNameList = childNameList;
         this.commandStack = StdUtil.getInstance().createStack();
     }
+    getWidth() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getWidth();
+        ;
+    }
+    getHeight() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getHeight();
+        ;
+    }
     setFullScreenMode(mode) {
         super.setFullScreenMode(mode);
         this.displayInfo.update(this, this.canvasStrings.SET_FULL_SCREEN_MODE);

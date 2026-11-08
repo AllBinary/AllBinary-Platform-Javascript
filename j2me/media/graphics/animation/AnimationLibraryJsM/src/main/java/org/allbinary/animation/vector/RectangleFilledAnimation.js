@@ -34,4 +34,12 @@ export class RectangleFilledAnimation extends Animation {
     setHeight(height) {
         this.heightP = height;
     }
+    getBasicColorP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBasicColorP();
+        ;
+    }
+    setBasicColorP(basicColor) {
+        super.setBasicColorP(basicColor);
+    }
 }

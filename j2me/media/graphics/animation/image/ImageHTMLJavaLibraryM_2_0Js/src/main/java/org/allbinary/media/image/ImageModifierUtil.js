@@ -37,10 +37,38 @@ const CoreImage = globalThis.playn.core.CoreImage;
 const ImageImpl = globalThis.playn.core.ImageImpl;
 //not plain js import { HTMLPlaynUtil } 
 const HTMLPlaynUtil = globalThis.playn.html.HTMLPlaynUtil;
-//Current folder imports from return types, extended types, and scope (deduplicated)
 export class ImageModifierUtil extends Object {
     constructor() {
         super(...arguments);
+        //inner= member=true isStatic=
+        this.ImageCopyCallback = (() => {
+            const outer$ImageModifierUtil = this;
+            return class extends Object {
+                constructor(imageModifierUtil, imageArray, index, image, image3) {
+                    super();
+                    this.imageModifierUtil = imageModifierUtil;
+                    this.imageArray = imageArray;
+                    this.index = index;
+                    this.image = image;
+                    this.image3 = image3;
+                }
+                onSuccess(resource) {
+                    let logUtil = LogUtil.getInstance();
+                    ;
+                    let resourceCallbackStrings = this.imageModifierUtil.resourceCallbackStrings;
+                    ;
+                    logUtil.putF(resourceCallbackStrings.DONE + this.image.getName(), this, resourceCallbackStrings.HANDLE_IMAGE);
+                    this.imageModifierUtil.copy(this.imageArray, this.index, this.image, this.image3);
+                }
+                onFailure(e) {
+                    let logUtil = LogUtil.getInstance();
+                    ;
+                    let resourceCallbackStrings = this.imageModifierUtil.resourceCallbackStrings;
+                    ;
+                    logUtil.put(new StringMaker().append(this.imageModifierUtil.commonStrings.EXCEPTION_LABEL).append(resourceCallbackStrings.ERROR).append(this.image.getName()).toString(), this, resourceCallbackStrings.HANDLE_IMAGE, e);
+                }
+            };
+        })();
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.resourceCallbackStrings = ResourceCallbackStrings.getInstance();
@@ -115,19 +143,7 @@ export class ImageModifierUtil extends Object {
                 this.copy(imageArray, index, image, image3);
             }
             else {
-                let callback = new class extends Callback {
-                    onSuccess(resource) {
-                        let logUtil = LogUtil.getInstance();
-                        ;
-                        logUtil.putF(resourceCallbackStrings.DONE + image.getName(), this, resourceCallbackStrings.HANDLE_IMAGE);
-                        copy(imageArray, index, image, image3);
-                    }
-                    onFailure(e) {
-                        let logUtil = LogUtil.getInstance();
-                        ;
-                        logUtil.put(new StringMaker().append(commonStrings.EXCEPTION_LABEL).append(resourceCallbackStrings.ERROR).append(image.getName()).toString(), this, resourceCallbackStrings.HANDLE_IMAGE, e);
-                    }
-                }();
+                let callback = new this.ImageCopyCallback(this, imageArray, index, image, image3);
                 ;
                 image3.addCallback(callback);
             }

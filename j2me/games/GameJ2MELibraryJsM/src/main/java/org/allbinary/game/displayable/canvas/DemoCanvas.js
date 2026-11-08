@@ -890,6 +890,16 @@ export class DemoCanvas extends RunnableCanvas {
         //if statement needs to be on the same line and ternary does not work the same way.
         return DemoCanvas.TYPE;
     }
+    getTitle() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getTitle();
+        ;
+    }
+    isPaused() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.isPaused();
+        ;
+    }
 }
 DemoCanvas.id = 0;
 DemoCanvas.BOT_GAME_STATS = "Bot Game Statistics: ";

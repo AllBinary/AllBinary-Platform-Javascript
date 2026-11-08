@@ -29,4 +29,12 @@ export class CircleFilledAnimation extends Animation {
         this.basicSetColorUtil.setBasicColorP3(graphics, this.getBasicColorP(), this.getColor());
         graphics.fillRect(x, y, this.width, this.height);
     }
+    getBasicColorP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBasicColorP();
+        ;
+    }
+    setBasicColorP(basicColor) {
+        super.setBasicColorP(basicColor);
+    }
 }

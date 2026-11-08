@@ -27,7 +27,7 @@ const Writer = ((_f = (_b = (_a = globalThis.java) === null || _a === void 0 ? v
 import { DocumentBuilderFactory } from '../../../../../../javax/xml/parsers/DocumentBuilderFactory.js';
 //not GWT import const DocumentBuilderFactory
 import { OutputKeys } from '../../../../../../javax/xml/transform/OutputKeys.js';
-//not GWT import const Transformer
+//not GWT import const TransformerConfigurationException
 import { TransformerFactory } from '../../../../../../javax/xml/transform/TransformerFactory.js';
 //not GWT import const TransformerFactory
 import { DOMSource } from '../../../../../../javax/xml/transform/dom/DOMSource.js';
@@ -39,9 +39,6 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 import { BooleanFactory } from '../../../../../../org/allbinary/logic/java/bool/BooleanFactory.js';
 //not GWT import const BooleanFactory
 import { CharacterSetData } from '../../../../../../org/allbinary/logic/java/characters/CharacterSetData.js';
-//not GWT import const CharacterSetData
-//not plain js import { CommonStrings } 
-const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //not GWT import const Document
 //not plain js import { InputSource } 
 const InputSource = ((_g = (_e = (_d = (_c = globalThis.org) === null || _c === void 0 ? void 0 : _c.xml) === null || _d === void 0 ? void 0 : _d.sax) === null || _e === void 0 ? void 0 : _e.InputSource) !== null && _g !== void 0 ? _g : class {
@@ -81,38 +78,67 @@ export class XmlDocumentHelper extends Object {
         super();
         this.logUtil = LogUtil.getInstance();
         this.INDENT_NUMBER = "indent-number";
+        this.indent = 0;
+        this.ignoreDeclaration = false;
         this.init(4, true);
     }
+    //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     init(indent, ignoreDeclaration) {
-        try {
-            let booleanFactory = BooleanFactory.getInstance();
-            ;
-            let transformerFactory = TransformerFactory.newInstance();
-            ;
-            transformerFactory.setAttribute(this.INDENT_NUMBER, indent);
-            this.transformer = transformerFactory.newTransformer();
-            this.transformer.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance().UTF_8);
-            this.transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, (ignoreDeclaration ? booleanFactory.YES : booleanFactory.NO));
-            this.transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory.YES);
-        }
-        catch (caught) {
-            {
-                const e = caught;
-                let commonStrings = CommonStrings.getInstance();
-                ;
-                this.logUtil.put(commonStrings.EXCEPTION, this, commonStrings.INIT, e);
-            }
-        }
+        this.indent = indent;
+        this.ignoreDeclaration = ignoreDeclaration;
+    }
+    createTransformer(...args) {
+        if (args.length === 2 && typeof args[0] === 'number' && typeof args[1] === 'boolean')
+            return this.createTransformer$overload1(args[0], args[1]);
+        if (args.length === 0)
+            return this.createTransformer$overload2();
+        throw new TypeError('No matching overload: createTransformer');
+    }
+    //@Throws(TransformerConfigurationException.constructor)
+    createTransformer$overload1(indent, ignoreDeclaration) {
+        let booleanFactory = BooleanFactory.getInstance();
+        ;
+        let transformerFactory = TransformerFactory.newInstance();
+        ;
+        transformerFactory.setAttribute(this.INDENT_NUMBER, indent);
+        let transformer = transformerFactory.newTransformer();
+        ;
+        transformer.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance().UTF_8);
+        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, (ignoreDeclaration ? booleanFactory.YES : booleanFactory.NO));
+        transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory.YES);
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return transformer;
+    }
+    //@Throws(TransformerConfigurationException.constructor)
+    createTransformer$overload2() {
+        let currentIndent = 0;
+        ;
+        let currentIgnoreDeclaration = false;
+        ;
+        //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
+        //synchronized(this) 
+        //mutex.withLock
+        currentIndent = this.indent;
+        currentIgnoreDeclaration = this.ignoreDeclaration;
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return this.createTransformer(currentIndent, currentIgnoreDeclaration);
+        ;
     }
     //@Throws(Exception.constructor)
     format(xmlString) {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return this.formatWithTransformer(xmlString, this.createTransformer());
+        ;
+    }
+    //@Throws(Exception.constructor)
+    formatWithTransformer(xmlString, transformer) {
         let src = new InputSource(new StringReader(xmlString));
         ;
         let document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(src);
         ;
         let out = new StringWriter();
         ;
-        this.transformer.transform(new DOMSource(document), new StreamResult(out));
+        transformer.transform(new DOMSource(document), new StreamResult(out));
         //if statement needs to be on the same line and ternary does not work the same way.
         return out.toString();
         ;

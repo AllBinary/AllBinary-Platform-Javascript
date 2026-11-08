@@ -42,4 +42,12 @@ export class RectangleAdjustedAnimation extends Animation {
     setOffsetY(offsetY) {
         this.offsetY = offsetY;
     }
+    getBasicColorP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBasicColorP();
+        ;
+    }
+    setBasicColorP(basicColor) {
+        super.setBasicColorP(basicColor);
+    }
 }

@@ -71,4 +71,9 @@ export class CustomTextBoxIndexedAnimation extends IndexedAnimation {
     }
     paintThreedXYZ(graphics, x, y, z) {
     }
+    getWidth() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getWidth();
+        ;
+    }
 }

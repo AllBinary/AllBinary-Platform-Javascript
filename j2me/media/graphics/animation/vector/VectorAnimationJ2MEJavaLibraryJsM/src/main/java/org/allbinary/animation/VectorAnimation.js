@@ -164,4 +164,9 @@ export class VectorAnimation extends IndexedAnimation {
         this.currentPoints = currentPoints;
         this.circularIndexUtil = CircularIndexUtil.createInstance(currentPoints.length);
     }
+    getBasicColorP() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getBasicColorP();
+        ;
+    }
 }

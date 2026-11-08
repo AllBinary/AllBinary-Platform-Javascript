@@ -683,6 +683,21 @@ export class StartCanvas extends RunnableCanvas {
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.gameInitializationInterfaceFactoryInterface;
     }
+    getTitle() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getTitle();
+        ;
+    }
+    isPaused() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.isPaused();
+        ;
+    }
+    getType() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getType();
+        ;
+    }
 }
 StartCanvas.id = 0;
 StartCanvas.BOT_GAME_STATS = "Bot Game Statistics: ";

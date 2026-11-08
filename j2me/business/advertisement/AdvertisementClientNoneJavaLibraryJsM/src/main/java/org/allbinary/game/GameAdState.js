@@ -14,7 +14,7 @@
 import { GameAdStateBase } from '../../../org/allbinary/business/advertisement/GameAdStateBase.js';
 //not GWT import const VirtualKeyboardEvent
 import { VirtualKeyboardEventHandler } from '../../../org/allbinary/input/event/VirtualKeyboardEventHandler.js';
-//not GWT import const VirtualKeyboardEventListenerInterface
+//not GWT import const AllBinaryEventObject
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class GameAdState extends GameAdStateBase {
     constructor(adConfiguration) {
@@ -24,5 +24,8 @@ export class GameAdState extends GameAdStateBase {
     }
     //@Throws(Exception.constructor)
     onVirtualKeyboardEvent(virtualKeyboardEvent) {
+    }
+    onEvent(eventObject) {
+        super.onEvent(eventObject);
     }
 }

@@ -21,7 +21,7 @@ import { FontDebugFactory } from '../../../../org/allbinary/graphics/font/FontDe
 const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { TextAnimation } from './TextAnimation.js';
-//sameFolderImports - not GWT import - same folder const TextInterface
+//sameFolderImports - not GWT import - same folder const TextChangeListener
 export class CustomTextAnimation extends TextAnimation {
     constructor(text, fontSize, animationBehavior) {
         super(text, animationBehavior);
@@ -47,6 +47,9 @@ export class CustomTextAnimation extends TextAnimation {
         }
         this.hasChanged = true;
         this.font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, globalThis.Math.trunc((this.fontSize * scaleX)));
+    }
+    setTextWithOnMeasure(text, textChangeListener) {
+        super.setTextWithOnMeasure(text, textChangeListener);
     }
     setText(text) {
         if (this.lastText != text) {

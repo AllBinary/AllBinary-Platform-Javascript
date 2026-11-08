@@ -1538,6 +1538,16 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
         //if statement needs to be on the same line and ternary does not work the same way.
         return AllBinaryGameCanvas.TYPE;
     }
+    getTitle() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getTitle();
+        ;
+    }
+    isPaused() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.isPaused();
+        ;
+    }
 }
 AllBinaryGameCanvas.id = 0;
 AllBinaryGameCanvas.TYPE = 2;

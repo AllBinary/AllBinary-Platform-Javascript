@@ -69,6 +69,7 @@ import { RemoteInfo } from '../../../../../org/allbinary/game/multiplayer/layer/
 //not GWT import const RemoteInfo
 //not plain js import { ABHashtable } 
 const ABHashtable = globalThis.org.allbinary.util.ABHashtable;
+//not GWT import const RotationAnimation
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SimulatedBuildingPropertiesFactory } from './SimulatedBuildingPropertiesFactory.js';
 //sameFolderImports - not GWT import - same folder const BuildingPropertiesFactory
@@ -363,5 +364,13 @@ export class BuildingLayer extends AdvancedRTSGameLayer {
         //if statement needs to be on the same line and ternary does not work the same way.
         return BuildingLayer.getStaticType();
         ;
+    }
+    getRotationAnimationInterface() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return super.getRotationAnimationInterface();
+        ;
+    }
+    setFrame(index) {
+        super.setFrame(index);
     }
 }
