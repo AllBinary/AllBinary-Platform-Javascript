@@ -48,13 +48,7 @@ export class AllBinaryLayer extends Layer {
         //For kotlin this is before the body of the constructor.
         let localName;
         ;
-        if (name ==
-            null) {
-            localName = this.constructor.name.toString();
-        }
-        else {
-            localName = new StringMaker().append(name).append(CommonSeps.getInstance().COLON).append(Integer.toHexString(TsUtil.getInstance().hashCode(this))).toString();
-        }
+        localName = new StringMaker().append(name).append(CommonSeps.getInstance().COLON).append(Integer.toHexString(TsUtil.getInstance().hashCode(this))).toString();
         this.name = localName;
         let point = rectangle.getPoint();
         ;

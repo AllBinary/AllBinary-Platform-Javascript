@@ -18,14 +18,14 @@ import { ChoiceGroup } from '../../../../javax/microedition/lcdui/ChoiceGroup.js
 //not GWT import const CommandListener
 import { NullImage } from '../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage
+import { MIDPUtil } from '../../../../org/allbinary/MIDPUtil.js';
+//not GWT import const MIDPUtil
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
 //not GWT import const GameCommandsFactory
 import { GameDifficultyFactory } from '../../../../org/allbinary/game/configuration/persistance/GameDifficultyFactory.js';
 //not GWT import const BasicColor
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
 //not GWT import const CommandForm
-import { MEUtil } from '../../../../org/allbinary/logic/MEUtil.js';
-//not GWT import const MEUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { StringUtil } 
@@ -36,7 +36,7 @@ const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 export class GameDifficultyOptions extends CommandForm {
     constructor(commandListener, title, list, backgrounBasicColor, foregroundBasicColor) {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
-        this.meUtil = MEUtil.getInstance();
+        this.meUtil = MIDPUtil.getInstance();
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
         this.list = list;

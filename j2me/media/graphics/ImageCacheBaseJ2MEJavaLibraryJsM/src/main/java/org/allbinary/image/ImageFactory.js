@@ -16,6 +16,8 @@ import { Object } from '../../../java/lang/Object.js';
 //not GWT import const InputStream
 import { Image } from '../../../javax/microedition/lcdui/Image.js';
 //not GWT import const Image
+import { MIDPUtil } from '../../../org/allbinary/MIDPUtil.js';
+//not GWT import const MIDPUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 //ImageCacheBaseJavaLibrary - J2ME
 export class ImageFactory extends Object {
@@ -32,7 +34,7 @@ export class ImageFactory extends Object {
     //@Throws(Exception.constructor)
     createImage(caller, width, height) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Image.createImage(width, height);
+        return MIDPUtil.getInstance().createImageWH(width, height);
         ;
     }
     createImageFromInputStream(...args) {
@@ -44,7 +46,7 @@ export class ImageFactory extends Object {
     }
     //@Throws(Exception.constructor)
     createImageFromInputStream$overload1(key, inputStream) {
-        let image = Image.createImage(inputStream);
+        let image = MIDPUtil.getInstance().createImageFromInputStream(inputStream);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
         return image;
@@ -52,7 +54,7 @@ export class ImageFactory extends Object {
     //@Throws(Exception.constructor)
     createImageFromInputStream$overload2(inputStream) {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return Image.createImage(inputStream);
+        return MIDPUtil.getInstance().createImageFromInputStream(inputStream);
         ;
     }
 }

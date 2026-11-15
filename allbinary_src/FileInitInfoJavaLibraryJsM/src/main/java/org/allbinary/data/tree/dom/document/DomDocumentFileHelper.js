@@ -34,7 +34,7 @@ export class DomDocumentFileHelper extends Object {
     static createDocument(xmlFile) {
         try {
             //if statement needs to be on the same line and ternary does not work the same way.
-            return DomDocumentHelper.create(new AbFileInputStream(xmlFile));
+            return DomDocumentHelper.create(AbFileInputStream.createFromAbFile(xmlFile));
             ;
         }
         catch (caught) {

@@ -44,11 +44,6 @@ export class CamelCaseUtil extends Object {
     }
     //@Throws(Exception.constructor)
     getAsCamelCase(string, stringBuilder) {
-        if (string ==
-            null) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return StringUtil.getInstance().EMPTY_STRING;
-        }
         let stringValidationUtil = StringValidationUtil.getInstance();
         ;
         stringBuilder.delete(0, stringBuilder.length());

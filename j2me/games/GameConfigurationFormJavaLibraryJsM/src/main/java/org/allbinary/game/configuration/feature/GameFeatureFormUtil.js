@@ -17,12 +17,12 @@ import { ChoiceGroup } from '../../../../../javax/microedition/lcdui/ChoiceGroup
 //not GWT import const Item
 import { NullImage } from '../../../../../javax/microedition/lcdui/NullImage.js';
 //not GWT import const NullImage
+import { MIDPUtil } from '../../../../../org/allbinary/MIDPUtil.js';
+//not GWT import const MIDPUtil
 import { GameConfigurationGauge } from '../../../../../org/allbinary/game/configuration/GameConfigurationGauge.js';
 //not GWT import const GameConfigurationGauge
 import { GameConfigurationUtil } from '../../../../../org/allbinary/game/configuration/GameConfigurationUtil.js';
 //not GWT import const CommandForm
-import { MEUtil } from '../../../../../org/allbinary/logic/MEUtil.js';
-//not GWT import const MEUtil
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 //not plain js import { StringMaker } 
@@ -44,7 +44,7 @@ export class GameFeatureFormUtil extends Object {
     constructor() {
         super(...arguments);
         this.logUtil = LogUtil.getInstance();
-        this.meUtil = MEUtil.getInstance();
+        this.meUtil = MIDPUtil.getInstance();
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

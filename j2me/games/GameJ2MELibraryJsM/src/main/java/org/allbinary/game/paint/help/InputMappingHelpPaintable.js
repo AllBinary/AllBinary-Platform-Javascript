@@ -38,26 +38,12 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 const BasicArrayList = globalThis.org.allbinary.util.BasicArrayList;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { HelpPaintable } from './HelpPaintable.js';
+//sameFolderImports - not GWT import - same folder const HelpPaintable
+import { UpdateMyFontProperties } from './UpdateMyFontProperties.js';
+//sameFolderImports - not GWT import - same folder const UpdateMyFontProperties
 export class InputMappingHelpPaintable extends HelpPaintable {
     constructor(gameInputMappingArray, backgroundBasicColor, basicColor) {
         super("Input Mapping", backgroundBasicColor, basicColor);
-        //inner= member=true isStatic=
-        this.UpdateMyFontProperties = (() => {
-            const outer$InputMappingHelpPaintable = this;
-            return class extends Object {
-                constructor() {
-                    /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-                    super(...arguments);
-                    this.actionStringArray = StringUtil.getInstance().getArrayInstance();
-                    this.keymappingBeginWidthArray = NullUtil.getInstance().NULL_INT_ARRAY;
-                    this.actionStringDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY;
-                    this.inputDeltaXArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
-                    this.sepArray = StringUtil.getInstance().ONE_EMPTY_STRING_ARRAY_OF_ARRAYS;
-                    this.sepWidthArray = NullUtil.getInstance().NULL_INT_ARRAY_ARRAY;
-                    this.charHeight = 0;
-                }
-            };
-        })();
         this.logUtil = LogUtil.getInstance();
         this.commonStrings = CommonStrings.getInstance();
         this.commonSeps = CommonSeps.getInstance();
@@ -68,7 +54,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
         this.keyMappingArray = [];
         this.actionBasicColor = BasicColorUtil.getInstance().ZERO_ARRAY;
         this.inputBasicColorArray = new Array(0).fill(null).map(() => new Array(0).fill(null));
-        this.updateMyFontProperties = new this.UpdateMyFontProperties();
+        this.updateMyFontProperties = new UpdateMyFontProperties();
         //For kotlin this is before the body of the constructor.
         this.gameInputMappingArray = gameInputMappingArray;
         this.update(this.NONE, this.NONE);
@@ -82,7 +68,7 @@ export class InputMappingHelpPaintable extends HelpPaintable {
     updateMeasurement(graphics) {
         let font = graphics.getFont();
         ;
-        let updateMyFontProperties = new this.UpdateMyFontProperties();
+        let updateMyFontProperties = new UpdateMyFontProperties();
         ;
         updateMyFontProperties.charHeight = font.getHeight();
         let stringMaker = new StringMaker();

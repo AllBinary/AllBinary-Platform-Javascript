@@ -66,9 +66,7 @@ export class StringValidationUtil extends Object {
         return true;
     }
     isValidRequired(value, min, max) {
-        if (value ==
-            null
-            || value.length < min || value.length > max) {
+        if (value.length < min || value.length > max) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }
@@ -88,8 +86,7 @@ export class StringValidationUtil extends Object {
         return true;
     }
     isValidNotRequired(value, min, max) {
-        if (value !=
-            null) {
+        if (value.length > 0) {
             if (value.length < min || value.length > max) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;
@@ -99,8 +96,7 @@ export class StringValidationUtil extends Object {
         return true;
     }
     isValidNotRequiredNumber(value, min, max) {
-        if (value !=
-            null) {
+        if (value.length > 0) {
             if (this.tsUtil.compareTo(value, this.stringUtil.NULL_STRING) == 0 || value.length < min || value.length > max) {
                 //if statement needs to be on the same line and ternary does not work the same way.
                 return false;
@@ -114,9 +110,7 @@ export class StringValidationUtil extends Object {
         return true;
     }
     isEmpty(string) {
-        if (string !=
-            null
-            && this.tsUtil.compareTo(string, this.stringUtil.NULL_STRING) != 0 && this.tsUtil.compareTo(string, this.stringUtil.EMPTY_STRING) != 0) {
+        if (this.tsUtil.compareTo(string, this.stringUtil.NULL_STRING) != 0 && this.tsUtil.compareTo(string, this.stringUtil.EMPTY_STRING) != 0) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return false;
         }

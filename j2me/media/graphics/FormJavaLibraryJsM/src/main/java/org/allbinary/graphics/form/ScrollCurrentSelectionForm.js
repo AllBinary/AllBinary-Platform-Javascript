@@ -26,102 +26,22 @@ import { ScrollSelectionForm } from './ScrollSelectionForm.js';
 import { ItemIndexDx } from './ItemIndexDx.js';
 //sameFolderImports - not GWT import - same folder const ItemPaintableFactory
 import { FormTypeFactory } from './FormTypeFactory.js';
+//sameFolderImports - not GWT import - same folder const FormTypeFactory
+import { VerticalFormProcessor } from './VerticalFormProcessor.js';
+//sameFolderImports - not GWT import - same folder const VerticalFormProcessor
+import { VerticalItemIndexDx } from './VerticalItemIndexDx.js';
+//sameFolderImports - not GWT import - same folder const VerticalItemIndexDx
+import { HorizontalFormProcessor } from './HorizontalFormProcessor.js';
+//sameFolderImports - not GWT import - same folder const HorizontalFormProcessor
+import { HorizontalItemIndexDx } from './HorizontalItemIndexDx.js';
+//sameFolderImports - not GWT import - same folder const HorizontalItemIndexDx
+import { TempHorizontalFormProcessor } from './TempHorizontalFormProcessor.js';
+//sameFolderImports - not GWT import - same folder const TempHorizontalFormProcessor
+import { TempHorizontalItemIndexDx } from './TempHorizontalItemIndexDx.js';
+//sameFolderImports - not GWT import - same folder const FormType
 export class ScrollCurrentSelectionForm extends ScrollSelectionForm {
     constructor(title, items, formPaintableFactory, border, adjustedExtraBorder, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, formPaintableFactory, border, adjustedExtraBorder, backgroundBasicColor, foregroundBasicColor);
-        //inner= member=true isStatic=
-        this.TempHorizontalFormProcessor = (() => {
-            const outer$ScrollCurrentSelectionForm = this;
-            return class extends Processor {
-                constructor(scrollCurrentSelectionForm) {
-                    super();
-                    this.scrollCurrentSelectionForm = scrollCurrentSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                process() {
-                    this.scrollCurrentSelectionForm.processTempHorizontalForm();
-                    this.scrollCurrentSelectionForm.processor = Processor.getInstance();
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.HorizontalFormProcessor = (() => {
-            const outer$ScrollCurrentSelectionForm = this;
-            return class extends Processor {
-                constructor(scrollCurrentSelectionForm) {
-                    super();
-                    this.scrollCurrentSelectionForm = scrollCurrentSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                process() {
-                    this.scrollCurrentSelectionForm.processHorizontalForm();
-                    this.scrollCurrentSelectionForm.processor = Processor.getInstance();
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.VerticalFormProcessor = (() => {
-            const outer$ScrollCurrentSelectionForm = this;
-            return class extends Processor {
-                constructor(scrollCurrentSelectionForm) {
-                    super();
-                    this.scrollCurrentSelectionForm = scrollCurrentSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                process() {
-                    this.scrollCurrentSelectionForm.processVerticalForm();
-                    this.scrollCurrentSelectionForm.processor = Processor.getInstance();
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.TempHorizontalItemIndexDx = (() => {
-            const outer$ScrollCurrentSelectionForm = this;
-            return class extends ItemIndexDx {
-                constructor(scrollCurrentSelectionForm) {
-                    super();
-                    this.scrollCurrentSelectionForm = scrollCurrentSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                getDx(index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollCurrentSelectionForm.getXTempHorizontalForm(index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.HorizontalItemIndexDx = (() => {
-            const outer$ScrollCurrentSelectionForm = this;
-            return class extends ItemIndexDx {
-                constructor(scrollCurrentSelectionForm) {
-                    super();
-                    this.scrollCurrentSelectionForm = scrollCurrentSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                getDx(index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollCurrentSelectionForm.getXHorizontalForm(index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.VerticalItemIndexDx = (() => {
-            const outer$ScrollCurrentSelectionForm = this;
-            return class extends ItemIndexDx {
-                constructor(scrollCurrentSelectionForm) {
-                    super();
-                    this.scrollCurrentSelectionForm = scrollCurrentSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                getDx(index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollCurrentSelectionForm.getXVerticalForm(index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
         this.updateMyFontProcessor = new UpdateMyFontProcessor(this);
         this.myFontProcessor = this.updateMyFontProcessor;
         this.processor = Processor.getInstance();
@@ -138,16 +58,16 @@ export class ScrollCurrentSelectionForm extends ScrollSelectionForm {
         let formTypeFactory = FormTypeFactory.getInstance();
         ;
         if (formType == formTypeFactory.TEMP_HORIZONTAL_FORM) {
-            this.processor = new this.TempHorizontalFormProcessor(this);
-            this.preItemIndexDx = new this.TempHorizontalItemIndexDx(this);
+            this.processor = new TempHorizontalFormProcessor(this);
+            this.preItemIndexDx = new TempHorizontalItemIndexDx(this);
         }
         else if (formType == formTypeFactory.HORIZONTAL_FORM) {
-            this.processor = new this.HorizontalFormProcessor(this);
-            this.preItemIndexDx = new this.HorizontalItemIndexDx(this);
+            this.processor = new HorizontalFormProcessor(this);
+            this.preItemIndexDx = new HorizontalItemIndexDx(this);
         }
         else if (formType == formTypeFactory.VERTICAL_CENTER_FORM) {
-            this.processor = new this.VerticalFormProcessor(this);
-            this.preItemIndexDx = new this.VerticalItemIndexDx(this);
+            this.processor = new VerticalFormProcessor(this);
+            this.preItemIndexDx = new VerticalItemIndexDx(this);
         }
         else if (formType == formTypeFactory.NULL_FORM_TYPE) {
         }

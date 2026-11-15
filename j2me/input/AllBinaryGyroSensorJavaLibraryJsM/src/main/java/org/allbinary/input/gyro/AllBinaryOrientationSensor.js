@@ -35,3 +35,4 @@ export class AllBinaryOrientationSensor extends AllBinarySensor {
         throw new Exception(this.commonStrings.NOT_IMPLEMENTED);
     }
 }
+AllBinaryOrientationSensor.NULL_ALLBINARY_ORIENTATION_SENSOR = new AllBinaryOrientationSensor();

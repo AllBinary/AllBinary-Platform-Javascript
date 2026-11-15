@@ -84,11 +84,11 @@ export class LayerManagerEventHandler extends BasicEventHandler {
         ;
         let layerManagerEventListenerInterface;
         ;
-        let index = 0;
+        let listenerIndex = 0;
         ;
-        while (index < eventListenerInterfaceList.size()) {
+        while (listenerIndex < eventListenerInterfaceList.size()) {
             try {
-                eventListenerInterface = eventListenerInterfaceList.objectArray[index];
+                eventListenerInterface = eventListenerInterfaceList.objectArray[listenerIndex];
                 layerManagerEventListenerInterface = eventListenerInterface;
                 layerManagerEventListenerInterface.onDeleteLayerManagerEvent(eventObject);
             }
@@ -98,7 +98,7 @@ export class LayerManagerEventHandler extends BasicEventHandler {
                     this.logUtil.put(this.commonStrings.EXCEPTION, this, EventStrings.getInstance().FIRE_EVENT, e);
                 }
             }
-            index++;
+            listenerIndex++;
         }
     }
     //@Throws(Exception.constructor)

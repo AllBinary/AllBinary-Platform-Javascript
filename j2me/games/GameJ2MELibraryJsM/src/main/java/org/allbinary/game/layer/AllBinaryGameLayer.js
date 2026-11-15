@@ -19,8 +19,6 @@ import { BasicColorFactory } from '../../../../org/allbinary/graphics/color/Basi
 import { BasicColorSetUtil } from '../../../../org/allbinary/graphics/color/BasicColorSetUtil.js';
 //not GWT import const BasicColorSetUtil
 import { NullPaintable } from '../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const NullPaintable
-import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const OpenGLSurfaceChangedInterface
 import { AllBinaryLayer } from '../../../../org/allbinary/layer/AllBinaryLayer.js';
 //not GWT import const AllBinaryLayerManager
@@ -39,24 +37,26 @@ const BasicArrayListD = globalThis.org.allbinary.util.BasicArrayListD;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { SWTUtil } from './SWTUtil.js';
 //sameFolderImports - not GWT import - same folder const SWTUtil
+import { SWTBlackPaintable } from './SWTBlackPaintable.js';
+//sameFolderImports - not GWT import - same folder const SWTBlackPaintable
 import { GameLayerUtil } from './GameLayerUtil.js';
 //sameFolderImports - not GWT import - same folder const GameLayerUtil
 export class AllBinaryGameLayer extends AllBinaryLayer {
+    static createPaintable() {
+        if (SWTUtil.isSWT) {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return new SWTBlackPaintable();
+        }
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return NullPaintable.getInstance();
+        ;
+    }
     constructor(name, layerInfo, viewPosition) {
         super(name, layerInfo, viewPosition);
         this.commonStrings = CommonStrings.getInstance();
         this.basicSetColorUtil = BasicColorSetUtil.getInstance();
         this.RED = BasicColorFactory.getInstance().RED;
-        this.paintable = (SWTUtil.isSWT ? new class extends Paintable {
-            constructor() {
-                super(...arguments);
-                this.basicSetColorUtil = BasicColorSetUtil.getInstance();
-                this.BLACK = BasicColorFactory.getInstance().BLACK;
-            }
-            paint(graphics) {
-                this.basicSetColorUtil.setBasicColorP(graphics, this.BLACK);
-            }
-        }() : NullPaintable.getInstance());
+        this.paintable = createPaintable();
         this.gameKeyEventList = new BasicArrayListD();
         //For kotlin this is before the body of the constructor.
     }

@@ -28,7 +28,7 @@ export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedT
         super(...arguments);
         this.string = StringUtil.getInstance().EMPTY_STRING;
         this.listString = StringUtil.getInstance().EMPTY_STRING;
-        this.append = StringUtil.getInstance().EMPTY_STRING;
+        this.appendText = StringUtil.getInstance().EMPTY_STRING;
         this.PRESSED_AND_FIRED = "pressed & fired";
         this.PRESSED_AND_NOT_FIRED = "pressed in button but not fired";
         this.ASSOCIATED_RELEASED_AND_FIRED = "assoc. rel & fired";
@@ -46,16 +46,16 @@ export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedT
         stringBuffer.append(touchButtonInput.toString());
         stringBuffer.append(CommonSeps.getInstance().SPACE);
         stringBuffer.append(append);
-        this.append = stringBuffer.toString();
-        this.string = new StringMaker().append(this.listString).append(this.append).toString();
+        this.appendText = stringBuffer.toString();
+        this.string = new StringMaker().append(this.listString).append(this.appendText).toString();
     }
     append(append) {
-        this.append = new StringMaker().append(this.append).append(append).toString();
-        this.string = new StringMaker().append(this.listString).append(this.append).toString();
+        this.appendText = new StringMaker().append(this.appendText).append(append).toString();
+        this.string = new StringMaker().append(this.listString).append(this.appendText).toString();
     }
     clearLog(x, y) {
-        this.append = new StringMaker().append(GPoint.toStringStatic(x, y, 0)).append(CommonSeps.getInstance().SPACE).toString();
-        this.string = new StringMaker().append(this.listString).append(this.append).toString();
+        this.appendText = new StringMaker().append(GPoint.toStringStatic(x, y, 0)).append(CommonSeps.getInstance().SPACE).toString();
+        this.string = new StringMaker().append(this.listString).append(this.appendText).toString();
     }
     releaseAndNotFired() {
         this.append(this.RELEASED_AND_NOT_FIRED);
@@ -79,7 +79,7 @@ export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedT
         let touchButtonInput = super.removeAt(index);
         ;
         this.listString = this.list.toString();
-        this.string = new StringMaker().append(this.listString).append(this.append).toString();
+        this.string = new StringMaker().append(this.listString).append(this.appendText).toString();
         //if statement needs to be on the same line and ternary does not work the same way.
         return touchButtonInput;
     }
@@ -87,14 +87,14 @@ export class CurrentlyPressedTouchButtonSingletonDebug extends CurrentlyPressedT
         let isRemoved = super.remove(touchButtonInput);
         ;
         this.listString = this.list.toString();
-        this.string = new StringMaker().append(this.listString).append(this.append).toString();
+        this.string = new StringMaker().append(this.listString).append(this.appendText).toString();
         //if statement needs to be on the same line and ternary does not work the same way.
         return isRemoved;
     }
     add(touchButtonInput) {
         super.add(touchButtonInput);
         this.listString = this.list.toString();
-        this.string = new StringMaker().append(this.listString).append(this.append).toString();
+        this.string = new StringMaker().append(this.listString).append(this.appendText).toString();
     }
     toString() {
         //if statement needs to be on the same line and ternary does not work the same way.

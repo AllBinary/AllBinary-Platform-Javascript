@@ -146,10 +146,8 @@ export class LinuxHardware extends Object {
                 }
                 let nextLine = lineNumberReader.readLine();
                 ;
-                while (lineNumberReader !=
-                    null
-                    && nextLine !=
-                        null) {
+                while (nextLine !=
+                    null) {
                     if (this.isNextHardware(nextLine)) {
                         break;
                     }
@@ -166,8 +164,7 @@ export class LinuxHardware extends Object {
                     nextLine = lineNumberReader.readLine();
                     let componentType = PCComponentFactory.getInstance().java.componentType;
                     ;
-                    while (lineNumberReader !=
-                        null) {
+                    while (true) {
                         componentData.append(nextLine);
                         componentData.append(CommonSeps.getInstance().NEW_LINE);
                         nextLine = lineNumberReader.readLine();

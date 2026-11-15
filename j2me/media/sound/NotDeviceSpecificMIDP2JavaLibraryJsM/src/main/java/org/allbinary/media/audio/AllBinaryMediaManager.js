@@ -16,6 +16,8 @@ import { Object } from '../../../../java/lang/Object.js';
 //not GWT import const InputStream
 import { Manager } from '../../../../javax/microedition/media/Manager.js';
 //not GWT import const Player
+import { MIDPUtil } from '../../../../org/allbinary/MIDPUtil.js';
+//not GWT import const MIDPUtil
 import { TsUtil } from '../../../../org/allbinary/TsUtil.js';
 //not GWT import const TsUtil
 import { AudioContentTypeDataFactory } from '../../../../org/allbinary/audio/AudioContentTypeDataFactory.js';
@@ -77,7 +79,7 @@ export class AllBinaryMediaManager extends Object {
                 let inputStream = ResourceUtil.getInstance().getResourceAsStream(resource);
                 ;
                 //if statement needs to be on the same line and ternary does not work the same way.
-                return Manager.createPlayer(inputStream, AudioContentTypeDataFactory.getInstance().MIME_AUDIO_WAV.getName());
+                return MIDPUtil.getInstance().createPlayerFromInputStream(inputStream, AudioContentTypeDataFactory.getInstance().MIME_AUDIO_WAV.getName());
                 ;
             }
         }

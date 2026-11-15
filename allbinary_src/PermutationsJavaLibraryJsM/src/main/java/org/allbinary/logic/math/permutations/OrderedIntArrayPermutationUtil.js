@@ -14,6 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 //not GWT import const Visitor
+//not plain js import { StringMaker } 
+const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { IntPermutationVisitor } from './IntPermutationVisitor.js';
 //sameFolderImports - not GWT import - same folder const IntPermutationVisitor
@@ -35,7 +37,7 @@ export class OrderedIntArrayPermutationUtil extends Object {
         let ORIGINAL_DATA_LABEL = "Original Data: ";
         ;
         console.log(ORIGINAL_DATA_LABEL);
-        permutationVisitor.print(data);
+        permutationVisitor.print(data, new StringMaker());
         OrderedIntArrayPermutationUtil.getInstance().generate(data, permutationVisitor);
     }
     constructor() {

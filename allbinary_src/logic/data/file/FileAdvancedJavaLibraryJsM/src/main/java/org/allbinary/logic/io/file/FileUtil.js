@@ -376,7 +376,7 @@ export class FileUtil extends Object {
             }
             let dataOutputStream = DataOutputStreamFactory.getInstance().getInstanceForAbFile(toFile);
             ;
-            let fileInputStream = new AbFileInputStream(fromFile);
+            let fileInputStream = AbFileInputStream.createFromAbFile(fromFile);
             ;
             this.copy(fileInputStream, dataOutputStream);
         }

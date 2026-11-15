@@ -79,9 +79,7 @@ export class TextAnimation extends IndexedAnimation {
     setText(text) {
         let list = new BasicArrayListD();
         ;
-        if (text !=
-            null
-            && text.length > 0) {
+        if (text.length > 0) {
             let index = 0;
             ;
             let startIndex = 0;

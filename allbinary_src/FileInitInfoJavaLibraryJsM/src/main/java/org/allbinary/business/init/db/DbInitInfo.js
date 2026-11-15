@@ -133,7 +133,7 @@ export class DbInitInfo extends DbConnectionInfo {
             let file = AbFile.createAbFileFromAbPath(FILEABPATH);
             ;
             if (file.isFile()) {
-                let iFile = new AbFileInputStream(file);
+                let iFile = AbFileInputStream.createFromAbFile(file);
                 ;
                 let iData = new AbDataInputStream(iFile);
                 ;

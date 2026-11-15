@@ -70,26 +70,15 @@ export class DatabaseEncoder extends Object {
             ;
             let vector = tokenizer.getTokensFromString(value, new BasicArrayListD());
             ;
-            let byteVector = new BasicArrayListD();
-            ;
             let size = vector.size();
+            ;
+            let decode = new Array(size).fill(0);
             ;
             let byteOfData;
             ;
             for (let index = 0; index < size; index++) {
                 byteOfData = vector.objectArray[index];
-                byteVector.add(Number(byteOfData));
-            }
-            let decode = new Array(byteVector.size()).fill(0);
-            ;
-            let decodeIndex = 0;
-            ;
-            let aByte;
-            ;
-            for (let index = 0; index < size; index++) {
-                aByte = byteVector.objectArray[index];
-                decode[decodeIndex] = aByte;
-                decodeIndex++;
+                decode[index] = number.parseByte(byteOfData);
             }
             //if statement needs to be on the same line and ternary does not work the same way.
             return decode;

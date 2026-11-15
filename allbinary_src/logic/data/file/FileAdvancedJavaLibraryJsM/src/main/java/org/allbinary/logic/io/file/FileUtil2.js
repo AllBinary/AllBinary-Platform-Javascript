@@ -41,7 +41,7 @@ export class FileUtil2 extends Object {
         let inputStream = null;
         ;
         try {
-            inputStream = new AbFileInputStream(file);
+            inputStream = AbFileInputStream.createFromAbFile(file);
         }
         catch (caught) {
             {

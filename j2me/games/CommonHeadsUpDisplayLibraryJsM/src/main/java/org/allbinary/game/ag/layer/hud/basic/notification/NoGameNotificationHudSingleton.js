@@ -14,8 +14,6 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../../../../java/lang/Object.js';
 import { BasicHudFactory } from '../../../../../../../../org/allbinary/game/graphics/hud/BasicHudFactory.js';
-//not GWT import const BasicHudFactory
-import { BasicColorFactory } from '../../../../../../../../org/allbinary/graphics/color/BasicColorFactory.js';
 //not GWT import const BasicColorFactory
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
@@ -24,6 +22,8 @@ const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { GameNotificationHud } from './GameNotificationHud.js';
 //sameFolderImports - not GWT import - same folder const GameNotificationHud
+import { NoGameGameNotificationHud } from './NoGameGameNotificationHud.js';
+//sameFolderImports - not GWT import - same folder const NoGameGameNotificationHud
 export class NoGameNotificationHudSingleton extends Object {
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,16 +36,6 @@ export class NoGameNotificationHudSingleton extends Object {
         try {
             let basicHudFactory = BasicHudFactory.getInstance();
             ;
-            //inner=true member= isStatic=
-            class NoGameGameNotificationHud extends GameNotificationHud {
-                constructor() {
-                    super(basicHudFactory.TOPCENTER, basicHudFactory.HORIZONTAL, 2, BasicColorFactory.getInstance().RED);
-                    //For kotlin this is before the body of the constructor.
-                    this.updateMaxWidth = 40;
-                    this.updateMaxHeight = 14;
-                }
-            }
-            //Otherwise - statement - EmptyStmt
             this.gameNotificationHud = new NoGameGameNotificationHud();
         }
         catch (caught) {

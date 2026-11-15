@@ -105,7 +105,11 @@ export class DiveAndDirectionalTrackingAI extends BasicAI {
         ;
         let ownerLayerInterface = this.getOwnerLayerInterface();
         ;
-        if (layerInterface.getGroupInterface() == ownerLayerInterface.getGroupInterface()) {
+        let groupArray = layerInterface.getGroupInterface();
+        ;
+        let ownerGroupArray = ownerLayerInterface.getGroupInterface();
+        ;
+        if (groupArray == ownerGroupArray) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return;
         }

@@ -28,71 +28,17 @@ import { BasicTouchInputFactory } from './BasicTouchInputFactory.js';
 //sameFolderImports - not GWT import - same folder const TouchButtonInput
 import { CurrentlyPressedTouchButtonSingleton } from './CurrentlyPressedTouchButtonSingleton.js';
 //sameFolderImports - not GWT import - same folder const CurrentlyPressedTouchButtonSingleton
-//import { ReleaseHelper } from './ReleaseHelper.js';
+import { ReleaseHelper } from './ReleaseHelper.js';
 //sameFolderImports - not GWT import - same folder const ReleaseHelper
-import { CancelTouchButtonInputFactory } from './CancelTouchButtonInputFactory.js';
-//sameFolderImports - not GWT import - same folder const CancelTouchButtonInputFactory
 import { TouchScreenFactory } from './TouchScreenFactory.js';
 //sameFolderImports - not GWT import - same folder const TouchScreenFactory
-//import { MultitouchReleaseHelper } from './MultitouchReleaseHelper.js';
+import { MultitouchReleaseHelper } from './MultitouchReleaseHelper.js';
 //sameFolderImports - not GWT import - same folder const MultitouchReleaseHelper
 import { TouchButtonFactory } from './TouchButtonFactory.js';
+//sameFolderImports - not GWT import - same folder const TouchButton
 export class TouchButtonRecognizer extends Object {
     constructor() {
         super();
-        //CurrentlyPressedTouchButtonSingletonDebug.getInstance();
-        //inner= member=true isStatic=
-        this.ReleaseHelper = (() => {
-            const outer$TouchButtonRecognizer = this;
-            return class extends Object {
-                constructor(touchButtonRecognizer) {
-                    super();
-                    this.touchButtonRecognizer = touchButtonRecognizer;
-                }
-                //@Throws(Exception.constructor)
-                release(touchButtonInput, deviceId) {
-                    let nextTouchButtonInput;
-                    ;
-                    let gameKeyEvent;
-                    ;
-                    for (let index = this.touchButtonRecognizer.currentlyPressedTouchButtonSingleton.size() - 1; index >= 0; index--) {
-                        nextTouchButtonInput = this.touchButtonRecognizer.currentlyPressedTouchButtonSingleton.get(index);
-                        gameKeyEvent = nextTouchButtonInput.getGameKeyEvent();
-                        this.touchButtonRecognizer.upGameKeyEventHandler.fireEvent(gameKeyEvent);
-                        this.touchButtonRecognizer.upGameKeyEventHandler.getInstanceForDevice(deviceId).fireEvent(gameKeyEvent);
-                        this.touchButtonRecognizer.currentlyPressedTouchButtonSingleton.removeAt(index);
-                    }
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.MultitouchReleaseHelper = (() => {
-            const outer$TouchButtonRecognizer = this;
-            return class extends this.ReleaseHelper {
-                constructor(touchButtonRecognizer) {
-                    super(touchButtonRecognizer);
-                    //For kotlin this is before the body of the constructor.
-                }
-                //@Throws(Exception.constructor)
-                release(touchButtonInput, deviceId) {
-                    let cancelTouchButtonInput = CancelTouchButtonInputFactory.getInstance().getCancel(touchButtonInput);
-                    ;
-                    let nextTouchButtonInput;
-                    ;
-                    let gameKeyEvent;
-                    ;
-                    for (let index = this.touchButtonRecognizer.currentlyPressedTouchButtonSingleton.size() - 1; index >= 0; index--) {
-                        nextTouchButtonInput = this.touchButtonRecognizer.currentlyPressedTouchButtonSingleton.get(index);
-                        if (cancelTouchButtonInput == nextTouchButtonInput) {
-                            gameKeyEvent = nextTouchButtonInput.getGameKeyEvent();
-                            this.touchButtonRecognizer.upGameKeyEventHandler.fireEvent(gameKeyEvent);
-                            this.touchButtonRecognizer.upGameKeyEventHandler.getInstanceForDevice(deviceId).fireEvent(gameKeyEvent);
-                            this.touchButtonRecognizer.currentlyPressedTouchButtonSingleton.removeAt(index);
-                        }
-                    }
-                }
-            };
-        })();
         this.logUtil = LogUtil.getInstance();
         this.rectangleCollisionUtil = RectangleCollisionUtil.getInstance();
         this.upGameKeyEventHandler = UpGameKeyEventHandler.getInstance();
@@ -100,10 +46,10 @@ export class TouchButtonRecognizer extends Object {
         this.lastPressedTouchButtonInput = BasicTouchInputFactory.getInstance().NONE;
         this.currentlyPressedTouchButtonSingleton = CurrentlyPressedTouchButtonSingleton.getInstance();
         if (TouchScreenFactory.getInstance().isMultiTouch()) {
-            this.releaseHelper = new this.MultitouchReleaseHelper(this);
+            this.releaseHelper = new MultitouchReleaseHelper(this);
         }
         else {
-            this.releaseHelper = new this.ReleaseHelper(this);
+            this.releaseHelper = new ReleaseHelper(this);
         }
     }
     //@Throws(Exception.constructor)

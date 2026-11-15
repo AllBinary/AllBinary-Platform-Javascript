@@ -41,45 +41,22 @@ import { TimeDelayHelper } from '../../../../../../../org/allbinary/time/TimeDel
 //not GWT import const TimeDelayHelper
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
+//Current folder imports from return types, extended types, and scope (deduplicated)
+import { SetAndRemoveProcessor } from './SetAndRemoveProcessor.js';
+//sameFolderImports - not GWT import - same folder const SetAndRemoveProcessor
+import { NextUnremoveableProcessor } from './NextUnremoveableProcessor.js';
+//sameFolderImports - not GWT import - same folder const NextUnremoveableProcessor
 export class PlayerGameNotificationHud extends GameNotificationHud {
     constructor(location, direction, bufferZone, basicColor) {
         super(location, direction, bufferZone, basicColor);
-        //inner= member=true isStatic=
-        this.SetAndRemoveProcessor = (() => {
-            const outer$PlayerGameNotificationHud = this;
-            return class extends Processor {
-                constructor(updateMeasurementProcessor) {
-                    super();
-                    this.updateMeasurementProcessor = updateMeasurementProcessor;
-                }
-                //@Throws(Exception.constructor)
-                process() {
-                    this.updateMeasurementProcessor.setAndRemoveProcess();
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.NextUnremoveableProcessor = (() => {
-            const outer$PlayerGameNotificationHud = this;
-            return class extends Processor {
-                constructor(updateMeasurementProcessor) {
-                    super();
-                    this.updateMeasurementProcessor = updateMeasurementProcessor;
-                }
-                //@Throws(Exception.constructor)
-                process() {
-                    this.updateMeasurementProcessor.setNextUnremoveableProcess();
-                }
-            };
-        })();
         this.gameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance();
         this.EMPTY_STRING = StringUtil.getInstance().EMPTY_STRING;
         this.displayInfo = DisplayInfoSingleton.getInstance();
         this.timeDelayHelper = new TimeDelayHelper(0);
         this.gameNotification = new GameNotification();
         this.permanentGameNotification = new GameNotification();
-        this.setAndRemoveProcessor = new this.SetAndRemoveProcessor(this);
-        this.nextUnremoveableProcessor = new this.NextUnremoveableProcessor(this);
+        this.setAndRemoveProcessor = new SetAndRemoveProcessor(this);
+        this.nextUnremoveableProcessor = new NextUnremoveableProcessor(this);
         this.processor = Processor.getInstance();
         this.PERMANENT_GAME_NOTIFICATION = "Permanent Game Notification: ";
         this.lastString = StringUtil.getInstance().EMPTY_STRING;

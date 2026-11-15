@@ -19,7 +19,7 @@ import { AbFileInputStream } from './AbFileInputStream.js';
 //sameFolderImports - not GWT import - same folder const AbFileInputStream
 export class AbFileLocalInputStream extends AbFileInputStream {
     constructor(file) {
-        super(AbFileNativeUtil.get(file));
+        super(AbFileNativeUtil.get(file).getPath());
         //For kotlin this is before the body of the constructor.
     }
 }

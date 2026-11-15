@@ -33,6 +33,12 @@ export class BufferedLineReader extends Object {
         return this.tmpIn.readLine();
         ;
     }
+    //@Throws(Exception.constructor)
+    ready() {
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return this.tmpIn.ready();
+        ;
+    }
     getSize() {
         //if statement needs to be on the same line and ternary does not work the same way.
         return 0;

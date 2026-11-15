@@ -41,7 +41,7 @@ export class TestingInputSingleton extends AllBinaryGameLayer {
     constructor() {
         super(StringUtil.getInstance().EMPTY_STRING, RectangleFactory.SINGLETON, ViewPosition.getInstanceD());
         this.inputProcessorArray = new Array(InputFactory.getInstance().MAX);
-        this.paintable = NullPaintable.getInstance();
+        this.testInputPaintable = NullPaintable.getInstance();
         //For kotlin this is before the body of the constructor.
         GameInputProcessorUtil.init(this.inputProcessorArray);
     }
@@ -50,7 +50,7 @@ export class TestingInputSingleton extends AllBinaryGameLayer {
     initInputProcessorsForTestInput(aTestInputInterface) {
         let testInputInterface = aTestInputInterface;
         ;
-        this.paintable = testInputInterface;
+        this.testInputPaintable = testInputInterface;
         this.inputProcessorArray[Canvas.UP] = new class extends GameInputProcessor {
             //@Throws(Exception.constructor)
             processEvent(allbinaryLayerManager, gameKeyEvent) {
@@ -111,7 +111,7 @@ export class TestingInputSingleton extends AllBinaryGameLayer {
         this.getGameKeyEventList().clear();
     }
     paint(graphics) {
-        this.paintable.paint(graphics);
+        this.testInputPaintable.paint(graphics);
     }
     implmentsGameInputInterface() {
         //if statement needs to be on the same line and ternary does not work the same way.

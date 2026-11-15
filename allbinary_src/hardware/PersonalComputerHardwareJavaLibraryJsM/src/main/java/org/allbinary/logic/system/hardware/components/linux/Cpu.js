@@ -112,10 +112,8 @@ export class Cpu extends Object {
                 null) {
                 let nextLine = lineNumberReader.readLine();
                 ;
-                while (lineNumberReader !=
-                    null
-                    && nextLine !=
-                        null) {
+                while (nextLine !=
+                    null) {
                     let index = nextLine.indexOf(':');
                     ;
                     if (index >= 0) {

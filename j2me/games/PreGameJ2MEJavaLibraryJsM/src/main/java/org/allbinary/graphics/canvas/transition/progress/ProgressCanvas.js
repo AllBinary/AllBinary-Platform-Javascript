@@ -31,8 +31,6 @@ import { UpdateMyFontProcessor } from '../../../../../../org/allbinary/graphics/
 import { ABCustomGaugeItem } from '../../../../../../org/allbinary/graphics/form/item/ABCustomGaugeItem.js';
 //not GWT import const ABCustomGaugeItem
 import { NullPaintable } from '../../../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const NullPaintable
-import { Paintable } from '../../../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const PaintableInterface
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
@@ -47,27 +45,15 @@ import { AllBinaryMidlet } from '../../../../../../org/allbinary/midlet/AllBinar
 import { PathFindingThreadPool } from '../../../../../../org/allbinary/thread/PathFindingThreadPool.js';
 //not GWT import const ThreadPool
 //Current folder imports from return types, extended types, and scope (deduplicated)
-//import { ProgressPaintable } from './ProgressPaintable.js';
+import { ProgressPaintable } from './ProgressPaintable.js';
 //sameFolderImports - not GWT import - same folder const ProgressPaintable
 import { ProgressEndListener } from './ProgressEndListener.js';
+//sameFolderImports - not GWT import - same folder const ProgressEndListener
 export class ProgressCanvas extends RunnableCanvas {
     constructor(title, backgroundBasicColor, foregroundBasicColor) {
         super(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, false);
-        //inner= member=true isStatic=
-        this.ProgressPaintable = (() => {
-            const outer$ProgressCanvas = this;
-            return class extends Paintable {
-                constructor(progressCanvas) {
-                    super();
-                    this.progressCanvas = progressCanvas;
-                }
-                paint(graphics) {
-                    this.progressCanvas.paint2(graphics);
-                }
-            };
-        })();
         this.hasPainted = false;
-        this.GAUGE_PAINTABLE = new this.ProgressPaintable(this);
+        this.GAUGE_PAINTABLE = new ProgressPaintable(this);
         this.maxValue = 100.0;
         this.TEXT = this.commonStrings.LOADING;
         this.updateMyFontProcessor = new UpdateMyFontProcessor(this);

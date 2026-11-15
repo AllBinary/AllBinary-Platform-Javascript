@@ -17,7 +17,7 @@ import { BasicHud } from '../../../../../../../../org/allbinary/game/graphics/hu
 import { MyFontProcessor } from '../../../../../../../../org/allbinary/graphics/font/MyFontProcessor.js';
 //not GWT import const MyFontProcessor
 import { PrimitiveLongSingleton } from '../../../../../../../../org/allbinary/logic/math/PrimitiveLongSingleton.js';
-//sameFolderImports - not GWT import - same folder const Timer
+//sameFolderImports - not GWT import - same folder const HudTimer
 export class TimeHudWidget extends BasicHud {
     //@Throws(Exception.constructor)
     static getInstance(location, direction, basicColor, timer) {

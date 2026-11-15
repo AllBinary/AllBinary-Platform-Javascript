@@ -10,8 +10,6 @@ import { MyFontProcessor } from '../../../../org/allbinary/graphics/font/MyFontP
 import { UpdateMyFontProcessor } from '../../../../org/allbinary/graphics/font/UpdateMyFontProcessor.js';
 //not GWT import const ABCustomItem
 import { NullPaintable } from '../../../../org/allbinary/graphics/paint/NullPaintable.js';
-//not GWT import const NullPaintable
-import { Paintable } from '../../../../org/allbinary/graphics/paint/Paintable.js';
 //not GWT import const Paintable
 //not plain js import { PreLogUtil } 
 const PreLogUtil = globalThis.org.allbinary.logic.communication.log.PreLogUtil;
@@ -24,7 +22,14 @@ import { ItemPaintableFactory } from './ItemPaintableFactory.js';
 //sameFolderImports - not GWT import - same folder const FormType
 import { ItemIndexPaintable } from './ItemIndexPaintable.js';
 //sameFolderImports - not GWT import - same folder const ItemIndexPaintable
+import { MultipleScrollSelectionFormRectPaintable } from './MultipleScrollSelectionFormRectPaintable.js';
+//sameFolderImports - not GWT import - same folder const MultipleScrollSelectionFormRectPaintable
 import { FormTypeFactory } from './FormTypeFactory.js';
+//sameFolderImports - not GWT import - same folder const FormTypeFactory
+import { MultipleScrollSelectionFormVerticalPaintable } from './MultipleScrollSelectionFormVerticalPaintable.js';
+//sameFolderImports - not GWT import - same folder const MultipleScrollSelectionFormVerticalPaintable
+import { MultipleScrollSelectionFormHorizontalPaintable } from './MultipleScrollSelectionFormHorizontalPaintable.js';
+//sameFolderImports - not GWT import - same folder const MultipleScrollSelectionFormHorizontalPaintable
 export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     //@Throws(Exception.constructor)
     static createForm(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor) {
@@ -36,38 +41,6 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
     }
     constructor(title, items, formPaintableFactory, border, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, formPaintableFactory, border, 3, backgroundBasicColor, foregroundBasicColor);
-        //inner= member=true isStatic=
-        this.MultipleScrollSelectionFormHorizontalPaintable = (() => {
-            const outer$MultipleScrollSelectionHorizontalForm = this;
-            return class extends ItemIndexPaintable {
-                constructor(multipleScrollSelectionForm) {
-                    super();
-                    this.multipleScrollSelectionForm = multipleScrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                paint(graphics, index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.multipleScrollSelectionForm.paintHorizontal(graphics, index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.MultipleScrollSelectionFormVerticalPaintable = (() => {
-            const outer$MultipleScrollSelectionHorizontalForm = this;
-            return class extends ItemIndexPaintable {
-                constructor(multipleScrollSelectionForm) {
-                    super();
-                    this.multipleScrollSelectionForm = multipleScrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                paint(graphics, index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.multipleScrollSelectionForm.paintVertical(graphics, index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
         this.rectPaintable = NullPaintable.getInstance();
         this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = ItemIndexPaintable.getInstance();
         this.backgroundColor = BasicColorFactory.getInstance().TRANSPARENT_GREY.intValue();
@@ -78,14 +51,7 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
         if (J2MEUtil.isJ2ME() || J2MEUtil.isHTML()) {
         }
         else {
-            //inner=true member= isStatic=
-            class MPaintable extends Paintable {
-                paint(graphics) {
-                    outer$MultipleScrollSelectionHorizontalForm.fillRect(graphics);
-                }
-            }
-            //Otherwise - statement - EmptyStmt
-            this.rectPaintable = new MPaintable();
+            this.rectPaintable = new MultipleScrollSelectionFormRectPaintable(this);
         }
     }
     fillRect(graphics) {
@@ -98,10 +64,10 @@ export class MultipleScrollSelectionHorizontalForm extends ScrollSelectionForm {
         let formTypeFactory = FormTypeFactory.getInstance();
         ;
         if (formType == formTypeFactory.HORIZONTAL_FORM) {
-            this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = new this.MultipleScrollSelectionFormHorizontalPaintable(this);
+            this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = new MultipleScrollSelectionFormHorizontalPaintable(this);
         }
         else if (formType == formTypeFactory.VERTICAL_CENTER_FORM) {
-            this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = new this.MultipleScrollSelectionFormVerticalPaintable(this);
+            this.multipleScrollSelectionHorizontalFormTypeItemIndexPaintable = new MultipleScrollSelectionFormVerticalPaintable(this);
         }
         else if (formType == formTypeFactory.NULL_FORM_TYPE) {
         }

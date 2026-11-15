@@ -14,14 +14,14 @@
 //not GWT import const CommandListener
 import { TextField } from '../../../../javax/microedition/lcdui/TextField.js';
 //not GWT import const TextField
+import { MIDPUtil } from '../../../../org/allbinary/MIDPUtil.js';
+//not GWT import const MIDPUtil
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
 //not GWT import const BasicColor
 import { CommandForm } from '../../../../org/allbinary/graphics/displayable/screen/CommandForm.js';
 //not GWT import const CommandForm
 //not plain js import { ABSystemWrapper } 
 const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
-import { MEUtil } from '../../../../org/allbinary/logic/MEUtil.js';
-//not GWT import const MEUtil
 //Current folder imports from return types, extended types, and scope (deduplicated)
 export class SaveGameForm extends CommandForm {
     //@Throws(Exception.constructor)
@@ -36,7 +36,7 @@ export class SaveGameForm extends CommandForm {
     }
     constructor(commandListener, title, backgrounBasicColor, foregroundBasicColor) {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
-        this.meUtil = MEUtil.getInstance();
+        this.meUtil = MIDPUtil.getInstance();
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
         let timeString = (ABSystemWrapper.getInstance().currentTimeMillis()).toString();

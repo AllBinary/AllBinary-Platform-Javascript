@@ -42,9 +42,6 @@ export class KeyValueDrawString extends Object {
         graphics.drawString(this.value, this.valueX, y, 0);
     }
     update(value) {
-        if (value !=
-            null) {
-            this.value = value;
-        }
+        this.value = value;
     }
 }

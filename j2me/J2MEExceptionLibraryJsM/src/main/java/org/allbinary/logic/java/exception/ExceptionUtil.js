@@ -34,13 +34,8 @@ import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStr
         e.printStackTrace();
         let output = bs.toString();
         ;
-        if (output !=
-            null) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return output.toCharArray().slice(0).join('');
-        }
         //if statement needs to be on the same line and ternary does not work the same way.
-        return this.NONE;
+        return output.toCharArray().slice(0).join('');
     }
 }
 ExceptionUtil.instance = new ExceptionUtil();

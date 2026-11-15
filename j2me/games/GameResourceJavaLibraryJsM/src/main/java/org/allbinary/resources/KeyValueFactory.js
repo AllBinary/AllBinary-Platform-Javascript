@@ -28,15 +28,12 @@ export class KeyValueFactory extends Object {
         return KeyValueFactory.instance;
     }
     get(key) {
-        let value = this.MAP.get(key);
-        ;
-        if (value ==
-            null) {
+        if (!this.MAP.containsKey(key)) {
             //if statement needs to be on the same line and ternary does not work the same way.
             return key;
         }
         //if statement needs to be on the same line and ternary does not work the same way.
-        return value;
+        return this.MAP.get(key);
     }
 }
 KeyValueFactory.instance = new KeyValueFactory();

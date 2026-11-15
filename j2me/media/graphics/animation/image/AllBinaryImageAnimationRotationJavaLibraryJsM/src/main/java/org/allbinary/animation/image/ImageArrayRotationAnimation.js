@@ -29,10 +29,10 @@ export class ImageArrayRotationAnimation extends ImageArrayBaseRotationAnimation
         super(imageArray, angleInfo, animationBehavior);
         this.expectedTotalFrames = 0;
         //For kotlin this is before the body of the constructor.
-        this.init(imageArray, angleInfo, totalAngle);
+        this.initImageArray(imageArray, angleInfo, totalAngle);
     }
     //@Throws(Exception.constructor)
-    init(imageArray, angleInfo, totalAngle) {
+    initImageArray(imageArray, angleInfo, totalAngle) {
         this.expectedTotalFrames = totalAngle / this.angleInfo.getAngleIncrementInfo().getAngleIncrement();
         this.angleInfo.adjustAngle(0);
         if (this.expectedTotalFrames != this.getSize()) {

@@ -45,6 +45,19 @@ import { ItemIndexPaintable } from './ItemIndexPaintable.js';
 import { ItemIndexDx } from './ItemIndexDx.js';
 //sameFolderImports - not GWT import - same folder const ItemPaintable
 import { FormTypeFactory } from './FormTypeFactory.js';
+//sameFolderImports - not GWT import - same folder const FormTypeFactory
+import { ScrollSelectionFormTempHorizontalPaintable } from './ScrollSelectionFormTempHorizontalPaintable.js';
+//sameFolderImports - not GWT import - same folder const ScrollSelectionFormTempHorizontalPaintable
+import { ScrollSelectionFormTempHorizontalDx } from './ScrollSelectionFormTempHorizontalDx.js';
+//sameFolderImports - not GWT import - same folder const ScrollSelectionFormTempHorizontalDx
+import { ScrollSelectionFormVerticalPaintable } from './ScrollSelectionFormVerticalPaintable.js';
+//sameFolderImports - not GWT import - same folder const ScrollSelectionFormVerticalPaintable
+import { ScrollSelectionFormVericalDx } from './ScrollSelectionFormVericalDx.js';
+//sameFolderImports - not GWT import - same folder const ScrollSelectionFormVericalDx
+import { ScrollSelectionFormHorizontalPaintable } from './ScrollSelectionFormHorizontalPaintable.js';
+//sameFolderImports - not GWT import - same folder const ScrollSelectionFormHorizontalPaintable
+import { ScrollSelectionFormHorizontalDx } from './ScrollSelectionFormHorizontalDx.js';
+//sameFolderImports - not GWT import - same folder const FormType
 export class ScrollSelectionForm extends PaintableForm {
     static createForm(title, items, formPaintableFactory, border, backgroundBasicColor, foregroundBasicColor) {
         try {
@@ -93,102 +106,6 @@ export class ScrollSelectionForm extends PaintableForm {
     }
     constructor(title, items, formPaintableFactory, border, adjustedExtraBorder, backgroundBasicColor, foregroundBasicColor) {
         super(title, items, backgroundBasicColor, foregroundBasicColor);
-        //inner= member=true isStatic=
-        this.ScrollSelectionFormHorizontalPaintable = (() => {
-            const outer$ScrollSelectionForm = this;
-            return class extends ItemIndexPaintable {
-                constructor(scrollSelectionForm) {
-                    super();
-                    this.scrollSelectionForm = scrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                paint(graphics, index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollSelectionForm.paintItemHorizontal(graphics, index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.ScrollSelectionFormVerticalPaintable = (() => {
-            const outer$ScrollSelectionForm = this;
-            return class extends ItemIndexPaintable {
-                constructor(scrollSelectionForm) {
-                    super();
-                    this.scrollSelectionForm = scrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                paint(graphics, index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollSelectionForm.paintItemVertical(graphics, index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.ScrollSelectionFormTempHorizontalPaintable = (() => {
-            const outer$ScrollSelectionForm = this;
-            return class extends ItemIndexPaintable {
-                constructor(scrollSelectionForm) {
-                    super();
-                    this.scrollSelectionForm = scrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                paint(graphics, index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollSelectionForm.paintItemTempHorizontal(graphics, index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.ScrollSelectionFormHorizontalDx = (() => {
-            const outer$ScrollSelectionForm = this;
-            return class extends ItemIndexDx {
-                constructor(multipleScrollSelectionForm) {
-                    super();
-                    this.scrollSelectionForm = multipleScrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                getDx(index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollSelectionForm.getSelectedIndexForPointHorizontalDx(index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.ScrollSelectionFormVericalDx = (() => {
-            const outer$ScrollSelectionForm = this;
-            return class extends ItemIndexDx {
-                constructor(multipleScrollSelectionForm) {
-                    super();
-                    this.scrollSelectionForm = multipleScrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                getDx(index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollSelectionForm.getSelectedIndexForPointVerticalDx(index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
-        //inner= member=true isStatic=
-        this.ScrollSelectionFormTempHorizontalDx = (() => {
-            const outer$ScrollSelectionForm = this;
-            return class extends ItemIndexDx {
-                constructor(multipleScrollSelectionForm) {
-                    super();
-                    this.scrollSelectionForm = multipleScrollSelectionForm;
-                }
-                //@Throws(Exception.constructor)
-                getDx(index, item, dx, dy) {
-                    //if statement needs to be on the same line and ternary does not work the same way.
-                    return this.scrollSelectionForm.getSelectedIndexForPointTempHorizontalDx(index, item, dx, dy);
-                    ;
-                }
-            };
-        })();
         this.rectangleCollisionUtil = RectangleCollisionUtil.getInstance();
         this.scrollSelectionFormFormTypeItemIndexPaintable = ItemIndexPaintable.getInstance();
         this.formTypeItemIndexDx = ItemIndexDx.getInstance();
@@ -206,16 +123,16 @@ export class ScrollSelectionForm extends PaintableForm {
         let formTypeFactory = FormTypeFactory.getInstance();
         ;
         if (formType == formTypeFactory.HORIZONTAL_FORM) {
-            this.scrollSelectionFormFormTypeItemIndexPaintable = new this.ScrollSelectionFormHorizontalPaintable(this);
-            this.formTypeItemIndexDx = new this.ScrollSelectionFormHorizontalDx(this);
+            this.scrollSelectionFormFormTypeItemIndexPaintable = new ScrollSelectionFormHorizontalPaintable(this);
+            this.formTypeItemIndexDx = new ScrollSelectionFormHorizontalDx(this);
         }
         else if (formType == formTypeFactory.VERTICAL_CENTER_FORM) {
-            this.scrollSelectionFormFormTypeItemIndexPaintable = new this.ScrollSelectionFormVerticalPaintable(this);
-            this.formTypeItemIndexDx = new this.ScrollSelectionFormVericalDx(this);
+            this.scrollSelectionFormFormTypeItemIndexPaintable = new ScrollSelectionFormVerticalPaintable(this);
+            this.formTypeItemIndexDx = new ScrollSelectionFormVericalDx(this);
         }
         else if (formType == formTypeFactory.TEMP_HORIZONTAL_FORM) {
-            this.scrollSelectionFormFormTypeItemIndexPaintable = new this.ScrollSelectionFormTempHorizontalPaintable(this);
-            this.formTypeItemIndexDx = new this.ScrollSelectionFormTempHorizontalDx(this);
+            this.scrollSelectionFormFormTypeItemIndexPaintable = new ScrollSelectionFormTempHorizontalPaintable(this);
+            this.formTypeItemIndexDx = new ScrollSelectionFormTempHorizontalDx(this);
         }
         else if (formType == formTypeFactory.NULL_FORM_TYPE) {
         }

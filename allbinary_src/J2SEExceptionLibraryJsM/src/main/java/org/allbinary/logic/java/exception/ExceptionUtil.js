@@ -39,11 +39,8 @@ import { PrintStream } from '../../../../../java/io/PrintStream.js';
             e.printStackTrace(printStream);
             let output = byteArrayOutputStream.toString();
             ;
-            if (output !=
-                null) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return output.toCharArray().slice(0).join('');
-            }
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return output.toCharArray().slice(0).join('');
         }
         //if statement needs to be on the same line and ternary does not work the same way.
         return this.NONE;

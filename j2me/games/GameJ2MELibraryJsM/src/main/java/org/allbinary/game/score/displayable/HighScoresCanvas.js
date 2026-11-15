@@ -11,8 +11,6 @@
         *
         *  Created By: Travis Berthelot
 */
-//not GWT import const Graphics
-import { J2MEUtil } from '../../../../../org/allbinary/J2MEUtil.js';
 //not GWT import const GameInfo
 import { GameCommandsFactory } from '../../../../../org/allbinary/game/commands/GameCommandsFactory.js';
 //not GWT import const GameCommandsFactory
@@ -40,13 +38,11 @@ const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not plain js import { CommonStrings } 
 const CommonStrings = globalThis.org.allbinary.string.CommonStrings;
-//not plain js import { ARunnable } 
-const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 import { SecondaryThreadPool } from '../../../../../org/allbinary/thread/SecondaryThreadPool.js';
 //not GWT import const SecondaryThreadPool
-//not plain js import { ABSystemWrapper } 
-const ABSystemWrapper = globalThis.org.allbinary.logic.ABSystemWrapper;
 //Current folder imports from return types, extended types, and scope (deduplicated)
+import { HighScoreRunnable } from './HighScoreRunnable.js';
+//sameFolderImports - not GWT import - same folder const HighScoreRunnable
 export class HighScoresCanvas extends GameCommandCanvas {
     constructor(commandListener, allBinaryGameLayerManager, gameInfo, paintable, highScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface) {
         super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager.getBackgroundBasicColor(), allBinaryGameLayerManager.getForegroundBasicColor());
@@ -65,7 +61,7 @@ export class HighScoresCanvas extends GameCommandCanvas {
         this.waitPaintable.setBasicColorP(allBinaryGameLayerManager.getForegroundBasicColor());
         this.getHighScoresPaintable().setBasicColorP(allBinaryGameLayerManager.getForegroundBasicColor());
         this.colorFillPaintable = ColorFillPaintableFactory.getInstance().getInstance(allBinaryGameLayerManager.getBackgroundBasicColor(), false);
-        if (this.highScoresHelper.getHighScoresArray() == NoHighScoresFactory.getInstance().NO_HIGH_SCORES) {
+        if (this.highScoresHelper.getHighScoresArray().length == NoHighScoresFactory.getInstance().NO_HIGH_SCORES.length) {
             this.setPaintable(this.waitPaintable);
         }
         else {
@@ -73,52 +69,6 @@ export class HighScoresCanvas extends GameCommandCanvas {
             this.updateCommand(this.currentCommand);
             this.setPaintable(this.getHighScoresPaintable());
         }
-        //inner=true member= isStatic=
-        class HighScoreRunnable extends ARunnable {
-            constructor(highScoresCanvas) {
-                super();
-                this.highScoresCanvas = highScoresCanvas;
-            }
-            run() {
-                let commonStrings = CommonStrings.getInstance();
-                ;
-                let logUtil = LogUtil.getInstance();
-                ;
-                let highScoresCanvas = this.highScoresCanvas;
-                ;
-                try {
-                    let isHTML = J2MEUtil.isHTML();
-                    ;
-                    if (!isHTML) {
-                        while (!highScoresCanvas.hasPainted) {
-                        }
-                        highScoresCanvas.hasPainted = false;
-                    }
-                    let stringMaker = new StringMaker();
-                    ;
-                    let systemWrapper = ABSystemWrapper.getInstance();
-                    ;
-                    let currentTimeMillis = systemWrapper.currentTimeMillis();
-                    ;
-                    logUtil.putF(stringMaker.append("HighScoresCanvas - Request repaint to be sure: ").appendlong(currentTimeMillis).toString(), this, commonStrings.RUN);
-                    highScoresCanvas.repaintBehavior.onChangeRepaint(highScoresCanvas);
-                    if (!isHTML) {
-                        while (!highScoresCanvas.hasPainted) {
-                        }
-                    }
-                    stringMaker.delete(0, stringMaker.length());
-                    logUtil.putF(stringMaker.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ").appendlong(currentTimeMillis).toString(), this, commonStrings.RUN);
-                    highScoresCanvas.executeUpdate();
-                }
-                catch (caught) {
-                    {
-                        const e = caught;
-                        logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-                    }
-                }
-            }
-        }
-        //Otherwise - statement - EmptyStmt
         SecondaryThreadPool.getInstance().runTask(new HighScoreRunnable(this));
     }
     initCommands(cmdListener) {

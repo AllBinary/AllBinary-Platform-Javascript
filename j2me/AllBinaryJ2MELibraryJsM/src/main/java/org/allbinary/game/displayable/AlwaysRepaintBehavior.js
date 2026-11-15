@@ -11,9 +11,8 @@
         *
         *  Created By: Travis Berthelot
 */
+/* Generated Code Do Not Modify */
 import { Thread } from '../../../../java/lang/Thread.js';
-//not plain js import { ARunnable } 
-const ARunnable = globalThis.org.allbinary.thread.ARunnable;
 //not GWT import const Canvas
 import { Features } from '../../../../org/allbinary/game/configuration/feature/Features.js';
 //not GWT import const Features
@@ -30,6 +29,8 @@ const NullRunnable = globalThis.org.allbinary.thread.NullRunnable;
 //Current folder imports from return types, extended types, and scope (deduplicated)
 import { RepaintBehavior } from './RepaintBehavior.js';
 //sameFolderImports - not GWT import - same folder const RepaintBehavior
+import { RepaintRunnable } from './RepaintRunnable.js';
+//sameFolderImports - not GWT import - same folder const RepaintRunnable
 export class AlwaysRepaintBehavior extends RepaintBehavior {
     constructor() {
         super(...arguments);
@@ -48,24 +49,7 @@ export class AlwaysRepaintBehavior extends RepaintBehavior {
             DisplayInfoSingleton.getInstance().process();
         }
         else {
-            let thread = new Thread(new class extends ARunnable {
-                run() {
-                    try {
-                        canvas.repaint();
-                        DisplayInfoSingleton.getInstance().process();
-                    }
-                    catch (caught) {
-                        {
-                            const e = caught;
-                            let commonStrings = CommonStrings.getInstance();
-                            ;
-                            let logUtil = LogUtil.getInstance();
-                            ;
-                            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.RUN, e);
-                        }
-                    }
-                }
-            }(), this.NAME);
+            let thread = new Thread(new RepaintRunnable(canvas), this.NAME);
             ;
             thread.start();
         }

@@ -42,7 +42,8 @@ export class FileStreamFactory extends Object {
         let file = AbFile.createAbFileFromAbPath(FILEABPATH);
         ;
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new AbFileInputStream(file);
+        return AbFileInputStream.createFromAbFile(file);
+        ;
     }
     //@Throws(Exception.constructor)
     getFileOutputStreamInstance(path, fileName) {

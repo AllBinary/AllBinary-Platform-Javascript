@@ -13,6 +13,7 @@
 */
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
+import { RuntimeException } from '../../../../../java/lang/RuntimeException.js';
 //not plain js import { CircularIndexUtil } 
 const CircularIndexUtil = globalThis.org.allbinary.util.CircularIndexUtil;
 //sameFolderImports - not GWT import - same folder const WeaponLayer
@@ -21,7 +22,6 @@ export class WeaponLayerArrayLayerCircularStaticPool extends Object {
         super(...arguments);
         this.MAX = 5;
         this.circularIndexUtil = CircularIndexUtil.createInstance(this.MAX);
-        this.ALL_WEAPONLAYER_ARRAY = new Array(4);
     }
     static getInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -39,14 +39,28 @@ export class WeaponLayerArrayLayerCircularStaticPool extends Object {
             TWO_WEAPONLAYER_ARRAY[index] = new Array(2);
             THREE_WEAPONLAYER_ARRAY[index] = new Array(3);
         }
-        this.ALL_WEAPONLAYER_ARRAY[1] = WEAPONLAYER_ARRAY;
-        this.ALL_WEAPONLAYER_ARRAY[2] = TWO_WEAPONLAYER_ARRAY;
-        this.ALL_WEAPONLAYER_ARRAY[3] = THREE_WEAPONLAYER_ARRAY;
+        this.WEAPONLAYER_ARRAY = WEAPONLAYER_ARRAY;
+        this.TWO_WEAPONLAYER_ARRAY = TWO_WEAPONLAYER_ARRAY;
+        this.THREE_WEAPONLAYER_ARRAY = THREE_WEAPONLAYER_ARRAY;
+    }
+    getWeaponLayerArrays(size) {
+        if (size == 1) {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return this.WEAPONLAYER_ARRAY;
+        }
+        else if (size == 2) {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return this.TWO_WEAPONLAYER_ARRAY;
+        }
+        else if (size == 3) {
+            //if statement needs to be on the same line and ternary does not work the same way.
+            return this.THREE_WEAPONLAYER_ARRAY;
+        }
+        throw new RuntimeException();
     }
     //@Throws(Exception.constructor)
-    //@Synchronized //TWB - This is not allowed for TypeScript native. Instead use Coroutine logic instead.
     getInstanceArray(size) {
-        let weaponLayerArray = this.ALL_WEAPONLAYER_ARRAY[size][this.circularIndexUtil.getIndex()];
+        let weaponLayerArray = this.getWeaponLayerArrays(size)[this.circularIndexUtil.getIndex()];
         ;
         this.circularIndexUtil.next();
         //if statement needs to be on the same line and ternary does not work the same way.

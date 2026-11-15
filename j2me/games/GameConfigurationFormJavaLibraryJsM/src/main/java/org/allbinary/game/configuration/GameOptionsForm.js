@@ -11,10 +11,13 @@
         *
         *  Created By: Travis Berthelot
 */
+import { Integer } from '../../../../java/lang/Integer.js';
 import { ChoiceI } from '../../../../javax/microedition/lcdui/Choice.js';
 //not GWT import const Item
 import { TextField } from '../../../../javax/microedition/lcdui/TextField.js';
 //not GWT import const TextField
+import { MIDPUtil } from '../../../../org/allbinary/MIDPUtil.js';
+//not GWT import const MIDPUtil
 import { GameCommandsFactory } from '../../../../org/allbinary/game/commands/GameCommandsFactory.js';
 //not GWT import const GameCommandsFactory
 import { GameFeatureChoiceGroups } from '../../../../org/allbinary/game/configuration/feature/GameFeatureChoiceGroups.js';
@@ -35,8 +38,6 @@ import { CommandForm } from '../../../../org/allbinary/graphics/displayable/scre
 //not GWT import const CommandForm
 import { OrientationData } from '../../../../org/allbinary/input/gyro/OrientationData.js';
 //not GWT import const OrientationData
-import { MEUtil } from '../../../../org/allbinary/logic/MEUtil.js';
-//not GWT import const MEUtil
 //not plain js import { StringMaker } 
 const StringMaker = globalThis.org.allbinary.logic.string.StringMaker;
 //not GWT import const AbeClientInformationInterface
@@ -62,7 +63,7 @@ import { GameConfigurationCentral } from './GameConfigurationCentral.js';
 export class GameOptionsForm extends CommandForm {
     constructor(commandListener, title, backgrounBasicColor, foregroundBasicColor) {
         super(commandListener, title, backgrounBasicColor, foregroundBasicColor);
-        this.meUtil = MEUtil.getInstance();
+        this.meUtil = MIDPUtil.getInstance();
         //For kotlin this is before the body of the constructor.
         this.logUtil.putF(this.commonStrings.START, this, this.commonStrings.CONSTRUCTOR);
         this.addConfiguration();
@@ -170,7 +171,7 @@ export class GameOptionsForm extends CommandForm {
         ;
         let SCALE = GameConfigurationCentral.getInstance().SCALE;
         ;
-        hashtable.put(SCALE.getName(), SCALE.getValue().toString());
+        hashtable.put(SCALE.getName(), Integer.toString(SCALE.getValue().intValue()));
         let keyValuePersistance = GameConfigurationPersistanceSingleton.getInstance();
         ;
         keyValuePersistance.clear();

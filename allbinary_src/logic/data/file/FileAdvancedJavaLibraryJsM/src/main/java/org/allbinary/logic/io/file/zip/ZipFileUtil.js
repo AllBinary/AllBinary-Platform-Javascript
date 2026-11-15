@@ -85,7 +85,7 @@ export class ZipFileUtil extends Object {
                     stringBuffer.append(file.getPath());
                     this.logUtil.putF(stringBuffer.toString(), this, "create()");
                     try {
-                        fileInputStream = new AbFileInputStream(file);
+                        fileInputStream = AbFileInputStream.createFromAbFile(file);
                         outputStream.putNextEntry(new ZipEntry(file.getPath()));
                         streamUtil.get(fileInputStream, outputStream, byteArray);
                         outputStream.closeEntry();
@@ -116,7 +116,7 @@ export class ZipFileUtil extends Object {
         let inputStream = null;
         ;
         try {
-            inputStream = new ZipInputStream(new AbFileInputStream(zipFile));
+            inputStream = new ZipInputStream(AbFileInputStream.createFromAbFile(zipFile));
             let zipEntry;
             ;
             let stringBuffer = new StringMaker();

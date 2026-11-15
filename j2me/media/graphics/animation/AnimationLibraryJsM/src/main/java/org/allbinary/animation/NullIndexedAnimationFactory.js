@@ -14,9 +14,8 @@
 /* Generated Code Do Not Modify */
 import { Object } from '../../../java/lang/Object.js';
 //sameFolderImports - not GWT import - same folder const IndexedAnimation
-import { NullIndexedAnimation } from './NullIndexedAnimation.js';
-//sameFolderImports - not GWT import - same folder const NullIndexedAnimation
-import { IndexedAnimationBehavior } from './IndexedAnimationBehavior.js';
+import { NullIndexedAnimationInner } from './NullIndexedAnimationInner.js';
+//sameFolderImports - not GWT import - same folder const Animation
 export class NullIndexedAnimationFactory extends Object {
     static getFactoryInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.
@@ -24,20 +23,7 @@ export class NullIndexedAnimationFactory extends Object {
     }
     constructor() {
         super();
-        //inner= member=true isStatic=
-        this.NullIndexedAnimationInner = (() => {
-            const outer$NullIndexedAnimationFactory = this;
-            return class extends NullIndexedAnimation {
-                /*Static stuff is not allowed for TypeScript inner classes*/ /**/
-                constructor() {
-                    super(new IndexedAnimationBehavior(1, 250));
-                    //For kotlin this is before the body of the constructor.
-                }
-                paintXY(graphics, x, y) {
-                }
-            };
-        })();
-        this.NULL_ANIMATION = new this.NullIndexedAnimationInner();
+        this.NULL_ANIMATION = new NullIndexedAnimationInner();
     }
     //@Throws(Exception.constructor)
     getInstance(instanceId) {

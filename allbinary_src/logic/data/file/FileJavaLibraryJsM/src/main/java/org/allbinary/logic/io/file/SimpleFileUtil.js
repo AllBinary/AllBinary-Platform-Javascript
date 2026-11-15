@@ -16,19 +16,20 @@ var _c;
 /* Generated Code Do Not Modify */
 import { Object } from '../../../../../java/lang/Object.js';
 import { ByteArrayOutputStream } from '../../../../../java/io/ByteArrayOutputStream.js';
-//not GWT import const InputStream
-import { OutputStream } from '../../../../../java/io/OutputStream.js';
-//not GWT import const OutputStream
-import { Reader } from '../../../../../java/io/Reader.js';
 //not GWT import const Reader
 //not plain js import { Writer } 
 const Writer = ((_c = (_b = (_a = globalThis.java) === null || _a === void 0 ? void 0 : _a.io) === null || _b === void 0 ? void 0 : _b.Writer) !== null && _c !== void 0 ? _c : class {
 });
-//not GWT import const CharBuffer
 //not plain js import { NullUtil } 
 const NullUtil = globalThis.org.allbinary.logic.NullUtil;
 //not plain js import { LogUtil } 
 const LogUtil = globalThis.org.allbinary.logic.communication.log.LogUtil;
+import { NullOutputStream } from '../../../../../org/allbinary/logic/io/NullOutputStream.js';
+//not GWT import const NullOutputStream
+import { NullReader } from '../../../../../org/allbinary/logic/io/NullReader.js';
+//not GWT import const NullReader
+import { NullWriter } from '../../../../../org/allbinary/logic/io/NullWriter.js';
+//not GWT import const NullWriter
 import { StreamUtil } from '../../../../../org/allbinary/logic/io/StreamUtil.js';
 //not GWT import const StreamUtil
 //not plain js import { StringMaker } 
@@ -56,89 +57,15 @@ export class SimpleFileUtil extends Object {
     }
     static nullOutputStream() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new class extends OutputStream {
-            //@Throws(IOException.constructor)
-            write(b) {
-            }
-            //@Throws(IOException.constructor)
-            write(b, off, len) {
-            }
-            close() {
-            }
-        }();
+        return NullOutputStream.NULL_OUTPUT_STREAM;
     }
     static nullWriter() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new class extends Writer {
-            constructor() {
-                super(...arguments);
-                this.closed = false;
-            }
-            //@Throws(IOException.constructor)
-            append(c) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this;
-            }
-            //@Throws(IOException.constructor)
-            append(csq) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this;
-            }
-            //@Throws(IOException.constructor)
-            append(csq, start, end) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return this;
-            }
-            //@Throws(IOException.constructor)
-            write(c) {
-            }
-            //@Throws(IOException.constructor)
-            write(cbuf, off, len) {
-            }
-            //@Throws(IOException.constructor)
-            write(str) {
-            }
-            //@Throws(IOException.constructor)
-            write(str, off, len) {
-            }
-            //@Throws(IOException.constructor)
-            flush() {
-            }
-            close() {
-            }
-        }();
+        return NullWriter.NULL_WRITER;
     }
     static nullReader() {
         //if statement needs to be on the same line and ternary does not work the same way.
-        return new class extends Reader {
-            //@Throws(IOException.constructor)
-            read() {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return -1;
-            }
-            //@Throws(IOException.constructor)
-            read(cbuf, off, len) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return -1;
-            }
-            //@Throws(IOException.constructor)
-            read(target) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return -1;
-            }
-            //@Throws(IOException.constructor)
-            ready() {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return false;
-            }
-            //@Throws(IOException.constructor)
-            skip(n) {
-                //if statement needs to be on the same line and ternary does not work the same way.
-                return 0;
-            }
-            close() {
-            }
-        }();
+        return NullReader.NULL_READER;
     }
     loadFileAsList(inputStream, max, byteArray1) {
         //if statement needs to be on the same line and ternary does not work the same way.

@@ -248,6 +248,8 @@ import { GameCanvasInputProcessor } from './GameCanvasInputProcessor.js';
 //sameFolderImports - not GWT import - same folder const GameCanvasInputProcessor
 import { FormInputProcessor } from './FormInputProcessor.js';
 //sameFolderImports - not GWT import - same folder const FormInputProcessor
+import { SaveHighScoreRunnable } from './SaveHighScoreRunnable.js';
+//sameFolderImports - not GWT import - same folder const SaveHighScoreRunnable
 export class AllBinaryGameCanvas extends RunnableCanvas {
     constructor(commandListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered) {
         super(commandListener, CanvasStrings.getInstance().EMPTY_CHILD_NAME_LIST, true);
@@ -1279,35 +1281,7 @@ export class AllBinaryGameCanvas extends RunnableCanvas {
             this.getCustomCommandListener().commandAction(GameCommandsFactory.getInstance().SET_MENU_DISPLAYABLE, textBox);
         }
         if (autoSubmit) {
-            //inner=true member= isStatic=
-            class SaveHighScoreRunnable extends Object {
-                constructor() {
-                    super(...arguments);
-                    this.progressCanvas = ProgressCanvasFactory.getInstance();
-                }
-                run() {
-                    let logUtil = LogUtil.getInstance();
-                    ;
-                    try {
-                        if (isLast) {
-                            textBox.submit();
-                        }
-                        else {
-                            textBox.saveHighScore();
-                        }
-                    }
-                    catch (caught) {
-                        {
-                            const e = caught;
-                            let commonStrings = CommonStrings.getInstance();
-                            ;
-                            logUtil.put(commonStrings.EXCEPTION, this, "run", e);
-                            this.progressCanvas.end();
-                        }
-                    }
-                }
-            }
-            SecondaryThreadPool.getInstance().runTask(new SaveHighScoreRunnable());
+            SecondaryThreadPool.getInstance().runTask(new SaveHighScoreRunnable(isLast, textBox));
         }
     }
     getGameStateTimeHelper() {

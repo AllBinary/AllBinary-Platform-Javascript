@@ -31,15 +31,8 @@ export class StringUtil extends Object {
         this.stringArray = [];
     }
     getNonNull(string) {
-        if (string ==
-            null) {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return this.EMPTY_STRING;
-        }
-        else {
-            //if statement needs to be on the same line and ternary does not work the same way.
-            return string;
-        }
+        //if statement needs to be on the same line and ternary does not work the same way.
+        return string;
     }
     getArrayInstance() {
         //if statement needs to be on the same line and ternary does not work the same way.

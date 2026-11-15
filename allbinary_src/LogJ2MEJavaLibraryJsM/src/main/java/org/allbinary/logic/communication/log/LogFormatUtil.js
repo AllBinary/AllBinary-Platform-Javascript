@@ -72,10 +72,6 @@ const TimeStampUtil = globalThis.org.allbinary.time.TimeStampUtil;
         ;
     }
     getF(className, functionName) {
-        if (functionName ==
-            null) {
-            functionName = this.NONE;
-        }
         let stringBuffer = new StringMaker();
         ;
         stringBuffer.append(this.TIME);
@@ -94,13 +90,7 @@ const TimeStampUtil = globalThis.org.allbinary.time.TimeStampUtil;
             stringBuffer.append(this.LOG_ERROR);
             let exceptionAsString = exception.toString();
             ;
-            if (exceptionAsString !=
-                null) {
-                stringBuffer.append(exceptionAsString);
-            }
-            else {
-                stringBuffer.append(this.EMPTY);
-            }
+            stringBuffer.append(exceptionAsString);
             stringBuffer.append(this.STACK_TRACE);
             if (exception != this.nullUtil.NULL_OBJECT) {
                 stringBuffer.append(this.exceptionUtil.getStackTrace(exception));

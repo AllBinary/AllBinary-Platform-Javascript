@@ -35,12 +35,8 @@ export class BufferedIOUtil extends Object {
         ;
         let tmpIn = new BufferedReader(new FileReader(AbFileNativeUtil.get(backupFile)));
         ;
-        while (true) {
+        while (tmpIn.ready()) {
             line = tmpIn.readLine();
-            if (line ==
-                null) {
-                break;
-            }
             tmpOut.write(line, 0, line.length);
             tmpOut.newLine();
         }

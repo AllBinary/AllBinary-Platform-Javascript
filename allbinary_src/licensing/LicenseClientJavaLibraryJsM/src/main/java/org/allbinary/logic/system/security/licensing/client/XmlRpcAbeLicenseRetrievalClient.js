@@ -13,6 +13,8 @@
 */
 /* Generated Code Do Not Modify */
 import { Exception } from '../../../../../../../java/lang/Exception.js';
+//not plain js import { StringUtil } 
+const StringUtil = globalThis.org.allbinary.logic.string.StringUtil;
 import { IOException } from '../../../../../../../java/io/IOException.js';
 //not GWT import const IOException
 //not plain js import { BasicArrayList } 
@@ -63,12 +65,12 @@ export class XmlRpcAbeLicenseRetrievalClient extends XmlRpcAbeClient {
             let xmlRpcClient = new XmlRpcClient(server);
             ;
             this.setClient(xmlRpcClient);
-            xmlRpcClient.setBasicAuthentication(null, null);
+            xmlRpcClient.setBasicAuthentication(StringUtil.getInstance().EMPTY_STRING, StringUtil.getInstance().EMPTY_STRING);
             let hashtable = this.getClientInfo().toHashtable();
             ;
             this.logUtil.putF(CLIENT_INFO + hashtable.toString(), this, this.commonStrings.GET);
             param.add(hashtable);
-            let result = xmlRpcClient.execute(this.getRemoteMethod(), param, cryptInterface);
+            let result = xmlRpcClient.executeWithCrypt(this.getRemoteMethod(), param, cryptInterface);
             ;
             this.logUtil.putF(RESULT + result.toString(), this, this.commonStrings.GET);
             let resultHashtable = result;

@@ -28,20 +28,13 @@ export class XmlRpcClient extends Object {
     }
     setBasicAuthentication(user, password) {
     }
-    execute(...args) {
-        if (args.length === 2 && typeof args[0] === 'string')
-            return this.execute$overload1(args[0], args[1]);
-        if (args.length === 3 && typeof args[0] === 'string')
-            return this.execute$overload2(args[0], args[1], args[2]);
-        throw new TypeError('No matching overload: execute');
-    }
     //@Throws(XmlRpcException.constructor, IOException.constructor)
-    execute$overload1(method, params) {
+    execute(method, params) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullUtil.getInstance().NULL_OBJECT;
     }
     //@Throws(XmlRpcException.constructor, IOException.constructor)
-    execute$overload2(method, params, cryptInterface) {
+    executeWithCrypt(method, params, cryptInterface) {
         //if statement needs to be on the same line and ternary does not work the same way.
         return NullUtil.getInstance().NULL_OBJECT;
     }

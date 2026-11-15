@@ -22,14 +22,7 @@ export class TimeUtil extends Object {
         //if statement needs to be on the same line and ternary does not work the same way.
         return TimeUtil.instance;
     }
-    setCalendar(...args) {
-        if (args.length === 5 && typeof args[1] === 'string' && typeof args[2] === 'string' && typeof args[3] === 'string' && typeof args[4] === 'string')
-            return this.setCalendar$overload1(args[0], args[1], args[2], args[3], args[4]);
-        if (args.length === 7 && typeof args[1] === 'string' && typeof args[2] === 'string' && typeof args[3] === 'string' && typeof args[4] === 'string' && typeof args[5] === 'string' && typeof args[6] === 'string')
-            return this.setCalendar$overload2(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
-        throw new TypeError('No matching overload: setCalendar');
-    }
-    setCalendar$overload1(calendar, yearString, monthString, dayString, hourString) {
+    setCalendar(calendar, yearString, monthString, dayString, hourString) {
         let year = new Integer(yearString).intValue();
         ;
         let month = new Integer(monthString).intValue();
@@ -40,7 +33,7 @@ export class TimeUtil extends Object {
         ;
         calendar.set(year, month, day, hour, 0);
     }
-    setCalendar$overload2(calendar, yearString, monthString, dayString, hourString, minuteString, secondString) {
+    setCalendarWithTime(calendar, yearString, monthString, dayString, hourString, minuteString, secondString) {
         let year = new Integer(yearString).intValue();
         ;
         let month = new Integer(monthString).intValue();

@@ -49,13 +49,7 @@ export class HighScoreTextBox extends CustomTextBox {
         if (operatingSystemInterface.isOverScan()) {
             let username = InApplicationPurchaseFactory.getInstance().getUserName();
             ;
-            if (username !=
-                null) {
-                this.getTextFieldItem().setString(username);
-            }
-            else {
-                this.getTextFieldItem().setString("NoGamerInfo");
-            }
+            this.getTextFieldItem().setString(username);
         }
     }
     initCommands(cmdListener) {
